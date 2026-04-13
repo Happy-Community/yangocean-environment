@@ -1,114 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Tree Oxygen Calculator - Yangocean</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Tree Oxygen Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #f4f8f6;
-      margin: 0;
-      padding: 20px;
-      color: #333;
-    }
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #e8f5e9, #f4f8f6);
+  margin: 0;
+  padding: 20px;
+}
 
-    .container {
-      max-width: 600px;
-      margin: auto;
-    }
+.container {
+  max-width: 600px;
+  margin: auto;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-    }
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
+h1 {
+  text-align: center;
+  color: #2e7d32;
+}
 
-    input {
-      width: 100%;
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
 
-    button {
-      margin-top: 15px;
-      width: 100%;
-      padding: 12px;
-      background: #27ae60;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #43a047;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
 
-    button:hover {
-      background: #219150;
-    }
+button:hover {
+  background: #2e7d32;
+}
 
-    .result {
-      margin-top: 20px;
-      background: #eef6f9;
-      padding: 15px;
-      border-left: 4px solid #27ae60;
-      border-radius: 6px;
-      font-size: 18px;
-    }
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5e9;
+  border-left: 5px solid #43a047;
+  border-radius: 8px;
+  font-size: 18px;
+}
 
-    .note {
-      margin-top: 15px;
-      font-size: 14px;
-      color: #666;
-    }
-  </style>
+.back {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body>
 
 <div class="container">
+<div class="card">
 
-  <div class="card">
-    <h1>🌳 Tree Oxygen Calculator</h1>
+<h1>🌳 Tree Oxygen Calculator</h1>
 
-    <p>Enter number of people:</p>
+<p>Enter number of people:</p>
+<input type="number" id="people" placeholder="e.g. 4">
 
-    <input type="number" id="people" placeholder="e.g. 4">
+<button onclick="calc()">Calculate</button>
 
-    <button onclick="calculateTrees()">Calculate</button>
+<div id="result" class="result" style="display:none;"></div>
 
-    <div id="result" class="result" style="display:none;"></div>
+<a class="back" href="../index.html">← Back to Home</a>
 
-    <div class="note">
-      *Estimated based on average mature trees. Actual values may vary depending on tree type and environment.
-    </div>
-  </div>
-
+</div>
 </div>
 
 <script>
-function calculateTrees() {
-  let people = document.getElementById("people").value;
+function calc() {
+  let p = document.getElementById("people").value;
 
-  if (people <= 0) {
-    alert("Please enter a valid number.");
+  if (p <= 0) {
+    alert("Enter valid number");
     return;
   }
 
-  let trees = Math.ceil(people / 2);
+  let trees = Math.ceil(p / 2);
 
   document.getElementById("result").style.display = "block";
   document.getElementById("result").innerHTML =
-    "🌱 You need approximately <strong>" + trees + "</strong> trees to support <strong>" + people + "</strong> people.";
+    "🌱 You need <b>" + trees + "</b> trees to support <b>" + p + "</b> people.";
 }
 </script>
 
