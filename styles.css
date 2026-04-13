@@ -1,0 +1,9 @@
+.card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
