@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Plastic Waste Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom, #fce4ec, #f4f8f6);
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+  text-align: center;
+  color: #c2185b;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #d81b60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #880e4f;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #fce4ec;
+  border-left: 5px solid #d81b60;
+  border-radius: 8px;
+}
+
+.back {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<h1>🧴 Plastic Waste Calculator</h1>
+
+<p>Plastic bottles used per week:</p>
+<input type="number" id="bottles">
+
+<p>Plastic bags used per week:</p>
+<input type="number" id="bags">
+
+<button onclick="calcPlastic()">Calculate</button>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<a class="back" href="../index.html">← Back to Home</a>
+
+</div>
+</div>
+
+<script>
+function calcPlastic() {
+  let bottles = document.getElementById("bottles").value || 0;
+  let bags = document.getElementById("bags").value || 0;
+
+  let total = (bottles * 52) + (bags * 52);
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "🧴 Estimated yearly plastic items used: <b>" + total + "</b>";
+}
+</script>
+
+</body>
+</html>
