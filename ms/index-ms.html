@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <title>Yangocean - Kalkulator Jejak Karbon Percuma & Alat Kelestarian Alam Sekitar</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Kalkulator jejak karbon percuma, penjejak penggunaan air, kalkulator sisa plastik dan alat kelestarian alam sekitar untuk mengurangkan impak alam sekitar anda.">
+  <meta name="keywords" content="kalkulator jejak karbon, alat kelestarian, gaya hidup mesra alam, kurangkan pelepasan karbon, kalkulator air, kalkulator plastik">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Yangocean">
+
+  <link rel="canonical" href="https://yangocean.com/" />
+
+  <meta property="og:title" content="Yangocean - Alat Kelestarian Alam Sekitar Percuma">
+  <meta property="og:description" content="Jejak karbon, penggunaan air dan impak alam sekitar anda dengan alat percuma.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yangocean.com/">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <nav>
+    <a href="index.html">Laman Utama</a>
+    <a href="eco.html">Tip Ekologi</a>
+    <a href="consumption.html">Penggunaan</a>
+    <a href="awareness.html">Kesedaran</a>
+    <a href="daily-eco-tips.html">Tip Harian 🌱</a>
+    <a href="about.html">Tentang</a>
+    <a href="contact.html">Hubungi</a>
+    <a href="privacy.html">Privasi</a>
+    <a href="terms.html">Terma</a>
+  </nav>
+
+  <section class="hero">
+    <h1>🌿 Alat Kelestarian Alam Sekitar Yangocean</h1>
+    <p>Alat percuma untuk mengira jejak karbon, penggunaan air dan impak alam sekitar anda.</p>
+  </section>
+
+  <section class="card">
+    <h2>🌱 Tip Ekologi Harian</h2>
+    <p id="daily-tip">Memuatkan tip hari ini...</p>
+    <p><a href="daily-eco-tips.html">👉 Lihat semua 50 tip ekologi</a></p>
+  </section>
+
+  <script>
+    const tips = [
+      "Matikan lampu apabila tidak digunakan untuk jimat tenaga.",
+      "Gunakan beg guna semula bukan plastik.",
+      "Mandi lebih singkat untuk jimat air.",
+      "Cabut plag peralatan elektrik.",
+      "Elakkan plastik sekali guna.",
+      "Kitar semula dengan betul.",
+      "Gunakan pengangkutan awam atau berkongsi kereta.",
+      "Beli hanya apa yang diperlukan."
+    ];
+
+    const today = new Date().getDate();
+    const tipIndex = today % tips.length;
+
+    document.getElementById("daily-tip").innerText = tips[tipIndex];
+  </script>
+
+  <section class="card">
+    <h2>🌍 Fahami Impak Alam Sekitar Anda</h2>
+    <p>Perubahan iklim dan pencemaran memberi kesan besar kepada dunia.</p>
+    <p>Alat kami membantu anda mengukur dan mengurangkan impak tersebut.</p>
+  </section>
+
+  <section class="card">
+    <h2>🌍 Alat Kelestarian Percuma</h2>
+
+    <div class="features">
+      <div class="feature">
+        <a href="tools/tree-calculator.html">🌳 Kalkulator Oksigen Pokok</a>
+        <p>Anggar penghasilan oksigen oleh pokok.</p>
+      </div>
+
+      <div class="feature">
+        <a href="tools/carbon-calculator.html">🌫️ Kalkulator Jejak Karbon</a>
+        <p>Ukur pelepasan karbon harian anda.</p>
+      </div>
+
+      <div class="feature">
+        <a href="tools/water-calculator.html">💧 Kalkulator Penggunaan Air</a>
+        <p>Jejak penggunaan air anda.</p>
+      </div>
+
+      <div class="feature">
+        <a href="tools/plastic-calculator.html">🧴 Kalkulator Sisa Plastik</a>
+        <p>Ukur impak penggunaan plastik.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🌱 Pembelajaran Kehidupan Lestari</h2>
+
+    <div class="grid">
+      <a href="eco.html"><div class="icon">🌱</div><div class="title">Tips Kehidupan Hijau</div></a>
+      <a href="consumption.html"><div class="icon">♻️</div><div class="title">Penggunaan Lestari</div></a>
+      <a href="awareness.html"><div class="icon">🌍</div><div class="title">Kesedaran Alam Sekitar</div></a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>ℹ️ Tujuan Pendidikan</h2>
+    <p>Semua alat adalah untuk tujuan pendidikan sahaja.</p>
+  </section>
+
+  <footer class="footer">
+    © 2026 Yangocean · Kehidupan Hijau & Sedar
+  </footer>
+
+</div>
+
+</body>
+</html>
