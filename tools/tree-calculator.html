@@ -8,9 +8,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 
-
 <body class="theme-tree">
-
 
 <div class="container">
 <div class="card">
@@ -34,21 +32,43 @@ function calcTree() {
   let p = document.getElementById("people").value || 0;
 
   if (p <= 0) {
-    alert("Please enter a valid number");
+    alert("Please enter a valid number of people");
     return;
   }
 
-  // CO2 per person per year (simplified)
+  // 🌍 Core model (kept consistent across languages)
   let co2PerPerson = 4000; // kg/year
-  let treeAbsorption = 20; // kg/year per tree
+  let treeAbsorption = 20; // kg/year per mature tree
 
   let totalCO2 = p * co2PerPerson;
   let trees = Math.ceil(totalCO2 / treeAbsorption);
 
+  // 🌳 Forest equivalence model (UX-friendly)
+  let largeTrees = Math.round(trees / 3);
+  let mediumTrees = Math.round(trees / 2);
+  let smallTrees = trees;
+
+  // 🌱 Emotional interpretation
+  let forestType =
+    trees < 50 ? "a small grove 🌱"
+    : trees < 200 ? "a medium forest 🌳"
+    : "a large forest 🌲";
+
   document.getElementById("result").style.display = "block";
   document.getElementById("result").innerHTML =
     "🌍 Total CO₂ footprint: <b>" + totalCO2.toLocaleString() + " kg/year</b><br>" +
-    "🌳 Trees needed to offset: <b>" + trees.toLocaleString() + "</b>";
+    "🌳 Estimated tree offset: <b>" + trees.toLocaleString() + " trees</b><br><br>" +
+
+    "🌱 Forest perspective: This is equivalent to " + forestType + "<br><br>" +
+
+    "🌿 Visual breakdown (approximate):<br>" +
+    "• 🌱 " + smallTrees + " small trees<br>" +
+    "• 🌳 " + mediumTrees + " medium trees<br>" +
+    "• 🌲 " + largeTrees + " large mature trees<br><br>" +
+
+    "💡 Tip: Reducing transport and electricity use can significantly lower this footprint.<br><br>" +
+
+    "📘 Next: Learn how to plant a tree effectively (coming soon)";
 }
 </script>
 
