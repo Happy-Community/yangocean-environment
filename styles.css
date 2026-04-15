@@ -274,3 +274,104 @@ button:active {
     font-size: 12px;
   }
 }
+/* =========================
+   🌈 CALCULATOR THEMES
+========================= */
+
+/* DEFAULT (GREEN - TREE) */
+body.theme-default {
+  background: linear-gradient(to bottom, #f4f8f6, #eef6f1);
+}
+
+/* 💙 WATER THEME */
+body.theme-water {
+  background: linear-gradient(to bottom, #e0f7fa, #f4f8f6);
+}
+
+body.theme-water .result {
+  background: #e0f2f1;
+  border-left-color: #009688;
+}
+
+body.theme-water button {
+  background: #009688;
+}
+
+body.theme-water button:hover {
+  background: #00695c;
+}
+
+body.theme-water input:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 3px rgba(0,150,136,0.15);
+}
+
+/* 💗 PLASTIC THEME */
+body.theme-plastic {
+  background: linear-gradient(to bottom, #fce4ec, #f4f8f6);
+}
+
+body.theme-plastic .result {
+  background: #fce4ec;
+  border-left-color: #d81b60;
+}
+
+body.theme-plastic button {
+  background: #d81b60;
+}
+
+body.theme-plastic button:hover {
+  background: #880e4f;
+}
+
+body.theme-plastic input:focus {
+  border-color: #d81b60;
+  box-shadow: 0 0 0 3px rgba(216,27,96,0.15);
+}
+
+/* 💜 CARBON THEME */
+body.theme-carbon {
+  background: linear-gradient(to bottom, #e3f2fd, #f4f8f6);
+}
+
+body.theme-carbon .result {
+  background: #e3f2fd;
+  border-left-color: #1565c0;
+}
+
+body.theme-carbon button {
+  background: #1976d2;
+}
+
+body.theme-carbon button:hover {
+  background: #0d47a1;
+}
+
+body.theme-carbon input:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25,118,210,0.15);
+}
+
+/* 💚 TREE THEME (optional override) */
+body.theme-tree {
+  background: linear-gradient(to bottom, #e8f5e9, #f4f8f6);
+}
+
+body.theme-tree .result {
+  background: #e8f5e9;
+  border-left-color: #43a047;
+}
+
+body.theme-tree button {
+  background: #43a047;
+}
+
+body.theme-tree button:hover {
+  background: #2e7d32;
+}
+
+body.theme-tree input:focus {
+  border-color: #43a047;
+  box-shadow: 0 0 0 3px rgba(67,160,71,0.15);
+}
+
