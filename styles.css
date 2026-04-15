@@ -239,3 +239,21 @@ body.theme-tree .result {
 body.theme-tree input:focus {
   box-shadow: 0 0 0 3px rgba(67,160,71,0.18);
 }
+
+.card-link {
+  display: block;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  border-color: rgba(39,174,96,0.2);
+}
