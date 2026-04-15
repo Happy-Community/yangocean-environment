@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>用水量计算器</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+<div class="container">
+<div class="card">
+
+<h1>💧 用水量计算器</h1>
+
+<p>每日淋浴时间（分钟）：</p>
+<input type="number" id="shower">
+
+<p>家庭人数：</p>
+<input type="number" id="people">
+
+<button onclick="calcWater()">计算</button>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<a class="back" href="/zh/">← 返回首页</a>
+
+</div>
+</div>
+
+<script>
+function calcWater() {
+  let shower = document.getElementById("shower").value || 0;
+  let people = document.getElementById("people").value || 0;
+
+  let water = shower * people * 9 * 30;
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "💧 预计每月用水量：<b>" + water + " 升</b>";
+}
+</script>
+
+</body>
+</html>
