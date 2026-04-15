@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Oxígeno de Árboles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>/* SAME CSS */</style>
+</head>
+
+<body>
+<div class="container">
+<div class="card">
+
+<h1>🌳 Calculadora de Oxígeno de Árboles</h1>
+
+<p>Ingrese el número de personas:</p>
+<input type="number" id="people" placeholder="ej: 4">
+
+<button onclick="calc()">Calcular</button>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<a class="back" href="/es/">← Volver al inicio</a>
+
+</div>
+</div>
+
+<script>
+function calc() {
+  let p = document.getElementById("people").value;
+
+  if (p <= 0) {
+    alert("Ingrese un número válido");
+    return;
+  }
+
+  let trees = Math.ceil(p / 2);
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "🌱 Necesitas <b>" + trees + "</b> árboles para sostener a <b>" + p + "</b> personas.";
+}
+</script>
+
+</body>
+</html>
