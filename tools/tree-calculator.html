@@ -1,229 +1,54 @@
-/* =========================
-   GLOBAL BASE
-========================= */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tree Carbon Offset Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom, #f4f8f6, #eef6f1);
-  color: #333;
-  line-height: 1.6;
-  padding: 0;
-}
+<link rel="stylesheet" href="/styles.css">
+</head>
 
-/* =========================
-   PAGE LAYOUT
-========================= */
+<body>
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 16px;
-}
+<div class="container">
+<div class="card">
 
-/* =========================
-   NAV
-========================= */
+<h1>🌳 Tree Carbon Offset Calculator</h1>
 
-nav {
-  text-align: center;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+<p>Enter number of people:</p>
+<input type="number" id="people" placeholder="e.g. 4">
 
-nav a {
-  text-decoration: none;
-  color: #27ae60;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 6px;
-  transition: 0.2s;
-}
+<button onclick="calcTree()">Calculate</button>
 
-nav a:hover {
-  background: #e8f5ee;
-}
+<div id="result" class="result" style="display:none;"></div>
 
-/* =========================
-   HERO
-========================= */
+<a class="back" href="../index.html">← Back to Home</a>
 
-.hero {
-  text-align: center;
-  padding: 40px 16px;
-}
+</div>
+</div>
 
-.hero h1 {
-  font-size: 32px;
-  margin-bottom: 10px;
-}
+<script>
+function calcTree() {
+  let p = document.getElementById("people").value || 0;
 
-.hero p {
-  color: #555;
-  font-size: 15px;
-}
-
-/* =========================
-   GENERAL CARD
-========================= */
-
-.card {
-  background: white;
-  padding: 20px;
-  border-radius: 14px;
-  margin-top: 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-/* =========================
-   FEATURES
-========================= */
-
-.features {
-  display: grid;
-  gap: 12px;
-}
-
-.feature {
-  background: #eef6f9;
-  padding: 14px;
-  border-left: 4px solid #27ae60;
-  border-radius: 8px;
-  transition: 0.2s;
-}
-
-.feature:hover {
-  transform: translateY(-3px);
-}
-
-.feature a {
-  text-decoration: none;
-  color: #1f3b4d;
-  font-weight: 600;
-}
-
-/* =========================
-   GRID
-========================= */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-}
-
-/* =========================
-   CARD LINKS
-========================= */
-
-.card-link {
-  background: #fff;
-  padding: 16px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: 0.2s;
-}
-
-.card-link:hover {
-  transform: translateY(-4px);
-}
-
-/* =========================
-   ICON
-========================= */
-
-.icon {
-  font-size: 28px;
-  margin-bottom: 8px;
-}
-
-/* =========================
-   CALCULATOR UNIVERSAL STYLE ⭐
-========================= */
-
-h1 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-/* input (ALL calculators same look) */
-input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  box-sizing: border-box;
-}
-
-/* button (ALL calculators same look) */
-button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 15px;
-  background: #27ae60;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-button:hover {
-  background: #1e8e4d;
-}
-
-/* result box */
-.result {
-  margin-top: 20px;
-  padding: 15px;
-  background: #e8f5ee;
-  border-left: 5px solid #27ae60;
-  border-radius: 10px;
-  line-height: 1.6;
-}
-
-/* back link */
-.back {
-  display: block;
-  margin-top: 15px;
-  text-align: center;
-  color: #27ae60;
-  text-decoration: none;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #777;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 24px;
+  if (p <= 0) {
+    alert("Please enter a valid number");
+    return;
   }
 
-  nav a {
-    font-size: 13px;
-  }
+  // CO2 per person per year (simplified)
+  let co2PerPerson = 4000; // kg/year
+  let treeAbsorption = 20; // kg/year per tree
 
-  .card {
-    padding: 14px;
-  }
+  let totalCO2 = p * co2PerPerson;
+  let trees = Math.ceil(totalCO2 / treeAbsorption);
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "🌍 Total CO₂ footprint: <b>" + totalCO2.toLocaleString() + " kg/year</b><br>" +
+    "🌳 Trees needed to offset: <b>" + trees.toLocaleString() + "</b>";
 }
+</script>
+
+</body>
+</html>
