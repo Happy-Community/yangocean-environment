@@ -1,19 +1,29 @@
+/* =========================
+   BASE RESET + TYPOGRAPHY
+========================= */
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background: #f4f8f6;
+  background: linear-gradient(to bottom, #f4f8f6, #eef6f1);
   color: #333;
   line-height: 1.6;
 }
 
-/* LAYOUT */
+/* =========================
+   LAYOUT
+========================= */
+
 .container {
   max-width: 1000px;
   margin: auto;
   padding: 16px;
 }
 
-/* NAV */
+/* =========================
+   NAVIGATION
+========================= */
+
 nav {
   text-align: center;
   margin-bottom: 20px;
@@ -36,7 +46,10 @@ nav a:hover {
   background: #e8f5ee;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero {
   text-align: center;
   padding: 40px 16px;
@@ -53,7 +66,10 @@ nav a:hover {
   font-size: 15px;
 }
 
-/* CARD */
+/* =========================
+   CARDS (GENERAL)
+========================= */
+
 .card {
   background: white;
   padding: 18px;
@@ -62,7 +78,10 @@ nav a:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* FEATURES */
+/* =========================
+   FEATURES BLOCK
+========================= */
+
 .features {
   display: grid;
   gap: 12px;
@@ -92,7 +111,10 @@ nav a:hover {
   color: #555;
 }
 
-/* GRID CARDS */
+/* =========================
+   GRID CARDS
+========================= */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -116,7 +138,10 @@ nav a:hover {
   box-shadow: 0 8px 18px rgba(0,0,0,0.1);
 }
 
-/* ICONS */
+/* =========================
+   ICONS
+========================= */
+
 .icon {
   font-size: 28px;
   margin-bottom: 8px;
@@ -127,13 +152,19 @@ nav a:hover {
   margin-bottom: 6px;
 }
 
-/* TEXT */
+/* =========================
+   TEXT
+========================= */
+
 .section-intro {
   font-size: 14px;
   color: #555;
 }
 
-/* DAILY TIP LINK */
+/* =========================
+   LINKS INSIDE CARD
+========================= */
+
 .card a {
   color: #27ae60;
   text-decoration: none;
@@ -144,7 +175,10 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 .footer {
   text-align: center;
   margin-top: 40px;
@@ -152,7 +186,56 @@ nav a:hover {
   color: #777;
 }
 
-/* 📱 MOBILE OPTIMIZATION */
+/* =========================
+   FORM ELEMENTS (IMPORTANT FIX)
+   🔥 THIS FIXES YOUR CALCULATORS
+========================= */
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #1e8e4d;
+}
+
+/* =========================
+   RESULT BOX (VERY IMPORTANT)
+========================= */
+
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  background: #e8f5ee;
+  border-left: 5px solid #27ae60;
+  border-radius: 8px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
 @media (max-width: 600px) {
 
   .hero h1 {
