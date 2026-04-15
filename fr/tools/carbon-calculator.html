@@ -5,42 +5,17 @@
 <title>Calculateur d’empreinte carbone</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* SAME CSS */
-body {
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(to bottom, #e3f2fd, #f4f8f6);
-  margin: 0;
-  padding: 20px;
-}
-.container { max-width: 600px; margin: auto; }
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-}
-h1 { text-align: center; color: #1565c0; }
-input {
-  width: 100%; padding: 12px; margin-top: 10px;
-  border-radius: 8px; border: 1px solid #ccc;
-}
-button {
-  width: 100%; padding: 12px; margin-top: 15px;
-  background: #1976d2; color: white; border: none;
-  border-radius: 8px; font-size: 16px; cursor: pointer;
-}
-button:hover { background: #0d47a1; }
-.result {
-  margin-top: 20px; padding: 15px;
-  background: #e3f2fd; border-left: 5px solid #1976d2;
-  border-radius: 8px;
-}
-.back { display: block; margin-top: 15px; text-align: center; }
-</style>
+
+
+<!-- GLOBAL STYLES -->
+<link rel="stylesheet" href="/styles.css">
 </head>
 
-<body>
+<!-- 🌍 THEME FIX -->
+<body class="theme-carbon">
+
+
+
 <div class="container">
 <div class="card">
 
@@ -60,17 +35,27 @@ button:hover { background: #0d47a1; }
 
 </div>
 </div>
-
 <script>
 function calcCarbon() {
   let e = document.getElementById("electricity").value || 0;
   let t = document.getElementById("transport").value || 0;
 
+  if (e <= 0 && t <= 0) {
+    alert("Veuillez entrer des valeurs valides");
+    return;
+  }
+
   let co2 = (e * 0.5) + (t * 0.2);
+
+  let level =
+    co2 < 50 ? "Faible 🌱" :
+    co2 < 150 ? "Moyen ⚠️" :
+    "Élevé 🔴";
 
   document.getElementById("result").style.display = "block";
   document.getElementById("result").innerHTML =
-    "🌱 Émissions estimées de CO₂ : <b>" + co2.toFixed(1) + " kg/mois</b>";
+    "🌱 Émissions estimées de CO₂ : <b>" + co2.toFixed(1) + " kg/mois</b><br>" +
+    "📊 Niveau d’impact : <b>" + level + "</b>";
 }
 </script>
 
