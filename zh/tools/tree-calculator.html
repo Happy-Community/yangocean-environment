@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>树木氧气计算器</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>/* SAME CSS */</style>
+</head>
+
+<body>
+<div class="container">
+<div class="card">
+
+<h1>🌳 树木氧气计算器</h1>
+
+<p>输入人数：</p>
+<input type="number" id="people" placeholder="例如：4">
+
+<button onclick="calc()">计算</button>
+
+<div id="result" class="result" style="display:none;"></div>
+
+<a class="back" href="/zh/">← 返回首页</a>
+
+</div>
+</div>
+
+<script>
+function calc() {
+  let p = document.getElementById("people").value;
+
+  if (p <= 0) {
+    alert("请输入有效数字");
+    return;
+  }
+
+  let trees = Math.ceil(p / 2);
+
+  document.getElementById("result").style.display = "block";
+  document.getElementById("result").innerHTML =
+    "🌱 您需要 <b>" + trees + "</b> 棵树来支持 <b>" + p + "</b> 个人。";
+}
+</script>
+
+</body>
+</html>
