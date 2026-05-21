@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Logging in...</title>
+</head>
+<body>
+  <p>Logging you in...</p>
+
+  <script type="module">
+    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
+
+    const supabase = createClient(
+      "https://YOUR_PROJECT_ID.supabase.co",
+      "YOUR_ANON_KEY"
+    );
+
+    async function handleLogin() {
+      const { error } = await supabase.auth.getSessionFromUrl({
+        storeSession: true
+      });
+
+      if (error) {
+        document.body.innerHTML = "Login failed. Please try again.";
+        return;
+      }
+
+      // Redirect back to app (you can change this)
+      window.location.href = "https://www.yangocean.com";
+    }
+
+    handleLogin();
+  </script>
+</body>
+</html>
