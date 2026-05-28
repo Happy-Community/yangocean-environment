@@ -61,6 +61,14 @@ crossorigin="anonymous"></script>
   </p>
 </section>
 
+<section class="card">
+  <h2>🌱 Daily Eco Reflection</h2>
+
+  <p id="dailyQuote"></p>
+</section>
+
+
+
 <!-- INTRODUCTION -->
 <section class="card">
   <h2>🌍 Practical Sustainability Made Simple</h2>
@@ -221,7 +229,31 @@ crossorigin="anonymous"></script>
   }
 })();
 </script>
+  
+/* for daily eco Reflection */
+<script>
+const ecoQuotes = [
 
+  "🌱 Small sustainable actions repeated daily create meaningful environmental change.",
 
+  "💧 Saving water today helps protect future generations.",
+
+  "♻️ Reducing waste begins with mindful consumption.",
+
+  "🌳 Trees quietly support life every single day.",
+
+  "⚡ Conserving energy is one of the simplest ways to reduce emissions.",
+
+  "🚶 Sustainable living is built through small daily habits.",
+
+  "🧘 A balanced life includes caring for both ourselves and the environment."
+
+];
+
+const day = new Date().getDay();
+
+document.getElementById("dailyQuote").innerText =
+  ecoQuotes[day];
+</script>
 </body>
 </html>
