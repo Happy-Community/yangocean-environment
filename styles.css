@@ -43,6 +43,7 @@ body {
   box-shadow: 0 14px 38px rgba(0,0,0,0.10);
 }
 
+
 /* =========================
    HEADINGS
 ========================= */
@@ -198,6 +199,41 @@ nav a:hover {
   border-color: rgba(39,174,96,0.2);
 }
 
+/* newly added on 18/5/ 26
+
+/* =========================
+   FEATURE GRID
+========================= */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.feature {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
+}
+
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.10);
+}
+
+.feature a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.feature p {
+  margin-top: 10px;
+}
 /* =========================
    🌍 LANGUAGE THEMES
 ========================= */
