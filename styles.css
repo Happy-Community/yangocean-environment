@@ -248,9 +248,9 @@ body.theme-ms {
   background: linear-gradient(to bottom, #fff8e1, #f4f8f6);
 }
 
-/* ZH - Calm Pink (Soft Wellness Theme) */
+/ * ZH - pink */
 body.theme-zh {
-  background: linear-gradient(to bottom, #fde7f3, #f4f8f6);
+  background: linear-gradient(to bottom, #f8d7e8, #f4f8f6);
 }
 
 /* FR - Elegant Lavender */
