@@ -29,14 +29,7 @@ crossorigin="anonymous"></script>
 
 </head>
   
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="/styles.css">
-<link rel="canonical" href="https://yangocean.com/">
-
-</head>
 
 <body class="theme-default">
 
@@ -206,7 +199,29 @@ crossorigin="anonymous"></script>
 
 </footer>
 
+  
 </div>
+
+<script>
+(function () {
+  const day = new Date().getDay();
+
+  if (document.body.classList.contains("theme-default")) {
+
+    if (day === 0) {
+      document.body.classList.add("day-sun");
+    }
+    else if (day === 1 || day === 3 || day === 5) {
+      document.body.classList.add("day-mwf");
+    }
+    else {
+      document.body.classList.add("day-tts");
+    }
+
+  }
+})();
+</script>
+
 
 </body>
 </html>
