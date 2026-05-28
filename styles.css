@@ -1,3 +1,4 @@
+```css
 /* =========================
    GLOBAL RESET
 ========================= */
@@ -61,7 +62,8 @@ h2 {
    TEXT IMPROVEMENT
 ========================= */
 
-p, li {
+p,
+li {
   font-size: 15px;
   color: #444;
 }
@@ -125,8 +127,15 @@ button:active {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -168,11 +177,32 @@ nav a:hover {
 }
 
 /* =========================
-   🌍 BUTTERFLY LANGUAGE THEMES (OPTION A)
+   CARD LINK (UI BLOCKS)
 ========================= */
 
-/* EN - Eco Green (default)
-   Nature + balance */
+.card-link {
+  display: block;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.card-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+  border-color: rgba(39,174,96,0.2);
+}
+
+/* =========================
+   🌍 LANGUAGE THEMES
+========================= */
+
+/* EN - Eco Green */
 body.theme-en {
   background: linear-gradient(to bottom, #e8f5e9, #f4f8f6);
 }
@@ -198,7 +228,7 @@ body.theme-es {
 }
 
 /* =========================
-   DEFAULT ECO THEME (fallback)
+   DEFAULT ECO THEME
 ========================= */
 
 body.theme-default {
@@ -206,32 +236,28 @@ body.theme-default {
 }
 
 /* =========================
-   CARD LINK (UI BLOCKS)
+   DYNAMIC DAILY THEME
 ========================= */
 
-.card-link {
-  display: block;
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: all 0.25s ease;
-  border: 1px solid rgba(0,0,0,0.03);
+/* Monday Wednesday Friday */
+body.theme-default.day-mwf {
+  background: linear-gradient(to bottom, #edf7ed, #e4f3ea);
 }
 
-.card-link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-  border-color: rgba(39,174,96,0.2);
+/* Tuesday Thursday Saturday */
+body.theme-default.day-tts {
+  background: linear-gradient(to bottom, #eef5fb, #e3eff8);
+}
+
+/* Sunday */
+body.theme-default.day-sun {
+  background: linear-gradient(to bottom, #fff4e8, #f8efe4);
 }
 
 /* =========================
-   EXISTING ECO THEMES (KEPT SAFE)
+   WATER THEME
 ========================= */
 
-/* WATER */
 body.theme-water {
   background: linear-gradient(to bottom, #e0f7fa, #f4f8f6);
 }
@@ -249,7 +275,14 @@ body.theme-water .result {
   border-left: 5px solid #009688;
 }
 
-/* PLASTIC */
+body.theme-water input:focus {
+  box-shadow: 0 0 0 3px rgba(0,150,136,0.18);
+}
+
+/* =========================
+   PLASTIC THEME
+========================= */
+
 body.theme-plastic {
   background: linear-gradient(to bottom, #fce4ec, #f4f8f6);
 }
@@ -267,7 +300,14 @@ body.theme-plastic .result {
   border-left: 5px solid #d81b60;
 }
 
-/* CARBON */
+body.theme-plastic input:focus {
+  box-shadow: 0 0 0 3px rgba(216,27,96,0.18);
+}
+
+/* =========================
+   CARBON THEME
+========================= */
+
 body.theme-carbon {
   background: linear-gradient(to bottom, #e3f2fd, #f4f8f6);
 }
@@ -285,26 +325,14 @@ body.theme-carbon .result {
   border-left: 5px solid #1976d2;
 }
 
-/* TREE */
-body.theme-tree {
-  background: linear-gradient(to bottom, #e8f5e9, #f4f8f6);
+body.theme-carbon input:focus {
+  box-shadow: 0 0 0 3px rgba(25,118,210,0.18);
 }
 
-body.theme-tree button {
-  background: #43a047;
-}
+/* =========================
+   TREE THEME
+========================= */
 
-body.theme-tree button:hover {
-  background: #2e7d32;
-}
-
-body.theme-tree .result {
-  background: #e8f5e9;
-  border-left: 5px solid #43a047;
-}  box-shadow: 0 0 0 3px rgba(25,118,210,0.18);
-}
-
-/* 💚 TREE */
 body.theme-tree {
   background: linear-gradient(to bottom, #e8f5e9, #f4f8f6);
 }
@@ -326,46 +354,40 @@ body.theme-tree input:focus {
   box-shadow: 0 0 0 3px rgba(67,160,71,0.18);
 }
 
-.card-link {
-  display: block;
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: all 0.25s ease;
-  border: 1px solid rgba(0,0,0,0.03);
-}
-
-.card-link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-  border-color: rgba(39,174,96,0.2);
-}
 /* =========================
-   NAVIGATION (RESTORED GREEN BRAND STYLE)
+   RESPONSIVE DESIGN
 ========================= */
 
-nav {
-  text-align: center;
-  margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
+@media (max-width: 768px) {
 
-nav a {
-  text-decoration: none;
-  color: #27ae60;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 8px;
-  transition: 0.2s ease;
-}
+  .container {
+    padding: 14px;
+  }
 
-nav a:hover {
-  background: #e8f5ee;
-  color: #1f8f4d;
+  .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+  }
+
+  nav {
+    gap: 8px;
+  }
+
+  nav a {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
 }
+```
