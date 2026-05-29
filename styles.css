@@ -199,7 +199,7 @@ nav a:hover {
   border-color: rgba(39,174,96,0.2);
 }
 
-/* newly added on 18/5/ 26
+/* newly added on 18/5/ 26 */
 
 /* =========================
    FEATURE GRID
@@ -426,21 +426,59 @@ body.theme-tree input:focus {
     font-size: 14px;
   }
 }
-``
-/* Daily Eco Reflection - Warm Gold */
-.daily-reflection {
+
+/* 🌈 DAILY REFLECTION BASE */
+section.card.daily-reflection {
+  transition: all 0.3s ease;
+}
+
+/* 🌿 Monday - Apple Green */
+.day-mon {
+  background: linear-gradient(to right, #e8f5e9, #f4f8f6);
+  border-left: 5px solid #43a047;
+}
+
+/* 💧 Tuesday - Coco (Warm Earth / Coconut tone) */
+.day-tue {
+  background: linear-gradient(to right, #f5efe6, #fdfaf6);
+  border-left: 5px solid #a67c52;
+}
+
+/* 🌼 Wednesday - Soft Yellow */
+.day-wed {
+  background: linear-gradient(to right, #fff9e6, #f4f8f6);
+  border-left: 5px solid #f4c542;
+}
+
+/* 🌸 Thursday - Soft Pink */
+.day-thu {
+  background: linear-gradient(to right, #fde7f3, #f4f8f6);
+  border-left: 5px solid #ec407a;
+}
+
+/* 🌞 Friday - Warm Gold */
+.day-fri {
   background: linear-gradient(to right, #fff8e1, #fff3cd);
   border-left: 5px solid #f9a825;
 }
 
-.daily-reflection h2 {
-  color: #b26a00;
+/* 🌊 Saturday - Teal */
+.day-sat {
+  background: linear-gradient(to right, #e0f2f1, #f4f8f6);
+  border-left: 5px solid #00897b;
 }
 
-#dailyQuote {
-  font-size: 16px;
-  line-height: 1.8;
-  color: #5a4a2a;
-  text-align: center;
-  font-style: italic;
+/* 🧘 Sunday - Lavender */
+.day-sun {
+  background: linear-gradient(to right, #f3e5f5, #f4f8f6);
+  border-left: 5px solid #8e24aa;
+}
+/* Daily Eco Reflection - Warm Gold / Day Themes */
+section.card.daily-reflection {
+  transition: all 0.3s ease;
+}
+
+/* text styling */
+.daily-reflection p {
+  color: #3d2f1f;
 }
