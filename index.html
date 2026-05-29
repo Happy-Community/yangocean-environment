@@ -14,6 +14,12 @@
 <meta property="og:title" content="Yangocean Eco Living Hub">
 <meta property="og:description" content="Practical eco living guides and sustainability tools">
 <meta property="og:url" content="https://yangocean.com/">
+
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yangocean Eco Living Hub">
+<meta name="twitter:description" content="Practical eco living guides and sustainability tools">
+  
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous"></script>
@@ -67,7 +73,7 @@ crossorigin="anonymous"></script>
 <section class="card daily-reflection">
   <h2>🌱 Daily Eco Reflection</h2>
 
-  <p id="dailyQuote"></p>
+<p id="dailyQuote">Loading eco reflection...</p>
 </section>
 
 
@@ -236,69 +242,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
 const ecoQuotes = [
-
   "🌱 Small sustainable actions repeated daily create meaningful environmental change.",
-
   "💧 Saving water today helps protect future generations.",
-
   "♻️ Reducing waste begins with mindful consumption.",
-
   "🌳 Trees quietly support life every single day.",
-
   "⚡ Conserving energy is one of the simplest ways to reduce emissions.",
-
   "🚶 Sustainable living is built through small daily habits.",
-
   "🧘 A balanced life includes caring for both ourselves and the environment.",
-
   "🍃 Nature grows steadily without rushing.",
-
   "🌎 Buying less can sometimes help the environment more.",
-
   "💚 Reusable habits create long-term positive impact.",
-
   "🌿 Caring for the planet begins at home.",
-
   "🚰 Clean water should never be taken for granted.",
-
   "🌞 Simple mindful living often reduces unnecessary waste.",
-
   "♻️ Sustainability starts with awareness.",
-
   "🌳 Every tree contributes quietly to cleaner air.",
-
   "⚡ Turning off unused electricity saves energy daily.",
-
   "🚶 Walking more can reduce environmental impact.",
-
   "🍽️ Reducing food waste helps conserve resources.",
-
   "🌍 Small eco habits become powerful through consistency.",
-
   "💧 Every drop of water matters.",
-
   "🌱 Sustainable living is a journey, not perfection.",
-
   "♻️ Reusing items reduces unnecessary consumption.",
-
   "🌳 Green spaces improve both health and environment.",
-
   "🧘 A calmer lifestyle often consumes less.",
-
   "⚡ Energy efficiency helps both people and planet.",
-
   "🌿 Mindful choices create meaningful change.",
-
   "💚 Future generations depend on today’s actions.",
-
   "🚰 Water conservation supports environmental balance.",
-
   "🍃 Respecting nature helps sustain life.",
-
   "🌎 Environmental awareness grows through education.",
-
   "🌱 Small positive actions matter every day."
-
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -306,9 +280,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const el = document.getElementById("dailyQuote");
 
   if (el) {
-    el.innerText = ecoQuotes[today - 1];
+    el.innerText = ecoQuotes[today % ecoQuotes.length];
   }
-});  
+});
+</script>  
+
 
 </script>
   
