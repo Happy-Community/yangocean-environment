@@ -426,4 +426,26 @@ body.theme-tree input:focus {
     font-size: 14px;
   }
 }
-```
+``
+/* =========================
+   DAILY ECO REFLECTION
+========================= */
+
+.daily-reflection {
+  background: linear-gradient(to right, #f6fff7, #eef8f1);
+  border-left: 5px solid #43a047;
+  padding: 22px;
+}
+
+.daily-reflection h2 {
+  color: #2e7d32;
+  margin-top: 0;
+}
+
+#dailyQuote {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #355c4b;
+  text-align: center;
+  font-style: italic;
+}`
