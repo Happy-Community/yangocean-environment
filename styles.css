@@ -498,37 +498,36 @@ section.card.daily-reflection {
    FEATURE CARD (FINAL FIX)
 ========================= */
 
-.feature {
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: all 0.25s ease;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
 }
 
-/* hover effect */
+.feature {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: 0.25s ease;
+}
+
 .feature:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.10);
 }
 
-/* =========================
-   FEATURE CONTENT
-   (keep or remove depending on usage)
-========================= */
-
 .feature a {
   text-decoration: none;
   font-weight: 700;
   color: #27ae60;
+  display: block;
+  margin-bottom: 6px;
 }
 
 .feature p {
-  margin-top: 10px;
+  margin: 0;
   font-size: 14px;
   color: #555;
 }
