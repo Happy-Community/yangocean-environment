@@ -246,14 +246,63 @@ const ecoQuotes = [
 
   "🚶 Sustainable living is built through small daily habits.",
 
-  "🧘 A balanced life includes caring for both ourselves and the environment."
+  "🧘 A balanced life includes caring for both ourselves and the environment.",
+
+  "🍃 Nature grows steadily without rushing.",
+
+  "🌎 Buying less can sometimes help the environment more.",
+
+  "💚 Reusable habits create long-term positive impact.",
+
+  "🌿 Caring for the planet begins at home.",
+
+  "🚰 Clean water should never be taken for granted.",
+
+  "🌞 Simple mindful living often reduces unnecessary waste.",
+
+  "♻️ Sustainability starts with awareness.",
+
+  "🌳 Every tree contributes quietly to cleaner air.",
+
+  "⚡ Turning off unused electricity saves energy daily.",
+
+  "🚶 Walking more can reduce environmental impact.",
+
+  "🍽️ Reducing food waste helps conserve resources.",
+
+  "🌍 Small eco habits become powerful through consistency.",
+
+  "💧 Every drop of water matters.",
+
+  "🌱 Sustainable living is a journey, not perfection.",
+
+  "♻️ Reusing items reduces unnecessary consumption.",
+
+  "🌳 Green spaces improve both health and environment.",
+
+  "🧘 A calmer lifestyle often consumes less.",
+
+  "⚡ Energy efficiency helps both people and planet.",
+
+  "🌿 Mindful choices create meaningful change.",
+
+  "💚 Future generations depend on today’s actions.",
+
+  "🚰 Water conservation supports environmental balance.",
+
+  "🍃 Respecting nature helps sustain life.",
+
+  "🌎 Environmental awareness grows through education.",
+
+  "🌱 Small positive actions matter every day."
 
 ];
 
-const day = new Date().getDay();
+const today = new Date().getDate();
 
 document.getElementById("dailyQuote").innerText =
-  ecoQuotes[day];
+  ecoQuotes[today - 1];
 </script>
+  
 </body>
 </html>
