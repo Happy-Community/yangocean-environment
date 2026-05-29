@@ -427,25 +427,20 @@ body.theme-tree input:focus {
   }
 }
 ``
-/* =========================
-   DAILY ECO REFLECTION
-========================= */
-
+/* Daily Eco Reflection - Warm Gold */
 .daily-reflection {
-  background: linear-gradient(to right, #f6fff7, #eef8f1);
-  border-left: 5px solid #43a047;
-  padding: 22px;
+  background: linear-gradient(to right, #fff8e1, #fff3cd);
+  border-left: 5px solid #f9a825;
 }
 
 .daily-reflection h2 {
-  color: #2e7d32;
-  margin-top: 0;
+  color: #b26a00;
 }
 
 #dailyQuote {
   font-size: 16px;
   line-height: 1.8;
-  color: #355c4b;
+  color: #5a4a2a;
   text-align: center;
   font-style: italic;
-}`
+}
