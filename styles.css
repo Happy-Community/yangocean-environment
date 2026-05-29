@@ -248,7 +248,7 @@ body.theme-ms {
   background: linear-gradient(to bottom, #fff8e1, #f4f8f6);
 }
 
-/ * ZH - pink */
+/* ZH - pink */
 body.theme-zh {
   background: linear-gradient(to bottom, #f8d7e8, #f4f8f6);
 }
@@ -483,37 +483,52 @@ section.card.daily-reflection {
   color: #3d2f1f;
 }
 
+/* =========================
+   FEATURE GRID (FINAL FIX)
+========================= */
+
 .features {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
 }
+
+/* =========================
+   FEATURE CARD (FINAL FIX)
+========================= */
 
 .feature {
   background: #ffffff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
-.feature-title {
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  margin-bottom: 8px;
-  display: block;
+/* hover effect */
+.feature:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.10);
 }
 
-.feature-desc {
+/* =========================
+   FEATURE CONTENT
+   (keep or remove depending on usage)
+========================= */
+
+.feature a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.feature p {
+  margin-top: 10px;
   font-size: 14px;
   color: #555;
-  margin: 0;
-  line-height: 1.5;
-}
-.feature:hover {
-  transform: translateY(-3px);
-  transition: 0.2s ease;
 }
