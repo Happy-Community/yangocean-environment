@@ -10,7 +10,10 @@
 <meta name="description" content="Practical eco living guides, sustainability tools, carbon footprint calculators, and simple daily habits to reduce waste and protect the environment.">
 
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
-
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Yangocean Eco Living Hub">
+<meta property="og:description" content="Practical eco living guides and sustainability tools">
+<meta property="og:url" content="https://yangocean.com/">
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous"></script>
@@ -211,26 +214,26 @@ crossorigin="anonymous"></script>
 </div>
 
 <script>
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
+
   const day = new Date().getDay();
 
-  if (document.body.classList.contains("theme-default")) {
+  const map = [
+    "sun", "mon", "tue", "wed", "thu", "fri", "sat"
+  ];
 
-    if (day === 0) {
-      document.body.classList.add("day-sun");
-    }
-    else if (day === 1 || day === 3 || day === 5) {
-      document.body.classList.add("day-mwf");
-    }
-    else {
-      document.body.classList.add("day-tts");
-    }
+  const el = document.querySelector(".daily-reflection");
 
-  }
-})();
+  if (!el) return;
+
+  el.classList.add("day-" + map[day]);
+});
+  
+
+
 </script>
   
-/* for daily eco Reflection */
+
 <script>
 const ecoQuotes = [
 
@@ -298,10 +301,15 @@ const ecoQuotes = [
 
 ];
 
-const today = new Date().getDate();
+document.addEventListener("DOMContentLoaded", function () {
+  const today = new Date().getDate();
+  const el = document.getElementById("dailyQuote");
 
-document.getElementById("dailyQuote").innerText =
-  ecoQuotes[today - 1];
+  if (el) {
+    el.innerText = ecoQuotes[today - 1];
+  }
+});  
+
 </script>
   
 </body>
