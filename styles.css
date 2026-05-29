@@ -513,3 +513,7 @@ section.card.daily-reflection {
   margin: 0;
   line-height: 1.5;
 }
+.feature:hover {
+  transform: translateY(-3px);
+  transition: 0.2s ease;
+}
