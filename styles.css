@@ -482,3 +482,34 @@ section.card.daily-reflection {
 .daily-reflection p {
   color: #3d2f1f;
 }
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.feature {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.feature-title {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.feature-desc {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
