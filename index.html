@@ -328,53 +328,37 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 async function loadRSS() {
   try {
-    const rssUrl = "https://news.mongabay.com/feed/";
-
-    // Use a more stable public CORS proxy
-    const apiUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(rssUrl);
-
-    const response = await fetch(apiUrl);
-    const text = await response.text();
-
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(text, "text/xml");
-
-    const items = xml.querySelectorAll("item");
+    const response = await fetch("/data/mongabay.json");
+    const data = await response.json();
 
     const container = document.getElementById("rss-feed");
 
-    if (!items.length) {
+    if (!data || data.length === 0) {
       container.innerHTML = "<p>No updates available.</p>";
       return;
     }
 
     let html = "<ul>";
 
-    for (let i = 0; i < Math.min(5, items.length); i++) {
-      const item = items[i];
-      const title = item.querySelector("title")?.textContent;
-      const link = item.querySelector("link")?.textContent;
-      const date = item.querySelector("pubDate")?.textContent;
-
+    data.slice(0, 5).forEach(item => {
       html += `
         <li style="margin-bottom:10px;">
-          <a href="${link}" target="_blank" rel="noopener noreferrer">
-            ${title}
+          <a href="${item.link}" target="_blank">
+            ${item.title}
           </a>
           <br>
-          <small style="color:#777;">${date ? date.substring(0, 16) : ""}</small>
+          <small style="color:#777;">${item.date || ""}</small>
         </li>
       `;
-    }
+    });
 
     html += "</ul>";
 
     container.innerHTML = html;
 
-  } catch (error) {
+  } catch (err) {
     document.getElementById("rss-feed").innerHTML =
-      "<p>Unable to load updates at the moment.</p>";
-    console.error(error);
+      "<p>Unable to load updates.</p>";
   }
 }
 
