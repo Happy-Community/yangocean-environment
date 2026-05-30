@@ -226,19 +226,14 @@ crossorigin="anonymous"></script>
 
 </section>
 
-<!-- ECO PLANTING UPDATES (MONGABAY RSS) -->
+<!-- ECO NEWS SYSTEM -->
 <section class="card">
-
   <h2>📰 Eco Planting Updates</h2>
+  <p>Latest environmental and forest-related news from trusted sources.</p>
 
-  <p>
-    Latest environmental and forest-related news from trusted sources.
-  </p>
-
-  <div id="rss-feed">
-    <p>Loading latest updates...</p>
+  <div id="eco-news">
+    Loading latest updates...
   </div>
-
 </section>
 <!-- WHY IT MATTERS -->
 <section class="card">
@@ -326,43 +321,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
-async function loadRSS() {
-  try {
-    const response = await fetch("/data/mongabay.json");
-    const data = await response.json();
+const feeds = [
+  {
+    name: "Mongabay",
+    url: "https://news.mongabay.com/feed/"
+  },
+  {
+    name: "UNEP News",
+    url: "https://www.unep.org/rss.xml"
+  },
+  {
+    name: "National Geographic Environment",
+    url: "https://www.nationalgeographic.com/environment/rss/"
+  }
+];
 
-    const container = document.getElementById("rss-feed");
+async function loadEcoNews() {
+  const container = document.getElementById("eco-news");
+  container.innerHTML = "";
 
-    if (!data || data.length === 0) {
-      container.innerHTML = "<p>No updates available.</p>";
-      return;
-    }
+  for (let feed of feeds) {
+    try {
+      const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feed.url));
+      const data = await res.json();
 
-    let html = "<ul>";
+      const items = data.items.slice(0, 2); // 2 articles per source
 
-    data.slice(0, 5).forEach(item => {
-      html += `
-        <li style="margin-bottom:10px;">
-          <a href="${item.link}" target="_blank">
-            ${item.title}
-          </a>
-          <br>
-          <small style="color:#777;">${item.date || ""}</small>
-        </li>
+      const block = document.createElement("div");
+      block.style.marginBottom = "18px";
+
+      block.innerHTML = `
+        <h3 style="margin-bottom:8px;">🌱 ${feed.name}</h3>
+        ${items.map(item => `
+          <p style="margin:6px 0;">
+            <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+              ${item.title}
+            </a>
+          </p>
+        `).join("")}
       `;
-    });
 
-    html += "</ul>";
+      container.appendChild(block);
 
-    container.innerHTML = html;
-
-  } catch (err) {
-    document.getElementById("rss-feed").innerHTML =
-      "<p>Unable to load updates.</p>";
+    } catch (err) {
+      console.log("Feed error:", feed.name);
+    }
   }
 }
 
-document.addEventListener("DOMContentLoaded", loadRSS);
+document.addEventListener("DOMContentLoaded", loadEcoNews);
 </script>
 </body>
 </html>
