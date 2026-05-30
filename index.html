@@ -329,29 +329,40 @@ document.addEventListener("DOMContentLoaded", function () {
 async function loadRSS() {
   try {
     const rssUrl = "https://news.mongabay.com/feed/";
-    const apiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(rssUrl);
+
+    // Use a more stable public CORS proxy
+    const apiUrl = "https://api.allorigins.win/raw?url=" + encodeURIComponent(rssUrl);
 
     const response = await fetch(apiUrl);
-    const data = await response.json();
+    const text = await response.text();
+
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "text/xml");
+
+    const items = xml.querySelectorAll("item");
 
     const container = document.getElementById("rss-feed");
 
-    if (!data.items || data.items.length === 0) {
+    if (!items.length) {
       container.innerHTML = "<p>No updates available.</p>";
       return;
     }
 
     let html = "<ul>";
 
-    for (let i = 0; i < 5; i++) {
-      const item = data.items[i];
+    for (let i = 0; i < Math.min(5, items.length); i++) {
+      const item = items[i];
+      const title = item.querySelector("title")?.textContent;
+      const link = item.querySelector("link")?.textContent;
+      const date = item.querySelector("pubDate")?.textContent;
+
       html += `
         <li style="margin-bottom:10px;">
-          <a href="${item.link}" target="_blank" rel="noopener noreferrer">
-            ${item.title}
+          <a href="${link}" target="_blank" rel="noopener noreferrer">
+            ${title}
           </a>
           <br>
-          <small style="color:#777;">${item.pubDate.substring(0, 10)}</small>
+          <small style="color:#777;">${date ? date.substring(0, 16) : ""}</small>
         </li>
       `;
     }
