@@ -226,7 +226,20 @@ crossorigin="anonymous"></script>
 
 </section>
 
+<!-- ECO PLANTING UPDATES (MONGABAY RSS) -->
+<section class="card">
 
+  <h2>📰 Eco Planting Updates</h2>
+
+  <p>
+    Latest environmental and forest-related news from trusted sources.
+  </p>
+
+  <div id="rss-feed">
+    <p>Loading latest updates...</p>
+  </div>
+
+</section>
 <!-- WHY IT MATTERS -->
 <section class="card">
   <h2>🌎 Why Eco Habits Matter</h2>
@@ -312,6 +325,49 @@ document.addEventListener("DOMContentLoaded", function () {
   if (el) el.innerText = ecoQuotes[today % ecoQuotes.length];
 });
 </script>
+<script>
+async function loadRSS() {
+  try {
+    const rssUrl = "https://news.mongabay.com/feed/";
+    const apiUrl = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(rssUrl);
 
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    const container = document.getElementById("rss-feed");
+
+    if (!data.items || data.items.length === 0) {
+      container.innerHTML = "<p>No updates available.</p>";
+      return;
+    }
+
+    let html = "<ul>";
+
+    for (let i = 0; i < 5; i++) {
+      const item = data.items[i];
+      html += `
+        <li style="margin-bottom:10px;">
+          <a href="${item.link}" target="_blank" rel="noopener noreferrer">
+            ${item.title}
+          </a>
+          <br>
+          <small style="color:#777;">${item.pubDate.substring(0, 10)}</small>
+        </li>
+      `;
+    }
+
+    html += "</ul>";
+
+    container.innerHTML = html;
+
+  } catch (error) {
+    document.getElementById("rss-feed").innerHTML =
+      "<p>Unable to load updates at the moment.</p>";
+    console.error(error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadRSS);
+</script>
 </body>
 </html>
