@@ -123,7 +123,9 @@
      TTS SCRIPT (FIXED VERSION)
 ========================= -->
 <script>
+let speech = null;
 let isSpeaking = false;
+let isPaused = false;
 
 function readPage() {
   window.speechSynthesis.cancel();
@@ -135,43 +137,56 @@ function readPage() {
     return;
   }
 
-  // ONLY clean readable content (important fix)
   const elements = content.querySelectorAll("h1, h2, h3, p");
 
   let text = "";
 
   elements.forEach(el => {
-    const cleanText = el.innerText.trim();
-    if (cleanText.length > 0) {
-      text += cleanText + ". ";
+    const clean = el.innerText.trim();
+    if (clean.length > 0) {
+      text += clean + ". ";
     }
   });
 
-  if (!text.trim()) {
-    console.error("No readable content found");
-    return;
-  }
+  if (!text.trim()) return;
 
-  const speech = new SpeechSynthesisUtterance(text);
+  speech = new SpeechSynthesisUtterance(text);
 
-  speech.rate = 0.9;   // smoother reading
+  speech.rate = 0.9;
   speech.pitch = 1;
   speech.volume = 1;
 
   speech.onstart = () => {
     isSpeaking = true;
+    isPaused = false;
   };
 
   speech.onend = () => {
     isSpeaking = false;
+    isPaused = false;
   };
 
   window.speechSynthesis.speak(speech);
 }
 
+function pauseReading() {
+  if (isSpeaking && !isPaused) {
+    window.speechSynthesis.pause();
+    isPaused = true;
+  }
+}
+
+function resumeReading() {
+  if (isPaused) {
+    window.speechSynthesis.resume();
+    isPaused = false;
+  }
+}
+
 function stopReading() {
   window.speechSynthesis.cancel();
   isSpeaking = false;
+  isPaused = false;
 }
 </script>
 
