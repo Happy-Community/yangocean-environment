@@ -6,13 +6,10 @@
 <title>Blog | Wellness & Sustainability Articles | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="description" content="Read wellness, sustainability, eco living, and environmental awareness articles from Yangocean.">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://yangocean.com/blog.html">
-
 <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -29,6 +26,7 @@
   <a href="/apps.html">Apps</a>
 </nav>
 
+<!-- MAIN CONTENT -->
 <main id="content-to-read">
 
 <!-- HERO -->
@@ -40,10 +38,10 @@
   </p>
 
   <!-- READ ALOUD CONTROLS -->
-<div class="tts-controls">
-  <button type="button" class="tts-btn play" onclick="readPage()" aria-label="Read aloud">🔊</button>
-  <button type="button" class="tts-btn stop" onclick="stopReading()" aria-label="Stop reading">⏹</button>
-</div>
+  <div class="tts-controls">
+    <button type="button" class="tts-btn play" onclick="readPage()" aria-label="Read aloud">🔊</button>
+    <button type="button" class="tts-btn stop" onclick="stopReading()" aria-label="Stop reading">⏹</button>
+  </div>
 </section>
 
 <!-- INTRO -->
@@ -84,24 +82,19 @@
 <!-- FUTURE -->
 <section class="card">
   <h2>🌱 More Articles Coming Soon</h2>
-  <p>
-    We are continuously adding eco living and sustainability content.
-  </p>
+  <p>We are continuously adding eco living and sustainability content.</p>
 </section>
 
 <!-- CTA -->
 <section class="card">
   <h2>💚 Start Small, Stay Consistent</h2>
-  <p>
-    Small daily actions create long-term environmental impact.
-  </p>
+  <p>Small daily actions create long-term environmental impact.</p>
 </section>
 
 </main>
 
 <!-- FOOTER -->
 <footer class="footer">
-
   <p>© 2026 Yangocean</p>
 
   <p>
@@ -110,12 +103,13 @@
     <a href="/contact.html">Contact</a> |
     <a href="/privacy.html">Privacy</a>
   </p>
-
 </footer>
 
 </div>
 
-<!-- SCRIPT -->
+<!-- =========================
+     TTS SCRIPT (FIXED VERSION)
+========================= -->
 <script>
 let isSpeaking = false;
 
@@ -124,18 +118,31 @@ function readPage() {
 
   const content = document.getElementById("content-to-read");
 
-  // Read only meaningful content (cleaner voice output)
-  const elements = content.querySelectorAll("h1, h2, h3, p, a");
+  if (!content) {
+    console.error("Missing #content-to-read");
+    return;
+  }
+
+  // ONLY clean readable content (important fix)
+  const elements = content.querySelectorAll("h1, h2, h3, p");
 
   let text = "";
 
   elements.forEach(el => {
-    text += el.innerText + ". ";
+    const cleanText = el.innerText.trim();
+    if (cleanText.length > 0) {
+      text += cleanText + ". ";
+    }
   });
+
+  if (!text.trim()) {
+    console.error("No readable content found");
+    return;
+  }
 
   const speech = new SpeechSynthesisUtterance(text);
 
-  speech.rate = 0.95;
+  speech.rate = 0.9;   // smoother reading
   speech.pitch = 1;
   speech.volume = 1;
 
