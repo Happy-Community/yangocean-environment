@@ -176,6 +176,10 @@ button:active {
 .tts-btn:active {
   transform: scale(0.95);
 }
+
+.tts-controls button {
+  all: unset;
+}
 /* =========================
    RESULT BOX
 ========================= */
