@@ -40,8 +40,7 @@
 
   <!-- READ ALOUD CONTROLS -->
 <div class="tts-controls">
-
-  <button type="button" class="tts-btn play" onclick="readPage()" aria-label="Play">
+  <button type="button" class="tts-btn play" onclick="togglePlay()" aria-label="Play/Pause">
     🔊
   </button>
 
@@ -52,7 +51,6 @@
   <button type="button" class="tts-btn stop" onclick="stopReading()" aria-label="Stop">
     ⏹
   </button>
-
 </div>
 </section>
 
@@ -127,48 +125,49 @@ let speech = null;
 let isSpeaking = false;
 let isPaused = false;
 
-function readPage() {
-  window.speechSynthesis.cancel();
-
+function buildSpeech() {
   const content = document.getElementById("content-to-read");
-
-  if (!content) {
-    console.error("Missing #content-to-read");
-    return;
-  }
-
   const elements = content.querySelectorAll("h1, h2, h3, p");
 
   let text = "";
-
   elements.forEach(el => {
-    const clean = el.innerText.trim();
-    if (clean.length > 0) {
-      text += clean + ". ";
-    }
+    text += el.innerText + ". ";
   });
 
-  if (!text.trim()) return;
+  const utterance = new SpeechSynthesisUtterance(text);
 
-  speech = new SpeechSynthesisUtterance(text);
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+  utterance.volume = 1;
 
-  speech.rate = 0.9;
-  speech.pitch = 1;
-  speech.volume = 1;
-
-  speech.onstart = () => {
+  utterance.onstart = () => {
     isSpeaking = true;
     isPaused = false;
   };
 
-  speech.onend = () => {
+  utterance.onend = () => {
     isSpeaking = false;
     isPaused = false;
   };
 
-  window.speechSynthesis.speak(speech);
+  return utterance;
 }
 
+/* PLAY / RESUME */
+function togglePlay() {
+  if (isPaused) {
+    window.speechSynthesis.resume();
+    isPaused = false;
+    return;
+  }
+
+  if (!isSpeaking) {
+    speech = buildSpeech();
+    window.speechSynthesis.speak(speech);
+  }
+}
+
+/* PAUSE */
 function pauseReading() {
   if (isSpeaking && !isPaused) {
     window.speechSynthesis.pause();
@@ -176,13 +175,7 @@ function pauseReading() {
   }
 }
 
-function resumeReading() {
-  if (isPaused) {
-    window.speechSynthesis.resume();
-    isPaused = false;
-  }
-}
-
+/* STOP */
 function stopReading() {
   window.speechSynthesis.cancel();
   isSpeaking = false;
