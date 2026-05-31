@@ -14,7 +14,6 @@
 <link rel="canonical" href="https://yangocean.com/blog.html">
 
 <link rel="stylesheet" href="/styles.css">
-
 </head>
 
 <body>
@@ -40,12 +39,11 @@
     Articles on wellness, sustainability, and eco-friendly living habits.
   </p>
 
-  <!-- READ ALOUD BUTTONS -->
-
-<button onclick="readPage()">🔊 Play</button>
-<button onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
-<button onclick="readPage()" style="margin-top:10px;">
-    
+  <!-- READ ALOUD CONTROLS -->
+  <div style="margin-top:10px;">
+    <button onclick="readPage()">🔊 Play</button>
+    <button onclick="stopReading()">⏹ Stop</button>
+  </div>
 </section>
 
 <!-- INTRO -->
@@ -118,15 +116,22 @@
 </div>
 
 <!-- SCRIPT -->
-
 <script>
+let isSpeaking = false;
+
 function readPage() {
   window.speechSynthesis.cancel();
 
   const content = document.getElementById("content-to-read");
 
-  // Only read text inside main content
-  const text = content.innerText;
+  // Read only meaningful content (cleaner voice output)
+  const elements = content.querySelectorAll("h1, h2, h3, p, a");
+
+  let text = "";
+
+  elements.forEach(el => {
+    text += el.innerText + ". ";
+  });
 
   const speech = new SpeechSynthesisUtterance(text);
 
@@ -134,14 +139,22 @@ function readPage() {
   speech.pitch = 1;
   speech.volume = 1;
 
+  speech.onstart = () => {
+    isSpeaking = true;
+  };
+
+  speech.onend = () => {
+    isSpeaking = false;
+  };
+
   window.speechSynthesis.speak(speech);
 }
 
 function stopReading() {
   window.speechSynthesis.cancel();
+  isSpeaking = false;
 }
-</script>  
-
+</script>
 
 </body>
 </html>
