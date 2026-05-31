@@ -170,6 +170,44 @@ crossorigin="anonymous"></script>
   </p>
 </footer>
 </div>
+<script>
+let isSpeaking = false;
 
+function readPage() {
+  window.speechSynthesis.cancel();
+
+  const content = document.getElementById("content-to-read");
+
+  // Read only meaningful content (cleaner voice output)
+  const elements = content.querySelectorAll("h1, h2, h3, p, a");
+
+  let text = "";
+
+  elements.forEach(el => {
+    text += el.innerText + ". ";
+  });
+
+  const speech = new SpeechSynthesisUtterance(text);
+
+  speech.rate = 0.95;
+  speech.pitch = 1;
+  speech.volume = 1;
+
+  speech.onstart = () => {
+    isSpeaking = true;
+  };
+
+  speech.onend = () => {
+    isSpeaking = false;
+  };
+
+  window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+  window.speechSynthesis.cancel();
+  isSpeaking = false;
+}
+</script>
 </body>
 </html>
