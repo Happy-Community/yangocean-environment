@@ -30,73 +30,78 @@
   <a href="/apps.html">Apps</a>
 </nav>
 
+<main>
+
 <!-- HERO -->
 <section class="card">
   <h1>📝 Yangocean Blog</h1>
+
   <p>
     Articles on wellness, sustainability, and eco-friendly living habits.
   </p>
+
+  <!-- READ ALOUD BUTTONS -->
+  <button onclick="readPage()" style="margin-top:10px;">
+    🔊 Read This Page
+  </button>
+
+  <button onclick="stopReading()" style="margin-top:10px;">
+    ⏹ Stop
+  </button>
 </section>
 
 <!-- INTRO -->
 <section class="card">
   <h2>🌿 Learn & Improve Your Lifestyle</h2>
+
   <p>
     Explore simple and practical knowledge about how daily habits affect your health and the environment.
     All articles are designed to be easy to understand and actionable.
   </p>
 </section>
 
-<!-- ARTICLE LIST -->
+<!-- ARTICLES -->
 <section class="card">
 
   <h2>📚 Latest Articles</h2>
 
   <div class="features">
 
-    <!-- ARTICLE 1 -->
     <div class="feature">
-      <a href="blog/wellness-and-sustainability.html">
+      <a href="/blog/wellness-and-sustainability.html">
         🌿 Wellness & Sustainability
       </a>
-      <p>
-        Understand how personal health and environmental sustainability are deeply connected.
-      </p>
+      <p>Understand how health and environment are connected.</p>
     </div>
 
-    <!-- ARTICLE 2 -->
     <div class="feature">
-      <a href="blog/why-trees-matter.html">
+      <a href="/blog/why-trees-matter.html">
         🌳 Why Trees Matter
       </a>
-      <p>
-        Learn how trees support life, climate balance, and human wellbeing.
-      </p>
+      <p>Learn how trees support life, climate balance, and wellbeing.</p>
     </div>
 
   </div>
 
 </section>
 
-<!-- FUTURE EXPANSION -->
+<!-- FUTURE -->
 <section class="card">
-
   <h2>🌱 More Articles Coming Soon</h2>
   <p>
-    We are continuously adding new content on eco living, carbon reduction, water saving, and sustainable habits.
+    We are continuously adding eco living and sustainability content.
   </p>
-
 </section>
 
 <!-- CTA -->
 <section class="card">
-
   <h2>💚 Start Small, Stay Consistent</h2>
   <p>
     Small daily actions create long-term environmental impact.
   </p>
-
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -113,6 +118,26 @@
 </footer>
 
 </div>
+
+<!-- SCRIPT -->
+<script>
+function readPage() {
+  window.speechSynthesis.cancel();
+
+  const text = document.body.innerText;
+
+  const speech = new SpeechSynthesisUtterance(text);
+  speech.rate = 0.95;
+  speech.pitch = 1;
+  speech.volume = 1;
+
+  window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+  window.speechSynthesis.cancel();
+}
+</script>
 
 </body>
 </html>
