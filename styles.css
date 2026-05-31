@@ -135,30 +135,20 @@ button {
   transition: all 0.2s ease; 
 }
 
-
-/* PLAY */
 .tts-btn.play {
-  background: #27ae60;
+  background: #6bbf8a;
 }
 
 .tts-btn.play:hover {
-  background: #1f8f4d;
-  transform: translateY(-1px);
+  background: #5aaa79;
 }
 
-/* STOP */
 .tts-btn.stop {
-  background: #e74c3c;
+  background: #d98c8c;
 }
 
 .tts-btn.stop:hover {
-  background: #c0392b;
-  transform: translateY(-1px);
-}
-
-/* click effect */
-.tts-btn:active {
-  transform: scale(0.95);
+  background: #c97a7a;
 }
 /* =========================
    RESULT BOX
