@@ -105,23 +105,7 @@ button:active {
 }
 
 /* =========================
-   TTS CONTROLS (ISOLATED)
-========================= */
-
-.tts-controls {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.tts-controls button {
-  flex: 1;
-  margin-top: 0;
-}
-
-/* Play */
-/* =========================
-   CLEAN ICON TTS BUTTONS
+   TTS CONTROLS (FINAL CLEAN VERSION)
 ========================= */
 
 .tts-controls {
@@ -130,27 +114,28 @@ button:active {
   margin-top: 12px;
 }
 
-/* base icon button */
-.tts-btn {
+/* RESET ONLY FOR TTS BUTTONS */
+.tts-controls button {
+  all: unset;
+  box-sizing: border-box;
+
   width: 44px;
   height: 44px;
-  padding: 0;
-  margin-top: 0;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   border-radius: 12px;
-  border: none;
+  cursor: pointer;
 
   font-size: 18px;
-  cursor: pointer;
+  line-height: 1;
 
   transition: all 0.2s ease;
 }
 
-/* play */
+/* PLAY BUTTON */
 .tts-btn.play {
   background: #27ae60;
   color: white;
@@ -161,7 +146,7 @@ button:active {
   transform: translateY(-1px);
 }
 
-/* stop */
+/* STOP BUTTON */
 .tts-btn.stop {
   background: #e74c3c;
   color: white;
@@ -172,13 +157,9 @@ button:active {
   transform: translateY(-1px);
 }
 
-/* click feedback */
+/* CLICK EFFECT */
 .tts-btn:active {
   transform: scale(0.95);
-}
-
-.tts-controls button {
-  all: unset;
 }
 /* =========================
    RESULT BOX
