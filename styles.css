@@ -82,8 +82,11 @@ input:focus {
 /* =========================
    BASE BUTTON (IMPORTANT)
 ========================= */
-
 button {
+  font-family: inherit;
+}
+
+.btn {
   padding: 13px;
   border: none;
   border-radius: 12px;
@@ -95,14 +98,10 @@ button {
   background: #27ae60;
 }
 
-button:hover {
+.btn:hover {
   background: #1f8f4d;
-  transform: translateY(-1px);
 }
 
-button:active {
-  transform: scale(0.98);
-}
 
 /* =========================
    TTS CONTROLS (FINAL CLEAN VERSION)
