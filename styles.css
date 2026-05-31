@@ -106,72 +106,42 @@ button {
 /* =========================
    TTS CONTROLS (FINAL FIXED VERSION)
 ========================= */
-
 .tts-controls {
   display: flex;
   gap: 10px;
   margin-top: 12px;
 }
 
-/* base icon button */
 .tts-btn {
-  all: unset;
-
-  width: 33px;
-  height: 33px;
+  width: 44px;
+  height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  border-radius: 6px;
-  cursor: pointer;
-
-  font-size: 13px;
-  line-height: 1;
-
-  color: white;
-
-  transition: all 0.2s ease; 
-}
-
-.tts-btn.play {
-  background: #6bbf8a;
-}
-
-.tts-btn.play:hover {
-  background: #5aaa79;
-}
-
-.tts-btn.stop {
-  background: #d98c8c;
-}
-
-.tts-btn.stop:hover {
-  background: #c97a7a;
-}
-
-.tts-btn.pause {
-  background: #f0ad4e;
-  color: white;
-
-  width: 34px;
-  height: 34px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 8px;
-  font-size: 14px;
+  border: none;
+  border-radius: 12px;
 
   cursor: pointer;
+  font-size: 18px;
+  color: white;
+
   transition: all 0.2s ease;
 }
 
-.tts-btn.pause:hover {
-  background: #e09b3d;
-  transform: translateY(-1px);
+/* softer colors */
+.tts-btn.play { background: #2ecc71; }
+.tts-btn.play:hover { background: #27ae60; }
+
+.tts-btn.pause { background: #f1c40f; color: #333; }
+.tts-btn.pause:hover { background: #d4ac0d; }
+
+.tts-btn.stop { background: #e67e73; }
+.tts-btn.stop:hover { background: #c0392b; }
+
+.tts-btn:active {
+  transform: scale(0.95);
 }
 /* =========================
    RESULT BOX
