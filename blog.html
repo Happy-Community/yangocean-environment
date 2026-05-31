@@ -41,8 +41,13 @@
 
   <!-- READ ALOUD CONTROLS -->
 <div class="tts-controls">
-  <button class="tts-play" onclick="readPage()">🔊 Play</button>
-  <button class="tts-stop" onclick="stopReading()">⏹ Stop</button>
+  <button class="tts-btn play" onclick="readPage()" aria-label="Play">
+    🔊
+  </button>
+
+  <button class="tts-btn stop" onclick="stopReading()" aria-label="Stop">
+    ⏹
+  </button>
 </div>
 </section>
 
