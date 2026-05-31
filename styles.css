@@ -116,15 +116,16 @@ button:active {
 
 /* RESET ONLY FOR TTS BUTTONS */
 .tts-controls button {
-  all: unset;
-  box-sizing: border-box;
-
   width: 44px;
   height: 44px;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  border: none;
+  padding: 0;
+  margin: 0;
 
   border-radius: 12px;
   cursor: pointer;
@@ -134,7 +135,6 @@ button:active {
 
   transition: all 0.2s ease;
 }
-
 /* PLAY BUTTON */
 .tts-btn.play {
   background: #27ae60;
