@@ -104,7 +104,7 @@ button {
 
 
 /* =========================
-   TTS CONTROLS (FINAL CLEAN VERSION)
+   TTS CONTROLS (FINAL FIXED VERSION)
 ========================= */
 
 .tts-controls {
@@ -113,8 +113,8 @@ button {
   margin-top: 12px;
 }
 
-/* RESET ONLY FOR TTS BUTTONS */
-.tts-controls button {
+/* base icon button */
+.tts-btn {
   width: 44px;
   height: 44px;
 
@@ -132,12 +132,14 @@ button {
   font-size: 18px;
   line-height: 1;
 
+  color: white;
+
   transition: all 0.2s ease;
 }
-/* PLAY BUTTON */
+
+/* PLAY */
 .tts-btn.play {
   background: #27ae60;
-  color: white;
 }
 
 .tts-btn.play:hover {
@@ -145,10 +147,9 @@ button {
   transform: translateY(-1px);
 }
 
-/* STOP BUTTON */
+/* STOP */
 .tts-btn.stop {
   background: #e74c3c;
-  color: white;
 }
 
 .tts-btn.stop:hover {
@@ -156,7 +157,7 @@ button {
   transform: translateY(-1px);
 }
 
-/* CLICK EFFECT */
+/* click effect */
 .tts-btn:active {
   transform: scale(0.95);
 }
