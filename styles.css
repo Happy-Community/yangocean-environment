@@ -16,7 +16,7 @@ body {
 }
 
 /* =========================
-   APP LAYOUT
+   LAYOUT
 ========================= */
 
 .container {
@@ -50,12 +50,10 @@ body {
 h1 {
   text-align: center;
   font-size: 26px;
-  margin-bottom: 12px;
 }
 
 h2 {
   font-size: 20px;
-  margin-top: 10px;
 }
 
 p, li {
@@ -64,7 +62,7 @@ p, li {
 }
 
 /* =========================
-   INPUT SYSTEM
+   INPUT
 ========================= */
 
 input {
@@ -75,7 +73,6 @@ input {
   border: 1px solid #d0d0d0;
   font-size: 15px;
   outline: none;
-  background: #fff;
 }
 
 input:focus {
@@ -83,7 +80,7 @@ input:focus {
 }
 
 /* =========================
-   GLOBAL BUTTON (BASE ONLY)
+   BASE BUTTON (IMPORTANT)
 ========================= */
 
 button {
@@ -94,6 +91,17 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: 0.2s ease;
+  color: white;
+  background: #27ae60;
+}
+
+button:hover {
+  background: #1f8f4d;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: scale(0.98);
 }
 
 /* =========================
@@ -108,11 +116,10 @@ button {
 
 .tts-controls button {
   flex: 1;
-  color: white;
   margin-top: 0;
 }
 
-/* Play button */
+/* Play */
 .tts-play {
   background: #27ae60 !important;
 }
@@ -121,7 +128,7 @@ button {
   background: #1f8f4d !important;
 }
 
-/* Stop button */
+/* Stop */
 .tts-stop {
   background: #e74c3c !important;
 }
@@ -138,8 +145,6 @@ button {
   margin-top: 20px;
   padding: 16px;
   border-radius: 12px;
-  font-size: 15px;
-  line-height: 1.6;
   animation: fadeIn 0.3s ease;
 }
 
@@ -149,7 +154,7 @@ button {
 }
 
 /* =========================
-   NAVIGATION
+   NAV
 ========================= */
 
 nav {
@@ -157,42 +162,22 @@ nav {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 nav a {
   text-decoration: none;
   color: #27ae60;
   font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 8px;
-}
-
-nav a:hover {
-  background: #e8f5ee;
-  color: #1f8f4d;
 }
 
 /* =========================
-   FOOTER
-========================= */
-
-.footer {
-  text-align: center;
-  margin-top: 40px;
-  font-size: 14px;
-  color: #777;
-}
-
-/* =========================
-   FEATURES GRID
+   FEATURES
 ========================= */
 
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 16px;
-  margin-top: 16px;
 }
 
 .feature {
@@ -200,73 +185,22 @@ nav a:hover {
   padding: 16px;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: 0.25s ease;
-}
-
-.feature:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.10);
-}
-
-.feature a {
-  text-decoration: none;
-  font-weight: 700;
-  color: #27ae60;
-  display: block;
-  margin-bottom: 6px;
-}
-
-.feature p {
-  margin: 0;
-  font-size: 14px;
-  color: #555;
-}
-
-/* =========================
-   CARD LINK
-========================= */
-
-.card-link {
-  display: block;
-  background: #fff;
-  padding: 18px;
-  border-radius: 14px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-}
-
-.card-link:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-}
-
-/* =========================
-   DAILY REFLECTION
-========================= */
-
-section.card.daily-reflection {
-  transition: all 0.3s ease;
-}
-
-.daily-reflection p {
-  color: #3d2f1f;
 }
 
 /* =========================
    DAY THEMES
 ========================= */
 
-.day-mon { background: linear-gradient(to right, #e8f5e9, #f4f8f6); border-left: 5px solid #43a047; }
-.day-tue { background: linear-gradient(to right, #f5efe6, #fdfaf6); border-left: 5px solid #a67c52; }
-.day-wed { background: linear-gradient(to right, #fff9e6, #f4f8f6); border-left: 5px solid #f4c542; }
-.day-thu { background: linear-gradient(to right, #fde7f3, #f4f8f6); border-left: 5px solid #ec407a; }
-.day-fri { background: linear-gradient(to right, #fff8e1, #fff3cd); border-left: 5px solid #f9a825; }
-.day-sat { background: linear-gradient(to right, #e0f2f1, #f4f8f6); border-left: 5px solid #00897b; }
-.day-sun { background: linear-gradient(to right, #f3e5f5, #f4f8f6); border-left: 5px solid #8e24aa; }
+.day-mon { background: linear-gradient(to right, #e8f5e9, #f4f8f6); }
+.day-tue { background: linear-gradient(to right, #f5efe6, #fdfaf6); }
+.day-wed { background: linear-gradient(to right, #fff9e6, #f4f8f6); }
+.day-thu { background: linear-gradient(to right, #fde7f3, #f4f8f6); }
+.day-fri { background: linear-gradient(to right, #fff8e1, #fff3cd); }
+.day-sat { background: linear-gradient(to right, #e0f2f1, #f4f8f6); }
+.day-sun { background: linear-gradient(to right, #f3e5f5, #f4f8f6); }
 
 /* =========================
-   LANGUAGE THEMES
+   LANGUAGE THEMES (BODY)
 ========================= */
 
 body.theme-en { background: linear-gradient(to bottom, #e8f5e9, #f4f8f6); }
@@ -275,36 +209,27 @@ body.theme-zh { background: linear-gradient(to bottom, #f8d7e8, #f4f8f6); }
 body.theme-fr { background: linear-gradient(to bottom, #f3e5f5, #f4f8f6); }
 body.theme-es { background: linear-gradient(to bottom, #ffe0b2, #f4f8f6); }
 
-body.theme-default { background: linear-gradient(to bottom, #f4f8f6, #eef6f1); }
+body.theme-default {
+  background: linear-gradient(to bottom, #f4f8f6, #eef6f1);
+}
 
 /* =========================
-   ENVIRONMENT THEMES
-   (ONLY BACKGROUND AFFECTED)
+   ECO THEMES (BACKGROUND ONLY)
 ========================= */
 
 body.theme-water { background: linear-gradient(to bottom, #e0f7fa, #f4f8f6); }
-body.theme-plastic { background: linear-gradient(to bottom, #fce4ec, #f4f8f6); }
-body.theme-carbon { background: linear-gradient(to bottom, #e3f2fd, #f4f8f6); }
 body.theme-tree { background: linear-gradient(to bottom, #e8f5e9, #f4f8f6); }
+body.theme-carbon { background: linear-gradient(to bottom, #e3f2fd, #f4f8f6); }
+body.theme-plastic { background: linear-gradient(to bottom, #fce4ec, #f4f8f6); }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
-
   .container { padding: 14px; }
-
   .card { padding: 20px; }
-
   h1 { font-size: 23px; }
-
   h2 { font-size: 18px; }
-
   p, li { font-size: 14px; }
-
-  nav a {
-    padding: 5px 8px;
-    font-size: 14px;
-  }
 }
