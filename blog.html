@@ -30,7 +30,7 @@
   <a href="/apps.html">Apps</a>
 </nav>
 
-<main>
+<main id="content-to-read">
 
 <!-- HERO -->
 <section class="card">
@@ -41,13 +41,11 @@
   </p>
 
   <!-- READ ALOUD BUTTONS -->
-  <button onclick="readPage()" style="margin-top:10px;">
-    🔊 Read This Page
-  </button>
 
-  <button onclick="stopReading()" style="margin-top:10px;">
-    ⏹ Stop
-  </button>
+<button onclick="readPage()">🔊 Play</button>
+<button onclick="window.speechSynthesis.cancel()">⏹ Stop</button>
+<button onclick="readPage()" style="margin-top:10px;">
+    
 </section>
 
 <!-- INTRO -->
@@ -120,13 +118,18 @@
 </div>
 
 <!-- SCRIPT -->
+
 <script>
 function readPage() {
   window.speechSynthesis.cancel();
 
-  const text = document.body.innerText;
+  const content = document.getElementById("content-to-read");
+
+  // Only read text inside main content
+  const text = content.innerText;
 
   const speech = new SpeechSynthesisUtterance(text);
+
   speech.rate = 0.95;
   speech.pitch = 1;
   speech.volume = 1;
@@ -137,7 +140,8 @@ function readPage() {
 function stopReading() {
   window.speechSynthesis.cancel();
 }
-</script>
+</script>  
+
 
 </body>
 </html>
