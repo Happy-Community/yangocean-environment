@@ -176,6 +176,11 @@ nav a {
   font-weight: 600;
 }
 
+.nav a {
+  margin-right: 12px;
+  display: inline-block;
+}
+
 /* =========================
    FEATURES
 ========================= */
