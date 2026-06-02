@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+
+<title>博客 | 健康与可持续发展文章 | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO META -->
+<meta name="description" content="阅读来自 Yangocean 的健康、可持续发展、环保生活与环境意识相关文章。">
+<meta name="keywords" content="环保生活, 可持续发展, 健康, 环境意识, 碳足迹, 绿色生活, 生态">
+<meta name="robots" content="index, follow">
+
+<!-- OPEN GRAPH -->
+<meta property="og:title" content="Yangocean 博客 - 环保与健康生活">
+<meta property="og:description" content="关于健康、可持续发展与环保生活方式的文章">
+<meta property="og:url" content="https://yangocean.com/zh/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Yangocean 博客 - 环保与健康生活">
+<meta name="twitter:description" content="关于可持续发展与环保生活的文章">
+<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+
+<!-- CANONICAL -->
+<link rel="canonical" href="https://yangocean.com/zh/blog.html">
+
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <a href="/zh/">首页</a>
+  <a href="/zh/eco-living.html">环保生活</a>
+  <a href="/zh/daily-eco-tips.html">每日环保小贴士</a>
+  <a href="/zh/reduce-carbon-footprint.html">碳足迹</a>
+  <a href="/zh/apps.html">应用程序</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="content-to-read">
+
+<!-- HERO -->
+<section class="card">
+  <h1>📝 Yangocean 博客</h1>
+
+  <p>
+    关于健康、可持续发展与环保生活方式的文章。
+  </p>
+
+  <!-- TTS CONTROLS -->
+  <div class="tts-controls">
+    <button type="button" onclick="togglePlay()">🔊</button>
+    <button type="button" onclick="pauseReading()">⏸</button>
+    <button type="button" onclick="stopReading()">⏹</button>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="card">
+  <h2>🌿 学习并改善生活方式</h2>
+  <p>
+    探索简单实用的知识，了解日常习惯如何影响健康与环境。
+  </p>
+</section>
+
+<!-- ARTICLES -->
+<section class="card">
+
+  <h2>📚 最新文章</h2>
+
+  <div class="features">
+
+    <div class="feature">
+      <a href="/zh/blog/wellness-and-sustainability.html">
+        🌿 健康与可持续发展
+      </a>
+      <p>了解健康与环境之间的关系。</p>
+    </div>
+
+    <div class="feature">
+      <a href="/zh/blog/why-trees-matter.html">
+        🌳 为什么树木重要
+      </a>
+      <p>树木如何支持生命与气候平衡。</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FUTURE -->
+<section class="card">
+  <h2>🌱 更多文章即将上线</h2>
+  <p>我们持续更新环保与可持续发展相关内容。</p>
+</section>
+
+<!-- CTA -->
+<section class="card">
+  <h2>💚 从小开始，坚持下去</h2>
+  <p>每天的小行动可以带来长期的环境影响。</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Yangocean</p>
+
+  <p>
+    <a href="/zh/">首页</a> |
+    <a href="/zh/about.html">关于我们</a> |
+    <a href="/zh/contact.html">联系我们</a> |
+    <a href="/zh/privacy.html">隐私政策</a>
+  </p>
+</footer>
+
+</div>
+
+<!-- TTS SCRIPT -->
+<script>
+let speech = null;
+let isSpeaking = false;
+let isPaused = false;
+
+function buildSpeech() {
+  const content = document.getElementById("content-to-read");
+  const elements = content.querySelectorAll("h1, h2, h3, p");
+
+  let text = "";
+  elements.forEach(el => {
+    text += el.innerText + "。 ";
+  });
+
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  utterance.onstart = () => {
+    isSpeaking = true;
+    isPaused = false;
+  };
+
+  utterance.onend = () => {
+    isSpeaking = false;
+    isPaused = false;
+  };
+
+  return utterance;
+}
+
+function togglePlay() {
+  if (isPaused) {
+    window.speechSynthesis.resume();
+    isPaused = false;
+    return;
+  }
+
+  if (!isSpeaking) {
+    speech = buildSpeech();
+    window.speechSynthesis.speak(speech);
+  }
+}
+
+function pauseReading() {
+  if (isSpeaking && !isPaused) {
+    window.speechSynthesis.pause();
+    isPaused = true;
+  }
+}
+
+function stopReading() {
+  window.speechSynthesis.cancel();
+  isSpeaking = false;
+  isPaused = false;
+}
+</script>
+
+</body>
+</html>
