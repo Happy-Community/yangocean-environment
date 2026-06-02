@@ -291,5 +291,46 @@ const ecoQuotes = [
 ];
 </script>
 
+<script>
+const feeds = [
+  { name: "Mongabay", url: "https://news.mongabay.com/feed/" },
+  { name: "UNEP", url: "https://www.unep.org/rss.xml" },
+  { name: "National Geographic", url: "https://www.nationalgeographic.com/environment/rss/" }
+];
+
+async function loadEcoNews() {
+  const container = document.getElementById("eco-news");
+  container.innerHTML = "";
+
+  for (let feed of feeds) {
+    try {
+      const res = await fetch("https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent(feed.url));
+      const data = await res.json();
+      const items = data.items.slice(0, 2);
+
+      const block = document.createElement("div");
+      block.style.marginBottom = "18px";
+
+      block.innerHTML = `
+        <h3>🌱 ${feed.name}</h3>
+        ${items.map(item => `
+          <p style="margin:6px 0;">
+            <a href="${item.link}" target="_blank">${item.title}</a>
+          </p>
+        `).join("")}
+      `;
+
+      container.appendChild(block);
+
+    } catch (err) {
+      console.log("Feed error:", feed.name);
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", loadEcoNews);
+</script>
+
 </body>
-</html>
+</html>  
+
