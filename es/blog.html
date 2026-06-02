@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<title>Blog | Salud, Sostenibilidad y Vida Ecológica | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SEO META -->
+<meta name="description" content="Lee artículos sobre salud, sostenibilidad, vida ecológica y conciencia ambiental. Aprende hábitos simples para un estilo de vida más sostenible con Yangocean.">
+<meta name="keywords" content="vida ecológica, sostenibilidad, salud, medio ambiente, huella de carbono, hábitos verdes, conciencia ambiental">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Yangocean">
+
+<link rel="canonical" href="https://yangocean.com/blog.html">
+
+<!-- OPEN GRAPH (SOCIAL SHARING) -->
+<meta property="og:title" content="Blog Yangocean | Salud y Sostenibilidad">
+<meta property="og:description" content="Artículos sobre vida ecológica, salud y sostenibilidad para un estilo de vida más consciente.">
+<meta property="og:url" content="https://yangocean.com/blog.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog Yangocean | Vida Ecológica">
+<meta name="twitter:description" content="Aprende hábitos sostenibles y mejora tu estilo de vida con artículos ecológicos.">
+<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog Yangocean",
+  "url": "https://yangocean.com/blog.html",
+  "description": "Artículos sobre salud, sostenibilidad y vida ecológica.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yangocean"
+  }
+}
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <a href="/">Inicio</a>
+  <a href="/eco-living.html">Vida ecológica</a>
+  <a href="/daily-eco-tips.html">Consejos diarios</a>
+  <a href="/reduce-carbon-footprint.html">Huella de carbono</a>
+  <a href="/apps.html">Apps</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="content-to-read">
+
+<!-- HERO -->
+<section class="card">
+  <h1>📝 Blog Yangocean</h1>
+
+  <p>
+    Artículos sobre salud, sostenibilidad y hábitos de vida ecológicos.
+  </p>
+
+  <!-- TTS CONTROLS -->
+  <div class="tts-controls">
+    <button type="button" onclick="togglePlay()" aria-label="Reproducir">
+      🔊
+    </button>
+    <button type="button" onclick="pauseReading()" aria-label="Pausa">
+      ⏸
+    </button>
+    <button type="button" onclick="stopReading()" aria-label="Detener">
+      ⏹
+    </button>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="card">
+  <h2>🌿 Aprende y mejora tu estilo de vida</h2>
+  <p>
+    Descubre cómo los hábitos diarios afectan tu salud y el medio ambiente.
+    Contenido práctico y fácil de aplicar en la vida diaria.
+  </p>
+</section>
+
+<!-- ARTICLES -->
+<section class="card">
+
+  <h2>📚 Últimos artículos</h2>
+
+  <div class="features">
+
+    <div class="feature">
+      <a href="/blog/wellness-and-sustainability.html">
+        🌿 Salud y sostenibilidad
+      </a>
+      <p>Cómo la salud y el medio ambiente están conectados.</p>
+    </div>
+
+    <div class="feature">
+      <a href="/blog/why-trees-matter.html">
+        🌳 Por qué los árboles son importantes
+      </a>
+      <p>El papel esencial de los árboles en la vida del planeta.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FUTURE -->
+<section class="card">
+  <h2>🌱 Más artículos próximamente</h2>
+  <p>Estamos añadiendo continuamente contenido sobre vida sostenible.</p>
+</section>
+
+<!-- CTA -->
+<section class="card">
+  <h2>💚 Empieza pequeño, sé constante</h2>
+  <p>Pequeñas acciones diarias pueden crear un gran impacto ambiental a largo plazo.</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Yangocean</p>
+
+  <p>
+    <a href="/">Inicio</a> |
+    <a href="/about.html">Acerca de</a> |
+    <a href="/contact.html">Contacto</a> |
+    <a href="/privacy.html">Privacidad</a>
+  </p>
+</footer>
+
+</div>
+
+<!-- TTS SCRIPT -->
+<script>
+let speech = null;
+let isSpeaking = false;
+let isPaused = false;
+
+function buildSpeech() {
+  const content = document.getElementById("content-to-read");
+  const elements = content.querySelectorAll("h1, h2, h3, p");
+
+  let text = "";
+  elements.forEach(el => {
+    text += el.innerText + ". ";
+  });
+
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  return utterance;
+}
+
+function togglePlay() {
+  if (isPaused) {
+    window.speechSynthesis.resume();
+    isPaused = false;
+    return;
+  }
+
+  if (!isSpeaking) {
+    speech = buildSpeech();
+    window.speechSynthesis.speak(speech);
+    isSpeaking = true;
+  }
+}
+
+function pauseReading() {
+  window.speechSynthesis.pause();
+  isPaused = true;
+}
+
+function stopReading() {
+  window.speechSynthesis.cancel();
+  isSpeaking = false;
+  isPaused = false;
+}
+</script>
+
+</body>
+</html>
