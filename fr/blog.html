@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+
+<title>Blog | Santé & Durabilité | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lisez des articles sur la santé, la durabilité, le mode de vie écologique et la sensibilisation environnementale de Yangocean.">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://yangocean.com/blog.html">
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- NAV -->
+<nav>
+  <a href="/">Accueil</a>
+  <a href="/eco-living.html">Mode de vie écologique</a>
+  <a href="/daily-eco-tips.html">Conseils quotidiens</a>
+  <a href="/reduce-carbon-footprint.html">Empreinte carbone</a>
+  <a href="/apps.html">Applications</a>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main id="content-to-read">
+
+<!-- HERO -->
+<section class="card">
+  <h1>📝 Blog Yangocean</h1>
+
+  <p>
+    Articles sur la santé, la durabilité et les habitudes de vie écologiques.
+  </p>
+
+  <!-- READ ALOUD CONTROLS -->
+  <div class="tts-controls">
+    <button type="button" class="tts-btn play" onclick="togglePlay()" aria-label="Lire/Pause">
+      🔊
+    </button>
+
+    <button type="button" class="tts-btn pause" onclick="pauseReading()" aria-label="Pause">
+      ⏸
+    </button>
+
+    <button type="button" class="tts-btn stop" onclick="stopReading()" aria-label="Arrêter">
+      ⏹
+    </button>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="card">
+  <h2>🌿 Apprendre et améliorer son mode de vie</h2>
+
+  <p>
+    Découvrez des connaissances simples et pratiques sur l’impact des habitudes quotidiennes sur la santé et l’environnement.
+    Tous les articles sont conçus pour être faciles à comprendre et à appliquer.
+  </p>
+</section>
+
+<!-- ARTICLES -->
+<section class="card">
+
+  <h2>📚 Derniers articles</h2>
+
+  <div class="features">
+
+    <div class="feature">
+      <a href="/blog/wellness-and-sustainability.html">
+        🌿 Santé & Durabilité
+      </a>
+      <p>Comprendre le lien entre la santé et l’environnement.</p>
+    </div>
+
+    <div class="feature">
+      <a href="/blog/why-trees-matter.html">
+        🌳 Pourquoi les arbres sont importants
+      </a>
+      <p>Découvrir le rôle essentiel des arbres pour la vie sur Terre.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FUTURE -->
+<section class="card">
+  <h2>🌱 Plus d’articles bientôt</h2>
+  <p>Nous ajoutons régulièrement du contenu sur le mode de vie écologique et la durabilité.</p>
+</section>
+
+<!-- CTA -->
+<section class="card">
+  <h2>💚 Commencer petit, rester constant</h2>
+  <p>De petites actions quotidiennes peuvent avoir un grand impact sur l’environnement à long terme.</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>© 2026 Yangocean</p>
+
+  <p>
+    <a href="/">Accueil</a> |
+    <a href="/about.html">À propos</a> |
+    <a href="/contact.html">Contact</a> |
+    <a href="/privacy.html">Confidentialité</a>
+  </p>
+</footer>
+
+</div>
+
+<!-- =========================
+     TTS SCRIPT (UNCHANGED)
+========================= -->
+<script>
+let speech = null;
+let isSpeaking = false;
+let isPaused = false;
+
+function buildSpeech() {
+  const content = document.getElementById("content-to-read");
+  const elements = content.querySelectorAll("h1, h2, h3, p");
+
+  let text = "";
+  elements.forEach(el => {
+    text += el.innerText + ". ";
+  });
+
+  const utterance = new SpeechSynthesisUtterance(text);
+
+  utterance.rate = 0.95;
+  utterance.pitch = 1;
+  utterance.volume = 1;
+
+  utterance.onstart = () => {
+    isSpeaking = true;
+    isPaused = false;
+  };
+
+  utterance.onend = () => {
+    isSpeaking = false;
+    isPaused = false;
+  };
+
+  return utterance;
+}
+
+function togglePlay() {
+  if (isPaused) {
+    window.speechSynthesis.resume();
+    isPaused = false;
+    return;
+  }
+
+  if (!isSpeaking) {
+    speech = buildSpeech();
+    window.speechSynthesis.speak(speech);
+  }
+}
+
+function pauseReading() {
+  if (isSpeaking && !isPaused) {
+    window.speechSynthesis.pause();
+    isPaused = true;
+  }
+}
+
+function stopReading() {
+  window.speechSynthesis.cancel();
+  isSpeaking = false;
+  isPaused = false;
+}
+</script>
+
+</body>
+</html>
