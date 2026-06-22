@@ -189,5 +189,29 @@ function stopReading() {
 }
 </script>
 
+<script>
+async function loadVideos() {
+  try {
+    const res = await fetch('/data/videos.json');
+    const videos = await res.json();
+
+    const container = document.getElementById("video-list");
+
+    container.innerHTML = videos.map(video => `
+      <div class="feature">
+        <a href="${video.url}" target="_blank">
+          🎬 ${video.title}
+        </a>
+        <p>${video.description}</p>
+      </div>
+    `).join("");
+
+  } catch (err) {
+    console.error("Failed to load videos:", err);
+  }
+}
+
+loadVideos();
+</script>  
 </body>
 </html>
