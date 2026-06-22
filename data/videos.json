@@ -16,32 +16,29 @@
     "description": "Understanding the role of trees in climate",
     "url": "https://youtube.com/shorts/0OH5MNbA-Ek",
     "thumbnail": "/images/mulberry.png"
+  },
+  {
+    "title": "My Aloe Vera Journey: From Tiny Plant to Natural Healer",
+    "description": "Aloe Vera healing story",
+    "url": "https://youtube.com/shorts/Di6T4SwLOno",
+    "thumbnail": "/images/aloevera.png"
+  },
+  {
+    "title": "Basic Planting",
+    "description": "How to plant a guava tree",
+    "url": "https://youtube.com/shorts/a0RH37JNKTc",
+    "thumbnail": "/images/guava.png"
+  },
+  {
+    "title": "Growing Okra in a Reused Bucket",
+    "description": "Okra / Lady’s finger small-space farming",
+    "url": "https://youtube.com/shorts/_b3ifFMKKLc",
+    "thumbnail": "/images/okra.png"
+  },
+  {
+    "title": "From Garden to Table: Brazilian Spinach",
+    "description": "Fresh homegrown vegetables",
+    "url": "https://youtube.com/shorts/HBA8K8UWFig",
+    "thumbnail": "/images/brazilianspinach.png"
   }
-
- {
-  "title": "My Aloe Vera Journey: From Tiny Plant to Natural Healer",
-  "description": "Aloe Vera",
-  "url": "https://youtube.com/shorts/Di6T4SwLOno",
-  "thumbnail": "/images/aloevera.png"
-}
-
-  {
-  "title": "Basic Planting",
-  "description": "How to plant a guava tree",
-  "url": "https://youtube.com/shorts/a0RH37JNKTc",
-  "thumbnail": "/images/guava.png"
-}
-  {
-  "title": "Growing Okra in a Reused Bucket: Small Space, Big Harvest. ",
-  "description": "Okra or Lady's findger",
-  "url": "https://youtube.com/shorts/_b3ifFMKKLc",
-  "thumbnail": "/images/okra.png"
-}
-{
-  "title": "From Garden to Table: Fresh Brazilian Spinach Harvest.",
-  "description": "Brazilian Spinach",
-  "url": "https://youtube.com/shorts/HBA8K8UWFig ",
-  "thumbnail": "/images/brazilianspinach.png"
-}
-  
 ]
