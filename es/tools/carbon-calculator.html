@@ -2,31 +2,28 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Calculadora de Huella de Carbono</title>
+<title>Calculadora de Plástico y CO₂</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
      crossorigin="anonymous"></script>
-  
-<!-- GLOBAL STYLES -->
 <link rel="stylesheet" href="/styles.css">
 </head>
 
-<!-- 🌍 THEME FIX -->
-<body class="theme-carbon">
+<body class="theme-plastic">
 
 <div class="container">
 <div class="card">
 
-<h1>🌍 Calculadora de Huella de Carbono</h1>
+<h1>🧴 Calculadora de Plástico y CO₂</h1>
 
-<p>Uso de electricidad (kWh/mes):</p>
-<input type="number" id="electricity">
+<p>Botellas de plástico utilizadas por semana:</p>
+<input type="number" id="bottles">
 
-<p>Viaje en coche (km/mes):</p>
-<input type="number" id="transport">
+<p>Bolsas de plástico utilizadas por semana:</p>
+<input type="number" id="bags">
 
-<button onclick="calcCarbon()">Calcular</button>
+<button onclick="calcPlastic()">Calcular</button>
 
 <div id="result" class="result" style="display:none;"></div>
 
@@ -36,15 +33,29 @@
 </div>
 
 <script>
-function calcCarbon() {
-  let e = document.getElementById("electricity").value || 0;
-  let t = document.getElementById("transport").value || 0;
+function calcPlastic() {
+  let bottles = document.getElementById("bottles").value || 0;
+  let bags = document.getElementById("bags").value || 0;
 
-  let co2 = (e * 0.5) + (t * 0.2);
+  let yearlyBottles = bottles * 52;
+  let yearlyBags = bags * 52;
+
+  let totalItems = yearlyBottles + yearlyBags;
+
+  let bottleCO2 = yearlyBottles * 0.025;
+  let bagCO2 = yearlyBags * 0.005;
+
+  let totalCO2 = bottleCO2 + bagCO2;
+
+  let rating = totalCO2 < 10 ? "Bajo 🌱"
+             : totalCO2 < 50 ? "Medio ⚠️"
+             : "Alto 🔴";
 
   document.getElementById("result").style.display = "block";
   document.getElementById("result").innerHTML =
-    "🌱 Emisiones estimadas de CO₂: <b>" + co2.toFixed(1) + " kg/mes</b>";
+    "🧴 Uso anual de plástico: <b>" + totalItems + " artículos</b><br>" +
+    "🌍 Emisiones estimadas de CO₂: <b>" + totalCO2.toFixed(2) + " kg/año</b><br>" +
+    "📊 Nivel de impacto ambiental: <b>" + rating + "</b>";
 }
 </script>
 
