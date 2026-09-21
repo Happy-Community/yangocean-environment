@@ -3,30 +3,59 @@
 <head>
 <meta charset="UTF-8">
 
-<title>博客 | 健康与可持续发展文章 | Yangocean</title>
+<title>Yangocean Journal | 正念生活、自然与日常思考</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO META -->
-<meta name="description" content="阅读来自 Yangocean 的健康、可持续发展、环保生活与环境意识相关文章。">
-<meta name="keywords" content="环保生活, 可持续发展, 健康, 环境意识, 碳足迹, 绿色生活, 生态">
+<meta name="description" content="Yangocean Journal 分享关于正念生活、正念饮食、自然连接和日常可持续生活的原创思考、观察与实践。">
+<meta name="keywords" content="正念生活, 正念饮食, 自然, 可持续生活, 环保生活, 日常习惯, Yangocean">
 <meta name="robots" content="index, follow">
+<meta name="author" content="Yangocean">
+
+<link rel="canonical" href="https://yangocean.com/zh/blog.html">
+
+<!-- LANGUAGE ALTERNATES -->
+<link rel="alternate" hreflang="en" href="https://yangocean.com/blog.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
+<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog.html">
+<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Yangocean 博客 - 环保与健康生活">
-<meta property="og:description" content="关于健康、可持续发展与环保生活方式的文章">
+<meta property="og:title" content="Yangocean Journal | 正念生活、自然与日常思考">
+<meta property="og:description" content="关于正念生活、自然、正念饮食和日常可持续生活的原创思考与观察。">
 <meta property="og:url" content="https://yangocean.com/zh/blog.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
 <!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yangocean 博客 - 环保与健康生活">
-<meta name="twitter:description" content="关于可持续发展与环保生活的文章">
+<meta name="twitter:title" content="Yangocean Journal | 正念生活与自然">
+<meta name="twitter:description" content="分享关于正念生活、自然连接和可持续生活的思考与观察。">
 <meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
 
-<!-- CANONICAL -->
-<link rel="canonical" href="https://yangocean.com/zh/blog.html">
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Yangocean Journal",
+  "url": "https://yangocean.com/zh/blog.html",
+  "description": "关于正念生活、自然、正念饮食和日常可持续生活的原创思考与观察。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Yangocean"
+  }
+}
+</script>
+
+<!-- GOOGLE ADSENSE -->
+<script async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+  crossorigin="anonymous">
+</script>
 
 <link rel="stylesheet" href="/styles.css">
 
@@ -39,9 +68,12 @@
 <!-- NAV -->
 <nav>
   <a href="/zh/">首页</a>
-  <a href="/zh/eco-living.html">环保生活</a>
-  <a href="/zh/daily-eco-tips.html">每日环保小贴士</a>
-  <a href="/zh/reduce-carbon-footprint.html">碳足迹</a>
+  <a href="/zh/mindfulness.html">正念生活</a>
+  <a href="/zh/mindful-ethical-living.html">正念与善意生活</a>
+  <a href="/zh/mindful-eating.html">正念饮食</a>
+  <a href="/zh/nature-connection.html">连接自然</a>
+  <a href="/zh/sustainable-living.html">可持续生活</a>
+  <a href="/zh/blog.html">Journal</a>
   <a href="/zh/apps.html">应用程序</a>
 </nav>
 
@@ -50,63 +82,234 @@
 
 <!-- HERO -->
 <section class="card">
-  <h1>📝 Yangocean 博客</h1>
+  <h1>📝 Yangocean Journal</h1>
 
   <p>
-    关于健康、可持续发展与环保生活方式的文章。
+    这里分享关于正念生活、自然、饮食和日常可持续生活的思考、
+    观察与个人体验。
   </p>
 
   <!-- TTS CONTROLS -->
   <div class="tts-controls">
-    <button type="button" onclick="togglePlay()">🔊</button>
-    <button type="button" onclick="pauseReading()">⏸</button>
-    <button type="button" onclick="stopReading()">⏹</button>
+    <button type="button" onclick="togglePlay()" aria-label="播放">
+      🔊
+    </button>
+    <button type="button" onclick="pauseReading()" aria-label="暂停">
+      ⏸
+    </button>
+    <button type="button" onclick="stopReading()" aria-label="停止">
+      ⏹
+    </button>
   </div>
 </section>
 
-<!-- INTRO -->
+<!-- WHAT IS THE JOURNAL -->
 <section class="card">
-  <h2>🌿 学习并改善生活方式</h2>
+  <h2>🌿 什么是 Yangocean Journal？</h2>
+
   <p>
-    探索简单实用的知识，了解日常习惯如何影响健康与环境。
+    Yangocean Journal 是一个分享原创文章、观察和生活思考的空间。
+    我们关注那些每天都会遇到的小事情，例如饮食、消费、植物、
+    自然、生活习惯以及我们与周围环境的关系。
+  </p>
+
+  <p>
+    我们并不追求一种所谓完美的生活方式。
+    更重要的是愿意观察、学习，并思考一些简单的改变
+    如何让日常生活变得更加有意识。
   </p>
 </section>
 
-<!-- ARTICLES -->
+<!-- LATEST ARTICLES -->
 <section class="card">
 
-  <h2>📚 最新文章</h2>
+  <h2>📚 最新 Journal 文章</h2>
 
   <div class="features">
 
     <div class="feature">
       <a href="/zh/blog/wellness-and-sustainability.html">
-        🌿 健康与可持续发展
+        🌿 健康与可持续生活
       </a>
-      <p>了解健康与环境之间的关系。</p>
+      <p>
+        思考我们的生活习惯、个人健康以及周围环境之间的关系。
+      </p>
     </div>
 
     <div class="feature">
       <a href="/zh/blog/why-trees-matter.html">
-        🌳 为什么树木重要
+        🌳 为什么树木如此重要
       </a>
-      <p>树木如何支持生命与气候平衡。</p>
+      <p>
+        从日常生活的角度观察树木，以及树木与自然环境之间的关系。
+      </p>
     </div>
 
   </div>
 
 </section>
 
-<!-- FUTURE -->
+<!-- NEW JOURNAL ENTRIES -->
 <section class="card">
-  <h2>🌱 更多文章即将上线</h2>
-  <p>我们持续更新环保与可持续发展相关内容。</p>
+
+  <h2>✍️ 新的生活思考</h2>
+
+  <p>
+    Yangocean Journal 会逐渐加入更多原创内容，
+    分享关于正念生活、自然、饮食和可持续生活的观察与体验。
+  </p>
+
+  <!--
+    新的 Journal 文章可以添加在这里。
+
+    示例：
+
+    <div class="feature">
+      <a href="/zh/blog/article-name.html">
+        🌱 文章标题
+      </a>
+      <p>
+        简短介绍文章内容。
+      </p>
+    </div>
+  -->
+
+</section>
+
+<!-- JOURNAL THEMES -->
+<section class="card">
+
+  <h2>🌱 我们关注的主题</h2>
+
+  <div class="features">
+
+    <div class="feature">
+      <a href="/zh/mindfulness.html">
+        🧘 正念与觉察
+      </a>
+      <p>
+        觉察、冥想、慈悲、智慧，以及如何把正念带入日常生活。
+      </p>
+    </div>
+
+    <div class="feature">
+      <a href="/zh/mindful-eating.html">
+        🥗 正念饮食
+      </a>
+      <p>
+        更有意识地看待食物、饮食习惯以及食物浪费。
+      </p>
+    </div>
+
+    <div class="feature">
+      <a href="/zh/nature-connection.html">
+        🌳 连接自然
+      </a>
+      <p>
+        树木、植物、自然观察、摄影，以及日常生活中的自然体验。
+      </p>
+    </div>
+
+    <div class="feature">
+      <a href="/zh/sustainable-living.html">
+        ♻️ 可持续生活
+      </a>
+      <p>
+        水、能源、塑料、废弃物、消费以及其他日常可持续生活选择。
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- VIDEO ARCHIVE -->
+<section class="card">
+
+  <h2>🎥 Yangocean 视频</h2>
+
+  <p>
+    我们也会分享与自然、可持续生活、健康和正念生活相关的视频。
+  </p>
+
+  <div id="video-list">
+    <p>正在加载视频……</p>
+  </div>
+
+</section>
+
+<!-- ORIGINAL CONTENT -->
+<section class="card">
+
+  <h2>🌿 为什么分享个人观察？</h2>
+
+  <p>
+    Journal 中的一些文章来自非常简单的生活经验：
+    观察一棵植物成长、准备一顿饭、在户外散步、
+    减少一些不必要的浪费，或者只是安静地停下来几分钟。
+  </p>
+
+  <p>
+    这些个人体验并不是适合所有人的答案，
+    也不能代替专业意见。它们只是一些可以帮助我们
+    开始观察、思考和学习的起点。
+  </p>
+
+  <p>
+    对于需要专业知识的主题，我们会尽量区分个人体验、
+    实用指南以及来自外部资料的信息。
+  </p>
+
+</section>
+
+<!-- REFLECTION -->
+<section class="card">
+
+  <h2>💭 留给自己的一个问题</h2>
+
+  <p>
+    在你的日常生活中，有没有一件已经习以为常的小事，
+    其实可以多花一点时间去观察？
+  </p>
+
+  <p>
+    有时候，一个更加有意识的生活方式，
+    可以从观察自己正在做的事情开始。
+  </p>
+
 </section>
 
 <!-- CTA -->
 <section class="card">
-  <h2>💚 从小开始，坚持下去</h2>
-  <p>每天的小行动可以带来长期的环境影响。</p>
+
+  <h2>🌱 继续探索 Yangocean</h2>
+
+  <p>
+    你可以浏览 Yangocean 的不同主题，
+    也可以回来看看 Journal 中不断增加的新文章。
+  </p>
+
+  <p>
+    <a href="/zh/mindfulness.html">正念生活</a> ·
+    <a href="/zh/mindful-ethical-living.html">善意生活</a> ·
+    <a href="/zh/mindful-eating.html">正念饮食</a> ·
+    <a href="/zh/nature-connection.html">自然</a> ·
+    <a href="/zh/sustainable-living.html">可持续生活</a>
+  </p>
+
+</section>
+
+<!-- FINAL THOUGHT -->
+<section class="card">
+
+  <h2>🌿 从一个片刻开始</h2>
+
+  <p>
+    我们不需要一次改变所有事情。
+    从一个小小的选择开始，认真观察它，
+    从中学习，然后继续前进，也可以是一种简单而有意义的方式。
+  </p>
+
 </section>
 
 </main>
@@ -119,7 +322,8 @@
     <a href="/zh/">首页</a> |
     <a href="/zh/about.html">关于我们</a> |
     <a href="/zh/contact.html">联系我们</a> |
-    <a href="/zh/privacy.html">隐私政策</a>
+    <a href="/zh/privacy.html">隐私政策</a> |
+    <a href="/zh/terms.html">使用条款</a>
   </p>
 </footer>
 
@@ -136,12 +340,14 @@ function buildSpeech() {
   const elements = content.querySelectorAll("h1, h2, h3, p");
 
   let text = "";
+
   elements.forEach(el => {
     text += el.innerText + "。 ";
   });
 
   const utterance = new SpeechSynthesisUtterance(text);
 
+  utterance.lang = "zh-CN";
   utterance.rate = 0.95;
   utterance.pitch = 1;
   utterance.volume = 1;
@@ -184,6 +390,69 @@ function stopReading() {
   isSpeaking = false;
   isPaused = false;
 }
+</script>
+
+<!-- VIDEO LOADER -->
+<script>
+fetch("/data/videos.json")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("无法加载视频文件。");
+    }
+
+    return response.json();
+  })
+  .then(videos => {
+
+    const container = document.getElementById("video-list");
+
+    if (!videos || videos.length === 0) {
+      container.innerHTML = "<p>目前没有可用的视频。</p>";
+      return;
+    }
+
+    container.innerHTML = "";
+
+    videos.forEach(video => {
+
+      const item = document.createElement("div");
+      item.className = "feature";
+
+      const title = video.title || "Yangocean 视频";
+      const url = video.url || video.link || "#";
+      const thumbnail = video.thumbnail || "";
+
+      item.innerHTML = `
+        ${thumbnail ? `
+          <img
+            src="${thumbnail}"
+            alt="${title}"
+            loading="lazy"
+            style="max-width:100%;height:auto;border-radius:8px;"
+          >
+        ` : ""}
+
+        <p>
+          <a
+            href="${url}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            🎥 ${title}
+          </a>
+        </p>
+      `;
+
+      container.appendChild(item);
+    });
+  })
+  .catch(error => {
+
+    document.getElementById("video-list").innerHTML =
+      "<p>目前无法加载视频内容。</p>";
+
+    console.error(error);
+  });
 </script>
 
 </body>
