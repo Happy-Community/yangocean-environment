@@ -438,21 +438,81 @@ Yangocean 探索一些简单的方法，帮助我们观察并重新连接自然�
 
 <section>
 
+<section>
+
 <h2>📰 环境阅读</h2>
 
 <p>
-探索来自中文环境与生态资源领域的精选文章和最新内容。
+探索来自马来西亚中文媒体的环境、生态与可持续生活资讯。
 这些链接仅供进一步阅读，并不代表 Yangocean 对所链接出版物拥有编辑权。
 </p>
 
-<div id="environmentalNews">
-<p>正在加载环境阅读...</p>
+<div class="cards">
+
+<div class="card">
+<h3>🌿 东方日报 · 环保</h3>
+
+<p>
+阅读《东方日报》环保栏目，了解环境保护、气候变化、
+资源循环、减塑、生态与可持续生活等相关资讯。
+</p>
+
+<a href="https://www.orientaldaily.com.my/news/browse/%E7%92%B0%E4%BF%9D"
+   target="_blank"
+   rel="noopener noreferrer">
+阅读最新环保文章 →
+</a>
+
+</div>
+
+<div class="card">
+<h3>🌏 星洲日报</h3>
+
+<p>
+探索星洲日报的环境、气候、生态与环保相关报道。
+</p>
+
+<a href="https://www.sinchew.com.my/"
+   target="_blank"
+   rel="noopener noreferrer">
+访问星洲日报 →
+</a>
+
+</div>
+
+<div class="card">
+<h3>🌱 南洋商报</h3>
+
+<p>
+阅读南洋商报关于环境、永续发展、绿色生活及相关议题的报道。
+</p>
+
+<a href="https://www.enanyang.my/"
+   target="_blank"
+   rel="noopener noreferrer">
+访问南洋商报 →
+</a>
+
+</div>
+
+<div class="card">
+<h3>♻️ 中国报</h3>
+
+<p>
+探索中国报有关环保、环境、气候与日常生活议题的中文报道。
+</p>
+
+<a href="https://www.chinapress.com.my/"
+   target="_blank"
+   rel="noopener noreferrer">
+访问中国报 →
+</a>
+
+</div>
+
 </div>
 
 </section>
-
-<section>
-
 <h2>🌿 一个简单的思考</h2>
 
 <p>
@@ -535,165 +595,6 @@ const reflectionIndex =
 document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
-
-/* =========================================
-   Environmental Reading — Chinese
-   Malaysian Chinese Media
-   ========================================= */
-
-const environmentalFeeds = [
-    {
-        name: "星洲日报",
-        query:
-            "site:sinchew.com.my \"环保\" OR \"环境保护\" OR \"气候变化\" OR \"全球暖化\" OR \"资源回收\""
-    },
-    {
-        name: "南洋商报",
-        query:
-            "site:enanyang.my \"环保\" OR \"环境保护\" OR \"气候变化\" OR \"全球暖化\" OR \"资源回收\""
-    },
-    {
-        name: "中国报",
-        query:
-            "site:chinapress.com.my \"环保\" OR \"环境保护\" OR \"气候变化\" OR \"全球暖化\" OR \"资源回收\""
-    }
-];
-
-
-async function loadEnvironmentalNews() {
-
-    const container =
-        document.getElementById("environmentalNews");
-
-    container.innerHTML = "";
-
-    let totalArticles = 0;
-
-    for (const feed of environmentalFeeds) {
-
-        try {
-
-            const rssUrl =
-                "https://news.google.com/rss/search?q="
-                + encodeURIComponent(feed.query)
-                + "&hl=zh-CN&gl=MY&ceid=MY:zh-Hans";
-
-            const apiUrl =
-                "https://api.rss2json.com/v1/api.json?rss_url="
-                + encodeURIComponent(rssUrl);
-
-            const response =
-                await fetch(apiUrl);
-
-            if (!response.ok) {
-
-                console.log(
-                    "RSS request failed:",
-                    feed.name,
-                    response.status
-                );
-
-                continue;
-            }
-
-            const data =
-                await response.json();
-
-            if (
-                data.status !== "ok" ||
-                !Array.isArray(data.items) ||
-                data.items.length === 0
-            ) {
-
-                console.log(
-                    "No environmental articles found:",
-                    feed.name
-                );
-
-                continue;
-            }
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent =
-                feed.name;
-
-            container.appendChild(heading);
-
-            data.items
-                .slice(0, 3)
-                .forEach(item => {
-
-                    const article =
-                        document.createElement("div");
-
-                    article.className =
-                        "news-item";
-
-                    const title =
-                        document.createElement("h4");
-
-                    const link =
-                        document.createElement("a");
-
-                    link.href =
-                        item.link;
-
-                    link.target =
-                        "_blank";
-
-                    link.rel =
-                        "noopener noreferrer";
-
-                    link.textContent =
-                        item.title;
-
-                    title.appendChild(link);
-
-                    article.appendChild(title);
-
-                    if (item.pubDate) {
-
-                        const date =
-                            document.createElement("small");
-
-                        date.textContent =
-                            new Date(
-                                item.pubDate
-                            ).toLocaleDateString(
-                                "zh-CN"
-                            );
-
-                        article.appendChild(date);
-                    }
-
-                    container.appendChild(article);
-
-                    totalArticles++;
-                });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load:",
-                feed.name,
-                error
-            );
-        }
-    }
-
-
-    if (totalArticles === 0) {
-
-        container.innerHTML = `
-            <p>
-                暂时无法加载最新环境阅读内容。
-                请稍后再试。
-            </p>
-        `;
-    }
-}
 
 
 loadEnvironmentalNews();
