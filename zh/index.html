@@ -1,6 +1,7 @@
+```html
 <!DOCTYPE html>
 
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 
@@ -194,7 +195,7 @@ footer a {
 <h1>🌿 正念生活、自然与日常可持续</h1>
 
 <p>
-Yangocean 是一个探索正念、正念与责任生活、亲近自然、环境意识、正念饮食
+Yangocean 是一个探索正念、责任生活、亲近自然、环境意识、正念饮食
 以及简单日常可持续生活的空间。
 </p>
 
@@ -441,8 +442,8 @@ Yangocean 探索一些简单的方法，帮助我们观察并重新连接自然�
 <h2>📰 环境阅读</h2>
 
 <p>
-探索来自外部来源的精选环境新闻和文章。这些链接仅供进一步阅读，并不代表
-Yangocean 对所链接出版物拥有编辑权。
+探索来自中文环境与生态资源领域的精选文章和最新内容。
+这些链接仅供进一步阅读，并不代表 Yangocean 对所链接出版物拥有编辑权。
 </p>
 
 <div id="environmentalNews">
@@ -534,16 +535,18 @@ document.getElementById("dailyReflection").textContent =
 
 /* Environmental Reading */
 
-/* 环境阅读 */
-
 const feeds = [
     {
-        name: "Mongabay 中文",
-        url: "CHINESE_MONGABAY_RSS_OR_FEED"
+        name: "生态环境学报",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_lm_31_1674-5906.xml"
     },
     {
-        name: "中文环境资讯",
-        url: "CHINESE_ENVIRONMENT_RSS_OR_FEED"
+        name: "资源科学",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.resci.cn/CN/rss_lm_2681_1007-7588.xml"
+    },
+    {
+        name: "生态环境与资源",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.resci.cn/CN/rss_lm_2516_1007-7588.xml"
     }
 ];
 
@@ -598,7 +601,7 @@ async function loadEnvironmentalNews() {
                         document.createElement("small");
 
                     date.textContent =
-                        new Date(item.pubDate).toLocaleDateString();
+                        new Date(item.pubDate).toLocaleDateString("zh-CN");
 
                     article.appendChild(date);
                 }
@@ -627,3 +630,4 @@ loadEnvironmentalNews();
 
 </body>
 </html>
+```
