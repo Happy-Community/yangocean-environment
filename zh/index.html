@@ -532,23 +532,149 @@ document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
 
-
+<script>
 /* Environmental Reading */
 
 const feeds = [
     {
-        name: "生态环境学报 · 环境科学",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_lm_31_1674-5906.xml"
+        name: "《资源科学》· 生态环境",
+        url: "https://www.resci.cn/CN/rss_lm_2681_1007-7588.xml"
     },
     {
-        name: "生态环境学报 · 生态学",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_lm_29_1674-5906.xml"
+        name: "《资源科学》· 生态资源",
+        url: "https://www.resci.cn/CN/rss_lm_2245_1007-7588.xml"
     },
     {
-        name: "生态环境学报 · 生物多样性",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_zt_3_1674-5906.xml"
+        name: "《资源科学》· 绿色低碳转型",
+        url: "https://www.resci.cn/CN/rss_lm_3654_1007-7588.xml"
     }
 ];
+
+async function loadEnvironmentalNews() {
+
+    const container =
+        document.getElementById("environmentalNews");
+
+    container.innerHTML = "";
+
+    let loadedFeeds = 0;
+
+    for (const feed of feeds) {
+
+        try {
+
+            /* Encode the RSS URL before sending it to rss2json */
+            const apiUrl =
+                "https://api.rss2json.com/v1/api.json?rss_url="
+                + encodeURIComponent(feed.url);
+
+            const response =
+                await fetch(apiUrl);
+
+            const data =
+                await response.json();
+
+            if (
+                data.status !== "ok" ||
+                !Array.isArray(data.items) ||
+                data.items.length === 0
+            ) {
+                console.log(
+                    "Feed unavailable:",
+                    feed.name,
+                    data.message || data.status
+                );
+                continue;
+            }
+
+            loadedFeeds++;
+
+            const heading =
+                document.createElement("h3");
+
+            heading.textContent =
+                feed.name;
+
+            container.appendChild(heading);
+
+            data.items
+                .slice(0, 3)
+                .forEach(item => {
+
+                    const article =
+                        document.createElement("div");
+
+                    article.className =
+                        "news-item";
+
+                    const title =
+                        document.createElement("h4");
+
+                    const link =
+                        document.createElement("a");
+
+                    link.href =
+                        item.link;
+
+                    link.target =
+                        "_blank";
+
+                    link.rel =
+                        "noopener noreferrer";
+
+                    link.textContent =
+                        item.title;
+
+                    title.appendChild(link);
+
+                    article.appendChild(title);
+
+                    if (item.pubDate) {
+
+                        const date =
+                            document.createElement("small");
+
+                        date.textContent =
+                            new Date(
+                                item.pubDate
+                            ).toLocaleDateString(
+                                "zh-CN"
+                            );
+
+                        article.appendChild(date);
+                    }
+
+                    container.appendChild(article);
+
+                });
+
+        } catch (error) {
+
+            console.log(
+                "Unable to load feed:",
+                feed.name,
+                error
+            );
+
+        }
+
+    }
+
+    /* Show a friendly message if no feeds can be loaded */
+    if (loadedFeeds === 0) {
+
+        container.innerHTML = `
+            <p>
+                暂时无法加载环境阅读内容。
+                您可以稍后再试。
+            </p>
+        `;
+    }
+
+}
+
+loadEnvironmentalNews();
+</script>
 
 
 async function loadEnvironmentalNews() {
