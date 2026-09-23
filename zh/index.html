@@ -509,6 +509,7 @@ Yangocean 探索一些简单的方法，帮助我们观察并重新连接自然�
 
 </footer>
 
+
 <script>
 
 /* Daily Reflection */
@@ -524,15 +525,17 @@ const reflections = [
 ];
 
 const today = new Date();
+
 const reflectionIndex =
-    (today.getFullYear() + today.getMonth() + today.getDate())
+    (today.getFullYear() +
+     today.getMonth() +
+     today.getDate())
     % reflections.length;
 
 document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
 
-<script>
 /* =========================================
    Environmental Reading — Chinese
    Malaysian Chinese Media
@@ -566,24 +569,15 @@ async function loadEnvironmentalNews() {
 
     let totalArticles = 0;
 
-
     for (const feed of environmentalFeeds) {
 
         try {
 
-            /*
-             * Google News RSS
-             * Restricted to each Malaysian Chinese newspaper.
-             */
             const rssUrl =
                 "https://news.google.com/rss/search?q="
                 + encodeURIComponent(feed.query)
                 + "&hl=zh-CN&gl=MY&ceid=MY:zh-Hans";
 
-            /*
-             * rss2json converts the RSS feed into JSON
-             * so the browser can display it.
-             */
             const apiUrl =
                 "https://api.rss2json.com/v1/api.json?rss_url="
                 + encodeURIComponent(rssUrl);
@@ -592,17 +586,18 @@ async function loadEnvironmentalNews() {
                 await fetch(apiUrl);
 
             if (!response.ok) {
+
                 console.log(
                     "RSS request failed:",
                     feed.name,
                     response.status
                 );
+
                 continue;
             }
 
             const data =
                 await response.json();
-
 
             if (
                 data.status !== "ok" ||
@@ -618,10 +613,6 @@ async function loadEnvironmentalNews() {
                 continue;
             }
 
-
-            /*
-             * Newspaper heading
-             */
             const heading =
                 document.createElement("h3");
 
@@ -630,10 +621,6 @@ async function loadEnvironmentalNews() {
 
             container.appendChild(heading);
 
-
-            /*
-             * Show up to 3 recent articles
-             */
             data.items
                 .slice(0, 3)
                 .forEach(item => {
@@ -644,10 +631,8 @@ async function loadEnvironmentalNews() {
                     article.className =
                         "news-item";
 
-
                     const title =
                         document.createElement("h4");
-
 
                     const link =
                         document.createElement("a");
@@ -664,15 +649,10 @@ async function loadEnvironmentalNews() {
                     link.textContent =
                         item.title;
 
-
                     title.appendChild(link);
 
                     article.appendChild(title);
 
-
-                    /*
-                     * Publication date
-                     */
                     if (item.pubDate) {
 
                         const date =
@@ -688,13 +668,10 @@ async function loadEnvironmentalNews() {
                         article.appendChild(date);
                     }
 
-
                     container.appendChild(article);
 
                     totalArticles++;
-
                 });
-
 
         } catch (error) {
 
@@ -703,15 +680,10 @@ async function loadEnvironmentalNews() {
                 feed.name,
                 error
             );
-
         }
-
     }
 
 
-    /*
-     * Friendly fallback
-     */
     if (totalArticles === 0) {
 
         container.innerHTML = `
@@ -720,214 +692,9 @@ async function loadEnvironmentalNews() {
                 请稍后再试。
             </p>
         `;
-
     }
-
 }
 
-
-loadEnvironmentalNews();
-</script>
-async function loadEnvironmentalNews() {
-
-    const container =
-        document.getElementById("environmentalNews");
-
-    container.innerHTML = "";
-
-    let loadedFeeds = 0;
-
-    for (const feed of feeds) {
-
-        try {
-
-            /* Encode the RSS URL before sending it to rss2json */
-            const apiUrl =
-                "https://api.rss2json.com/v1/api.json?rss_url="
-                + encodeURIComponent(feed.url);
-
-            const response =
-                await fetch(apiUrl);
-
-            const data =
-                await response.json();
-
-            if (
-                data.status !== "ok" ||
-                !Array.isArray(data.items) ||
-                data.items.length === 0
-            ) {
-                console.log(
-                    "Feed unavailable:",
-                    feed.name,
-                    data.message || data.status
-                );
-                continue;
-            }
-
-            loadedFeeds++;
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent =
-                feed.name;
-
-            container.appendChild(heading);
-
-            data.items
-                .slice(0, 3)
-                .forEach(item => {
-
-                    const article =
-                        document.createElement("div");
-
-                    article.className =
-                        "news-item";
-
-                    const title =
-                        document.createElement("h4");
-
-                    const link =
-                        document.createElement("a");
-
-                    link.href =
-                        item.link;
-
-                    link.target =
-                        "_blank";
-
-                    link.rel =
-                        "noopener noreferrer";
-
-                    link.textContent =
-                        item.title;
-
-                    title.appendChild(link);
-
-                    article.appendChild(title);
-
-                    if (item.pubDate) {
-
-                        const date =
-                            document.createElement("small");
-
-                        date.textContent =
-                            new Date(
-                                item.pubDate
-                            ).toLocaleDateString(
-                                "zh-CN"
-                            );
-
-                        article.appendChild(date);
-                    }
-
-                    container.appendChild(article);
-
-                });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load feed:",
-                feed.name,
-                error
-            );
-
-        }
-
-    }
-
-    /* Show a friendly message if no feeds can be loaded */
-    if (loadedFeeds === 0) {
-
-        container.innerHTML = `
-            <p>
-                暂时无法加载环境阅读内容。
-                您可以稍后再试。
-            </p>
-        `;
-    }
-
-}
-
-loadEnvironmentalNews();
-</script>
-
-
-async function loadEnvironmentalNews() {
-
-    const container =
-        document.getElementById("environmentalNews");
-
-    container.innerHTML = "";
-
-    for (const feed of feeds) {
-
-        try {
-
-            const response = await fetch(feed.url);
-            const data = await response.json();
-
-            if (!data.items) continue;
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent = feed.name;
-
-            container.appendChild(heading);
-
-            data.items.slice(0, 3).forEach(item => {
-
-                const article =
-                    document.createElement("div");
-
-                article.className = "news-item";
-
-                const title =
-                    document.createElement("h4");
-
-                const link =
-                    document.createElement("a");
-
-                link.href = item.link;
-                link.target = "_blank";
-                link.rel = "noopener";
-                link.textContent = item.title;
-
-                title.appendChild(link);
-
-                article.appendChild(title);
-
-                if (item.pubDate) {
-
-                    const date =
-                        document.createElement("small");
-
-                    date.textContent =
-                        new Date(item.pubDate).toLocaleDateString("zh-CN");
-
-                    article.appendChild(date);
-                }
-
-                container.appendChild(article);
-
-            });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load feed:",
-                feed.name,
-                error
-            );
-
-        }
-
-    }
-
-}
 
 loadEnvironmentalNews();
 
@@ -935,4 +702,6 @@ loadEnvironmentalNews();
 
 </body>
 </html>
+
+
 
