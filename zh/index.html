@@ -533,23 +533,201 @@ document.getElementById("dailyReflection").textContent =
 
 
 <script>
-/* Environmental Reading */
+/* =========================================
+   Environmental Reading — Chinese
+   Malaysian Chinese Media
+   ========================================= */
 
-const feeds = [
+const environmentalFeeds = [
     {
-        name: "《资源科学》· 生态环境",
-        url: "https://www.resci.cn/CN/rss_lm_2681_1007-7588.xml"
+        name: "星洲日报",
+        query:
+            "site:sinchew.com.my 环境 OR 气候 OR 生态 OR 保育 OR 回收 OR 绿色 OR 能源"
     },
     {
-        name: "《资源科学》· 生态资源",
-        url: "https://www.resci.cn/CN/rss_lm_2245_1007-7588.xml"
+        name: "南洋商报",
+        query:
+            "site:enanyang.my 环境 OR 气候 OR 生态 OR 保育 OR 回收 OR 绿色 OR 能源"
     },
     {
-        name: "《资源科学》· 绿色低碳转型",
-        url: "https://www.resci.cn/CN/rss_lm_3654_1007-7588.xml"
+        name: "中国报",
+        query:
+            "site:chinapress.com.my 环境 OR 气候 OR 生态 OR 保育 OR 回收 OR 绿色 OR 能源"
     }
 ];
 
+
+async function loadEnvironmentalNews() {
+
+    const container =
+        document.getElementById("environmentalNews");
+
+    container.innerHTML = "";
+
+    let totalArticles = 0;
+
+
+    for (const feed of environmentalFeeds) {
+
+        try {
+
+            /*
+             * Google News RSS
+             * Restricted to each Malaysian Chinese newspaper.
+             */
+            const rssUrl =
+                "https://news.google.com/rss/search?q="
+                + encodeURIComponent(feed.query)
+                + "&hl=zh-CN&gl=MY&ceid=MY:zh-Hans";
+
+            /*
+             * rss2json converts the RSS feed into JSON
+             * so the browser can display it.
+             */
+            const apiUrl =
+                "https://api.rss2json.com/v1/api.json?rss_url="
+                + encodeURIComponent(rssUrl);
+
+            const response =
+                await fetch(apiUrl);
+
+            if (!response.ok) {
+                console.log(
+                    "RSS request failed:",
+                    feed.name,
+                    response.status
+                );
+                continue;
+            }
+
+            const data =
+                await response.json();
+
+
+            if (
+                data.status !== "ok" ||
+                !Array.isArray(data.items) ||
+                data.items.length === 0
+            ) {
+
+                console.log(
+                    "No environmental articles found:",
+                    feed.name
+                );
+
+                continue;
+            }
+
+
+            /*
+             * Newspaper heading
+             */
+            const heading =
+                document.createElement("h3");
+
+            heading.textContent =
+                feed.name;
+
+            container.appendChild(heading);
+
+
+            /*
+             * Show up to 3 recent articles
+             */
+            data.items
+                .slice(0, 3)
+                .forEach(item => {
+
+                    const article =
+                        document.createElement("div");
+
+                    article.className =
+                        "news-item";
+
+
+                    const title =
+                        document.createElement("h4");
+
+
+                    const link =
+                        document.createElement("a");
+
+                    link.href =
+                        item.link;
+
+                    link.target =
+                        "_blank";
+
+                    link.rel =
+                        "noopener noreferrer";
+
+                    link.textContent =
+                        item.title;
+
+
+                    title.appendChild(link);
+
+                    article.appendChild(title);
+
+
+                    /*
+                     * Publication date
+                     */
+                    if (item.pubDate) {
+
+                        const date =
+                            document.createElement("small");
+
+                        date.textContent =
+                            new Date(
+                                item.pubDate
+                            ).toLocaleDateString(
+                                "zh-CN"
+                            );
+
+                        article.appendChild(date);
+                    }
+
+
+                    container.appendChild(article);
+
+                    totalArticles++;
+
+                });
+
+
+        } catch (error) {
+
+            console.log(
+                "Unable to load:",
+                feed.name,
+                error
+            );
+
+        }
+
+    }
+
+
+    /*
+     * Friendly fallback
+     */
+    if (totalArticles === 0) {
+
+        container.innerHTML = `
+            <p>
+                暂时无法加载最新环境阅读内容。
+                请稍后再试。
+            </p>
+        `;
+
+    }
+
+}
+
+
+loadEnvironmentalNews();
+</script>
 async function loadEnvironmentalNews() {
 
     const container =
