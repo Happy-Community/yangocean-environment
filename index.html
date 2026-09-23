@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,31 +8,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Yangocean explores mindfulness, mindful eating, mindful and ethical living, nature connection, and practical everyday sustainability through original reflections, observations, and useful guides.">
+<meta name="description" content="Yangocean explores mindfulness, mindful eating, ethical living, nature connection, environmental awareness and practical everyday sustainability through simple reflections and useful resources.">
 
-<meta name="keywords" content="mindfulness, mindful living, mindful eating, ethical living, nature connection, sustainability, environmental awareness, simple living">
+<meta name="keywords" content="mindfulness, mindful living, mindful eating, ethical living, nature connection, sustainability, environmental awareness, simple living, conscious living, everyday sustainability">
 
 <meta name="robots" content="index, follow">
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Yangocean | Mindful Living, Nature & Everyday Sustainability">
-<meta property="og:description" content="Explore mindfulness, mindful living, nature connection, and practical everyday sustainability through Yangocean.">
-<meta property="og:url" content="https://yangocean.com/">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
-
-<!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yangocean | Mindful Living, Nature & Everyday Sustainability">
-<meta name="twitter:description" content="Explore mindfulness, mindful living, nature connection, and practical everyday sustainability through Yangocean.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
-
-<!-- CANONICAL -->
 <link rel="canonical" href="https://yangocean.com/">
 
-<!-- HREFLANG -->
+<!-- Hreflang -->
+
 <link rel="alternate" hreflang="en" href="https://yangocean.com/">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/">
@@ -39,15 +25,29 @@
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/">
 
-<!-- STRUCTURED DATA -->
+<!-- Open Graph -->
+
+<meta property="og:title" content="Yangocean | Mindful Living, Nature & Everyday Sustainability">
+<meta property="og:description" content="Explore mindfulness, mindful eating, ethical living, nature connection, environmental awareness and practical everyday sustainability.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yangocean.com/">
+<meta property="og:site_name" content="Yangocean">
+
+<!-- Google AdSense -->
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+crossorigin="anonymous"></script>
+
+<!-- Structured Data -->
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Yangocean",
-  "url": "https://yangocean.com",
-  "logo": "https://yangocean.com/images/logo.png",
-  "description": "Yangocean explores mindfulness, mindful living, nature connection, and practical everyday sustainability."
+  "url": "https://yangocean.com/",
+  "description": "Yangocean explores mindful living, nature connection, environmental awareness and everyday sustainability."
 }
 </script>
 
@@ -60,773 +60,596 @@
 }
 </script>
 
-<!-- STYLES -->
-<link rel="stylesheet" href="/styles.css">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    color: #333;
+    background: #fafafa;
+}
 
-<!-- ADSENSE -->
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous"></script>
+header {
+    background: #f1f7f2;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 8px;
+    text-decoration: none;
+    color: #285943;
+    font-weight: 500;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    margin: 45px 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 20px auto;
+    font-size: 1.1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card a {
+    color: #285943;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.reflection {
+    background: #f1f7f2;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+footer {
+    background: #f1f7f2;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #285943;
+    text-decoration: none;
+}
+</style>
 
 </head>
 
-<body class="theme-default">
+<body>
 
-<div class="container">
+<header>
 
-<!-- =========================================================
-     NAVIGATION
-========================================================= -->
-
-<nav>
-
-  <!-- LANGUAGES -->
-  <a href="/">EN</a>
-  <a href="/ms/">BM</a>
-  <a href="/zh/">中文</a>
-  <a href="/fr/">FR</a>
-  <a href="/es/">ES</a>
-
-  <span style="margin-left:10px;">|</span>
-
-  <!-- MAIN CONTENT -->
-  <a href="/mindfulness.html">Mindfulness</a>
-  <a href="/mindful-ethical-living.html">Mindful Living</a>
-  <a href="/mindful-eating.html">Mindful Eating</a>
-  <a href="/nature-connection.html">Nature Connection</a>
-  <a href="/sustainable-living.html">Sustainable Living</a>
-  <a href="/blog.html">Journal</a>
-  <a href="/apps.html">Apps</a>
-
+<nav aria-label="Language navigation">
+    <a href="/">EN</a>
+    <a href="/ms/">BM</a>
+    <a href="/zh/">中文</a>
+    <a href="/fr/">FR</a>
+    <a href="/es/">ES</a>
 </nav>
 
-
-<!-- =========================================================
-     HERO
-========================================================= -->
-
-<section class="card">
-
-  <h1>🌿 Mindful Living, Nature & Everyday Sustainability</h1>
-
-  <p style="text-align:center; color:#555; max-width:800px; margin:0 auto;">
-
-    Yangocean explores simple ways to live more mindfully,
-    connect with nature, make thoughtful choices, and develop
-    sustainable habits in everyday life.
-
-  </p>
-
-  <p style="text-align:center; color:#777; margin-top:15px;">
-
-    🌱 New reflections, observations and practical ideas are
-    added regularly.
-
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     ABOUT YANGOCEAN
-========================================================= -->
-
-<section class="card">
-
-  <h2>🌍 What is Yangocean?</h2>
-
-  <p>
-    Yangocean is a growing space for mindfulness, mindful living,
-    nature connection and everyday sustainability.
-  </p>
-
-  <p>
-    Rather than focusing only on environmental problems,
-    Yangocean looks at the small choices we make in ordinary
-    life — what we eat, what we buy, what we use, what we
-    throw away, and how we relate to the natural world around us.
-  </p>
-
-  <p>
-    The aim is not perfection. It is to become a little more
-    aware, make thoughtful choices, and learn from everyday
-    experience.
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     DAILY REFLECTION
-========================================================= -->
-
-<section class="card daily-reflection">
-
-  <h2>🌱 Daily Reflection</h2>
-
-  <p id="dailyQuote">
-    Loading today's reflection...
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     MAIN CONTENT AREAS
-========================================================= -->
-
-<section class="card">
-
-  <h2>🌱 Explore Yangocean</h2>
-
-  <p>
-    Yangocean brings together several connected areas of
-    mindful living, personal awareness, nature and sustainability.
-  </p>
-
-  <div class="features">
-
-    <!-- MINDFULNESS -->
-    <div class="feature">
-
-      <a href="/mindfulness.html">
-        🧘 Mindfulness & Dhamma
-      </a>
-
-      <p>
-        Explore awareness, meditation, compassion, wisdom,
-        and reflections inspired by Dhamma.
-      </p>
-
-    </div>
-
-
-    <!-- MINDFUL EATING -->
-    <div class="feature">
-
-      <a href="/mindful-eating.html">
-        🥗 Mindful Eating
-      </a>
-
-      <p>
-        Explore food with greater awareness — eating habits,
-        food choices, food waste, appreciation, and the
-        relationship between what we eat and how we live.
-      </p>
-
-    </div>
-
-
-    <!-- MINDFUL & ETHICAL LIVING -->
-    <div class="feature">
-
-      <a href="/mindful-ethical-living.html">
-        🌱 Mindful & Ethical Living
-      </a>
-
-      <p>
-        Reflections on thoughtful consumption, simplicity,
-        reuse, responsibility, kindness and everyday choices.
-      </p>
-
-    </div>
-
-
-    <!-- NATURE CONNECTION -->
-    <div class="feature">
-
-      <a href="/nature-connection.html">
-        🌳 Nature Connection
-      </a>
-
-      <p>
-        Discover trees, plants, wildlife, seasons and small
-        moments in nature through photographs, observations
-        and personal reflections.
-      </p>
-
-    </div>
-
-
-    <!-- SUSTAINABLE LIVING -->
-    <div class="feature">
-
-      <a href="/sustainable-living.html">
-        ♻️ Sustainable Living
-      </a>
-
-      <p>
-        Learn about thoughtful use of water, energy, materials,
-        food, transport and other everyday resources.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     LATEST YANGOCEAN
-========================================================= -->
-
-<section class="card">
-
-  <h2>📝 Latest from Yangocean</h2>
-
-  <p>
-    New content will be added regularly as part of the
-    Yangocean Journal, including practical guides,
-    personal observations and reflections.
-  </p>
-
-  <div class="features">
-
-    <!-- MINDFULNESS -->
-    <div class="feature">
-
-      <h3>🧘 Mindfulness</h3>
-
-      <p>
-        Reflections on awareness, meditation, compassion,
-        wisdom and living with greater attention.
-      </p>
-
-      <a href="/mindfulness.html">
-        Explore Mindfulness →
-      </a>
-
-    </div>
-
-
-    <!-- MINDFUL EATING -->
-    <div class="feature">
-
-      <h3>🥗 Mindful Eating</h3>
-
-      <p>
-        Personal observations and practical ideas about
-        becoming more aware of food and eating habits.
-      </p>
-
-      <a href="/mindful-eating.html">
-        Explore Mindful Eating →
-      </a>
-
-    </div>
-
-
-    <!-- NATURE -->
-    <div class="feature">
-
-      <h3>🌳 Nature Journal</h3>
-
-      <p>
-        Observations of trees, plants, wildlife and the
-        changing natural world around us.
-      </p>
-
-      <a href="/nature-connection.html">
-        Explore Nature →
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     JOURNAL
-========================================================= -->
-
-<section class="card">
-
-  <h2>📖 Yangocean Journal</h2>
-
-  <p>
-    The Yangocean Journal brings together articles,
-    reflections and observations about mindful living,
-    food, nature and everyday sustainability.
-  </p>
-
-  <p>
-    Some articles may be practical guides, while others may
-    simply share something noticed, experienced or learned
-    from everyday life.
-  </p>
-
-  <p>
-    <a href="/blog.html">
-      👉 Browse the Yangocean Journal
-    </a>
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     SUSTAINABLE LIVING RESOURCES
-========================================================= -->
-
-<section class="card">
-
-  <h2>🌍 Sustainable Living Resources</h2>
-
-  <p>
-    Yangocean provides practical reference pages for people
-    who want to understand everyday environmental impact and
-    make more thoughtful choices.
-  </p>
-
-  <div class="features">
-
-    <!-- SUSTAINABLE LIVING -->
-    <div class="feature">
-
-      <a href="/sustainable-living.html">
-        🌿 Sustainable Living
-      </a>
-
-      <p>
-        Explore water, energy, waste, plastic, consumption,
-        food and other everyday sustainability choices.
-      </p>
-
-    </div>
-
-
-    <!-- CARBON -->
-    <div class="feature">
-
-      <a href="/reduce-carbon-footprint.html">
-        🌍 Carbon Footprint
-      </a>
-
-      <p>
-        Learn about common sources of emissions and practical
-        ways to understand and reduce environmental impact.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     NATURE CONNECTION PREVIEW
-========================================================= -->
-
-<section class="card">
-
-  <h2>🌳 Looking Closer at Nature</h2>
-
-  <p>
-    Nature is not always something we need to travel far to
-    find. A tree beside a road, a small plant growing through
-    a crack, birds visiting a garden, or changes in leaves
-    through the seasons can all become opportunities to notice
-    the natural world.
-  </p>
-
-  <p>
-    Yangocean's Nature Connection section records these small
-    observations through photographs, notes and reflections.
-  </p>
-
-  <p>
-    <a href="/nature-connection.html">
-      🌿 Visit Nature Connection →
-    </a>
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     APPS
-========================================================= -->
-
-<section class="card">
-
-  <h2>📱 Yangocean Apps</h2>
-
-  <p style="color:#777; font-size:14px;">
-    Official Yangocean mobile applications for wellness,
-    healthy living and personal development.
-  </p>
-
-  <div class="features">
-
-    <!-- YANGOCEAN EFT -->
-    <div class="feature">
-
-      <a href="https://play.google.com/store/apps/details?id=com.yangocean.app"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        🌱 Yangocean EFT Tapping App
-
-      </a>
-
-      <p>
-        A simple companion for emotional wellness and
-        mindful self-care.
-      </p>
-
-    </div>
-
-
-    <!-- QUQU -->
-    <div class="feature">
-
-      <a href="https://play.google.com/store/apps/details?id=com.mindnbody365.ququhealthy_body"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        🧘 QuQu Healthy Body
-
-      </a>
-
-      <p>
-        Health awareness and wellness support.
-      </p>
-
-    </div>
-
-
-    <!-- DUI DUI -->
-    <div class="feature">
-
-      <a href="https://play.google.com/store/apps/details?id=com.yangocean.duiduifit"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        🏃 DuiDui Fit
-
-      </a>
-
-      <p>
-        Fitness and activity support for everyday movement.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     ENVIRONMENTAL READING
-========================================================= -->
-
-<section class="card">
-
-  <h2>📰 Environmental Reading</h2>
-
-  <p>
-    A small selection of recent environmental and nature
-    stories from external sources.
-  </p>
-
-  <p style="font-size:14px; color:#777;">
-    These links lead to external publications. They are
-    provided as additional reading and are not original
-    Yangocean articles.
-  </p>
-
-  <div id="eco-news">
-    Loading environmental reading...
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     FINAL MESSAGE
-========================================================= -->
-
-<section class="card">
-
-  <h2>💚 Small Choices, Greater Awareness</h2>
-
-  <p>
-    Sustainable living does not have to begin with a complete
-    change of lifestyle.
-  </p>
-
-  <p>
-    Sometimes it begins with noticing something we normally
-    overlook — the food on our plate, the things we buy, the
-    resources we use, or a tree we pass every day.
-  </p>
-
-  <p>
-    Awareness can lead to better choices, and better choices
-    can gradually become habits.
-  </p>
-
-  <p>
-    🌱 Start small. Notice more. Live mindfully.
-  </p>
-
-</section>
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-
-<footer class="footer">
-
-  <p>
-    © 2026 Yangocean
-  </p>
-
-  <p>
-    <a href="/about.html">About</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
+<nav aria-label="Main navigation">
+    <a href="/mindfulness.html">Mindfulness</a>
+    <a href="/mindful-ethical-living.html">Mindful Living</a>
+    <a href="/mindful-eating.html">Mindful Eating</a>
+    <a href="/nature-connection.html">Nature Connection</a>
+    <a href="/sustainable-living.html">Sustainable Living</a>
+    <a href="/eco.html">Environmental Awareness</a>
+    <a href="/blog.html">Journal</a>
     <a href="/apps.html">Apps</a>
-  </p>
+</nav>
 
-</footer>
+</header>
+
+<main>
+
+<section class="hero">
+
+<h1>🌿 Mindful Living, Nature & Everyday Sustainability</h1>
+
+<p>
+Yangocean is a space for exploring mindfulness, mindful and ethical living,
+nature connection, environmental awareness, mindful eating and simple
+everyday sustainability.
+</p>
+
+<p>
+The aim is not to provide all the answers, but to encourage awareness,
+curiosity and thoughtful choices in everyday life.
+</p>
+
+</section>
+
+<section>
+
+<h2>🌱 About Yangocean</h2>
+
+<p>
+Yangocean brings together reflections and practical resources around the
+relationship between our inner lives, our everyday choices and the natural
+world around us.
+</p>
+
+<p>
+From mindfulness and Dhamma-inspired reflection to food, nature,
+environmental awareness and sustainability, the site explores how small
+moments of awareness can influence the way we live.
+</p>
+
+</section>
+
+<section class="reflection">
+
+<h2>🌿 Daily Reflection</h2>
+
+<p id="dailyReflection">
+Take a moment to pause, observe and appreciate the present.
+</p>
+
+</section>
+
+<section>
+
+<h2>🌍 Explore Yangocean</h2>
+
+<p>
+Explore the main areas of Yangocean, from mindfulness and mindful living
+to nature, environmental awareness, food and everyday sustainability.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🧘 Mindfulness & Dhamma</h3>
+<p>
+Explore awareness, compassion, impermanence and simple reflections inspired
+by mindfulness and Theravada Buddhist perspectives.
+</p>
+<a href="/mindfulness.html">Explore Mindfulness →</a>
+</div>
+
+<div class="card">
+<h3>🌍 Environmental Awareness</h3>
+<p>
+Understand the connections between nature, resources, consumption,
+pollution and everyday choices.
+</p>
+<a href="/eco.html">Explore Environmental Awareness →</a>
+</div>
+
+<div class="card">
+<h3>🥗 Mindful Eating</h3>
+<p>
+Explore food with greater awareness, including nourishment, eating habits,
+resources and our relationship with food.
+</p>
+<a href="/mindful-eating.html">Explore Mindful Eating →</a>
+</div>
+
+<div class="card">
+<h3>🌱 Mindful & Ethical Living</h3>
+<p>
+Reflect on everyday choices, values, responsibility, kindness and the
+impact of how we live.
+</p>
+<a href="/mindful-ethical-living.html">Explore Mindful Living →</a>
+</div>
+
+<div class="card">
+<h3>🌳 Nature Connection</h3>
+<p>
+Reconnect with trees, animals, landscapes and the living systems that
+surround us.
+</p>
+<a href="/nature-connection.html">Explore Nature Connection →</a>
+</div>
+
+<div class="card">
+<h3>♻️ Sustainable Living</h3>
+<p>
+Discover practical approaches to using resources thoughtfully and reducing
+unnecessary environmental impact.
+</p>
+<a href="/sustainable-living.html">Explore Sustainable Living →</a>
+</div>
 
 </div>
 
+</section>
 
-<!-- =========================================================
-     DAILY REFLECTION DAY CLASS
-========================================================= -->
+<section>
+
+<h2>✨ Latest from Yangocean</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🧘 Mindfulness</h3>
+<p>
+Simple reflections on awareness, presence, compassion and living with
+greater clarity.
+</p>
+<a href="/mindfulness.html">Read more →</a>
+</div>
+
+<div class="card">
+<h3>🥗 Mindful Eating</h3>
+<p>
+Explore a more conscious relationship with food, nourishment and everyday
+eating choices.
+</p>
+<a href="/mindful-eating.html">Read more →</a>
+</div>
+
+<div class="card">
+<h3>🌳 Nature Journal</h3>
+<p>
+Discover reflections, observations and stories inspired by the natural
+world.
+</p>
+<a href="/blog.html">Visit the Journal →</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📝 Yangocean Journal</h2>
+
+<p>
+The Yangocean Journal is where observations, discoveries, photographs,
+drawings, personal experiences and questions can develop over time.
+</p>
+
+<p>
+Some entries may explore nature, food, sustainability, mindful living or
+ordinary moments in everyday life. They are intended as reflections rather
+than final answers.
+</p>
+
+<p>
+<a href="/blog.html">Explore the Yangocean Journal →</a>
+</p>
+
+</section>
+
+<section>
+
+<h2>🌍 Environmental & Sustainable Living</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌍 Environmental Awareness</h3>
+<p>
+Learn about the connections between human activities, natural systems,
+resources and environmental impact.
+</p>
+<a href="/eco.html">Environmental Awareness Guide →</a>
+</div>
+
+<div class="card">
+<h3>♻️ Sustainable Living</h3>
+<p>
+Explore practical ways of approaching everyday consumption, resources and
+lifestyle choices more thoughtfully.
+</p>
+<a href="/sustainable-living.html">Sustainable Living →</a>
+</div>
+
+<div class="card">
+<h3>🌱 Carbon Footprint</h3>
+<p>
+Learn more about carbon impact and some of the everyday activities that
+can contribute to greenhouse gas emissions.
+</p>
+<a href="/reduce-carbon-footprint.html">Explore Carbon Footprint →</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🌳 Nature Connection</h2>
+
+<p>
+Nature is not separate from everyday life. Trees, water, soil, animals,
+plants and ecosystems are part of the systems that support us.
+</p>
+
+<p>
+Yangocean explores simple ways of noticing and reconnecting with the
+natural world.
+</p>
+
+<p>
+<a href="/nature-connection.html">Explore Nature Connection →</a>
+</p>
+
+</section>
+
+<section>
+
+<h2>📱 Yangocean Apps</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Yangocean EFT Tapping</h3>
+<p>
+A simple app for exploring EFT tapping practices.
+</p>
+<a href="https://play.google.com/" target="_blank" rel="noopener">
+View on Google Play →
+</a>
+</div>
+
+<div class="card">
+<h3>QuQu Healthy Body</h3>
+<p>
+Explore simple tools and ideas related to healthy everyday living.
+</p>
+<a href="https://play.google.com/" target="_blank" rel="noopener">
+View on Google Play →
+</a>
+</div>
+
+<div class="card">
+<h3>DuiDui Fit</h3>
+<p>
+A simple fitness-oriented app for everyday movement and activity.
+</p>
+<a href="https://play.google.com/" target="_blank" rel="noopener">
+View on Google Play →
+</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>📰 Environmental Reading</h2>
+
+<p>
+Explore selected environmental news and articles from external sources.
+These links are provided for further reading and do not represent
+Yangocean's editorial ownership of the linked publications.
+</p>
+
+<div id="environmentalNews">
+<p>Loading environmental reading...</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>🌿 A Simple Thought</h2>
+
+<p>
+Mindful living does not necessarily require dramatic changes.
+Sometimes it begins with simply noticing:
+</p>
+
+<ul>
+<li>What are we consuming?</li>
+<li>Where did it come from?</li>
+<li>What resources were used?</li>
+<li>How does this choice affect other living beings?</li>
+<li>Can we choose something simpler?</li>
+</ul>
+
+<p>
+Awareness can come before action. From awareness, more thoughtful choices
+can gradually emerge.
+</p>
+
+</section>
+
+<section>
+
+<h2>🌱 Continue Exploring</h2>
+
+<p>
+There is no single way to live mindfully. Explore the areas that interest
+you and return whenever you feel like reflecting again.
+</p>
+
+<p>
+<a href="/mindfulness.html">Mindfulness & Dhamma</a> ·
+<a href="/eco.html">Environmental Awareness</a> ·
+<a href="/mindful-ethical-living.html">Mindful & Ethical Living</a> ·
+<a href="/mindful-eating.html">Mindful Eating</a> ·
+<a href="/nature-connection.html">Nature Connection</a> ·
+<a href="/sustainable-living.html">Sustainable Living</a> ·
+<a href="/blog.html">Journal</a>
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<p>
+© 2026 Yangocean. Mindful living, nature and everyday sustainability.
+</p>
+
+<p>
+<a href="/about.html">About</a> ·
+<a href="/contact.html">Contact</a> ·
+<a href="/blog.html">Journal</a>
+</p>
+
+</footer>
 
 <script>
 
-document.addEventListener("DOMContentLoaded", function () {
+/* Daily Reflection */
 
-  const day = new Date().getDay();
-
-  const map = [
-    "sun",
-    "mon",
-    "tue",
-    "wed",
-    "thu",
-    "fri",
-    "sat"
-  ];
-
-  const el = document.querySelector(".daily-reflection");
-
-  if (el) {
-    el.classList.add("day-" + map[day]);
-  }
-
-});
-
-</script>
-
-
-<!-- =========================================================
-     DAILY REFLECTION CONTENT
-========================================================= -->
-
-<script>
-
-const ecoQuotes = [
-
-  "🌱 Small daily actions can become meaningful habits over time.",
-
-  "💧 Water is precious. Notice how much you use today.",
-
-  "♻️ Before throwing something away, ask whether it can be reused.",
-
-  "🌳 Take a moment to notice a tree near you today.",
-
-  "⚡ Use energy with awareness rather than automatically.",
-
-  "🚶 A short walk can be both a simple journey and a chance to notice your surroundings.",
-
-  "🧘 Mindful living begins with paying attention to ordinary moments.",
-
-  "🍃 Nature is often closer than we think.",
-
-  "🌎 Buying less can sometimes be more meaningful than buying something labelled green.",
-
-  "💚 Caring for ourselves and caring for our surroundings can begin with awareness.",
-
-  "🌿 Look around your neighbourhood and notice something growing.",
-
-  "🚰 Clean water is precious. Use it with gratitude.",
-
-  "🌞 Simple living can begin by asking what we really need.",
-
-  "♻️ Reuse something today before buying another one.",
-
-  "🌳 Trees quietly support the places where we live.",
-
-  "⚡ Turn off something that does not need to be running.",
-
-  "🚶 Walk when a short journey does not require a vehicle.",
-
-  "🍽️ Eat with attention and notice when you are satisfied.",
-
-  "🌍 Environmental awareness begins with noticing everyday choices.",
-
-  "💧 Every drop is part of a larger water cycle.",
-
-  "🌱 Progress does not require perfection.",
-
-  "♻️ Give useful objects a longer life whenever possible.",
-
-  "🌳 Spend a few quiet minutes observing nature.",
-
-  "🧘 A slower moment can help us make more thoughtful choices.",
-
-  "🌿 Consider where something came from before deciding to buy it.",
-
-  "💚 Gratitude can change how we look at what we already have.",
-
-  "🚰 Avoid wasting water simply because it is convenient.",
-
-  "🍃 Nature rewards attention; there is always something small to notice.",
-
-  "🌎 Sustainability is also about learning, reflecting and improving.",
-
-  "🌱 Every thoughtful choice is an opportunity to practise awareness.",
-
-  "💚 Live gently, notice more, and appreciate what is around you."
-
+const reflections = [
+    "Pause for a moment and notice what is happening right now.",
+    "A small mindful choice can be the beginning of a larger change.",
+    "Nature does not need to be far away. Look closely at what is around you.",
+    "Before changing the world, begin by noticing your own everyday choices.",
+    "Simple living begins with understanding what is truly necessary.",
+    "Kindness can include the way we treat people, animals and the natural world.",
+    "Awareness gives us the opportunity to choose rather than simply react."
 ];
 
+const today = new Date();
+const reflectionIndex =
+    (today.getFullYear() + today.getMonth() + today.getDate())
+    % reflections.length;
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  const today = new Date().getDate();
-
-  const el = document.getElementById("dailyQuote");
-
-  if (el) {
-
-    el.innerText =
-      ecoQuotes[(today - 1) % ecoQuotes.length];
-
-  }
-
-});
-
-</script>
+document.getElementById("dailyReflection").textContent =
+    reflections[reflectionIndex];
 
 
-<!-- =========================================================
-     ENVIRONMENTAL NEWS FEED
-========================================================= -->
-
-<script>
+/* Environmental Reading */
 
 const feeds = [
-
-  {
-    name: "Mongabay",
-    url: "https://news.mongabay.com/feed/"
-  },
-
-  {
-    name: "UNEP News",
-    url: "https://www.unep.org/rss.xml"
-  },
-
-  {
-    name: "National Geographic Environment",
-    url: "https://www.nationalgeographic.com/environment/rss/"
-  }
-
+    {
+        name: "Mongabay",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://news.mongabay.com/feed/"
+    },
+    {
+        name: "UNEP News",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.unep.org/rss.xml"
+    },
+    {
+        name: "National Geographic Environment",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
+    }
 ];
 
+async function loadEnvironmentalNews() {
 
-async function loadEcoNews() {
+    const container =
+        document.getElementById("environmentalNews");
 
-  const container =
-    document.getElementById("eco-news");
+    container.innerHTML = "";
 
-  if (!container) return;
+    for (const feed of feeds) {
 
-  container.innerHTML = "";
+        try {
 
-  for (let feed of feeds) {
+            const response = await fetch(feed.url);
+            const data = await response.json();
 
-    try {
+            if (!data.items) continue;
 
-      const res = await fetch(
-        "https://api.rss2json.com/v1/api.json?rss_url=" +
-        encodeURIComponent(feed.url)
-      );
+            const heading =
+                document.createElement("h3");
 
-      const data = await res.json();
+            heading.textContent = feed.name;
 
-      if (!data.items || data.items.length === 0) {
-        continue;
-      }
+            container.appendChild(heading);
 
-      const items =
-        data.items.slice(0, 1);
+            data.items.slice(0, 3).forEach(item => {
 
-      const block =
-        document.createElement("div");
+                const article =
+                    document.createElement("div");
 
-      block.style.marginBottom = "18px";
+                article.className = "news-item";
 
-      block.innerHTML = `
+                const title =
+                    document.createElement("h4");
 
-        <h3 style="margin-bottom:8px;">
-          🌱 ${feed.name}
-        </h3>
+                const link =
+                    document.createElement("a");
 
-        ${items.map(item => `
+                link.href = item.link;
+                link.target = "_blank";
+                link.rel = "noopener";
+                link.textContent = item.title;
 
-          <p style="margin:6px 0;">
+                title.appendChild(link);
 
-            <a
-              href="${item.link}"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ${item.title}
-            </a>
+                article.appendChild(title);
 
-          </p>
+                if (item.pubDate) {
 
-        `).join("")}
+                    const date =
+                        document.createElement("small");
 
-      `;
+                    date.textContent =
+                        new Date(item.pubDate).toLocaleDateString();
 
-      container.appendChild(block);
+                    article.appendChild(date);
+                }
+
+                container.appendChild(article);
+
+            });
+
+        } catch (error) {
+
+            console.log(
+                "Unable to load feed:",
+                feed.name,
+                error
+            );
+
+        }
 
     }
-
-    catch (err) {
-
-      console.log(
-        "Environmental feed error:",
-        feed.name
-      );
-
-    }
-
-  }
 
 }
 
-
-document.addEventListener(
-  "DOMContentLoaded",
-  loadEcoNews
-);
+loadEnvironmentalNews();
 
 </script>
 
