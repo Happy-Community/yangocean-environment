@@ -533,22 +533,24 @@ document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
 
+
 /* Environmental Reading */
 
 const feeds = [
     {
-        name: "生态环境学报",
+        name: "生态环境学报 · 环境科学",
         url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_lm_31_1674-5906.xml"
     },
     {
-        name: "资源科学",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.resci.cn/CN/rss_lm_2681_1007-7588.xml"
+        name: "生态环境学报 · 生态学",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_lm_29_1674-5906.xml"
     },
     {
-        name: "生态环境与资源",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.resci.cn/CN/rss_lm_2516_1007-7588.xml"
+        name: "生态环境学报 · 生物多样性",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.jeesci.com/CN/rss_zt_3_1674-5906.xml"
     }
 ];
+
 
 async function loadEnvironmentalNews() {
 
@@ -630,4 +632,4 @@ loadEnvironmentalNews();
 
 </body>
 </html>
-```
+
