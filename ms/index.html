@@ -547,13 +547,16 @@ const reflectionIndex =
 document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
-
 /* Environmental Reading */
 
 const feeds = [
     {
-        name: "Mongabay",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://news.mongabay.com/feed/"
+        name: "Mongabay Indonesia",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.mongabay.co.id/feed/"
+    },
+    {
+        name: "ANTARA Lingkungan",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://babel.antaranews.com/rss/lingkungan.xml"
     },
     {
         name: "UNEP News",
@@ -564,6 +567,10 @@ const feeds = [
         url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
     }
 ];
+
+
+
+
 
 async function loadEnvironmentalNews() {
 
