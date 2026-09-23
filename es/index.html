@@ -454,16 +454,36 @@ Ver en Google Play →
 
 <section>
 
+
 <h2>📰 Lecturas sobre el Medio Ambiente</h2>
 
 <p>
-Explora una selección de noticias y artículos sobre medio ambiente de fuentes externas.
+Explora una selección de noticias y artículos sobre medio ambiente,
+naturaleza, biodiversidad, cambio climático y conservación en español.
 Estos enlaces se ofrecen para ampliar la lectura y no representan la propiedad editorial
 de Yangocean sobre las publicaciones enlazadas.
 </p>
 
-<div id="environmentalNews">
-<p>Cargando lecturas sobre el medio ambiente...</p>
+<div class="cards">
+
+<div class="card">
+
+<h3>🌎 Mongabay Latam · Medioambiente</h3>
+
+<p>
+Descubre noticias y reportajes en español sobre naturaleza,
+biodiversidad, conservación, cambio climático y comunidades
+de América Latina.
+</p>
+
+<a href="https://es.mongabay.com/list/medioambiente/"
+   target="_blank"
+   rel="noopener noreferrer">
+Leer las últimas noticias →
+</a>
+
+</div>
+
 </div>
 
 </section>
@@ -531,6 +551,8 @@ y vuelve cuando quieras dedicar un momento a reflexionar de nuevo.
 
 <script>
 
+<script>
+
 /* Daily Reflection */
 
 const reflections = [
@@ -544,110 +566,18 @@ const reflections = [
 ];
 
 const today = new Date();
+
 const reflectionIndex =
-    (today.getFullYear() + today.getMonth() + today.getDate())
+    (today.getFullYear() +
+     today.getMonth() +
+     today.getDate())
     % reflections.length;
 
 document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
-
-/* Environmental Reading */
-
-const feeds = [
-    {
-        name: "Mongabay",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://es.mongabay.com/feed/"
-    },
-    {
-        name: "UNEP News",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.unep.org/rss.xml"
-    },
-    {
-        name: "National Geographic Environment",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
-    }
-];
-
-
-
-async function loadEnvironmentalNews() {
-
-    const container =
-        document.getElementById("environmentalNews");
-
-    container.innerHTML = "";
-
-    for (const feed of feeds) {
-
-        try {
-
-            const response = await fetch(feed.url);
-            const data = await response.json();
-
-            if (!data.items) continue;
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent = feed.name;
-
-            container.appendChild(heading);
-
-            data.items.slice(0, 3).forEach(item => {
-
-                const article =
-                    document.createElement("div");
-
-                article.className = "news-item";
-
-                const title =
-                    document.createElement("h4");
-
-                const link =
-                    document.createElement("a");
-
-                link.href = item.link;
-                link.target = "_blank";
-                link.rel = "noopener";
-                link.textContent = item.title;
-
-                title.appendChild(link);
-
-                article.appendChild(title);
-
-                if (item.pubDate) {
-
-                    const date =
-                        document.createElement("small");
-
-                    date.textContent =
-                        new Date(item.pubDate).toLocaleDateString();
-
-                    article.appendChild(date);
-                }
-
-                container.appendChild(article);
-
-            });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load feed:",
-                feed.name,
-                error
-            );
-
-        }
-
-    }
-
-}
-
-loadEnvironmentalNews();
-
 </script>
 
 </body>
 </html>
+
