@@ -74,12 +74,12 @@ can also support our health and well-being.
 </section>
 
 
-<!-- SECTION 2: MAIN ARTICLE -->
+<!-- SECTION 2: ARTICLE + REFLECTION -->
 <section class="card">
 
 <h2>🌎 Wellness and Sustainability</h2>
 
-<div id="articleText">
+<div id="readAloudText">
 
 <p>
 Our health and the health of the environment are closely connected.
@@ -110,22 +110,6 @@ A small action may seem insignificant, but many small actions, repeated
 consistently, can become meaningful over time.
 </p>
 
-</div>
-
-<button
-  type="button"
-  id="readAloudButton"
-  aria-label="Read article aloud"
-  style="margin-top:15px; padding:10px 16px; cursor:pointer;"
->
-🔊 Read Aloud
-</button>
-
-</section>
-
-
-<!-- SECTION 3: REFLECTION -->
-<section class="card">
 
 <h2>🌱 A Small Reflection</h2>
 
@@ -152,9 +136,22 @@ Sometimes caring for the environment begins simply by paying attention.
 </p>
 
 <p>
-<em>Small awareness can lead to small actions, and small actions can
-become meaningful habits.</em>
+<em>
+Small awareness can lead to small actions, and small actions can
+become meaningful habits.
+</em>
 </p>
+
+</div>
+
+<button
+  type="button"
+  id="readAloudButton"
+  aria-label="Read article and reflection aloud"
+  style="margin-top:15px; padding:10px 16px; cursor:pointer;"
+>
+🔊 Read Aloud
+</button>
 
 </section>
 
@@ -179,7 +176,7 @@ become meaningful habits.</em>
 <script>
 
 const readAloudButton = document.getElementById("readAloudButton");
-const articleText = document.getElementById("articleText");
+const readAloudText = document.getElementById("readAloudText");
 
 readAloudButton.addEventListener("click", function () {
 
@@ -191,7 +188,7 @@ readAloudButton.addEventListener("click", function () {
             return;
         }
 
-        const text = articleText.innerText;
+        const text = readAloudText.innerText;
 
         const speech = new SpeechSynthesisUtterance(text);
 
