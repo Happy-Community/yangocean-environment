@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 
 <title>Yangocean Journal | Mindful Living, Nature & Everyday Reflections</title>
@@ -17,12 +18,16 @@ content="Yangocean Journal shares reflections and observations about mindful liv
 <meta name="google-adsense-account"
 content="ca-pub-6929570744326515">
 
-<!-- CANONICAL -->
+<!-- =========================================================
+     CANONICAL
+========================================================= -->
 
 <link rel="canonical"
 href="https://yangocean.com/blog.html">
 
-<!-- HREFLANG -->
+<!-- =========================================================
+     HREFLANG
+========================================================= -->
 
 <link rel="alternate"
 hreflang="en"
@@ -48,13 +53,15 @@ href="https://yangocean.com/es/blog.html">
 hreflang="x-default"
 href="https://yangocean.com/blog.html">
 
-<!-- OPEN GRAPH -->
+<!-- =========================================================
+     OPEN GRAPH
+========================================================= -->
 
 <meta property="og:title"
 content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta property="og:description"
-content="Reflections and observations about mindful living, nature, mindful eating, sustainability and everyday experiences.">
+content="Reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants and everyday experiences.">
 
 <meta property="og:url"
 content="https://yangocean.com/blog.html">
@@ -65,7 +72,9 @@ content="website">
 <meta property="og:image"
 content="https://yangocean.com/images/og-image.jpg">
 
-<!-- TWITTER -->
+<!-- =========================================================
+     TWITTER
+========================================================= -->
 
 <meta name="twitter:card"
 content="summary_large_image">
@@ -74,17 +83,23 @@ content="summary_large_image">
 content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta name="twitter:description"
-content="Reflections and observations about mindful living, nature, mindful eating, sustainability and everyday experiences.">
+content="Reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants and everyday experiences.">
 
 <meta name="twitter:image"
 content="https://yangocean.com/images/og-image.jpg">
 
-<!-- STYLES -->
+<!-- =========================================================
+     STYLES
+========================================================= -->
 
 <link rel="stylesheet"
 href="/styles.css">
 
 <style>
+
+/* =========================================================
+   READ ALOUD CONTROLS
+========================================================= */
 
 .tts-controls {
     display: flex;
@@ -106,12 +121,65 @@ href="/styles.css">
     opacity: 0.85;
 }
 
+
+/* =========================================================
+   JOURNAL FEATURES
+========================================================= */
+
 .feature {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .feature a {
     font-weight: 600;
+}
+
+
+/* =========================================================
+   GROWING GUIDE IMAGE
+========================================================= */
+
+.growing-guide-image {
+    width: 100%;
+    max-width: 700px;
+    margin: 25px auto;
+    text-align: center;
+}
+
+.growing-guide-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+
+/* =========================================================
+   GROWING GUIDE INTRO
+========================================================= */
+
+.growing-guide-intro {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .growing-guide-image {
+        max-width: 100%;
+    }
+
+    .tts-btn {
+        font-size: 16px;
+        padding: 9px 14px;
+    }
+
 }
 
 </style>
@@ -126,7 +194,9 @@ href="/styles.css">
 
 <nav>
 
-<a href="/">Home</a>
+<a href="/">
+Home
+</a>
 
 <a href="/mindfulness.html">
 Mindfulness
@@ -198,24 +268,21 @@ type="button"
 class="tts-btn play"
 onclick="togglePlay()"
 aria-label="Play or resume reading">
-🔊
-</button>
+🔊 </button>
 
 <button
 type="button"
 class="tts-btn pause"
 onclick="pauseReading()"
 aria-label="Pause reading">
-⏸
-</button>
+⏸ </button>
 
 <button
 type="button"
 class="tts-btn stop"
 onclick="stopReading()"
 aria-label="Stop reading">
-⏹
-</button>
+⏹ </button>
 
 </div>
 
@@ -308,11 +375,15 @@ and why every drop matters.
 
 <h2>🌱 Growing Guides</h2>
 
-<p>
+<p class="growing-guide-intro">
 Growing a plant can be a simple way to reconnect with nature.
 You do not need a large garden — even a container, balcony,
 window area or small outdoor space can become a place to grow.
 </p>
+
+<!-- =========================================================
+     GROWING GUIDE ARCHIVE
+========================================================= -->
 
 <div class="feature">
 
@@ -327,6 +398,10 @@ and developing a more mindful relationship with growing.
 
 </div>
 
+<!-- =========================================================
+     TREE GUIDE
+========================================================= -->
+
 <div class="feature">
 
 <a href="/blog/how-to-plant-a-tree.html">
@@ -340,6 +415,10 @@ planting it correctly, watering it and caring for it as it grows.
 
 </div>
 
+<!-- =========================================================
+     ALOE VERA GUIDE
+========================================================= -->
+
 <div class="feature">
 
 <a href="/blog/how-to-grow-aloe-vera.html">
@@ -349,6 +428,22 @@ planting it correctly, watering it and caring for it as it grows.
 <p>
 Learn how to grow aloe vera in a container or suitable garden
 space, including light, drainage, watering and basic care.
+The guide also explains the different parts of an aloe vera leaf
+and how to prepare the clear inner gel carefully for topical use.
+</p>
+
+<div class="growing-guide-image">
+
+<img
+src="https://yangocean.com/images/how-to-grow-aloe-vera.png"
+alt="Illustrated Yangocean guide showing five steps to grow aloe vera, the green skin and yellow latex of the leaf, the clear inner gel, topical preparation, benefits, simple care tips and mindful growing."
+loading="lazy">
+
+</div>
+
+<p>
+The infographic above provides a quick visual introduction.
+Visit the full guide for more detailed information.
 </p>
 
 </div>
@@ -439,7 +534,7 @@ Explore Sustainable Living →
 <footer>
 
 <p>
-<strong>Yangocean</strong> — Mindful Living, Nature & Everyday Sustainability
+<strong>Yangocean</strong> — Mindful Living & Everyday Sustainability
 </p>
 
 <p>
@@ -479,96 +574,167 @@ let speechQueue = [];
 let currentIndex = 0;
 let isPaused = false;
 
+
+/* =========================================================
+   GET ALL READABLE CONTENT
+========================================================= */
+
 function getReadableText() {
 
-    const content = document.getElementById("content-to-read");
+    const content =
+        document.getElementById("content-to-read");
 
     if (!content) {
         return [];
     }
 
-    const elements = content.querySelectorAll(
-        "h1, h2, h3, p, a"
-    );
+    const elements =
+        content.querySelectorAll(
+            "h1, h2, h3, p, a"
+        );
 
     return Array.from(elements)
-        .map(element => element.innerText.trim())
-        .filter(text => text.length > 0);
+
+        .map(element =>
+            element.innerText.trim()
+        )
+
+        .filter(text =>
+            text.length > 0
+        );
+
 }
+
+
+/* =========================================================
+   SPEAK ONE SECTION AT A TIME
+========================================================= */
 
 function speakNext() {
 
     if (currentIndex >= speechQueue.length) {
+
         speechQueue = [];
+
         currentIndex = 0;
+
         isPaused = false;
+
         return;
+
     }
+
 
     const utterance =
         new SpeechSynthesisUtterance(
             speechQueue[currentIndex]
         );
 
+
     utterance.rate = 0.95;
+
     utterance.pitch = 1;
+
     utterance.volume = 1;
+
 
     utterance.onend = function () {
 
         if (!isPaused) {
+
             currentIndex++;
+
             speakNext();
+
         }
 
     };
 
+
     speechSynthesis.speak(utterance);
+
 }
+
+
+/* =========================================================
+   PLAY / RESUME
+========================================================= */
 
 function togglePlay() {
 
     if (!("speechSynthesis" in window)) {
-        alert("Sorry, your browser does not support Read Aloud.");
+
+        alert(
+            "Sorry, your browser does not support Read Aloud."
+        );
+
         return;
+
     }
+
 
     if (speechSynthesis.paused) {
+
         isPaused = false;
+
         speechSynthesis.resume();
+
         return;
+
     }
+
 
     if (speechSynthesis.speaking) {
+
         return;
+
     }
 
-    speechQueue = getReadableText();
+
+    speechQueue =
+        getReadableText();
+
     currentIndex = 0;
+
     isPaused = false;
+
 
     speechSynthesis.cancel();
 
     speakNext();
+
 }
+
+
+/* =========================================================
+   PAUSE
+========================================================= */
 
 function pauseReading() {
 
     if ("speechSynthesis" in window) {
 
         isPaused = true;
+
         speechSynthesis.pause();
 
     }
 
 }
 
+
+/* =========================================================
+   STOP
+========================================================= */
+
 function stopReading() {
 
     if ("speechSynthesis" in window) {
 
         isPaused = false;
+
         speechQueue = [];
+
         currentIndex = 0;
 
         speechSynthesis.cancel();
@@ -577,17 +743,26 @@ function stopReading() {
 
 }
 
-window.addEventListener("beforeunload", function () {
 
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
+/* =========================================================
+   CLEAN UP WHEN LEAVING PAGE
+========================================================= */
+
+window.addEventListener(
+    "beforeunload",
+    function () {
+
+        if ("speechSynthesis" in window) {
+
+            speechSynthesis.cancel();
+
+        }
+
     }
-
-});
+);
 
 </script>
 
 </body>
 
 </html>
-
