@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 
 <html lang="en">
@@ -10,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Yangocean Journal shares original reflections and observations about mindful living, nature, mindful eating, sustainability, and simple everyday experiences.">
+content="Yangocean Journal shares reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants, and simple everyday experiences.">
 
 <meta name="robots" content="index, follow">
 
@@ -54,7 +55,7 @@ href="https://yangocean.com/blog.html">
 content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta property="og:description"
-content="Original reflections and observations about mindful living, nature, mindful eating and everyday sustainability.">
+content="Reflections and observations about mindful living, nature, mindful eating, sustainability and everyday experiences.">
 
 <meta property="og:url"
 content="https://yangocean.com/blog.html">
@@ -74,7 +75,7 @@ content="summary_large_image">
 content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta name="twitter:description"
-content="Original reflections and observations about mindful living, nature, mindful eating and everyday sustainability.">
+content="Reflections and observations about mindful living, nature, mindful eating, sustainability and everyday experiences.">
 
 <meta name="twitter:image"
 content="https://yangocean.com/images/og-image.jpg">
@@ -174,9 +175,9 @@ Apps
 <h1>📝 Yangocean Journal</h1>
 
 <p>
-Welcome to the Yangocean Journal — a collection of original
-reflections, observations and everyday experiences connected
-with mindful living, nature, mindful eating and sustainability.
+Welcome to the Yangocean Journal — a collection of reflections,
+observations and everyday experiences connected with mindful living,
+nature, mindful eating and sustainability.
 </p>
 
 <p>
@@ -198,21 +199,24 @@ type="button"
 class="tts-btn play"
 onclick="togglePlay()"
 aria-label="Play or resume reading">
-🔊 </button>
+🔊
+</button>
 
 <button
 type="button"
 class="tts-btn pause"
 onclick="pauseReading()"
 aria-label="Pause reading">
-⏸ </button>
+⏸
+</button>
 
 <button
 type="button"
 class="tts-btn stop"
 onclick="stopReading()"
 aria-label="Stop reading">
-⏹ </button>
+⏹
+</button>
 
 </div>
 
@@ -298,6 +302,66 @@ and why every drop matters.
 </section>
 
 <!-- =========================================================
+     GROWING GUIDES
+========================================================= -->
+
+<section class="card">
+
+<h2>🌱 Growing Guides</h2>
+
+<p>
+Growing a plant can be a simple way to reconnect with nature.
+You do not need a large garden — even a container, balcony,
+window area or small outdoor space can become a place to grow.
+</p>
+
+<div class="feature">
+
+<a href="/blog/how-to-plant.html">
+🌱 Explore Yangocean Growing Guides →
+</a>
+
+<p>
+Simple practical guides for planting trees, growing useful plants,
+and developing a more mindful relationship with growing.
+</p>
+
+</div>
+
+<div class="feature">
+
+<a href="/blog/how-to-plant-a-tree.html">
+🌳 How to Plant a Tree →
+</a>
+
+<p>
+A step-by-step guide to choosing a suitable tree and location,
+planting it correctly, watering it and caring for it as it grows.
+</p>
+
+</div>
+
+<div class="feature">
+
+<a href="/blog/how-to-grow-aloe-vera.html">
+🌿 How to Grow Aloe Vera →
+</a>
+
+<p>
+Learn how to grow aloe vera in a container or suitable garden
+space, including light, drainage, watering and basic care.
+</p>
+
+</div>
+
+<p>
+More growing guides for herbs, useful plants and small spaces
+can be added here over time.
+</p>
+
+</section>
+
+<!-- =========================================================
      JOURNAL THEMES
 ========================================================= -->
 
@@ -367,18 +431,164 @@ Explore Sustainable Living →
 
 </section>
 
+</main>
+
 <!-- =========================================================
-     ORIGINAL CONTENT
+     FOOTER
 ========================================================= -->
 
-<section class="card">
-
-<h2>✍️ Original Content</h2>
+<footer>
 
 <p>
-Yangocean Journal focuses on original observations and reflections
-rather than simply repeating information found elsewhere.
+<strong>Yangocean</strong> — Mindful Living, Nature & Everyday Sustainability
 </p>
 
 <p>
-Articles may be inspired by everyday experiences
+
+<a href="/about.html">
+About
+</a>
+
+<a href="/contact.html">
+Contact
+</a>
+
+<a href="/blog.html">
+Journal
+</a>
+
+<a href="/apps.html">
+Apps
+</a>
+
+</p>
+
+<p>
+© 2026 Yangocean. All rights reserved.
+</p>
+
+</footer>
+
+<!-- =========================================================
+     READ ALOUD
+     Reads the complete main content.
+========================================================= -->
+
+<script>
+
+let speechQueue = [];
+let currentIndex = 0;
+let isPaused = false;
+
+function getReadableText() {
+
+    const content = document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+    const elements = content.querySelectorAll(
+        "h1, h2, h3, p, a"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0);
+}
+
+function speakNext() {
+
+    if (currentIndex >= speechQueue.length) {
+        speechQueue = [];
+        currentIndex = 0;
+        isPaused = false;
+        return;
+    }
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    utterance.onend = function () {
+
+        if (!isPaused) {
+            currentIndex++;
+            speakNext();
+        }
+
+    };
+
+    speechSynthesis.speak(utterance);
+}
+
+function togglePlay() {
+
+    if (!("speechSynthesis" in window)) {
+        alert("Sorry, your browser does not support Read Aloud.");
+        return;
+    }
+
+    if (speechSynthesis.paused) {
+        isPaused = false;
+        speechSynthesis.resume();
+        return;
+    }
+
+    if (speechSynthesis.speaking) {
+        return;
+    }
+
+    speechQueue = getReadableText();
+    currentIndex = 0;
+    isPaused = false;
+
+    speechSynthesis.cancel();
+
+    speakNext();
+}
+
+function pauseReading() {
+
+    if ("speechSynthesis" in window) {
+
+        isPaused = true;
+        speechSynthesis.pause();
+
+    }
+
+}
+
+function stopReading() {
+
+    if ("speechSynthesis" in window) {
+
+        isPaused = false;
+        speechQueue = [];
+        currentIndex = 0;
+
+        speechSynthesis.cancel();
+
+    }
+
+}
+
+window.addEventListener("beforeunload", function () {
+
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
+```
