@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 
 <title>Connect with Nature | Trees, Plants & Everyday Nature | Yangocean</title>
@@ -17,27 +18,8 @@ content="nature connection, nature observation, trees, plants, biodiversity, tre
 
 <meta name="robots" content="index, follow">
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-
-<!-- OPEN GRAPH -->
-
-<meta property="og:title" content="Connect with Nature | Yangocean">
-<meta property="og:description"
-content="Notice, observe, grow and appreciate the nature around you.">
-<meta property="og:url"
-content="https://yangocean.com/nature-connection.html">
-<meta property="og:type" content="website">
-<meta property="og:image"
-content="https://yangocean.com/images/og-image.jpg">
-
-<!-- TWITTER -->
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Connect with Nature | Yangocean">
-<meta name="twitter:description"
-content="Notice, observe, grow and appreciate the nature around you.">
-<meta name="twitter:image"
-content="https://yangocean.com/images/og-image.jpg">
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
 
 <!-- CANONICAL -->
 
@@ -48,18 +30,55 @@ href="https://yangocean.com/nature-connection.html">
 
 <link rel="alternate" hreflang="en"
 href="https://yangocean.com/nature-connection.html">
+
 <link rel="alternate" hreflang="ms"
 href="https://yangocean.com/ms/nature-connection.html">
+
 <link rel="alternate" hreflang="zh"
 href="https://yangocean.com/zh/nature-connection.html">
+
 <link rel="alternate" hreflang="fr"
 href="https://yangocean.com/fr/nature-connection.html">
+
 <link rel="alternate" hreflang="es"
 href="https://yangocean.com/es/nature-connection.html">
+
 <link rel="alternate" hreflang="my"
 href="https://yangocean.com/my/nature-connection.html">
+
 <link rel="alternate" hreflang="x-default"
 href="https://yangocean.com/nature-connection.html">
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:title"
+content="Connect with Nature | Yangocean">
+
+<meta property="og:description"
+content="Notice, observe, grow and appreciate the nature around you.">
+
+<meta property="og:url"
+content="https://yangocean.com/nature-connection.html">
+
+<meta property="og:type"
+content="website">
+
+<meta property="og:image"
+content="https://yangocean.com/images/og-image.jpg">
+
+<!-- TWITTER -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Connect with Nature | Yangocean">
+
+<meta name="twitter:description"
+content="Notice, observe, grow and appreciate the nature around you.">
+
+<meta name="twitter:image"
+content="https://yangocean.com/images/og-image.jpg">
 
 <!-- STRUCTURED DATA -->
 
@@ -84,15 +103,43 @@ href="https://yangocean.com/nature-connection.html">
 
 <style>
 
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.page-intro {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.page-intro p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 24px;
+    text-align: center;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   READ ALOUD
+========================================================= */
+
 .read-aloud-wrap {
     text-align: center;
-    margin: 18px 0 28px;
+    margin: 22px 0 34px;
 }
 
 .read-aloud-btn {
     border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
+    border-radius: 10px;
+    padding: 11px 20px;
     font-size: 15px;
     cursor: pointer;
     background: #2f6f4e;
@@ -103,11 +150,61 @@ href="https://yangocean.com/nature-connection.html">
     opacity: 0.9;
 }
 
+
+/* =========================================================
+   FEATURE GRID
+========================================================= */
+
+.nature-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.nature-item {
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(47,111,78,0.12);
+}
+
+.nature-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.nature-item p {
+    margin-bottom: 0;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   SIMPLE LIST
+========================================================= */
+
+.nature-list {
+    max-width: 720px;
+    margin: 20px auto;
+    padding-left: 25px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   NEWS LINK
+========================================================= */
+
+.news-link-wrap {
+    text-align: center;
+    margin-top: 22px;
+}
+
 .news-link {
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 16px;
-    border-radius: 8px;
+    padding: 11px 18px;
+    border-radius: 10px;
     background: #2f6f4e;
     color: white;
     text-decoration: none;
@@ -119,8 +216,37 @@ href="https://yangocean.com/nature-connection.html">
 
 .external-note {
     margin-top: 10px;
+    text-align: center;
     font-size: 0.9em;
     color: #777;
+}
+
+
+/* =========================================================
+   FINAL THOUGHT
+========================================================= */
+
+.final-thought {
+    text-align: center;
+}
+
+.final-thought strong {
+    display: block;
+    margin-top: 16px;
+    font-size: 1.05em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .nature-grid {
+        grid-template-columns: 1fr;
+    }
+
 }
 
 </style>
@@ -137,265 +263,324 @@ crossorigin="anonymous"></script>
 
 <div class="container">
 
-<!-- NAV -->
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
 <nav aria-label="Main navigation">
 
-<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+<a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
 
 <span style="margin-left:10px;">|</span>
 
-<a href="/">Home</a>
+<a href="/">
+Home
+</a>
 
 <span class="dropdown">
 
-```
 <button class="dropbtn" type="button">
-    🌿 Mindful Living ▾
+🌿 Mindful Living ▾
 </button>
 
 <span class="dropdown-content">
 
-    <a href="/mindfulness.html">
-        🧘 Mindfulness &amp; Dhamma
-    </a>
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
+</a>
 
-    <a href="/mindful-eating.html">
-        🥗 Eating Well
-    </a>
+<a href="/mindful-eating.html">
+🥗 Mindful Eating
+</a>
 
-    <a href="/sustainable-living.html">
-        ♻️ Sustainable Living
-    </a>
-
-</span>
-```
+<a href="/sustainable-living.html">
+♻️ Sustainable Living
+</a>
 
 </span>
-
-<span class="dropdown">
-
-```
-<button class="dropbtn" type="button">
-    🌳 Nature Connection ▾
-</button>
-
-<span class="dropdown-content">
-
-    <a href="/nature-connection.html">
-        🌳 Nature Connection
-    </a>
-
-    <a href="/eco.html">
-        🌍 Environmental Awareness
-    </a>
-
-    <a href="/blog.html">
-        📝 Journal
-    </a>
-
-</span>
-```
 
 </span>
 
 <span class="dropdown">
 
-```
 <button class="dropbtn" type="button">
-    📱 Related Apps ▾
+🌳 Nature Connection ▾
 </button>
 
 <span class="dropdown-content">
 
-    <a href="/apps.html">
-        📱 All Related Apps
-    </a>
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
+</a>
+
+<a href="/blog.html">
+📝 Journal
+</a>
 
 </span>
-```
+
+</span>
+
+<span class="dropdown">
+
+<button class="dropbtn" type="button">
+📱 Related Apps ▾
+</button>
+
+<span class="dropdown-content">
+
+<a href="/apps.html">
+📱 All Related Apps
+</a>
+
+</span>
 
 </span>
 
 </nav>
 
-<!-- CONTENT TO READ -->
+<!-- =========================================================
+     CONTENT TO READ
+========================================================= -->
 
 <div id="content-to-read">
 
-<!-- HERO -->
+<!-- =========================================================
+     HERO
+========================================================= -->
 
 <section class="card">
 
+<div class="page-intro">
+
 <h1>🌳 Connect with Nature</h1>
 
-<p style="text-align:center; color:#555;">
-    Notice the trees, plants, birds, insects, light, rain and changing
-    surroundings around you. Nature connection can begin with something
-    very close to home.
+<p>
+Notice the trees, plants, birds, insects, light, rain and changing
+surroundings around you.
 </p>
+
+<p>
+Nature connection can begin with something very close to home.
+</p>
+
+</div>
 
 </section>
 
-<!-- READ ALOUD -->
+<!-- =========================================================
+     READ ALOUD
+========================================================= -->
 
 <div class="read-aloud-wrap">
 
 <button
- id="readAloudButton"
- class="read-aloud-btn"
- type="button"
- aria-label="Read this page aloud">
-🔊 Read Aloud </button>
+id="readAloudButton"
+class="read-aloud-btn"
+type="button"
+aria-label="Read this page aloud">
+
+🔊 Read Aloud
+
+</button>
 
 </div>
 
-<!-- INTRODUCTION -->
+<!-- =========================================================
+     WHY NOTICE NATURE
+========================================================= -->
 
 <section class="card">
 
 <h2>🍃 Why Notice Nature Nearby?</h2>
 
-<p>
-    We often think of connecting with nature as something that requires a
-    forest, mountain, park or distant destination. But nature is also
-    present in ordinary places.
+<p class="section-intro">
+Nature connection does not require a forest, mountain or distant
+destination. Nature is also present in ordinary places around us.
 </p>
 
-<p>
-    A tree beside a road, a small garden, birds on a rooftop, insects
-    visiting flowers, or new leaves appearing after rain can all become
-    opportunities to slow down and pay attention.
-</p>
+<div class="nature-grid">
+
+<div class="nature-item">
+
+<h3>🌳 Look Around</h3>
 
 <p>
-    When we regularly notice these small details, familiar surroundings
-    can become much more interesting.
+A tree beside a road, a small garden or new leaves appearing
+after rain can all become opportunities to slow down and pay
+attention.
 </p>
+
+</div>
+
+<div class="nature-item">
+
+<h3>🐦 Notice Life</h3>
+
+<p>
+Birds on rooftops, insects visiting flowers and other small
+creatures can reveal how much life exists around us.
+</p>
+
+</div>
+
+<div class="nature-item">
+
+<h3>🌦️ Notice Change</h3>
+
+<p>
+Light, weather, rain, flowers and leaves change constantly.
+Regular observation helps us notice details that we might
+otherwise miss.
+</p>
+
+</div>
+
+<div class="nature-item">
+
+<h3>🍃 Become More Familiar</h3>
+
+<p>
+When we regularly notice our surroundings, familiar places
+can become more interesting and meaningful.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
-<!-- BIODIVERSITY NEWS -->
+<!-- =========================================================
+     BIODIVERSITY NEWS
+========================================================= -->
 
 <section class="card">
 
 <h2>🌍 Biodiversity News</h2>
 
-<p>
-    Biodiversity includes the variety of plants, animals and other living
-    things that share our environment. Learning about biodiversity can
-    help us understand why ordinary trees, plants, insects and wildlife
-    matter.
+<p class="section-intro">
+Biodiversity includes the variety of plants, animals and other
+living things that share our environment. Learning about biodiversity
+can help us understand why ordinary trees, plants, insects and
+wildlife matter.
 </p>
 
 <p>
-    For current biodiversity stories and environmental developments,
-    you can also follow the biodiversity coverage from The Straits Times.
+For current biodiversity stories and environmental developments,
+you can also follow biodiversity coverage from The Straits Times.
 </p>
+
+<div class="news-link-wrap">
 
 <a
- class="news-link"
- href="https://www.straitstimes.com/tags/biodiversity"
- target="_blank"
- rel="noopener noreferrer">
-🌿 Read Latest Biodiversity News → </a>
+class="news-link"
+href="https://www.straitstimes.com/tags/biodiversity"
+target="_blank"
+rel="noopener noreferrer">
+
+🌿 Read Latest Biodiversity News →
+
+</a>
+
+</div>
 
 <p class="external-note">
-    External resource: The Straits Times. Opens in a new tab.
+External resource: The Straits Times. Opens in a new tab.
 </p>
 
 </section>
 
-<!-- PLANTING -->
+<!-- =========================================================
+     GROW SOMETHING
+========================================================= -->
 
 <section class="card">
 
 <h2>🌱 Grow Something Small</h2>
 
-<p>
-    Nature connection does not always mean observing wild places.
-    Growing a plant gives us another way to notice how living things
-    change over time.
+<p class="section-intro">
+Growing a plant gives us another way to notice how living things
+change over time. You do not need a large garden — a pot, container
+or small growing space can be enough.
 </p>
 
+<div class="nature-grid">
+
+<div class="nature-item">
+
+<h3>🌿 Start Small</h3>
+
 <p>
-    You do not need a large garden. A pot, container or small growing
-    space can be enough to begin.
+Choose a plant that suits your available space, light and local
+conditions. Herbs and other easy-to-grow plants can be a simple
+starting point.
 </p>
 
-<div class="features">
+</div>
 
-```
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🌿 Start Small</h3>
+<h3>☀️ Observe Light</h3>
 
-    <p>
-        Choose a plant that suits your available space, light and
-        local conditions. Herbs and other easy-to-grow plants can
-        be a simple starting point.
-    </p>
+<p>
+Notice how much sunlight reaches the growing area and how the
+plant responds to its surroundings.
+</p>
 
 </div>
 
-<div class="feature">
+<div class="nature-item">
 
-    <h3>☀️ Observe Light</h3>
+<h3>💧 Learn Its Needs</h3>
 
-    <p>
-        Notice how much sunlight reaches the growing area and how
-        the plant responds to its surroundings.
-    </p>
-
-</div>
-
-<div class="feature">
-
-    <h3>💧 Learn Its Needs</h3>
-
-    <p>
-        Water according to the needs of the particular plant and
-        its growing conditions rather than assuming every plant
-        needs the same amount.
-    </p>
+<p>
+Water according to the needs of the particular plant and its
+growing conditions rather than assuming every plant needs the
+same amount.
+</p>
 
 </div>
 
-<div class="feature">
+<div class="nature-item">
 
-    <h3>📷 Record Changes</h3>
+<h3>📷 Record Changes</h3>
 
-    <p>
-        Take occasional photographs or notes. New leaves, flowers
-        and other changes become easier to appreciate when you
-        compare them over time.
-    </p>
+<p>
+Take occasional photographs or notes. New leaves, flowers and
+other changes become easier to appreciate when you compare
+them over time.
+</p>
 
 </div>
-```
 
 </div>
 
 </section>
 
-<!-- NATURE JOURNAL -->
+<!-- =========================================================
+     NATURE JOURNAL
+========================================================= -->
 
 <section class="card">
 
 <h2>📓 Start a Simple Nature Journal</h2>
 
-<p>
-    You do not need special equipment or scientific knowledge to keep
-    a nature journal. A phone camera and a few notes can be enough.
+<p class="section-intro">
+You do not need special equipment or scientific knowledge.
+A phone camera and a few notes can be enough.
 </p>
 
 <p>
-    Each observation can record:
+Each observation can record:
 </p>
 
-<ul>
+<ul class="nature-list">
 
-```
 <li>📅 Date of observation</li>
 
 <li>📍 General area or neighbourhood</li>
@@ -411,96 +596,95 @@ crossorigin="anonymous"></script>
 <li>🍃 Changes from an earlier observation</li>
 
 <li>💭 A personal thought or reflection</li>
-```
 
 </ul>
 
 <p>
-    Over time, these simple observations can become a personal record
-    of how the natural world changes around you.
+Over time, these simple observations can become a personal record
+of how the natural world changes around you.
 </p>
 
 </section>
 
-<!-- TREE OBSERVATION -->
+<!-- =========================================================
+     GETTING TO KNOW A TREE
+========================================================= -->
 
 <section class="card">
 
 <h2>🌳 Getting to Know a Tree</h2>
 
-<p>
-    Choose one tree that you pass regularly. Instead of simply walking
-    past it, stop for a moment and look closely.
+<p class="section-intro">
+Choose one tree that you pass regularly. Instead of simply walking
+past it, stop for a moment and look closely.
 </p>
 
-<div class="features">
+<div class="nature-grid">
 
-```
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🌿 Leaves</h3>
+<h3>🌿 Leaves</h3>
 
-    <p>
-        Notice their shape, size, colour and texture. Are there new
-        leaves, older leaves or leaves that are changing?
-    </p>
-
-</div>
-
-<div class="feature">
-
-    <h3>🌸 Flowers &amp; Fruit</h3>
-
-    <p>
-        Look for flowers, seeds or fruit. These may attract birds,
-        insects and other visitors.
-    </p>
+<p>
+Notice their shape, size, colour and texture. Are there new
+leaves, older leaves or leaves that are changing?
+</p>
 
 </div>
 
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🪵 Bark &amp; Trunk</h3>
+<h3>🌸 Flowers &amp; Fruit</h3>
 
-    <p>
-        Observe the colour, texture and shape of the trunk and
-        branches. Different trees can have surprisingly distinctive
-        features.
-    </p>
+<p>
+Look for flowers, seeds or fruit. These may attract birds,
+insects and other visitors.
+</p>
+
+</div>
+
+<div class="nature-item">
+
+<h3>🪵 Bark &amp; Trunk</h3>
+
+<p>
+Observe the colour, texture and shape of the trunk and branches.
+Different trees can have surprisingly distinctive features.
+</p>
 
 </div>
 
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🐜 Small Visitors</h3>
+<h3>🐜 Small Visitors</h3>
 
-    <p>
-        Look carefully for ants, beetles, spiders, caterpillars and
-        other small creatures living on or around the tree.
-    </p>
+<p>
+Look carefully for ants, beetles, spiders, caterpillars and
+other small creatures living on or around the tree.
+</p>
 
 </div>
-```
 
 </div>
 
 </section>
 
-<!-- PHOTOGRAPHY -->
+<!-- =========================================================
+     PHOTOGRAPHY
+========================================================= -->
 
 <section class="card">
 
 <h2>📷 Photograph What You Notice</h2>
 
-<p>
-    Photography can make us slow down. Instead of taking a photograph
-    only because something looks beautiful, try photographing a detail
-    you might normally overlook.
+<p class="section-intro">
+Photography can make us slow down. Instead of taking a photograph
+only because something looks beautiful, try photographing a detail
+you might normally overlook.
 </p>
 
-<ul>
+<ul class="nature-list">
 
-```
 <li>🌱 A new leaf</li>
 
 <li>🌸 A flower beginning to open</li>
@@ -516,30 +700,30 @@ crossorigin="anonymous"></script>
 <li>🌳 The same tree at different times</li>
 
 <li>🌱 A plant you are growing</li>
-```
 
 </ul>
 
 <p>
-    The goal is not to create perfect photographs.
-    The goal is to look more carefully.
+The goal is not to create perfect photographs.
+The goal is to look more carefully.
 </p>
 
 </section>
 
-<!-- FIVE MINUTE PAUSE -->
+<!-- =========================================================
+     FIVE MINUTE PAUSE
+========================================================= -->
 
 <section class="card">
 
 <h2>👀 A Five-Minute Nature Pause</h2>
 
-<p>
-    The next time you are outdoors, try a short observation exercise.
+<p class="section-intro">
+The next time you are outdoors, try a short observation exercise.
 </p>
 
-<ol>
+<ol class="nature-list">
 
-```
 <li>Stop somewhere safe and comfortable.</li>
 
 <li>Look around instead of immediately looking at your phone.</li>
@@ -553,120 +737,122 @@ crossorigin="anonymous"></script>
 <li>Take a photograph if you wish.</li>
 
 <li>Write down one sentence about the experience.</li>
-```
 
 </ol>
 
 <p>
-    Five minutes may seem short, but regular observation can gradually
-    change the way we experience familiar places.
+Five minutes may seem short, but regular observation can gradually
+change the way we experience familiar places.
 </p>
 
 </section>
 
-<!-- CHANGES -->
+<!-- =========================================================
+     WATCH NATURE CHANGE
+========================================================= -->
 
 <section class="card">
 
 <h2>🌦️ Watch Nature Change</h2>
 
-<p>
-    Nature is constantly changing, even when the changes are subtle.
+<p class="section-intro">
+Nature is constantly changing, even when the changes are subtle.
 </p>
 
 <p>
-    A tree may produce new leaves, flowers may appear and disappear,
-    birds may visit at different times, and rain can transform the
-    appearance of plants and the surrounding environment.
+A tree may produce new leaves, flowers may appear and disappear,
+birds may visit at different times, and rain can transform the
+appearance of plants and the surrounding environment.
 </p>
 
 <p>
-    Photographing the same place or plant repeatedly can reveal changes
-    that are easy to miss when we only look occasionally.
+Photographing the same place or plant repeatedly can reveal changes
+that are easy to miss when we only look occasionally.
 </p>
 
 </section>
 
-<!-- PERSONAL OBSERVATIONS -->
+<!-- =========================================================
+     NATURE OBSERVATIONS
+========================================================= -->
 
 <section class="card">
 
 <h2>📝 Nature Observations</h2>
 
-<p>
-    This section will gradually grow with original observations and
-    photographs from everyday surroundings.
+<p class="section-intro">
+This section will gradually grow with original observations and
+photographs from everyday surroundings.
 </p>
 
-<div class="features">
+<div class="nature-grid">
 
-```
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🌳 Trees Around Us</h3>
+<h3>🌳 Trees Around Us</h3>
 
-    <p>
-        Photographs and observations of trees found in ordinary
-        neighbourhood surroundings.
-    </p>
-
-</div>
-
-<div class="feature">
-
-    <h3>🌱 Growing &amp; Planting</h3>
-
-    <p>
-        Simple records of plants being grown and the changes observed
-        over time.
-    </p>
+<p>
+Photographs and observations of trees found in ordinary
+neighbourhood surroundings.
+</p>
 
 </div>
 
-<div class="feature">
+<div class="nature-item">
 
-    <h3>🌿 Small Discoveries</h3>
+<h3>🌱 Growing &amp; Planting</h3>
 
-    <p>
-        Interesting plants, insects, flowers and other small details
-        noticed during everyday walks.
-    </p>
-
-</div>
-
-<div class="feature">
-
-    <h3>🌧️ After the Rain</h3>
-
-    <p>
-        Observations of how rain changes plants, trees, light and
-        the surrounding environment.
-    </p>
-
-</div>
-```
+<p>
+Simple records of plants being grown and the changes observed
+over time.
+</p>
 
 </div>
 
-<p style="margin-top:20px; color:#777;">
-    New observations will be added as they are photographed and recorded.
+<div class="nature-item">
+
+<h3>🌿 Small Discoveries</h3>
+
+<p>
+Interesting plants, insects, flowers and other small details
+noticed during everyday walks.
+</p>
+
+</div>
+
+<div class="nature-item">
+
+<h3>🌧️ After the Rain</h3>
+
+<p>
+Observations of how rain changes plants, trees, light and
+the surrounding environment.
+</p>
+
+</div>
+
+</div>
+
+<p style="margin-top:20px; color:#777; text-align:center;">
+New observations will be added as they are photographed and recorded.
 </p>
 
 </section>
 
-<!-- RESPECT NATURE -->
+<!-- =========================================================
+     RESPECT NATURE
+========================================================= -->
 
 <section class="card">
 
 <h2>💚 Observe Without Disturbing</h2>
 
-<p>
-    Connecting with nature also means respecting it.
+<p class="section-intro">
+Connecting with nature also means respecting it.
 </p>
 
-<ul>
+<ul class="nature-list">
 
-```
 <li>🌿 Avoid damaging plants or removing flowers.</li>
 
 <li>🐦 Keep a respectful distance from wildlife.</li>
@@ -676,35 +862,35 @@ crossorigin="anonymous"></script>
 <li>🚯 Take rubbish home or place it in an appropriate bin.</li>
 
 <li>📍 Avoid sharing precise locations of sensitive wildlife habitats.</li>
-```
 
 </ul>
 
 <p>
-    A good nature observation leaves the place as we found it—or,
-    when possible, a little cleaner.
+A good nature observation leaves the place as we found it—or,
+when possible, a little cleaner.
 </p>
 
 </section>
 
-<!-- NO EXPERTISE REQUIRED -->
+<!-- =========================================================
+     NO EXPERTISE REQUIRED
+========================================================= -->
 
 <section class="card">
 
 <h2>🌱 You Don't Need to Be a Botanist</h2>
 
-<p>
-    It is perfectly fine not to know the name of every tree, flower or
-    insect. Observation can come before identification.
+<p class="section-intro">
+It is perfectly fine not to know the name of every tree, flower
+or insect. Observation can come before identification.
 </p>
 
 <p>
-    You can begin with simple questions:
+You can begin with simple questions:
 </p>
 
-<ul>
+<ul class="nature-list">
 
-```
 <li>What does it look like?</li>
 
 <li>What has changed since the last time I saw it?</li>
@@ -714,63 +900,66 @@ crossorigin="anonymous"></script>
 <li>How does it look after rain?</li>
 
 <li>What makes this plant or tree interesting to me?</li>
-```
 
 </ul>
 
 <p>
-    If you later want to identify a species, that can become another
-    part of the learning process.
+If you later want to identify a species, that can become another
+part of the learning process.
 </p>
 
 </section>
 
-<!-- FINAL THOUGHT -->
+<!-- =========================================================
+     FINAL THOUGHT
+========================================================= -->
 
-<section class="card">
+<section class="card final-thought">
 
 <h2>🍃 Look Closer</h2>
 
 <p>
-    Nature does not always need to be spectacular to be worth noticing.
+Nature does not always need to be spectacular to be worth noticing.
 </p>
 
 <p>
-    Sometimes connection begins with one tree, one flower, one plant
-    you grow, one bird, or one quiet moment outside.
+Sometimes connection begins with one tree, one flower, one plant
+you grow, one bird, or one quiet moment outside.
 </p>
 
 <p>
-    <strong>
-        Look closer. Notice more. Appreciate what is already around you.
-    </strong>
+<strong>
+Look closer. Notice more. Appreciate what is already around you.
+</strong>
 </p>
 
 </section>
 
 </div>
 
-<!-- FOOTER -->
+<!-- =========================================================
+     FOOTER
+========================================================= -->
 
 <footer class="footer">
 
 <p>© 2026 Yangocean</p>
 
 <p>
-    <a href="/about.html">About</a> |
-    <a href="/contact.html">Contact</a> |
-    <a href="/privacy.html">Privacy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/apps.html">Apps</a>
+<a href="/about.html">About</a> |
+<a href="/contact.html">Contact</a> |
+<a href="/privacy.html">Privacy</a> |
+<a href="/terms.html">Terms</a> |
+<a href="/apps.html">Apps</a>
 </p>
 
 </footer>
 
-<script>
+<!-- =========================================================
+     FULL PAGE READ ALOUD
+========================================================= -->
 
-/* =========================
-   FULL PAGE READ ALOUD
-   ========================= */
+<script>
 
 const readAloudButton =
     document.getElementById("readAloudButton");
@@ -781,15 +970,25 @@ const readAloudContent =
 let readAloudText = "";
 let isPaused = false;
 
+
 if ("speechSynthesis" in window) {
 
     const elements =
-        readAloudContent.querySelectorAll("h1, h2, h3, p, li");
+        readAloudContent.querySelectorAll(
+            "h1, h2, h3, p, li"
+        );
 
     readAloudText =
         Array.from(elements)
-        .map(element => element.innerText.trim())
-        .filter(text => text.length > 0)
+
+        .map(element =>
+            element.innerText.trim()
+        )
+
+        .filter(text =>
+            text.length > 0
+        )
+
         .join(". ");
 
 }
@@ -799,19 +998,30 @@ function startReading() {
 
     if (!("speechSynthesis" in window)) {
 
-        alert("Read Aloud is not supported by this browser.");
+        alert(
+            "Read Aloud is not supported by this browser."
+        );
 
         return;
+
     }
+
 
     speechSynthesis.cancel();
 
+
     const utterance =
-        new SpeechSynthesisUtterance(readAloudText);
+        new SpeechSynthesisUtterance(
+            readAloudText
+        );
+
 
     utterance.lang = "en-US";
+
     utterance.rate = 0.95;
+
     utterance.pitch = 1;
+
 
     utterance.onend = function () {
 
@@ -822,64 +1032,85 @@ function startReading() {
 
     };
 
+
     speechSynthesis.speak(utterance);
+
 
     readAloudButton.textContent =
         "⏸ Pause";
 
     isPaused = false;
+
 }
 
 
-readAloudButton.addEventListener("click", function () {
+readAloudButton.addEventListener(
+    "click",
+    function () {
 
-    if (!("speechSynthesis" in window)) {
+        if (!("speechSynthesis" in window)) {
 
-        alert("Read Aloud is not supported by this browser.");
+            alert(
+                "Read Aloud is not supported by this browser."
+            );
 
-        return;
+            return;
+
+        }
+
+
+        if (
+            speechSynthesis.speaking &&
+            !speechSynthesis.paused
+        ) {
+
+            speechSynthesis.pause();
+
+            readAloudButton.textContent =
+                "▶️ Resume";
+
+            isPaused = true;
+
+            return;
+
+        }
+
+
+        if (speechSynthesis.paused) {
+
+            speechSynthesis.resume();
+
+            readAloudButton.textContent =
+                "⏸ Pause";
+
+            isPaused = false;
+
+            return;
+
+        }
+
+
+        startReading();
+
     }
-
-    if (speechSynthesis.speaking && !speechSynthesis.paused) {
-
-        speechSynthesis.pause();
-
-        readAloudButton.textContent =
-            "▶️ Resume";
-
-        isPaused = true;
-
-        return;
-    }
-
-    if (speechSynthesis.paused) {
-
-        speechSynthesis.resume();
-
-        readAloudButton.textContent =
-            "⏸ Pause";
-
-        isPaused = false;
-
-        return;
-    }
-
-    startReading();
-
-});
+);
 
 
-window.addEventListener("beforeunload", function () {
+window.addEventListener(
+    "beforeunload",
+    function () {
 
-    if ("speechSynthesis" in window) {
+        if ("speechSynthesis" in window) {
 
-        speechSynthesis.cancel();
+            speechSynthesis.cancel();
+
+        }
 
     }
-
-});
+);
 
 </script>
 
 </body>
+
 </html>
