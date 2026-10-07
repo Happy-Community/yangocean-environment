@@ -1,420 +1,770 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
-<title>Environmental Awareness | Nature, Sustainability & Everyday Choices | Yangocean</title>
+<title>Environmental Awareness | Climate, Oceans & Biodiversity | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Explore environmental awareness through nature, sustainability, mindful consumption, resource use, and everyday choices that affect the world around us.">
+<meta name="description"
+content="Explore environmental awareness through changes in climate, ocean life, plants, biodiversity and everyday choices.">
 
 <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="/styles.css">
-
 <link rel="canonical" href="https://yangocean.com/eco.html">
 
-<!-- OPEN GRAPH -->
+<!-- Hreflang -->
 
-<meta property="og:title" content="Environmental Awareness | Yangocean">
-<meta property="og:description" content="Explore environmental awareness, nature, sustainability, mindful consumption, and the connection between everyday choices and the natural world.">
-<meta property="og:url" content="https://yangocean.com/eco.html">
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/eco.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/eco.html">
+
+<link rel="alternate" hreflang="zh"
+href="https://yangocean.com/zh/eco.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/eco.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/eco.html">
+
+<link rel="alternate" hreflang="my"
+href="https://yangocean.com/my/eco.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/eco.html">
+
+
+<!-- Open Graph -->
+
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
-<!-- HREFLANG -->
+<meta property="og:title"
+content="Environmental Awareness | Climate, Oceans & Biodiversity">
 
-<link rel="alternate" hreflang="en" href="https://yangocean.com/eco.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/eco.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/eco.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/eco.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/eco.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/eco.html">
+<meta property="og:description"
+content="Explore environmental change through climate, ocean life, plants, biodiversity and everyday choices.">
 
-<!-- ADSENSE -->
+<meta property="og:url"
+content="https://yangocean.com/eco.html">
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+<meta property="og:image"
+content="https://yangocean.com/images/og-image.jpg">
+
+
+<!-- AdSense -->
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous"></script>
+crossorigin="anonymous">
+</script>
+
+
+<style>
+
+/* =========================
+   PAGE LAYOUT
+========================= */
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 45px 20px 35px;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.content-section {
+    margin: 45px 0;
+}
+
+.content-section h2 {
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    line-height: 1.8;
+}
+
+
+/* =========================
+   VISUAL CARDS
+========================= */
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.environment-card {
+    background: #ffffff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.environment-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.environment-card-content {
+    padding: 22px;
+}
+
+.environment-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.environment-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   THEN / NOW LABEL
+========================= */
+
+.then-now {
+    font-weight: 600;
+    margin: 8px 0 15px;
+}
+
+
+/* =========================
+   EVERYDAY CHOICES
+========================= */
+
+.choice-list {
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+.choice-list li {
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   READ ALOUD
+========================= */
+
+.read-aloud {
+    text-align: center;
+    margin: 20px 0 35px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #285943;
+    color: white;
+}
+
+.read-aloud button:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 800px) {
+
+    .environment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .environment-card img {
+        height: 230px;
+    }
+
+}
+
+</style>
 
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
 
 <div class="container">
 
-<!-- NAV -->
+<div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:15px;">
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/mindfulness.html">Mindfulness</a>
-  <a href="/mindful-ethical-living.html">Mindful Living</a>
-  <a href="/mindful-eating.html">Mindful Eating</a>
-  <a href="/nature-connection.html">Nature Connection</a>
-  <a href="/sustainable-living.html">Sustainable Living</a>
-  <a href="/blog.html">Journal</a>
-  <a href="/apps.html">Apps</a>
+<a href="/"
+style="font-size:1.4rem; font-weight:700; text-decoration:none; color:#285943;">
+Yangocean
+</a>
+
+
+<!-- Language -->
+
+<div>
+
+<a href="/eco.html">EN</a> |
+<a href="/ms/eco.html">BM</a> |
+<a href="/zh/eco.html">中文</a> |
+<a href="/fr/eco.html">FR</a> |
+<a href="/es/eco.html">ES</a> |
+<a href="/my/eco.html">မြန်မာ</a>
+
+</div>
+
+</div>
+
+
+<!-- Main Navigation -->
+
+<nav style="margin-top:18px; text-align:center;">
+
+<a href="/" style="margin:0 8px;">Home</a>
+
+
+<!-- Mindful Living -->
+
+<span class="dropdown">
+
+<a href="/mindfulness.html" style="margin:0 8px;">
+🌿 Mindful Living ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
+</a>
+
+<a href="/mindful-eating.html">
+🥗 Eating Well
+</a>
+
+<a href="/sustainable-living.html">
+♻️ Sustainable Living
+</a>
+
+</span>
+
+</span>
+
+
+<!-- Nature Connection -->
+
+<span class="dropdown">
+
+<a href="/nature-connection.html" style="margin:0 8px;">
+🌳 Nature Connection ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
+</a>
+
+<a href="/blog.html">
+📝 Journal
+</a>
+
+</span>
+
+</span>
+
+
+<!-- Related Apps -->
+
+<span class="dropdown">
+
+<a href="/apps.html" style="margin:0 8px;">
+📱 Related Apps ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/apps.html">
+📱 All Related Apps
+</a>
+
+<a href="/apps.html#eft">
+🌿 EFT Tapping
+</a>
+
+<a href="/apps.html#healthy-body">
+🥗 QuQu Healthy Body
+</a>
+
+<a href="/apps.html#duidui-fit">
+🏃 DuiDui Fit
+</a>
+
+</span>
+
+</span>
+
 </nav>
 
-<!-- HERO -->
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main id="content-to-read">
+
 
 <section class="hero">
 
-  <h1>🌍 Environmental Awareness</h1>
+<h1>🌍 Environmental Awareness</h1>
 
-  <p>
-    Understanding our relationship with the natural world and how everyday
-    choices can influence the environment.
-  </p>
+<p>
+Our environment is constantly changing. Climate, oceans,
+plants, animals and human communities are connected in ways
+that affect everyday life.
+</p>
 
-</section>
-
-<!-- INTRO -->
-
-<section class="card">
-
-  <h2>🌱 Why Environmental Awareness Matters</h2>
-
-  <p>
-    We depend on the natural world for clean air, water, food, energy,
-    materials, and places to live. At the same time, the way we produce,
-    consume, travel, and use resources can place pressure on ecosystems.
-  </p>
-
-  <p>
-    Environmental awareness begins with noticing these connections. We do
-    not need to understand every environmental problem at once. Sometimes
-    simply paying closer attention to where resources come from and what
-    happens after we use them is a useful beginning.
-  </p>
+<p>
+Environmental awareness begins with noticing these changes
+and understanding how our everyday choices are connected
+to the natural world.
+</p>
 
 </section>
 
-<!-- GLOBAL CONTEXT -->
 
-<section class="card">
 
-  <h2>🌏 A Connected Environmental System</h2>
+<!-- =========================
+     READ ALOUD
+========================= -->
 
-  <p>
-    Environmental issues are interconnected. Changes in one part of the
-    system can influence other parts of the natural world.
-  </p>
+<div class="read-aloud">
 
-  <ul>
-    <li>Climate change can affect ecosystems, agriculture, and water resources.</li>
-    <li>Pollution can affect soil, rivers, oceans, wildlife, and human communities.</li>
-    <li>Resource consumption can increase pressure on forests, minerals, energy, and water.</li>
-    <li>Habitat loss can reduce biodiversity and disrupt ecological relationships.</li>
-    <li>Waste can remain in the environment long after the original product has been discarded.</li>
-  </ul>
+<button type="button"
+id="readAloudButton"
+aria-label="Read this page aloud">
 
-  <p>
-    Looking at these connections can help us understand why environmental
-    responsibility is not limited to one particular type of waste or resource.
-  </p>
+🔊 Read Aloud
 
-</section>
-
-<!-- KEY AREAS -->
-
-<section class="card">
-
-  <h2>🔎 Key Areas of Environmental Awareness</h2>
-
-  <div class="features">
-
-<div class="feature">
-
-  <h3>🌳 Nature & Biodiversity</h3>
-
-  <p>
-    Forests, plants, animals, insects, oceans, and other living systems
-    are part of an interconnected natural environment.
-  </p>
-
-  <a href="/nature-connection.html">
-    Explore Nature Connection
-  </a>
+</button>
 
 </div>
 
 
-<div class="feature">
 
-  <h3>♻️ Sustainable Living</h3>
+<!-- =========================
+     THREE VISUAL STORIES
+========================= -->
 
-  <p>
-    Our choices about energy, transport, consumption, resources, and
-    waste can influence our environmental footprint.
-  </p>
+<section class="content-section">
 
-  <a href="/sustainable-living.html">
-    Explore Sustainable Living
-  </a>
+<h2>🌍 Three Ways to Notice Environmental Change</h2>
+
+<p>
+Environmental change can sometimes feel too large or distant
+to understand. Looking at familiar parts of the natural world
+can make these changes easier to notice.
+</p>
+
+
+<div class="environment-grid">
+
+
+<!-- Climate -->
+
+<div class="environment-card">
+
+<img
+src="/images/environment-climate.jpg"
+alt="Illustration showing changes in temperature and climate over time"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>🌡️ Our Changing Climate</h3>
+
+<p class="then-now">
+Then → Now
+</p>
+
+<p>
+Temperatures, weather patterns and climate conditions
+influence people, plants, animals and ecosystems.
+Looking at changes over time helps us understand why
+climate matters.
+</p>
+
+</div>
 
 </div>
 
 
-<div class="feature">
 
-  <h3>🥗 Food & Resources</h3>
+<!-- Oceans -->
 
-  <p>
-    Food connects us with agriculture, water, land, energy, packaging,
-    transportation, and waste.
-  </p>
+<div class="environment-card">
 
-  <a href="/mindful-eating.html">
-    Explore Mindful Eating
-  </a>
+<img
+src="/images/environment-ocean.jpg"
+alt="Illustration showing changes in ocean life over time"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>🐠 Life in Our Oceans</h3>
+
+<p class="then-now">
+Then → Now
+</p>
+
+<p>
+Oceans support an extraordinary variety of life.
+Pollution, habitat changes, fishing pressure and climate
+change can affect marine ecosystems and the species
+that depend on them.
+</p>
+
+</div>
 
 </div>
 
 
-<div class="feature">
 
-  <h3>🌿 Mindful Choices</h3>
+<!-- Plants -->
 
-  <p>
-    Environmental awareness can become part of how we think about
-    consumption, responsibility, kindness, and our relationship with
-    the wider world.
-  </p>
+<div class="environment-card">
 
-  <a href="/mindful-ethical-living.html">
-    Explore Mindful & Ethical Living
-  </a>
+<img
+src="/images/environment-plants.jpg"
+alt="Illustration showing changes in plants and biodiversity over time"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>🌿 Plants &amp; Biodiversity</h3>
+
+<p class="then-now">
+Then → Now
+</p>
+
+<p>
+Plants provide food, shelter and habitats for many forms
+of life. Changes in land use and natural habitats can
+affect plant diversity and the wider ecosystems around us.
+</p>
+
+</div>
 
 </div>
 
 
-  </div>
+</div>
 
 </section>
 
-<!-- ENVIRONMENTAL IMPACT -->
 
-<section class="card">
 
-  <h2>🌎 How Everyday Choices Connect With the Environment</h2>
+<!-- =========================
+     EVERYDAY CHOICES
+========================= -->
 
-  <p>
-    Many environmental impacts are connected to ordinary activities rather
-    than one isolated action.
-  </p>
+<section class="content-section">
 
-  <ul>
-    <li><strong>What we buy</strong> can require materials, energy, packaging, and transportation.</li>
-    <li><strong>What we eat</strong> can be connected to agriculture, land, water, and food waste.</li>
-    <li><strong>How we travel</strong> can influence energy use and emissions.</li>
-    <li><strong>How we use water</strong> affects an important and limited natural resource.</li>
-    <li><strong>What we throw away</strong> determines what may enter recycling systems, landfills, or the wider environment.</li>
-  </ul>
+<h2>♻️ Everyday Choices</h2>
 
-  <p>
-    These connections do not mean that every individual choice has the same
-    environmental impact. They simply remind us that everyday life is part
-    of a much larger system.
-  </p>
+<p>
+Environmental awareness becomes meaningful when we notice
+how ordinary decisions connect with the environment.
+</p>
 
-</section>
+<p>
+There is no need to change everything at once. Small,
+thoughtful choices can become part of everyday life.
+</p>
 
-<!-- AWARENESS BEFORE ACTION -->
 
-<section class="card">
+<ul class="choice-list">
 
-  <h2>🌱 Awareness Before Action</h2>
+<li>
+<strong>What do I buy?</strong>
+Can I choose products that are durable, useful and less wasteful?
+</li>
 
-  <p>
-    Environmental responsibility does not have to begin with perfection.
-    It can begin with observation.
-  </p>
+<li>
+<strong>What do I eat?</strong>
+Can I include more simple, plant-based and locally available foods
+when appropriate?
+</li>
 
-  <p>
-    Before changing a habit, we can ask simple questions:
-  </p>
+<li>
+<strong>How do I travel?</strong>
+Can I walk, cycle, use public transport or combine trips when practical?
+</li>
 
-  <ul>
-    <li>Where did this product or resource come from?</li>
-    <li>How much do I actually need?</li>
-    <li>How long might this item remain useful?</li>
-    <li>What happens when I no longer need it?</li>
-    <li>Could I use less, reuse something, repair it, or choose a simpler option?</li>
-  </ul>
+<li>
+<strong>How do I use water?</strong>
+Can I avoid unnecessary water use and pay attention to leaks?
+</li>
 
-  <p>
-    These questions can turn environmental awareness into practical,
-    thoughtful decision-making.
-  </p>
+<li>
+<strong>What do I throw away?</strong>
+Can I reduce unnecessary purchases, reuse items or repair them?
+</li>
 
-</section>
+<li>
+<strong>Can I use less?</strong>
+Sometimes the most sustainable choice is simply to buy or consume less.
+</li>
 
-<!-- SMALL ACTIONS -->
-
-<section class="card">
-
-  <h2>🌿 Small Changes in Everyday Life</h2>
-
-  <p>
-    Meaningful environmental care can take many forms. Some changes are
-    simple and personal, while others depend on businesses, communities,
-    infrastructure, and public policy.
-  </p>
-
-  <ul>
-    <li>Use resources thoughtfully.</li>
-    <li>Reduce unnecessary consumption.</li>
-    <li>Reuse and repair items when practical.</li>
-    <li>Avoid unnecessary waste.</li>
-    <li>Appreciate and care for nearby natural spaces.</li>
-    <li>Learn where products and food come from.</li>
-    <li>Choose sustainable options when they are practical and appropriate.</li>
-  </ul>
-
-  <p>
-    The goal is not to make every decision perfectly. It is to become more
-    aware of the consequences of our choices and improve where we reasonably
-    can.
-  </p>
+</ul>
 
 </section>
 
-<!-- FROM AWARENESS TO MINDFUL LIVING -->
 
-<section class="card">
 
-  <h2>🧘 From Environmental Awareness to Mindful Living</h2>
+<!-- =========================
+     CLOSING
+========================= -->
 
-  <p>
-    Environmental awareness can become deeper when it is connected with
-    mindfulness. Paying attention to what we consume, how we use resources,
-    and how our actions affect other living beings can change the way we
-    approach ordinary decisions.
-  </p>
+<section class="content-section">
 
-  <p>
-    This is not about feeling guilty for every environmental impact.
-    It is about developing greater understanding and making thoughtful
-    choices within the circumstances of everyday life.
-  </p>
+<h2>🌱 Notice Before You Change</h2>
 
-  <p>
-    <a href="/mindful-ethical-living.html">
-      Explore Mindful & Ethical Living
-    </a>
-  </p>
+<p>
+Environmental awareness does not require us to know everything
+about climate science, biodiversity or ecology.
+</p>
+
+<p>
+It can begin with something much simpler:
+noticing what is around us, noticing what has changed,
+and considering how our choices affect the world we share.
+</p>
 
 </section>
 
-<!-- JOURNAL -->
 
-<section class="card">
+</main>
 
-  <h2>📝 Explore the Yangocean Journal</h2>
 
-  <p>
-    Environmental awareness also grows through personal observation.
-    The Yangocean Journal shares reflections, photographs, experiences,
-    and questions about nature, sustainability, food, and everyday life.
-  </p>
 
-  <p>
-    <a href="/blog.html">
-      Visit the Yangocean Journal
-    </a>
-  </p>
+<!-- =========================
+     FOOTER
+========================= -->
 
-</section>
+<footer>
 
-<!-- REFLECTION -->
+<div class="container"
+style="text-align:center; margin-top:50px; padding-top:25px; border-top:1px solid #ddd;">
 
-<section class="card">
+<p>
 
-  <h2>💭 A Simple Reflection</h2>
+<a href="/">Home</a> ·
+<a href="/nature-connection.html">Nature Connection</a> ·
+<a href="/mindfulness.html">Mindful Living</a> ·
+<a href="/blog.html">Journal</a> ·
+<a href="/apps.html">Related Apps</a> ·
+<a href="/contact.html">Contact</a>
 
-  <p>
-    Look around you for a moment.
-  </p>
+</p>
 
-  <p>
-    How many things nearby came from the natural world? How many required
-    water, energy, land, materials, or transportation before reaching you?
-  </p>
+<p style="font-size:0.9rem;">
 
-  <p>
-    We do not need to answer every question immediately. Sometimes noticing
-    the connection is already the beginning of environmental awareness.
-  </p>
+© Yangocean. All rights reserved.
 
-</section>
+</p>
 
-<!-- CONTINUE EXPLORING -->
-
-<section class="card">
-
-  <h2>🌊 Continue Exploring Yangocean</h2>
-
-  <p>
-    Explore the different parts of Yangocean:
-  </p>
-
-  <p>
-    <a href="/mindfulness.html">Mindfulness & Dhamma</a> ·
-    <a href="/mindful-ethical-living.html">Mindful & Ethical Living</a> ·
-    <a href="/mindful-eating.html">Mindful Eating</a> ·
-    <a href="/nature-connection.html">Nature Connection</a> ·
-    <a href="/sustainable-living.html">Sustainable Living</a> ·
-    <a href="/blog.html">Yangocean Journal</a>
-  </p>
-
-</section>
-
-<!-- CLOSING -->
-
-<section class="card">
-
-  <h2>💚 Awareness Is a Beginning</h2>
-
-  <p>
-    Environmental care begins with understanding that our lives are
-    connected with the natural world.
-  </p>
-
-  <p>
-    By paying attention to what we consume, how we use resources, and how
-    our choices affect other living beings and ecosystems, we can gradually
-    develop a more thoughtful relationship with the world around us.
-  </p>
-
-  <p>
-    Awareness does not require perfection. It simply gives us an opportunity
-    to notice, learn, and choose with greater care.
-  </p>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-  <p>© 2026 Yangocean</p>
-
-  <p>
-    <a href="/">Home</a> |
-    <a href="/about.html">About</a> |
-    <a href="/privacy.html">Privacy Policy</a> |
-    <a href="/terms.html">Terms</a> |
-    <a href="/contact.html">Contact</a>
-  </p>
+</div>
 
 </footer>
 
-</div>
+
+
+<!-- =========================
+     DROPDOWN STYLE
+========================= -->
+
+<style>
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 210px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #285943;
+}
+
+.dropdown-content a:hover {
+    background: #f2f7f3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+</style>
+
+
+
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
+
+<script>
+
+const readAloudButton =
+document.getElementById("readAloudButton");
+
+let speech = null;
+let isPaused = false;
+
+
+readAloudButton.addEventListener("click", function () {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("Read Aloud is not supported by this browser.");
+
+        return;
+
+    }
+
+
+    if (speechSynthesis.speaking && !speechSynthesis.paused) {
+
+        speechSynthesis.pause();
+
+        isPaused = true;
+
+        readAloudButton.textContent = "▶ Resume";
+
+        return;
+
+    }
+
+
+    if (speechSynthesis.paused) {
+
+        speechSynthesis.resume();
+
+        isPaused = false;
+
+        readAloudButton.textContent = "⏸ Pause";
+
+        return;
+
+    }
+
+
+    const elements =
+    document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+
+    let text = "";
+
+    elements.forEach(function (element) {
+
+        text += element.innerText + " ";
+
+    });
+
+
+    speech = new SpeechSynthesisUtterance(text);
+
+    speech.rate = 0.95;
+
+    speech.pitch = 1;
+
+    speech.lang = "en-US";
+
+
+    speech.onend = function () {
+
+        readAloudButton.textContent = "🔊 Read Aloud";
+
+        isPaused = false;
+
+    };
+
+
+    speechSynthesis.speak(speech);
+
+    readAloudButton.textContent = "⏸ Pause";
+
+});
+
+
+</script>
+
 
 </body>
+
 </html>
+```
