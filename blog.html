@@ -6,12 +6,12 @@
 
 <meta charset="UTF-8">
 
-<title>Yangocean Journal | Mindful Living, Nature & Everyday Reflections</title>
+<title>Journal | Mindful Living, Nature & Everyday Reflections | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="A journal of reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants, and simple everyday experiences.">
+content="A journal of reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants and simple everyday experiences.">
 
 <meta name="robots" content="index, follow">
 
@@ -58,7 +58,7 @@ href="https://yangocean.com/blog.html">
 ========================================================= -->
 
 <meta property="og:title"
-content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
+content="Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta property="og:description"
 content="Reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants and everyday experiences.">
@@ -80,7 +80,7 @@ content="https://yangocean.com/images/og-image.jpg">
 content="summary_large_image">
 
 <meta name="twitter:title"
-content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
+content="Journal | Mindful Living, Nature & Everyday Reflections">
 
 <meta name="twitter:description"
 content="Reflections and observations about mindful living, nature, mindful eating, sustainability, growing plants and everyday experiences.">
@@ -98,14 +98,30 @@ href="/styles.css">
 <style>
 
 /* =========================================================
-   READ ALOUD CONTROLS
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-intro p {
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   READ ALOUD
 ========================================================= */
 
 .tts-controls {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin: 20px 0 30px;
+    margin: 22px 0 34px;
     flex-wrap: wrap;
 }
 
@@ -113,7 +129,7 @@ href="/styles.css">
     border: none;
     border-radius: 10px;
     padding: 10px 16px;
-    font-size: 18px;
+    font-size: 17px;
     cursor: pointer;
 }
 
@@ -123,45 +139,79 @@ href="/styles.css">
 
 
 /* =========================================================
-   JOURNAL FEATURES
+   JOURNAL GRID
 ========================================================= */
 
-.feature {
-    margin-bottom: 25px;
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 25px;
 }
 
-.feature a {
+.journal-item {
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(47,111,78,0.12);
+}
+
+.journal-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.journal-item p {
+    line-height: 1.65;
+}
+
+.journal-item a {
     font-weight: 600;
 }
 
 
 /* =========================================================
-   GROWING GUIDE IMAGE
+   SECTION INTRO
 ========================================================= */
 
-.growing-guide-image {
-    width: 100%;
-    max-width: 700px;
-    margin: 25px auto;
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 25px;
     text-align: center;
-}
-
-.growing-guide-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin: 0 auto;
-    border-radius: 12px;
+    color: #555;
+    line-height: 1.7;
 }
 
 
 /* =========================================================
-   GROWING GUIDE INTRO
+   GROWING GUIDES
 ========================================================= */
 
-.growing-guide-intro {
-    margin-bottom: 25px;
+.guide-list {
+    max-width: 850px;
+    margin: 25px auto 0;
+}
+
+.guide-item {
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.guide-item:last-child {
+    border-bottom: none;
+}
+
+.guide-item h3 {
+    margin-bottom: 8px;
+}
+
+.guide-item a {
+    font-weight: 600;
+}
+
+.guide-item p {
+    margin-bottom: 0;
+    line-height: 1.65;
 }
 
 
@@ -169,10 +219,10 @@ href="/styles.css">
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
-    .growing-guide-image {
-        max-width: 100%;
+    .journal-grid {
+        grid-template-columns: 1fr;
     }
 
     .tts-btn {
@@ -186,51 +236,100 @@ href="/styles.css">
 
 </head>
 
-<body>
+<body class="theme-default">
+
+<div class="container">
 
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
 
-<nav>
+<nav aria-label="Main navigation">
+
+<a href="/ms/">BM</a>
+
+<a href="/zh/">中文</a>
+
+<a href="/fr/">FR</a>
+
+<a href="/es/">ES</a>
+
+<a href="/my/">မြန်မာ</a>
+
+<span style="margin-left:10px;">|</span>
 
 <a href="/">
 Home
 </a>
 
-<a href="/mindfulness.html">
-Mindfulness
-</a>
+<span class="dropdown">
 
-<a href="/mindful-ethical-living.html">
-Mindful Living
+<button class="dropbtn" type="button">
+🌿 Mindful Living ▾
+</button>
+
+<span class="dropdown-content">
+
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
 </a>
 
 <a href="/mindful-eating.html">
-Mindful Eating
-</a>
-
-<a href="/nature-connection.html">
-Nature Connection
+🥗 Mindful Eating
 </a>
 
 <a href="/sustainable-living.html">
-Sustainable Living
+♻️ Sustainable Living
+</a>
+
+</span>
+
+</span>
+
+<span class="dropdown">
+
+<button class="dropbtn" type="button">
+🌳 Nature Connection ▾
+</button>
+
+<span class="dropdown-content">
+
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
 </a>
 
 <a href="/blog.html">
-Journal
+📝 Journal
 </a>
 
+</span>
+
+</span>
+
+<span class="dropdown">
+
+<button class="dropbtn" type="button">
+📱 Related Apps ▾
+</button>
+
+<span class="dropdown-content">
+
 <a href="/apps.html">
-Apps
+📱 All Related Apps
 </a>
+
+</span>
+
+</span>
 
 </nav>
 
 <!-- =========================================================
      MAIN CONTENT
-     Everything inside this container can be read aloud.
 ========================================================= -->
 
 <main id="content-to-read">
@@ -241,23 +340,26 @@ Apps
 
 <section class="card">
 
+<div class="page-intro">
+
 <h1>📝 Journal</h1>
 
 <p>
-A collection of reflections, observations and everyday experiences
-connected with mindful living, nature, mindful eating and sustainability.
+Reflections, observations and everyday experiences connected
+with mindful living, nature, mindful eating and sustainability.
 </p>
 
 <p>
-This is a place to slow down, notice what is around us,
-and consider how small everyday choices can affect ourselves,
-other people and the natural world.
+A place to slow down, notice what is around us, and consider
+how small everyday choices can shape the way we live.
 </p>
+
+</div>
 
 </section>
 
 <!-- =========================================================
-     READ ALOUD CONTROLS
+     READ ALOUD
 ========================================================= -->
 
 <div class="tts-controls">
@@ -267,46 +369,50 @@ type="button"
 class="tts-btn play"
 onclick="togglePlay()"
 aria-label="Play or resume reading">
-🔊 </button>
+
+🔊
+
+</button>
 
 <button
 type="button"
 class="tts-btn pause"
 onclick="pauseReading()"
 aria-label="Pause reading">
-⏸ </button>
+
+⏸
+
+</button>
 
 <button
 type="button"
 class="tts-btn stop"
 onclick="stopReading()"
 aria-label="Stop reading">
-⏹ </button>
+
+⏹
+
+</button>
 
 </div>
 
 <!-- =========================================================
-     ABOUT THE JOURNAL
+     ABOUT
 ========================================================= -->
 
 <section class="card">
 
 <h2>🌱 About the Journal</h2>
 
-<p>
-These entries share personal observations and reflections
-about everyday life, mindfulness, nature and sustainability.
-</p>
-
-<p>
-Some entries may begin with something very small — a tree,
+<p class="section-intro">
+Some reflections begin with something very small — a tree,
 a flower, a meal, a quiet moment or an ordinary experience.
 </p>
 
 <p>
-From these small observations, we can sometimes discover
-larger questions about how we live and how we relate to
-the world around us.
+From these observations, we can sometimes discover larger
+questions about how we live and how we relate to the world
+around us.
 </p>
 
 <p>
@@ -324,29 +430,42 @@ awareness, curiosity and thoughtful everyday choices.
 
 <h2>📖 Latest Journal Entries</h2>
 
-<div class="feature">
+<p class="section-intro">
+Personal reflections and observations about everyday wellbeing,
+nature and the environment.
+</p>
 
-<a href="/blog/wellness-and-sustainability.html">
-🌿 Wellness &amp; Sustainability
-</a>
+<div class="journal-grid">
+
+<div class="journal-item">
+
+<h3>🌿 Wellness &amp; Sustainability</h3>
 
 <p>
 Explore how everyday wellbeing and the environment can influence
 the choices we make.
 </p>
 
+<a href="/blog/wellness-and-sustainability.html">
+Read the article →
+</a>
+
 </div>
 
-<div class="feature">
+<div class="journal-item">
 
-<a href="/blog/why-trees-matter.html">
-🌳 Why Trees Matter
-</a>
+<h3>🌳 Why Trees Matter</h3>
 
 <p>
 A reflection on trees, the living environment, and why noticing
 the trees around us can change how we see nature.
 </p>
+
+<a href="/blog/why-trees-matter.html">
+Read the article →
+</a>
+
+</div>
 
 </div>
 
@@ -360,55 +479,47 @@ the trees around us can change how we see nature.
 
 <h2>🌱 Growing Guides</h2>
 
-<p class="growing-guide-intro">
+<p class="section-intro">
 Growing a plant can be a simple way to reconnect with nature.
-You do not need a large garden — even a container, balcony,
-window area or small outdoor space can become a place to grow.
+You do not need a large garden — a container, balcony, window
+area or small outdoor space can be enough to begin.
 </p>
 
-<!-- =========================================================
-     GROWING GUIDE ARCHIVE
-========================================================= -->
+<div class="guide-list">
 
-<div class="feature">
+<div class="guide-item">
 
-<a href="/blog/how-to-plant.html">
-🌱 Explore Growing Guides →
-</a>
+<h3>🌱 Growing Guides</h3>
 
 <p>
-Simple practical guides for planting trees, growing useful plants,
+Simple practical guides for planting trees, growing useful plants
 and developing a more mindful relationship with growing.
 </p>
 
+<a href="/blog/how-to-plant.html">
+Explore Growing Guides →
+</a>
+
 </div>
 
-<!-- =========================================================
-     TREE GUIDE
-========================================================= -->
+<div class="guide-item">
 
-<div class="feature">
-
-<a href="/blog/how-to-plant-a-tree.html">
-🌳 How to Plant a Tree →
-</a>
+<h3>🌳 How to Plant a Tree</h3>
 
 <p>
 A step-by-step guide to choosing a suitable tree and location,
 planting it correctly, watering it and caring for it as it grows.
 </p>
 
+<a href="/blog/how-to-plant-a-tree.html">
+Read the Tree Planting Guide →
+</a>
+
 </div>
 
-<!-- =========================================================
-     ALOE VERA GUIDE
-========================================================= -->
+<div class="guide-item">
 
-<div class="feature">
-
-<a href="/blog/how-to-grow-aloe-vera.html">
-🌿 How to Grow Aloe Vera →
-</a>
+<h3>🌿 How to Grow Aloe Vera</h3>
 
 <p>
 Learn how to grow aloe vera in a container or suitable garden
@@ -417,11 +528,17 @@ The guide also explains the different parts of an aloe vera leaf
 and how to prepare the clear inner gel carefully for topical use.
 </p>
 
+<a href="/blog/how-to-grow-aloe-vera.html">
+Read the Aloe Vera Guide →
+</a>
+
 </div>
 
-<p>
-More growing guides for herbs, useful plants and small spaces
-can be added here over time.
+</div>
+
+<p style="margin-top:25px; color:#777; text-align:center;">
+More growing guides can be added over time as new plants and
+experiences are documented.
 </p>
 
 </section>
@@ -466,13 +583,14 @@ Apps
 
 <!-- =========================================================
      READ ALOUD
-     Reads the complete main content.
 ========================================================= -->
 
 <script>
 
 let speechQueue = [];
+
 let currentIndex = 0;
+
 let isPaused = false;
 
 
@@ -486,13 +604,17 @@ function getReadableText() {
         document.getElementById("content-to-read");
 
     if (!content) {
+
         return [];
+
     }
+
 
     const elements =
         content.querySelectorAll(
             "h1, h2, h3, p, a"
         );
+
 
     return Array.from(elements)
 
@@ -595,6 +717,7 @@ function togglePlay() {
     speechQueue =
         getReadableText();
 
+
     currentIndex = 0;
 
     isPaused = false;
@@ -646,7 +769,7 @@ function stopReading() {
 
 
 /* =========================================================
-   CLEAN UP WHEN LEAVING PAGE
+   CLEAN UP
 ========================================================= */
 
 window.addEventListener(
