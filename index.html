@@ -5,21 +5,16 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Yangocean | Mindful Living, Nature & Everyday Sustainability</title>
+<title>Mindful Living, Nature &amp; Everyday Sustainability</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Yangocean explores mindful living, mindfulness, eating well, nature connection, environmental awareness and everyday sustainability through simple reflections and useful resources.">
-
-<meta name="keywords"
-content="mindful living, mindfulness, eating well, nature connection, sustainability, environmental awareness, simple living, everyday sustainability">
+content="Explore mindful living, mindfulness, mindful eating, nature connection, environmental awareness and everyday sustainability through simple reflections and useful resources.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://yangocean.com/">
-
-<!-- Language versions -->
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/">
@@ -29,36 +24,18 @@ content="mindful living, mindfulness, eating well, nature connection, sustainabi
 <link rel="alternate" hreflang="my" href="https://yangocean.com/my/">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/">
 
-<!-- Open Graph -->
-
-<meta property="og:title"
-content="Yangocean | Mindful Living, Nature & Everyday Sustainability">
-
+<meta property="og:title" content="Mindful Living, Nature &amp; Everyday Sustainability">
 <meta property="og:description"
-content="Simple reflections and useful resources for mindful living, eating well, nature connection, environmental awareness and everyday sustainability.">
-
+content="Simple reflections and useful resources for mindful living, nature connection and everyday sustainability.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yangocean.com/">
-
-<meta property="og:image"
-content="https://yangocean.com/images/yangocean-og.jpg">
-
-<meta property="og:site_name" content="Yangocean">
-
-<!-- Twitter -->
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-
-<meta name="twitter:title"
-content="Yangocean | Mindful Living, Nature & Everyday Sustainability">
-
+<meta name="twitter:title" content="Mindful Living, Nature &amp; Everyday Sustainability">
 <meta name="twitter:description"
-content="Explore mindful living, eating well, nature connection, environmental awareness and everyday sustainability.">
-
-<meta name="twitter:image"
-content="https://yangocean.com/images/yangocean-og.jpg">
-
-<!-- AdSense -->
+content="Simple reflections and useful resources for mindful living, nature connection and everyday sustainability.">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
@@ -68,34 +45,26 @@ content="https://yangocean.com/images/yangocean-og.jpg">
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7faf7;
-    color: #2f3e34;
     line-height: 1.7;
+    color: #333;
+    background: #f7f9f6;
 }
-
-/* =========================
-   HEADER
-========================= */
 
 header {
     background: #ffffff;
-    border-bottom: 1px solid #e4ece5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .header-inner {
-    max-width: 1150px;
+    max-width: 1100px;
     margin: auto;
-    padding: 16px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -104,73 +73,37 @@ header {
 
 .logo {
     text-decoration: none;
-    color: #285943;
-    font-size: 25px;
+    color: #2f5d3a;
+    font-size: 1.45rem;
     font-weight: bold;
-    letter-spacing: 0.3px;
+    white-space: nowrap;
 }
 
-.logo span {
-    font-weight: normal;
-    font-size: 14px;
-    color: #6d7d72;
-    display: block;
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
 }
 
-/* =========================
-   LANGUAGE MENU
-========================= */
-
-.language-menu {
+nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 7px;
-    margin: 10px auto 0;
-    padding: 0 15px 12px;
-}
-
-.language-menu a {
-    color: #4b6254;
-    text-decoration: none;
-    font-size: 13px;
-    padding: 4px 7px;
-    border-radius: 5px;
-}
-
-.language-menu a:hover {
-    background: #eef5ef;
-    color: #285943;
-}
-
-/* =========================
-   MAIN NAVIGATION
-========================= */
-
-.main-nav {
-    max-width: 1150px;
-    margin: auto;
-    padding: 8px 20px 15px;
-
-    display: flex;
-    justify-content: center;
     align-items: center;
+    gap: 18px;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: flex-end;
 }
 
-.main-nav > a,
-.home-link {
-    color: #285943;
+nav a,
+.dropbtn {
+    color: #444;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    padding: 8px 10px;
+    font-size: 0.95rem;
+    cursor: pointer;
 }
 
-.main-nav > a:hover,
-.home-link:hover {
-    color: #173c2b;
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
 }
 
 .dropdown {
@@ -179,309 +112,215 @@ header {
 }
 
 .dropbtn {
+    background: none;
     border: none;
-    background: transparent;
-    color: #285943;
-    font-family: inherit;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 8px 10px;
-}
-
-.dropbtn:hover {
-    color: #173c2b;
+    font: inherit;
+    padding: 0;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 235px;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
     background: #ffffff;
-    box-shadow: 0 5px 18px rgba(0,0,0,0.12);
-    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
     padding: 8px 0;
-    z-index: 2000;
-    text-align: left;
+    z-index: 1001;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 10px 16px;
-    color: #285943;
-    text-decoration: none;
-    font-weight: 500;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-    background: #f1f7f2;
+    background: #f1f6f1;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* =========================
-   CONTENT
-========================= */
-
-.container {
-    max-width: 1050px;
-    margin: auto;
-    padding: 30px 20px;
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
 }
 
-section {
-    margin-bottom: 55px;
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
 }
 
 .hero {
     text-align: center;
-    padding: 65px 20px 55px;
-    background:
-        linear-gradient(
-            rgba(247,250,247,0.92),
-            rgba(247,250,247,0.96)
-        );
+    padding: 55px 20px 45px;
 }
 
 .hero h1 {
-    color: #285943;
-    font-size: 42px;
-    line-height: 1.25;
-    margin-bottom: 18px;
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
 }
 
 .hero p {
     max-width: 760px;
-    margin: 0 auto 25px;
-    font-size: 18px;
-    color: #53645a;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
 }
 
-.hero-link {
-    display: inline-block;
-    background: #285943;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
+.section {
+    margin-top: 45px;
 }
 
-.hero-link:hover {
-    background: #1f4935;
-}
-
-/* =========================
-   READ ALOUD
-========================= */
-
-.read-aloud {
+.section h2 {
     text-align: center;
-    margin: 10px 0 35px;
-}
-
-.tts-btn {
-    border: 1px solid #cbdace;
-    background: #ffffff;
-    color: #285943;
-    border-radius: 8px;
-    padding: 9px 15px;
-    margin: 4px;
-    cursor: pointer;
-    font-size: 14px;
-}
-
-.tts-btn:hover {
-    background: #eef5ef;
-}
-
-.read-status {
-    font-size: 13px;
-    color: #718077;
-    margin-top: 5px;
-}
-
-/* =========================
-   HEADINGS
-========================= */
-
-h2 {
-    color: #285943;
-    font-size: 29px;
+    color: #2f5d3a;
     margin-bottom: 12px;
-}
-
-h3 {
-    color: #35684d;
-    margin-top: 0;
 }
 
 .section-intro {
     max-width: 760px;
-    color: #5d6d63;
+    margin: 0 auto 25px;
+    text-align: center;
+    color: #666;
 }
-
-/* =========================
-   CARDS
-========================= */
 
 .card-grid {
     display: grid;
-    grid-template-columns:
-        repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .card {
     background: #ffffff;
-    border: 1px solid #e3ebe4;
     border-radius: 12px;
-    padding: 23px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-align: center;
 }
 
 .card h3 {
-    margin-bottom: 9px;
+    margin-top: 0;
+    color: #315f3b;
 }
 
 .card p {
-    color: #5b6a60;
+    color: #666;
+    font-size: 0.95rem;
 }
 
 .card a {
-    color: #285943;
-    font-weight: 600;
+    display: inline-block;
+    margin-top: 8px;
     text-decoration: none;
+    color: #2f6b3f;
+    font-weight: bold;
 }
 
 .card a:hover {
     text-decoration: underline;
 }
 
-/* =========================
-   REFLECTION
-========================= */
-
 .reflection {
-    background: #edf5ee;
-    border-left: 5px solid #6f9b7d;
-    border-radius: 10px;
-    padding: 25px;
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
     text-align: center;
+    margin-top: 35px;
 }
 
-.reflection-text {
-    font-size: 20px;
-    color: #355342;
+.reflection h2 {
+    margin-top: 0;
+}
+
+#dailyReflection {
+    font-size: 1.1rem;
+    color: #405944;
     font-style: italic;
 }
 
-/* =========================
-   SIMPLE THOUGHT
-========================= */
-
 .simple-thought {
     text-align: center;
-    padding: 35px 20px;
-    background: #f0f5f1;
-    border-radius: 12px;
-}
-
-.simple-thought p {
+    margin: 50px auto 20px;
     max-width: 720px;
-    margin: auto;
-    font-size: 19px;
-    color: #40564a;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.simple-thought h2 {
+    color: #2f5d3a;
+}
 
 footer {
-    background: #285943;
-    color: #ffffff;
-    margin-top: 50px;
-    padding: 35px 20px;
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
     text-align: center;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #ffffff;
+    color: #49664e;
     text-decoration: none;
+    margin: 0 8px;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-.footer-links {
-    margin-bottom: 15px;
-}
-
-.footer-links a {
-    margin: 0 8px;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
     .header-inner {
         flex-direction: column;
-        padding-bottom: 8px;
+        align-items: center;
     }
 
-    .main-nav {
-        flex-direction: column;
-        gap: 4px;
+    nav {
+        justify-content: center;
     }
 
-    .dropdown {
-        width: 100%;
-        text-align: center;
+    .card-grid {
+        grid-template-columns: 1fr;
     }
 
-    .dropbtn {
-        width: 100%;
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
     }
 
     .dropdown-content {
         position: static;
-        transform: none;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
         box-shadow: none;
-        border: 1px solid #e3ebe4;
-        margin-top: 2px;
+        border: 1px solid #eee;
+        margin-top: 8px;
     }
 
-    .hero {
-        padding: 45px 18px;
-    }
-
-    .hero h1 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 17px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    .container {
-        padding: 25px 16px;
-    }
 }
 
 </style>
@@ -494,300 +333,110 @@ footer a:hover {
 
 <div class="header-inner">
 
-<a href="/" class="logo">
-Yangocean
-<span>Mindful Living • Nature • Sustainability</span>
-</a>
+<div>
+<a href="/" class="logo">Yangocean</a>
+<div class="tagline">Mindful Living • Nature • Sustainability</div>
+</div>
+
+<nav>
+
+<a href="/">Home</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">🌿 Mindful Living ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/mindfulness.html">🧘 Mindfulness & Dhamma</a> <a href="/mindful-eating.html">🥗 Mindful Eating</a> <a href="/sustainable-living.html">♻️ Sustainable Living</a>
 
 </div>
 
-<div class="language-menu" aria-label="Language selection">
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">🌳 Nature Connection ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/nature-connection.html">🌳 Nature Connection</a> <a href="/eco.html">🌍 Environmental Awareness</a> <a href="/blog.html">📝 Journal</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">📱 Related Apps ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/apps.html">📱 All Related Apps</a> <a href="/apps.html#eft">🌿 Yangocean App</a> <a href="/apps.html#healthy-body">❤️ QuQu Healthy Body</a> <a href="/apps.html#duidui-fit">🏃 DuoFit</a>
+
+</div>
+
+</div>
+
+<div class="language">
 
 <a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
 
 </div>
 
-<nav class="main-nav" aria-label="Main navigation">
-
-<a class="home-link" href="/">Home</a>
-
-<!-- Mindful Living -->
-
-<div class="dropdown">
-
-<button class="dropbtn"
-type="button"
-aria-haspopup="true">
-
-🌿 Mindful Living ▾
-
-</button>
-
-<div class="dropdown-content">
-
-<a href="/mindfulness.html">
-🧘 Mindfulness &amp; Dhamma
-</a>
-
-<a href="/mindful-eating.html">
-🥗 Eating Well
-</a>
-
-<a href="/sustainable-living.html">
-♻️ Sustainable Living
-</a>
-
-</div>
-
-</div>
-
-<!-- Nature Connection -->
-
-<div class="dropdown">
-
-<button class="dropbtn"
-type="button"
-aria-haspopup="true">
-
-🌳 Nature Connection ▾
-
-</button>
-
-<div class="dropdown-content">
-
-<a href="/nature-connection.html">
-🌳 Nature Connection
-</a>
-
-<a href="/eco.html">
-🌍 Environmental Awareness
-</a>
-
-<a href="/blog.html">
-📝 Journal
-</a>
-
-</div>
-
-</div>
-
-<!-- Related Apps -->
-
-<div class="dropdown">
-
-<button class="dropbtn"
-type="button"
-aria-haspopup="true">
-
-📱 Related Apps ▾
-
-</button>
-
-<div class="dropdown-content">
-
-<a href="/apps.html">
-All Yangocean Apps
-</a>
-
-
-
-
-</div>
-
 </nav>
+
+</div>
 
 </header>
 
 <main id="content-to-read">
 
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
 
-<h1>
-Simple Ways to Live with More Awareness
-</h1>
+<h1>🌿 Mindful Living, Nature &amp; Everyday Sustainability</h1>
 
 <p>
-Yangocean explores mindful living, eating well, nature connection,
-environmental awareness and everyday sustainability through simple
-reflections, observations and useful resources.
-</p>
-
-<a class="hero-link" href="#explore">
-Explore Yangocean
-</a>
-
-</section>
-
-<!-- =========================
-     READ ALOUD
-========================= -->
-
-<div class="read-aloud">
-
-<button
-type="button"
-class="tts-btn"
-onclick="startReading()"
-aria-label="Read the page aloud">
-
-🔊 Read Aloud
-
-</button>
-
-<button
-type="button"
-class="tts-btn"
-onclick="pauseReading()"
-aria-label="Pause reading">
-
-⏸ Pause
-
-</button>
-
-<button
-type="button"
-class="tts-btn"
-onclick="stopReading()"
-aria-label="Stop reading">
-
-⏹ Stop
-
-</button>
-
-<div class="read-status" id="readStatus">
-Read Aloud reads the main content of this page.
-</div>
-
-</div>
-
-<div class="container">
-
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section>
-
-<h2>About Yangocean</h2>
-
-<p>
-Yangocean is a space for exploring simple ways of paying attention
-to life, health, nature and the world around us.
-</p>
-
-<p>
-The website brings together reflections and practical ideas about
-mindfulness, eating well, connecting with nature, understanding our
-environment and making everyday choices more sustainable.
-</p>
-
-<p>
-Some articles begin with a small observation — a tree, a drop of water,
-a plant, a meal or an ordinary moment — and use it as an opportunity
-to look more closely at the world around us.
+A place for simple ideas, reflections and useful resources
+that encourage greater awareness of ourselves, our surroundings
+and the natural world.
 </p>
 
 </section>
 
-<!-- =========================
-     DAILY REFLECTION
-========================= -->
+<section class="section">
 
-<section>
-
-<h2>Daily Reflection</h2>
-
-<div class="reflection">
-
-<p class="reflection-text" id="dailyReflection">
-A quiet moment of attention can change the way we see an ordinary day.
-</p>
-
-</div>
-
-</section>
-
-<!-- =========================
-     EXPLORE
-========================= -->
-
-<section id="explore">
-
-<h2>Explore Yangocean</h2>
+<h2>About</h2>
 
 <p class="section-intro">
-Three broad areas bring the website together: how we live,
-how we connect with the natural world, and the useful tools
-and resources we create.
+
+Life can be approached with greater awareness through the way
+we eat, think, move, live and relate to the world around us.
+
+The pages here bring together reflections and practical information
+about mindful living, nature connection and everyday sustainability.
+
 </p>
-
-<div class="card-grid">
-
-<div class="card">
-
-<h3>🌿 Mindful Living</h3>
-
-<p>
-Explore mindfulness, Dhamma, eating well and everyday sustainability
-through simple ideas and reflections.
-</p>
-
-<a href="/mindfulness.html">
-Explore Mindful Living →
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>🌳 Nature Connection</h3>
-
-<p>
-Learn more about trees, water, the environment and the natural world,
-while discovering ways to observe and appreciate nature.
-</p>
-
-<a href="/nature-connection.html">
-Explore Nature Connection →
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>📱 Related Apps</h3>
-
-<p>
-Discover Yangocean apps and other tools created to support wellbeing,
-healthy habits and everyday life.
-</p>
-
-<a href="/apps.html">
-Explore Apps →
-</a>
-
-</div>
-
-</div>
 
 </section>
 
-<!-- =========================
-     MINDFUL LIVING
-========================= -->
+<section class="reflection">
 
-<section>
+<h2>🌱 Daily Reflection</h2>
+
+<p id="dailyReflection"></p>
+
+</section>
+
+<section class="section">
 
 <h2>🌿 Mindful Living</h2>
 
 <p class="section-intro">
-Mindful living does not need to be complicated. It can begin with
-paying attention to the present moment, the food we eat and the
-way our everyday choices affect ourselves and the world around us.
+
+Explore different aspects of everyday life, from mindfulness and
+Dhamma to mindful eating and more sustainable choices.
+
 </p>
 
 <div class="card-grid">
@@ -797,28 +446,24 @@ way our everyday choices affect ourselves and the world around us.
 <h3>🧘 Mindfulness &amp; Dhamma</h3>
 
 <p>
-Reflections on mindfulness, awareness, compassion, gratitude and
-simple teachings that can help us look more carefully at everyday life.
+Simple reflections on mindfulness, awareness and the Dhamma,
+with an emphasis on bringing practice into ordinary life.
 </p>
 
-<a href="/mindfulness.html">
-Learn More →
-</a>
+<a href="/mindfulness.html">Explore Mindfulness →</a>
 
 </div>
 
 <div class="card">
 
-<h3>🥗 Eating Well</h3>
+<h3>🥗 Mindful Eating</h3>
 
 <p>
-Explore food, eating habits and simple ways of developing a more
-aware relationship with what we eat.
+Explore eating with greater awareness, balance and appreciation
+for food and the choices we make every day.
 </p>
 
-<a href="/mindful-eating.html">
-Explore Eating Well →
-</a>
+<a href="/mindful-eating.html">Explore Mindful Eating →</a>
 
 </div>
 
@@ -827,13 +472,11 @@ Explore Eating Well →
 <h3>♻️ Sustainable Living</h3>
 
 <p>
-Discover practical ideas for reducing waste, using resources wisely
-and making everyday life a little more sustainable.
+Discover practical ideas for making everyday choices more
+thoughtful, responsible and sustainable.
 </p>
 
-<a href="/sustainable-living.html">
-Explore Sustainable Living →
-</a>
+<a href="/sustainable-living.html">Explore Sustainable Living →</a>
 
 </div>
 
@@ -841,18 +484,15 @@ Explore Sustainable Living →
 
 </section>
 
-<!-- =========================
-     NATURE CONNECTION
-========================= -->
-
-<section>
+<section class="section">
 
 <h2>🌳 Nature Connection</h2>
 
 <p class="section-intro">
-Nature is not somewhere far away. A tree along a street, a plant
-growing beside a home, a changing sky or a drop of water can all
-be invitations to notice the living world around us.
+
+Notice the living world around us, learn more about environmental
+changes and discover stories and observations from everyday life.
+
 </p>
 
 <div class="card-grid">
@@ -862,13 +502,11 @@ be invitations to notice the living world around us.
 <h3>🌳 Nature Connection</h3>
 
 <p>
-Spend more time noticing trees, plants, water, seasons and the
-small details of the natural world.
+Slow down and notice trees, plants, wildlife and other parts of
+the natural world that are often overlooked.
 </p>
 
-<a href="/nature-connection.html">
-Discover Nature Connection →
-</a>
+<a href="/nature-connection.html">Connect with Nature →</a>
 
 </div>
 
@@ -877,13 +515,11 @@ Discover Nature Connection →
 <h3>🌍 Environmental Awareness</h3>
 
 <p>
-Understand everyday environmental issues and discover simple ways
-to become more aware of the resources and ecosystems around us.
+Understand some of the changes affecting our climate, oceans,
+plants and biodiversity, and consider how everyday choices matter.
 </p>
 
-<a href="/eco.html">
-Explore Environmental Awareness →
-</a>
+<a href="/eco.html">Learn More →</a>
 
 </div>
 
@@ -892,13 +528,11 @@ Explore Environmental Awareness →
 <h3>📝 Journal</h3>
 
 <p>
-Read original observations, stories and reflections about mindful
+Read longer reflections, observations and stories about mindful
 living, nature, sustainability and everyday experiences.
 </p>
 
-<a href="/blog.html">
-Visit Journal →
-</a>
+<a href="/blog.html">Read the Journal →</a>
 
 </div>
 
@@ -906,404 +540,179 @@ Visit Journal →
 
 </section>
 
-<!-- =========================
-     ENVIRONMENTAL CALCULATORS
-========================= -->
-
-<section>
-
-<h2>🌍 Environmental Calculators</h2>
-
-<p class="section-intro">
-Small everyday choices can add up. These simple calculators help
-you explore the environmental impact of some common activities
-and resources.
-</p>
-
-<div class="card-grid">
-
-<div class="card">
-
-<h3>🌱 Carbon Calculator</h3>
-
-<p>
-Estimate the carbon impact of selected everyday activities and
-consider where small changes may make a difference.
-</p>
-
-<a href="/tools/carbon-calculator.html">
-Use Carbon Calculator →
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>♻️ Plastic Calculator</h3>
-
-<p>
-Explore your use of common plastic items and think about possible
-ways to reduce unnecessary plastic consumption.
-</p>
-
-<a href="/tools/plastic-calculator.html">
-Use Plastic Calculator →
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>🌳 Tree Calculator</h3>
-
-<p>
-Explore the contribution trees can make to the environment and
-reflect on the importance of protecting and planting trees.
-</p>
-
-<a href="/tools/tree-calculator.html">
-Use Tree Calculator →
-</a>
-
-</div>
-
-<div class="card">
-
-<h3>💧 Water Calculator</h3>
-
-<p>
-Consider everyday water use and discover how awareness can help
-us use this important resource more thoughtfully.
-</p>
-
-<a href="/tools/water-calculator.html">
-Use Water Calculator →
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =========================
-     RELATED APPS
-========================= -->
-
-<section>
+<section class="section">
 
 <h2>📱 Related Apps</h2>
 
 <p class="section-intro">
-Explore apps created to support wellbeing, healthy habits and
-everyday life.
+
+Explore the available digital tools and apps related to
+wellbeing and everyday use.
+
 </p>
 
 <div class="card-grid">
 
 <div class="card">
 
-<h3>🌿 Yangocean EFT Tapping</h3>
+<h3>📱 Related Apps</h3>
 
 <p>
-A simple tapping-based wellbeing app designed for relaxation,
-self-reflection and everyday emotional awareness.
+Find the available apps and learn more about the different
+digital tools connected with the themes explored here.
 </p>
+
+<a href="/apps.html">View Related Apps →</a>
 
 </div>
-
-<div class="card">
-
-<h3>🥗 QuQu Healthy Body</h3>
-
-<p>
-Explore a simple approach to developing healthier everyday habits
-and paying more attention to the body.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏃 DuiDui Fit</h3>
-
-<p>
-A fitness-related app supporting movement and healthier everyday
-routines.
-</p>
-
-</div>
-
-</div>
-
-<p style="text-align:center; margin-top:25px;">
-
-<a href="/apps.html"
-style="color:#285943; font-weight:600; text-decoration:none;">
-View All Related Apps → </a>
-
-</p>
-
-</section>
-
-
-<!-- =========================
-     SIMPLE THOUGHT
-========================= -->
-
-<section>
-
-<div class="simple-thought">
-
-<h2>A Simple Thought</h2>
-
-<p>
-We do not always need to make a big change.
-Sometimes, noticing one small thing is where change begins.
-</p>
 
 </div>
 
 </section>
 
-</div>
+<section class="simple-thought">
+
+<h2>🌱 A Simple Thought</h2>
+
+<p>
+Small moments of awareness can change the way we see
+ourselves, other people and the world around us.
+</p>
+
+</section>
 
 </main>
 
-<!-- =========================
-     FOOTER
-========================= -->
-
 <footer>
 
-<div class="footer-links">
+<div>
 
-<a href="/">Home</a>
-
-<a href="/mindfulness.html">
-Mindful Living
-</a>
-
-<a href="/nature-connection.html">
-Nature Connection
-</a>
-
-<a href="/blog.html">
-Journal
-</a>
-
-<a href="/apps.html">
-Related Apps
-</a>
-
-<a href="/contact.html">
-Contact
-</a>
+<a href="/">Home</a> <a href="/mindfulness.html">Mindful Living</a> <a href="/nature-connection.html">Nature Connection</a> <a href="/blog.html">Journal</a> <a href="/apps.html">Related Apps</a> <a href="/contact.html">Contact</a>
 
 </div>
 
 <p>
-© 2026 Yangocean. All rights reserved.
-</p>
-
-<p>
-Mindful Living • Nature • Everyday Sustainability
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
 </p>
 
 </footer>
-
-<!-- =========================
-     DAILY REFLECTION SCRIPT
-========================= -->
 
 <script>
 
 const reflections = [
 
-"Pause for a moment. Notice what is happening around you.",
+"Notice one small thing around you today that you usually overlook.",
 
-"Small acts of attention can make an ordinary day feel different.",
+"Before eating, pause for a moment and appreciate where your food came from.",
 
-"Before changing the world around you, take a moment to observe it.",
+"A tree does not need to be remarkable to provide shade, shelter and life.",
 
-"Nature often reminds us that growth can happen quietly.",
+"Small choices become meaningful when we make them with awareness.",
 
-"Eat slowly enough to notice what is on your plate.",
+"Spend a quiet moment noticing the sounds of nature around you.",
 
-"A tree does not need to explain its value. It simply grows, gives and supports life.",
+"Take only what you need, and appreciate what you already have.",
 
-"Water may look ordinary, but every drop is part of a much larger journey.",
-
-"Sometimes simplicity begins with using only what we really need.",
-
-"Look closely at one small part of nature today.",
-
-"Gratitude can begin with something as simple as noticing what is already here."
+"Awareness begins with simply paying attention."
 
 ];
 
-const today =
-new Date().getDate() % reflections.length;
+const today = new Date();
 
-document.getElementById("dailyReflection").textContent =
-reflections[today];
+const index =
+(today.getFullYear() * 1000) +
+(today.getMonth() + 1) * 50 +
+today.getDate();
+
+const reflection =
+reflections[index % reflections.length];
+
+document.getElementById("dailyReflection").textContent = reflection;
 
 </script>
 
-<!-- =========================
-     READ ALOUD SCRIPT
-========================= -->
-
 <script>
 
-let speechQueue = [];
-let currentIndex = 0;
+(function () {
 
-function getReadableText() {
-
-    const content =
-    document.getElementById("content-to-read");
-
-    const elements =
-    content.querySelectorAll("h1, h2, h3, p");
-
-    speechQueue =
-    Array.from(elements)
-    .map(el => el.innerText.trim())
-    .filter(text => text.length > 0);
-
+if (!("speechSynthesis" in window)) {
+    return;
 }
 
-function speakCurrent() {
+const button = document.createElement("button");
 
-    if (!("speechSynthesis" in window)) {
+button.type = "button";
+button.textContent = "🔊 Read Aloud";
 
-        document.getElementById("readStatus").textContent =
-        "Read Aloud is not supported by this browser.";
+button.style.position = "fixed";
+button.style.bottom = "20px";
+button.style.right = "20px";
+button.style.zIndex = "9999";
+button.style.padding = "10px 15px";
+button.style.border = "1px solid #ccc";
+button.style.borderRadius = "8px";
+button.style.background = "#ffffff";
+button.style.cursor = "pointer";
+button.style.boxShadow = "0 2px 8px rgba(0,0,0,0.12)";
 
+document.body.appendChild(button);
+
+let speaking = false;
+
+button.addEventListener("click", function () {
+
+    if (speaking) {
+
+        speechSynthesis.cancel();
+        speaking = false;
+        button.textContent = "🔊 Read Aloud";
         return;
 
     }
 
-    if (currentIndex >= speechQueue.length) {
+    const elements =
+        document.querySelectorAll(
+            "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p"
+        );
 
-        document.getElementById("readStatus").textContent =
-        "Reading completed.";
+    const text =
+        Array.from(elements)
+        .map(el => el.innerText.trim())
+        .filter(Boolean)
+        .join(". ");
 
+    if (!text) {
         return;
-
     }
-
-    speechSynthesis.cancel();
 
     const utterance =
-    new SpeechSynthesisUtterance(
-        speechQueue[currentIndex]
-    );
+        new SpeechSynthesisUtterance(text);
 
+    utterance.lang = "en-US";
     utterance.rate = 0.95;
-    utterance.pitch = 1;
 
-    utterance.onend = function() {
+    utterance.onstart = function () {
 
-        currentIndex++;
-
-        if (currentIndex < speechQueue.length) {
-
-            speakCurrent();
-
-        } else {
-
-            document.getElementById("readStatus").textContent =
-            "Reading completed.";
-
-        }
+        speaking = true;
+        button.textContent = "⏸ Stop Reading";
 
     };
 
+    utterance.onend = function () {
+
+        speaking = false;
+        button.textContent = "🔊 Read Aloud";
+
+    };
+
+    speechSynthesis.cancel();
     speechSynthesis.speak(utterance);
 
-    document.getElementById("readStatus").textContent =
-    "Reading aloud…";
+});
 
-}
-
-function startReading() {
-
-    if (!("speechSynthesis" in window)) {
-
-        document.getElementById("readStatus").textContent =
-        "Read Aloud is not supported by this browser.";
-
-        return;
-
-    }
-
-    if (
-        speechSynthesis.paused &&
-        speechSynthesis.speaking
-    ) {
-
-        speechSynthesis.resume();
-
-        document.getElementById("readStatus").textContent =
-        "Reading aloud…";
-
-        return;
-
-    }
-
-    if (
-        speechSynthesis.speaking &&
-        !speechSynthesis.paused
-    ) {
-
-        return;
-
-    }
-
-    getReadableText();
-
-    if (currentIndex >= speechQueue.length) {
-
-        currentIndex = 0;
-
-    }
-
-    speakCurrent();
-
-}
-
-function pauseReading() {
-
-    if ("speechSynthesis" in window) {
-
-        speechSynthesis.pause();
-
-        document.getElementById("readStatus").textContent =
-        "Reading paused.";
-
-    }
-
-}
-
-function stopReading() {
-
-    if ("speechSynthesis" in window) {
-
-        speechSynthesis.cancel();
-
-        currentIndex = 0;
-
-        document.getElementById("readStatus").textContent =
-        "Reading stopped.";
-
-    }
-
-}
+})();
 
 </script>
 
 </body>
-
 </html>
