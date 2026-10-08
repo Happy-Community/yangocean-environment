@@ -1,23 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>Environmental Awareness | Climate, Oceans & Biodiversity | Yangocean</title>
+<title>Environmental Awareness | Climate, Oceans &amp; Biodiversity | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore environmental awareness through changes in climate, ocean life, plants, biodiversity, water and everyday choices.">
+content="Explore environmental awareness through climate, oceans, plants, biodiversity, water and everyday choices.">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://yangocean.com/eco.html">
-
-
-<!-- HREFLANG -->
+<link rel="canonical"
+href="https://yangocean.com/eco.html">
 
 <link rel="alternate" hreflang="en"
 href="https://yangocean.com/eco.html">
@@ -40,13 +39,10 @@ href="https://yangocean.com/my/eco.html">
 <link rel="alternate" hreflang="x-default"
 href="https://yangocean.com/eco.html">
 
-
-<!-- OPEN GRAPH -->
-
 <meta property="og:type" content="website">
 
 <meta property="og:title"
-content="Environmental Awareness | Climate, Oceans & Biodiversity">
+content="Environmental Awareness | Climate, Oceans &amp; Biodiversity">
 
 <meta property="og:description"
 content="Explore environmental change through climate, ocean life, plants, biodiversity, water and everyday choices.">
@@ -57,23 +53,159 @@ content="https://yangocean.com/eco.html">
 <meta property="og:image"
 content="https://yangocean.com/images/og-image.jpg">
 
-
-<!-- ADSENSE -->
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous">
 </script>
 
-
-<!-- STYLES -->
-
 <style>
 
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26352b;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #dfe7df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.brand {
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #2f6b45;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756b;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #304438;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b45;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+    right: 0;
+    top: 28px;
+
+    min-width: 225px;
+
+    background: white;
+
+    border: 1px solid #dfe7df;
+    border-radius: 10px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.language a {
+    font-size: 0.82rem;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
 }
 
 
@@ -83,34 +215,105 @@ crossorigin="anonymous">
 
 .hero {
     text-align: center;
-    padding: 45px 20px 35px;
+
+    padding: 55px 20px 45px;
+
+    background: linear-gradient(
+        135deg,
+        #edf7ee,
+        #f8fbf7
+    );
+
+    border-radius: 18px;
+
+    margin-bottom: 35px;
 }
 
 .hero h1 {
-    margin-bottom: 15px;
+    margin: 0 0 14px;
+
+    color: #2f6b45;
+
+    font-size: 2.2rem;
 }
 
 .hero p {
     max-width: 760px;
-    margin: 0 auto 15px;
-    line-height: 1.8;
+
+    margin: 0 auto 12px;
+
+    font-size: 1.05rem;
+
+    color: #526158;
 }
 
 
 /* =========================
-   CONTENT
+   READ ALOUD
 ========================= */
 
-.content-section {
-    margin: 45px 0;
+.read-aloud {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin: 0 auto 30px;
 }
 
-.content-section h2 {
-    margin-bottom: 15px;
+.tts-btn {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 15px;
+
+    cursor: pointer;
+
+    background: #2f6b45;
+
+    color: white;
+
+    font-size: 0.9rem;
 }
 
-.content-section p {
-    line-height: 1.8;
+.tts-btn:hover {
+    opacity: 0.9;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    background: white;
+
+    border-radius: 14px;
+
+    padding: 30px;
+
+    margin-top: 28px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2f6b45;
+
+    margin-top: 0;
+
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    max-width: 780px;
+
+    margin-bottom: 25px;
 }
 
 
@@ -120,22 +323,33 @@ crossorigin="anonymous">
 
 .environment-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    margin-top: 30px;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    margin-top: 25px;
 }
 
 .environment-card {
-    background: #ffffff;
-    border-radius: 14px;
+    background: #f7faf7;
+
+    border-radius: 12px;
+
     overflow: hidden;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+
+    box-shadow:
+        0 2px 8px rgba(0,0,0,0.05);
 }
 
 .environment-card img {
     width: 100%;
-    height: 230px;
+
+    height: 220px;
+
     object-fit: cover;
+
     display: block;
 }
 
@@ -145,16 +359,70 @@ crossorigin="anonymous">
 
 .environment-card h3 {
     margin-top: 0;
+
     margin-bottom: 8px;
+
+    color: #2f6b45;
+}
+
+.then-now {
+    display: inline-block;
+
+    font-weight: 600;
+
+    font-size: 0.9rem;
+
+    color: #56705e;
+
+    background: #eaf3eb;
+
+    border-radius: 20px;
+
+    padding: 4px 11px;
+
+    margin: 3px 0 14px;
 }
 
 .environment-card p {
     line-height: 1.7;
 }
 
-.then-now {
-    font-weight: 600;
-    margin: 5px 0 15px;
+
+/* =========================
+   EVERYDAY CHOICES
+========================= */
+
+.choice-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 25px;
+}
+
+.choice-card {
+    background: #f7faf7;
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+.choice-card h3 {
+    color: #2f6b45;
+
+    margin-top: 0;
+
+    margin-bottom: 8px;
+
+    font-size: 1.05rem;
+}
+
+.choice-card p {
+    margin-bottom: 0;
 }
 
 
@@ -163,30 +431,53 @@ crossorigin="anonymous">
 ========================= */
 
 .water-feature {
-    margin-top: 35px;
-    padding: 25px;
-    background: #f3f8f6;
-    border-radius: 14px;
-}
+    margin-top: 28px;
 
-.water-feature img {
-    display: block;
-    width: 100%;
-    max-width: 750px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 12px;
+    padding: 25px;
+
+    background: #f3f8f6;
+
+    border-radius: 14px;
+
+    text-align: center;
 }
 
 .water-feature h3 {
     margin-top: 0;
+
+    color: #2f6b45;
+}
+
+.water-feature p {
+    max-width: 760px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.water-feature img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 750px;
+
+    height: auto;
+
+    margin: 20px auto;
+
+    border-radius: 12px;
 }
 
 .water-link {
     display: inline-block;
+
     margin-top: 8px;
+
     font-weight: 600;
+
     color: #285943;
+
     text-decoration: none;
 }
 
@@ -196,51 +487,63 @@ crossorigin="anonymous">
 
 
 /* =========================
-   EVERYDAY CHOICES
+   CLOSING
 ========================= */
 
-.choice-list {
-    padding-left: 20px;
-    line-height: 1.9;
-}
-
-.choice-list li {
-    margin-bottom: 10px;
-}
-
-
-/* =========================
-   READ ALOUD
-========================= */
-
-.read-aloud {
+.closing {
     text-align: center;
-    margin: 20px 0 35px;
 }
 
-.read-aloud button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #285943;
-    color: white;
-}
+.closing p {
+    max-width: 760px;
 
-.read-aloud button:hover {
-    opacity: 0.9;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 /* =========================
-   RESPONSIVE
+   FOOTER
 ========================= */
 
-@media (max-width: 800px) {
+footer {
+    background: #eef2ed;
+
+    text-align: center;
+
+    padding: 30px 20px;
+
+    color: #59645b;
+
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #45604d;
+
+    text-decoration: none;
+
+    margin: 0 7px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
 
     .environment-grid {
         grid-template-columns: 1fr;
+    }
+
+    .choice-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .environment-card img {
@@ -249,102 +552,119 @@ crossorigin="anonymous">
 
 }
 
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        right: auto;
+
+        left: 50%;
+
+        transform:
+            translateX(-50%);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.84rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .choice-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
 </style>
 
 </head>
 
-
 <body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
 
 <header>
 
-<div class="container">
+<div class="header-inner">
 
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:15px;
-">
+<div class="brand">
 
-<a href="/"
-style="
-font-size:1.4rem;
-font-weight:700;
-text-decoration:none;
-color:#285943;
-">
+<a href="/" class="logo">
 Yangocean
 </a>
 
-
-<!-- LANGUAGE -->
-
-<div>
-
-<a href="/eco.html">EN</a> |
-<a href="/ms/eco.html">BM</a> |
-<a href="/zh/eco.html">中文</a> |
-<a href="/fr/eco.html">FR</a> |
-<a href="/es/eco.html">ES</a> |
-<a href="/my/eco.html">မြန်မာ</a>
-
+<div class="tagline">
+Mindful Living • Nature • Sustainability
 </div>
 
 </div>
 
+<nav>
 
-<!-- MAIN NAVIGATION -->
-
-<nav style="margin-top:18px; text-align:center;">
-
-<a href="/" style="margin:0 8px;">
+<a href="/">
 Home
 </a>
 
+<div class="dropdown">
 
-<!-- MINDFUL LIVING -->
-
-<span class="dropdown">
-
-<a href="/mindfulness.html" style="margin:0 8px;">
+<button class="dropbtn">
 🌿 Mindful Living ▾
-</a>
+</button>
 
-<span class="dropdown-content">
+<div class="dropdown-content">
 
 <a href="/mindfulness.html">
 🧘 Mindfulness &amp; Dhamma
 </a>
 
 <a href="/mindful-eating.html">
-🥗 Eating Well
+🥗 Mindful Eating
 </a>
 
 <a href="/sustainable-living.html">
 ♻️ Sustainable Living
 </a>
 
-</span>
+</div>
 
-</span>
+</div>
 
+<div class="dropdown">
 
-<!-- NATURE CONNECTION -->
-
-<span class="dropdown">
-
-<a href="/nature-connection.html" style="margin:0 8px;">
+<button class="dropbtn">
 🌳 Nature Connection ▾
-</a>
+</button>
 
-<span class="dropdown-content">
+<div class="dropdown-content">
 
 <a href="/nature-connection.html">
 🌳 Nature Connection
@@ -358,40 +678,53 @@ Home
 📝 Journal
 </a>
 
-</span>
+</div>
 
-</span>
+</div>
 
+<div class="dropdown">
 
-<!-- RELATED APPS -->
-
-<span class="dropdown">
-
-<a href="/apps.html" style="margin:0 8px;">
+<button class="dropbtn">
 📱 Related Apps ▾
-</a>
+</button>
 
-<span class="dropdown-content">
+<div class="dropdown-content">
 
 <a href="/apps.html">
 📱 All Related Apps
 </a>
 
 <a href="/apps.html#eft">
-🌿 EFT Tapping
+🌿 Yangocean App
 </a>
 
 <a href="/apps.html#healthy-body">
-🥗 QuQu Healthy Body
+❤️ QuQu Healthy Body
 </a>
 
 <a href="/apps.html#duidui-fit">
-🏃 DuiDui Fit
+🏃 DuoFit
 </a>
 
-</span>
+</div>
 
-</span>
+</div>
+
+<div class="language">
+
+<a href="/eco.html">EN</a>
+
+<a href="/ms/eco.html">BM</a>
+
+<a href="/zh/eco.html">中文</a>
+
+<a href="/fr/eco.html">FR</a>
+
+<a href="/es/eco.html">ES</a>
+
+<a href="/my/eco.html">မြန်မာ</a>
+
+</div>
 
 </nav>
 
@@ -399,22 +732,13 @@ Home
 
 </header>
 
-
-
-<!-- =========================
-     MAIN CONTENT
-========================= -->
-
 <main id="content-to-read">
-
-
-<!-- =========================
-     HERO
-========================= -->
 
 <section class="hero">
 
-<h1>🌍 Environmental Awareness</h1>
+<h1>
+🌍 Environmental Awareness
+</h1>
 
 <p>
 Our environment is constantly changing. Climate, oceans,
@@ -429,48 +753,41 @@ choices about how we live and how we use natural resources.
 
 </section>
 
-
-
-<!-- =========================
-     READ ALOUD
-========================= -->
-
 <div class="read-aloud">
 
 <button
 type="button"
-id="readAloudButton"
-aria-label="Read this page aloud">
+class="tts-btn"
+onclick="startReading()">
+🔊 Read Aloud </button>
 
-🔊 Read Aloud
+<button
+type="button"
+class="tts-btn"
+onclick="pauseReading()">
+⏸ Pause </button>
 
-</button>
+<button
+type="button"
+class="tts-btn"
+onclick="stopReading()">
+⏹ Stop </button>
 
 </div>
 
+<section class="section">
 
+<h2>
+🌍 Three Ways to Notice Environmental Change
+</h2>
 
-<!-- =========================
-     THREE VISUAL STORIES
-========================= -->
-
-<section class="content-section">
-
-<h2>🌍 Three Ways to Notice Environmental Change</h2>
-
-<p>
+<p class="section-intro">
 Environmental change can sometimes feel too large or distant
 to understand. Looking at familiar parts of the natural world
 can make these changes easier to notice.
 </p>
 
-
 <div class="environment-grid">
-
-
-<!-- =========================
-     CLIMATE
-========================= -->
 
 <div class="environment-card">
 
@@ -478,13 +795,18 @@ can make these changes easier to notice.
 src="/images/environment-climate.png"
 alt="Illustration showing changes in climate and temperature over time"
 loading="lazy"
+
 >
 
 <div class="environment-card-content">
 
-<h3>🌡️ Our Changing Climate</h3>
+<h3>
+🌡️ Our Changing Climate
+</h3>
 
-<p class="then-now"> Then → Now </p>
+<div class="then-now">
+Then → Now
+</div>
 
 <p>
 Climate is influenced by many natural processes, but human
@@ -502,25 +824,24 @@ extreme weather, ecosystems and communities.
 
 </div>
 
-
-
-<!-- =========================
-     OCEANS
-========================= -->
-
 <div class="environment-card">
 
-<img 
+<img
 src="/images/environment-ocean.png"
 alt="Illustration showing changes in ocean life over time"
 loading="lazy"
+
 >
 
 <div class="environment-card-content">
 
-<h3>🐠 Life in Our Oceans</h3>
+<h3>
+🐠 Life in Our Oceans
+</h3>
 
-<p class="then-now"> Then → Now </p>
+<div class="then-now">
+Then → Now
+</div>
 
 <p>
 Ocean ecosystems can be affected by pollution, overfishing,
@@ -538,25 +859,24 @@ environments and harm wildlife.
 
 </div>
 
-
-
-<!-- =========================
-     PLANTS
-========================= -->
-
 <div class="environment-card">
 
 <img
 src="/images/environment-plants.png"
 alt="Illustration showing changes in plants and biodiversity over time"
 loading="lazy"
+
 >
 
 <div class="environment-card-content">
 
-<h3>🌿 Plants &amp; Biodiversity</h3>
+<h3>
+🌿 Plants &amp; Biodiversity
+</h3>
 
-<p class="then-now"> Then → Now </p>
+<div class="then-now">
+Then → Now
+</div>
 
 <p>
 Natural habitats can change when forests, wetlands and other
@@ -573,75 +893,104 @@ and animals can lose the places they need to survive.
 
 </div>
 
-
 </div>
 
 </section>
 
+<section class="section">
 
+<h2>
+♻️ Everyday Choices
+</h2>
 
-<!-- =========================
-     EVERYDAY CHOICES
-========================= -->
-
-<section class="content-section">
-
-<h2>♻️ Everyday Choices</h2>
-
-<p>
+<p class="section-intro">
 Environmental awareness becomes meaningful when we notice
 how ordinary decisions connect with the environment.
+There is no need to change everything at once.
+Small, thoughtful choices can become part of everyday life.
 </p>
+
+<div class="choice-grid">
+
+<div class="choice-card">
+
+<h3>
+🛍️ What do I buy?
+</h3>
 
 <p>
-There is no need to change everything at once. Small,
-thoughtful choices can become part of everyday life.
+Can I choose products that are durable, useful and less wasteful?
 </p>
 
+</div>
 
-<ul class="choice-list">
+<div class="choice-card">
 
-<li>
-<strong>What do I buy?</strong>
-Can I choose products that are durable, useful and less wasteful?
-</li>
+<h3>
+🥗 What do I eat?
+</h3>
 
-<li>
-<strong>What do I eat?</strong>
+<p>
 Can I reduce unnecessary food waste and choose food thoughtfully?
-</li>
+</p>
 
-<li>
-<strong>How do I travel?</strong>
+</div>
+
+<div class="choice-card">
+
+<h3>
+🚶 How do I travel?
+</h3>
+
+<p>
 Can I walk, cycle, use public transport or combine trips when practical?
-</li>
+</p>
 
-<li>
-<strong>How do I use water?</strong>
-Can I avoid unnecessary water use and keep water clean?
-</li>
+</div>
 
-<li>
-<strong>What do I throw away?</strong>
+<div class="choice-card">
+
+<h3>
+💧 How do I use water?
+</h3>
+
+<p>
+Can I avoid unnecessary water use and help keep water clean?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+♻️ What do I throw away?
+</h3>
+
+<p>
 Can I reduce unnecessary purchases, reuse items or repair them?
-</li>
+</p>
 
-<li>
-<strong>Can I use less?</strong>
+</div>
+
+<div class="choice-card">
+
+<h3>
+🌱 Can I use less?
+</h3>
+
+<p>
 Sometimes the most sustainable choice is simply to buy or consume less.
-</li>
+</p>
 
-</ul>
+</div>
 
-
-
-<!-- =========================
-     WATER FEATURE
-========================= -->
+</div>
 
 <div class="water-feature">
 
-<h3>💧 Water Connects Us All</h3>
+<h3>
+💧 Water Connects Us All
+</h3>
 
 <p>
 Water is part of every ecosystem and every community.
@@ -653,6 +1002,7 @@ through the natural water cycle.
 src="/images/Eneverywaterdrop.png"
 alt="The journey of one drop of water through the natural water cycle"
 loading="lazy"
+
 >
 
 <p>
@@ -663,25 +1013,21 @@ us appreciate why careful water use matters.
 
 <a
 href="/blog/journey-one-drop-water.html"
-class="water-link">
+class="water-link"
 
-💧 Read: The Journey of One Drop of Water →
+>
 
-</a>
+💧 Read: The Journey of One Drop of Water → </a>
 
 </div>
 
 </section>
 
+<section class="section closing">
 
-
-<!-- =========================
-     SHORT CLOSING
-========================= -->
-
-<section class="content-section">
-
-<h2>🌱 Notice What Is Around Us</h2>
+<h2>
+🌱 Notice What Is Around Us
+</h2>
 
 <p>
 Environmental awareness does not require us to know everything
@@ -696,119 +1042,94 @@ our everyday choices affect the world we share.
 
 </section>
 
-
 </main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
 
 <footer>
 
-<div class="container"
-style="
-text-align:center;
-margin-top:50px;
-padding-top:25px;
-border-top:1px solid #ddd;
-">
+<div>
 
-<p>
+<a href="/">
+Home
+</a>
 
-<a href="/">Home</a> ·
-<a href="/nature-connection.html">Nature Connection</a> ·
-<a href="/mindfulness.html">Mindful Living</a> ·
-<a href="/blog.html">Journal</a> ·
-<a href="/apps.html">Related Apps</a> ·
-<a href="/contact.html">Contact</a>
+<a href="/mindfulness.html">
+Mindful Living
+</a>
 
-</p>
+<a href="/nature-connection.html">
+Nature Connection
+</a>
 
-<p style="font-size:0.9rem;">
+<a href="/blog.html">
+Journal
+</a>
 
-© Yangocean. All rights reserved.
+<a href="/apps.html">
+Related Apps
+</a>
 
-</p>
+<a href="/contact.html">
+Contact
+</a>
 
 </div>
 
+<p>
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
+</p>
+
 </footer>
-
-
-
-<!-- =========================
-     DROPDOWN STYLE
-========================= -->
-
-<style>
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background: white;
-    min-width: 210px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border-radius: 8px;
-    padding: 8px 0;
-    z-index: 1000;
-    text-align: left;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #285943;
-}
-
-.dropdown-content a:hover {
-    background: #f2f7f3;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-</style>
-
-
-
-<!-- =========================
-     READ ALOUD SCRIPT
-========================= -->
 
 <script>
 
-const readAloudButton =
-document.getElementById("readAloudButton");
+let speechQueue = [];
+let currentIndex = 0;
 
-readAloudButton.addEventListener("click", function () {
+
+/* =========================
+   READ ALOUD
+========================= */
+
+function getReadingText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+    const elements =
+        content.querySelectorAll(
+            "h1, h2, h3, p, li"
+        );
+
+    const texts = [];
+
+    elements.forEach(function(element) {
+
+        const text =
+            element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
+        }
+
+    });
+
+    return texts;
+}
+
+
+function startReading() {
 
     if (!("speechSynthesis" in window)) {
 
-        alert("Read Aloud is not supported by this browser.");
+        alert(
+            "Read Aloud is not supported by this browser."
+        );
 
         return;
-
-    }
-
-
-    if (speechSynthesis.speaking &&
-        !speechSynthesis.paused) {
-
-        speechSynthesis.pause();
-
-        readAloudButton.textContent = "▶ Resume";
-
-        return;
-
     }
 
 
@@ -816,59 +1137,92 @@ readAloudButton.addEventListener("click", function () {
 
         speechSynthesis.resume();
 
-        readAloudButton.textContent = "⏸ Pause";
-
         return;
-
     }
 
 
-    const elements =
-    document.querySelectorAll(
-        "#content-to-read h1, " +
-        "#content-to-read h2, " +
-        "#content-to-read h3, " +
-        "#content-to-read p, " +
-        "#content-to-read li"
-    );
+    speechSynthesis.cancel();
+
+    speechQueue =
+        getReadingText();
+
+    currentIndex = 0;
+
+    speakNext();
+}
 
 
-    let text = "";
+function speakNext() {
 
-    elements.forEach(function (element) {
+    if (
+        currentIndex >=
+        speechQueue.length
+    ) {
 
-        text += element.innerText + " ";
-
-    });
-
-
-    const speech =
-    new SpeechSynthesisUtterance(text);
-
-    speech.rate = 0.95;
-
-    speech.pitch = 1;
-
-    speech.lang = "en-US";
+        return;
+    }
 
 
-    speech.onend = function () {
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
 
-        readAloudButton.textContent = "🔊 Read Aloud";
+
+    utterance.rate = 0.95;
+
+    utterance.pitch = 1;
+
+    utterance.volume = 1;
+
+    utterance.lang = "en-US";
+
+
+    utterance.onend = function() {
+
+        currentIndex++;
+
+        speakNext();
 
     };
 
 
-    speechSynthesis.speak(speech);
+    speechSynthesis.speak(
+        utterance
+    );
+}
 
-    readAloudButton.textContent = "⏸ Pause";
 
-});
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
+    }
+}
+
+
+function stopReading() {
+
+    if (
+        "speechSynthesis" in window
+    ) {
+
+        speechSynthesis.cancel();
+
+        speechQueue = [];
+
+        currentIndex = 0;
+
+    }
+}
 
 </script>
-
 
 </body>
 
 </html>
-
