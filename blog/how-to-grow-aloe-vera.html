@@ -11,20 +11,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Learn how to grow aloe vera at home, prepare its clear inner gel carefully, understand its traditional uses, and enjoy this useful plant as part of mindful everyday living.">
+content="Learn how to grow aloe vera at home, care for the plant, understand its clear inner gel and yellow latex, and approach this useful plant thoughtfully.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical"
 href="https://yangocean.com/blog/how-to-grow-aloe-vera.html">
 
+<!-- HREFLANG -->
+
 <link rel="alternate"
 hreflang="en"
 href="https://yangocean.com/blog/how-to-grow-aloe-vera.html">
 
 <link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/blog/how-to-grow-aloe-vera.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/blog/how-to-grow-aloe-vera.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/blog/how-to-grow-aloe-vera.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://yangocean.com/es/blog/how-to-grow-aloe-vera.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/blog/how-to-grow-aloe-vera.html">
+
+<link rel="alternate"
 hreflang="x-default"
 href="https://yangocean.com/blog/how-to-grow-aloe-vera.html">
+
+<!-- OPEN GRAPH -->
 
 <meta property="og:type"
 content="article">
@@ -33,7 +57,7 @@ content="article">
 content="How to Grow Aloe Vera | Simple Growing Guide | Yangocean">
 
 <meta property="og:description"
-content="A simple guide to growing aloe vera, caring for the plant, and preparing its clear inner gel thoughtfully.">
+content="A simple guide to growing aloe vera, caring for the plant, and understanding the clear inner gel and yellow latex.">
 
 <meta property="og:url"
 content="https://yangocean.com/blog/how-to-grow-aloe-vera.html">
@@ -44,6 +68,8 @@ content="https://www.yangocean.com/images/how-to-grow-aloe-vera.png">
 <meta property="og:site_name"
 content="Yangocean">
 
+<!-- TWITTER -->
+
 <meta name="twitter:card"
 content="summary_large_image">
 
@@ -51,7 +77,7 @@ content="summary_large_image">
 content="How to Grow Aloe Vera | Yangocean">
 
 <meta name="twitter:description"
-content="Learn how to grow aloe vera and make this useful plant part of everyday mindful living.">
+content="Learn how to grow aloe vera and care for this useful plant thoughtfully.">
 
 <meta name="twitter:image"
 content="https://www.yangocean.com/images/how-to-grow-aloe-vera.png">
@@ -61,90 +87,235 @@ content="ca-pub-6929570744326515">
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 * {
     box-sizing: border-box;
 }
-
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;
     color: #333;
-    background: #f8fbf7;
+    background: #f7f9f6;
 }
 
+
+/* =========================
+   HEADER
+========================= */
 
 header {
     background: #ffffff;
     border-bottom: 1px solid #e5e5e5;
-    padding: 18px 20px;
-    text-align: center;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
 }
 
 
-header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-}
-
+/* =========================
+   NAVIGATION
+========================= */
 
 nav {
-    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-
-nav a {
-    display: inline-block;
-    margin: 5px 8px;
-    color: #315f42;
+nav a,
+.dropbtn {
+    color: #444;
     text-decoration: none;
-    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 
-nav a:hover {
-    text-decoration: underline;
+/* =========================
+   LANGUAGE
+========================= */
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
 }
 
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+
+/* =========================
+   MAIN
+========================= */
 
 main {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 35px 20px 50px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
 }
 
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
-    margin-bottom: 35px;
+    padding: 55px 20px 40px;
 }
-
 
 .hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 12px;
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
 }
-
 
 .hero p {
     max-width: 760px;
-    margin: 0 auto;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   CONTENT CARDS
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    color: #416f50;
+    margin-top: 28px;
+}
+
+.card h3:first-child {
+    margin-top: 0;
+}
+
+.card p {
     color: #555;
 }
 
-
-/* =========================================================
-   ALOE VERA GUIDE IMAGE
-========================================================= */
-
-.guide-image-container {
-    width: 100%;
-    max-width: 850px;
-    margin: 30px auto 35px;
-    text-align: center;
+.card li {
+    margin-bottom: 10px;
+    color: #555;
 }
 
+ul,
+ol {
+    padding-left: 25px;
+}
+
+
+/* =========================
+   GUIDE IMAGE
+========================= */
+
+.guide-image-container {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    text-align: center;
+}
 
 .guide-image {
     display: block;
@@ -155,177 +326,178 @@ main {
     border-radius: 12px;
 }
 
-
 .image-caption {
-    margin-top: 10px;
-    font-size: 0.95rem;
+    max-width: 760px;
+    margin: 12px auto 0;
     color: #666;
-    text-align: center;
+    font-size: 0.95rem;
 }
 
 
-/* =========================================================
-   CONTENT SECTIONS
-========================================================= */
-
-section {
-    background: #ffffff;
-    padding: 25px;
-    margin: 25px 0;
-    border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-}
-
-
-h2 {
-    color: #315f42;
-    margin-top: 0;
-}
-
-
-h3 {
-    color: #416f50;
-}
-
-
-ul,
-ol {
-    padding-left: 25px;
-}
-
-
-li {
-    margin-bottom: 10px;
-}
-
-
-/* =========================================================
-   INFORMATION BOX
-========================================================= */
+/* =========================
+   INFORMATION BOXES
+========================= */
 
 .note {
-    background: #f0f7f1;
+    background: #edf4ec;
     border-left: 4px solid #5d8b68;
     padding: 16px 18px;
-    margin: 20px 0;
-    border-radius: 6px;
+    margin: 22px 0;
+    border-radius: 8px;
 }
-
 
 .care-box {
     background: #faf7ed;
     border-left: 4px solid #b69a52;
     padding: 16px 18px;
-    margin: 20px 0;
-    border-radius: 6px;
+    margin: 22px 0;
+    border-radius: 8px;
 }
 
 
-/* =========================================================
-   RELATED LINKS
-========================================================= */
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+}
+
+.reflection p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #405944;
+}
+
+
+/* =========================
+   RELATED GUIDES
+========================= */
 
 .related {
     text-align: center;
 }
 
+.related h2 {
+    color: #2f5d3a;
+}
+
+.related p {
+    color: #666;
+}
 
 .related a {
-    color: #315f42;
-    font-weight: 600;
+    color: #2f6b3f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.related a:hover {
+    text-decoration: underline;
 }
 
 
-/* =========================================================
+/* =========================
    READ ALOUD
-========================================================= */
+========================= */
 
 .tts-controls {
     text-align: center;
-    margin: 25px 0 35px;
+    margin: 5px 0 25px;
 }
 
-
 .tts-btn {
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px 16px;
     margin: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    background: #315f42;
-    color: white;
+    font-size: 0.95rem;
+    background: #ffffff;
+    color: #444;
 }
-
 
 .tts-btn:hover {
-    opacity: 0.9;
+    background: #f1f6f1;
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer {
-    background: #315f42;
-    color: #ffffff;
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
     text-align: center;
-    padding: 28px 20px;
+    color: #666;
+    font-size: 0.9rem;
 }
-
-
-footer p {
-    margin: 8px 0;
-}
-
 
 footer a {
-    color: #ffffff;
+    color: #49664e;
     text-decoration: none;
     margin: 0 8px;
 }
-
 
 footer a:hover {
     text-decoration: underline;
 }
 
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+}
 
 @media (max-width: 600px) {
 
-    main {
-        padding: 25px 15px 40px;
+    .hero {
+        padding-top: 40px;
     }
-
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
-
-    section {
-        padding: 20px;
+    .card,
+    .guide-image-container,
+    .reflection {
+        padding: 22px;
     }
 
-
-    nav a {
-        margin: 4px 5px;
-        font-size: 0.95rem;
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
     }
 
-
-    .guide-image-container {
-        max-width: 100%;
-    }
-
-
-    .guide-image {
-        max-width: 100%;
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
     }
 
 }
@@ -336,13 +508,23 @@ footer a:hover {
 
 <body>
 
-<!-- =========================================================
+<!-- =========================
      HEADER
-========================================================= -->
+========================= -->
 
 <header>
 
-<h1>🌱 Yangocean</h1>
+<div class="header-inner">
+
+<div>
+
+<a href="/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Mindful Living • Nature • Sustainability
+</div>
+
+</div>
 
 <nav aria-label="Main navigation">
 
@@ -350,49 +532,105 @@ footer a:hover {
 Home
 </a>
 
-<a href="/mindfulness.html">
-Mindfulness
-</a>
+<div class="dropdown">
 
-<a href="/mindful-ethical-living.html">
-Mindful Living
+<button class="dropbtn">
+🌿 Mindful Living ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
 </a>
 
 <a href="/mindful-eating.html">
-Mindful Eating
-</a>
-
-<a href="/nature-connection.html">
-Nature Connection
+🥗 Mindful Eating
 </a>
 
 <a href="/sustainable-living.html">
-Sustainable Living
+♻️ Sustainable Living
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Nature Connection ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
 </a>
 
 <a href="/blog.html">
-Journal
+📝 Journal
 </a>
 
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Related Apps ▾
+</button>
+
+<div class="dropdown-content">
+
 <a href="/apps.html">
-Apps
+📱 All Related Apps
 </a>
+
+<a href="/apps.html#eft">
+🌿 Yangocean App
+</a>
+
+<a href="/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
 
 </nav>
 
+</div>
+
 </header>
 
-<!-- =========================================================
+<!-- =========================
      MAIN CONTENT
-========================================================= -->
+========================= -->
 
 <main id="content-to-read">
 
-<!-- =========================================================
+<!-- =========================
      HERO
-========================================================= -->
+========================= -->
 
-<div class="hero">
+<section class="hero">
 
 <h1>🌿 How to Grow Aloe Vera</h1>
 
@@ -401,11 +639,11 @@ A simple guide to growing aloe vera at home, caring for this useful plant,
 and learning how its clear inner gel has been traditionally used.
 </p>
 
-</div>
+</section>
 
-<!-- =========================================================
-     READ ALOUD CONTROLS
-========================================================= -->
+<!-- =========================
+     READ ALOUD
+========================= -->
 
 <div class="tts-controls">
 
@@ -413,50 +651,61 @@ and learning how its clear inner gel has been traditionally used.
 type="button"
 class="tts-btn"
 onclick="startReading()"
-aria-label="Start or resume reading">
+aria-label="Start or resume reading"
+
+>
+
 🔊 Read Aloud </button>
 
 <button
 type="button"
 class="tts-btn"
 onclick="pauseReading()"
-aria-label="Pause reading">
+aria-label="Pause reading"
+
+>
+
 ⏸ Pause </button>
 
 <button
 type="button"
 class="tts-btn"
 onclick="stopReading()"
-aria-label="Stop reading">
+aria-label="Stop reading"
+
+>
+
 ⏹ Stop </button>
 
 </div>
 
-<!-- =========================================================
+<!-- =========================
      ALOE VERA INFOGRAPHIC
-========================================================= -->
+========================= -->
 
-<div class="guide-image-container">
+<section class="guide-image-container">
 
 <img
-src="https://www.yangocean.com/images/how-to-grow-aloe-vera.png"
-alt="Illustrated guide showing how to grow aloe vera, including choosing a container, using well-draining soil, planting, providing light, watering, understanding the green skin and yellow latex, preparing the clear inner gel for topical use, and mindful growing."
+src="/images/how-to-grow-aloe-vera.png"
+alt="Illustrated guide showing how to grow aloe vera, including choosing a container, using well-draining soil, planting, providing light, watering, understanding the green skin and yellow latex, and preparing the clear inner gel for topical use."
 class="guide-image"
 loading="eager"
-decoding="async">
+decoding="async"
+
+>
 
 <p class="image-caption">
-A simple visual guide to growing aloe vera and understanding the different
-parts of the aloe vera leaf.
+A simple visual guide to growing aloe vera and understanding the
+different parts of the aloe vera leaf.
 </p>
 
-</div>
+</section>
 
-<!-- =========================================================
+<!-- =========================
      WHY GROW ALOE VERA
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🌱 Why Grow Aloe Vera?</h2>
 
@@ -502,11 +751,11 @@ Caring for aloe vera can become a simple everyday connection with nature.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      FIVE STEPS
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🪴 Five Simple Steps to Grow Aloe Vera</h2>
 
@@ -537,8 +786,9 @@ Avoid heavy soil that stays wet for long periods.
 <h3>3. Plant the Aloe Vera</h3>
 
 <p>
-Choose a healthy pup (offset) with its own roots. Gently separate it from the mother plant and plant it in well-draining soil. Base of the plant sits
-securely above the soil surface. Do not bury the leaves deeply.
+Choose a healthy pup (offset) with its own roots. Gently separate it from
+the mother plant and plant it in well-draining soil. The base of the plant
+should sit securely above the soil surface. Do not bury the leaves deeply.
 </p>
 
 <p>
@@ -571,14 +821,6 @@ Overwatering is one of the most common problems when growing aloe vera.
 Always make sure excess water can drain away.
 </p>
 
-</section>
-
-<!-- =========================================================
-     CARE
-========================================================= -->
-
-<section>
-
 <div class="care-box">
 
 <strong>A simple rule:</strong>
@@ -588,11 +830,11 @@ Aloe vera usually prefers being a little too dry rather than constantly wet.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      TRADITIONAL USES
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🌿 Traditional Uses of Aloe Vera</h2>
 
@@ -623,19 +865,19 @@ also learning to use the plant thoughtfully.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      PREPARING FRESH GEL
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🍃 How to Prepare Fresh Aloe Vera Gel for Topical Use</h2>
 
 <p>
 If you grow your own aloe vera, the clear inner gel can be separated from
 the green outer leaf. Preparing the leaf carefully helps you distinguish the
-clear gel from the yellow sap, or latex, found closer to the outer part of the
-leaf.
+clear gel from the yellow sap, or latex, found closer to the outer part of
+the leaf.
 </p>
 
 <h3>1. Choose a Healthy Mature Leaf</h3>
@@ -686,11 +928,11 @@ so it should not be treated as the same thing as the clear gel.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      CONSUMPTION
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🥄 Can Aloe Vera Be Consumed?</h2>
 
@@ -737,11 +979,11 @@ consumed.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      THOUGHTFUL USE
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🌼 Using Aloe Vera Thoughtfully</h2>
 
@@ -766,11 +1008,11 @@ condition.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      MINDFUL GROWING
-========================================================= -->
+========================= -->
 
-<section>
+<section class="reflection">
 
 <h2>🌍 Growing as a Mindful Practice</h2>
 
@@ -792,14 +1034,13 @@ the way they hold water, and the small new plants that may appear around the
 base.
 </p>
 
-
 </section>
 
-<!-- =========================================================
+<!-- =========================
      THINGS TO AVOID
-========================================================= -->
+========================= -->
 
-<section>
+<section class="card">
 
 <h2>🌱 A Few Things to Avoid</h2>
 
@@ -826,22 +1067,23 @@ Do not treat aloe vera as a replacement for appropriate medical care.
 
 </section>
 
-<!-- =========================================================
+<!-- =========================
      RELATED GUIDES
-========================================================= -->
+========================= -->
 
-<section class="related">
+<section class="card related">
 
 <h2>🌿 More Growing Guides</h2>
 
 <p>
-Continue exploring simple ways to grow useful plants at home.
+Explore other simple ways to grow useful plants and connect with nature
+through everyday observation.
 </p>
 
 <p>
 
 <a href="/blog/how-to-plant.html">
-🌱 View All Yangocean Growing Guides
+🌱 View Growing Guides →
 </a>
 
 </p>
@@ -849,7 +1091,7 @@ Continue exploring simple ways to grow useful plants at home.
 <p>
 
 <a href="/blog/how-to-plant-a-tree.html">
-🌳 How to Plant a Tree
+🌳 How to Plant a Tree →
 </a>
 
 </p>
@@ -857,7 +1099,7 @@ Continue exploring simple ways to grow useful plants at home.
 <p>
 
 <a href="/blog.html">
-📝 Back to Yangocean Journal
+📝 Back to Journal →
 </a>
 
 </p>
@@ -866,24 +1108,24 @@ Continue exploring simple ways to grow useful plants at home.
 
 </main>
 
-<!-- =========================================================
+<!-- =========================
      FOOTER
-========================================================= -->
+========================= -->
 
 <footer>
 
-<p>
-<strong>Yangocean</strong> — Mindful Living, Nature & Everyday Sustainability
-</p>
+<div>
 
-<p>
-
-<a href="/about.html">
-About
+<a href="/">
+Home
 </a>
 
-<a href="/contact.html">
-Contact
+<a href="/mindfulness.html">
+Mindful Living
+</a>
+
+<a href="/nature-connection.html">
+Nature Connection
 </a>
 
 <a href="/blog.html">
@@ -891,20 +1133,24 @@ Journal
 </a>
 
 <a href="/apps.html">
-Apps
+Related Apps
 </a>
 
-</p>
+<a href="/contact.html">
+Contact
+</a>
+
+</div>
 
 <p>
-© 2026 Yangocean. All rights reserved.
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
 </p>
 
 </footer>
 
-<!-- =========================================================
-     READ ALOUD
-========================================================= -->
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
 
 <script>
 
@@ -920,10 +1166,12 @@ function getReadableText() {
         return "";
     }
 
+
     const elements =
         content.querySelectorAll(
-            "h1, h2, h3, p, li, a"
+            "h1, h2, h3, p, li"
         );
+
 
     return Array.from(elements)
 
@@ -981,6 +1229,22 @@ function startReading() {
     speechUtterance.volume = 1;
 
 
+    speechUtterance.onend =
+        function () {
+
+            speechUtterance = null;
+
+        };
+
+
+    speechUtterance.onerror =
+        function () {
+
+            speechUtterance = null;
+
+        };
+
+
     speechSynthesis.speak(
         speechUtterance
     );
@@ -1004,6 +1268,8 @@ function stopReading() {
     if ("speechSynthesis" in window) {
 
         speechSynthesis.cancel();
+
+        speechUtterance = null;
 
     }
 
