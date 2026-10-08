@@ -1,62 +1,553 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 
 <title>Wellness and Sustainability | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Explore the connection between wellness and sustainability through mindful everyday choices that support healthier living and a healthier planet.">
+<meta name="description"
+content="Explore the connection between wellness and sustainability through mindful everyday choices that support healthier living and a healthier planet.">
 
-<link rel="stylesheet" href="/styles.css">
+<meta name="robots" content="index, follow">
 
-<!-- CANONICAL -->
-<link rel="canonical" href="https://yangocean.com/blog/wellness-and-sustainability.html">
+<link rel="canonical"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
 
 <!-- HREFLANG -->
-<link rel="alternate" hreflang="en" href="https://yangocean.com/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Wellness and Sustainability | Yangocean">
-<meta property="og:description" content="Explore simple ways that caring for our well-being can also support a healthier planet.">
-<meta property="og:url" content="https://yangocean.com/blog/wellness-and-sustainability.html">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta property="og:title"
+content="Wellness and Sustainability | Yangocean">
+
+<meta property="og:description"
+content="Explore simple ways that caring for our well-being can also support a healthier planet.">
+
+<meta property="og:type"
+content="article">
+
+<meta property="og:url"
+content="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
 
 <!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Wellness and Sustainability | Yangocean">
-<meta name="twitter:description" content="Explore simple ways that caring for our well-being can also support a healthier planet.">
-<meta name="twitter:image" content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Wellness and Sustainability | Yangocean">
+
+<meta name="twitter:description"
+content="Explore simple ways that caring for our well-being can also support a healthier planet.">
+
+<meta name="twitter:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f9f6;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+
+/* =========================
+   ARTICLE CARD
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    color: #2f5d3a;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+}
+
+.reflection p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #405944;
+}
+
+.reflection-question {
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* =========================
+   READ ALOUD
+========================= */
+
+#readAloudButton {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#readAloudButton:hover {
+    background: #f1f6f1;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- NAV -->
+<header>
+
+<div class="header-inner">
+
+<div>
+
+<a href="/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Mindful Living • Nature • Sustainability
+</div>
+
+</div>
+
 <nav>
-  <a href="/">Home</a>
-  <a href="/mindfulness.html">Mindfulness</a>
-  <a href="/mindful-ethical-living.html">Mindful &amp; Ethical Living</a>
-  <a href="/mindful-eating.html">Mindful Eating</a>
-  <a href="/nature-connection.html">Nature Connection</a>
-  <a href="/sustainable-living.html">Sustainable Living</a>
-  <a href="/blog.html">Journal</a>
+
+<a href="/">Home</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Mindful Living ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
+</a>
+
+<a href="/mindful-eating.html">
+🥗 Mindful Eating
+</a>
+
+<a href="/sustainable-living.html">
+♻️ Sustainable Living
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Nature Connection ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
+</a>
+
+<a href="/blog.html">
+📝 Journal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Related Apps ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/apps.html">
+📱 All Related Apps
+</a>
+
+<a href="/apps.html#eft">
+🌿 Yangocean App
+</a>
+
+<a href="/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
 </nav>
 
+</div>
 
-<!-- SECTION 1: HERO IMAGE -->
-<section class="card">
+</header>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main id="content-to-read">
+
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>🌿 Wellness &amp; Sustainability</h1>
+
+<p>
+Caring for our well-being and caring for the natural world
+are closely connected.
+</p>
+
+</section>
+
+<!-- INTRODUCTION + IMAGE -->
+
+<section class="card">
 
 <p>
 Protecting the environment is not only about caring for our planet.
@@ -65,16 +556,17 @@ can also support our health and well-being.
 </p>
 
 <img
-  src="/images/protecting-environment.jpeg"
-  alt="Protecting the environment supports a healthy planet, healthy living and future generations."
-  loading="lazy"
-  style="width:100%; height:auto; border-radius:12px; margin-top:20px;"
+src="/images/protecting-environment.jpeg"
+alt="Protecting the environment supports a healthy planet, healthy living and future generations."
+class="article-image"
+loading="lazy"
+
 >
 
 </section>
 
+<!-- ARTICLE -->
 
-<!-- SECTION 2: ARTICLE + REFLECTION -->
 <section class="card">
 
 <h2>🌎 Wellness and Sustainability</h2>
@@ -110,6 +602,15 @@ A small action may seem insignificant, but many small actions, repeated
 consistently, can become meaningful over time.
 </p>
 
+</div>
+
+</section>
+
+<!-- REFLECTION -->
+
+<section class="reflection">
+
+<div id="reflectionText">
 
 <h2>🌱 A Small Reflection</h2>
 
@@ -126,9 +627,11 @@ that you normally pass without thinking.
 Take a few quiet moments to observe it.
 </p>
 
-<p>
-Ask yourself:
-<em>What does this small part of nature provide for the world around us?</em>
+<p class="reflection-question">
+Ask yourself:<br>
+<em>
+What does this small part of nature provide for the world around us?
+</em>
 </p>
 
 <p>
@@ -145,74 +648,149 @@ become meaningful habits.
 </div>
 
 <button
-  type="button"
-  id="readAloudButton"
-  aria-label="Read article and reflection aloud"
-  style="margin-top:15px; padding:10px 16px; cursor:pointer;"
+type="button"
+id="readAloudButton"
+aria-label="Read article and reflection aloud"
+
 >
-🔊 Read Aloud
-</button>
+
+🔊 Read Aloud </button>
 
 </section>
 
+</main>
 
-<!-- FOOTER -->
-<footer class="footer">
+<!-- =========================
+     FOOTER
+========================= -->
 
-<p>© 2026 Yangocean</p>
+<footer>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="/mindfulness.html">
+Mindful Living
+</a>
+
+<a href="/nature-connection.html">
+Nature Connection
+</a>
+
+<a href="/blog.html">
+Journal
+</a>
+
+<a href="/apps.html">
+Related Apps
+</a>
+
+<a href="/contact.html">
+Contact
+</a>
+
+</div>
 
 <p>
-<a href="/about.html">About</a> |
-<a href="/contact.html">Contact</a> |
-<a href="/privacy.html">Privacy</a>
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
 </p>
 
 </footer>
 
-</div>
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
 
-
-<!-- READ ALOUD SCRIPT -->
 <script>
 
-const readAloudButton = document.getElementById("readAloudButton");
-const readAloudText = document.getElementById("readAloudText");
+const readAloudButton =
+document.getElementById("readAloudButton");
+
+const readAloudText =
+document.getElementById("readAloudText");
+
+const reflectionText =
+document.getElementById("reflectionText");
+
 
 readAloudButton.addEventListener("click", function () {
 
-    if ("speechSynthesis" in window) {
+    if (!("speechSynthesis" in window)) {
 
-        if (speechSynthesis.speaking) {
-            speechSynthesis.cancel();
-            readAloudButton.textContent = "🔊 Read Aloud";
-            return;
-        }
+        alert(
+            "Sorry, your browser does not support Read Aloud."
+        );
 
-        const text = readAloudText.innerText;
-
-        const speech = new SpeechSynthesisUtterance(text);
-
-        speech.lang = "en-US";
-        speech.rate = 0.95;
-        speech.pitch = 1;
-
-        speech.onend = function () {
-            readAloudButton.textContent = "🔊 Read Aloud";
-        };
-
-        readAloudButton.textContent = "⏹ Stop";
-
-        speechSynthesis.speak(speech);
-
-    } else {
-
-        alert("Sorry, your browser does not support Read Aloud.");
-
+        return;
     }
+
+
+    if (speechSynthesis.speaking) {
+
+        speechSynthesis.cancel();
+
+        readAloudButton.textContent =
+            "🔊 Read Aloud";
+
+        return;
+    }
+
+
+    const article =
+        readAloudText.innerText;
+
+    const reflection =
+        reflectionText.innerText;
+
+
+    const text =
+        article + ". " + reflection;
+
+
+    const speech =
+        new SpeechSynthesisUtterance(text);
+
+
+    speech.lang = "en-US";
+
+    speech.rate = 0.95;
+
+    speech.pitch = 1;
+
+
+    speech.onstart = function () {
+
+        readAloudButton.textContent =
+            "⏹ Stop";
+
+    };
+
+
+    speech.onend = function () {
+
+        readAloudButton.textContent =
+            "🔊 Read Aloud";
+
+    };
+
+
+    speech.onerror = function () {
+
+        readAloudButton.textContent =
+            "🔊 Read Aloud";
+
+    };
+
+
+    speechSynthesis.cancel();
+
+    speechSynthesis.speak(speech);
 
 });
 
 </script>
 
 </body>
+
 </html>
