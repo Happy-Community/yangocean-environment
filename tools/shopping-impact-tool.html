@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -433,4 +434,880 @@ footer a:hover {
 
 <div class="brand">
 
-<a href="/" class="lo
+<a href="/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Mindful Living • Nature • Sustainability
+</div>
+
+</div>
+
+<nav>
+
+<a href="/">Home</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Mindful Living ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/mindfulness.html">
+🧘 Mindfulness &amp; Dhamma
+</a>
+
+<a href="/mindful-eating.html">
+🥗 Mindful Eating
+</a>
+
+<a href="/sustainable-living.html">
+♻️ Sustainable Living
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Nature Connection ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/nature-connection.html">
+🌳 Nature Connection
+</a>
+
+<a href="/eco.html">
+🌍 Environmental Awareness
+</a>
+
+<a href="/blog.html">
+📝 Journal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Related Apps ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/apps.html">
+📱 All Related Apps
+</a>
+
+<a href="/apps.html#eft">
+🌿 Yangocean App
+</a>
+
+<a href="/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+
+<a href="/ms/">BM</a>
+
+<a href="/zh/">中文</a>
+
+<a href="/fr/">FR</a>
+
+<a href="/es/">ES</a>
+
+<a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<section class="hero">
+
+<h1>🛍️ Shopping Impact Tool</h1>
+
+<p>
+A simple way to pause before buying and think about necessity,
+durability, reuse, repair, packaging and whether an item could be
+borrowed, shared or bought second-hand.
+</p>
+
+</section>
+
+<div class="read-aloud">
+
+<button
+type="button"
+class="tts-btn"
+onclick="startReading()">
+🔊 Read Aloud </button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="pauseReading()">
+⏸ Pause </button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="stopReading()">
+⏹ Stop </button>
+
+</div>
+
+<section class="section">
+
+<h2>🛍️ Before You Buy</h2>
+
+<p class="section-intro">
+Shopping has an environmental impact beyond the moment of purchase.
+Materials, manufacturing, transport, packaging, use and disposal can
+all contribute to that impact. This tool encourages a short pause
+before buying so you can consider the whole life of a product.
+</p>
+
+<div class="calculator">
+
+<div class="field">
+
+<label for="necessity">
+1. How necessary is this purchase?
+</label>
+
+<select id="necessity">
+
+<option value="1">
+I do not really need it
+</option>
+
+<option value="2">
+It would be nice to have
+</option>
+
+<option value="3">
+It is useful but not urgent
+</option>
+
+<option value="4">
+I need it
+</option>
+
+<option value="5">
+I definitely need it
+</option>
+
+</select>
+
+<span class="help">
+Think about whether you already have something that serves the
+same purpose.
+</span>
+
+</div>
+
+<div class="field">
+
+<label for="lifespan">
+2. How long is the item likely to last?
+</label>
+
+<select id="lifespan">
+
+<option value="1">
+Very short-lived
+</option>
+
+<option value="2">
+Less than a year
+</option>
+
+<option value="3">
+Several years
+</option>
+
+<option value="4">
+Many years
+</option>
+
+<option value="5">
+Very durable / built to last
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="reuse">
+3. Can it be reused?
+</label>
+
+<select id="reuse">
+
+<option value="1">
+Mostly single-use
+</option>
+
+<option value="2">
+Limited reuse
+</option>
+
+<option value="3">
+Can be reused sometimes
+</option>
+
+<option value="4">
+Can be reused many times
+</option>
+
+<option value="5">
+Highly reusable
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="repair">
+4. Can it be repaired or maintained?
+</label>
+
+<select id="repair">
+
+<option value="1">
+Not repairable
+</option>
+
+<option value="2">
+Difficult to repair
+</option>
+
+<option value="3">
+Some parts can be repaired
+</option>
+
+<option value="4">
+Generally repairable
+</option>
+
+<option value="5">
+Easy to maintain and repair
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="packaging">
+5. How much packaging does it have?
+</label>
+
+<select id="packaging">
+
+<option value="1">
+A lot of unnecessary packaging
+</option>
+
+<option value="2">
+Quite a lot of packaging
+</option>
+
+<option value="3">
+Moderate packaging
+</option>
+
+<option value="4">
+Limited packaging
+</option>
+
+<option value="5">
+Very little / reusable packaging
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="secondhand">
+6. Could you borrow, share or buy it second-hand?
+</label>
+
+<select id="secondhand">
+
+<option value="1">
+No alternative considered
+</option>
+
+<option value="2">
+Probably not
+</option>
+
+<option value="3">
+Possibly
+</option>
+
+<option value="4">
+Yes, worth considering
+</option>
+
+<option value="5">
+Yes, I can borrow, share or buy second-hand
+</option>
+
+</select>
+
+</div>
+
+<button
+type="button"
+class="calculate-btn"
+onclick="calculateImpact()">
+Calculate Shopping Impact Score </button>
+
+<div
+id="result"
+class="result"
+aria-live="polite">
+
+<div class="score"
+id="score">
+0
+</div>
+
+<div
+class="result-title"
+id="resultTitle">
+Shopping Impact Score
+</div>
+
+<p id="resultText"></p>
+
+<div
+class="advice"
+id="advice">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 What Does the Score Mean?</h2>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>80–100: Lower Impact Choice</h3>
+
+<p>
+The purchase appears to have several positive qualities, such as
+being necessary, durable, reusable, repairable or lightly packaged.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>60–79: Moderate Impact</h3>
+
+<p>
+There are some good qualities, but you may be able to improve the
+choice by considering durability, packaging, reuse or another option.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>40–59: Consider Again</h3>
+
+<p>
+A short pause may be useful. Ask whether you already own something
+similar or whether borrowing, repairing or buying second-hand could
+work.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>0–39: Higher Impact Choice</h3>
+
+<p>
+Consider whether the purchase is necessary and whether a longer-lasting,
+reusable, repairable or lower-packaging alternative is available.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>♻️ What Makes a Shopping Choice More Sustainable?</h2>
+
+<p>
+There is no single factor that determines whether a product is
+sustainable. Looking at several factors together can provide a more
+useful picture.
+</p>
+
+<ul>
+
+<li>
+<strong>Necessity:</strong>
+Buying only what you genuinely need can reduce unnecessary resource use.
+</li>
+
+<li>
+<strong>Durability:</strong>
+A product that lasts longer may reduce the need for repeated replacement.
+</li>
+
+<li>
+<strong>Reuse:</strong>
+Products that can be used many times may reduce waste compared with
+single-use alternatives.
+</li>
+
+<li>
+<strong>Repair:</strong>
+Repairing an item can extend its useful life and delay disposal.
+</li>
+
+<li>
+<strong>Packaging:</strong>
+Choosing less packaging or reusable packaging can reduce material waste.
+</li>
+
+<li>
+<strong>Second-hand and sharing:</strong>
+Borrowing, sharing, renting or buying used items can sometimes avoid
+the need for a new product.
+</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌍 Think Beyond the Purchase</h2>
+
+<p>
+A product's environmental impact can occur at many stages of its life.
+Raw materials may need to be extracted, products manufactured and
+transported, and packaging produced. After purchase, energy, water,
+maintenance and eventual disposal may also matter.
+</p>
+
+<p>
+This does not mean that every purchase needs a complicated calculation.
+For everyday decisions, a few simple questions can be enough:
+</p>
+
+<ul>
+
+<li>Do I really need this?</li>
+
+<li>Do I already own something that can do the same job?</li>
+
+<li>Will it last?</li>
+
+<li>Can I repair it?</li>
+
+<li>Can I reuse it?</li>
+
+<li>Can I choose less packaging?</li>
+
+<li>Could I borrow, share or buy it second-hand?</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 A More Mindful Way to Shop</h2>
+
+<p>
+Sustainable shopping is not about making every purchase perfect.
+It is about becoming more aware of the choices we make and gradually
+reducing unnecessary consumption.
+</p>
+
+<p>
+Sometimes the most sustainable option is simply to use what we already
+have.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>ℹ️ About This Tool</h2>
+
+<p>
+The Shopping Impact Score is a simple educational guide. It is not a
+scientific measurement of exact carbon emissions, ecological damage or
+the total environmental footprint of a product.
+</p>
+
+<p>
+Actual environmental impacts vary according to materials, manufacturing
+methods, energy sources, transport, product lifespan, use, repair,
+packaging and end-of-life treatment.
+</p>
+
+<p>
+Use the score as a prompt for mindful decision-making rather than as a
+precise environmental assessment.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="/mindfulness.html">
+Mindful Living
+</a>
+
+<a href="/nature-connection.html">
+Nature Connection
+</a>
+
+<a href="/blog.html">
+Journal
+</a>
+
+<a href="/apps.html">
+Related Apps
+</a>
+
+<a href="/contact.html">
+Contact
+</a>
+
+</div>
+
+<p>
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
+</p>
+
+</footer>
+
+<script>
+
+/* SHOPPING IMPACT TOOL */
+
+function calculateImpact() {
+
+    const necessity =
+        Number(document.getElementById("necessity").value);
+
+    const lifespan =
+        Number(document.getElementById("lifespan").value);
+
+    const reuse =
+        Number(document.getElementById("reuse").value);
+
+    const repair =
+        Number(document.getElementById("repair").value);
+
+    const packaging =
+        Number(document.getElementById("packaging").value);
+
+    const secondhand =
+        Number(document.getElementById("secondhand").value);
+
+
+    /*
+     * Six factors.
+     *
+     * Each factor is scored from 1 to 5.
+     * The total is converted to a 0–100 score.
+     */
+
+    const total =
+        necessity +
+        lifespan +
+        reuse +
+        repair +
+        packaging +
+        secondhand;
+
+    const score =
+        Math.round((total / 30) * 100);
+
+
+    let title = "";
+    let text = "";
+    let advice = "";
+
+
+    if (score >= 80) {
+
+        title = "Lower Impact Choice";
+
+        text =
+            "This choice has several qualities that can support more mindful consumption.";
+
+        advice =
+            "If you need the item, consider keeping it in use for as long as possible, maintaining it well and avoiding unnecessary replacement.";
+
+    }
+
+    else if (score >= 60) {
+
+        title = "Moderate Impact";
+
+        text =
+            "There are some positive aspects to this choice, although there may be ways to reduce its impact further.";
+
+        advice =
+            "Consider whether you can choose a longer-lasting version, reduce packaging, repair an existing item or choose a second-hand option.";
+
+    }
+
+    else if (score >= 40) {
+
+        title = "Consider Again";
+
+        text =
+            "A short pause may help you decide whether this purchase is really necessary.";
+
+        advice =
+            "Check whether you already own something similar or whether borrowing, sharing, repairing or buying second-hand could meet the same need.";
+
+    }
+
+    else {
+
+        title = "Higher Impact Choice";
+
+        text =
+            "This choice has several factors that may increase its environmental impact.";
+
+        advice =
+            "Before buying, consider whether you really need the item and whether a durable, reusable, repairable or second-hand alternative is available.";
+
+    }
+
+
+    document.getElementById("score").textContent =
+        score + "/100";
+
+    document.getElementById("resultTitle").textContent =
+        title;
+
+    document.getElementById("resultText").textContent =
+        text;
+
+    document.getElementById("advice").textContent =
+        advice;
+
+    document.getElementById("result").style.display =
+        "block";
+
+
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* READ ALOUD */
+
+let speechQueue = [];
+let currentIndex = 0;
+
+
+function getReadingText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+
+    const elements =
+        content.querySelectorAll("h1, h2, h3, p, li");
+
+
+    const texts = [];
+
+
+    elements.forEach(function(element) {
+
+        const text =
+            element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
+        }
+
+    });
+
+
+    return texts;
+
+}
+
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Text-to-speech is not supported in this browser."
+        );
+
+        return;
+
+    }
+
+
+    if (speechSynthesis.paused) {
+
+        speechSynthesis.resume();
+
+        return;
+
+    }
+
+
+    speechSynthesis.cancel();
+
+
+    speechQueue =
+        getReadingText();
+
+    currentIndex = 0;
+
+
+    speakNext();
+
+}
+
+
+function speakNext() {
+
+    if (
+        currentIndex >= speechQueue.length
+    ) {
+
+        return;
+
+    }
+
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
+
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+
+    utterance.onend = function() {
+
+        currentIndex++;
+
+        speakNext();
+
+    };
+
+
+    speechSynthesis.speak(
+        utterance
+    );
+
+}
+
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
+    }
+
+}
+
+
+function stopReading() {
+
+    if (
+        "speechSynthesis" in window
+    ) {
+
+        speechSynthesis.cancel();
+
+        speechQueue = [];
+
+        currentIndex = 0;
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
