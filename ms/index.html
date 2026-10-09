@@ -1,653 +1,687 @@
 <!DOCTYPE html>
-
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
 
-<title>Yangocean | Kehidupan Berkesedaran, Alam Semula Jadi & Kelestarian Harian</title>
+<title>Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Yangocean meneroka kesedaran, pemakanan berkesedaran, kehidupan beretika, hubungan dengan alam semula jadi, kesedaran alam sekitar dan kelestarian praktikal dalam kehidupan harian melalui renungan ringkas dan sumber yang berguna.">
-
-<meta name="keywords" content="kesedaran, kehidupan berkesedaran, pemakanan berkesedaran, kehidupan beretika, hubungan dengan alam semula jadi, kelestarian, kesedaran alam sekitar, kehidupan sederhana, kehidupan secara sedar, kelestarian harian">
+<meta name="description" content="Terokai kehidupan berkesedaran, kesedaran, pemakanan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian melalui renungan ringkas serta sumber yang berguna.">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://yangocean.com/ms/">
-
-<!-- Hreflang -->
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/">
 
-<!-- Open Graph -->
-
-<meta property="og:title" content="Yangocean | Kehidupan Berkesedaran, Alam Semula Jadi & Kelestarian Harian">
-<meta property="og:description" content="Terokai kesedaran, pemakanan berkesedaran, kehidupan beretika, hubungan dengan alam semula jadi, kesedaran alam sekitar dan kelestarian praktikal dalam kehidupan harian.">
+<meta property="og:title" content="Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian">
+<meta property="og:description" content="Renungan ringkas dan sumber berguna untuk kehidupan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yangocean.com/ms/">
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 <meta property="og:site_name" content="Yangocean">
 
-<!-- Google AdSense -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian">
+<meta name="twitter:description" content="Renungan ringkas dan sumber berguna untuk kehidupan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian.">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
-crossorigin="anonymous"></script>
-
-<!-- Structured Data -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Yangocean",
-  "url": "https://yangocean.com/ms/",
-  "description": "Yangocean meneroka kehidupan berkesedaran, hubungan dengan alam semula jadi, kesedaran alam sekitar dan kelestarian harian."
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Yangocean",
-  "url": "https://yangocean.com/ms/"
-}
-</script>
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.7;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
     color: #333;
-    background: #fafafa;
+    background: #f7f9f6;
 }
 
 header {
-    background: #f1f7f2;
-    padding: 20px;
-    text-align: center;
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: .8rem;
+    color: #777;
+    margin-top: 2px;
 }
 
 nav {
-    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
-nav a {
-    margin: 0 8px;
+nav a,
+.dropbtn {
+    color: #444;
     text-decoration: none;
-    color: #285943;
-    font-weight: 500;
+    font-size: .95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: .85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
 }
 
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 20px;
-}
-
-section {
-    margin: 45px 0;
+    padding: 30px 20px 60px;
 }
 
 .hero {
     text-align: center;
-    padding: 55px 20px;
+    padding: 55px 20px 45px;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
 }
 
 .hero p {
-    max-width: 800px;
-    margin: 20px auto;
-    font-size: 1.1rem;
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
 }
 
-.cards {
+.section {
+    margin-top: 45px;
+}
+
+.section h2 {
+    text-align: center;
+    color: #2f5d3a;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 25px;
+    text-align: center;
+    color: #666;
+}
+
+.card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
+    background: #fff;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.06);
+    text-align: center;
 }
 
 .card h3 {
     margin-top: 0;
+    color: #315f3b;
+}
+
+.card p {
+    color: #666;
+    font-size: .95rem;
 }
 
 .card a {
-    color: #285943;
-    font-weight: bold;
+    display: inline-block;
+    margin-top: 8px;
     text-decoration: none;
+    color: #2f6b3f;
+    font-weight: bold;
+}
+
+.card a:hover {
+    text-decoration: underline;
 }
 
 .reflection {
-    background: #f1f7f2;
-    padding: 30px;
+    background: #edf4ec;
     border-radius: 12px;
+    padding: 30px;
     text-align: center;
+    margin-top: 35px;
 }
 
-.news-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
+.reflection h2 {
+    margin-top: 0;
+}
+
+#dailyReflection {
+    font-size: 1.1rem;
+    color: #405944;
+    font-style: italic;
+}
+
+.simple-thought {
+    text-align: center;
+    margin: 50px auto 20px;
+    max-width: 720px;
+}
+
+.simple-thought h2 {
+    color: #2f5d3a;
 }
 
 footer {
-    background: #f1f7f2;
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 60px;
+    color: #666;
+    font-size: .9rem;
 }
 
 footer a {
-    color: #285943;
+    color: #49664e;
     text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: .9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
 <header>
+    <div class="header-inner">
 
-<nav aria-label="Language navigation">
-    <a href="/">EN</a>
-    <a href="/ms/">BM</a>
-    <a href="/zh/">中文</a>
-    <a href="/fr/">FR</a>
-    <a href="/es/">ES</a>
-</nav>
+        <div>
+            <a href="/ms/" class="logo">Yangocean</a>
+            <div class="tagline">
+                Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
+            </div>
+        </div>
 
-<nav aria-label="Main navigation">
-    <a href="/ms/mindfulness.html">Kesedaran & Dhamma</a>
-    <a href="/ms/mindful-ethical-living.html">Gaya Hidup Berkesedaran</a>
-    <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
-    <a href="/ms/nature-connection.html">Hubungan dengan Alam Semula Jadi</a>
-    <a href="/ms/sustainable-living.html">Kehidupan Lestari</a>
-    <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
-    <a href="/ms/blog.html">Jurnal</a>
-    <a href="/ms/apps.html">Aplikasi</a>
-</nav>
+        <nav aria-label="Navigasi utama">
 
+            <a href="/ms/">Laman Utama</a>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button" aria-haspopup="true">
+                    🌿 Kehidupan Berkesedaran ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/ms/mindfulness.html">🧘 Kesedaran &amp; Dhamma</a>
+                    <a href="/ms/mindful-eating.html">🥗 Pemakanan Berkesedaran</a>
+                    <a href="/ms/sustainable-living.html">♻️ Kehidupan Lestari</a>
+                    <a href="/ms/mindful-ethical-living.html">🌱 Kehidupan Beretika</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button" aria-haspopup="true">
+                    🌳 Hubungan dengan Alam ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/ms/nature-connection.html">
+                        🌳 Hubungan dengan Alam Semula Jadi
+                    </a>
+                    <a href="/ms/blog.html">📝 Jurnal</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button" aria-haspopup="true">
+                    📱 Aplikasi Berkaitan ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/ms/apps.html">📱 Semua Aplikasi</a>
+                    <a href="/ms/apps.html#eft">🌿 Yangocean EFT Tapping</a>
+                    <a href="/ms/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+                    <a href="/ms/apps.html#duidui-fit">🏃 DuiDui Fit</a>
+                </div>
+            </div>
+
+            <div class="language" aria-label="Pilihan bahasa">
+                <a href="/">EN</a>
+                <a href="/ms/" aria-current="page">BM</a>
+                <a href="/zh/">中文</a>
+                <a href="/fr/">FR</a>
+                <a href="/es/">ES</a>
+                <a href="/my/">မြန်မာ</a>
+            </div>
+
+        </nav>
+    </div>
 </header>
 
-<main>
-
-<section class="hero">
-
-<h1>🌿 Kehidupan Berkesedaran, Alam Semula Jadi & Kelestarian Harian</h1>
-
-<p>
-Yangocean ialah ruang untuk meneroka kesedaran, gaya hidup yang berkesedaran dan beretika,
-hubungan dengan alam semula jadi, kesedaran alam sekitar, pemakanan berkesedaran dan
-kelestarian sederhana dalam kehidupan harian.
-</p>
-
-<p>
-Tujuannya bukan untuk memberikan semua jawapan, tetapi untuk menggalakkan kesedaran,
-rasa ingin tahu dan pilihan yang lebih berhemah dalam kehidupan seharian.
-</p>
-
-</section>
-
-<section>
-
-<h2>🌱 Tentang Yangocean</h2>
-
-<p>
-Yangocean menghimpunkan renungan dan sumber praktikal tentang hubungan antara kehidupan
-dalaman kita, pilihan harian dan alam semula jadi di sekeliling kita.
-</p>
-
-<p>
-Daripada renungan berasaskan kesedaran dan Dhamma kepada makanan, alam semula jadi,
-kesedaran alam sekitar dan kelestarian, laman ini meneroka bagaimana detik-detik kecil
-kesedaran boleh mempengaruhi cara kita hidup.
-</p>
-
-</section>
-
-<section class="reflection">
-
-<h2>🌿 Renungan Harian</h2>
-
-<p id="dailyReflection">
-Luangkan sedikit masa untuk berhenti seketika, memerhati dan menghargai saat ini.
-</p>
-
-</section>
-
-<section>
-
-<h2>🌍 Terokai Yangocean</h2>
-
-<p>
-Terokai bidang utama Yangocean, daripada kesedaran dan kehidupan berkesedaran kepada
-alam semula jadi, kesedaran alam sekitar, makanan dan kelestarian harian.
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>🧘 Kesedaran & Dhamma</h3>
-<p>
-Terokai kesedaran, belas kasihan, ketidakkekalan dan renungan ringkas yang diilhamkan
-oleh kesedaran serta perspektif Buddhisme Theravada.
-</p>
-<a href="/ms/mindfulness.html">Terokai Kesedaran →</a>
-</div>
-
-<div class="card">
-<h3>🌍 Kesedaran Alam Sekitar</h3>
-<p>
-Fahami hubungan antara alam semula jadi, sumber, penggunaan, pencemaran dan pilihan harian.
-</p>
-<a href="/ms/eco.html">Terokai Kesedaran Alam Sekitar →</a>
-</div>
-
-<div class="card">
-<h3>🥗 Pemakanan Berkesedaran</h3>
-<p>
-Terokai makanan dengan lebih sedar, termasuk pemakanan, tabiat makan, sumber dan
-hubungan kita dengan makanan.
-</p>
-<a href="/ms/mindful-eating.html">Terokai Pemakanan Berkesedaran →</a>
-</div>
-
-<div class="card">
-<h3>🌱 Gaya Hidup Berkesedaran & Beretika</h3>
-<p>
-Renungkan pilihan harian, nilai, tanggungjawab, kebaikan dan kesan daripada cara kita hidup.
-</p>
-<a href="/ms/mindful-ethical-living.html">Terokai Gaya Hidup Berkesedaran →</a>
-</div>
-
-<div class="card">
-<h3>🌳 Hubungan dengan Alam Semula Jadi</h3>
-<p>
-Berhubung semula dengan pokok, haiwan, landskap dan sistem kehidupan yang mengelilingi kita.
-</p>
-<a href="/ms/nature-connection.html">Terokai Hubungan dengan Alam Semula Jadi →</a>
-</div>
-
-<div class="card">
-<h3>♻️ Kehidupan Lestari</h3>
-<p>
-Temui pendekatan praktikal untuk menggunakan sumber dengan lebih berhemah dan mengurangkan
-kesan alam sekitar yang tidak perlu.
-</p>
-<a href="/ms/sustainable-living.html">Terokai Kehidupan Lestari →</a>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>✨ Terkini dari Yangocean</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🧘 Kesedaran</h3>
-<p>
-Renungan ringkas tentang kesedaran, kehadiran, belas kasihan dan hidup dengan lebih jelas.
-</p>
-<a href="/ms/mindfulness.html">Baca lagi →</a>
-</div>
-
-<div class="card">
-<h3>🥗 Pemakanan Berkesedaran</h3>
-<p>
-Terokai hubungan yang lebih sedar dengan makanan, pemakanan dan pilihan makan harian.
-</p>
-<a href="/ms/mindful-eating.html">Baca lagi →</a>
-</div>
-
-<div class="card">
-<h3>🌳 Jurnal Alam Semula Jadi</h3>
-<p>
-Temui renungan, pemerhatian dan kisah yang diilhamkan oleh alam semula jadi.
-</p>
-<a href="/ms/blog.html">Lawati Jurnal →</a>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>📝 Jurnal Yangocean</h2>
-
-<p>
-Jurnal Yangocean ialah tempat pemerhatian, penemuan, gambar, lukisan, pengalaman peribadi
-dan persoalan boleh berkembang dari semasa ke semasa.
-</p>
-
-<p>
-Sesetengah catatan mungkin meneroka alam semula jadi, makanan, kelestarian, kehidupan
-berkesedaran atau detik-detik biasa dalam kehidupan harian. Ia dimaksudkan sebagai
-renungan, bukannya jawapan muktamad.
-</p>
-
-<p>
-<a href="/ms/blog.html">Terokai Jurnal Yangocean →</a>
-</p>
-
-</section>
-
-<section>
-
-<h2>🌍 Kehidupan Alam Sekitar & Lestari</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🌍 Kesedaran Alam Sekitar</h3>
-<p>
-Pelajari hubungan antara aktiviti manusia, sistem semula jadi, sumber dan kesan terhadap alam sekitar.
-</p>
-<a href="/ms/eco.html">Panduan Kesedaran Alam Sekitar →</a>
-</div>
-
-<div class="card">
-<h3>♻️ Kehidupan Lestari</h3>
-<p>
-Terokai cara praktikal untuk melihat penggunaan harian, sumber dan pilihan gaya hidup dengan lebih berhemah.
-</p>
-<a href="/ms/sustainable-living.html">Kehidupan Lestari →</a>
-</div>
-
-<div class="card">
-<h3>🌱 Jejak Karbon</h3>
-<p>
-Ketahui lebih lanjut tentang kesan karbon dan beberapa aktiviti harian yang boleh menyumbang
-kepada pelepasan gas rumah hijau.
-</p>
-<a href="/ms/reduce-carbon-footprint.html">Terokai Jejak Karbon →</a>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>🌳 Hubungan dengan Alam Semula Jadi</h2>
-
-<p>
-Alam semula jadi bukan sesuatu yang terpisah daripada kehidupan harian. Pokok, air, tanah,
-haiwan, tumbuhan dan ekosistem adalah sebahagian daripada sistem yang menyokong kita.
-</p>
-
-<p>
-Yangocean meneroka cara mudah untuk memerhati dan berhubung semula dengan alam semula jadi.
-</p>
-
-<p>
-<a href="/ms/nature-connection.html">Terokai Hubungan dengan Alam Semula Jadi →</a>
-</p>
-
-</section>
-
-<section>
-
-<h2>📱 Aplikasi Yangocean</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Yangocean EFT Tapping</h3>
-<p>
-Aplikasi ringkas untuk meneroka amalan EFT tapping.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Lihat di Google Play →
-</a>
-</div>
-
-<div class="card">
-<h3>QuQu Healthy Body</h3>
-<p>
-Terokai alat dan idea ringkas berkaitan kehidupan harian yang sihat.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Lihat di Google Play →
-</a>
-</div>
-
-<div class="card">
-<h3>DuiDui Fit</h3>
-<p>
-Aplikasi kecergasan ringkas untuk pergerakan dan aktiviti harian.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Lihat di Google Play →
-</a>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>📰 Bacaan Alam Sekitar</h2>
-
-<p>
-Terokai berita dan artikel alam sekitar terpilih daripada sumber luar. Pautan ini disediakan
-untuk bacaan lanjut dan tidak mewakili pemilikan editorial Yangocean terhadap penerbitan
-yang dipautkan.
-</p>
-
-<div id="environmentalNews">
-<p>Memuatkan bacaan alam sekitar...</p>
-</div>
-
-</section>
-
-<section>
-
-<h2>🌿 Satu Renungan Ringkas</h2>
-
-<p>
-Kehidupan berkesedaran tidak semestinya memerlukan perubahan besar.
-Kadangkala ia bermula dengan sekadar menyedari:
-</p>
-
-<ul>
-<li>Apakah yang kita gunakan?</li>
-<li>Dari manakah ia datang?</li>
-<li>Apakah sumber yang digunakan?</li>
-<li>Bagaimanakah pilihan ini memberi kesan kepada hidupan lain?</li>
-<li>Bolehkah kita memilih sesuatu yang lebih ringkas?</li>
-</ul>
-
-<p>
-Kesedaran boleh datang sebelum tindakan. Daripada kesedaran, pilihan yang lebih berhemah
-boleh muncul secara beransur-ansur.
-</p>
-
-</section>
-
-<section>
-
-<h2>🌱 Teruskan Meneroka</h2>
-
-<p>
-Tiada satu cara sahaja untuk hidup dengan penuh kesedaran. Terokai bidang yang menarik
-minat anda dan kembali bila-bila masa anda ingin merenung semula.
-</p>
-
-<p>
-<a href="/ms/mindfulness.html">Kesedaran & Dhamma</a> ·
-<a href="/ms/eco.html">Kesedaran Alam Sekitar</a> ·
-<a href="/ms/mindful-ethical-living.html">Gaya Hidup Berkesedaran & Beretika</a> ·
-<a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a> ·
-<a href="/ms/nature-connection.html">Hubungan dengan Alam Semula Jadi</a> ·
-<a href="/ms/sustainable-living.html">Kehidupan Lestari</a> ·
-<a href="/ms/blog.html">Jurnal</a>
-</p>
-
-</section>
+<main id="content-to-read">
+
+    <section class="hero">
+        <h1>🌿 Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian</h1>
+
+        <p>
+            Ruang untuk idea ringkas, renungan dan sumber berguna yang
+            menggalakkan kesedaran terhadap diri sendiri, persekitaran
+            dan alam semula jadi.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Tentang Yangocean</h2>
+
+        <p class="section-intro">
+            Kita boleh menjalani kehidupan dengan lebih sedar melalui cara
+            kita makan, berfikir, bergerak, hidup dan berhubung dengan dunia
+            di sekeliling kita. Halaman di sini menghimpunkan renungan dan
+            maklumat praktikal tentang kehidupan berkesedaran, hubungan
+            dengan alam semula jadi dan kelestarian harian.
+        </p>
+    </section>
+
+    <section class="reflection">
+        <h2>🌱 Renungan Harian</h2>
+        <p id="dailyReflection" aria-live="polite"></p>
+    </section>
+
+    <section class="section">
+        <h2>🌿 Kehidupan Berkesedaran</h2>
+
+        <p class="section-intro">
+            Terokai pelbagai aspek kehidupan harian, daripada kesedaran
+            dan Dhamma kepada pemakanan berkesedaran serta pilihan yang
+            lebih lestari.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>🧘 Kesedaran &amp; Dhamma</h3>
+
+                <p>
+                    Renungan ringkas tentang kesedaran, perhatian dan Dhamma,
+                    dengan penekanan pada penerapan amalan dalam kehidupan
+                    seharian.
+                </p>
+
+                <a href="/ms/mindfulness.html">
+                    Terokai Kesedaran →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>🥗 Pemakanan Berkesedaran</h3>
+
+                <p>
+                    Terokai cara makan dengan lebih sedar, seimbang dan
+                    menghargai makanan serta pilihan yang kita buat setiap hari.
+                </p>
+
+                <a href="/ms/mindful-eating.html">
+                    Terokai Pemakanan Berkesedaran →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>♻️ Kehidupan Lestari</h3>
+
+                <p>
+                    Temui idea praktikal untuk membuat pilihan harian yang
+                    lebih teliti, bertanggungjawab dan lestari.
+                </p>
+
+                <a href="/ms/sustainable-living.html">
+                    Terokai Kehidupan Lestari →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>🌳 Hubungan dengan Alam Semula Jadi</h2>
+
+        <p class="section-intro">
+            Perhatikan alam yang hidup di sekeliling kita, pelajari perubahan
+            alam sekitar dan temui kisah serta pemerhatian daripada kehidupan
+            harian.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>🌳 Hubungan dengan Alam Semula Jadi</h3>
+
+                <p>
+                    Perlahankan langkah dan perhatikan pokok, tumbuhan,
+                    hidupan liar serta bahagian alam semula jadi yang sering
+                    terlepas daripada perhatian kita.
+                </p>
+
+                <a href="/ms/nature-connection.html">
+                    Berhubung dengan Alam →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>🌍 Alam Sekitar dan Perubahan Alam</h3>
+
+                <p>
+                    Fahami beberapa perubahan yang mempengaruhi iklim,
+                    lautan, tumbuhan dan biodiversiti, serta pertimbangkan
+                    kepentingan pilihan harian kita.
+                </p>
+
+                <a href="/ms/sustainable-living.html">
+                    Terokai Kehidupan Lestari →
+                </a>
+            </div>
+
+            <div class="card">
+                <h3>📝 Jurnal</h3>
+
+                <p>
+                    Baca renungan lebih panjang, pemerhatian dan kisah
+                    tentang kehidupan berkesedaran, alam semula jadi,
+                    kelestarian dan pengalaman harian.
+                </p>
+
+                <a href="/ms/blog.html">
+                    Baca Jurnal →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>📱 Aplikasi Berkaitan</h2>
+
+        <p class="section-intro">
+            Terokai alat digital dan aplikasi yang tersedia berkaitan
+            kesejahteraan serta kegunaan harian.
+        </p>
+
+        <div class="card-grid">
+
+            <div class="card">
+                <h3>📱 Aplikasi Berkaitan</h3>
+
+                <p>
+                    Temui aplikasi yang tersedia dan ketahui lebih lanjut
+                    tentang alat digital yang berkaitan dengan tema yang
+                    diterokai di laman ini.
+                </p>
+
+                <a href="/ms/apps.html">
+                    Lihat Aplikasi Berkaitan →
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="simple-thought">
+        <h2>🌱 Satu Renungan Ringkas</h2>
+
+        <p>
+            Detik kecil kesedaran boleh mengubah cara kita melihat diri
+            sendiri, orang lain dan dunia di sekeliling kita.
+        </p>
+    </section>
 
 </main>
 
 <footer>
+    <div>
+        <a href="/ms/">Laman Utama</a>
+        <a href="/ms/mindfulness.html">Kehidupan Berkesedaran</a>
+        <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
+        <a href="/ms/blog.html">Jurnal</a>
+        <a href="/ms/apps.html">Aplikasi Berkaitan</a>
+        <a href="/ms/contact.html">Hubungi</a>
+    </div>
 
-<p>
-© 2026 Yangocean. Kehidupan berkesedaran, alam semula jadi dan kelestarian harian.
-</p>
-
-<p>
-<a href="/ms/about.html">Tentang</a> ·
-<a href="/ms/contact.html">Hubungi</a> ·
-<a href="/ms/blog.html">Jurnal</a>
-</p>
-
+    <p>
+        &copy; 2026 • Kehidupan Berkesedaran • Alam Semula Jadi •
+        Kelestarian Harian
+    </p>
 </footer>
 
 <script>
-
-/* Daily Reflection */
-
 const reflections = [
-    "Berhenti seketika dan perhatikan apa yang sedang berlaku sekarang.",
-    "Satu pilihan kecil yang dibuat dengan kesedaran boleh menjadi permulaan kepada perubahan yang lebih besar.",
-    "Alam semula jadi tidak semestinya jauh. Perhatikan dengan teliti apa yang ada di sekeliling anda.",
-    "Sebelum mengubah dunia, mulakan dengan menyedari pilihan harian anda sendiri.",
-    "Kehidupan sederhana bermula dengan memahami apa yang benar-benar diperlukan.",
-    "Kebaikan juga boleh merangkumi cara kita melayan manusia, haiwan dan alam semula jadi.",
-    "Kesedaran memberi kita peluang untuk memilih, bukan sekadar bertindak balas."
+    "Perhatikan satu perkara kecil di sekeliling anda hari ini yang biasanya tidak anda sedari.",
+    "Sebelum makan, berhenti seketika dan hargai asal-usul makanan anda.",
+    "Pokok tidak perlu menjadi luar biasa untuk memberikan teduhan, tempat perlindungan dan kehidupan.",
+    "Pilihan kecil menjadi bermakna apabila dibuat dengan kesedaran.",
+    "Luangkan masa sejenak untuk mendengar bunyi alam semula jadi di sekeliling anda.",
+    "Ambil sekadar yang diperlukan dan hargai apa yang sudah anda miliki.",
+    "Kesedaran bermula dengan memberikan perhatian."
 ];
 
 const today = new Date();
-const reflectionIndex =
-    (today.getFullYear() + today.getMonth() + today.getDate())
-    % reflections.length;
+
+const index =
+    (today.getFullYear() * 1000) +
+    (today.getMonth() + 1) * 50 +
+    today.getDate();
 
 document.getElementById("dailyReflection").textContent =
-    reflections[reflectionIndex];
+    reflections[index % reflections.length];
+</script>
 
-/* Environmental Reading */
+<script>
+(function () {
 
-const feeds = [
-    {
-        name: "Mongabay Indonesia",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.mongabay.co.id/feed/"
-    },
-    {
-        name: "ANTARA Lingkungan",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://babel.antaranews.com/rss/lingkungan.xml"
-    },
-    {
-        name: "UNEP News",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.unep.org/rss.xml"
-    },
-    {
-        name: "National Geographic Environment",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
+    if (!("speechSynthesis" in window)) {
+        return;
     }
-];
 
+    const button = document.createElement("button");
 
+    button.type = "button";
+    button.textContent = "🔊 Baca Kuat";
+    button.setAttribute(
+        "aria-label",
+        "Baca kandungan halaman dengan kuat"
+    );
 
+    button.style.position = "fixed";
+    button.style.bottom = "20px";
+    button.style.right = "20px";
+    button.style.zIndex = "9999";
+    button.style.padding = "10px 15px";
+    button.style.border = "1px solid #ccc";
+    button.style.borderRadius = "8px";
+    button.style.background = "#fff";
+    button.style.cursor = "pointer";
+    button.style.boxShadow = "0 2px 8px rgba(0,0,0,.12)";
 
+    document.body.appendChild(button);
 
-async function loadEnvironmentalNews() {
+    let speaking = false;
 
-    const container =
-        document.getElementById("environmentalNews");
+    button.addEventListener("click", function () {
 
-    container.innerHTML = "";
-
-    for (const feed of feeds) {
-
-        try {
-
-            const response = await fetch(feed.url);
-            const data = await response.json();
-
-            if (!data.items) continue;
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent = feed.name;
-
-            container.appendChild(heading);
-
-            data.items.slice(0, 3).forEach(item => {
-
-                const article =
-                    document.createElement("div");
-
-                article.className = "news-item";
-
-                const title =
-                    document.createElement("h4");
-
-                const link =
-                    document.createElement("a");
-
-                link.href = item.link;
-                link.target = "_blank";
-                link.rel = "noopener";
-                link.textContent = item.title;
-
-                title.appendChild(link);
-
-                article.appendChild(title);
-
-                if (item.pubDate) {
-
-                    const date =
-                        document.createElement("small");
-
-                    date.textContent =
-                        new Date(item.pubDate).toLocaleDateString();
-
-                    article.appendChild(date);
-                }
-
-                container.appendChild(article);
-
-            });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load feed:",
-                feed.name,
-                error
-            );
-
+        if (speaking) {
+            speechSynthesis.cancel();
+            speaking = false;
+            button.textContent = "🔊 Baca Kuat";
+            return;
         }
 
-    }
+        const elements = document.querySelectorAll(
+            "#content-to-read h1, " +
+            "#content-to-read h2, " +
+            "#content-to-read h3, " +
+            "#content-to-read p"
+        );
 
-}
+        const text = Array.from(elements)
+            .map(el => el.innerText.trim())
+            .filter(Boolean)
+            .join(". ");
 
-loadEnvironmentalNews();
+        if (!text) {
+            return;
+        }
 
+        const utterance = new SpeechSynthesisUtterance(text);
+
+        utterance.lang = "ms-MY";
+        utterance.rate = 0.95;
+
+        utterance.onstart = function () {
+            speaking = true;
+            button.textContent = "⏹ Hentikan Bacaan";
+        };
+
+        utterance.onend = function () {
+            speaking = false;
+            button.textContent = "🔊 Baca Kuat";
+        };
+
+        utterance.onerror = function () {
+            speaking = false;
+            button.textContent = "🔊 Baca Kuat";
+        };
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+
+    });
+
+})();
 </script>
 
 </body>
