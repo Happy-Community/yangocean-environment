@@ -1,185 +1,811 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
+
 <head>
 <meta charset="UTF-8">
-<title>正念与佛法| 内心平静、智慧与慈悲 | Yangocean</title>
+
+<title>正念与佛法 | 觉知、智慧与慈悲 | Yangocean</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="通过达摩学习正念：冥想、善良、智慧与内心平静。培养平衡的生活方式，并通过觉知减少痛苦。">
+<meta name="description"
+content="通过正念、禅修、慈悲、智慧与无常的反思，探索佛法，并将觉知融入日常生活，培养更平和、平衡与负责任的生活方式。">
+
+<meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="/styles.css">
 
-<link rel="canonical" href="https://yangocean.com/mindfulness.html">
+<link rel="canonical"
+href="https://yangocean.com/zh/mindfulness.html">
 
-<link rel="alternate" hreflang="en" href="https://yangocean.com/mindfulness.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/mindfulness.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/mindfulness.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/mindfulness.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/mindfulness.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/mindfulness.html">
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-     crossorigin="anonymous"></script>
-  
+<!-- HREFLANG -->
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/mindfulness.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/mindfulness.html">
+
+<link rel="alternate" hreflang="zh"
+href="https://yangocean.com/zh/mindfulness.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/mindfulness.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/mindfulness.html">
+
+<link rel="alternate" hreflang="my"
+href="https://yangocean.com/my/mindfulness.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/mindfulness.html">
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+
+<meta property="og:title"
+content="正念与佛法 | 觉知、智慧与慈悲">
+
+<meta property="og:description"
+content="通过正念、禅修、慈悲、智慧与无常的反思，学习如何将觉知融入日常生活。">
+
+<meta property="og:url"
+content="https://yangocean.com/zh/mindfulness.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/og-image.jpg">
+
+<meta property="og:locale" content="zh_CN">
+
+<!-- ADSENSE -->
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
+
+<style>
+/* READ ALOUD */
+
+.read-aloud {
+    text-align: center;
+    margin: 25px 0 35px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    margin: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    background: #285943;
+    color: white;
+}
+
+.read-aloud button:hover {
+    opacity: 0.9;
+}
+
+.read-aloud button:focus-visible {
+    outline: 3px solid #91b89e;
+    outline-offset: 3px;
+}
+
+#readAloudStatus {
+    font-size: 14px;
+    color: #555;
+}
+
+/* CONTENT */
+
+#content-to-read .card {
+    line-height: 1.9;
+}
+
+#content-to-read .card h2 {
+    margin-bottom: 15px;
+}
+
+#content-to-read .card h3 {
+    margin-top: 25px;
+}
+
+#content-to-read ul {
+    line-height: 2;
+}
+
+/* DROPDOWN NAVIGATION */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown > a {
+    display: inline-block;
+    padding: 9px 8px;
+    text-decoration: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 235px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #285943;
+}
+
+.dropdown-content a:hover {
+    background: #f2f7f3;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.dropdown > a:focus-visible,
+.dropdown-content a:focus-visible {
+    outline: 2px solid #285943;
+    outline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+    .dropdown {
+        margin: 3px 0;
+    }
+
+    .dropdown-content {
+        min-width: 210px;
+    }
+}
+</style>
+
 </head>
 
 <body class="theme-zh">
+
 <div class="container">
 
-<nav>
-  <a href="/">EN</a>
-  <a href="/ms/">MS</a>
-  <a href="/zh/">ZH</a>
-  <a href="/fr/">FR</a>
-  <a href="/es/">ES</a>
+<!-- HEADER -->
 
-  <span>|</span>
+<header>
 
-  <a href="/zh/eco-living.html">生态生活</a>
-  <a href="/zh/hygiene-planting.html">卫生与种植</a>
-  <a href="/zh/diet-exercise.html">饮食与运动</a>
-  <a href="/zh/mindfulness.html">正念</a>
+<div style="
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:15px;
+">
+
+<a href="/zh/"
+style="
+font-size:1.4rem;
+font-weight:700;
+text-decoration:none;
+color:#285943;
+">
+Yangocean
+</a>
+
+<!-- LANGUAGE -->
+
+<div aria-label="选择语言">
+
+<a href="/mindfulness.html" lang="en">EN</a> |
+<a href="/ms/mindfulness.html" lang="ms">BM</a> |
+<a href="/zh/mindfulness.html" lang="zh" aria-current="page">中文</a> |
+<a href="/fr/mindfulness.html" lang="fr">FR</a> |
+<a href="/es/mindfulness.html" lang="es">ES</a> |
+<a href="/my/mindfulness.html" lang="my">မြန်မာ</a>
+
+</div>
+
+</div>
+
+<!-- MAIN NAVIGATION -->
+
+<nav style="margin-top:18px; text-align:center;"
+aria-label="主导航">
+
+<!-- MINDFUL LIVING -->
+
+<span class="dropdown">
+
+<a href="/zh/mindfulness.html"
+aria-haspopup="true">
+🌿 正念生活 ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/sustainable-living.html">
+♻️ 可持续生活
+</a>
+
+</span>
+</span>
+
+<!-- NATURE CONNECTION -->
+
+<span class="dropdown">
+
+<a href="/zh/nature-connection.html"
+aria-haspopup="true">
+🌳 亲近自然 ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/eco.html">
+🌍 环境意识
+</a>
+
+<a href="/zh/blog.html">
+📝 日志
+</a>
+
+</span>
+</span>
+
+<!-- RELATED APPS -->
+
+<span class="dropdown">
+
+<a href="/zh/apps.html"
+aria-haspopup="true">
+📱 相关应用 ▾
+</a>
+
+<span class="dropdown-content">
+
+<a href="/zh/apps.html">
+📱 所有相关应用
+</a>
+
+<a href="/zh/apps.html#eft">
+🌿 Yangocean App
+</a>
+
+<a href="/zh/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/zh/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</span>
+</span>
+
 </nav>
 
+</header>
+
+<!-- MAIN CONTENT -->
+
+<main id="content-to-read">
+
+<!-- HERO -->
+
 <section class="hero">
-  <h1>🧘 正念与佛法</h1>
-  <p>内心的平静始于觉知、智慧与慈悲。</p>
+
+<h1>🧘 正念与佛法</h1>
+
+<p>
+内心的平静，可以从觉知、智慧与慈悲开始。
+</p>
+
 </section>
 
+<!-- READ ALOUD -->
+
+<div class="read-aloud" aria-label="朗读控制">
+
+<button
+type="button"
+id="readAloudButton"
+aria-label="朗读本页面内容">
+🔊 朗读
+</button>
+
+<button
+type="button"
+id="stopReadingButton"
+aria-label="停止朗读">
+⏹ 停止
+</button>
+
+<p id="readAloudStatus" aria-live="polite">
+点击“朗读”，聆听本页面的内容。
+</p>
+
+</div>
+
+<!-- WHAT IS MINDFULNESS -->
+
 <section class="card">
+
 <h2>🌿 什么是正念？</h2>
+
 <p>
-正念是一种完全觉知当下的练习——觉察你的思想、情绪与行为，而不被干扰或执着。
+正念是一种有意识地关注当下的练习。我们学习觉察正在发生的事情，而不是立刻对每一种经历作出反应。
 </p>
 
 <p>
-在正法中，正念是一条通向智慧的道路。它帮助我们理解生命的本质，减少痛苦，并以清晰与平衡的方式生活。
+我们可以觉察自己的呼吸、思想、情绪、身体感受和行为。这样的觉察有助于我们认识自己的习惯，并在日常生活中作出更审慎的回应。
 </p>
+
+<p>
+正念并不要求每一刻都必须平静或愉快。它始于如实观察当下正在发生的事情，一次只关注一个时刻。
+</p>
+
 </section>
 
+<!-- DHAMMA -->
+
 <section class="card">
-<h2>🪷 理解佛法</h2>
+
+<h2>🪷 正念与佛法</h2>
+
 <p>
-正法是自然的真理法则——事物真实的本来面貌。它教导无常、因果关系以及痛苦的本质。
+在佛教传统中，正念与智慧的培养及合乎道德的行为密切相关。它不只是一种放松技巧，也是理解心与生命的一部分修行。
 </p>
 
 <p>
-通过理解佛法，我们学会放下执着、减少欲望，并培养内在的平静。
+佛法鼓励我们观察变化，了解各种因缘条件，认识执着，并逐步培养慈悲与智慧。
 </p>
+
+<p>
+不同的佛教传统可能以不同的方式解释和实践这些教导。本页面主要分享受到上座部佛教观点启发的简单反思。
+</p>
+
 </section>
 
+<!-- DAILY AWARENESS -->
+
 <section class="card">
-<h2>🧘 禅修练习</h2>
+
+<h2>🌱 将正念融入日常生活</h2>
 
 <p>
-禅修训练心灵变得平静、专注与觉知，是培养正念的重要方法。
+正念可以在日常活动中练习。我们不必等到静坐冥想时，才开始培养觉知。
+</p>
+
+<ul>
+<li>走路时，留意自己的呼吸。</li>
+<li>吃饭时，专心感受正在享用的食物。</li>
+<li>别人说话时，用心聆听。</li>
+<li>作出反应之前，先觉察身体是否紧绷。</li>
+<li>生气时，先停一停，再决定是否发送讯息。</li>
+<li>观察自己的念头，不必立刻相信或跟随每一个念头。</li>
+</ul>
+
+<p>
+这些细小的觉知时刻，可以逐渐成为日常生活的一部分。
+</p>
+
+</section>
+
+<!-- MEDITATION -->
+
+<section class="card">
+
+<h2>🧘 简单的禅修练习</h2>
+
+<p>
+禅修为我们提供一个安静的机会，训练注意力并观察自己的心。初学者不必强迫自己清空所有念头。
 </p>
 
 <p>
-即使每天几分钟，也能带来清晰与情绪平衡。
+一种简单的方法，是以自然的呼吸作为注意力的对象。找一个舒适的姿势坐好，让身体慢慢放松，并留意呼吸时的感受。
 </p>
 
 <p>
-我们建议简单的练习方式：
-<br>🌅 <strong>早晨：</strong>15分钟以觉知开始一天
-<br>🌙 <strong>晚上：</strong>15分钟让心灵平静并反思
+当发现心思已经飘走时，温和地觉察这一点，然后把注意力带回呼吸。这个过程可能反复发生很多次。每一次重新回到呼吸，都是练习的一部分。
+</p>
+
+<h3>简单的日常练习</h3>
+
+<ul>
+<li>
+<strong>早晨：</strong>
+花 5 至 15 分钟，安静地观察呼吸。
+</li>
+
+<li>
+<strong>白天：</strong>
+在采取重要行动之前，有意识地呼吸几次。
+</li>
+
+<li>
+<strong>晚上：</strong>
+简单回顾当天的思想、言语与行为。
+</li>
+</ul>
+
+<p>
+练习的目的不是追求某一种特定感受，而是培养觉知，更清楚地观察自己的经验。
+</p>
+
+</section>
+
+<!-- COMPASSION -->
+
+<section class="card">
+
+<h2>💛 善良与慈悲</h2>
+
+<p>
+正念可以帮助我们觉察自己的言语和行为如何影响他人。当觉知能够支持善良与慈悲时，它便具有更深的意义。
 </p>
 
 <p>
-👉 <a href="https://yangocean-web.pages.dev/meditation-guide" target="_blank">
-禅修指南 – 开始你的练习
+我们可以从以下简单的行动开始：
+</p>
+
+<ul>
+<li>诚实地表达自己，同时避免不必要的伤害性言语。</li>
+<li>当别人需要倾听时，给予他们关注。</li>
+<li>在确实需要帮助时伸出援手。</li>
+<li>面对困难时，练习耐心与理解。</li>
+<li>给予他人时，不总是期待回报。</li>
+</ul>
+
+<p>
+慈悲并不意味着必须认同所有事情。我们可以尝试理解他人的处境，同时保持适当的界限。
+</p>
+
+</section>
+
+<!-- THOUGHTS AND EMOTIONS -->
+
+<section class="card">
+
+<h2>🌊 观察思想与情绪</h2>
+
+<p>
+思想和情绪有时会非常强烈，尤其是当我们立即跟随它们行动时。正念让我们有机会先观察，再决定如何回应。
+</p>
+
+<p>
+例如，当愤怒出现时，我们可以先在心中承认：<strong>“此刻，愤怒正在生起。”</strong>我们不必马上依照愤怒采取行动，而可以先观察这种感受、留意呼吸，并给自己一点时间作出选择。
+</p>
+
+<p>
+同样的方法也可以用于观察担忧、兴奋、悲伤、嫉妒、恐惧，以及其他不断变化的情绪和经验。
+</p>
+
+<p>
+我们的目标不是压抑情绪，而是更清楚地理解它们，避免被每一个短暂的反应所控制。
+</p>
+
+</section>
+
+<!-- WISDOM -->
+
+<section class="card">
+
+<h2>📖 从觉知走向智慧</h2>
+
+<p>
+觉知与智慧相互支持。当我们仔细观察生活中的经验时，会逐渐发现思想、感受、环境和人际关系都在不断变化。
+</p>
+
+<p>
+这样的观察能够帮助我们重新审视习以为常的想法，并了解自己所作选择可能带来的后果。
+</p>
+
+<p>
+学习可靠的教导、反思自身经验，并在日常生活中实践所学，可以逐渐加深我们的理解。
+</p>
+
+<p>
+有益的知识应当帮助我们看得更清楚，培养合乎道德的行为与慈悲，并愿意检视自己的假设和偏见。
+</p>
+
+</section>
+
+<!-- IMPERMANENCE -->
+
+<section class="card">
+
+<h2>🍃 从变化中学习</h2>
+
+<p>
+无常是佛教教导中的一个重要主题，指的是各种经验与条件都在不断变化。
+</p>
+
+<p>
+我们可以在日常生活中直接观察到这一点。早晨会变成傍晚，幼小的植物逐渐成长，天气不断变化，人际关系也会发展，而我们的思想与感受则不断生起和消逝。
+</p>
+
+<p>
+觉察变化，并不意味着我们必须疏远生活。相反，它可以帮助我们更加珍惜当下，而不假设眼前的一切都会永远保持原样。
+</p>
+
+</section>
+
+<!-- MINDFUL CHOICES -->
+
+<section class="card">
+
+<h2>⚖️ 在生活选择中保持觉知</h2>
+
+<p>
+觉知也会影响我们如何对待周围的世界。在作出选择之前，我们可以停下来，考虑这个决定对自己、他人、动物以及自然环境可能产生的影响。
+</p>
+
+<ul>
+<li>我真的需要这个东西吗？</li>
+<li>我是否可以选择更简单的方式？</li>
+<li>这个行动会不会造成不必要的浪费？</li>
+<li>我的言语可能会如何影响别人？</li>
+<li>我是在清楚觉察后行动，还是只是在重复习惯？</li>
+</ul>
+
+<p>
+这些问题将内在觉知与更审慎、更负责任的生活联系起来。
+</p>
+
+</section>
+
+<!-- PERSONAL REFLECTION -->
+
+<section class="card">
+
+<h2>🌿 一份宁静的反思</h2>
+
+<p>
+有时候，正念始于一件很平常的事情：停下来片刻，留意此时此刻已经存在的一切。
+</p>
+
+<p>
+雨声、随风摇动的树叶、与他人共享的一餐，甚至只是呼吸时的感觉，都可以成为我们回到当下的机会。
+</p>
+
+<p>
+我们不必把每一个时刻都变得特别，只需要学习好好地觉察它。
+</p>
+
+<p>
+对我而言，这是正念中一个容易实践的方面：<strong>仔细观察，清楚觉察，用心回应。</strong>
+</p>
+
+</section>
+
+<!-- REFLECTION QUESTIONS -->
+
+<section class="card">
+
+<h2>🪷 给自己的反思问题</h2>
+
+<p>
+你可以偶尔安静地坐下来，思考以下其中一个问题：
+</p>
+
+<ul>
+<li>此刻，我正在经历什么？</li>
+<li>哪些想法正在影响我的行动？</li>
+<li>我是在冲动地反应，还是有意识地作出回应？</li>
+<li>最近，我注意到自己有哪些变化？</li>
+<li>在哪些情况下，我可以多一些耐心？</li>
+<li>我可以怎样为平凡的一天增添更多善意？</li>
+</ul>
+
+<p>
+不必急着找到答案。有时，愿意诚实地观察问题本身，就已经具有意义。
+</p>
+
+</section>
+
+<!-- RELATED TOPICS -->
+
+<section class="card">
+
+<h2>🔗 继续探索 Yangocean</h2>
+
+<p>
+正念可以应用于生活的不同方面。欢迎继续探索以下相关主题：
+</p>
+
+<ul>
+<li>
+<a href="/zh/mindful-ethical-living.html">
+正念与伦理生活
 </a>
-</p>
+</li>
 
-</section>
+<li>
+<a href="/zh/mindful-eating.html">
+正念饮食
+</a>
+</li>
 
-<section class="card">
-<h2>💛 实践善良</h2>
-<p>
-善良是佛法的核心之一。小小的慈悲与慷慨行为可以减少痛苦——无论对自己还是他人。
-</p>
+<li>
+<a href="/zh/nature-connection.html">
+亲近自然
+</a>
+</li>
 
-<p>
-你可以每天实践善良：
-</p>
+<li>
+<a href="/zh/sustainable-living.html">
+可持续生活
+</a>
+</li>
 
-<ul>
-<li>温和而诚实地说话</li>
-<li>帮助他人而不求回报</li>
-<li>分享你所拥有的</li>
-<li>保持耐心与理解</li>
+<li>
+<a href="/zh/blog.html">
+Yangocean 日志
+</a>
+</li>
 </ul>
+
 </section>
+
+<!-- CLOSING -->
 
 <section class="card">
-<h2>📖 寻求良好知识</h2>
+
+<h2>💚 从一个当下开始</h2>
+
 <p>
-正确的理解带来正确的行为。学习与反思良好的教导有助于做出更明智的决定。
+正念不必从复杂的日常安排开始。它可以始于一次呼吸、一次仔细的观察、一句善意的话，或是在作出反应之前短暂停顿。
 </p>
 
 <p>
-选择能促进以下品质的知识：
+通过持续练习，这些细小的时刻可以成为更了解自己、培养慈悲与智慧，并以更清醒的态度生活的机会。
 </p>
 
-<ul>
-<li>慈悲</li>
-<li>清晰</li>
-<li>道德生活</li>
-<li>内心平静</li>
-</ul>
 </section>
 
-<section class="card">
-<h2>🌱 正念日常生活</h2>
-<p>
-正念不仅存在于冥想中，也应用于日常生活。
-</p>
+</main>
 
-<ul>
-<li>在吃饭、走路和工作时，保持对呼吸的觉知。</li>
-<li>观察思想而不立即反应</li>
-<li>做决定前暂停片刻</li>
-<li>放下愤怒与执着</li>
-</ul>
-</section>
-
-<section class="card">
-<h2>⚖️ 平衡的生活</h2>
-<p>
-真正的幸福来自平衡——身心、行动与休息、给予与接受之间的平衡。
-</p>
-
-<p>
-当内心平静清晰时，行动也会变得更有意义，并与善良的生活一致。
-</p>
-</section>
-
-<section class="card">
-<h2>💚 从内开始</h2>
-<p>
-改变始于内心。当你培养正念、智慧与慈悲时，生活会变得更平和，你的行为也自然造福周围世界。
-</p>
-</section>
-
-<section class="card">
-<h2>🔗 探索更多</h2>
-<p>
-👉 <a href="/zh/eco-living.html">生态生活</a><br>
-👉 <a href="/zh/hygiene-planting.html">卫生与种植</a><br>
-👉 <a href="/zh/diet-exercise.html">饮食与运动</a>
-</p>
-</section>
+<!-- FOOTER -->
 
 <footer class="footer">
-  <p>© 2026 Yangocean</p>
-  <p>
-    <a href="/zh/about.html">关于我们</a> |
-    <a href="/zh/privacy.html">隐私政策</a> |
-    <a href="/zh/terms.html">条款</a> |
-    <a href="/zh/contact.html">联系我们</a>
-  </p>
+
+<p>
+© 2026 Yangocean
+</p>
+
+<p>
+<a href="/zh/about.html">关于我们</a> |
+<a href="/zh/privacy.html">隐私政策</a> |
+<a href="/zh/terms.html">使用条款</a> |
+<a href="/zh/contact.html">联系我们</a>
+</p>
+
 </footer>
 
 </div>
+
+<!-- READ ALOUD SCRIPT -->
+
+<script>
+(function () {
+    const readButton = document.getElementById("readAloudButton");
+    const stopButton = document.getElementById("stopReadingButton");
+    const status = document.getElementById("readAloudStatus");
+    const content = document.getElementById("content-to-read");
+
+    let utterance = null;
+
+    function resetReading(message) {
+        readButton.textContent = "🔊 朗读";
+        status.textContent = message;
+        utterance = null;
+    }
+
+    function getPageText() {
+        const elements = content.querySelectorAll(
+            "h1, h2, h3, p, li"
+        );
+
+        return Array.from(elements)
+            .filter(function (element) {
+                return !element.closest(".read-aloud");
+            })
+            .map(function (element) {
+                return element.innerText.trim();
+            })
+            .filter(Boolean)
+            .join("。");
+    }
+
+    readButton.addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+            status.textContent =
+                "抱歉，您的浏览器不支持语音朗读功能。";
+            return;
+        }
+
+        if (speechSynthesis.speaking && speechSynthesis.paused) {
+            speechSynthesis.resume();
+            readButton.textContent = "⏸ 暂停";
+            status.textContent = "正在继续朗读。";
+            return;
+        }
+
+        if (speechSynthesis.speaking && !speechSynthesis.paused) {
+            speechSynthesis.pause();
+            readButton.textContent = "▶ 继续";
+            status.textContent = "朗读已暂停。";
+            return;
+        }
+
+        const text = getPageText();
+
+        if (!text) {
+            status.textContent = "没有可朗读的内容。";
+            return;
+        }
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "zh-CN";
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+
+        utterance.onstart = function () {
+            readButton.textContent = "⏸ 暂停";
+            status.textContent = "正在朗读页面内容……";
+        };
+
+        utterance.onend = function () {
+            resetReading("朗读已完成。");
+        };
+
+        utterance.onerror = function (event) {
+            if (event.error !== "canceled" &&
+                event.error !== "interrupted") {
+                resetReading("朗读暂时无法继续，请再试一次。");
+            } else {
+                resetReading("朗读已停止。");
+            }
+        };
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+    });
+
+    stopButton.addEventListener("click", function () {
+        if ("speechSynthesis" in window) {
+            speechSynthesis.cancel();
+        }
+
+        resetReading("朗读已停止。");
+    });
+})();
+</script>
+
 </body>
 </html>
+
