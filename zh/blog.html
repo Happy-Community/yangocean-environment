@@ -1,459 +1,643 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 
-<title>Yangocean Journal | 正念生活、自然与日常思考</title>
+<title>日志 | 正念生活、自然与日常感悟 | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO META -->
-<meta name="description" content="Yangocean Journal 分享关于正念生活、正念饮食、自然连接和日常可持续生活的原创思考、观察与实践。">
-<meta name="keywords" content="正念生活, 正念饮食, 自然, 可持续生活, 环保生活, 日常习惯, Yangocean">
+<meta name="description"
+content="Yangocean 日志分享有关正念生活、自然、可持续发展、正念饮食及日常体验的感悟、观察与生活故事。">
+
 <meta name="robots" content="index, follow">
-<meta name="author" content="Yangocean">
 
 <link rel="canonical" href="https://yangocean.com/zh/blog.html">
 
-<!-- LANGUAGE ALTERNATES -->
 <link rel="alternate" hreflang="en" href="https://yangocean.com/blog.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Yangocean Journal | 正念生活、自然与日常思考">
-<meta property="og:description" content="关于正念生活、自然、正念饮食和日常可持续生活的原创思考与观察。">
-<meta property="og:url" content="https://yangocean.com/zh/blog.html">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+<meta property="og:title" content="日志 | Yangocean">
+<meta property="og:description" content="关于正念生活、自然、可持续发展与日常体验的感悟和观察。">
+<meta property="og:url" content="https://yangocean.com/zh/blog.html">
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Yangocean Journal | 正念生活与自然">
-<meta name="twitter:description" content="分享关于正念生活、自然连接和可持续生活的思考与观察。">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+<meta name="twitter:title" content="日志 | Yangocean">
+<meta name="twitter:description" content="关于正念生活、自然与日常体验的感悟。">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<!-- STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Yangocean Journal",
-  "url": "https://yangocean.com/zh/blog.html",
-  "description": "关于正念生活、自然、正念饮食和日常可持续生活的原创思考与观察。",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Yangocean"
-  }
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+
+<style>
+* {
+    box-sizing: border-box;
 }
-</script>
 
-<!-- GOOGLE ADSENSE -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-  crossorigin="anonymous">
-</script>
+html {
+    scroll-behavior: smooth;
+}
 
-<link rel="stylesheet" href="/styles.css">
+body {
+    margin: 0;
+    font-family: Arial, "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f8f4;
+}
 
+a {
+    color: #356b45;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+    max-width: 1150px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: #356b45;
+}
+
+.tagline {
+    font-size: 0.82rem;
+    color: #666;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #333;
+    font-size: 0.94rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+}
+
+.dropdown-content a:hover {
+    background: #edf3e9;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 9px;
+    font-size: 0.85rem;
+}
+
+.languages a {
+    color: #356b45;
+}
+
+.hero {
+    background: #e8efe4;
+    text-align: center;
+    padding: 60px 20px 50px;
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    font-size: 2.4rem;
+    color: #2f5e3d;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 10px auto;
+    font-size: 1.05rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+section {
+    margin: 35px 0;
+}
+
+section h2 {
+    color: #356b45;
+    font-size: 1.65rem;
+    margin-bottom: 15px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e9e1;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #356b45;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-bottom: 18px;
+}
+
+.card-link {
+    font-weight: bold;
+}
+
+.simple-thought {
+    background: #edf3e9;
+    border-left: 4px solid #6a936d;
+    border-radius: 5px;
+    padding: 22px;
+    margin-top: 35px;
+    font-style: italic;
+}
+
+footer {
+    background: #294b34;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+footer a {
+    color: #ffffff;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+#readAloudButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: #356b45;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#readAloudButton:hover {
+    background: #294b34;
+}
+
+@media (max-width: 760px) {
+    .header-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero {
+        padding: 42px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px 16px 45px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <div class="header-inner">
+        <div>
+            <a class="logo" href="/zh/">Yangocean</a>
+            <div class="tagline">正念生活 • 自然 • 可持续发展</div>
+        </div>
 
-<!-- NAV -->
-<nav>
-  <a href="/zh/">首页</a>
-  <a href="/zh/mindfulness.html">正念生活</a>
-  <a href="/zh/mindful-ethical-living.html">正念与善意生活</a>
-  <a href="/zh/mindful-eating.html">正念饮食</a>
-  <a href="/zh/nature-connection.html">连接自然</a>
-  <a href="/zh/sustainable-living.html">可持续生活</a>
-  <a href="/zh/blog.html">Journal</a>
-  <a href="/zh/apps.html">应用程序</a>
-</nav>
+        <nav aria-label="主导航">
+            <a href="/zh/">首页</a>
 
-<!-- MAIN CONTENT -->
-<main id="content-to-read">
+            <div class="dropdown">
+                <button class="dropbtn" type="button">🌿 正念生活 ▾</button>
+                <div class="dropdown-content">
+                    <a href="/zh/mindfulness.html">正念与觉察</a>
+                    <a href="/zh/mindful-eating.html">正念饮食</a>
+                    <a href="/zh/sustainable-living.html">可持续生活</a>
+                </div>
+            </div>
 
-<!-- HERO -->
-<section class="card">
-  <h1>📝 Yangocean Journal</h1>
+            <div class="dropdown">
+                <button class="dropbtn" type="button">🌳 亲近自然 ▾</button>
+                <div class="dropdown-content">
+                    <a href="/zh/nature-connection.html">与自然建立联系</a>
+                    <a href="/zh/eco.html">环境意识</a>
+                    <a href="/zh/blog.html">日志</a>
+                </div>
+            </div>
 
-  <p>
-    这里分享关于正念生活、自然、饮食和日常可持续生活的思考、
-    观察与个人体验。
-  </p>
+            <div class="dropdown">
+                <button class="dropbtn" type="button">📱 相关应用 ▾</button>
+                <div class="dropdown-content">
+                    <a href="/zh/apps.html">所有应用</a>
+                    <a href="/zh/apps.html#eft">Yangocean EFT 敲击疗法</a>
+                    <a href="/zh/apps.html#healthy-body">QuQu Healthy Body</a>
+                    <a href="/zh/apps.html#duidui-fit">DuiDui Fit</a>
+                </div>
+            </div>
+        </nav>
 
-  <!-- TTS CONTROLS -->
-  <div class="tts-controls">
-    <button type="button" onclick="togglePlay()" aria-label="播放">
-      🔊
-    </button>
-    <button type="button" onclick="pauseReading()" aria-label="暂停">
-      ⏸
-    </button>
-    <button type="button" onclick="stopReading()" aria-label="停止">
-      ⏹
-    </button>
-  </div>
-</section>
-
-<!-- WHAT IS THE JOURNAL -->
-<section class="card">
-  <h2>🌿 什么是 Yangocean Journal？</h2>
-
-  <p>
-    Yangocean Journal 是一个分享原创文章、观察和生活思考的空间。
-    我们关注那些每天都会遇到的小事情，例如饮食、消费、植物、
-    自然、生活习惯以及我们与周围环境的关系。
-  </p>
-
-  <p>
-    我们并不追求一种所谓完美的生活方式。
-    更重要的是愿意观察、学习，并思考一些简单的改变
-    如何让日常生活变得更加有意识。
-  </p>
-</section>
-
-<!-- LATEST ARTICLES -->
-<section class="card">
-
-  <h2>📚 最新 Journal 文章</h2>
-
-  <div class="features">
-
-    <div class="feature">
-      <a href="/zh/blog/wellness-and-sustainability.html">
-        🌿 健康与可持续生活
-      </a>
-      <p>
-        思考我们的生活习惯、个人健康以及周围环境之间的关系。
-      </p>
+        <div class="languages" aria-label="语言选择">
+            <a href="/blog.html" lang="en">EN</a>
+            <a href="/ms/blog.html" lang="ms">BM</a>
+            <a href="/zh/blog.html" lang="zh" aria-current="page">中文</a>
+            <a href="/fr/blog.html" lang="fr">FR</a>
+            <a href="/es/blog.html" lang="es">ES</a>
+            <a href="/my/blog.html" lang="my">MY</a>
+        </div>
     </div>
+</header>
 
-    <div class="feature">
-      <a href="/zh/blog/why-trees-matter.html">
-        🌳 为什么树木如此重要
-      </a>
-      <p>
-        从日常生活的角度观察树木，以及树木与自然环境之间的关系。
-      </p>
-    </div>
+<div id="content-to-read">
 
-  </div>
-
-</section>
-
-<!-- NEW JOURNAL ENTRIES -->
-<section class="card">
-
-  <h2>✍️ 新的生活思考</h2>
-
-  <p>
-    Yangocean Journal 会逐渐加入更多原创内容，
-    分享关于正念生活、自然、饮食和可持续生活的观察与体验。
-  </p>
-
-  <!--
-    新的 Journal 文章可以添加在这里。
-
-    示例：
-
-    <div class="feature">
-      <a href="/zh/blog/article-name.html">
-        🌱 文章标题
-      </a>
-      <p>
-        简短介绍文章内容。
-      </p>
-    </div>
-  -->
-
-</section>
-
-<!-- JOURNAL THEMES -->
-<section class="card">
-
-  <h2>🌱 我们关注的主题</h2>
-
-  <div class="features">
-
-    <div class="feature">
-      <a href="/zh/mindfulness.html">
-        🧘 正念与觉察
-      </a>
-      <p>
-        觉察、冥想、慈悲、智慧，以及如何把正念带入日常生活。
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/zh/mindful-eating.html">
-        🥗 正念饮食
-      </a>
-      <p>
-        更有意识地看待食物、饮食习惯以及食物浪费。
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/zh/nature-connection.html">
-        🌳 连接自然
-      </a>
-      <p>
-        树木、植物、自然观察、摄影，以及日常生活中的自然体验。
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/zh/sustainable-living.html">
-        ♻️ 可持续生活
-      </a>
-      <p>
-        水、能源、塑料、废弃物、消费以及其他日常可持续生活选择。
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- VIDEO ARCHIVE -->
-<section class="card">
-
-  <h2>🎥 Yangocean 视频</h2>
-
-  <p>
-    我们也会分享与自然、可持续生活、健康和正念生活相关的视频。
-  </p>
-
-  <div id="video-list">
-    <p>正在加载视频……</p>
-  </div>
-
-</section>
-
-<!-- ORIGINAL CONTENT -->
-<section class="card">
-
-  <h2>🌿 为什么分享个人观察？</h2>
-
-  <p>
-    Journal 中的一些文章来自非常简单的生活经验：
-    观察一棵植物成长、准备一顿饭、在户外散步、
-    减少一些不必要的浪费，或者只是安静地停下来几分钟。
-  </p>
-
-  <p>
-    这些个人体验并不是适合所有人的答案，
-    也不能代替专业意见。它们只是一些可以帮助我们
-    开始观察、思考和学习的起点。
-  </p>
-
-  <p>
-    对于需要专业知识的主题，我们会尽量区分个人体验、
-    实用指南以及来自外部资料的信息。
-  </p>
-
-</section>
-
-<!-- REFLECTION -->
-<section class="card">
-
-  <h2>💭 留给自己的一个问题</h2>
-
-  <p>
-    在你的日常生活中，有没有一件已经习以为常的小事，
-    其实可以多花一点时间去观察？
-  </p>
-
-  <p>
-    有时候，一个更加有意识的生活方式，
-    可以从观察自己正在做的事情开始。
-  </p>
-
-</section>
-
-<!-- CTA -->
-<section class="card">
-
-  <h2>🌱 继续探索 Yangocean</h2>
-
-  <p>
-    你可以浏览 Yangocean 的不同主题，
-    也可以回来看看 Journal 中不断增加的新文章。
-  </p>
-
-  <p>
-    <a href="/zh/mindfulness.html">正念生活</a> ·
-    <a href="/zh/mindful-ethical-living.html">善意生活</a> ·
-    <a href="/zh/mindful-eating.html">正念饮食</a> ·
-    <a href="/zh/nature-connection.html">自然</a> ·
-    <a href="/zh/sustainable-living.html">可持续生活</a>
-  </p>
-
-</section>
-
-<!-- FINAL THOUGHT -->
-<section class="card">
-
-  <h2>🌿 从一个片刻开始</h2>
-
-  <p>
-    我们不需要一次改变所有事情。
-    从一个小小的选择开始，认真观察它，
-    从中学习，然后继续前进，也可以是一种简单而有意义的方式。
-  </p>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Yangocean</p>
-
-  <p>
-    <a href="/zh/">首页</a> |
-    <a href="/zh/about.html">关于我们</a> |
-    <a href="/zh/contact.html">联系我们</a> |
-    <a href="/zh/privacy.html">隐私政策</a> |
-    <a href="/zh/terms.html">使用条款</a>
-  </p>
-</footer>
-
-</div>
-
-<!-- TTS SCRIPT -->
-<script>
-let speech = null;
-let isSpeaking = false;
-let isPaused = false;
-
-function buildSpeech() {
-  const content = document.getElementById("content-to-read");
-  const elements = content.querySelectorAll("h1, h2, h3, p");
-
-  let text = "";
-
-  elements.forEach(el => {
-    text += el.innerText + "。 ";
-  });
-
-  const utterance = new SpeechSynthesisUtterance(text);
-
-  utterance.lang = "zh-CN";
-  utterance.rate = 0.95;
-  utterance.pitch = 1;
-  utterance.volume = 1;
-
-  utterance.onstart = () => {
-    isSpeaking = true;
-    isPaused = false;
-  };
-
-  utterance.onend = () => {
-    isSpeaking = false;
-    isPaused = false;
-  };
-
-  return utterance;
-}
-
-function togglePlay() {
-  if (isPaused) {
-    window.speechSynthesis.resume();
-    isPaused = false;
-    return;
-  }
-
-  if (!isSpeaking) {
-    speech = buildSpeech();
-    window.speechSynthesis.speak(speech);
-  }
-}
-
-function pauseReading() {
-  if (isSpeaking && !isPaused) {
-    window.speechSynthesis.pause();
-    isPaused = true;
-  }
-}
-
-function stopReading() {
-  window.speechSynthesis.cancel();
-  isSpeaking = false;
-  isPaused = false;
-}
-</script>
-
-<!-- VIDEO LOADER -->
-<script>
-fetch("/data/videos.json")
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("无法加载视频文件。");
-    }
-
-    return response.json();
-  })
-  .then(videos => {
-
-    const container = document.getElementById("video-list");
-
-    if (!videos || videos.length === 0) {
-      container.innerHTML = "<p>目前没有可用的视频。</p>";
-      return;
-    }
-
-    container.innerHTML = "";
-
-    videos.forEach(video => {
-
-      const item = document.createElement("div");
-      item.className = "feature";
-
-      const title = video.title || "Yangocean 视频";
-      const url = video.url || video.link || "#";
-      const thumbnail = video.thumbnail || "";
-
-      item.innerHTML = `
-        ${thumbnail ? `
-          <img
-            src="${thumbnail}"
-            alt="${title}"
-            loading="lazy"
-            style="max-width:100%;height:auto;border-radius:8px;"
-          >
-        ` : ""}
+    <section class="hero">
+        <h1>📝 日志</h1>
 
         <p>
-          <a
-            href="${url}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎥 ${title}
-          </a>
+            分享有关正念生活、自然、可持续发展及日常体验的感悟、
+            观察与简单故事。
         </p>
-      `;
 
-      container.appendChild(item);
+        <p>
+            有些思考始于日常生活中的一个普通发现，
+            继而引导我们反思自己的生活方式、饮食习惯、
+            观察周围事物的方式，以及我们与这个世界的联系。
+        </p>
+    </section>
+
+    <main>
+
+        <section>
+            <h2>关于本日志</h2>
+
+            <p>
+                本日志汇集了来自日常生活的深入感悟、观察与故事。
+                内容涵盖自然、环境、身心健康、正念生活，
+                以及帮助我们更仔细地观察周围世界的日常体验。
+            </p>
+        </section>
+
+        <section>
+            <h2>最新日志</h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>🌿 身心健康与可持续发展</h3>
+
+                    <p>
+                        思考个人身心健康、日常生活中的选择，
+                        以及我们的生活方式与自然环境之间的联系。
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/wellness-and-sustainability.html">
+                        阅读文章 →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌳 为什么树木如此重要</h3>
+
+                    <p>
+                        探索树木的重要性、我们生活的环境，
+                        以及那些容易被忽略的细节，
+                        如何改变我们观察自然的方式。
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/why-trees-matter.html">
+                        阅读文章 →
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>种植与植物养护指南</h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>🌱 如何种植植物</h3>
+
+                    <p>
+                        从准备所需材料到照顾生长中的植物，
+                        了解开始种植的基本步骤。
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-plant.html">
+                        阅读指南 →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌳 如何种植一棵树</h3>
+
+                    <p>
+                        了解种树的基本步骤，
+                        帮助幼树在成长初期获得良好的条件。
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-plant-a-tree.html">
+                        阅读指南 →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌿 如何种植芦荟</h3>
+
+                    <p>
+                        学习如何种植和照顾芦荟，
+                        认识芦荟叶片的不同部分，
+                        并了解透明的内部凝胶、
+                        绿色外皮与黄色汁液之间的区别。
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-grow-aloe-vera.html">
+                        阅读指南 →
+                    </a>
+                </article>
+
+            </div>
+
+            <p>
+                我们会逐步分享更多种植与养护指南，
+                希望以简单易懂的方式提供实用信息，
+                让大家更容易理解并应用于日常生活。
+            </p>
+        </section>
+
+        <section class="simple-thought">
+            <h2>一则简单的感悟</h2>
+
+            <p>
+                并非所有事情都需要匆忙完成。
+                有时候，只要仔细观察一件平凡的小事，
+                我们就可能发现新的意义。
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>
+        <a href="/zh/">首页</a>
+        <a href="/zh/mindfulness.html">正念生活</a>
+        <a href="/zh/nature-connection.html">亲近自然</a>
+        <a href="/zh/blog.html">日志</a>
+        <a href="/zh/apps.html">相关应用</a>
+        <a href="/zh/contact.html">联系我们</a>
+    </p>
+
+    <p>© 2026 Yangocean。保留所有权利。</p>
+</footer>
+
+<button id="readAloudButton" type="button"
+        aria-label="朗读本页面">
+    🔊 朗读页面
+</button>
+
+<script>
+(function () {
+    const button = document.getElementById("readAloudButton");
+    const content = document.getElementById("content-to-read");
+
+    let isReading = false;
+    let isPaused = false;
+    let utterances = [];
+    let currentIndex = 0;
+
+    function getSpeechLanguage() {
+        const voices = window.speechSynthesis.getVoices();
+        const preferredLanguages = ["zh-CN", "zh-SG", "zh"];
+
+        for (const language of preferredLanguages) {
+            if (voices.some(voice =>
+                voice.lang.toLowerCase() === language.toLowerCase()
+            )) {
+                return language;
+            }
+        }
+
+        return "zh-CN";
+    }
+
+    function updateButton() {
+        if (!isReading) {
+            button.textContent = "🔊 朗读页面";
+            button.setAttribute("aria-label", "朗读本页面");
+        } else if (isPaused) {
+            button.textContent = "▶ 继续朗读";
+            button.setAttribute("aria-label", "继续朗读");
+        } else {
+            button.textContent = "⏸ 暂停朗读";
+            button.setAttribute("aria-label", "暂停朗读");
+        }
+    }
+
+    function finishReading() {
+        isReading = false;
+        isPaused = false;
+        currentIndex = 0;
+        utterances = [];
+        updateButton();
+    }
+
+    function speakNext() {
+        if (!isReading || isPaused) {
+            return;
+        }
+
+        if (currentIndex >= utterances.length) {
+            finishReading();
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(
+            utterances[currentIndex]
+        );
+
+        utterance.lang = getSpeechLanguage();
+        utterance.rate = 0.9;
+
+        utterance.onend = function () {
+            currentIndex++;
+            speakNext();
+        };
+
+        utterance.onerror = function () {
+            currentIndex++;
+            speakNext();
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function startReading() {
+        if (!("speechSynthesis" in window)) {
+            alert("抱歉，您的浏览器不支持语音朗读功能。");
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        const elements = content.querySelectorAll("h1, h2, h3, p");
+
+        utterances = Array.from(elements)
+            .map(element => element.innerText.trim())
+            .filter(text => text.length > 0);
+
+        if (utterances.length === 0) {
+            return;
+        }
+
+        currentIndex = 0;
+        isReading = true;
+        isPaused = false;
+
+        updateButton();
+        speakNext();
+    }
+
+    button.addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+            alert("抱歉，您的浏览器不支持语音朗读功能。");
+            return;
+        }
+
+        if (!isReading) {
+            startReading();
+            return;
+        }
+
+        if (isPaused) {
+            isPaused = false;
+            updateButton();
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            } else {
+                speakNext();
+            }
+        } else {
+            isPaused = true;
+            window.speechSynthesis.pause();
+            updateButton();
+        }
     });
-  })
-  .catch(error => {
 
-    document.getElementById("video-list").innerHTML =
-      "<p>目前无法加载视频内容。</p>";
+    window.addEventListener("beforeunload", function () {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
 
-    console.error(error);
-  });
+    updateButton();
+})();
 </script>
 
 </body>
 </html>
+
