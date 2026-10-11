@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 
-<title>Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian | Yangocean</title>
+<title>Yangocean | Mindful Living, Nature Connection & Everyday Sustainability</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Terokai kehidupan berkesedaran, kesedaran, pemakanan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian melalui renungan ringkas serta sumber yang berguna.">
+<meta name="description" content="Yangocean explores mindful living, mindfulness, mindful eating, ethical living, nature connection, environmental awareness and practical everyday sustainability.">
+
+<meta name="keywords" content="mindful living, mindfulness, mindful eating, ethical living, nature connection, environmental awareness, sustainable living, sustainability, Yangocean">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://yangocean.com/ms/">
+<link rel="canonical" href="https://yangocean.com/">
 
+<!-- Hreflang -->
 <link rel="alternate" hreflang="en" href="https://yangocean.com/">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/">
@@ -21,84 +24,80 @@
 <link rel="alternate" hreflang="my" href="https://yangocean.com/my/">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/">
 
-<meta property="og:title" content="Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian">
-<meta property="og:description" content="Renungan ringkas dan sumber berguna untuk kehidupan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian.">
+<!-- Open Graph -->
+<meta property="og:title" content="Yangocean | Mindful Living, Nature Connection & Everyday Sustainability">
+<meta property="og:description" content="Explore mindful living, nature connection, environmental awareness and simple everyday sustainability with Yangocean.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://yangocean.com/ms/">
-<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
+<meta property="og:url" content="https://yangocean.com/">
 <meta property="og:site_name" content="Yangocean">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian">
-<meta name="twitter:description" content="Renungan ringkas dan sumber berguna untuk kehidupan berkesedaran, hubungan dengan alam semula jadi dan kelestarian harian.">
-<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
+<!-- Google AdSense -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Yangocean",
+  "url": "https://yangocean.com/",
+  "description": "Yangocean explores mindful living, nature connection, environmental awareness and everyday sustainability."
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Yangocean",
+  "url": "https://yangocean.com/"
+}
+</script>
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.7;
+    margin: 0;
     color: #333;
-    background: #f7f9f6;
+    background: #fafafa;
 }
 
 header {
-    background: #fff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 16px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: #f1f7f2;
+    padding: 18px 20px 20px;
+    text-align: center;
 }
 
-.header-inner {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
+.language-nav {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
 }
 
-.logo {
+.language-nav a {
+    margin: 0 5px;
     text-decoration: none;
-    color: #2f5d3a;
-    font-size: 1.45rem;
-    font-weight: bold;
-    white-space: nowrap;
+    color: #285943;
+    font-weight: 600;
 }
 
-.tagline {
-    font-size: .8rem;
-    color: #777;
-    margin-top: 2px;
-}
-
-nav {
+.main-nav {
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 8px;
     flex-wrap: wrap;
-    justify-content: flex-end;
 }
 
-nav a,
-.dropbtn {
-    color: #444;
+.main-nav > a,
+.dropdown summary {
+    color: #285943;
+    font-weight: 600;
     text-decoration: none;
-    font-size: .95rem;
     cursor: pointer;
-}
-
-nav a:hover,
-.dropbtn:hover {
-    color: #2f6b3f;
+    padding: 8px 10px;
 }
 
 .dropdown {
@@ -106,552 +105,688 @@ nav a:hover,
     display: inline-block;
 }
 
-.dropbtn {
-    background: none;
-    border: none;
-    font: inherit;
-    padding: 0;
+.dropdown summary {
+    list-style: none;
 }
 
-.dropdown-content {
+.dropdown summary::-webkit-details-marker {
     display: none;
-    position: absolute;
-    right: 0;
-    top: 28px;
-    min-width: 220px;
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+
+.dropdown summary::after {
+    content: " ▾";
+}
+
+.dropdown[open] summary {
+    background: #e4f0e7;
     border-radius: 8px;
-    padding: 8px 0;
-    z-index: 1001;
 }
 
-.dropdown-content a {
+.dropdown-menu {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 230px;
+    margin-top: 4px;
+    padding: 8px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    text-align: left;
+}
+
+.dropdown-menu a {
     display: block;
-    padding: 9px 16px;
-    color: #444;
-    white-space: nowrap;
-}
-
-.dropdown-content a:hover {
-    background: #f1f6f1;
-}
-
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-    display: block;
-}
-
-.language {
-    display: flex;
-    gap: 7px;
-    align-items: center;
-    font-size: .85rem;
-}
-
-.language a {
+    padding: 9px 12px;
+    color: #285943;
     text-decoration: none;
-    color: #666;
+    border-radius: 7px;
 }
 
-.language a:hover {
-    color: #2f6b3f;
+.dropdown-menu a:hover {
+    background: #f1f7f2;
 }
 
 main {
     max-width: 1100px;
     margin: auto;
-    padding: 30px 20px 60px;
+    padding: 20px;
+}
+
+section {
+    margin: 45px 0;
 }
 
 .hero {
     text-align: center;
-    padding: 55px 20px 45px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    margin: 0 0 14px;
-    color: #2f5d3a;
-    font-size: 2.4rem;
+    font-size: 2.3rem;
 }
 
 .hero p {
-    max-width: 760px;
-    margin: auto;
-    color: #555;
-    font-size: 1.05rem;
+    max-width: 820px;
+    margin: 20px auto;
+    font-size: 1.1rem;
 }
 
-.section {
-    margin-top: 45px;
-}
-
-.section h2 {
-    text-align: center;
-    color: #2f5d3a;
-    margin-bottom: 12px;
-}
-
-.section-intro {
-    max-width: 760px;
-    margin: 0 auto 25px;
-    text-align: center;
-    color: #666;
-}
-
-.card-grid {
+.cards {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 .card {
-    background: #fff;
-    border-radius: 12px;
+    background: white;
     padding: 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.06);
-    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
 }
 
 .card h3 {
     margin-top: 0;
-    color: #315f3b;
 }
 
-.card p {
-    color: #666;
-    font-size: .95rem;
+.card a,
+a {
+    color: #285943;
 }
 
 .card a {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    color: #2f6b3f;
     font-weight: bold;
-}
-
-.card a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .reflection {
-    background: #edf4ec;
-    border-radius: 12px;
+    background: #f1f7f2;
     padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    margin-top: 35px;
 }
 
-.reflection h2 {
-    margin-top: 0;
+.tts-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0 35px;
 }
 
-#dailyReflection {
-    font-size: 1.1rem;
-    color: #405944;
-    font-style: italic;
+.tts-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.simple-thought {
-    text-align: center;
-    margin: 50px auto 20px;
-    max-width: 720px;
+.tts-btn:hover {
+    opacity: 0.85;
 }
 
-.simple-thought h2 {
-    color: #2f5d3a;
+.news-item {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item h4 {
+    margin-bottom: 5px;
 }
 
 footer {
-    background: #eef2ed;
-    border-top: 1px solid #dfe5df;
-    padding: 25px 20px;
+    background: #f1f7f2;
     text-align: center;
-    color: #666;
-    font-size: .9rem;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
 
 footer a {
-    color: #49664e;
     text-decoration: none;
-    margin: 0 8px;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 850px) {
-    .header-inner {
+@media (max-width: 700px) {
+    .main-nav {
         flex-direction: column;
-        align-items: center;
+        gap: 2px;
     }
 
-    nav {
-        justify-content: center;
+    .dropdown {
+        width: 100%;
     }
 
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .hero h1 {
-        font-size: 2rem;
+    .dropdown summary {
+        display: block;
     }
 
-    nav {
-        gap: 12px;
-        font-size: .9rem;
-    }
-
-    .dropdown-content {
+    .dropdown-menu {
         position: static;
+        transform: none;
+        width: auto;
+        margin: 2px auto 8px;
+        text-align: center;
         box-shadow: none;
-        border: 1px solid #eee;
-        margin-top: 8px;
+        border: 1px solid #e2e8e3;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
     }
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-    <div class="header-inner">
 
-        <div>
-            <a href="/ms/" class="logo">Yangocean</a>
-            <div class="tagline">
-                Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
-            </div>
+<nav class="language-nav" aria-label="Language navigation">
+    <a href="/">EN</a>
+    <a href="/ms/">BM</a>
+    <a href="/zh/">中文</a>
+    <a href="/fr/">FR</a>
+    <a href="/es/">ES</a>
+    <a href="/my/">မြန်မာ</a>
+</nav>
+
+<nav class="main-nav" aria-label="Main navigation">
+
+    <a href="/">Home</a>
+
+    <details class="dropdown">
+        <summary>🌿 Mindful Living</summary>
+        <div class="dropdown-menu">
+            <a href="/mindfulness.html">🧘 Mindfulness &amp; Dhamma</a>
+            <a href="/mindful-ethical-living.html">💚 Mindful &amp; Ethical Living</a>
+            <a href="/mindful-eating.html">🥗 Mindful Eating</a>
+            <a href="/sustainable-living.html">♻️ Sustainable Living</a>
         </div>
+    </details>
 
-        <nav aria-label="Navigasi utama">
+    <details class="dropdown">
+        <summary>🌳 Nature Connection</summary>
+        <div class="dropdown-menu">
+            <a href="/nature-connection.html">🌳 Nature Connection</a>
+            <a href="/eco.html">🌍 Environmental Awareness</a>
+            <a href="/blog.html">📝 Yangocean Journal</a>
+        </div>
+    </details>
 
-            <a href="/ms/">Laman Utama</a>
+    <details class="dropdown">
+        <summary>📱 Related Apps</summary>
+        <div class="dropdown-menu">
+            <a href="/apps.html">📱 All Yangocean Apps</a>
+        </div>
+    </details>
 
-            <!-- Dropdown 1: Mindful Living -->
-            <div class="dropdown">
-                <button class="dropbtn" type="button" aria-haspopup="true">
-                    🌿 Kehidupan Berkesedaran ▾
-                </button>
+</nav>
 
-                <div class="dropdown-content">
-                    <a href="/ms/mindfulness.html">🧘 Kesedaran &amp; Dhamma</a>
-                    <a href="/ms/mindful-eating.html">🥗 Pemakanan Berkesedaran</a>
-                    <a href="/ms/sustainable-living.html">♻️ Kehidupan Lestari</a>
-                </div>
-            </div>
-
-            <!-- Dropdown 2: Nature Connection -->
-            <div class="dropdown">
-                <button class="dropbtn" type="button" aria-haspopup="true">
-                    🌳 Hubungan dengan Alam ▾
-                </button>
-
-                <div class="dropdown-content">
-                    <a href="/ms/nature-connection.html">🌳 Hubungan dengan Alam Semula Jadi</a>
-                    <a href="/ms/eco.html">🌍 Kesedaran Alam Sekitar</a>
-                    <a href="/ms/blog.html">📝 Jurnal</a>
-                </div>
-            </div>
-
-            <!-- Dropdown 3: Related Apps -->
-            <div class="dropdown">
-                <button class="dropbtn" type="button" aria-haspopup="true">
-                    📱 Aplikasi Berkaitan ▾
-                </button>
-
-                <div class="dropdown-content">
-                    <a href="/ms/apps.html">📱 Semua Aplikasi Berkaitan</a>
-                    <a href="/ms/apps.html#eft">🌿 Yangocean App</a>
-                    <a href="/ms/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
-                    <a href="/ms/apps.html#duidui-fit">🏃 DuoFit</a>
-                </div>
-            </div>
-
-            <div class="language" aria-label="Pilihan bahasa">
-                <a href="/">EN</a>
-                <a href="/ms/" aria-current="page">BM</a>
-                <a href="/zh/">中文</a>
-                <a href="/fr/">FR</a>
-                <a href="/es/">ES</a>
-                <a href="/my/">မြန်မာ</a>
-            </div>
-
-        </nav>
-    </div>
 </header>
 
 <main id="content-to-read">
 
-    <section class="hero">
-        <h1>🌿 Kehidupan Berkesedaran, Alam Semula Jadi &amp; Kelestarian Harian</h1>
+<section class="hero">
 
-        <p>
-            Ruang untuk idea ringkas, renungan dan sumber berguna
-            yang menggalakkan kesedaran terhadap diri sendiri,
-            persekitaran dan alam semula jadi.
-        </p>
-    </section>
+<h1>🌿 Mindful Living, Nature &amp; Everyday Sustainability</h1>
 
-    <section class="section">
-        <h2>Tentang Yangocean</h2>
+<p>
+Yangocean is a space for exploring mindful living, nature connection,
+environmental awareness and simple everyday sustainability.
+</p>
 
-        <p class="section-intro">
-            Kita boleh menjalani kehidupan dengan lebih sedar melalui cara
-            kita makan, berfikir, bergerak, hidup dan berhubung dengan dunia
-            di sekeliling kita. Halaman di sini menghimpunkan renungan dan
-            maklumat praktikal tentang kehidupan berkesedaran, hubungan
-            dengan alam semula jadi dan kelestarian harian.
-        </p>
-    </section>
+<p>
+The aim is not to provide all the answers, but to encourage awareness,
+curiosity and thoughtful choices in everyday life.
+</p>
 
-    <section class="reflection">
-        <h2>🌱 Renungan Harian</h2>
-        <p id="dailyReflection" aria-live="polite"></p>
-    </section>
+</section>
 
-    <section class="section">
-        <h2>🌿 Kehidupan Berkesedaran</h2>
+<div class="tts-controls">
 
-        <p class="section-intro">
-            Terokai pelbagai aspek kehidupan harian, daripada kesedaran
-            dan Dhamma kepada pemakanan berkesedaran serta pilihan yang
-            lebih lestari.
-        </p>
+<button
+ type="button"
+ class="tts-btn play"
+ onclick="togglePlay()"
+ aria-label="Play or resume reading">
+🔊
+</button>
 
-        <div class="card-grid">
+<button
+ type="button"
+ class="tts-btn pause"
+ onclick="pauseReading()"
+ aria-label="Pause reading">
+⏸
+</button>
 
-            <div class="card">
-                <h3>🧘 Kesedaran &amp; Dhamma</h3>
-                <p>
-                    Renungan ringkas tentang kesedaran, perhatian dan Dhamma,
-                    dengan penekanan pada penerapan amalan dalam kehidupan
-                    seharian.
-                </p>
-                <a href="/ms/mindfulness.html">Terokai Kesedaran →</a>
-            </div>
+<button
+ type="button"
+ class="tts-btn stop"
+ onclick="stopReading()"
+ aria-label="Stop reading">
+⏹
+</button>
 
-            <div class="card">
-                <h3>🥗 Pemakanan Berkesedaran</h3>
-                <p>
-                    Terokai cara makan dengan lebih sedar, seimbang dan
-                    menghargai makanan serta pilihan yang kita buat setiap hari.
-                </p>
-                <a href="/ms/mindful-eating.html">Terokai Pemakanan Berkesedaran →</a>
-            </div>
+</div>
 
-            <div class="card">
-                <h3>♻️ Kehidupan Lestari</h3>
-                <p>
-                    Temui idea praktikal untuk membuat pilihan harian yang
-                    lebih teliti, bertanggungjawab dan lestari.
-                </p>
-                <a href="/ms/sustainable-living.html">Terokai Kehidupan Lestari →</a>
-            </div>
+<section>
 
-        </div>
-    </section>
+<h2>🌱 About Yangocean</h2>
 
-    <section class="section">
-        <h2>🌳 Hubungan dengan Alam Semula Jadi</h2>
+<p>
+Yangocean brings together reflections and practical resources around the
+relationship between our inner lives, our everyday choices and the natural
+world around us.
+</p>
 
-        <p class="section-intro">
-            Perhatikan alam yang hidup di sekeliling kita, pelajari perubahan
-            alam sekitar dan temui kisah serta pemerhatian daripada kehidupan
-            harian.
-        </p>
+<p>
+From mindfulness and Dhamma-inspired reflection to mindful eating,
+nature, environmental awareness and sustainability, Yangocean explores
+how small moments of awareness can influence the way we live.
+</p>
 
-        <div class="card-grid">
+</section>
 
-            <div class="card">
-                <h3>🌳 Hubungan dengan Alam Semula Jadi</h3>
-                <p>
-                    Perlahankan langkah dan perhatikan pokok, tumbuhan,
-                    hidupan liar serta bahagian alam semula jadi yang sering
-                    terlepas daripada perhatian kita.
-                </p>
-                <a href="/ms/nature-connection.html">Berhubung dengan Alam →</a>
-            </div>
+<section>
 
-            <div class="card">
-                <h3>🌍 Kesedaran Alam Sekitar</h3>
-                <p>
-                    Fahami beberapa perubahan yang mempengaruhi iklim,
-                    lautan, tumbuhan dan biodiversiti, serta pertimbangkan
-                    kepentingan pilihan harian kita.
-                </p>
-                <a href="/ms/eco.html">Ketahui Lebih Lanjut →</a>
-            </div>
+<h2>🌿 Explore Yangocean</h2>
 
-            <div class="card">
-                <h3>📝 Jurnal</h3>
-                <p>
-                    Baca renungan lebih panjang, pemerhatian dan kisah
-                    tentang kehidupan berkesedaran, alam semula jadi,
-                    kelestarian dan pengalaman harian.
-                </p>
-                <a href="/ms/blog.html">Baca Jurnal →</a>
-            </div>
+<p>
+Yangocean is organised around three simple areas. Each area contains
+related topics so the site can grow without making the main menu crowded.
+</p>
 
-        </div>
-    </section>
+<div class="cards">
 
-    <section class="section">
-        <h2>📱 Aplikasi Berkaitan</h2>
+<div class="card">
+<h3>🌿 Mindful Living</h3>
+<p>
+Explore mindfulness, Dhamma-inspired reflections, mindful and ethical
+living, mindful eating and practical sustainable living.
+</p>
+<p>
+<a href="/mindfulness.html">Explore Mindful Living →</a>
+</p>
+</div>
 
-        <p class="section-intro">
-            Terokai alat digital dan aplikasi yang tersedia berkaitan
-            kesejahteraan serta kegunaan harian.
-        </p>
+<div class="card">
+<h3>🌳 Nature Connection</h3>
+<p>
+Reconnect with trees, plants, water, wildlife and the natural systems
+around us. The Journal and environmental awareness articles are also
+part of this area.
+</p>
+<p>
+<a href="/nature-connection.html">Explore Nature Connection →</a>
+</p>
+</div>
 
-        <div class="card-grid">
-            <div class="card">
-                <h3>📱 Aplikasi Berkaitan</h3>
-                <p>
-                    Temui aplikasi yang tersedia dan ketahui lebih lanjut
-                    tentang alat digital yang berkaitan dengan tema yang
-                    diterokai di laman ini.
-                </p>
-                <a href="/ms/apps.html">Lihat Aplikasi Berkaitan →</a>
-            </div>
-        </div>
-    </section>
+<div class="card">
+<h3>📱 Related Apps</h3>
+<p>
+Discover Yangocean's related apps, including tools and resources created
+to support healthier and more mindful everyday living.
+</p>
+<p>
+<a href="/apps.html">Explore Related Apps →</a>
+</p>
+</div>
 
-    <section class="simple-thought">
-        <h2>🌱 Satu Renungan Ringkas</h2>
-        <p>
-            Detik kecil kesedaran boleh mengubah cara kita melihat diri
-            sendiri, orang lain dan dunia di sekeliling kita.
-        </p>
-    </section>
+</div>
+
+</section>
+
+<section class="reflection">
+
+<h2>🌿 Daily Reflection</h2>
+
+<p id="dailyReflection">
+Take a moment to pause, observe and appreciate the present.
+</p>
+
+</section>
+
+<section>
+
+<h2>📝 From the Yangocean Journal</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>💧 The Journey of One Drop of Water</h3>
+<p>
+A reflection on the water cycle, freshwater conservation, water scarcity
+and why every drop matters.
+</p>
+<a href="/blog/journey-one-drop-water.html">Read the Journal Article →</a>
+</div>
+
+<div class="card">
+<h3>🌳 Why Trees Matter</h3>
+<p>
+A reflection inspired by flowers, mature trees, deep roots and our
+connection with the living environment.
+</p>
+<a href="/why-trees-matter.html">Read Why Trees Matter →</a>
+</div>
+
+<div class="card">
+<h3>📝 Yangocean Journal</h3>
+<p>
+Explore more original reflections, observations and everyday stories
+about mindful living, nature and sustainability.
+</p>
+<a href="/blog.html">Visit the Journal →</a>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>🌳 Nature Connection</h2>
+
+<p>
+Nature is not separate from everyday life. Trees, water, soil, animals,
+plants and ecosystems are part of the living systems that support us.
+</p>
+
+<p>
+Yangocean explores simple ways of noticing and reconnecting with the
+natural world, from a single flower or tree to larger environmental
+questions.
+</p>
+
+<p>
+<a href="/nature-connection.html">Explore Nature Connection →</a>
+</p>
+
+</section>
+
+<section>
+
+<h2>📰 Environmental Reading</h2>
+
+<p>
+Explore selected environmental news and articles from external sources.
+These links are provided for further reading and do not represent
+Yangocean's editorial ownership of the linked publications.
+</p>
+
+<div id="environmentalNews">
+<p>Loading environmental reading...</p>
+</div>
+
+</section>
+
+<section>
+
+<h2>🌱 A Simple Thought</h2>
+
+<p>
+Mindful living does not necessarily require dramatic changes.
+Sometimes it begins with simply noticing:
+</p>
+
+<ul>
+<li>What are we consuming?</li>
+<li>Where did it come from?</li>
+<li>What resources were used?</li>
+<li>How does this choice affect other living beings?</li>
+<li>Can we choose something simpler?</li>
+</ul>
+
+<p>
+Awareness can come before action. From awareness, more thoughtful choices
+can gradually emerge.
+</p>
+
+</section>
+
+<section>
+
+<h2>🌱 Continue Exploring</h2>
+
+<p>
+There is no single way to live mindfully. Explore the areas that interest
+you and return whenever you feel like reflecting again.
+</p>
+
+<p>
+<a href="/mindfulness.html">Mindfulness &amp; Dhamma</a> ·
+<a href="/mindful-ethical-living.html">Mindful &amp; Ethical Living</a> ·
+<a href="/mindful-eating.html">Mindful Eating</a> ·
+<a href="/sustainable-living.html">Sustainable Living</a> ·
+<a href="/nature-connection.html">Nature Connection</a> ·
+<a href="/eco.html">Environmental Awareness</a> ·
+<a href="/blog.html">Journal</a> ·
+<a href="/apps.html">Apps</a>
+</p>
+
+</section>
 
 </main>
 
 <footer>
-    <div>
-        <a href="/ms/">Laman Utama</a>
-        <a href="/ms/mindfulness.html">Kehidupan Berkesedaran</a>
-        <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
-        <a href="/ms/blog.html">Jurnal</a>
-        <a href="/ms/apps.html">Aplikasi Berkaitan</a>
-        <a href="/ms/contact.html">Hubungi</a>
-    </div>
 
-    <p>
-        &copy; 2026 • Kehidupan Berkesedaran • Alam Semula Jadi •
-        Kelestarian Harian
-    </p>
+<p>
+© 2026 Yangocean. Mindful living, nature and everyday sustainability.
+</p>
+
+<p>
+<a href="/about.html">About</a> ·
+<a href="/contact.html">Contact</a> ·
+<a href="/blog.html">Journal</a>
+</p>
+
 </footer>
 
 <script>
+
+/* Daily Reflection */
+
 const reflections = [
-    "Perhatikan satu perkara kecil di sekeliling anda hari ini yang biasanya tidak anda sedari.",
-    "Sebelum makan, berhenti seketika dan hargai asal-usul makanan anda.",
-    "Pokok tidak perlu menjadi luar biasa untuk memberikan teduhan, tempat perlindungan dan kehidupan.",
-    "Pilihan kecil menjadi bermakna apabila dibuat dengan kesedaran.",
-    "Luangkan masa sejenak untuk mendengar bunyi alam semula jadi di sekeliling anda.",
-    "Ambil sekadar yang diperlukan dan hargai apa yang sudah anda miliki.",
-    "Kesedaran bermula dengan memberikan perhatian."
+    "Pause for a moment and notice what is happening right now.",
+    "A small mindful choice can be the beginning of a larger change.",
+    "Nature does not need to be far away. Look closely at what is around you.",
+    "Before changing the world, begin by noticing your own everyday choices.",
+    "Simple living begins with understanding what is truly necessary.",
+    "Kindness can include the way we treat people, animals and the natural world.",
+    "Awareness gives us the opportunity to choose rather than simply react."
 ];
 
 const today = new Date();
-
-const index =
-    (today.getFullYear() * 1000) +
-    (today.getMonth() + 1) * 50 +
-    today.getDate();
+const reflectionIndex =
+    (today.getFullYear() + today.getMonth() + today.getDate())
+    % reflections.length;
 
 document.getElementById("dailyReflection").textContent =
-    reflections[index % reflections.length];
+    reflections[reflectionIndex];
+
+
+/* Environmental Reading */
+
+const feeds = [
+    {
+        name: "Mongabay",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://news.mongabay.com/feed/"
+    },
+    {
+        name: "UNEP News",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.unep.org/rss.xml"
+    },
+    {
+        name: "National Geographic Environment",
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
+    }
+];
+
+async function loadEnvironmentalNews() {
+
+    const container =
+        document.getElementById("environmentalNews");
+
+    container.innerHTML = "";
+
+    for (const feed of feeds) {
+
+        try {
+
+            const response = await fetch(feed.url);
+            const data = await response.json();
+
+            if (!data.items) continue;
+
+            const heading =
+                document.createElement("h3");
+
+            heading.textContent = feed.name;
+
+            container.appendChild(heading);
+
+            data.items.slice(0, 3).forEach(item => {
+
+                const article =
+                    document.createElement("div");
+
+                article.className = "news-item";
+
+                const title =
+                    document.createElement("h4");
+
+                const link =
+                    document.createElement("a");
+
+                link.href = item.link;
+                link.target = "_blank";
+                link.rel = "noopener";
+                link.textContent = item.title;
+
+                title.appendChild(link);
+                article.appendChild(title);
+
+                if (item.pubDate) {
+
+                    const date =
+                        document.createElement("small");
+
+                    date.textContent =
+                        new Date(item.pubDate).toLocaleDateString();
+
+                    article.appendChild(date);
+                }
+
+                container.appendChild(article);
+
+            });
+
+        } catch (error) {
+
+            console.log(
+                "Unable to load feed:",
+                feed.name,
+                error
+            );
+
+        }
+
+    }
+
+}
+
+loadEnvironmentalNews();
+
 </script>
 
 <script>
-(function () {
+
+/* Full-page Read Aloud */
+
+let speech = window.speechSynthesis;
+let utterance = null;
+
+function getReadableText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return "";
+    }
+
+    const elements =
+        content.querySelectorAll("h1, h2, h3, h4, p, li");
+
+    return Array.from(elements)
+        .map(function(element) {
+            return element.innerText.trim();
+        })
+        .filter(function(text) {
+            return text.length > 0;
+        })
+        .join(". ");
+}
+
+function togglePlay() {
 
     if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Sorry, your browser does not support Read Aloud."
+        );
+
         return;
     }
 
-    const button = document.createElement("button");
+    if (speech.paused) {
+        speech.resume();
+        return;
+    }
 
-    button.type = "button";
-    button.textContent = "🔊 Baca Kuat";
-    button.setAttribute(
-        "aria-label",
-        "Baca kandungan halaman dengan kuat"
-    );
+    if (speech.speaking) {
+        return;
+    }
 
-    button.style.position = "fixed";
-    button.style.bottom = "20px";
-    button.style.right = "20px";
-    button.style.zIndex = "9999";
-    button.style.padding = "10px 15px";
-    button.style.border = "1px solid #ccc";
-    button.style.borderRadius = "8px";
-    button.style.background = "#fff";
-    button.style.cursor = "pointer";
-    button.style.boxShadow = "0 2px 8px rgba(0,0,0,.12)";
+    const text = getReadableText();
 
-    document.body.appendChild(button);
+    if (!text) {
+        return;
+    }
 
-    let speaking = false;
+    utterance =
+        new SpeechSynthesisUtterance(text);
 
-    button.addEventListener("click", function () {
+    utterance.lang = "en-US";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
 
-        if (speaking) {
-            speechSynthesis.cancel();
-            speaking = false;
-            button.textContent = "🔊 Baca Kuat";
-            return;
-        }
+    speech.speak(utterance);
+}
 
-        const elements = document.querySelectorAll(
-            "#content-to-read h1, " +
-            "#content-to-read h2, " +
-            "#content-to-read h3, " +
-            "#content-to-read p"
-        );
+function pauseReading() {
 
-        const text = Array.from(elements)
-            .map(el => el.innerText.trim())
-            .filter(Boolean)
-            .join(". ");
+    if (
+        "speechSynthesis" in window &&
+        speech.speaking
+    ) {
+        speech.pause();
+    }
+}
 
-        if (!text) {
-            return;
-        }
+function stopReading() {
 
-        const utterance = new SpeechSynthesisUtterance(text);
+    if ("speechSynthesis" in window) {
+        speech.cancel();
+    }
+}
 
-        utterance.lang = "ms-MY";
-        utterance.rate = 0.95;
-
-        utterance.onstart = function () {
-            speaking = true;
-            button.textContent = "⏹ Hentikan Bacaan";
-        };
-
-        utterance.onend = function () {
-            speaking = false;
-            button.textContent = "🔊 Baca Kuat";
-        };
-
-        utterance.onerror = function () {
-            speaking = false;
-            button.textContent = "🔊 Baca Kuat";
-        };
-
-        speechSynthesis.cancel();
-        speechSynthesis.speak(utterance);
-
-    });
-
-})();
 </script>
 
 </body>
