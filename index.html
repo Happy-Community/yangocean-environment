@@ -228,16 +228,6 @@ a {
     opacity: 0.85;
 }
 
-.news-item {
-    margin-bottom: 20px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.news-item h4 {
-    margin-bottom: 5px;
-}
-
 footer {
     background: #f1f7f2;
     text-align: center;
@@ -285,6 +275,7 @@ footer a {
 
 <header>
 
+<!-- LANGUAGE NAVIGATION -->
 <nav class="language-nav" aria-label="Language navigation">
     <a href="/">EN</a>
     <a href="/ms/">BM</a>
@@ -294,6 +285,7 @@ footer a {
     <a href="/my/">မြန်မာ</a>
 </nav>
 
+<!-- MAIN NAVIGATION -->
 <nav class="main-nav" aria-label="Main navigation">
 
     <a href="/">Home</a>
@@ -312,26 +304,25 @@ footer a {
         <summary>🌳 Nature Connection</summary>
         <div class="dropdown-menu">
             <a href="/nature-connection.html">🌳 Nature Connection</a>
-            <a href="/eco.html">🌍 Environmental Awareness</a>
-            <a href="/blog.html">📝 Yangocean Journal</a>
+            <a href="https://www.unep.org/news-and-stories" target="_blank" rel="noopener noreferrer">📰 Environmental Reading</a>
+            <a href="/blog.html">📝 Journal</a>
         </div>
     </details>
 
     <details class="dropdown">
         <summary>📱 Related Apps</summary>
         <div class="dropdown-menu">
-            <a href="/apps.html">📱 All Yangocean Apps</a>
+            <a href="/apps.html">📱 All Apps</a>
         </div>
     </details>
 
 </nav>
-
 </header>
 
 <main id="content-to-read">
 
+<!-- HERO -->
 <section class="hero">
-
 <h1>🌿 Mindful Living, Nature &amp; Everyday Sustainability</h1>
 
 <p>
@@ -343,62 +334,39 @@ environmental awareness and simple everyday sustainability.
 The aim is not to provide all the answers, but to encourage awareness,
 curiosity and thoughtful choices in everyday life.
 </p>
-
 </section>
 
+<!-- READ ALOUD -->
 <div class="tts-controls">
-
-<button
- type="button"
- class="tts-btn play"
- onclick="togglePlay()"
- aria-label="Play or resume reading">
-🔊
-</button>
-
-<button
- type="button"
- class="tts-btn pause"
- onclick="pauseReading()"
- aria-label="Pause reading">
-⏸
-</button>
-
-<button
- type="button"
- class="tts-btn stop"
- onclick="stopReading()"
- aria-label="Stop reading">
-⏹
-</button>
-
+<button type="button" class="tts-btn play" onclick="togglePlay()" aria-label="Play or resume reading">🔊</button>
+<button type="button" class="tts-btn pause" onclick="pauseReading()" aria-label="Pause reading">⏸</button>
+<button type="button" class="tts-btn stop" onclick="stopReading()" aria-label="Stop reading">⏹</button>
 </div>
 
+<!-- ABOUT -->
 <section>
-
-<h2>🌱 About Yangocean</h2>
+<h2>🌱 About</h2>
 
 <p>
-Yangocean brings together reflections and practical resources around the
+This site brings together reflections and practical resources around the
 relationship between our inner lives, our everyday choices and the natural
 world around us.
 </p>
 
 <p>
 From mindfulness and Dhamma-inspired reflection to mindful eating,
-nature, environmental awareness and sustainability, Yangocean explores
-how small moments of awareness can influence the way we live.
+nature, environmental awareness and sustainability, it explores how small
+moments of awareness can influence the way we live.
 </p>
-
 </section>
 
+<!-- THREE MAIN AREAS -->
 <section>
-
-<h2>🌿 Explore Yangocean</h2>
+<h2>🌿 Explore</h2>
 
 <p>
-Yangocean is organised around three simple areas. Each area contains
-related topics so the site can grow without making the main menu crowded.
+The site is organised around three simple areas. Each contains related
+topics without making the main menu crowded.
 </p>
 
 <div class="cards">
@@ -409,9 +377,7 @@ related topics so the site can grow without making the main menu crowded.
 Explore mindfulness, Dhamma-inspired reflections, mindful and ethical
 living, mindful eating and practical sustainable living.
 </p>
-<p>
-<a href="/mindfulness.html">Explore Mindful Living →</a>
-</p>
+<p><a href="/mindfulness.html">Explore Mindful Living →</a></p>
 </div>
 
 <div class="card">
@@ -421,39 +387,32 @@ Reconnect with trees, plants, water, wildlife and the natural systems
 around us. The Journal and environmental awareness articles are also
 part of this area.
 </p>
-<p>
-<a href="/nature-connection.html">Explore Nature Connection →</a>
-</p>
+<p><a href="/nature-connection.html">Explore Nature Connection →</a></p>
 </div>
 
 <div class="card">
 <h3>📱 Related Apps</h3>
 <p>
-Discover Yangocean's related apps, including tools and resources created
-to support healthier and more mindful everyday living.
+Discover related apps and resources created to support healthier and
+more mindful everyday living.
 </p>
-<p>
-<a href="/apps.html">Explore Related Apps →</a>
-</p>
+<p><a href="/apps.html">Explore Related Apps →</a></p>
 </div>
 
 </div>
-
 </section>
 
+<!-- DAILY REFLECTION -->
 <section class="reflection">
-
 <h2>🌿 Daily Reflection</h2>
-
 <p id="dailyReflection">
 Take a moment to pause, observe and appreciate the present.
 </p>
-
 </section>
 
+<!-- LATEST JOURNAL -->
 <section>
-
-<h2>📝 From the Yangocean Journal</h2>
+<h2>📝 From the Journal</h2>
 
 <div class="cards">
 
@@ -476,7 +435,7 @@ connection with the living environment.
 </div>
 
 <div class="card">
-<h3>📝 Yangocean Journal</h3>
+<h3>📝 More from the Journal</h3>
 <p>
 Explore more original reflections, observations and everyday stories
 about mindful living, nature and sustainability.
@@ -485,28 +444,26 @@ about mindful living, nature and sustainability.
 </div>
 
 </div>
-
 </section>
 
-
+<!-- ENVIRONMENTAL READING -->
 <section>
-
 <h2>📰 Environmental Reading</h2>
 
 <p>
-Explore selected environmental news and articles from external sources.
-These links are provided for further reading and do not represent
-Yangocean's editorial ownership of the linked publications.
+Read environmental news, stories and updates from the United Nations
+Environment Programme.
 </p>
 
-<div id="environmentalNews">
-<p>Loading environmental reading...</p>
-</div>
-
+<p>
+<a href="https://www.unep.org/news-and-stories" target="_blank" rel="noopener noreferrer">
+News, Stories &amp; Speeches — United Nations Environment Programme →
+</a>
+</p>
 </section>
 
+<!-- SIMPLE THOUGHT -->
 <section>
-
 <h2>🌱 A Simple Thought</h2>
 
 <p>
@@ -526,16 +483,31 @@ Sometimes it begins with simply noticing:
 Awareness can come before action. From awareness, more thoughtful choices
 can gradually emerge.
 </p>
-
 </section>
 
+<!-- CONTINUE EXPLORING -->
+<section>
+<h2>🌱 Continue Exploring</h2>
 
+<p>
+There is no single way to live mindfully. Explore the areas that interest
+you and return whenever you feel like reflecting again.
+</p>
 
+<p>
+<a href="/mindfulness.html">Mindfulness &amp; Dhamma</a> ·
+<a href="/mindful-ethical-living.html">Mindful &amp; Ethical Living</a> ·
+<a href="/mindful-eating.html">Mindful Eating</a> ·
+<a href="/sustainable-living.html">Sustainable Living</a> ·
+<a href="/blog.html">Journal</a> ·
+<a href="/apps.html">Apps</a>
+</p>
+</section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-
 <p>
 © 2026 Yangocean. Mindful living, nature and everyday sustainability.
 </p>
@@ -545,13 +517,10 @@ can gradually emerge.
 <a href="/contact.html">Contact</a> ·
 <a href="/blog.html">Journal</a>
 </p>
-
 </footer>
 
+<!-- DAILY REFLECTION -->
 <script>
-
-/* Daily Reflection */
-
 const reflections = [
     "Pause for a moment and notice what is happening right now.",
     "A small mindful choice can be the beginning of a larger change.",
@@ -569,113 +538,21 @@ const reflectionIndex =
 
 document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
-
-
-/* Environmental Reading */
-
-const feeds = [
-    {
-        name: "UNEP News",
-        url: "https://www.unep.org/news-and-stories"
-    },
-  
-];
-
-async function loadEnvironmentalNews() {
-
-    const container =
-        document.getElementById("environmentalNews");
-
-    container.innerHTML = "";
-
-    for (const feed of feeds) {
-
-        try {
-
-            const response = await fetch(feed.url);
-            const data = await response.json();
-
-            if (!data.items) continue;
-
-            const heading =
-                document.createElement("h3");
-
-            heading.textContent = feed.name;
-
-            container.appendChild(heading);
-
-            data.items.slice(0, 3).forEach(item => {
-
-                const article =
-                    document.createElement("div");
-
-                article.className = "news-item";
-
-                const title =
-                    document.createElement("h4");
-
-                const link =
-                    document.createElement("a");
-
-                link.href = item.link;
-                link.target = "_blank";
-                link.rel = "noopener";
-                link.textContent = item.title;
-
-                title.appendChild(link);
-                article.appendChild(title);
-
-                if (item.pubDate) {
-
-                    const date =
-                        document.createElement("small");
-
-                    date.textContent =
-                        new Date(item.pubDate).toLocaleDateString();
-
-                    article.appendChild(date);
-                }
-
-                container.appendChild(article);
-
-            });
-
-        } catch (error) {
-
-            console.log(
-                "Unable to load feed:",
-                feed.name,
-                error
-            );
-
-        }
-
-    }
-
-}
-
-loadEnvironmentalNews();
-
 </script>
 
+<!-- FULL PAGE READ ALOUD -->
 <script>
-
-/* Full-page Read Aloud */
-
 let speech = window.speechSynthesis;
 let utterance = null;
 
 function getReadableText() {
-
-    const content =
-        document.getElementById("content-to-read");
+    const content = document.getElementById("content-to-read");
 
     if (!content) {
         return "";
     }
 
-    const elements =
-        content.querySelectorAll("h1, h2, h3, h4, p, li");
+    const elements = content.querySelectorAll("h1, h2, h3, h4, p, li");
 
     return Array.from(elements)
         .map(function(element) {
@@ -688,13 +565,8 @@ function getReadableText() {
 }
 
 function togglePlay() {
-
     if (!("speechSynthesis" in window)) {
-
-        alert(
-            "Sorry, your browser does not support Read Aloud."
-        );
-
+        alert("Sorry, your browser does not support Read Aloud.");
         return;
     }
 
@@ -713,9 +585,7 @@ function togglePlay() {
         return;
     }
 
-    utterance =
-        new SpeechSynthesisUtterance(text);
-
+    utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "en-US";
     utterance.rate = 0.95;
     utterance.pitch = 1;
@@ -725,22 +595,16 @@ function togglePlay() {
 }
 
 function pauseReading() {
-
-    if (
-        "speechSynthesis" in window &&
-        speech.speaking
-    ) {
+    if ("speechSynthesis" in window && speech.speaking) {
         speech.pause();
     }
 }
 
 function stopReading() {
-
     if ("speechSynthesis" in window) {
         speech.cancel();
     }
 }
-
 </script>
 
 </body>
