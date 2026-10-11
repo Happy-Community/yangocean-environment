@@ -1,55 +1,47 @@
 <!DOCTYPE html>
-
-<html lang="zh">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 
-<title>亲近自然 | 树木、植物、观察与日常自然 | Yangocean</title>
+<title>亲近自然 | 观察植物、树木与自然之美 | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="通过观察树木、种植、摄影、自然日志以及日常户外觉察，探索与身边自然建立联系的简单方式。">
-<meta name="keywords" content="亲近自然, 自然观察, 树木摄影, 自然日志, 种植, 园艺, 植物, 正念自然, 环境意识">
+<meta name="description" content="通过观察树木、植物、鸟类和日常自然变化，学习亲近自然的简单方法。用摄影、种植和自然观察记录，发现身边的自然之美。">
+
 <meta name="robots" content="index, follow">
+
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
-<!-- OPEN GRAPH -->
-
 <meta property="og:title" content="亲近自然 | Yangocean">
-<meta property="og:description" content="留意、观察、种植并珍惜身边的大自然。">
+<meta property="og:description" content="放慢脚步，观察身边的自然，发现日常生活中的美好。">
 <meta property="og:url" content="https://yangocean.com/zh/nature-connection.html">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
-<!-- TWITTER -->
-
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="亲近自然 | Yangocean">
-<meta name="twitter:description" content="留意、观察、种植并珍惜身边的大自然。">
+<meta name="twitter:description" content="放慢脚步，观察身边的自然，发现日常生活中的美好。">
 <meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
 
-<!-- CANONICAL -->
-
 <link rel="canonical" href="https://yangocean.com/zh/nature-connection.html">
-
-<!-- HREFLANG -->
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/nature-connection.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/nature-connection.html">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/nature-connection.html">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/nature-connection.html">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/nature-connection.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/nature-connection.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/nature-connection.html">
-
-<!-- STRUCTURED DATA -->
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "亲近自然 | Yangocean",
+  "name": "亲近自然",
   "url": "https://yangocean.com/zh/nature-connection.html",
-  "description": "通过摄影、种植和自然日志，以实际而简单的方式观察、了解并珍惜身边的大自然。",
+  "description": "通过观察、种植、摄影和记录，学习欣赏身边的自然。",
+  "inLanguage": "zh-CN",
   "isPartOf": {
     "@type": "WebSite",
     "name": "Yangocean",
@@ -58,11 +50,291 @@
 }
 </script>
 
-<!-- STYLES -->
+<style>
+* {
+    box-sizing: border-box;
+}
 
-<link rel="stylesheet" href="/styles.css">
+body {
+    margin: 0;
+    background: #f7f9f6;
+    color: #333;
+    font-family: Arial, "Microsoft YaHei", "Noto Sans SC",
+                 "PingFang SC", sans-serif;
+    line-height: 1.9;
+}
 
-<!-- ADSENSE -->
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #e1e7df;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    text-align: left;
+}
+
+.logo {
+    color: #285943;
+    font-size: 1.45rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tagline {
+    font-size: 0.82rem;
+    color: #6b756d;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.93rem;
+    padding: 8px 9px;
+    border-radius: 7px;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    background: #eef4ed;
+    color: #285943;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 38px;
+    min-width: 235px;
+    background: white;
+    border: 1px solid #e1e7df;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10);
+    padding: 7px;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 11px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.languages a {
+    color: #555;
+    text-decoration: none;
+    font-size: 0.84rem;
+}
+
+.languages a:hover {
+    color: #285943;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #eef6ed, #f8fbf7);
+    border-radius: 18px;
+    padding: 45px 25px;
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    color: #285943;
+    margin: 0 0 15px;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 780px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+.section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #285943;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin: 0 auto 25px;
+    text-align: center;
+    color: #555;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f7faf6;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.card h3 {
+    color: #285943;
+    margin-top: 0;
+}
+
+.card a {
+    color: #285943;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.card a:hover {
+    text-decoration: underline;
+}
+
+ul,
+ol {
+    padding-left: 28px;
+}
+
+.closing {
+    background: #eef6ed;
+    border-radius: 16px;
+    text-align: center;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.tts-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 25px 0;
+    flex-wrap: wrap;
+}
+
+.tts-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #285943;
+    color: white;
+}
+
+.tts-btn:hover {
+    opacity: 0.85;
+}
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 28px 20px;
+    color: #666;
+}
+
+footer a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+footer a:hover {
+    color: #285943;
+}
+
+@media (max-width: 850px) {
+    .header-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand {
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
+}
+</style>
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
@@ -70,463 +342,530 @@ crossorigin="anonymous"></script>
 
 </head>
 
-<body class="theme-default">
+<body>
 
-<div class="container">
+<header>
+<div class="header-inner">
 
-<!-- NAV -->
+<div class="brand">
+<a href="/" class="logo">Yangocean</a>
 
-<nav>
+<div class="tagline">正念生活 • 自然 • 可持续发展</div>
 
-<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a>
+<div class="languages">
+<a href="/nature-connection.html" lang="en">EN</a>
+<a href="/ms/nature-connection.html" lang="ms">BM</a>
+<a href="/zh/nature-connection.html" lang="zh-CN">中文</a>
+<a href="/fr/nature-connection.html" lang="fr">FR</a>
+<a href="/es/nature-connection.html" lang="es">ES</a>
+<a href="/my/nature-connection.html" lang="my">မြန်မာ</a>
+</div>
+</div>
 
-<span style="margin-left:10px;">|</span>
+<nav aria-label="主导航">
 
-<a href="/zh/mindful-ethical-living.html">正念与责任生活</a> <a href="/zh/mindful-eating.html">正念饮食</a> <a href="/zh/nature-connection.html">亲近自然</a> <a href="/zh/sustainable-living.html">可持续生活</a> <a href="/zh/blog.html">日志</a> <a href="/zh/apps.html">应用</a>
+<a href="/">首页</a>
+
+<div class="dropdown">
+<button class="dropbtn" type="button">🌿 正念生活 ▾</button>
+<div class="dropdown-content">
+<a href="/zh/mindfulness.html">🧘 正念与佛法</a>
+<a href="/zh/mindful-eating.html">🥗 正念饮食</a>
+<a href="/zh/sustainable-living.html">♻️ 可持续生活</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn" type="button">🌳 亲近自然 ▾</button>
+<div class="dropdown-content">
+<a href="/zh/nature-connection.html">🌳 亲近自然</a>
+<a href="/zh/eco.html">🌍 环境知识</a>
+<a href="/zh/blog.html">📝 文章与随笔</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn" type="button">📱 应用程序 ▾</button>
+<div class="dropdown-content">
+<a href="/apps.html">📱 所有应用</a>
+<a href="/apps.html#eft">🌿 Yangocean App</a>
+<a href="/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+<a href="/apps.html#duidui-fit">🏃 DuiDui Fit</a>
+</div>
+</div>
 
 </nav>
+</div>
+</header>
 
-<!-- HERO -->
+<main id="content-to-read">
 
-<section class="card">
+<section class="hero">
+<h1>🌳 让我们亲近自然</h1>
 
-  <h1>🌳 亲近自然</h1>
-
-  <p style="text-align:center; color:#555;">
-    留意身边的树木、植物、鸟类、昆虫、光线、雨水以及不断变化的环境。
-    亲近自然，可以从离家很近的地方开始。
-  </p>
-
+<p>
+留意身边的树木、植物、鸟类、昆虫、阳光、雨水，
+以及日常生活中细微的自然变化。
+亲近自然，可以从认真观察身边已经存在的事物开始。
+</p>
 </section>
 
-<!-- INTRODUCTION -->
+<div class="tts-controls" aria-label="朗读控制">
+<button type="button" class="tts-btn"
+onclick="togglePlay()" aria-label="开始或继续朗读">🔊 开始朗读</button>
 
-<section class="card">
+<button type="button" class="tts-btn"
+onclick="pauseReading()" aria-label="暂停朗读">⏸ 暂停</button>
 
-  <h2>🍃 为什么要留意身边的自然？</h2>
+<button type="button" class="tts-btn"
+onclick="stopReading()" aria-label="停止朗读">⏹ 停止</button>
+</div>
 
-  <p>
-    我们常常认为，亲近自然需要去森林、山区、公园或遥远的地方。
-    但其实，自然也存在于许多普通的地方。
-  </p>
+<section class="section">
+<h2>🍃 为什么要留意身边的自然？</h2>
 
-  <p>
-    路边的一棵树、小小的花园、屋顶上的鸟儿、正在花朵间活动的昆虫，
-    或者雨后出现的新叶，都可以成为让我们放慢脚步、仔细观察的机会。
-  </p>
+<p>
+我们有时会认为，只有去森林、山区或大型公园，
+才能真正接触自然。然而，自然其实就在日常生活的周围。
+</p>
 
-  <p>
-    当我们经常留意这些细小的变化，熟悉的环境也会变得更加有趣。
-  </p>
+<p>
+路边的一棵树、一小片花园、屋顶上的一只鸟、
+停留在花朵上的昆虫，或雨后长出的新叶，
+都值得我们停下脚步，仔细观察。
+</p>
 
+<p>
+当我们开始留意这些细节，熟悉的地方也可能变得更加有趣，
+让我们对周围的环境产生更深的欣赏与理解。
+</p>
 </section>
 
-<!-- PLANTING -->
+<section class="section">
+<h2>🌱 尝试种植一株植物</h2>
 
-<section class="card">
+<p>
+亲近自然不一定要走进野外。种植一株植物，
+也能让我们随着时间的推移，观察生命的生长与变化。
+</p>
 
-  <h2>🌱 种植一些小植物</h2>
+<p>
+你不需要拥有一个大花园。一个花盆、一个种植容器，
+或一小块合适的空间，就可以开始。
+</p>
 
-  <p>
-    亲近自然并不一定意味着观察野外环境。
-    种植植物也可以让我们观察生命如何随着时间发生变化。
-  </p>
+<div class="card-grid">
 
-  <p>
-    你不需要拥有一个大花园。一个花盆、容器或小小的种植空间，
-    就足以开始。
-  </p>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <h3>🌿 从小处开始</h3>
-  <p>
-    选择适合你的空间、光照和当地环境的植物。
-    香草以及其他容易种植的植物，可以成为简单的开始。
-  </p>
+<div class="card">
+<h3>🌿 从简单的植物开始</h3>
+<p>
+选择适合当地气候、阳光条件和可用空间的植物。
+香草或其他容易照料的植物，都可以成为开始的选择。
+</p>
 </div>
 
-<div class="feature">
-  <h3>☀️ 观察光线</h3>
-  <p>
-    留意种植区域能够获得多少阳光，以及植物如何回应周围的环境。
-  </p>
+<div class="card">
+<h3>☀️ 观察阳光</h3>
+<p>
+留意植物每天能获得多少阳光，并观察它们如何回应周围的环境。
+</p>
 </div>
 
-<div class="feature">
-  <h3>💧 了解它的需要</h3>
-  <p>
-    根据具体植物及其生长环境的需要浇水，
-    而不是假设所有植物都需要相同的水量。
-  </p>
+<div class="card">
+<h3>💧 了解植物的需要</h3>
+<p>
+根据植物的种类和生长环境适当浇水。
+不同植物的需水量并不相同。
+</p>
 </div>
 
-<div class="feature">
-  <h3>📷 记录变化</h3>
-  <p>
-    偶尔拍照或做一些记录。通过一段时间的比较，
-    新叶、花朵以及其他变化会更容易被发现和珍惜。
-  </p>
+<div class="card">
+<h3>📷 记录生长变化</h3>
+<p>
+定期拍照或写下简短的观察笔记。
+随着时间过去，你可以比较新叶、花朵和其他生长变化。
+</p>
 </div>
-```
 
-  </div>
-
+</div>
 </section>
 
-<!-- NATURE JOURNAL -->
+<section class="section">
+<h2>📓 开始写一本自然观察日记</h2>
 
-<section class="card">
+<p>
+记录自然不需要特别的设备，也不要求具备专业的科学知识。
+一部手机和几行简单的笔记，就足以开始。
+</p>
 
-  <h2>📓 开始一本简单的自然日志</h2>
+<p>每次观察可以记录以下内容：</p>
 
-  <p>
-    写自然日志不需要特殊设备，也不需要具备科学知识。
-    一部手机和几句话的记录就可以开始。
-  </p>
+<ul>
+<li>📅 观察日期</li>
+<li>📍 大致地点或所在社区</li>
+<li>🌳 观察到的事物</li>
+<li>☀️ 当时的天气或时间</li>
+<li>📷 相关照片</li>
+<li>🐦 看到的鸟类、昆虫或其他动物</li>
+<li>🍃 与上一次观察相比出现的变化</li>
+<li>💭 自己的想法与感受</li>
+</ul>
 
-  <p>
-    每次观察可以记录：
-  </p>
-
-  <ul>
-    <li>📅 观察日期</li>
-    <li>📍 大致区域或社区</li>
-    <li>🌳 你注意到的事物</li>
-    <li>☀️ 天气或一天中的时间</li>
-    <li>📷 一张照片</li>
-    <li>🐦 看到的鸟类、昆虫或其他动物</li>
-    <li>🍃 与之前观察相比有什么变化</li>
-    <li>💭 个人想法或感受</li>
-  </ul>
-
-  <p>
-    随着时间推移，这些简单的观察可以成为一份属于自己的记录，
-    记录身边的自然世界如何变化。
-  </p>
-
+<p>
+随着记录逐渐累积，这些简单的笔记就能成为一份个人自然档案，
+帮助你了解周围的自然环境如何随时间改变。
+</p>
 </section>
 
-<!-- TREE OBSERVATION -->
+<section class="section">
+<h2>🌳 认识一棵树</h2>
 
-<section class="card">
+<p>
+选择一棵你经常经过的树。
+下次经过时，不妨停下来，花一点时间仔细观察。
+</p>
 
-  <h2>🌳 认识一棵树</h2>
+<div class="card-grid">
 
-  <p>
-    选择一棵你经常经过的树。不要只是从它身边走过，
-    偶尔停下来仔细看看。
-  </p>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <h3>🌿 叶子</h3>
-  <p>
-    留意叶子的形状、大小、颜色和质感。
-    是新叶、老叶，还是正在发生变化的叶子？
-  </p>
+<div class="card">
+<h3>🌿 树叶</h3>
+<p>
+留意叶子的形状、大小、颜色和表面质感。
+有没有新叶？有没有老叶或颜色正在改变的叶子？
+</p>
 </div>
 
-<div class="feature">
-  <h3>🌸 花朵与果实</h3>
-  <p>
-    留意花朵、种子或果实。
-    它们可能会吸引鸟类、昆虫和其他访客。
-  </p>
+<div class="card">
+<h3>🌸 花朵与果实</h3>
+<p>
+观察树上是否有花、种子或果实。
+这些部分可能为鸟类、昆虫和其他生物提供食物。
+</p>
 </div>
 
-<div class="feature">
-  <h3>🪵 树皮与树干</h3>
-  <p>
-    观察树干和树枝的颜色、纹理和形状。
-    不同的树往往有非常独特的特征。
-  </p>
+<div class="card">
+<h3>🪵 树皮与树干</h3>
+<p>
+留意树干和树枝的颜色、纹理与形状。
+不同树种往往具有各自独特的特征。
+</p>
 </div>
 
-<div class="feature">
-  <h3>🐜 小小访客</h3>
-  <p>
-    仔细看看树上或树周围是否有蚂蚁、甲虫、蜘蛛、
-    毛毛虫以及其他小生物。
-  </p>
+<div class="card">
+<h3>🐜 树上的小生命</h3>
+<p>
+观察树上或树旁是否有蚂蚁、甲虫、蜘蛛、毛毛虫或其他小动物。
+</p>
 </div>
-```
 
-  </div>
-
+</div>
 </section>
 
-<!-- PHOTOGRAPHY -->
+<section class="section">
+<h2>📷 用照片记录你的发现</h2>
 
-<section class="card">
+<p>
+摄影可以帮助我们放慢脚步，更仔细地观察。
+除了拍摄漂亮的景色，也可以记录平时容易忽略的小细节。
+</p>
 
-  <h2>📷 拍下你注意到的事物</h2>
+<ul>
+<li>🌱 刚长出的嫩叶</li>
+<li>🌸 正在开放的花朵</li>
+<li>🍂 形状有趣的落叶</li>
+<li>🐛 停留在植物上的昆虫</li>
+<li>🌧️ 雨后叶片上的水珠</li>
+<li>🌤️ 熟悉的树木周围不断变化的光线</li>
+<li>🌳 同一棵树在不同时间或不同日子的样子</li>
+<li>🌱 自己正在种植的植物</li>
+</ul>
 
-  <p>
-    摄影可以让我们放慢脚步。
-    不要只是因为某样东西看起来很美就拍下来，
-    也可以尝试记录那些平时容易忽略的细节。
-  </p>
-
-  <ul>
-    <li>🌱 一片新叶</li>
-    <li>🌸 一朵刚开始开放的花</li>
-    <li>🍂 一片有趣纹理的落叶</li>
-    <li>🐛 正在植物上活动的昆虫</li>
-    <li>🌧️ 雨后的水滴</li>
-    <li>🌤️ 熟悉的树木周围不断变化的光线</li>
-    <li>🌳 同一棵树在不同时间的样子</li>
-    <li>🌱 你正在种植的植物</li>
-  </ul>
-
-  <p>
-    重点不是拍出完美的照片。
-    重点是更加仔细地观察。
-  </p>
-
+<p>
+目标不是拍出完美的照片，而是学习看得更仔细。
+</p>
 </section>
 
-<!-- FIVE MINUTE PAUSE -->
+<section class="section">
+<h2>👀 花五分钟观察自然</h2>
 
-<section class="card">
+<p>外出时，可以尝试这个简单的观察练习。</p>
 
-  <h2>👀 五分钟的自然停留</h2>
+<ol>
+<li>找一个安全、舒适的地方停下来。</li>
+<li>先不要查看手机，环顾四周。</li>
+<li>留意三样自己看得到的事物。</li>
+<li>仔细听听周围的两种声音。</li>
+<li>找出一件以前没有注意过的小事物。</li>
+<li>如果愿意，可以拍一张照片。</li>
+<li>用一句话记录这次体验。</li>
+</ol>
 
-  <p>
-    下次在户外时，可以尝试一个简单的短暂观察练习。
-  </p>
-
-  <ol>
-    <li>在安全、舒适的地方停下来。</li>
-    <li>先看看周围，而不是马上拿起手机。</li>
-    <li>留意三样你可以看到的东西。</li>
-    <li>留意周围的两种声音。</li>
-    <li>寻找一个以前从未注意过的小细节。</li>
-    <li>如果愿意，可以拍一张照片。</li>
-    <li>用一句话写下这次体验。</li>
-  </ol>
-
-  <p>
-    五分钟看起来很短，但持续观察可以逐渐改变
-    我们体验熟悉环境的方式。
-  </p>
-
+<p>
+五分钟看似很短，但持续观察可以改变我们看待熟悉环境的方式，
+帮助我们发现过去忽略的细节。
+</p>
 </section>
 
-<!-- CHANGES -->
+<section class="section">
+<h2>🌦️ 观察自然的变化</h2>
 
-<section class="card">
+<p>即使变化十分细微，自然也一直在改变。</p>
 
-  <h2>🌦️ 观察自然的变化</h2>
+<p>
+树木可能长出新叶，花朵会开放又凋谢，鸟类可能在不同时间出现，
+而雨水也会改变植物及周围环境的样貌。
+</p>
 
-  <p>
-    大自然一直在变化，即使有些变化非常细微。
-  </p>
-
-  <p>
-    树木可能长出新叶，花朵会出现又凋谢，
-    鸟儿可能在不同时间出现，而雨水也能改变植物
-    以及周围环境的样子。
-  </p>
-
-  <p>
-    反复拍摄同一个地方或同一株植物，
-    可以发现那些偶尔观察时很容易错过的变化。
-  </p>
-
+<p>
+定期拍摄同一个地方或同一株植物，
+可以帮助我们发现那些偶尔看一眼时容易错过的变化。
+</p>
 </section>
 
-<!-- PERSONAL OBSERVATIONS -->
+<section class="section">
+<h2>📝 自然观察记录</h2>
 
-<section class="card">
+<p>
+随着日常观察和照片逐渐累积，这个部分可以慢慢加入新的发现与记录。
+</p>
 
-  <h2>📝 Yangocean 自然观察</h2>
+<div class="card-grid">
 
-  <p>
-    这一部分将逐渐加入来自日常环境的原创观察和照片。
-  </p>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <h3>🌳 我们身边的树木</h3>
-  <p>
-    记录普通社区环境中所见的树木、照片和观察。
-  </p>
+<div class="card">
+<h3>🌳 身边的树木</h3>
+<p>
+记录社区和日常生活环境中看到的树木，
+分享相关照片与观察心得。
+</p>
 </div>
 
-<div class="feature">
-  <h3>🌱 种植与栽培</h3>
-  <p>
-    简单记录正在种植的植物，以及随着时间观察到的变化。
-  </p>
+<div class="card">
+<h3>🌱 植物与种植</h3>
+<p>
+记录正在种植的植物，以及随着时间发生的生长变化。
+</p>
 </div>
 
-<div class="feature">
-  <h3>🌿 小小发现</h3>
-  <p>
-    记录日常散步时发现的有趣植物、昆虫、花朵以及其他细节。
-  </p>
+<div class="card">
+<h3>🌿 生活中的小发现</h3>
+<p>
+记录散步或户外活动时注意到的植物、昆虫、花朵及其他有趣细节。
+</p>
 </div>
 
-<div class="feature">
-  <h3>🌧️ 雨后</h3>
-  <p>
-    观察雨水如何改变植物、树木、光线以及周围的环境。
-  </p>
+<div class="card">
+<h3>🌧️ 雨后的自然</h3>
+<p>
+观察雨水如何改变植物、树木、光线和周围的环境。
+</p>
 </div>
-```
 
-  </div>
+</div>
 
-  <p style="margin-top:20px; color:#777;">
-    新的观察将在拍摄和记录后陆续加入。
-  </p>
-
+<p style="margin-top:20px;color:#777;">
+随着新照片与观察笔记的累积，可以继续添加新的自然记录。
+</p>
 </section>
 
-<!-- RESPECT NATURE -->
+<section class="section">
+<h2>💚 观察自然，也要尊重自然</h2>
 
-<section class="card">
+<p>亲近自然也意味着尊重和保护自然。</p>
 
-  <h2>💚 观察自然，而不打扰它</h2>
+<ul>
+<li>🌿 避免破坏植物，也不要随意采摘花朵。</li>
+<li>🐦 与野生动物保持适当距离。</li>
+<li>🦋 不要干扰鸟巢、昆虫或其他动物。</li>
+<li>🚯 将垃圾带走，或妥善处理。</li>
+<li>📍 避免公开分享对野生动物十分重要或容易受到干扰的栖息地的精确位置。</li>
+</ul>
 
-  <p>
-    亲近自然也意味着尊重自然。
-  </p>
-
-  <ul>
-    <li>🌿 避免损伤植物或摘取花朵。</li>
-    <li>🐦 与野生动物保持适当的距离。</li>
-    <li>🦋 避免打扰鸟巢、昆虫或其他动物。</li>
-    <li>🚯 将垃圾带走，或放入合适的垃圾桶。</li>
-    <li>📍 避免公开敏感野生动物栖息地的精确位置。</li>
-  </ul>
-
-  <p>
-    好的自然观察应该让环境保持原来的样子，
-    或者在可能的情况下，让它变得更加干净。
-  </p>
-
+<p>
+良好的自然观察应该尽量不影响当地环境。
+如果条件允许，也可以在离开时让环境比之前更加整洁。
+</p>
 </section>
 
-<!-- NO EXPERTISE REQUIRED -->
+<section class="section">
+<h2>🌱 不必成为植物学专家</h2>
 
-<section class="card">
+<p>
+不认识每一种树、花或昆虫的名字，完全没有关系。
+你可以先观察，再慢慢学习辨认。
+</p>
 
-  <h2>🌱 你不需要成为植物学家</h2>
+<p>试着问自己几个简单的问题：</p>
 
-  <p>
-    不知道每一种树、花或昆虫的名字完全没有关系。
-    观察可以先于辨认。
-  </p>
+<ul>
+<li>它看起来是什么样子？</li>
+<li>与上次看到它时相比，有什么变化？</li>
+<li>有哪些生物会来到它的周围？</li>
+<li>雨后它看起来有什么不同？</li>
+<li>这株植物或这棵树有什么地方吸引我？</li>
+</ul>
 
-  <p>
-    你可以从一些简单的问题开始：
-  </p>
-
-  <ul>
-    <li>它看起来是什么样子？</li>
-    <li>与上一次看到它相比，有什么变化？</li>
-    <li>有哪些生物正在靠近或停留在它身上？</li>
-    <li>下雨之后，它看起来有什么不同？</li>
-    <li>是什么让这棵植物或树木对我来说有趣？</li>
-  </ul>
-
-  <p>
-    如果以后想进一步辨认物种，
-    这也可以成为学习过程的一部分。
-  </p>
-
+<p>
+如果以后想进一步认识某个物种，
+也可以把辨认与学习的过程当作自然探索的一部分。
+</p>
 </section>
 
-<!-- CONTINUE EXPLORING -->
+<section class="section">
+<h2>🌍 环境影响计算工具</h2>
 
-<section class="card">
+<p class="section-intro">
+自然与日常生活中的许多选择息息相关。
+以下工具可以帮助你了解资源使用情况，
+并思考日常活动可能带来的环境影响。
+</p>
 
-  <h2>🌍 继续探索 Yangocean</h2>
+<div class="card-grid">
 
-  <div class="features">
-
-```
-<div class="feature">
-  <a href="/zh/mindful-eating.html">🥗 正念饮食</a>
-  <p>
-    探索食物、觉察以及日常选择之间的联系。
-  </p>
+<div class="card">
+<h3>🌱 碳排放计算器</h3>
+<p>
+估算部分日常活动的碳排放影响，
+并思考哪些小改变可能有助于减少个人碳足迹。
+</p>
+<a href="/tools/carbon-calculator.html">使用碳排放计算器 →</a>
 </div>
 
-<div class="feature">
-  <a href="/zh/mindful-ethical-living.html">🌱 正念与责任生活</a>
-  <p>
-    思考日常选择和消费所带来的更广泛影响。
-  </p>
+<div class="card">
+<h3>♻️ 塑料使用计算器</h3>
+<p>
+了解日常生活中的塑料使用情况，
+并探索减少不必要塑料消耗的方法。
+</p>
+<a href="/tools/plastic-calculator.html">使用塑料计算器 →</a>
 </div>
 
-<div class="feature">
-  <a href="/zh/sustainable-living.html">♻️ 可持续生活</a>
-  <p>
-    探索资源使用、减少浪费以及日常可持续生活的实际方式。
-  </p>
+<div class="card">
+<h3>🌳 树木计算器</h3>
+<p>
+了解树木对环境的贡献，
+并思考保护树木与种植树木的重要性。
+</p>
+<a href="/tools/tree-calculator.html">使用树木计算器 →</a>
 </div>
 
-<div class="feature">
-  <a href="/zh/blog.html">📝 Yangocean 日志</a>
-  <p>
-    阅读原创思考、观察以及未来的自然故事。
-  </p>
+<div class="card">
+<h3>💧 用水计算器</h3>
+<p>
+了解日常用水情况，
+思考如何更有意识地使用珍贵的水资源。
+</p>
+<a href="/tools/water-calculator.html">使用用水计算器 →</a>
 </div>
-```
 
-  </div>
-
+</div>
 </section>
 
-<!-- FINAL THOUGHT -->
+<section class="closing">
+<h2>🍃 看得更仔细</h2>
 
-<section class="card">
+<p>自然不必特别壮观，也值得我们欣赏。</p>
 
-  <h2>🍃 仔细看看</h2>
+<p>
+有时候，亲近自然可以从一棵树、一朵花、
+一株正在生长的植物、一只鸟，
+或是在户外享受的一段宁静时光开始。
+</p>
 
-  <p>
-    大自然不一定要壮观，才值得我们留意。
-  </p>
-
-  <p>
-    有时候，亲近自然可以从一棵树、一朵花、一株你正在种植的植物、
-    一只鸟，或者户外一个安静的时刻开始。
-  </p>
-
-  <p>
-    <strong>
-      仔细看看。多一些观察。珍惜已经在你身边的一切。
-    </strong>
-  </p>
-
+<p>
+<strong>
+看得更仔细，发现更多细节。
+珍惜已经存在于我们身边的自然。
+</strong>
+</p>
 </section>
 
-<!-- FOOTER -->
+</main>
 
-<footer class="footer">
+<footer>
 
-  <p>© 2026 Yangocean</p>
+<p>&copy; <span id="year">2026</span> Yangocean</p>
 
-  <p>
-    <a href="/zh/about.html">关于</a> |
-    <a href="/zh/contact.html">联系我们</a> |
-    <a href="/zh/privacy.html">隐私</a> |
-    <a href="/zh/terms.html">条款</a> |
-    <a href="/zh/apps.html">应用</a>
-  </p>
+<p>
+<a href="/zh/about.html">关于我们</a>
+<a href="/zh/contact.html">联系我们</a>
+<a href="/zh/privacy.html">隐私政策</a>
+<a href="/zh/terms.html">使用条款</a>
+<a href="/apps.html">应用程序</a>
+</p>
+
+<p>正念生活 • 自然 • 可持续发展</p>
 
 </footer>
 
-</div>
+<script>
+let speech = window.speechSynthesis;
+let utterance = null;
+
+function getReadableText() {
+    const content = document.getElementById("content-to-read");
+
+    if (!content) {
+        return "";
+    }
+
+    const elements = content.querySelectorAll("h1, h2, h3, p, li");
+
+    return Array.from(elements)
+        .map(function(element) {
+            return element.innerText.trim();
+        })
+        .filter(function(text) {
+            return text.length > 0;
+        })
+        .join("。");
+}
+
+function togglePlay() {
+    if (!("speechSynthesis" in window)) {
+        alert("抱歉，您的浏览器不支持语音朗读功能。");
+        return;
+    }
+
+    if (speech.paused) {
+        speech.resume();
+        return;
+    }
+
+    if (speech.speaking) {
+        return;
+    }
+
+    const text = getReadableText();
+
+    if (!text) {
+        return;
+    }
+
+    utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    speech.speak(utterance);
+}
+
+function pauseReading() {
+    if ("speechSynthesis" in window && speech.speaking) {
+        speech.pause();
+    }
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        speech.cancel();
+    }
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
+
