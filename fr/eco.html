@@ -1,430 +1,930 @@
-```html
 <!DOCTYPE html>
-
 <html lang="fr">
+
 <head>
 <meta charset="UTF-8">
 
-<title>Sensibilisation Environnementale | Nature, Durabilité & Choix du Quotidien | Yangocean</title>
+<title>Sensibilisation à l’environnement | Climat, océans et biodiversité | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Explorez la sensibilisation environnementale à travers la nature, la durabilité, la consommation consciente, l’utilisation des ressources et les choix quotidiens qui influencent le monde qui nous entoure.">
+<meta name="description"
+content="Découvrez les enjeux environnementaux à travers le climat, les océans, les plantes, la biodiversité, l’eau et les choix du quotidien.">
 
 <meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="/styles.css">
-
 <link rel="canonical" href="https://yangocean.com/fr/eco.html">
-
-<!-- OPEN GRAPH -->
-
-<meta property="og:title" content="Sensibilisation Environnementale | Yangocean">
-<meta property="og:description" content="Explorez la sensibilisation environnementale, la nature, la durabilité, la consommation consciente et le lien entre les choix quotidiens et le monde naturel.">
-<meta property="og:url" content="https://yangocean.com/fr/eco.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
-
-<!-- HREFLANG -->
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/eco.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/eco.html">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/eco.html">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/eco.html">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/eco.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/eco.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/eco.html">
 
-<!-- ADSENSE -->
+<meta property="og:type" content="website">
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+<meta property="og:title"
+content="Sensibilisation à l’environnement | Climat, océans et biodiversité">
+
+<meta property="og:description"
+content="Explorez les changements environnementaux à travers le climat, la vie marine, les plantes, la biodiversité, l’eau et les choix du quotidien.">
+
+<meta property="og:url" content="https://yangocean.com/fr/eco.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/og-image.jpg">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous"></script>
+crossorigin="anonymous">
+</script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26352b;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #dfe7df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #2f6b45;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756b;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #304438;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b45;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 225px;
+    background: white;
+    border: 1px solid #dfe7df;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.language a {
+    font-size: 0.82rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+    background: linear-gradient(135deg, #edf7ee, #f8fbf7);
+    border-radius: 18px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f6b45;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    font-size: 1.05rem;
+    color: #526158;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px;
+}
+
+.tts-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    background: #2f6b45;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.tts-btn:hover {
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    margin-top: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2f6b45;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin-bottom: 25px;
+}
+
+/* ENVIRONMENT CARDS */
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.environment-card {
+    background: #f7faf7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.environment-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.environment-card-content {
+    padding: 22px;
+}
+
+.environment-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #2f6b45;
+}
+
+.then-now {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #56705e;
+    background: #eaf3eb;
+    border-radius: 20px;
+    padding: 4px 11px;
+    margin: 3px 0 14px;
+}
+
+.environment-card p {
+    line-height: 1.7;
+}
+
+/* EVERYDAY CHOICES */
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.choice-card {
+    background: #f7faf7;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.choice-card h3 {
+    color: #2f6b45;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.choice-card p {
+    margin-bottom: 0;
+}
+
+/* WATER FEATURE */
+
+.water-feature {
+    margin-top: 28px;
+    padding: 25px;
+    background: #f3f8f6;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.water-feature h3 {
+    margin-top: 0;
+    color: #2f6b45;
+}
+
+.water-feature p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.water-feature img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.water-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: #285943;
+    text-decoration: none;
+}
+
+.water-link:hover {
+    text-decoration: underline;
+}
+
+/* CLOSING */
+
+.closing {
+    text-align: center;
+}
+
+.closing p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 30px 20px;
+    color: #59645b;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #45604d;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .environment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .environment-card img {
+        height: auto;
+    }
+}
+
+@media (max-width: 850px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.84rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+
+    .choice-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<header>
 
-<!-- NAV -->
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/fr/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Vie en pleine conscience • Nature • Durabilité
+</div>
+
+</div>
 
 <nav>
-  <a href="/fr/">Accueil</a>
-  <a href="/fr/mindfulness.html">Pleine conscience</a>
-  <a href="/fr/mindful-ethical-living.html">Vie consciente</a>
-  <a href="/fr/mindful-eating.html">Alimentation consciente</a>
-  <a href="/fr/nature-connection.html">Lien avec la nature</a>
-  <a href="/fr/sustainable-living.html">Vie durable</a>
-  <a href="/fr/blog.html">Journal</a>
-  <a href="/fr/apps.html">Applications</a>
+
+<a href="/fr/">Accueil</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">🌿 Vivre en pleine conscience ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/mindfulness.html">🧘 Pleine conscience et Dhamma</a>
+
+<a href="/fr/mindful-eating.html">🥗 Alimentation en pleine conscience</a>
+
+<a href="/fr/sustainable-living.html">♻️ Mode de vie durable</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">🌳 Se rapprocher de la nature ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/nature-connection.html">🌳 Se rapprocher de la nature</a>
+
+<a href="/fr/eco.html">🌍 Sensibilisation à l’environnement</a>
+
+<a href="/fr/blog.html">📝 Journal</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">📱 Applications associées ▾</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/apps.html">📱 Toutes les applications</a>
+
+<a href="/fr/apps.html#eft">🌿 Application Yangocean</a>
+
+<a href="/fr/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+
+<a href="/fr/apps.html#duidui-fit">🏃 DuoFit</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/eco.html" lang="en">EN</a>
+
+<a href="/ms/eco.html" lang="ms">BM</a>
+
+<a href="/zh/eco.html" lang="zh">中文</a>
+
+<a href="/fr/eco.html" lang="fr" aria-current="page">FR</a>
+
+<a href="/es/eco.html" lang="es">ES</a>
+
+<a href="/my/eco.html" lang="my">မြန်မာ</a>
+
+</div>
+
 </nav>
 
-<!-- HERO -->
+</div>
+
+</header>
+
+<main id="content-to-read">
 
 <section class="hero">
 
-  <h1>🌍 Sensibilisation Environnementale</h1>
+<h1>🌍 Sensibilisation à l’environnement</h1>
 
-  <p>
-    Comprendre notre relation avec le monde naturel et la manière dont les
-    choix du quotidien peuvent influencer l’environnement.
-  </p>
+<p>
+Notre environnement est en constante évolution. Le climat, les océans,
+les plantes, les animaux et les communautés humaines sont liés entre eux
+et influencent notre vie quotidienne.
+</p>
 
-</section>
-
-<!-- INTRO -->
-
-<section class="card">
-
-  <h2>🌱 Pourquoi la Sensibilisation Environnementale est Importante</h2>
-
-  <p>
-    Nous dépendons du monde naturel pour l’air pur, l’eau, la nourriture,
-    l’énergie, les matériaux et les lieux où vivre. Dans le même temps,
-    la manière dont nous produisons, consommons, voyageons et utilisons
-    les ressources peut exercer une pression sur les écosystèmes.
-  </p>
-
-  <p>
-    La sensibilisation environnementale commence par l’observation de ces
-    liens. Nous n’avons pas besoin de comprendre tous les problèmes
-    environnementaux en même temps. Parfois, il suffit de prêter davantage
-    attention à l’origine des ressources et à ce qui se passe après leur
-    utilisation pour commencer utilement.
-  </p>
+<p>
+Comprendre ces changements peut nous aider à faire des choix plus réfléchis
+concernant notre mode de vie et notre utilisation des ressources naturelles.
+</p>
 
 </section>
 
-<!-- GLOBAL CONTEXT -->
+<div class="read-aloud">
 
-<section class="card">
+<button type="button" class="tts-btn" onclick="startReading()">
+🔊 Lire à voix haute
+</button>
 
-  <h2>🌏 Un Système Environnemental Connecté</h2>
+<button type="button" class="tts-btn" onclick="pauseReading()">
+⏸ Pause
+</button>
 
-  <p>
-    Les problèmes environnementaux sont interconnectés. Les changements
-    dans une partie du système peuvent influencer d’autres parties du monde naturel.
-  </p>
-
-  <ul>
-    <li>Le changement climatique peut affecter les écosystèmes, l’agriculture et les ressources en eau.</li>
-    <li>La pollution peut affecter les sols, les rivières, les océans, la faune et les communautés humaines.</li>
-    <li>La consommation de ressources peut accroître la pression sur les forêts, les minéraux, l’énergie et l’eau.</li>
-    <li>La perte d’habitats peut réduire la biodiversité et perturber les relations écologiques.</li>
-    <li>Les déchets peuvent rester dans l’environnement longtemps après que le produit d’origine a été jeté.</li>
-  </ul>
-
-  <p>
-    Observer ces liens peut nous aider à comprendre pourquoi la responsabilité
-    environnementale ne se limite pas à un type particulier de déchet ou de ressource.
-  </p>
-
-</section>
-
-<!-- KEY AREAS -->
-
-<section class="card">
-
-  <h2>🔎 Principaux Domaines de la Sensibilisation Environnementale</h2>
-
-  <div class="features">
-
-<div class="feature">
-
-  <h3>🌳 Nature & Biodiversité</h3>
-
-  <p>
-    Les forêts, les plantes, les animaux, les insectes, les océans et les
-    autres systèmes vivants font partie d’un environnement naturel interconnecté.
-  </p>
-
-  <a href="/fr/nature-connection.html">
-    Explorer le lien avec la nature
-  </a>
+<button type="button" class="tts-btn" onclick="stopReading()">
+⏹ Arrêter
+</button>
 
 </div>
 
+<section class="section">
 
-<div class="feature">
+<h2>🌍 Trois façons d’observer les changements environnementaux</h2>
 
-  <h3>♻️ Vie Durable</h3>
+<p class="section-intro">
+Les changements environnementaux peuvent parfois sembler trop vastes
+ou trop éloignés de notre quotidien. Observer des éléments familiers
+du monde naturel peut nous aider à mieux les reconnaître.
+</p>
 
-  <p>
-    Nos choix concernant l’énergie, les transports, la consommation, les
-    ressources et les déchets peuvent influencer notre empreinte environnementale.
-  </p>
+<div class="environment-grid">
 
-  <a href="/fr/sustainable-living.html">
-    Explorer la vie durable
-  </a>
+<div class="environment-card">
 
-</div>
+<img
+src="/images/environment-climate.png"
+alt="Illustration montrant l’évolution du climat et des températures au fil du temps"
+loading="lazy"
+>
 
+<div class="environment-card-content">
 
-<div class="feature">
+<h3>🌡️ Un climat en évolution</h3>
 
-  <h3>🥗 Alimentation & Ressources</h3>
+<div class="then-now">Avant → Aujourd’hui</div>
 
-  <p>
-    L’alimentation nous relie à l’agriculture, à l’eau, aux terres, à
-    l’énergie, aux emballages, au transport et aux déchets.
-  </p>
+<p>
+Le climat est influencé par de nombreux processus naturels, mais les activités
+humaines ont fortement augmenté les émissions de gaz à effet de serre.
+La combustion des énergies fossiles, les changements d’utilisation des terres
+et d’autres activités contribuent au réchauffement du climat.
+</p>
 
-  <a href="/fr/mindful-eating.html">
-    Explorer l’alimentation consciente
-  </a>
-
-</div>
-
-
-<div class="feature">
-
-  <h3>🌿 Choix Conscients</h3>
-
-  <p>
-    La sensibilisation environnementale peut faire partie de notre manière
-    de réfléchir à la consommation, à la responsabilité, à la bienveillance
-    et à notre relation avec le monde qui nous entoure.
-  </p>
-
-  <a href="/fr/mindful-ethical-living.html">
-    Explorer la vie consciente & éthique
-  </a>
+<p>
+Le changement climatique peut affecter les températures, les précipitations,
+les phénomènes météorologiques extrêmes, les écosystèmes et les communautés.
+</p>
 
 </div>
 
+</div>
 
-  </div>
+<div class="environment-card">
 
-</section>
+<img
+src="/images/environment-ocean.png"
+alt="Illustration montrant les changements dans la vie marine au fil du temps"
+loading="lazy"
+>
 
-<!-- ENVIRONMENTAL IMPACT -->
+<div class="environment-card-content">
 
-<section class="card">
+<h3>🐠 La vie dans nos océans</h3>
 
-  <h2>🌎 Comment les Choix du Quotidien sont Liés à l’Environnement</h2>
+<div class="then-now">Avant → Aujourd’hui</div>
 
-  <p>
-    De nombreux impacts environnementaux sont liés aux activités ordinaires
-    plutôt qu’à une seule action isolée.
-  </p>
+<p>
+Les écosystèmes marins peuvent être affectés par la pollution,
+la surpêche, la destruction des habitats et le changement climatique.
+Ces pressions peuvent réduire les espaces de vie et fragiliser
+de nombreuses espèces marines.
+</p>
 
-  <ul>
-    <li><strong>Ce que nous achetons</strong> peut nécessiter des matériaux, de l’énergie, des emballages et du transport.</li>
-    <li><strong>Ce que nous mangeons</strong> peut être lié à l’agriculture, aux terres, à l’eau et au gaspillage alimentaire.</li>
-    <li><strong>Notre façon de voyager</strong> peut influencer la consommation d’énergie et les émissions.</li>
-    <li><strong>Notre utilisation de l’eau</strong> affecte une ressource naturelle importante et limitée.</li>
-    <li><strong>Ce que nous jetons</strong> détermine ce qui peut entrer dans les systèmes de recyclage, les décharges ou l’environnement au sens large.</li>
-  </ul>
+<p>
+La pollution plastique et d’autres déchets peuvent également atteindre
+les milieux marins et nuire aux animaux sauvages.
+</p>
 
-  <p>
-    Ces liens ne signifient pas que chaque choix individuel a le même impact
-    environnemental. Ils nous rappellent simplement que la vie quotidienne
-    fait partie d’un système beaucoup plus vaste.
-  </p>
+</div>
 
-</section>
+</div>
 
-<!-- AWARENESS BEFORE ACTION -->
+<div class="environment-card">
 
-<section class="card">
+<img
+src="/images/environment-plants.png"
+alt="Illustration montrant les changements touchant les plantes et la biodiversité"
+loading="lazy"
+>
 
-  <h2>🌱 La Conscience Avant l’Action</h2>
+<div class="environment-card-content">
 
-  <p>
-    La responsabilité environnementale ne doit pas nécessairement commencer
-    par la perfection. Elle peut commencer par l’observation.
-  </p>
+<h3>🌿 Plantes et biodiversité</h3>
 
-  <p>
-    Avant de changer une habitude, nous pouvons poser quelques questions simples :
-  </p>
+<div class="then-now">Avant → Aujourd’hui</div>
 
-  <ul>
-    <li>D’où vient ce produit ou cette ressource ?</li>
-    <li>De quelle quantité ai-je réellement besoin ?</li>
-    <li>Combien de temps cet objet pourrait-il rester utile ?</li>
-    <li>Que se passe-t-il lorsque je n’en ai plus besoin ?</li>
-    <li>Pourrais-je en utiliser moins, réutiliser quelque chose, le réparer ou choisir une option plus simple ?</li>
-  </ul>
+<p>
+Les habitats naturels peuvent être transformés lorsque les forêts,
+les zones humides et d’autres écosystèmes sont détruits ou convertis
+pour l’aménagement, l’agriculture et d’autres activités humaines.
+</p>
 
-  <p>
-    Ces questions peuvent transformer la sensibilisation environnementale
-    en une prise de décision pratique et réfléchie.
-  </p>
+<p>
+Lorsque les habitats disparaissent ou sont fragmentés, de nombreuses plantes
+et de nombreux animaux peuvent perdre les espaces dont ils ont besoin pour vivre.
+</p>
 
-</section>
+</div>
 
-<!-- SMALL ACTIONS -->
+</div>
 
-<section class="card">
-
-  <h2>🌿 De Petits Changements dans la Vie Quotidienne</h2>
-
-  <p>
-    Prendre soin de l’environnement de manière significative peut prendre
-    de nombreuses formes. Certains changements sont simples et personnels,
-    tandis que d’autres dépendent des entreprises, des communautés, des
-    infrastructures et des politiques publiques.
-  </p>
-
-  <ul>
-    <li>Utiliser les ressources avec discernement.</li>
-    <li>Réduire la consommation inutile.</li>
-    <li>Réutiliser et réparer les objets lorsque cela est pratique.</li>
-    <li>Éviter les déchets inutiles.</li>
-    <li>Apprécier et prendre soin des espaces naturels proches.</li>
-    <li>S’informer sur l’origine des produits et des aliments.</li>
-    <li>Choisir des options durables lorsqu’elles sont pratiques et appropriées.</li>
-  </ul>
-
-  <p>
-    L’objectif n’est pas de prendre chaque décision parfaitement. Il s’agit
-    de mieux comprendre les conséquences de nos choix et d’améliorer les
-    choses lorsque nous le pouvons raisonnablement.
-  </p>
+</div>
 
 </section>
 
-<!-- FROM AWARENESS TO MINDFUL LIVING -->
+<section class="section">
 
-<section class="card">
+<h2>♻️ Les choix du quotidien</h2>
 
-  <h2>🧘 De la Sensibilisation Environnementale à la Vie Consciente</h2>
+<p class="section-intro">
+La sensibilisation à l’environnement prend tout son sens lorsque nous remarquons
+les liens entre nos décisions ordinaires et le monde naturel.
+Il n’est pas nécessaire de tout changer d’un seul coup.
+De petits choix réfléchis peuvent progressivement faire partie de notre quotidien.
+</p>
 
-  <p>
-    La sensibilisation environnementale peut devenir plus profonde lorsqu’elle
-    est liée à la pleine conscience. Prêter attention à ce que nous consommons,
-    à la manière dont nous utilisons les ressources et à la façon dont nos
-    actions affectent les autres êtres vivants peut changer notre manière
-    d’aborder les décisions ordinaires.
-  </p>
+<div class="choice-grid">
 
-  <p>
-    Il ne s’agit pas de se sentir coupable pour chaque impact environnemental.
-    Il s’agit de développer une meilleure compréhension et de faire des choix
-    réfléchis dans les circonstances de la vie quotidienne.
-  </p>
+<div class="choice-card">
 
-  <p>
-    <a href="/fr/mindful-ethical-living.html">
-      Explorer la vie consciente & éthique
-    </a>
-  </p>
+<h3>🛍️ Qu’est-ce que j’achète ?</h3>
 
-</section>
+<p>
+Puis-je choisir des produits durables, utiles et qui génèrent moins de déchets ?
+</p>
 
-<!-- JOURNAL -->
+</div>
 
-<section class="card">
+<div class="choice-card">
 
-  <h2>📝 Explorer le Journal Yangocean</h2>
+<h3>🥗 Qu’est-ce que je mange ?</h3>
 
-  <p>
-    La sensibilisation environnementale grandit également grâce à l’observation
-    personnelle. Le Journal Yangocean partage des réflexions, des photographies,
-    des expériences et des questions sur la nature, la durabilité, l’alimentation
-    et la vie quotidienne.
-  </p>
+<p>
+Puis-je réduire le gaspillage alimentaire et choisir mes aliments avec davantage d’attention ?
+</p>
 
-  <p>
-    <a href="/fr/blog.html">
-      Visiter le Journal Yangocean
-    </a>
-  </p>
+</div>
 
-</section>
+<div class="choice-card">
 
-<!-- REFLECTION -->
+<h3>🚶 Comment est-ce que je me déplace ?</h3>
 
-<section class="card">
+<p>
+Lorsque c’est pratique, puis-je marcher, faire du vélo, utiliser les transports en commun
+ou regrouper plusieurs déplacements ?
+</p>
 
-  <h2>💭 Une Réflexion Simple</h2>
+</div>
 
-  <p>
-    Regardez autour de vous un instant.
-  </p>
+<div class="choice-card">
 
-  <p>
-    Combien de choses autour de vous proviennent du monde naturel ? Combien
-    ont nécessité de l’eau, de l’énergie, des terres, des matériaux ou du
-    transport avant d’arriver jusqu’à vous ?
-  </p>
+<h3>💧 Comment est-ce que j’utilise l’eau ?</h3>
 
-  <p>
-    Nous n’avons pas besoin de répondre immédiatement à toutes les questions.
-    Parfois, remarquer le lien constitue déjà le début de la sensibilisation
-    environnementale.
-  </p>
+<p>
+Puis-je éviter le gaspillage d’eau et contribuer à préserver sa propreté ?
+</p>
 
-</section>
+</div>
 
-<!-- CONTINUE EXPLORING -->
+<div class="choice-card">
 
-<section class="card">
+<h3>♻️ Que puis-je éviter de jeter ?</h3>
 
-  <h2>🌊 Continuer à Explorer Yangocean</h2>
+<p>
+Puis-je limiter les achats inutiles, réutiliser des objets ou les réparer ?
+</p>
 
-  <p>
-    Explorez les différentes parties de Yangocean :
-  </p>
+</div>
 
-  <p>
-    <a href="/fr/mindfulness.html">Pleine conscience & Dhamma</a> ·
-    <a href="/fr/mindful-ethical-living.html">Vie consciente & éthique</a> ·
-    <a href="/fr/mindful-eating.html">Alimentation consciente</a> ·
-    <a href="/fr/nature-connection.html">Lien avec la nature</a> ·
-    <a href="/fr/sustainable-living.html">Vie durable</a> ·
-    <a href="/fr/blog.html">Journal Yangocean</a>
-  </p>
+<div class="choice-card">
 
-</section>
+<h3>🌱 Puis-je consommer moins ?</h3>
 
-<!-- CLOSING -->
+<p>
+Parfois, le choix le plus durable consiste simplement à acheter ou à consommer moins.
+</p>
 
-<section class="card">
+</div>
 
-  <h2>💚 La Conscience est un Commencement</h2>
+</div>
 
-  <p>
-    Prendre soin de l’environnement commence par comprendre que nos vies
-    sont liées au monde naturel.
-  </p>
+<div class="water-feature">
 
-  <p>
-    En prêtant attention à ce que nous consommons, à la manière dont nous
-    utilisons les ressources et à la façon dont nos choix affectent les autres
-    êtres vivants et les écosystèmes, nous pouvons progressivement développer
-    une relation plus réfléchie avec le monde qui nous entoure.
-  </p>
+<h3>💧 L’eau nous relie tous</h3>
 
-  <p>
-    La conscience n’exige pas la perfection. Elle nous donne simplement
-    l’occasion d’observer, d’apprendre et de choisir avec davantage de soin.
-  </p>
+<p>
+L’eau fait partie de chaque écosystème et de chaque communauté.
+Une seule goutte peut sembler insignifiante, mais l’eau circule continuellement
+dans le cycle naturel de l’eau.
+</p>
+
+<img
+src="/images/Eneverywaterdrop.png"
+alt="Le parcours d’une goutte d’eau dans le cycle naturel de l’eau"
+loading="lazy"
+>
+
+<p>
+Comprendre d’où vient l’eau, comment elle circule dans la nature et comment
+les ressources en eau douce se renouvellent peut nous aider à mieux apprécier
+l’importance d’une utilisation responsable de l’eau.
+</p>
+
+<a
+href="/blog/journey-one-drop-water.html"
+class="water-link"
+>
+💧 Lire : Le voyage d’une goutte d’eau →
+</a>
+
+</div>
 
 </section>
 
-<!-- FOOTER -->
+<section class="section closing">
 
-<footer class="footer">
+<h2>🌱 Observons la nature qui nous entoure</h2>
 
-  <p>© 2026 Yangocean</p>
+<p>
+Être sensibilisé à l’environnement ne signifie pas qu’il faut tout connaître
+sur les sciences du climat, la biodiversité ou l’écologie.
+</p>
 
-  <p>
-    <a href="/fr/">Accueil</a> |
-    <a href="/fr/about.html">À propos</a> |
-    <a href="/fr/privacy.html">Politique de confidentialité</a> |
-    <a href="/fr/terms.html">Conditions</a> |
-    <a href="/fr/contact.html">Contact</a>
-  </p>
+<p>
+Nous pouvons commencer simplement en observant ce qui nous entoure,
+en comprenant les raisons des changements et en réfléchissant à la manière
+dont nos choix quotidiens influencent le monde que nous partageons.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/fr/">Accueil</a>
+
+<a href="/fr/mindfulness.html">Pleine conscience</a>
+
+<a href="/fr/nature-connection.html">Nature</a>
+
+<a href="/fr/blog.html">Journal</a>
+
+<a href="/fr/apps.html">Applications</a>
+
+<a href="/fr/contact.html">Contact</a>
+
+</div>
+
+<p>
+&copy; 2026 • Pleine conscience • Nature • Durabilité au quotidien
+</p>
 
 </footer>
 
-</div>
+<script>
+let speechQueue = [];
+let currentIndex = 0;
+
+/* READ ALOUD */
+
+function getReadingText() {
+    const content = document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+    const elements = content.querySelectorAll("h1, h2, h3, p, li");
+    const texts = [];
+
+    elements.forEach(function(element) {
+        const text = element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
+        }
+    });
+
+    return texts;
+}
+
+function startReading() {
+    if (!("speechSynthesis" in window)) {
+        alert("La lecture à voix haute n’est pas prise en charge par ce navigateur.");
+        return;
+    }
+
+    if (speechSynthesis.paused) {
+        speechSynthesis.resume();
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    speechQueue = getReadingText();
+    currentIndex = 0;
+
+    speakNext();
+}
+
+function speakNext() {
+    if (currentIndex >= speechQueue.length) {
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(
+        speechQueue[currentIndex]
+    );
+
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    utterance.lang = "fr-FR";
+
+    utterance.onend = function() {
+        currentIndex++;
+        speakNext();
+    };
+
+    speechSynthesis.speak(utterance);
+}
+
+function pauseReading() {
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+        speechSynthesis.pause();
+    }
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+        speechQueue = [];
+        currentIndex = 0;
+    }
+}
+</script>
 
 </body>
 </html>
-```
+
