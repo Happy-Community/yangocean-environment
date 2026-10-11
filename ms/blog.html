@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="ms">
+
 <head>
 <meta charset="UTF-8">
 
-<title>Jurnal | Kehidupan Berkesedaran, Alam Semula Jadi & Refleksi Harian | Yangocean</title>
+<title>Kesedaran Alam Sekitar | Iklim, Lautan & Biodiversiti | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Jurnal Yangocean berkongsi refleksi, pemerhatian dan kisah ringkas tentang kehidupan berkesedaran, alam semula jadi, kelestarian, pemakanan berkesedaran dan pengalaman harian.">
+content="Terokai kesedaran alam sekitar melalui perubahan iklim, lautan, tumbuhan, biodiversiti, air dan pilihan harian kita.">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://yangocean.com/ms/blog.html">
+<link rel="canonical" href="https://yangocean.com/ms/eco.html">
 
-<link rel="alternate" hreflang="en" href="https://yangocean.com/blog.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
-<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
+<link rel="alternate" hreflang="en" href="https://yangocean.com/eco.html">
+<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/eco.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/eco.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/eco.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/eco.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/eco.html">
+<link rel="alternate" hreflang="x-default" href="https://yangocean.com/eco.html">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Jurnal | Yangocean">
-<meta property="og:description" content="Refleksi dan pemerhatian tentang kehidupan berkesedaran, alam semula jadi, kelestarian dan pengalaman harian.">
-<meta property="og:url" content="https://yangocean.com/ms/blog.html">
-<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jurnal | Yangocean">
-<meta name="twitter:description" content="Refleksi tentang kehidupan berkesedaran, alam semula jadi dan pengalaman harian.">
-<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
+<meta property="og:title" content="Kesedaran Alam Sekitar | Iklim, Lautan & Biodiversiti">
+<meta property="og:description" content="Terokai perubahan alam sekitar melalui iklim, hidupan laut, tumbuhan, biodiversiti, air dan pilihan harian.">
+<meta property="og:url" content="https://yangocean.com/ms/eco.html">
+<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous">
+</script>
+
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -46,96 +48,105 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26352b;
     line-height: 1.7;
-    color: #333;
-    background: #f7f8f4;
 }
 
-a {
-    color: #356b45;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #dfe7df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 .header-inner {
-    max-width: 1150px;
+    max-width: 1100px;
     margin: auto;
     padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
+}
+
+.brand {
+    flex-shrink: 0;
 }
 
 .logo {
-    font-size: 1.65rem;
+    color: #2f6b45;
+    text-decoration: none;
+    font-size: 1.35rem;
     font-weight: bold;
-    color: #356b45;
 }
 
 .tagline {
-    font-size: 0.82rem;
-    color: #666;
+    font-size: 0.78rem;
+    color: #68756b;
+    margin-top: 2px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 18px;
+    justify-content: flex-end;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
 nav a,
 .dropbtn {
-    color: #333;
-    font-size: 0.94rem;
+    color: #304438;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b45;
 }
 
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
 .dropbtn {
+    background: none;
     border: none;
-    background: transparent;
-    font-family: inherit;
+    padding: 0;
     cursor: pointer;
-    padding: 8px 0;
+    font-family: inherit;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 210px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-radius: 6px;
-    overflow: hidden;
+    right: 0;
+    top: 28px;
+    min-width: 225px;
+    background: white;
+    border: 1px solid #dfe7df;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    padding: 8px 0;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 10px 14px;
+    padding: 9px 14px;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-    background: #edf3e9;
+    background: #f1f6f1;
 }
 
 .dropdown:hover .dropdown-content,
@@ -143,33 +154,19 @@ nav a,
     display: block;
 }
 
-.languages {
+.language {
     display: flex;
-    gap: 9px;
-    font-size: 0.85rem;
+    gap: 7px;
+    align-items: center;
 }
 
-.languages a {
-    color: #356b45;
+.language a {
+    font-size: 0.82rem;
 }
 
-.hero {
-    background: #e8efe4;
-    text-align: center;
-    padding: 60px 20px 50px;
-}
-
-.hero h1 {
-    margin: 0 0 15px;
-    font-size: 2.4rem;
-    color: #2f5e3d;
-}
-
-.hero p {
-    max-width: 760px;
-    margin: 10px auto;
-    font-size: 1.05rem;
-}
+/* =========================
+   MAIN
+========================= */
 
 main {
     max-width: 1100px;
@@ -177,475 +174,902 @@ main {
     padding: 30px 20px 60px;
 }
 
-section {
-    margin: 35px 0;
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+    background: linear-gradient(
+        135deg,
+        #edf7ee,
+        #f8fbf7
+    );
+    border-radius: 18px;
+    margin-bottom: 35px;
 }
 
-section h2 {
-    color: #356b45;
-    font-size: 1.65rem;
-    margin-bottom: 15px;
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f6b45;
+    font-size: 2.2rem;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
-    margin-top: 20px;
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    font-size: 1.05rem;
+    color: #526158;
 }
 
-.card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 22px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e6e9e1;
+/* =========================
+   READ ALOUD
+========================= */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px;
 }
 
-.card h3 {
+.tts-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    background: #2f6b45;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.tts-btn:hover {
+    opacity: 0.9;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    margin-top: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2f6b45;
     margin-top: 0;
-    color: #356b45;
-    font-size: 1.2rem;
+    margin-bottom: 12px;
 }
 
-.card p {
-    margin-bottom: 18px;
+.section-intro {
+    max-width: 780px;
+    margin-bottom: 25px;
 }
 
-.card-link {
-    font-weight: bold;
+/* =========================
+   ENVIRONMENT CARDS
+========================= */
+
+.environment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 25px;
 }
 
-.simple-thought {
-    background: #edf3e9;
-    border-left: 4px solid #6a936d;
-    border-radius: 5px;
+.environment-card {
+    background: #f7faf7;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.environment-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.environment-card-content {
     padding: 22px;
-    margin-top: 35px;
-    font-style: italic;
 }
+
+.environment-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #2f6b45;
+}
+
+.then-now {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #56705e;
+    background: #eaf3eb;
+    border-radius: 20px;
+    padding: 4px 11px;
+    margin: 3px 0 14px;
+}
+
+.environment-card p {
+    line-height: 1.7;
+}
+
+/* =========================
+   EVERYDAY CHOICES
+========================= */
+
+.choice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.choice-card {
+    background: #f7faf7;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.choice-card h3 {
+    color: #2f6b45;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.choice-card p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   WATER FEATURE
+========================= */
+
+.water-feature {
+    margin-top: 28px;
+    padding: 25px;
+    background: #f3f8f6;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.water-feature h3 {
+    margin-top: 0;
+    color: #2f6b45;
+}
+
+.water-feature p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.water-feature img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+.water-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 600;
+    color: #285943;
+    text-decoration: none;
+}
+
+.water-link:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+    text-align: center;
+}
+
+.closing p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background: #294b34;
-    color: #ffffff;
+    background: #eef2ed;
     text-align: center;
-    padding: 28px 20px;
+    padding: 30px 20px;
+    color: #59645b;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #ffffff;
-    margin: 0 8px;
-    display: inline-block;
+    color: #45604d;
+    text-decoration: none;
+    margin: 0 7px;
 }
 
-footer p {
-    margin: 8px 0;
+footer a:hover {
+    text-decoration: underline;
 }
 
-#readAloudButton {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    z-index: 2000;
-    background: #356b45;
-    color: #ffffff;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 18px;
-    font-size: 1rem;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+    .environment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .choice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .environment-card img {
+        height: auto;
+    }
 }
 
-#readAloudButton:hover {
-    background: #294b34;
-}
-
-@media (max-width: 760px) {
+@media (max-width: 850px) {
     .header-inner {
-        justify-content: center;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav {
         justify-content: center;
-        gap: 12px;
     }
 
     .dropdown-content {
+        right: auto;
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
+@media (max-width: 600px) {
+    nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.84rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
 
     .hero {
-        padding: 42px 18px;
+        padding: 40px 15px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.85rem;
     }
 
-    main {
-        padding: 20px 16px 45px;
+    .choice-grid {
+        grid-template-columns: 1fr;
     }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="header-inner">
-        <div>
-            <a class="logo" href="/ms/">Yangocean</a>
-            <div class="tagline">Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian</div>
-        </div>
 
-        <nav aria-label="Navigasi utama">
-            <a href="/ms/">Laman Utama</a>
+<div class="header-inner">
 
-            <div class="dropdown">
-                <button class="dropbtn" type="button">🌿 Kehidupan Berkesedaran ▾</button>
-                <div class="dropdown-content">
-                    <a href="/ms/mindfulness.html">Kesedaran Penuh</a>
-                    <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
-                    <a href="/ms/sustainable-living.html">Kehidupan Lestari</a>
-                </div>
-            </div>
+<div class="brand">
 
-            <div class="dropdown">
-                <button class="dropbtn" type="button">🌳 Hubungan dengan Alam ▾</button>
-                <div class="dropdown-content">
-                    <a href="/ms/nature-connection.html">Hubungan dengan Alam Semula Jadi</a>
-                    <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
-                    <a href="/ms/blog.html">Jurnal</a>
-                </div>
-            </div>
+<a href="/ms/" class="logo">
+Yangocean
+</a>
 
-            <div class="dropdown">
-                <button class="dropbtn" type="button">📱 Aplikasi Berkaitan ▾</button>
-                <div class="dropdown-content">
-                    <a href="/ms/apps.html">Semua Aplikasi</a>
-                    <a href="/ms/apps.html#eft">Yangocean EFT Tapping</a>
-                    <a href="/ms/apps.html#healthy-body">QuQu Healthy Body</a>
-                    <a href="/ms/apps.html#duidui-fit">DuiDui Fit</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="languages" aria-label="Pilihan bahasa">
-            <a href="/blog.html" lang="en">EN</a>
-            <a href="/ms/blog.html" lang="ms" aria-current="page">BM</a>
-            <a href="/zh/blog.html" lang="zh">中文</a>
-            <a href="/fr/blog.html" lang="fr">FR</a>
-            <a href="/es/blog.html" lang="es">ES</a>
-            <a href="/my/blog.html" lang="my">MY</a>
-        </div>
-    </div>
-</header>
-
-<div id="content-to-read">
-
-    <section class="hero">
-        <h1>📝 Jurnal</h1>
-
-        <p>
-            Refleksi, pemerhatian dan kisah ringkas tentang kehidupan
-            berkesedaran, alam semula jadi, kelestarian dan pengalaman harian.
-        </p>
-
-        <p>
-            Sesetengah catatan bermula daripada pemerhatian biasa,
-            kemudian membawa kita berfikir tentang cara kita menjalani kehidupan,
-            menikmati makanan, memerhatikan persekitaran dan berhubung
-            dengan dunia di sekeliling kita.
-        </p>
-    </section>
-
-    <main>
-
-        <section>
-            <h2>Tentang Jurnal Ini</h2>
-
-            <p>
-                Jurnal ini menghimpunkan refleksi yang lebih mendalam,
-                pemerhatian dan kisah daripada kehidupan seharian.
-                Topiknya merangkumi alam semula jadi, alam sekitar,
-                kesejahteraan, kehidupan berkesedaran dan pengalaman
-                harian yang menggalakkan kita melihat dunia dengan
-                lebih teliti.
-            </p>
-        </section>
-
-        <section>
-            <h2>Catatan Jurnal Terkini</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>🌿 Kesejahteraan dan Kelestarian</h3>
-
-                    <p>
-                        Refleksi tentang kesejahteraan diri, pilihan
-                        harian dan hubungan antara kehidupan kita
-                        dengan alam sekitar.
-                    </p>
-
-                    <a class="card-link"
-                       href="/blog/wellness-and-sustainability.html">
-                        Baca catatan →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌳 Mengapa Pokok Penting</h3>
-
-                    <p>
-                        Meneroka kepentingan pokok, persekitaran
-                        tempat kita hidup dan bagaimana perkara
-                        yang sering kita terlepas pandang boleh
-                        mengubah cara kita melihat alam semula jadi.
-                    </p>
-
-                    <a class="card-link"
-                       href="/blog/why-trees-matter.html">
-                        Baca catatan →
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>Panduan Menanam dan Membesarkan Tumbuhan</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>🌱 Cara Menanam Tumbuhan</h3>
-
-                    <p>
-                        Panduan asas untuk memulakan penanaman,
-                        daripada menyediakan bahan yang diperlukan
-                        hingga menjaga tumbuhan semasa ia membesar.
-                    </p>
-
-                    <a class="card-link"
-                       href="/blog/how-to-plant.html">
-                        Baca panduan →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌳 Cara Menanam Pokok</h3>
-
-                    <p>
-                        Langkah-langkah asas untuk menanam pokok
-                        dan membantu memberikan permulaan yang baik
-                        kepada pokok muda.
-                    </p>
-
-                    <a class="card-link"
-                       href="/blog/how-to-plant-a-tree.html">
-                        Baca panduan →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌿 Cara Menanam Lidah Buaya</h3>
-
-                    <p>
-                        Ketahui cara menanam dan menjaga lidah buaya,
-                        memahami bahagian daunnya serta membezakan
-                        gel jernih di bahagian dalam daripada kulit
-                        hijau dan getah kekuningannya.
-                    </p>
-
-                    <a class="card-link"
-                       href="/blog/how-to-grow-aloe-vera.html">
-                        Baca panduan →
-                    </a>
-                </article>
-
-            </div>
-
-            <p>
-                Lebih banyak panduan akan ditambah dari semasa ke semasa.
-                Setiap panduan bertujuan berkongsi maklumat yang berguna
-                dengan cara yang mudah difahami dan diamalkan.
-            </p>
-        </section>
-
-        <section class="simple-thought">
-            <h2>Satu Renungan Ringkas</h2>
-
-            <p>
-                Tidak semua perkara perlu dilakukan dengan tergesa-gesa.
-                Kadangkala, dengan memerhatikan sesuatu yang biasa
-                dengan lebih teliti, kita dapat menemui sesuatu
-                yang baharu.
-            </p>
-        </section>
-
-    </main>
+<div class="tagline">
+Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
 </div>
 
-<footer>
-    <p>
-        <a href="/ms/">Laman Utama</a>
-        <a href="/ms/mindfulness.html">Kehidupan Berkesedaran</a>
-        <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
-        <a href="/ms/blog.html">Jurnal</a>
-        <a href="/ms/apps.html">Aplikasi</a>
-        <a href="/ms/contact.html">Hubungi Kami</a>
-    </p>
+</div>
 
-    <p>© 2026 Yangocean. Hak cipta terpelihara.</p>
-</footer>
+<nav aria-label="Navigasi utama">
 
-<button id="readAloudButton" type="button"
-        aria-label="Baca halaman ini dengan kuat">
-    🔊 Baca dengan kuat
+<a href="/ms/">
+Laman Utama
+</a>
+
+<div class="dropdown">
+
+<button type="button" class="dropbtn">
+🌿 Kehidupan Berkesedaran ▾
 </button>
 
+<div class="dropdown-content">
+
+<a href="/ms/mindfulness.html">
+🧘 Kesedaran Penuh & Dhamma
+</a>
+
+<a href="/ms/mindful-eating.html">
+🥗 Pemakanan Berkesedaran
+</a>
+
+<a href="/ms/sustainable-living.html">
+♻️ Kehidupan Lestari
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button type="button" class="dropbtn">
+🌳 Hubungan dengan Alam ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/nature-connection.html">
+🌳 Hubungan dengan Alam Semula Jadi
+</a>
+
+<a href="/ms/eco.html">
+🌍 Kesedaran Alam Sekitar
+</a>
+
+<a href="/ms/blog.html">
+📝 Jurnal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button type="button" class="dropbtn">
+📱 Aplikasi Berkaitan ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/apps.html">
+📱 Semua Aplikasi
+</a>
+
+<a href="/ms/apps.html#eft">
+🌿 Aplikasi Yangocean
+</a>
+
+<a href="/ms/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/ms/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language" aria-label="Pilihan bahasa">
+
+<a href="/eco.html" lang="en">EN</a>
+<a href="/ms/eco.html" lang="ms" aria-current="page">BM</a>
+<a href="/zh/eco.html" lang="zh">中文</a>
+<a href="/fr/eco.html" lang="fr">FR</a>
+<a href="/es/eco.html" lang="es">ES</a>
+<a href="/my/eco.html" lang="my">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<section class="hero">
+
+<h1>
+🌍 Kesedaran Alam Sekitar
+</h1>
+
+<p>
+Alam sekitar kita sentiasa berubah. Iklim, lautan,
+tumbuhan, haiwan dan komuniti manusia saling berkaitan
+dalam pelbagai cara yang mempengaruhi kehidupan seharian.
+</p>
+
+<p>
+Memahami perubahan ini dapat membantu kita membuat
+pilihan yang lebih bijak tentang cara kita hidup
+dan menggunakan sumber semula jadi.
+</p>
+
+</section>
+
+<div class="read-aloud">
+
+<button
+type="button"
+class="tts-btn"
+onclick="startReading()">
+🔊 Baca dengan Kuat
+</button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="pauseReading()">
+⏸ Jeda
+</button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="stopReading()">
+⏹ Hentikan
+</button>
+
+</div>
+
+<section class="section">
+
+<h2>
+🌍 Tiga Cara Memerhatikan Perubahan Alam Sekitar
+</h2>
+
+<p class="section-intro">
+Perubahan alam sekitar kadangkala terasa terlalu besar
+atau terlalu jauh untuk difahami. Dengan melihat bahagian
+alam semula jadi yang biasa kita temui, perubahan ini
+mungkin lebih mudah diperhatikan.
+</p>
+
+<div class="environment-grid">
+
+<div class="environment-card">
+
+<img
+src="/images/environment-climate.png"
+alt="Ilustrasi yang menunjukkan perubahan iklim dan suhu dari semasa ke semasa"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>
+🌡️ Iklim yang Berubah
+</h3>
+
+<div class="then-now">
+Dahulu → Kini
+</div>
+
+<p>
+Iklim dipengaruhi oleh pelbagai proses semula jadi,
+namun aktiviti manusia telah meningkatkan pelepasan
+gas rumah hijau dengan ketara. Pembakaran bahan api fosil,
+perubahan guna tanah dan aktiviti lain menyumbang
+kepada pemanasan iklim.
+</p>
+
+<p>
+Perubahan iklim boleh mempengaruhi suhu, taburan hujan,
+kejadian cuaca ekstrem, ekosistem dan kehidupan masyarakat.
+</p>
+
+</div>
+
+</div>
+
+<div class="environment-card">
+
+<img
+src="/images/environment-ocean.png"
+alt="Ilustrasi yang menunjukkan perubahan hidupan laut dari semasa ke semasa"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>
+🐠 Kehidupan di Lautan
+</h3>
+
+<div class="then-now">
+Dahulu → Kini
+</div>
+
+<p>
+Ekosistem lautan boleh terjejas akibat pencemaran,
+penangkapan ikan secara berlebihan, kemusnahan habitat
+dan perubahan iklim. Tekanan ini boleh mengurangkan
+kawasan habitat serta mengancam hidupan marin.
+</p>
+
+<p>
+Pencemaran plastik dan sisa lain juga boleh memasuki
+persekitaran laut lalu membahayakan hidupan liar.
+</p>
+
+</div>
+
+</div>
+
+<div class="environment-card">
+
+<img
+src="/images/environment-plants.png"
+alt="Ilustrasi yang menunjukkan perubahan tumbuhan dan biodiversiti dari semasa ke semasa"
+loading="lazy"
+>
+
+<div class="environment-card-content">
+
+<h3>
+🌿 Tumbuhan dan Biodiversiti
+</h3>
+
+<div class="then-now">
+Dahulu → Kini
+</div>
+
+<p>
+Habitat semula jadi boleh berubah apabila hutan,
+tanah lembap dan ekosistem lain dibersihkan atau
+ditukar untuk pembangunan, pertanian dan aktiviti manusia.
+</p>
+
+<p>
+Apabila habitat musnah atau terpisah-pisah,
+banyak tumbuhan dan haiwan kehilangan tempat
+yang diperlukan untuk terus hidup.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>
+♻️ Pilihan dalam Kehidupan Seharian
+</h2>
+
+<p class="section-intro">
+Kesedaran alam sekitar menjadi lebih bermakna apabila
+kita menyedari bagaimana keputusan harian berkait
+dengan alam sekitar. Kita tidak perlu mengubah semuanya
+sekaligus. Pilihan kecil yang dibuat dengan penuh
+pertimbangan boleh menjadi sebahagian daripada kehidupan harian.
+</p>
+
+<div class="choice-grid">
+
+<div class="choice-card">
+
+<h3>
+🛍️ Apakah yang saya beli?
+</h3>
+
+<p>
+Bolehkah saya memilih barangan yang tahan lama,
+berguna dan menghasilkan kurang sisa?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+🥗 Apakah yang saya makan?
+</h3>
+
+<p>
+Bolehkah saya mengurangkan pembaziran makanan
+dan membuat pilihan makanan dengan lebih bijak?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+🚶 Bagaimanakah saya bergerak?
+</h3>
+
+<p>
+Jika sesuai, bolehkah saya berjalan kaki, berbasikal,
+menggunakan pengangkutan awam atau menggabungkan
+beberapa urusan dalam satu perjalanan?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+💧 Bagaimanakah saya menggunakan air?
+</h3>
+
+<p>
+Bolehkah saya mengelakkan penggunaan air yang tidak perlu
+dan membantu memastikan air kekal bersih?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+♻️ Apakah yang saya buang?
+</h3>
+
+<p>
+Bolehkah saya mengurangkan pembelian yang tidak perlu,
+menggunakan semula barangan atau membaikinya?
+</p>
+
+</div>
+
+<div class="choice-card">
+
+<h3>
+🌱 Bolehkah saya mengurangkan penggunaan?
+</h3>
+
+<p>
+Kadangkala, pilihan yang lebih lestari hanyalah
+membeli atau menggunakan sesuatu dalam kuantiti yang lebih sedikit.
+</p>
+
+</div>
+
+</div>
+
+<div class="water-feature">
+
+<h3>
+💧 Air Menghubungkan Kita Semua
+</h3>
+
+<p>
+Air merupakan sebahagian daripada setiap ekosistem
+dan setiap komuniti. Setitis air mungkin kelihatan kecil,
+namun air sentiasa bergerak melalui kitaran air semula jadi.
+</p>
+
+<img
+src="/images/Eneverywaterdrop.png"
+alt="Perjalanan setitis air melalui kitaran air semula jadi"
+loading="lazy"
+>
+
+<p>
+Memahami dari mana air berasal, bagaimana air bergerak
+melalui alam semula jadi dan bagaimana sumber air tawar
+diperbaharui dapat membantu kita menghargai kepentingan
+menggunakan air dengan cermat.
+</p>
+
+<a
+href="/blog/journey-one-drop-water.html"
+class="water-link">
+
+💧 Baca: Perjalanan Setitis Air →
+
+</a>
+
+</div>
+
+</section>
+
+<section class="section closing">
+
+<h2>
+🌱 Perhatikan Alam di Sekeliling Kita
+</h2>
+
+<p>
+Kesedaran alam sekitar tidak bermakna kita perlu mengetahui
+segala-galanya tentang sains iklim, biodiversiti atau ekologi.
+</p>
+
+<p>
+Ia boleh bermula dengan memerhatikan perkara di sekeliling kita,
+memahami sebab perubahan berlaku dan memikirkan bagaimana
+pilihan harian kita mempengaruhi dunia yang kita kongsi bersama.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/ms/">
+Laman Utama
+</a>
+
+<a href="/ms/mindfulness.html">
+Kehidupan Berkesedaran
+</a>
+
+<a href="/ms/nature-connection.html">
+Hubungan dengan Alam
+</a>
+
+<a href="/ms/blog.html">
+Jurnal
+</a>
+
+<a href="/ms/apps.html">
+Aplikasi Berkaitan
+</a>
+
+<a href="/ms/contact.html">
+Hubungi Kami
+</a>
+
+</div>
+
+<p>
+&copy; 2026 • Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian Harian
+</p>
+
+</footer>
+
 <script>
-(function () {
-    const button = document.getElementById("readAloudButton");
-    const content = document.getElementById("content-to-read");
 
-    let isReading = false;
-    let isPaused = false;
-    let utterances = [];
-    let currentIndex = 0;
+let speechQueue = [];
+let currentIndex = 0;
 
-    function getSpeechLanguage() {
-        const supported = [
-            "ms-MY",
-            "ms",
-            "id-ID"
-        ];
+/* =========================
+   READ ALOUD
+========================= */
 
-        const voices = window.speechSynthesis.getVoices();
+function getReadingText() {
 
-        for (const language of supported) {
-            if (voices.some(voice =>
-                voice.lang.toLowerCase() === language.toLowerCase()
-            )) {
-                return language;
-            }
-        }
+    const content =
+        document.getElementById("content-to-read");
 
-        return "ms-MY";
+    if (!content) {
+        return [];
     }
 
-    function updateButton() {
-        if (!isReading) {
-            button.textContent = "🔊 Baca dengan kuat";
-            button.setAttribute("aria-label", "Baca halaman ini dengan kuat");
-        } else if (isPaused) {
-            button.textContent = "▶ Sambung membaca";
-            button.setAttribute("aria-label", "Sambung bacaan");
-        } else {
-            button.textContent = "⏹ Hentikan bacaan";
-            button.setAttribute("aria-label", "Hentikan bacaan");
+    const elements =
+        content.querySelectorAll("h1, h2, h3, p, li");
+
+    const texts = [];
+
+    elements.forEach(function(element) {
+
+        const text =
+            element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
         }
+
+    });
+
+    return texts;
+}
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Maaf, pelayar ini tidak menyokong fungsi bacaan suara."
+        );
+
+        return;
     }
 
-    function finishReading() {
-        isReading = false;
-        isPaused = false;
-        currentIndex = 0;
-        utterances = [];
-        updateButton();
+    if (speechSynthesis.paused) {
+        speechSynthesis.resume();
+        return;
     }
 
-    function speakNext() {
-        if (!isReading || isPaused || currentIndex >= utterances.length) {
-            if (currentIndex >= utterances.length) {
-                finishReading();
-            }
-            return;
-        }
+    speechSynthesis.cancel();
 
-        const text = utterances[currentIndex];
-        const utterance = new SpeechSynthesisUtterance(text);
+    speechQueue = getReadingText();
+    currentIndex = 0;
 
-        utterance.lang = getSpeechLanguage();
-        utterance.rate = 0.9;
+    speakNext();
+}
 
-        utterance.onend = function () {
-            currentIndex++;
-            speakNext();
-        };
+function speakNext() {
 
-        utterance.onerror = function () {
-            currentIndex++;
-            speakNext();
-        };
-
-        window.speechSynthesis.speak(utterance);
+    if (currentIndex >= speechQueue.length) {
+        return;
     }
 
-    function startReading() {
-        if (!("speechSynthesis" in window)) {
-            alert("Maaf, pelayar anda tidak menyokong fungsi bacaan suara.");
-            return;
-        }
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
 
-        window.speechSynthesis.cancel();
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+    utterance.lang = "ms-MY";
 
-        const elements = content.querySelectorAll("h1, h2, h3, p");
-        utterances = Array.from(elements)
-            .map(element => element.innerText.trim())
-            .filter(text => text.length > 0);
+    utterance.onend = function() {
 
-        if (utterances.length === 0) {
-            return;
-        }
-
-        currentIndex = 0;
-        isReading = true;
-        isPaused = false;
-
-        updateButton();
+        currentIndex++;
         speakNext();
+
+    };
+
+    utterance.onerror = function() {
+
+        currentIndex++;
+        speakNext();
+
+    };
+
+    speechSynthesis.speak(utterance);
+}
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
     }
+}
 
-    button.addEventListener("click", function () {
-        if (!("speechSynthesis" in window)) {
-            alert("Maaf, pelayar anda tidak menyokong fungsi bacaan suara.");
-            return;
-        }
+function stopReading() {
 
-        if (!isReading) {
-            startReading();
-            return;
-        }
+    if ("speechSynthesis" in window) {
 
-        if (isPaused) {
-            isPaused = false;
-            updateButton();
+        speechSynthesis.cancel();
 
-            if (window.speechSynthesis.paused) {
-                window.speechSynthesis.resume();
-            } else {
-                speakNext();
-            }
-        } else {
-            isPaused = true;
-            window.speechSynthesis.pause();
-            updateButton();
-        }
-    });
+        speechQueue = [];
+        currentIndex = 0;
 
-    window.addEventListener("beforeunload", function () {
-        if ("speechSynthesis" in window) {
-            window.speechSynthesis.cancel();
-        }
-    });
+    }
+}
 
-    updateButton();
-})();
 </script>
 
 </body>
