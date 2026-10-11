@@ -3,476 +3,651 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Jurnal Yangocean | Kehidupan Sedar, Alam Semula Jadi & Refleksi</title>
+<title>Jurnal | Kehidupan Berkesedaran, Alam Semula Jadi & Refleksi Harian | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO META -->
-<meta name="description" content="Jurnal Yangocean berkongsi refleksi, pemerhatian dan pengalaman asli tentang kehidupan sedar, pemakanan sedar, hubungan dengan alam semula jadi dan kehidupan lestari seharian.">
-<meta name="keywords" content="kehidupan sedar, pemakanan sedar, alam semula jadi, kehidupan lestari, gaya hidup hijau, kelestarian, kesedaran, Yangocean">
+<meta name="description"
+content="Jurnal Yangocean berkongsi refleksi, pemerhatian dan kisah ringkas tentang kehidupan berkesedaran, alam semula jadi, kelestarian, pemakanan berkesedaran dan pengalaman harian.">
+
 <meta name="robots" content="index, follow">
-<meta name="author" content="Yangocean">
 
 <link rel="canonical" href="https://yangocean.com/ms/blog.html">
 
-<!-- LANGUAGE ALTERNATES -->
 <link rel="alternate" hreflang="en" href="https://yangocean.com/blog.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Jurnal Yangocean | Kehidupan Sedar, Alam Semula Jadi & Refleksi">
-<meta property="og:description" content="Refleksi dan pemerhatian asli tentang kehidupan sedar, alam semula jadi, pemakanan sedar dan kehidupan lestari seharian.">
-<meta property="og:url" content="https://yangocean.com/ms/blog.html">
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+<meta property="og:title" content="Jurnal | Yangocean">
+<meta property="og:description" content="Refleksi dan pemerhatian tentang kehidupan berkesedaran, alam semula jadi, kelestarian dan pengalaman harian.">
+<meta property="og:url" content="https://yangocean.com/ms/blog.html">
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Jurnal Yangocean | Kehidupan Sedar & Alam Semula Jadi">
-<meta name="twitter:description" content="Perkongsian tentang kehidupan sedar, hubungan dengan alam semula jadi dan kehidupan lestari.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+<meta name="twitter:title" content="Jurnal | Yangocean">
+<meta name="twitter:description" content="Refleksi tentang kehidupan berkesedaran, alam semula jadi dan pengalaman harian.">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<!-- STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Jurnal Yangocean",
-  "url": "https://yangocean.com/ms/blog.html",
-  "description": "Refleksi dan pemerhatian asli tentang kehidupan sedar, alam semula jadi, pemakanan sedar dan kehidupan lestari seharian.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Yangocean"
-  }
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+
+<style>
+* {
+    box-sizing: border-box;
 }
-</script>
 
-<!-- GOOGLE ADSENSE -->
-<script async
-  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-  crossorigin="anonymous">
-</script>
+html {
+    scroll-behavior: smooth;
+}
 
-<link rel="stylesheet" href="/styles.css">
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f8f4;
+}
 
+a {
+    color: #356b45;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header-inner {
+    max-width: 1150px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.65rem;
+    font-weight: bold;
+    color: #356b45;
+}
+
+.tagline {
+    font-size: 0.82rem;
+    color: #666;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #333;
+    font-size: 0.94rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 210px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 14px;
+}
+
+.dropdown-content a:hover {
+    background: #edf3e9;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 9px;
+    font-size: 0.85rem;
+}
+
+.languages a {
+    color: #356b45;
+}
+
+.hero {
+    background: #e8efe4;
+    text-align: center;
+    padding: 60px 20px 50px;
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    font-size: 2.4rem;
+    color: #2f5e3d;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 10px auto;
+    font-size: 1.05rem;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+section {
+    margin: 35px 0;
+}
+
+section h2 {
+    color: #356b45;
+    font-size: 1.65rem;
+    margin-bottom: 15px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 22px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e6e9e1;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #356b45;
+    font-size: 1.2rem;
+}
+
+.card p {
+    margin-bottom: 18px;
+}
+
+.card-link {
+    font-weight: bold;
+}
+
+.simple-thought {
+    background: #edf3e9;
+    border-left: 4px solid #6a936d;
+    border-radius: 5px;
+    padding: 22px;
+    margin-top: 35px;
+    font-style: italic;
+}
+
+footer {
+    background: #294b34;
+    color: #ffffff;
+    text-align: center;
+    padding: 28px 20px;
+}
+
+footer a {
+    color: #ffffff;
+    margin: 0 8px;
+    display: inline-block;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+#readAloudButton {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 2000;
+    background: #356b45;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+#readAloudButton:hover {
+    background: #294b34;
+}
+
+@media (max-width: 760px) {
+    .header-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .dropdown-content {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero {
+        padding: 42px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px 16px 45px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<header>
+    <div class="header-inner">
+        <div>
+            <a class="logo" href="/ms/">Yangocean</a>
+            <div class="tagline">Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian</div>
+        </div>
 
-<!-- NAV -->
-<nav>
-  <a href="/ms/">Laman Utama</a>
-  <a href="/ms/mindfulness.html">Kesedaran Diri</a>
-  <a href="/ms/mindful-ethical-living.html">Kehidupan Sedar</a>
-  <a href="/ms/mindful-eating.html">Pemakanan Sedar</a>
-  <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
-  <a href="/ms/sustainable-living.html">Kehidupan Lestari</a>
-  <a href="/ms/blog.html">Jurnal</a>
-  <a href="/ms/apps.html">Aplikasi</a>
-</nav>
+        <nav aria-label="Navigasi utama">
+            <a href="/ms/">Laman Utama</a>
 
-<!-- MAIN CONTENT -->
-<main id="content-to-read">
+            <div class="dropdown">
+                <button class="dropbtn" type="button">🌿 Kehidupan Berkesedaran ▾</button>
+                <div class="dropdown-content">
+                    <a href="/ms/mindfulness.html">Kesedaran Penuh</a>
+                    <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
+                    <a href="/ms/sustainable-living.html">Kehidupan Lestari</a>
+                </div>
+            </div>
 
-<!-- HERO -->
-<section class="card">
-  <h1>📝 Jurnal Yangocean</h1>
+            <div class="dropdown">
+                <button class="dropbtn" type="button">🌳 Hubungan dengan Alam ▾</button>
+                <div class="dropdown-content">
+                    <a href="/ms/nature-connection.html">Hubungan dengan Alam Semula Jadi</a>
+                    <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
+                    <a href="/ms/blog.html">Jurnal</a>
+                </div>
+            </div>
 
-  <p>
-    Ruang untuk berkongsi refleksi, pemerhatian dan pengalaman tentang
-    kehidupan yang lebih sedar, alam semula jadi dan kelestarian dalam kehidupan seharian.
-  </p>
+            <div class="dropdown">
+                <button class="dropbtn" type="button">📱 Aplikasi Berkaitan ▾</button>
+                <div class="dropdown-content">
+                    <a href="/ms/apps.html">Semua Aplikasi</a>
+                    <a href="/ms/apps.html#eft">Yangocean EFT Tapping</a>
+                    <a href="/ms/apps.html#healthy-body">QuQu Healthy Body</a>
+                    <a href="/ms/apps.html#duidui-fit">DuiDui Fit</a>
+                </div>
+            </div>
+        </nav>
 
-  <!-- TTS CONTROLS -->
-  <div class="tts-controls">
-    <button type="button" onclick="togglePlay()" aria-label="Mainkan">
-      🔊
-    </button>
-    <button type="button" onclick="pauseReading()" aria-label="Jeda">
-      ⏸
-    </button>
-    <button type="button" onclick="stopReading()" aria-label="Hentikan">
-      ⏹
-    </button>
-  </div>
-</section>
-
-<!-- WHAT IS THE JOURNAL -->
-<section class="card">
-
-  <h2>🌿 Apakah Jurnal Yangocean?</h2>
-
-  <p>
-    Jurnal Yangocean ialah ruang untuk berkongsi artikel asli, pemerhatian
-    dan refleksi tentang perkara kecil yang menjadi sebahagian daripada
-    kehidupan seharian kita.
-  </p>
-
-  <p>
-    Kami meneroka bagaimana perhatian yang lebih mendalam boleh mengubah
-    hubungan kita dengan makanan, alam semula jadi, pembelian, tabiat
-    harian dan persekitaran di sekeliling kita.
-  </p>
-
-  <p>
-    Kami tidak mencari satu cara hidup yang sempurna. Sebaliknya,
-    kami menggalakkan kita untuk memerhati, belajar dan berkongsi idea
-    yang mungkin berguna dalam kehidupan seharian.
-  </p>
-
-</section>
-
-<!-- LATEST ARTICLES -->
-<section class="card">
-
-  <h2>📚 Artikel Jurnal Terkini</h2>
-
-  <div class="features">
-
-    <div class="feature">
-      <a href="/ms/blog/wellness-and-sustainability.html">
-        🌿 Kesihatan dan Kehidupan Lestari
-      </a>
-      <p>
-        Refleksi tentang hubungan antara kesejahteraan diri,
-        tabiat harian dan persekitaran tempat kita hidup.
-      </p>
+        <div class="languages" aria-label="Pilihan bahasa">
+            <a href="/blog.html" lang="en">EN</a>
+            <a href="/ms/blog.html" lang="ms" aria-current="page">BM</a>
+            <a href="/zh/blog.html" lang="zh">中文</a>
+            <a href="/fr/blog.html" lang="fr">FR</a>
+            <a href="/es/blog.html" lang="es">ES</a>
+            <a href="/my/blog.html" lang="my">MY</a>
+        </div>
     </div>
+</header>
 
-    <div class="feature">
-      <a href="/ms/blog/why-trees-matter.html">
-        🌳 Mengapa Pokok Penting
-      </a>
-      <p>
-        Melihat peranan pokok dalam kehidupan kita dan hubungannya
-        dengan alam semula jadi.
-      </p>
-    </div>
+<div id="content-to-read">
 
-  </div>
-
-</section>
-
-<!-- NEW JOURNAL ENTRIES -->
-<section class="card">
-
-  <h2>✍️ Refleksi Baharu</h2>
-
-  <p>
-    Jurnal Yangocean akan berkembang sedikit demi sedikit dengan lebih
-    banyak pemerhatian, pengalaman dan artikel asli tentang kehidupan sedar,
-    alam semula jadi, makanan dan kehidupan lestari.
-  </p>
-
-  <!--
-    TAMBAH ARTIKEL JURNAL BAHARU DI SINI.
-
-    Contoh:
-
-    <div class="feature">
-      <a href="/ms/blog/nama-artikel.html">
-        🌱 Tajuk artikel
-      </a>
-      <p>
-        Penerangan ringkas tentang artikel.
-      </p>
-    </div>
-  -->
-
-</section>
-
-<!-- JOURNAL THEMES -->
-<section class="card">
-
-  <h2>🌱 Topik yang Kami Terokai</h2>
-
-  <div class="features">
-
-    <div class="feature">
-      <a href="/ms/mindfulness.html">
-        🧘 Kesedaran Diri
-      </a>
-      <p>
-        Kesedaran, meditasi, belas kasihan, kebijaksanaan dan refleksi
-        dalam kehidupan seharian.
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/ms/mindful-eating.html">
-        🥗 Pemakanan Sedar
-      </a>
-      <p>
-        Hubungan yang lebih sedar dengan makanan, tabiat pemakanan
-        dan pembaziran makanan.
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/ms/nature-connection.html">
-        🌳 Hubungan dengan Alam
-      </a>
-      <p>
-        Pokok, tumbuhan, pemerhatian alam, fotografi dan pengalaman
-        kecil bersama alam semula jadi.
-      </p>
-    </div>
-
-    <div class="feature">
-      <a href="/ms/sustainable-living.html">
-        ♻️ Kehidupan Lestari
-      </a>
-      <p>
-        Air, tenaga, plastik, sisa, penggunaan dan pilihan harian
-        yang berkaitan dengan kelestarian.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-<!-- VIDEO ARCHIVE -->
-<section class="card">
-
-  <h2>🎥 Video Yangocean</h2>
-
-  <p>
-    Kami juga berkongsi video berkaitan alam semula jadi,
-    kehidupan lestari, kesihatan dan kehidupan sedar.
-  </p>
-
-  <div id="video-list">
-    <p>Video sedang dimuatkan...</p>
-  </div>
-
-</section>
-
-<!-- ORIGINAL CONTENT -->
-<section class="card">
-
-  <h2>🌿 Mengapa Kami Berkongsi Pemerhatian Peribadi?</h2>
-
-  <p>
-    Sesetengah artikel dalam Jurnal bermula daripada pengalaman hidup
-    yang sangat sederhana: memerhatikan tumbuhan tumbuh, menyediakan makanan,
-    berjalan di luar, mengurangkan pembaziran atau berhenti seketika
-    untuk memberi perhatian kepada keadaan di sekeliling kita.
-  </p>
-
-  <p>
-    Pengalaman peribadi ini bukan jawapan untuk semua orang dan bukan
-    pengganti nasihat profesional. Ia hanyalah titik permulaan untuk
-    memerhati, bertanya dan belajar.
-  </p>
-
-  <p>
-    Bagi topik yang memerlukan pengetahuan khusus, kami cuba membezakan
-    antara pengalaman peribadi, panduan praktikal dan maklumat yang
-    diperoleh daripada sumber luar.
-  </p>
-
-</section>
-
-<!-- REFLECTION -->
-<section class="card">
-
-  <h2>💭 Satu Soalan untuk Difikirkan</h2>
-
-  <p>
-    Adakah terdapat satu perkara kecil yang anda lakukan setiap hari
-    tetapi boleh anda perhatikan dengan lebih teliti?
-  </p>
-
-  <p>
-    Kadangkala, kehidupan yang lebih sedar boleh bermula hanya dengan
-    memerhatikan perkara yang sedang kita lakukan.
-  </p>
-
-</section>
-
-<!-- CTA -->
-<section class="card">
-
-  <h2>🌱 Teruskan Meneroka Yangocean</h2>
-
-  <p>
-    Terokai pelbagai topik Yangocean dan kembali ke Jurnal untuk
-    membaca refleksi baharu apabila ia diterbitkan.
-  </p>
-
-  <p>
-    <a href="/ms/mindfulness.html">Kesedaran Diri</a> ·
-    <a href="/ms/mindful-ethical-living.html">Kehidupan Sedar</a> ·
-    <a href="/ms/mindful-eating.html">Pemakanan Sedar</a> ·
-    <a href="/ms/nature-connection.html">Alam Semula Jadi</a> ·
-    <a href="/ms/sustainable-living.html">Kehidupan Lestari</a>
-  </p>
-
-</section>
-
-<!-- FINAL THOUGHT -->
-<section class="card">
-
-  <h2>🌿 Mulakan dengan Satu Saat</h2>
-
-  <p>
-    Kita tidak perlu mengubah semuanya sekaligus.
-    Bermula dengan satu pilihan kecil, memerhatikannya dengan teliti,
-    belajar daripadanya dan terus melangkah boleh menjadi cara yang
-    sederhana untuk menjalani kehidupan dengan lebih sedar.
-  </p>
-
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="footer">
-  <p>© 2026 Yangocean</p>
-
-  <p>
-    <a href="/ms/">Laman Utama</a> |
-    <a href="/ms/about.html">Tentang Kami</a> |
-    <a href="/ms/contact.html">Hubungi Kami</a> |
-    <a href="/ms/privacy.html">Privasi</a> |
-    <a href="/ms/terms.html">Terma</a>
-  </p>
-</footer>
-
-</div>
-
-<!-- TTS SCRIPT -->
-<script>
-let speech = null;
-let isSpeaking = false;
-let isPaused = false;
-
-function buildSpeech() {
-  const content = document.getElementById("content-to-read");
-  const elements = content.querySelectorAll("h1, h2, h3, p");
-
-  let text = "";
-
-  elements.forEach(el => {
-    text += el.innerText + ". ";
-  });
-
-  const utterance = new SpeechSynthesisUtterance(text);
-
-  utterance.lang = "ms-MY";
-  utterance.rate = 0.95;
-  utterance.pitch = 1;
-  utterance.volume = 1;
-
-  utterance.onstart = () => {
-    isSpeaking = true;
-    isPaused = false;
-  };
-
-  utterance.onend = () => {
-    isSpeaking = false;
-    isPaused = false;
-  };
-
-  return utterance;
-}
-
-function togglePlay() {
-  if (isPaused) {
-    window.speechSynthesis.resume();
-    isPaused = false;
-    return;
-  }
-
-  if (!isSpeaking) {
-    speech = buildSpeech();
-    window.speechSynthesis.speak(speech);
-  }
-}
-
-function pauseReading() {
-  if (isSpeaking && !isPaused) {
-    window.speechSynthesis.pause();
-    isPaused = true;
-  }
-}
-
-function stopReading() {
-  window.speechSynthesis.cancel();
-  isSpeaking = false;
-  isPaused = false;
-}
-</script>
-
-<!-- VIDEO LOADER -->
-<script>
-fetch("/data/videos.json")
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Tidak dapat memuatkan fail video.");
-    }
-
-    return response.json();
-  })
-  .then(videos => {
-
-    const container = document.getElementById("video-list");
-
-    if (!videos || videos.length === 0) {
-      container.innerHTML = "<p>Tiada video tersedia buat masa ini.</p>";
-      return;
-    }
-
-    container.innerHTML = "";
-
-    videos.forEach(video => {
-
-      const item = document.createElement("div");
-      item.className = "feature";
-
-      const title = video.title || "Video Yangocean";
-      const url = video.url || video.link || "#";
-      const thumbnail = video.thumbnail || "";
-
-      item.innerHTML = `
-        ${thumbnail ? `
-          <img
-            src="${thumbnail}"
-            alt="${title}"
-            loading="lazy"
-            style="max-width:100%;height:auto;border-radius:8px;"
-          >
-        ` : ""}
+    <section class="hero">
+        <h1>📝 Jurnal</h1>
 
         <p>
-          <a
-            href="${url}"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            🎥 ${title}
-          </a>
+            Refleksi, pemerhatian dan kisah ringkas tentang kehidupan
+            berkesedaran, alam semula jadi, kelestarian dan pengalaman harian.
         </p>
-      `;
 
-      container.appendChild(item);
+        <p>
+            Sesetengah catatan bermula daripada pemerhatian biasa,
+            kemudian membawa kita berfikir tentang cara kita menjalani kehidupan,
+            menikmati makanan, memerhatikan persekitaran dan berhubung
+            dengan dunia di sekeliling kita.
+        </p>
+    </section>
+
+    <main>
+
+        <section>
+            <h2>Tentang Jurnal Ini</h2>
+
+            <p>
+                Jurnal ini menghimpunkan refleksi yang lebih mendalam,
+                pemerhatian dan kisah daripada kehidupan seharian.
+                Topiknya merangkumi alam semula jadi, alam sekitar,
+                kesejahteraan, kehidupan berkesedaran dan pengalaman
+                harian yang menggalakkan kita melihat dunia dengan
+                lebih teliti.
+            </p>
+        </section>
+
+        <section>
+            <h2>Catatan Jurnal Terkini</h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>🌿 Kesejahteraan dan Kelestarian</h3>
+
+                    <p>
+                        Refleksi tentang kesejahteraan diri, pilihan
+                        harian dan hubungan antara kehidupan kita
+                        dengan alam sekitar.
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/wellness-and-sustainability.html">
+                        Baca catatan →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌳 Mengapa Pokok Penting</h3>
+
+                    <p>
+                        Meneroka kepentingan pokok, persekitaran
+                        tempat kita hidup dan bagaimana perkara
+                        yang sering kita terlepas pandang boleh
+                        mengubah cara kita melihat alam semula jadi.
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/why-trees-matter.html">
+                        Baca catatan →
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Panduan Menanam dan Membesarkan Tumbuhan</h2>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <h3>🌱 Cara Menanam Tumbuhan</h3>
+
+                    <p>
+                        Panduan asas untuk memulakan penanaman,
+                        daripada menyediakan bahan yang diperlukan
+                        hingga menjaga tumbuhan semasa ia membesar.
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-plant.html">
+                        Baca panduan →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌳 Cara Menanam Pokok</h3>
+
+                    <p>
+                        Langkah-langkah asas untuk menanam pokok
+                        dan membantu memberikan permulaan yang baik
+                        kepada pokok muda.
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-plant-a-tree.html">
+                        Baca panduan →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <h3>🌿 Cara Menanam Lidah Buaya</h3>
+
+                    <p>
+                        Ketahui cara menanam dan menjaga lidah buaya,
+                        memahami bahagian daunnya serta membezakan
+                        gel jernih di bahagian dalam daripada kulit
+                        hijau dan getah kekuningannya.
+                    </p>
+
+                    <a class="card-link"
+                       href="/blog/how-to-grow-aloe-vera.html">
+                        Baca panduan →
+                    </a>
+                </article>
+
+            </div>
+
+            <p>
+                Lebih banyak panduan akan ditambah dari semasa ke semasa.
+                Setiap panduan bertujuan berkongsi maklumat yang berguna
+                dengan cara yang mudah difahami dan diamalkan.
+            </p>
+        </section>
+
+        <section class="simple-thought">
+            <h2>Satu Renungan Ringkas</h2>
+
+            <p>
+                Tidak semua perkara perlu dilakukan dengan tergesa-gesa.
+                Kadangkala, dengan memerhatikan sesuatu yang biasa
+                dengan lebih teliti, kita dapat menemui sesuatu
+                yang baharu.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>
+        <a href="/ms/">Laman Utama</a>
+        <a href="/ms/mindfulness.html">Kehidupan Berkesedaran</a>
+        <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
+        <a href="/ms/blog.html">Jurnal</a>
+        <a href="/ms/apps.html">Aplikasi</a>
+        <a href="/ms/contact.html">Hubungi Kami</a>
+    </p>
+
+    <p>© 2026 Yangocean. Hak cipta terpelihara.</p>
+</footer>
+
+<button id="readAloudButton" type="button"
+        aria-label="Baca halaman ini dengan kuat">
+    🔊 Baca dengan kuat
+</button>
+
+<script>
+(function () {
+    const button = document.getElementById("readAloudButton");
+    const content = document.getElementById("content-to-read");
+
+    let isReading = false;
+    let isPaused = false;
+    let utterances = [];
+    let currentIndex = 0;
+
+    function getSpeechLanguage() {
+        const supported = [
+            "ms-MY",
+            "ms",
+            "id-ID"
+        ];
+
+        const voices = window.speechSynthesis.getVoices();
+
+        for (const language of supported) {
+            if (voices.some(voice =>
+                voice.lang.toLowerCase() === language.toLowerCase()
+            )) {
+                return language;
+            }
+        }
+
+        return "ms-MY";
+    }
+
+    function updateButton() {
+        if (!isReading) {
+            button.textContent = "🔊 Baca dengan kuat";
+            button.setAttribute("aria-label", "Baca halaman ini dengan kuat");
+        } else if (isPaused) {
+            button.textContent = "▶ Sambung membaca";
+            button.setAttribute("aria-label", "Sambung bacaan");
+        } else {
+            button.textContent = "⏹ Hentikan bacaan";
+            button.setAttribute("aria-label", "Hentikan bacaan");
+        }
+    }
+
+    function finishReading() {
+        isReading = false;
+        isPaused = false;
+        currentIndex = 0;
+        utterances = [];
+        updateButton();
+    }
+
+    function speakNext() {
+        if (!isReading || isPaused || currentIndex >= utterances.length) {
+            if (currentIndex >= utterances.length) {
+                finishReading();
+            }
+            return;
+        }
+
+        const text = utterances[currentIndex];
+        const utterance = new SpeechSynthesisUtterance(text);
+
+        utterance.lang = getSpeechLanguage();
+        utterance.rate = 0.9;
+
+        utterance.onend = function () {
+            currentIndex++;
+            speakNext();
+        };
+
+        utterance.onerror = function () {
+            currentIndex++;
+            speakNext();
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    function startReading() {
+        if (!("speechSynthesis" in window)) {
+            alert("Maaf, pelayar anda tidak menyokong fungsi bacaan suara.");
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        const elements = content.querySelectorAll("h1, h2, h3, p");
+        utterances = Array.from(elements)
+            .map(element => element.innerText.trim())
+            .filter(text => text.length > 0);
+
+        if (utterances.length === 0) {
+            return;
+        }
+
+        currentIndex = 0;
+        isReading = true;
+        isPaused = false;
+
+        updateButton();
+        speakNext();
+    }
+
+    button.addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+            alert("Maaf, pelayar anda tidak menyokong fungsi bacaan suara.");
+            return;
+        }
+
+        if (!isReading) {
+            startReading();
+            return;
+        }
+
+        if (isPaused) {
+            isPaused = false;
+            updateButton();
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            } else {
+                speakNext();
+            }
+        } else {
+            isPaused = true;
+            window.speechSynthesis.pause();
+            updateButton();
+        }
     });
-  })
-  .catch(error => {
 
-    document.getElementById("video-list").innerHTML =
-      "<p>Video tidak dapat dimuatkan buat masa ini.</p>";
+    window.addEventListener("beforeunload", function () {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
 
-    console.error(error);
-  });
+    updateButton();
+})();
 </script>
 
 </body>
 </html>
+
