@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="ms">
 
 <head>
+
 <meta charset="UTF-8">
 
 <title>Kesedaran Alam Sekitar | Iklim, Lautan &amp; Biodiversiti | Yangocean</title>
@@ -44,7 +44,7 @@ href="https://yangocean.com/eco.html">
 content="Kesedaran Alam Sekitar | Iklim, Lautan &amp; Biodiversiti">
 
 <meta property="og:description"
-content="Fahami perubahan alam sekitar melalui iklim, hidupan laut, tumbuhan, biodiversiti, air dan pilihan harian kita.">
+content="Terokai perubahan alam sekitar melalui iklim, hidupan laut, tumbuhan, biodiversiti, air dan pilihan harian kita.">
 
 <meta property="og:url"
 content="https://yangocean.com/ms/eco.html">
@@ -61,6 +61,7 @@ crossorigin="anonymous">
 </script>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -77,7 +78,9 @@ body {
     line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
 header {
     position: sticky;
@@ -170,8 +173,7 @@ nav a:hover,
     background: #f1f6f1;
 }
 
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -185,7 +187,9 @@ nav a:hover,
     font-size: 0.82rem;
 }
 
-/* MAIN */
+/* =========================
+   MAIN
+========================= */
 
 main {
     max-width: 1100px;
@@ -193,12 +197,18 @@ main {
     padding: 30px 20px 60px;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     text-align: center;
     padding: 55px 20px 45px;
-    background: linear-gradient(135deg, #edf7ee, #f8fbf7);
+    background: linear-gradient(
+        135deg,
+        #edf7ee,
+        #f8fbf7
+    );
     border-radius: 18px;
     margin-bottom: 35px;
 }
@@ -216,7 +226,9 @@ main {
     color: #526158;
 }
 
-/* READ ALOUD */
+/* =========================
+   READ ALOUD
+========================= */
 
 .read-aloud {
     display: flex;
@@ -240,7 +252,9 @@ main {
     opacity: 0.9;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 .section {
     background: white;
@@ -261,11 +275,13 @@ main {
     margin-bottom: 25px;
 }
 
-/* ENVIRONMENT CARDS */
+/* =========================
+   ENVIRONMENT CARDS
+========================= */
 
 .environment-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 22px;
     margin-top: 25px;
 }
@@ -309,11 +325,13 @@ main {
     line-height: 1.7;
 }
 
-/* EVERYDAY CHOICES */
+/* =========================
+   EVERYDAY CHOICES
+========================= */
 
 .choice-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
     margin-top: 25px;
 }
@@ -335,7 +353,9 @@ main {
     margin-bottom: 0;
 }
 
-/* WATER FEATURE */
+/* =========================
+   WATER FEATURE
+========================= */
 
 .water-feature {
     margin-top: 28px;
@@ -377,7 +397,9 @@ main {
     text-decoration: underline;
 }
 
-/* CLOSING */
+/* =========================
+   CLOSING
+========================= */
 
 .closing {
     text-align: center;
@@ -389,7 +411,9 @@ main {
     margin-right: auto;
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #eef2ed;
@@ -409,23 +433,28 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 900px) {
+
     .environment-grid {
         grid-template-columns: 1fr;
     }
 
     .choice-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .environment-card img {
         height: auto;
     }
+
 }
 
 @media (max-width: 850px) {
+
     .header-inner {
         flex-direction: column;
         align-items: center;
@@ -440,9 +469,11 @@ footer a:hover {
         left: 50%;
         transform: translateX(-50%);
     }
+
 }
 
 @media (max-width: 600px) {
+
     nav {
         gap: 9px;
     }
@@ -467,7 +498,9 @@ footer a:hover {
     .choice-grid {
         grid-template-columns: 1fr;
     }
+
 }
+
 </style>
 
 </head>
@@ -490,7 +523,7 @@ Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
 
 </div>
 
-<nav aria-label="Navigasi utama">
+<nav>
 
 <a href="/ms/">
 Laman Utama
@@ -498,14 +531,14 @@ Laman Utama
 
 <div class="dropdown">
 
-<button class="dropbtn" type="button" aria-haspopup="true">
+<button class="dropbtn">
 🌿 Kehidupan Berkesedaran ▾
 </button>
 
 <div class="dropdown-content">
 
 <a href="/ms/mindfulness.html">
-🧘 Kesedaran &amp; Dhamma
+🧘 Kesedaran Minda &amp; Dhamma
 </a>
 
 <a href="/ms/mindful-eating.html">
@@ -516,17 +549,13 @@ Laman Utama
 ♻️ Kehidupan Lestari
 </a>
 
-<a href="/ms/mindful-ethical-living.html">
-🌱 Kehidupan Beretika
-</a>
-
 </div>
 
 </div>
 
 <div class="dropdown">
 
-<button class="dropbtn" type="button" aria-haspopup="true">
+<button class="dropbtn">
 🌳 Hubungan dengan Alam ▾
 </button>
 
@@ -536,7 +565,7 @@ Laman Utama
 🌳 Hubungan dengan Alam Semula Jadi
 </a>
 
-<a href="/ms/eco.html" aria-current="page">
+<a href="/ms/eco.html">
 🌍 Kesedaran Alam Sekitar
 </a>
 
@@ -550,18 +579,18 @@ Laman Utama
 
 <div class="dropdown">
 
-<button class="dropbtn" type="button" aria-haspopup="true">
+<button class="dropbtn">
 📱 Aplikasi Berkaitan ▾
 </button>
 
 <div class="dropdown-content">
 
 <a href="/ms/apps.html">
-📱 Semua Aplikasi
+📱 Semua Aplikasi Berkaitan
 </a>
 
 <a href="/ms/apps.html#eft">
-🌿 Yangocean EFT Tapping
+🌿 Aplikasi Yangocean
 </a>
 
 <a href="/ms/apps.html#healthy-body">
@@ -569,20 +598,25 @@ Laman Utama
 </a>
 
 <a href="/ms/apps.html#duidui-fit">
-🏃 DuiDui Fit
+🏃 DuoFit
 </a>
 
 </div>
 
 </div>
 
-<div class="language" aria-label="Pilihan bahasa">
+<div class="language">
 
 <a href="/eco.html">EN</a>
+
 <a href="/ms/eco.html" aria-current="page">BM</a>
+
 <a href="/zh/eco.html">中文</a>
+
 <a href="/fr/eco.html">FR</a>
+
 <a href="/es/eco.html">ES</a>
+
 <a href="/my/eco.html">မြန်မာ</a>
 
 </div>
@@ -602,15 +636,15 @@ Laman Utama
 </h1>
 
 <p>
-Alam sekitar kita sentiasa mengalami perubahan. Iklim, lautan,
-tumbuhan, haiwan dan masyarakat manusia saling berkait serta
-mempengaruhi kehidupan seharian.
+Alam sekitar kita sentiasa mengalami perubahan. Iklim,
+lautan, tumbuhan, haiwan dan komuniti manusia saling
+berhubung serta mempengaruhi kehidupan seharian.
 </p>
 
 <p>
-Dengan memahami perubahan ini, kita dapat membuat pilihan
-yang lebih teliti tentang cara kita hidup dan menggunakan
-sumber semula jadi.
+Memahami perubahan ini dapat membantu kita membuat pilihan
+yang lebih bijak tentang cara kita menjalani kehidupan
+dan menggunakan sumber semula jadi.
 </p>
 
 </section>
@@ -621,22 +655,19 @@ sumber semula jadi.
 type="button"
 class="tts-btn"
 onclick="startReading()">
-🔊 Baca Kuat
-</button>
+🔊 Bacakan </button>
 
 <button
 type="button"
 class="tts-btn"
 onclick="pauseReading()">
-⏸ Jeda
-</button>
+⏸ Jeda </button>
 
 <button
 type="button"
 class="tts-btn"
 onclick="stopReading()">
-⏹ Hentikan
-</button>
+⏹ Hentikan </button>
 
 </div>
 
@@ -647,10 +678,10 @@ onclick="stopReading()">
 </h2>
 
 <p class="section-intro">
-Perubahan alam sekitar kadangkala terasa terlalu besar atau
-terlalu jauh daripada kehidupan kita untuk difahami.
-Dengan memerhatikan bahagian alam semula jadi yang biasa
-kita lihat, perubahan ini mungkin lebih mudah disedari.
+Perubahan alam sekitar kadangkala terasa terlalu besar
+atau terlalu jauh untuk difahami. Dengan memerhatikan
+bahagian alam semula jadi yang biasa kita lihat,
+perubahan ini menjadi lebih mudah disedari.
 </p>
 
 <div class="environment-grid">
@@ -670,19 +701,20 @@ loading="lazy"
 </h3>
 
 <div class="then-now">
-Dahulu → Kini
+Dahulu → Sekarang
 </div>
 
 <p>
-Iklim dipengaruhi oleh pelbagai proses semula jadi, tetapi
-aktiviti manusia telah meningkatkan pelepasan gas rumah kaca
-dengan ketara. Pembakaran bahan api fosil, perubahan guna tanah
-dan aktiviti lain menyumbang kepada pemanasan iklim.
+Iklim dipengaruhi oleh pelbagai proses semula jadi,
+namun aktiviti manusia telah meningkatkan pelepasan
+gas rumah hijau dengan ketara. Pembakaran bahan api fosil,
+perubahan penggunaan tanah dan aktiviti lain menyumbang
+kepada pemanasan iklim.
 </p>
 
 <p>
 Perubahan iklim boleh mempengaruhi suhu, corak hujan,
-kejadian cuaca ekstrem, ekosistem dan kehidupan masyarakat.
+cuaca ekstrem, ekosistem dan komuniti manusia.
 </p>
 
 </div>
@@ -700,18 +732,18 @@ loading="lazy"
 <div class="environment-card-content">
 
 <h3>
-🐠 Kehidupan di Lautan
+🐠 Hidupan di Lautan Kita
 </h3>
 
 <div class="then-now">
-Dahulu → Kini
+Dahulu → Sekarang
 </div>
 
 <p>
 Ekosistem lautan boleh terjejas akibat pencemaran,
-penangkapan ikan berlebihan, kemusnahan habitat dan
-perubahan iklim. Tekanan ini boleh mengurangkan kawasan
-habitat serta mengancam hidupan marin.
+penangkapan ikan berlebihan, kemusnahan habitat
+dan perubahan iklim. Tekanan ini boleh mengurangkan
+kawasan habitat serta mengancam hidupan marin.
 </p>
 
 <p>
@@ -738,18 +770,19 @@ loading="lazy"
 </h3>
 
 <div class="then-now">
-Dahulu → Kini
+Dahulu → Sekarang
 </div>
 
 <p>
-Habitat semula jadi boleh berubah apabila hutan, tanah lembap
-dan ekosistem lain dibersihkan atau ditukar untuk pembangunan,
-pertanian dan aktiviti manusia yang lain.
+Habitat semula jadi boleh berubah apabila hutan, tanah
+lembap dan ekosistem lain dibersihkan atau ditukar
+untuk pembangunan, pertanian dan aktiviti manusia lain.
 </p>
 
 <p>
-Apabila habitat musnah atau terpisah-pisah, banyak tumbuhan
-dan haiwan kehilangan tempat yang diperlukan untuk terus hidup.
+Apabila habitat hilang atau terpisah-pisah, banyak
+tumbuhan dan haiwan mungkin kehilangan tempat yang
+diperlukan untuk terus hidup.
 </p>
 
 </div>
@@ -763,15 +796,15 @@ dan haiwan kehilangan tempat yang diperlukan untuk terus hidup.
 <section class="section">
 
 <h2>
-♻️ Pilihan dalam Kehidupan Harian
+♻️ Pilihan dalam Kehidupan Seharian
 </h2>
 
 <p class="section-intro">
 Kesedaran alam sekitar menjadi lebih bermakna apabila kita
 menyedari hubungan antara keputusan harian dengan alam sekitar.
 Kita tidak perlu mengubah semuanya sekaligus.
-Pilihan kecil yang dibuat dengan teliti boleh menjadi sebahagian
-daripada kehidupan seharian.
+Pilihan kecil yang dibuat dengan penuh pertimbangan boleh
+menjadi sebahagian daripada kehidupan seharian.
 </p>
 
 <div class="choice-grid">
@@ -783,8 +816,8 @@ daripada kehidupan seharian.
 </h3>
 
 <p>
-Bolehkah saya memilih produk yang tahan lama, berguna
-dan menghasilkan kurang sisa?
+Bolehkah saya memilih barangan yang tahan lama,
+berguna dan menghasilkan kurang sisa?
 </p>
 
 </div>
@@ -796,8 +829,8 @@ dan menghasilkan kurang sisa?
 </h3>
 
 <p>
-Bolehkah saya mengurangkan pembaziran makanan yang tidak perlu
-dan membuat pilihan makanan dengan lebih teliti?
+Bolehkah saya mengurangkan pembaziran makanan
+dan memilih makanan dengan lebih bijak?
 </p>
 
 </div>
@@ -809,8 +842,9 @@ dan membuat pilihan makanan dengan lebih teliti?
 </h3>
 
 <p>
-Bolehkah saya berjalan kaki, berbasikal, menggunakan pengangkutan
-awam atau menggabungkan beberapa urusan dalam satu perjalanan?
+Bolehkah saya berjalan kaki, berbasikal, menggunakan
+pengangkutan awam atau menggabungkan beberapa urusan
+dalam satu perjalanan apabila sesuai?
 </p>
 
 </div>
@@ -822,7 +856,7 @@ awam atau menggabungkan beberapa urusan dalam satu perjalanan?
 </h3>
 
 <p>
-Bolehkah saya mengelakkan penggunaan air yang berlebihan
+Bolehkah saya mengelakkan penggunaan air yang tidak perlu
 dan membantu memastikan air kekal bersih?
 </p>
 
@@ -836,7 +870,7 @@ dan membantu memastikan air kekal bersih?
 
 <p>
 Bolehkah saya mengurangkan pembelian yang tidak perlu,
-menggunakan semula barang atau membaikinya?
+menggunakan semula barangan atau membaikinya?
 </p>
 
 </div>
@@ -848,8 +882,8 @@ menggunakan semula barang atau membaikinya?
 </h3>
 
 <p>
-Kadangkala, pilihan yang lebih lestari ialah membeli atau
-menggunakan lebih sedikit.
+Kadangkala, pilihan yang paling lestari hanyalah membeli
+atau menggunakan sesuatu dalam kuantiti yang lebih sedikit.
 </p>
 
 </div>
@@ -863,9 +897,9 @@ menggunakan lebih sedikit.
 </h3>
 
 <p>
-Air ialah sebahagian daripada setiap ekosistem dan komuniti.
-Setitis air mungkin kelihatan kecil, tetapi air sentiasa
-bergerak melalui kitaran air semula jadi.
+Air merupakan sebahagian daripada setiap ekosistem
+dan setiap komuniti. Setitis air mungkin kelihatan kecil,
+namun air sentiasa bergerak melalui kitaran air semula jadi.
 </p>
 
 <img
@@ -875,10 +909,10 @@ loading="lazy"
 >
 
 <p>
-Dengan memahami dari mana air berasal, bagaimana air bergerak
-melalui alam semula jadi dan bagaimana sumber air tawar
-diperbaharui, kita dapat lebih menghargai kepentingan
-menggunakan air dengan cermat.
+Memahami dari mana air berasal, bagaimana air bergerak
+dalam alam semula jadi dan bagaimana sumber air tawar
+diperbaharui dapat membantu kita menghargai kepentingan
+penggunaan air secara berhemah.
 </p>
 
 <a
@@ -904,10 +938,9 @@ segala-galanya tentang sains iklim, biodiversiti atau ekologi.
 </p>
 
 <p>
-Kita boleh bermula dengan memerhatikan persekitaran,
-memahami sebab perubahan berlaku dan mempertimbangkan
-bagaimana pilihan harian kita mempengaruhi dunia yang
-kita kongsi bersama.
+Kita boleh bermula dengan memerhatikan perkara di sekeliling,
+memahami sebab perubahan berlaku dan memikirkan bagaimana
+pilihan harian kita mempengaruhi dunia yang kita kongsi bersama.
 </p>
 
 </section>
@@ -918,17 +951,29 @@ kita kongsi bersama.
 
 <div>
 
-<a href="/ms/">Laman Utama</a>
+<a href="/ms/">
+Laman Utama
+</a>
 
-<a href="/ms/mindfulness.html">Kehidupan Berkesedaran</a>
+<a href="/ms/mindfulness.html">
+Kehidupan Berkesedaran
+</a>
 
-<a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
+<a href="/ms/nature-connection.html">
+Hubungan dengan Alam
+</a>
 
-<a href="/ms/blog.html">Jurnal</a>
+<a href="/ms/blog.html">
+Jurnal
+</a>
 
-<a href="/ms/apps.html">Aplikasi Berkaitan</a>
+<a href="/ms/apps.html">
+Aplikasi Berkaitan
+</a>
 
-<a href="/ms/contact.html">Hubungi Kami</a>
+<a href="/ms/contact.html">
+Hubungi Kami
+</a>
 
 </div>
 
@@ -939,95 +984,136 @@ kita kongsi bersama.
 </footer>
 
 <script>
+
 let speechQueue = [];
 let currentIndex = 0;
 
-/* READ ALOUD */
+/* =========================
+   BACAAN SUARA
+========================= */
 
 function getReadingText() {
-    const content = document.getElementById("content-to-read");
+
+    const content =
+        document.getElementById("content-to-read");
 
     if (!content) {
         return [];
     }
 
-    const elements = content.querySelectorAll("h1, h2, h3, p, li");
+    const elements =
+        content.querySelectorAll(
+            "h1, h2, h3, p, li"
+        );
+
     const texts = [];
 
     elements.forEach(function(element) {
-        const text = element.innerText.trim();
+
+        const text =
+            element.innerText.trim();
 
         if (text) {
             texts.push(text);
         }
+
     });
 
     return texts;
 }
 
 function startReading() {
+
     if (!("speechSynthesis" in window)) {
-        alert("Fungsi bacaan suara tidak disokong oleh pelayar ini.");
+
+        alert(
+            "Fungsi bacaan suara tidak disokong oleh pelayar ini."
+        );
+
         return;
     }
 
     if (speechSynthesis.paused) {
+
         speechSynthesis.resume();
+
         return;
     }
 
     speechSynthesis.cancel();
-    speechQueue = getReadingText();
+
+    speechQueue =
+        getReadingText();
+
     currentIndex = 0;
 
     speakNext();
 }
 
 function speakNext() {
-    if (currentIndex >= speechQueue.length) {
+
+    if (
+        currentIndex >=
+        speechQueue.length
+    ) {
         return;
     }
 
-    const utterance = new SpeechSynthesisUtterance(
-        speechQueue[currentIndex]
-    );
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
 
     utterance.rate = 0.95;
+
     utterance.pitch = 1;
+
     utterance.volume = 1;
+
     utterance.lang = "ms-MY";
 
     utterance.onend = function() {
+
         currentIndex++;
+
         speakNext();
+
     };
 
-    utterance.onerror = function() {
-        currentIndex++;
-        speakNext();
-    };
-
-    speechSynthesis.speak(utterance);
+    speechSynthesis.speak(
+        utterance
+    );
 }
 
 function pauseReading() {
+
     if (
         "speechSynthesis" in window &&
         speechSynthesis.speaking
     ) {
+
         speechSynthesis.pause();
+
     }
 }
 
 function stopReading() {
-    if ("speechSynthesis" in window) {
+
+    if (
+        "speechSynthesis" in window
+    ) {
+
         speechSynthesis.cancel();
+
         speechQueue = [];
+
         currentIndex = 0;
+
     }
 }
+
 </script>
 
 </body>
+
 </html>
-```
