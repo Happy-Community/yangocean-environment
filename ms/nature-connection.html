@@ -157,7 +157,55 @@ nav a:hover,
     border: none;
     cursor: pointer;
     font-family: inherit;
+}```css
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
 }
+
+.brand {
+    text-align: left;
+    flex: 0 0 auto;
+    min-width: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 4px;
+    flex-wrap: wrap;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+nav a,
+.dropbtn {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.88rem;
+    padding: 8px 7px;
+    border-radius: 7px;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.dropdown {
+    position: relative;
+    flex: 0 1 auto;
+}
+
+.dropbtn {
+    max-width: 100%;
+    text-align: center;
+}
+
+
 
 .dropdown-content {
     display: none;
@@ -327,10 +375,12 @@ footer a:hover {
     color: #285943;
 }
 
-@media (max-width: 850px) {
+
+@media (max-width: 1000px) {
     .header-inner {
         flex-direction: column;
         text-align: center;
+        gap: 12px;
     }
 
     .brand {
@@ -338,13 +388,21 @@ footer a:hover {
     }
 
     nav {
+        width: 100%;
         justify-content: center;
+        gap: 4px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.9rem;
     }
 
     .dropdown-content {
         left: 50%;
         right: auto;
         transform: translateX(-50%);
+        z-index: 1001;
     }
 
     .card-grid {
@@ -364,9 +422,23 @@ footer a:hover {
     .hero {
         padding: 38px 18px;
     }
-}
-</style>
 
+    nav {
+        gap: 3px;
+    }
+
+    nav a,
+    .dropbtn {
+        padding: 8px 6px;
+    }
+
+    .dropdown-content {
+        min-width: 210px;
+        max-width: calc(100vw - 24px);
+    }
+}
+  </style>
+  
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous"></script>
