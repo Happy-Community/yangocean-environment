@@ -1,54 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 
-<title>Yangocean | Vie consciente, nature & durabilité au quotidien</title>
+<title>Yangocean | Vie Consciente, Nature et Durabilité au Quotidien</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Yangocean explore la pleine conscience, l’alimentation consciente, la vie éthique, le lien avec la nature, la sensibilisation environnementale et la durabilité au quotidien à travers des réflexions simples et des ressources utiles.">
+<meta name="description" content="Yangocean explore la vie consciente, la pleine conscience, l’alimentation consciente, les choix éthiques, la nature, la sensibilisation à l’environnement et la durabilité au quotidien.">
 
-<meta name="keywords" content="pleine conscience, vie consciente, alimentation consciente, vie éthique, lien avec la nature, durabilité, sensibilisation environnementale, vie simple, vie en conscience, durabilité au quotidien">
+<meta name="keywords" content="vie consciente, pleine conscience, alimentation consciente, vie éthique, nature, sensibilisation à l’environnement, vie durable, durabilité, Yangocean">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://yangocean.com/fr/">
 
 <!-- Hreflang -->
-
 <link rel="alternate" hreflang="en" href="https://yangocean.com/">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/">
-<link rel="alternate" hreflang="my" href="https://yangocean.com/my/">  
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/">
 
 <!-- Open Graph -->
-
-<meta property="og:title" content="Yangocean | Vie consciente, nature & durabilité au quotidien">
-<meta property="og:description" content="Explorez la pleine conscience, l’alimentation consciente, la vie éthique, le lien avec la nature, la sensibilisation environnementale et des approches pratiques de la durabilité au quotidien.">
+<meta property="og:title" content="Yangocean | Vie Consciente, Nature et Durabilité au Quotidien">
+<meta property="og:description" content="Découvrez la vie consciente, le lien avec la nature, la sensibilisation à l’environnement et des gestes simples pour un quotidien plus durable.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yangocean.com/fr/">
 <meta property="og:site_name" content="Yangocean">
 
 <!-- Google AdSense -->
-
 <script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous"></script>
 
 <!-- Structured Data -->
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Yangocean",
-  "url": "https://yangocean.com/fr/",
-  "description": "Yangocean explore la vie consciente, le lien avec la nature, la sensibilisation environnementale et la durabilité au quotidien."
+  "url": "https://yangocean.com/",
+  "description": "Yangocean explore la vie consciente, le lien avec la nature, la sensibilisation à l’environnement et la durabilité au quotidien."
 }
 </script>
 
@@ -57,7 +52,7 @@ crossorigin="anonymous"></script>
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Yangocean",
-  "url": "https://yangocean.com/fr/"
+  "url": "https://yangocean.com/"
 }
 </script>
 
@@ -72,19 +67,86 @@ body {
 
 header {
     background: #f1f7f2;
-    padding: 20px;
+    padding: 18px 20px 20px;
     text-align: center;
 }
 
-nav {
-    margin-top: 15px;
+.language-nav {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
 }
 
-nav a {
-    margin: 0 8px;
+.language-nav a {
+    margin: 0 5px;
     text-decoration: none;
     color: #285943;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.main-nav > a,
+.dropdown summary {
+    color: #285943;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown summary {
+    list-style: none;
+}
+
+.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown summary::after {
+    content: " ▾";
+}
+
+.dropdown[open] summary {
+    background: #e4f0e7;
+    border-radius: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    z-index: 20;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 230px;
+    margin-top: 4px;
+    padding: 8px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+    text-align: left;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 9px 12px;
+    color: #285943;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.dropdown-menu a:hover {
+    background: #f1f7f2;
 }
 
 main {
@@ -99,22 +161,22 @@ section {
 
 .hero {
     text-align: center;
-    padding: 55px 20px;
+    padding: 60px 20px;
 }
 
 .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
 }
 
 .hero p {
-    max-width: 800px;
+    max-width: 820px;
     margin: 20px auto;
     font-size: 1.1rem;
 }
 
 .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
@@ -129,8 +191,12 @@ section {
     margin-top: 0;
 }
 
-.card a {
+.card a,
+a {
     color: #285943;
+}
+
+.card a {
     font-weight: bold;
     text-decoration: none;
 }
@@ -142,10 +208,34 @@ section {
     text-align: center;
 }
 
+.tts-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0 35px;
+}
+
+.tts-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.tts-btn:hover {
+    opacity: 0.85;
+}
+
 .news-item {
     margin-bottom: 20px;
     padding-bottom: 15px;
     border-bottom: 1px solid #ddd;
+}
+
+.news-item h4 {
+    margin-bottom: 5px;
 }
 
 footer {
@@ -156,8 +246,36 @@ footer {
 }
 
 footer a {
-    color: #285943;
     text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .main-nav {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown summary {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        width: auto;
+        margin: 2px auto 8px;
+        text-align: center;
+        box-shadow: none;
+        border: 1px solid #e2e8e3;
+    }
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
 }
 </style>
 
@@ -167,243 +285,245 @@ footer a {
 
 <header>
 
-<nav aria-label="Language navigation">
+<!-- NAVIGATION LINGUISTIQUE -->
+
+<nav class="language-nav" aria-label="Choix de la langue">
     <a href="/">EN</a>
     <a href="/ms/">BM</a>
     <a href="/zh/">中文</a>
-    <a href="/fr/">FR</a>
+    <a href="/fr/" aria-current="page">FR</a>
     <a href="/es/">ES</a>
     <a href="/my/">မြန်မာ</a>
 </nav>
 
-<nav aria-label="Main navigation">
-    <a href="/fr/mindfulness.html">Pleine conscience & Dhamma</a>
-    <a href="/fr/mindful-ethical-living.html">Vie consciente</a>
-    <a href="/fr/mindful-eating.html">Alimentation consciente</a>
-    <a href="/fr/nature-connection.html">Lien avec la nature</a>
-    <a href="/fr/sustainable-living.html">Vie durable</a>
-    <a href="/fr/eco.html">Sensibilisation environnementale</a>
-<!--    <a href="/fr/blog.html">Journal</a> -->
-    <a href="/fr/apps.html">Applications</a>
+<!-- NAVIGATION PRINCIPALE -->
+
+<nav class="main-nav" aria-label="Navigation principale">
+
+    <a href="/fr/">Accueil</a>
+
+    <details class="dropdown">
+        <summary>🌿 Vie consciente</summary>
+        <div class="dropdown-menu">
+            <a href="/fr/mindfulness.html">🧘 Pleine conscience et Dhamma</a>
+            <a href="/fr/mindful-ethical-living.html">💚 Vie consciente et éthique</a>
+            <a href="/fr/mindful-eating.html">🥗 Alimentation consciente</a>
+            <a href="/fr/sustainable-living.html">♻️ Vie durable</a>
+        </div>
+    </details>
+
+    <details class="dropdown">
+        <summary>🌳 Lien avec la nature</summary>
+        <div class="dropdown-menu">
+            <a href="/fr/nature-connection.html">🌳 Lien avec la nature</a>
+            <a href="/eco.html">🌍 Sensibilisation à l’environnement</a>
+            <a href="/blog.html">📝 Journal Yangocean</a>
+        </div>
+    </details>
+
+    <details class="dropdown">
+        <summary>📱 Applications associées</summary>
+        <div class="dropdown-menu">
+            <a href="/apps.html">📱 Toutes les applications Yangocean</a>
+        </div>
+    </details>
+
 </nav>
 
 </header>
 
-<main>
+<main id="content-to-read">
+
+<!-- INTRODUCTION -->
 
 <section class="hero">
 
-<h1>🌿 Vie consciente, nature & durabilité au quotidien</h1>
+<h1>🌿 Vie consciente, nature et durabilité au quotidien</h1>
 
 <p>
-Yangocean est un espace consacré à la pleine conscience, à une vie consciente et éthique,
-au lien avec la nature, à la sensibilisation environnementale, à l’alimentation consciente
-et à une durabilité simple au quotidien.
+Yangocean est un espace consacré à la vie consciente, au lien avec la nature,
+à la sensibilisation à l’environnement et aux gestes simples qui favorisent
+un quotidien plus durable.
 </p>
 
 <p>
-L’objectif n’est pas de fournir toutes les réponses, mais d’encourager la conscience,
-la curiosité et des choix réfléchis dans la vie quotidienne.
+L’objectif n’est pas d’apporter toutes les réponses, mais d’encourager
+l’attention, la curiosité et des choix réfléchis dans la vie de tous les jours.
 </p>
 
 </section>
+
+<!-- COMMANDES DE LECTURE À VOIX HAUTE -->
+
+<div class="tts-controls">
+
+<button
+ type="button"
+ class="tts-btn play"
+ onclick="togglePlay()"
+ aria-label="Lire ou reprendre la lecture">
+🔊
+</button>
+
+<button
+ type="button"
+ class="tts-btn pause"
+ onclick="pauseReading()"
+ aria-label="Mettre la lecture en pause">
+⏸
+</button>
+
+<button
+ type="button"
+ class="tts-btn stop"
+ onclick="stopReading()"
+ aria-label="Arrêter la lecture">
+⏹
+</button>
+
+</div>
+
+<!-- À PROPOS -->
 
 <section>
 
 <h2>🌱 À propos de Yangocean</h2>
 
 <p>
-Yangocean rassemble des réflexions et des ressources pratiques autour de la relation
-entre notre vie intérieure, nos choix quotidiens et le monde naturel qui nous entoure.
+Yangocean rassemble des réflexions et des ressources pratiques sur les liens
+entre notre vie intérieure, nos choix quotidiens et le monde naturel qui nous
+entoure.
 </p>
 
 <p>
-De la pleine conscience et des réflexions inspirées du Dhamma à l’alimentation, la nature,
-la sensibilisation environnementale et la durabilité, le site explore comment de petits
-moments de conscience peuvent influencer notre façon de vivre.
+De la pleine conscience et des réflexions inspirées du Dhamma à l’alimentation
+consciente, à la nature, à la sensibilisation à l’environnement et à la
+durabilité, Yangocean explore la manière dont de petits moments d’attention
+peuvent influencer notre façon de vivre.
 </p>
 
 </section>
+
+<!-- TROIS GRANDS THÈMES -->
+
+<section>
+
+<h2>🌿 Découvrez Yangocean</h2>
+
+<p>
+Yangocean s’articule autour de trois grands thèmes. Chacun rassemble des sujets
+connexes afin de permettre au site de se développer sans surcharger le menu
+principal.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌿 Vie consciente</h3>
+<p>
+Découvrez la pleine conscience, les réflexions inspirées du Dhamma,
+la vie consciente et éthique, l’alimentation consciente et des pratiques
+durables au quotidien.
+</p>
+<p>
+<a href="/fr/mindfulness.html">Découvrir la vie consciente →</a>
+</p>
+</div>
+
+<div class="card">
+<h3>🌳 Lien avec la nature</h3>
+<p>
+Renouez avec les arbres, les plantes, l’eau, les animaux et les systèmes
+naturels qui nous entourent. Le Journal et les articles sur l’environnement
+font également partie de ce thème.
+</p>
+<p>
+<a href="/fr/nature-connection.html">Découvrir la nature →</a>
+</p>
+</div>
+
+<div class="card">
+<h3>📱 Applications associées</h3>
+<p>
+Découvrez les applications associées à Yangocean, notamment des outils et
+des ressources conçus pour favoriser un quotidien plus sain et plus conscient.
+</p>
+<p>
+<a href="/apps.html">Découvrir les applications →</a>
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- RÉFLEXION DU JOUR -->
 
 <section class="reflection">
 
 <h2>🌿 Réflexion du jour</h2>
 
 <p id="dailyReflection">
-Prenez un moment pour vous arrêter, observer et apprécier le présent.
+Prenez un instant pour faire une pause, observer et apprécier le moment présent.
 </p>
 
 </section>
 
+<!-- DERNIERS ARTICLES DU JOURNAL -->
+
 <section>
 
-<h2>🌍 Explorer Yangocean</h2>
-
-<p>
-Explorez les principaux domaines de Yangocean, de la pleine conscience et de la vie consciente
-à la nature, la sensibilisation environnementale, l’alimentation et la durabilité au quotidien.
-</p>
+<h2>📝 Le Journal Yangocean</h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>🧘 Pleine conscience & Dhamma</h3>
+<h3>💧 Le voyage d’une goutte d’eau</h3>
 <p>
-Explorez la conscience, la compassion, l’impermanence et des réflexions simples inspirées
-de la pleine conscience et des perspectives du bouddhisme Theravada.
+Une réflexion sur le cycle de l’eau, la préservation de l’eau douce,
+la pénurie d’eau et l’importance de chaque goutte.
 </p>
-<a href="/fr/mindfulness.html">Explorer la pleine conscience →</a>
+<a href="/blog/journey-one-drop-water.html">Lire l’article →</a>
 </div>
 
 <div class="card">
-<h3>🌍 Sensibilisation environnementale</h3>
+<h3>🌳 Pourquoi les arbres sont importants</h3>
 <p>
-Comprenez les liens entre la nature, les ressources, la consommation, la pollution et les choix du quotidien.
+Une réflexion inspirée par les fleurs, les arbres adultes, leurs racines
+profondes et notre lien avec le monde vivant.
 </p>
-<a href="/fr/eco.html">Explorer la sensibilisation environnementale →</a>
+<a href="/why-trees-matter.html">Découvrir pourquoi les arbres comptent →</a>
 </div>
 
 <div class="card">
-<h3>🥗 Alimentation consciente</h3>
+<h3>📝 Journal Yangocean</h3>
 <p>
-Explorez l’alimentation avec davantage de conscience, notamment la nutrition, les habitudes
-alimentaires, les ressources et notre relation à la nourriture.
+Découvrez d’autres réflexions originales, observations et expériences
+quotidiennes sur la vie consciente, la nature et la durabilité.
 </p>
-<a href="/fr/mindful-eating.html">Explorer l’alimentation consciente →</a>
-</div>
-
-<div class="card">
-<h3>🌱 Vie consciente & éthique</h3>
-<p>
-Réfléchissez aux choix du quotidien, aux valeurs, à la responsabilité, à la bienveillance
-et à l’impact de notre manière de vivre.
-</p>
-<a href="/fr/mindful-ethical-living.html">Explorer la vie consciente →</a>
-</div>
-
-<div class="card">
-<h3>🌳 Lien avec la nature</h3>
-<p>
-Retrouvez un lien avec les arbres, les animaux, les paysages et les systèmes vivants qui nous entourent.
-</p>
-<a href="/fr/nature-connection.html">Explorer le lien avec la nature →</a>
-</div>
-
-<div class="card">
-<h3>♻️ Vie durable</h3>
-<p>
-Découvrez des approches pratiques pour utiliser les ressources avec discernement et réduire
-les impacts environnementaux inutiles.
-</p>
-<a href="/fr/sustainable-living.html">Explorer la vie durable →</a>
+<a href="/blog.html">Visiter le Journal →</a>
 </div>
 
 </div>
 
 </section>
 
-<section>
-
-<h2>✨ Les nouveautés de Yangocean</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🧘 Pleine conscience</h3>
-<p>
-Des réflexions simples sur la conscience, la présence, la compassion et une vie vécue avec davantage de clarté.
-</p>
-<a href="/fr/mindfulness.html">Lire la suite →</a>
-</div>
-
-<div class="card">
-<h3>🥗 Alimentation consciente</h3>
-<p>
-Explorez une relation plus consciente à la nourriture, à la nutrition et aux choix alimentaires du quotidien.
-</p>
-<a href="/fr/mindful-eating.html">Lire la suite →</a>
-</div>
-
-<div class="card">
-<h3>🌳 Journal de la nature</h3>
-<p>
-Découvrez des réflexions, observations et récits inspirés du monde naturel.
-</p>
-<a href="/fr/blog.html">Visiter le Journal →</a>
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2>📝 Journal Yangocean</h2>
-
-<p>
-Le Journal Yangocean est un espace où les observations, découvertes, photographies, dessins,
-expériences personnelles et questions peuvent évoluer au fil du temps.
-</p>
-
-<p>
-Certaines publications peuvent explorer la nature, l’alimentation, la durabilité, la vie
-consciente ou les moments ordinaires du quotidien. Elles sont proposées comme des réflexions
-plutôt que comme des réponses définitives.
-</p>
-
-<p>
-<a href="/fr/blog.html">Explorer le Journal Yangocean →</a>
-</p>
-
-</section>
-
-<section>
-
-<h2>🌍 Environnement & Vie Durable</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>🌍 Sensibilisation environnementale</h3>
-<p>
-Découvrez les liens entre les activités humaines, les systèmes naturels, les ressources et les impacts environnementaux.
-</p>
-<a href="/fr/eco.html">Guide de sensibilisation environnementale →</a>
-</div>
-
-<div class="card">
-<h3>♻️ Vie durable</h3>
-<p>
-Explorez des façons pratiques d’aborder plus consciemment la consommation quotidienne,
-les ressources et les choix de mode de vie.
-</p>
-<a href="/fr/sustainable-living.html">Vie durable →</a>
-</div>
-
-<div class="card">
-<h3>🌱 Empreinte carbone</h3>
-<p>
-En savoir plus sur l’impact carbone et certaines activités quotidiennes qui peuvent contribuer
-aux émissions de gaz à effet de serre.
-</p>
-<a href="/fr/reduce-carbon-footprint.html">Explorer l’empreinte carbone →</a>
-</div>
-
-</div>
-
-</section>
+<!-- LIEN AVEC LA NATURE -->
 
 <section>
 
 <h2>🌳 Lien avec la nature</h2>
 
 <p>
-La nature n’est pas séparée de la vie quotidienne. Les arbres, l’eau, le sol, les animaux,
-les plantes et les écosystèmes font partie des systèmes qui nous soutiennent.
+La nature ne se sépare pas de notre vie quotidienne. Les arbres, l’eau,
+le sol, les animaux, les plantes et les écosystèmes font partie des systèmes
+vivants qui nous soutiennent.
 </p>
 
 <p>
-Yangocean explore des façons simples d’observer et de renouer avec le monde naturel.
+Yangocean explore des façons simples d’observer le monde naturel et de renouer
+avec lui, qu’il s’agisse d’une seule fleur, d’un arbre ou de questions
+environnementales plus vastes.
 </p>
 
 <p>
@@ -412,54 +532,16 @@ Yangocean explore des façons simples d’observer et de renouer avec le monde n
 
 </section>
 
-<section>
-
-<h2>📱 Applications Yangocean</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Yangocean EFT Tapping</h3>
-<p>
-Une application simple pour découvrir les pratiques de tapping EFT.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Voir sur Google Play →
-</a>
-</div>
-
-<div class="card">
-<h3>QuQu Healthy Body</h3>
-<p>
-Découvrez des outils et des idées simples liés à une vie quotidienne saine.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Voir sur Google Play →
-</a>
-</div>
-
-<div class="card">
-<h3>DuiDui Fit</h3>
-<p>
-Une application simple axée sur la forme physique, le mouvement et l’activité au quotidien.
-</p>
-<a href="https://play.google.com/" target="_blank" rel="noopener">
-Voir sur Google Play →
-</a>
-</div>
-
-</div>
-
-</section>
+<!-- LECTURES SUR L’ENVIRONNEMENT -->
 
 <section>
 
-<h2>📰 Lecture environnementale</h2>
+<h2>📰 Lectures sur l’environnement</h2>
 
 <p>
-Explorez une sélection d’actualités et d’articles environnementaux provenant de sources externes.
-Ces liens sont proposés pour aller plus loin et ne représentent pas la propriété éditoriale de
-Yangocean sur les publications liées.
+Découvrez une sélection d’actualités et d’articles environnementaux provenant
+de sources externes. Ces liens sont proposés pour approfondir vos lectures
+et ne signifient pas que Yangocean est l’éditeur de ces publications.
 </p>
 
 <div id="environmentalNews">
@@ -468,52 +550,60 @@ Yangocean sur les publications liées.
 
 </section>
 
+<!-- UNE PENSÉE SIMPLE -->
+
 <section>
 
-<h2>🌿 Une pensée simple</h2>
+<h2>🌱 Une pensée simple</h2>
 
 <p>
-Vivre en pleine conscience n’exige pas nécessairement des changements spectaculaires.
-Cela commence parfois simplement par le fait de remarquer :
+Vivre en pleine conscience ne nécessite pas forcément de grands changements.
+Parfois, tout commence par quelques questions :
 </p>
 
 <ul>
 <li>Que consommons-nous ?</li>
 <li>D’où cela vient-il ?</li>
 <li>Quelles ressources ont été utilisées ?</li>
-<li>Quel effet ce choix a-t-il sur les autres êtres vivants ?</li>
+<li>Comment ce choix affecte-t-il les autres êtres vivants ?</li>
 <li>Pouvons-nous choisir quelque chose de plus simple ?</li>
 </ul>
 
 <p>
-La conscience peut précéder l’action. À partir de cette conscience, des choix plus réfléchis
-peuvent progressivement émerger.
+L’attention peut précéder l’action. En prenant conscience de nos choix,
+nous pouvons progressivement apprendre à décider de manière plus réfléchie.
 </p>
 
 </section>
 
+<!-- POUR ALLER PLUS LOIN -->
+
 <section>
 
-<h2>🌱 Continuer à explorer</h2>
+<h2>🌱 Pour aller plus loin</h2>
 
 <p>
-Il n’existe pas une seule façon de vivre en pleine conscience. Explorez les domaines qui vous
-intéressent et revenez lorsque vous aurez envie de réfléchir à nouveau.
+Il n’existe pas une seule manière de vivre en pleine conscience. Explorez
+les sujets qui vous intéressent et revenez lorsque vous souhaitez prendre
+un nouvel instant de réflexion.
 </p>
 
 <p>
-<a href="/fr/mindfulness.html">Pleine conscience & Dhamma</a> ·
-<a href="/fr/eco.html">Sensibilisation environnementale</a> ·
-<a href="/fr/mindful-ethical-living.html">Vie consciente & éthique</a> ·
+<a href="/fr/mindfulness.html">Pleine conscience et Dhamma</a> ·
+<a href="/fr/mindful-ethical-living.html">Vie consciente et éthique</a> ·
 <a href="/fr/mindful-eating.html">Alimentation consciente</a> ·
-<a href="/fr/nature-connection.html">Lien avec la nature</a> ·
 <a href="/fr/sustainable-living.html">Vie durable</a> ·
-<!-- <a href="/fr/blog.html">Journal</a> -->
+<a href="/fr/nature-connection.html">Lien avec la nature</a> ·
+<a href="/eco.html">Sensibilisation à l’environnement</a> ·
+<a href="/blog.html">Journal</a> ·
+<a href="/apps.html">Applications</a>
 </p>
 
 </section>
 
 </main>
+
+<!-- PIED DE PAGE -->
 
 <footer>
 
@@ -522,28 +612,32 @@ intéressent et revenez lorsque vous aurez envie de réfléchir à nouveau.
 </p>
 
 <p>
-<a href="/fr/about.html">À propos</a> ·
-<a href="/fr/contact.html">Contact</a> ·
-<a href="/fr/blog.html">Journal</a>
+<a href="/fr/">Accueil</a> ·
+<a href="/about.html">À propos</a> ·
+<a href="/contact.html">Contact</a> ·
+<a href="/blog.html">Journal</a>
 </p>
 
 </footer>
 
+<!-- RÉFLEXION DU JOUR ET ACTUALITÉS ENVIRONNEMENTALES -->
+
 <script>
 
-/* Daily Reflection */
+/* Réflexion du jour */
 
 const reflections = [
-    "Arrêtez-vous un instant et remarquez ce qui se passe maintenant.",
-    "Un petit choix fait en pleine conscience peut être le début d’un changement plus important.",
-    "La nature n’a pas besoin d’être lointaine. Regardez attentivement ce qui vous entoure.",
-    "Avant de changer le monde, commencez par observer vos propres choix quotidiens.",
-    "La vie simple commence par comprendre ce qui est réellement nécessaire.",
-    "La bienveillance peut aussi inclure la manière dont nous traitons les personnes, les animaux et le monde naturel.",
-    "La conscience nous donne la possibilité de choisir plutôt que de simplement réagir."
+    "Faites une pause et observez ce qui se passe en ce moment.",
+    "Un petit choix conscient peut être le début d’un changement plus important.",
+    "La nature n’est pas forcément loin. Regardez attentivement ce qui vous entoure.",
+    "Avant de vouloir changer le monde, observez vos propres choix quotidiens.",
+    "Une vie simple commence par comprendre ce qui est vraiment nécessaire.",
+    "La bienveillance concerne aussi notre façon de traiter les personnes, les animaux et la nature.",
+    "La conscience nous permet de choisir au lieu de simplement réagir."
 ];
 
 const today = new Date();
+
 const reflectionIndex =
     (today.getFullYear() + today.getMonth() + today.getDate())
     % reflections.length;
@@ -552,25 +646,22 @@ document.getElementById("dailyReflection").textContent =
     reflections[reflectionIndex];
 
 
-
-/* Environmental Reading */
+/* Lectures sur l’environnement */
 
 const feeds = [
     {
         name: "Mongabay",
-        url: "https://api.rss2json.com/v1/api.json?rss_url=https://fr.mongabay.com/news.xml/"
+        url: "https://api.rss2json.com/v1/api.json?rss_url=https://news.mongabay.com/feed/"
     },
     {
-        name: "UNEP News",
+        name: "Actualités du PNUE",
         url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.unep.org/rss.xml"
     },
     {
-        name: "National Geographic Environment",
+        name: "National Geographic — Environnement",
         url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.nationalgeographic.com/environment/rss/"
     }
 ];
-
-
 
 async function loadEnvironmentalNews() {
 
@@ -614,7 +705,6 @@ async function loadEnvironmentalNews() {
                 link.textContent = item.title;
 
                 title.appendChild(link);
-
                 article.appendChild(title);
 
                 if (item.pubDate) {
@@ -623,7 +713,7 @@ async function loadEnvironmentalNews() {
                         document.createElement("small");
 
                     date.textContent =
-                        new Date(item.pubDate).toLocaleDateString();
+                        new Date(item.pubDate).toLocaleDateString("fr-FR");
 
                     article.appendChild(date);
                 }
@@ -635,7 +725,7 @@ async function loadEnvironmentalNews() {
         } catch (error) {
 
             console.log(
-                "Unable to load feed:",
+                "Impossible de charger le flux :",
                 feed.name,
                 error
             );
@@ -650,5 +740,91 @@ loadEnvironmentalNews();
 
 </script>
 
+<!-- LECTURE À VOIX HAUTE DE LA PAGE -->
+
+<script>
+
+let speech = window.speechSynthesis;
+let utterance = null;
+
+function getReadableText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return "";
+    }
+
+    const elements =
+        content.querySelectorAll("h1, h2, h3, h4, p, li");
+
+    return Array.from(elements)
+        .map(function(element) {
+            return element.innerText.trim();
+        })
+        .filter(function(text) {
+            return text.length > 0;
+        })
+        .join(". ");
+}
+
+function togglePlay() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Désolé, votre navigateur ne prend pas en charge la lecture à voix haute."
+        );
+
+        return;
+    }
+
+    if (speech.paused) {
+        speech.resume();
+        return;
+    }
+
+    if (speech.speaking) {
+        return;
+    }
+
+    const text = getReadableText();
+
+    if (!text) {
+        return;
+    }
+
+    utterance =
+        new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "fr-FR";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    speech.speak(utterance);
+}
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speech.speaking
+    ) {
+        speech.pause();
+    }
+}
+
+function stopReading() {
+
+    if ("speechSynthesis" in window) {
+        speech.cancel();
+    }
+}
+
+</script>
+
 </body>
 </html>
+
