@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Herramienta sobre Árboles y Calima | Yangocean</title>
+
+<meta name="description" content="Explora objetivos de plantación de árboles, descubre cómo contribuyen al medio ambiente y aprende medidas prácticas para afrontar la calima en Malasia.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/es/tree-haze-tool.html">
+
+<style>
+:root {
+    --green: #315c3a;
+    --green-dark: #24472c;
+    --green-soft: #edf5ed;
+    --text: #263329;
+    --muted: #5c6a5e;
+    --border: #dce7dc;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: #f7faf7;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+a { color: var(--green); }
+a:hover { color: var(--green-dark); }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    background: white;
+    padding: 10px 14px;
+    z-index: 1000;
+}
+
+.skip-link:focus { left: 8px; }
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner,
+main,
+.site-footer-inner {
+    width: min(1100px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.header-inner {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.hero {
+    margin: 28px 0 22px;
+    padding: clamp(26px, 5vw, 54px);
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eaf4e9, #f7faf7 70%);
+    border: 1px solid var(--border);
+}
+
+.eyebrow {
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: .82rem;
+}
+
+h1, h2, h3 {
+    color: var(--green-dark);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 8px 0 12px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 0;
+}
+
+h3 { font-size: 1.2rem; }
+
+main { padding-bottom: 38px; }
+
+section {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.tool-card {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fcfefc;
+}
+
+.tool-card h3 { margin-top: 0; }
+
+.form-field { margin: 18px 0; }
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    padding: 12px;
+    border: 1px solid #aabbaa;
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #a7d2a8;
+    outline-offset: 2px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover { background: var(--green-dark); }
+
+.secondary-button {
+    background: #e8f0e8;
+    color: var(--green-dark);
+    border: 1px solid var(--border);
+}
+
+.secondary-button:hover { background: #dceadc; }
+
+.result {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 10px;
+    background: var(--green-soft);
+    border: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.result p:last-child { margin-bottom: 0; }
+
+.note {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+.callout {
+    padding: 16px 18px;
+    background: #f5f7ee;
+    border-left: 4px solid #8a9d54;
+    border-radius: 8px;
+}
+
+ul { padding-left: 1.4rem; }
+li { margin: 7px 0; }
+
+.action-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.site-footer {
+    background: #edf4ed;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer-inner {
+    padding: 24px 0;
+    color: var(--muted);
+    font-size: .93rem;
+}
+
+.read-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.read-controls button {
+    padding: 8px 12px;
+    font-size: .92rem;
+}
+
+@media (max-width: 600px) {
+    .header-inner,
+    main,
+    .site-footer-inner {
+        width: min(100% - 24px, 1100px);
+    }
+
+    nav { gap: 10px; }
+    .hero { margin-top: 14px; }
+    section { padding: 20px; }
+}
+
+@media print {
+    .read-controls,
+    .site-header nav,
+    .action-row,
+    button {
+        display: none !important;
+    }
+
+    body { background: white; }
+
+    section, .hero {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a class="brand" href="index.html" aria-label="Página de inicio de Yangocean">
+            Yangocean
+        </a>
+
+        <nav aria-label="Navegación principal">
+            <a href="index.html">Inicio</a>
+            <a href="sustainable-living.html">Vida sostenible</a>
+            <a href="blog.html">Diario</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main-content">
+
+    <div class="hero">
+
+        <p class="eyebrow">Yangocean · Herramientas de sostenibilidad</p>
+
+        <h1>🌳 Herramienta sobre Árboles y Calima</h1>
+
+        <p>
+            Descubre cómo los árboles contribuyen a un medio ambiente
+            más saludable, establece un objetivo de plantación y conoce
+            las medidas importantes que debes tomar durante los episodios
+            de calima en Malasia.
+        </p>
+
+        <p>
+            <a href="sustainable-living.html">
+                ← Volver a Vida sostenible
+            </a>
+        </p>
+
+        <div class="read-controls" aria-label="Controles de lectura en voz alta">
+
+            <button type="button" id="readButton">
+                🔊 Leer en voz alta
+            </button>
+
+            <button type="button" id="pauseButton" class="secondary-button">
+                ⏸ Pausar
+            </button>
+
+            <button type="button" id="stopButton" class="secondary-button">
+                ⏹ Detener
+            </button>
+
+        </div>
+
+        <p class="note">
+            La función de lectura en voz alta utiliza la síntesis de voz
+            del navegador. Las voces y los idiomas disponibles dependen
+            de tu dispositivo.
+        </p>
+
+    </div>
+
+    <div id="content-to-read">
+
+        <section id="tree-haze-tool">
+
+            <h2>🌫️ ¿Pueden los árboles ayudar a combatir la calima?</h2>
+
+            <p>
+                Los árboles favorecen la biodiversidad, proporcionan sombra
+                y pueden capturar algunas partículas presentes en el aire.
+                Sin embargo, la calima causada por incendios forestales,
+                incendios en turberas y otras fuentes de contaminación
+                no puede eliminarse simplemente plantando un determinado
+                número de árboles.
+            </p>
+
+            <p>
+                Esta calculadora te ayuda a planificar un objetivo de
+                plantación de árboles. No calcula cuántos árboles serían
+                necesarios para eliminar la calima.
+            </p>
+
+            <div class="tool-card">
+
+                <h3>🌱 Planifica tu objetivo de plantación</h3>
+
+                <p>
+                    Introduce el número de árboles que esperas que lleguen
+                    a establecerse y crecer. Selecciona una tasa estimada
+                    de supervivencia de los plantones para calcular cuántos
+                    podrías necesitar plantar.
+                </p>
+
+                <div class="form-field">
+
+                    <label for="targetTrees">
+                        Número de árboles que deseas que lleguen a establecerse
+                    </label>
+
+                    <input
+                        type="number"
+                        id="targetTrees"
+                        min="1"
+                        max="1000000"
+                        step="1"
+                        value="100"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="survivalRate">
+                        Tasa estimada de supervivencia de los plantones
+                    </label>
+
+                    <select id="survivalRate">
+                        <option value="0.5">50 %</option>
+                        <option value="0.6">60 %</option>
+                        <option value="0.7" selected>
+                            70 % — ejemplo ilustrativo
+                        </option>
+                        <option value="0.8">80 %</option>
+                        <option value="0.9">90 %</option>
+                    </select>
+
+                </div>
+
+                <p class="note">
+                    La tasa de supervivencia es una hipótesis, no una garantía.
+                    La supervivencia real depende de la especie, la ubicación,
+                    el clima, las condiciones de plantación y los cuidados
+                    posteriores.
+                </p>
+
+                <div class="action-row">
+
+                    <button type="button" id="calculateButton">
+                        Calcular los plantones necesarios
+                    </button>
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        Restablecer
+                    </button>
+
+                </div>
+
+                <div
+                    id="treeResult"
+                    class="result"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
+                    <strong>Tu estimación aparecerá aquí.</strong>
+
+                    <p>
+                        Ejemplo: para conseguir 100 árboles establecidos
+                        con una tasa estimada de supervivencia del 70 %,
+                        se necesitarían aproximadamente 143 plantones.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌿 ¿Qué podemos hacer durante un episodio de calima?</h2>
+
+            <ul>
+                <li>
+                    Consulta el Índice de Contaminantes Atmosféricos
+                    oficial de Malasia (API).
+                </li>
+
+                <li>
+                    Sigue las recomendaciones de salud pública y reduce
+                    la exposición al aire libre cuando sea necesario.
+                </li>
+
+                <li>
+                    Evita las quemas al aire libre y apoya las medidas
+                    de prevención de incendios.
+                </li>
+
+                <li>
+                    Protege los bosques y las turberas existentes.
+                </li>
+
+                <li>
+                    Planta especies de árboles adecuadas para cada lugar
+                    y cuídalas mientras crecen.
+                </li>
+            </ul>
+
+            <p>
+                <a
+                    href="https://www.doe.gov.my/en/api-2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consultar el Índice de Contaminantes Atmosféricos
+                    (API) de Malasia →
+                </a>
+            </p>
+
+            <div class="callout">
+                <strong>Recuerda:</strong> plantar árboles es una inversión
+                medioambiental a largo plazo. Durante un episodio activo
+                de calima, reducir las emisiones de humo y proteger a las
+                personas frente a la exposición son prioridades más inmediatas.
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌱 Planta el árbol adecuado en el lugar adecuado</h2>
+
+            <p>
+                El éxito de una plantación depende de mucho más que del
+                número de plantones. Elige especies adecuadas para las
+                condiciones locales, evita dañar los hábitats naturales
+                y planifica cómo regar y cuidar los árboles jóvenes.
+                También es importante proteger los árboles maduros y
+                los bosques que ya existen.
+            </p>
+
+            <p>
+                Esta calculadora es una herramienta sencilla de planificación.
+                No predice la supervivencia de los árboles a largo plazo,
+                la cantidad de carbono que eliminarán de la atmósfera
+                ni la reducción de la calima.
+            </p>
+
+        </section>
+
+    </div>
+
+    <p>
+        <a href="tools/tree-calculator.html">
+            ← Explorar una calculadora de compensación de carbono mediante árboles
+        </a>
+    </p>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <p>
+            <strong>Yangocean</strong> · Atención plena, naturaleza
+            y sostenibilidad en la vida cotidiana
+        </p>
+
+        <p>
+            Esta página ofrece información general sobre el medio ambiente
+            y no constituye asesoramiento médico ni instrucciones para
+            emergencias. Durante los episodios de calima, sigue las
+            recomendaciones oficiales vigentes.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+(function () {
+
+    const targetInput = document.getElementById("targetTrees");
+    const survivalSelect = document.getElementById("survivalRate");
+    const result = document.getElementById("treeResult");
+
+    function calculateTreeTarget() {
+
+        const rawTarget = targetInput.value.trim();
+        const target = Number(rawTarget);
+        const survival = Number(survivalSelect.value);
+
+        if (
+            rawTarget === "" ||
+            !Number.isSafeInteger(target) ||
+            target < 1 ||
+            target > 1000000
+        ) {
+
+            result.replaceChildren();
+
+            const message = document.createElement("p");
+
+            message.textContent =
+                "Introduce un número entero entre 1 y 1.000.000.";
+
+            result.appendChild(message);
+            targetInput.focus();
+
+            return;
+        }
+
+        if (
+            !Number.isFinite(survival) ||
+            survival <= 0 ||
+            survival > 1
+        ) {
+
+            result.textContent =
+                "Selecciona una tasa de supervivencia válida.";
+
+            survivalSelect.focus();
+
+            return;
+        }
+
+        const seedlings = Math.ceil(target / survival);
+
+        result.replaceChildren();
+
+        const heading = document.createElement("p");
+        const strong = document.createElement("strong");
+
+        strong.textContent =
+            "Plantones estimados necesarios: " +
+            seedlings.toLocaleString("es-ES");
+
+        heading.appendChild(strong);
+        result.appendChild(heading);
+
+        const details = document.createElement("p");
+
+        details.textContent =
+            "Objetivo de árboles establecidos: " +
+            target.toLocaleString("es-ES") +
+            ". Tasa estimada de supervivencia: " +
+            (survival * 100) +
+            " %.";
+
+        result.appendChild(details);
+
+        const note = document.createElement("p");
+
+        note.textContent =
+            "Esta es solo una estimación para la planificación. " +
+            "La supervivencia real puede variar y esta cifra no representa " +
+            "el número de árboles necesarios para combatir la calima.";
+
+        result.appendChild(note);
+    }
+
+    document
+        .getElementById("calculateButton")
+        .addEventListener("click", calculateTreeTarget);
+
+    document
+        .getElementById("resetButton")
+        .addEventListener("click", function () {
+
+            targetInput.value = "100";
+            survivalSelect.value = "0.7";
+
+            result.replaceChildren();
+
+            const strong = document.createElement("strong");
+
+            strong.textContent = "Tu estimación aparecerá aquí.";
+
+            result.appendChild(strong);
+
+            const example = document.createElement("p");
+
+            example.textContent =
+                "Ejemplo: para conseguir 100 árboles establecidos " +
+                "con una tasa estimada de supervivencia del 70 %, " +
+                "se necesitarían aproximadamente 143 plantones.";
+
+            result.appendChild(example);
+        });
+
+    let utterance = null;
+
+    const readButton = document.getElementById("readButton");
+    const pauseButton = document.getElementById("pauseButton");
+    const stopButton = document.getElementById("stopButton");
+
+    function getSpeechText() {
+
+        const content = document.getElementById("content-to-read");
+
+        return content.innerText.replace(/\s+/g, " ").trim();
+    }
+
+    readButton.addEventListener("click", function () {
+
+        if (
+            !("speechSynthesis" in window) ||
+            !("SpeechSynthesisUtterance" in window)
+        ) {
+
+            alert(
+                "Este navegador no admite la lectura en voz alta. " +
+                "Prueba con un navegador moderno o con el lector de " +
+                "accesibilidad de tu dispositivo."
+            );
+
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        utterance = new SpeechSynthesisUtterance(getSpeechText());
+        utterance.lang = "es-ES";
+        utterance.rate = 0.95;
+
+        window.speechSynthesis.speak(utterance);
+    });
+
+    pauseButton.addEventListener("click", function () {
+
+        if (
+            "speechSynthesis" in window &&
+            window.speechSynthesis.speaking
+        ) {
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            } else {
+                window.speechSynthesis.pause();
+            }
+        }
+    });
+
+    stopButton.addEventListener("click", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+            utterance = null;
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
+
+})();
+</script>
+
+</body>
+</html>
+
