@@ -1,582 +1,931 @@
 <!DOCTYPE html>
+<html lang="zh-CN">
 
-<html lang="zh">
 <head>
 <meta charset="UTF-8">
 
-<title>可持续生活 | 节约用水、减少浪费、减少塑料与日常选择 | Yangocean</title>
+<title>可持续生活｜日常选择与可持续发展工具 | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="通过理性消费、水与能源使用、减少塑料、减少食物浪费、交通方式以及日常环保选择，探索可持续生活。">
-<meta name="keywords" content="可持续生活, 可持续生活方式, 减少塑料, 节约用水, 减少浪费, 正念消费, 日常可持续生活">
+<meta name="description"
+content="探索简单实用的可持续生活方式，包括理性消费、减少浪费、节约资源，以及帮助我们思考日常环保选择的实用工具。">
+
 <meta name="robots" content="index, follow">
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
-<!-- OPEN GRAPH -->
+<link rel="canonical"
+href="https://yangocean.com/zh/sustainable-living.html">
 
-<meta property="og:title" content="可持续生活 | Yangocean">
-<meta property="og:description" content="探索更有意识地使用资源、消费、水、能源和减少浪费的实用方式。">
-<meta property="og:url" content="https://yangocean.com/zh/sustainable-living.html">
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/sustainable-living.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/sustainable-living.html">
+
+<link rel="alternate" hreflang="zh"
+href="https://yangocean.com/zh/sustainable-living.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/sustainable-living.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/sustainable-living.html">
+
+<link rel="alternate" hreflang="my"
+href="https://yangocean.com/my/sustainable-living.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/sustainable-living.html">
+
+<meta property="og:title"
+content="可持续生活｜日常选择与可持续发展工具">
+
+<meta property="og:description"
+content="通过理性消费、减少浪费、节约资源和实用工具，让日常选择更有意识，逐步实践可持续生活。">
+
+<meta property="og:url"
+content="https://yangocean.com/zh/sustainable-living.html">
+
 <meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
-<!-- TWITTER -->
+<meta property="og:image"
+content="https://yangocean.com/images/og-image.jpg">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="可持续生活 | Yangocean">
-<meta name="twitter:description" content="探索更有意识地使用资源、消费、水、能源和减少浪费的实用方式。">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+<meta name="twitter:card"
+content="summary_large_image">
 
-<!-- CANONICAL -->
+<meta name="twitter:title"
+content="可持续生活｜日常选择与可持续发展工具">
 
-<link rel="canonical" href="https://yangocean.com/zh/sustainable-living.html">
+<meta name="twitter:description"
+content="探索简单实用的可持续生活方式，并通过日常选择和实用工具培养环保意识。">
 
-<!-- HREFLANG -->
-
-<link rel="alternate" hreflang="en" href="https://yangocean.com/sustainable-living.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/sustainable-living.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/sustainable-living.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/sustainable-living.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/sustainable-living.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/sustainable-living.html">
-
-<!-- STRUCTURED DATA -->
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "可持续生活 | Yangocean",
-  "url": "https://yangocean.com/zh/sustainable-living.html",
-  "description": "关于理性消费、资源使用、减少浪费和日常可持续生活的实用指南。",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Yangocean",
-    "url": "https://yangocean.com/"
-  }
-}
-</script>
-
-<!-- STYLES -->
-
-<link rel="stylesheet" href="/styles.css">
-
-<!-- ADSENSE -->
+<meta name="twitter:image"
+content="https://yangocean.com/images/og-image.jpg">
 
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
 crossorigin="anonymous"></script>
 
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7faf7;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #315c3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav > a,
+.dropbtn {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 6px;
+}
+
+nav > a:hover,
+.dropbtn:hover {
+    color: #315c3a;
+}
+
+/* =========================
+   LANGUAGE LINKS
+========================= */
+
+.language-links {
+    display: flex;
+    gap: 7px;
+    margin-right: 5px;
+}
+
+.language-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.82rem;
+}
+
+.language-links a:hover {
+    color: #315c3a;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.10);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 15px;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.93rem;
+}
+
+.dropdown-content a:hover {
+    background: #f2f7f2;
+    color: #315c3a;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+}
+
+section {
+    margin: 0 auto;
+    padding: 55px 0;
+    border-bottom: 1px solid #e6ece6;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h1,
+h2,
+h3 {
+    color: #315c3a;
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: 2.35rem;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 850px;
+}
+
+a {
+    color: #315c3a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 75px 20px 65px;
+}
+
+.hero h1 {
+    margin-top: 0;
+}
+
+.hero p {
+    margin: 0 auto;
+    max-width: 780px;
+    font-size: 1.08rem;
+}
+
+/* =========================
+   LIST
+========================= */
+
+ul {
+    max-width: 850px;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 9px;
+}
+
+/* =========================
+   SUSTAINABILITY TOOLS
+========================= */
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+}
+
+.tool-card {
+    background: #ffffff;
+    border: 1px solid #e3e9e3;
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tool-card h3 {
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.tool-card p {
+    font-size: 0.94rem;
+    margin: 0 auto;
+}
+
+.tool-card a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tool-card a:hover {
+    text-decoration: underline;
+}
+
+.tool-note {
+    margin: 28px auto 0;
+    padding: 15px 18px;
+    background: #f0f5f0;
+    border-radius: 8px;
+    font-size: 0.92rem;
+}
+
+/* =========================
+   DIET & EXERCISE LINK
+========================= */
+
+.feature-link {
+    margin-top: 22px;
+}
+
+.feature-link a {
+    display: inline-block;
+    padding: 11px 18px;
+    background: #eef5ee;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.feature-link a:hover {
+    background: #e2eee2;
+}
+
+/* =========================
+   READ ALOUD
+========================= */
+
+.read-aloud-container {
+    text-align: center;
+    padding: 20px 0 5px;
+}
+
+.read-aloud-container button {
+    margin: 4px;
+    padding: 9px 16px;
+    border: 1px solid #ccd8cc;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #315c3a;
+    cursor: pointer;
+    font-size: 0.92rem;
+}
+
+.read-aloud-container button:hover {
+    background: #eef5ee;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #eef3ee;
+    text-align: center;
+    padding: 30px 20px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #315c3a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        padding: 12px 15px;
+    }
+
+    nav {
+        gap: 6px;
+    }
+
+    nav > a,
+    .dropbtn {
+        font-size: 0.88rem;
+    }
+
+    .language-links {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 3px;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .hero {
+        padding: 55px 10px 45px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.45rem;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+</style>
+
 </head>
 
-<body class="theme-default">
+<body>
 
-<div class="container">
+<header>
 
-<!-- NAV -->
+<div class="header-inner">
+
+<div class="logo">
+<a href="/zh/">Yangocean</a>
+</div>
 
 <nav>
 
-<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a>
+<div class="language-links">
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/" lang="zh-CN" aria-current="page">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+</div>
 
-<span style="margin-left:10px;">|</span>
+<a href="/zh/">首页</a>
 
-<a href="/zh/mindful-ethical-living.html">正念生活</a> <a href="/zh/mindful-eating.html">正念饮食</a> <a href="/zh/nature-connection.html">亲近自然</a> <a href="/zh/sustainable-living.html">可持续生活</a> <a href="/zh/blog.html">日志</a> <a href="/zh/apps.html">应用</a>
+<div class="dropdown">
+
+<button class="dropbtn" type="button">
+🌿 正念生活 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/sustainable-living.html" aria-current="page">
+♻️ 可持续生活
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn" type="button">
+🌳 亲近自然 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/blog.html">
+📝 生活札记
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn" type="button">
+📱 相关应用 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/apps.html">
+📱 查看所有相关应用
+</a>
+
+<a href="/apps.html#eft">
+🌿 Yangocean 应用
+</a>
+
+<a href="/apps.html#healthy-body">
+🧘 QuQu 健康身体
+</a>
+
+<a href="/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
 
 </nav>
 
-<!-- HERO -->
-
-<section class="card">
-
-  <h1>🌱 可持续生活</h1>
-
-  <p style="text-align:center; color:#555;">
-    可持续生活并不是要求自己做到完美。
-    而是留意日常选择如何使用资源、产生浪费，
-    以及这些选择如何影响我们周围的世界。
-  </p>
-
-</section>
-
-<!-- INTRODUCTION -->
-
-<section class="card">
-
-  <h2>🌍 什么是可持续生活？</h2>
-
-  <p>
-    可持续生活意味着考虑日常活动对环境的影响，
-    并寻找切实可行的方法来减少不必要的消费与浪费。
-  </p>
-
-  <p>
-    这包括我们吃什么、购买什么产品、使用多少能源和水、
-    如何出行、丢弃什么，以及我们如何照顾身边的环境。
-  </p>
-
-  <p>
-    没有一种生活方式适合所有人。一个有用的起点，
-    是观察自己的生活习惯，并思考哪些地方适合做出一点小小的改变。
-  </p>
-
-</section>
-
-<!-- WHOLE PICTURE -->
-
-<section class="card">
-
-  <h2>🔄 看见完整的过程</h2>
-
-  <p>
-    一个产品的环境影响，并不是从我们把它放进回收箱时才开始。
-    它可能涉及原材料、制造、包装、运输、使用以及最终处理。
-  </p>
-
-  <p>
-    在购买或更换某样东西之前，可以先问问自己：
-  </p>
-
-  <ul>
-    <li>我真的需要它吗？</li>
-    <li>我可以使用已经拥有的东西吗？</li>
-    <li>我可以选择更耐用的产品吗？</li>
-    <li>它可以维修或重复使用吗？</li>
-    <li>是否存在不必要的包装？</li>
-    <li>当我不再需要它时，它最终会怎样？</li>
-  </ul>
-
-</section>
-
-<!-- EVERYDAY AREAS -->
-
-<section class="card">
-
-  <h2>🏡 从日常生活中的不同方面开始</h2>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <h3>🥗 食物</h3>
-  <p>
-    留意食物浪费、份量、储存、包装，以及影响我们日常饮食的各种选择。
-  </p>
-  <p>
-    <a href="/zh/mindful-eating.html">探索正念饮食 →</a>
-  </p>
 </div>
 
-<div class="feature">
-  <h3>🛍️ 消费</h3>
-  <p>
-    购买之前先停一下，想想这个物品是否实用、耐用、可以维修，
-    以及是否能够长期使用。
-  </p>
-  <p>
-    <a href="/zh/mindful-ethical-living.html">
-      探索正念与责任生活 →
-    </a>
-  </p>
-</div>
+</header>
 
-<div class="feature">
-  <h3>⚡ 能源</h3>
-  <p>
-    留意哪些地方可能存在不必要的用电，并寻找实际可行的方法，
-    减少可以避免的能源消耗。
-  </p>
-</div>
+<main id="content-to-read">
 
-<div class="feature">
-  <h3>💧 水</h3>
-  <p>
-    日常活动中可能会在不知不觉间浪费水。保持觉察，
-    可以帮助我们发现漏水、没有必要持续开水以及效率不高的用水习惯。
-  </p>
-</div>
+<section class="hero">
 
-<div class="feature">
-  <h3>🚶 交通</h3>
-  <p>
-    在实际可行的情况下，可以考虑步行、骑自行车、公共交通、
-    拼车，或把几件事情安排在一次出行中完成。
-  </p>
-</div>
+<h1>♻️ 可持续生活</h1>
 
-<div class="feature">
-  <h3>♻️ 废弃物</h3>
-  <p>
-    减少浪费其实在物品进入垃圾桶之前就已经开始。
-    重复使用、维修以及少买一些东西，都可以延长产品的使用寿命。
-  </p>
-</div>
-```
-
-  </div>
+<p>
+可持续生活意味着在日常生活中作出更审慎的选择，合理使用资源，
+减少不必要的浪费，并考虑我们的行为对他人和环境所带来的影响。
+</p>
 
 </section>
 
-<!-- WATER -->
+<div class="read-aloud-container">
 
-<section class="card">
+<button type="button" onclick="startReading()">
+🔊 朗读
+</button>
 
-  <h2>💧 更有意识地使用水</h2>
+<button type="button" onclick="pauseReading()">
+⏸ 暂停
+</button>
 
-  <p>
-    清洁的水是日常生活不可缺少的资源，但家庭活动使用的水量
-    可能比我们意识到的更多。实际用水量也会受到当地情况、
-    家庭人数以及供水方式等因素影响。
-  </p>
+<button type="button" onclick="resumeReading()">
+▶ 继续朗读
+</button>
 
-  <p>
-    与其试图遵守一长串规则，不如先观察自己家中哪些活动
-    最经常使用水。
-  </p>
+<button type="button" onclick="stopReading()">
+⏹ 停止
+</button>
 
-  <ul>
-    <li>不需要用水时及时关掉水龙头。</li>
-    <li>条件允许时，维修漏水的水龙头、水管或厕所。</li>
-    <li>清洁时只使用所需要的水量。</li>
-    <li>使用洗衣机或洗碗机时安排合适的洗涤量。</li>
-    <li>根据植物实际需要浇水，而不是机械地定时浇水。</li>
-    <li>在合适且安全的情况下，考虑是否可以将水重复用于其他适合的用途。</li>
-  </ul>
-
-  <p>
-    目标并不是不惜一切代价减少用水，而是在保持适当卫生
-    和满足家庭需要的同时，避免不必要的用水。
-  </p>
-
-</section>
-
-<!-- PLASTIC -->
-
-<section class="card">
-
-  <h2>🧴 减少塑料废弃物</h2>
-
-  <p>
-    塑料在现代生活的许多方面都很有用，但不必要的一次性用品
-    以及处理不当的塑料废弃物可能造成污染。
-  </p>
-
-  <p>
-    减少塑料使用，可以从一些简单的问题开始：
-    我们买了什么、使用的频率如何，以及是否存在实际可行的替代品。
-  </p>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <h3>🛍️ 携带可重复使用的用品</h3>
-  <p>
-    可重复使用的购物袋、水瓶和容器，如果能够长期反复使用，
-    可以减少对一些一次性用品的需求。
-  </p>
 </div>
 
-<div class="feature">
-  <h3>📦 留意包装</h3>
-  <p>
-    比较类似产品时，可以看看每次购买附带多少包装，
-    以及这些包装是否真的都有必要。
-  </p>
+<section>
+
+<h2>🌱 日常生活中的选择</h2>
+
+<p>
+实践可持续生活并不意味着事事都要做到完美。
+只要持续作出一些小小的改变，就有助于减少不必要的消费和浪费。
+</p>
+
+<ul>
+
+<li>
+选择耐用、实用且适合自己需要的产品。
+</li>
+
+<li>
+在条件允许时，修理、重复使用或改造旧物。
+</li>
+
+<li>
+尽量避免不必要的一次性用品。
+</li>
+
+<li>
+只购买自己真正需要或有可能用到的东西。
+</li>
+
+<li>
+通过规划膳食和妥善储存食物来减少食物浪费。
+</li>
+
+<li>
+在日常活动中节约用水和用电。
+</li>
+
+<li>
+了解产品的制造方式、使用过程，以及最终被丢弃后的处理方式。
+</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>🌱 可持续生活实用工具</h2>
+
+<p>
+这些简单的工具旨在帮助我们思考园艺种植、可再生能源和日常购物选择。
+它们主要用于教育和提高环保意识，并不属于精确的环境影响评估工具。
+</p>
+
+<div class="tool-grid">
+
+<div class="tool-card">
+
+<h3>🌱 花园与种植计算器</h3>
+
+<p>
+根据花园面积和植物之间的种植间距，估算一块区域大约可以种植多少株植物。
+</p>
+
+<a href="/tools/garden-planting-calculator.html">
+使用种植计算器 →
+</a>
+
 </div>
 
-<div class="feature">
-  <h3>🔧 延长物品的使用时间</h3>
-  <p>
-    一件耐用并长期使用的物品，可能比不断更换较便宜的替代品更加实用。
-  </p>
+<div class="tool-card">
+
+<h3>☀️ 太阳能潜力计算器</h3>
+
+<p>
+根据可用面积、太阳能板效率和日照情况，初步了解可能产生的太阳能。
+</p>
+
+<a href="/tools/solar-potential-calculator.html">
+使用太阳能计算器 →
+</a>
+
 </div>
 
-<div class="feature">
-  <h3>♻️ 负责任地回收</h3>
-  <p>
-    不同地区的回收系统有所不同。请按照当地回收或废弃物管理服务
-    提供的指引进行分类和处理。
-  </p>
-</div>
-```
+<div class="tool-card">
 
-  </div>
+<h3>🌫️ 树木与烟霾工具</h3>
 
-</section>
+<p>
+了解植树目标，并认识到树木虽然有助于环境，但无法立即消除烟霾。
+</p>
 
-<!-- BUY LESS -->
+<a href="/zh/tree-haze-tool.html">
+探索这项工具 →
+</a>
 
-<section class="card">
-
-  <h2>🛒 少买一点，使用久一点</h2>
-
-  <p>
-    可持续生活中一个简单的理念，就是更好地利用我们已经拥有的东西。
-  </p>
-
-  <p>
-    在更换某样东西之前，可以想想它是否能够清洁、维修、重复使用、
-    与他人共享，或者赋予新的用途。
-  </p>
-
-  <p>
-    当某件东西确实需要更换时，可以考虑它的耐用性、实用性和预期使用寿命，
-    而不只是看最初的价格。
-  </p>
-
-</section>
-
-<!-- FOOD -->
-
-<section class="card">
-
-  <h2>🍽️ 可持续生活也从餐桌开始</h2>
-
-  <p>
-    食物把日常健康与资源使用、包装和浪费联系在一起。
-    可持续的选择，可以从简单地留意一餐之前和之后发生的事情开始。
-  </p>
-
-  <ul>
-    <li>根据自己可能吃完的量来计划餐食。</li>
-    <li>适当储存食物，帮助减少不必要的变质。</li>
-    <li>适合食用的剩余食物可以再次利用，而不是自动丢弃。</li>
-    <li>选择与自己食量相符的份量。</li>
-    <li>留意所购买食物附带了多少包装。</li>
-  </ul>
-
-  <p>
-    <a href="/zh/mindful-eating.html">
-      🌱 阅读正念饮食指南 →
-    </a>
-  </p>
-
-</section>
-
-<!-- HOME -->
-
-<section class="card">
-
-  <h2>🏠 更有意识的家居生活</h2>
-
-  <p>
-    家庭可持续生活并不一定需要昂贵的设备或大规模装修。
-  </p>
-
-  <p>
-    可以先观察家中使用的电力、水、食物、清洁用品、包装以及其他材料。
-  </p>
-
-  <p>
-    当我们有意识地留意时，那些反复出现的小型浪费来源，
-    往往会变得更容易发现。
-  </p>
-
-</section>
-
-<!-- CARBON -->
-
-<section class="card">
-
-  <h2>🌍 了解你的碳足迹</h2>
-
-  <p>
-    能源使用、交通、食物和消费都可能与温室气体排放有关。
-    每种来源的重要程度取决于个人情况以及排放的计算方式。
-  </p>
-
-  <p>
-    了解这些来源，可以帮助我们更认真地思考，
-    哪些改变适合自己的生活。
-  </p>
-
-  <p>
-    <a href="/zh/reduce-carbon-footprint.html">
-      🌎 探索碳足迹指南 →
-    </a>
-  </p>
-
-</section>
-
-<!-- NATURE -->
-
-<section class="card">
-
-  <h2>🌳 可持续生活也关乎自然</h2>
-
-  <p>
-    可持续生活不仅仅是减少消费，也可以包括与自然世界建立更亲近的关系。
-  </p>
-
-  <p>
-    留意附近的树木、植物、鸟类和昆虫。
-    当环境问题与我们实际看到的地方和生命联系起来时，
-    它们可能会变得更加有意义。
-  </p>
-
-  <p>
-    <a href="/zh/nature-connection.html">
-      📷 探索亲近自然 →
-    </a>
-  </p>
-
-</section>
-
-<!-- PERSONAL APPROACH -->
-
-<section class="card">
-
-  <h2>🧘 找到属于自己的可持续节奏</h2>
-
-  <p>
-    可持续生活应该能够融入真实的生活。
-  </p>
-
-  <p>
-    有些人可能会重点减少食物浪费；另一些人可能更关注
-    交通、用水、能源、塑料或购物习惯。
-  </p>
-
-  <p>
-    与其试图一次改变所有事情，不如选择几个对自己来说现实可行的方面，
-    然后逐步建立起来。
-  </p>
-
-</section>
-
-<!-- QUESTIONS -->
-
-<section class="card">
-
-  <h2>💭 日常生活中的思考问题</h2>
-
-  <p>
-    可持续生活可以成为一种观察的习惯，而不只是一长串需要遵守的规则。
-  </p>
-
-  <ul>
-    <li>我正在不必要地消费什么？</li>
-    <li>我已经拥有的哪些东西可以再次使用？</li>
-    <li>哪些东西可以维修，而不是直接更换？</li>
-    <li>我家中的大部分废弃物来自哪里？</li>
-    <li>这周我可以怎样减少食物浪费？</li>
-    <li>哪些地方可能存在不必要的用水？</li>
-    <li>哪些一次性塑料用品可以避免或替换？</li>
-    <li>我是怎样使用电力的？</li>
-    <li>我可以把几件事情安排在一次出行中，或选择另一种交通方式吗？</li>
-    <li>最近我有没有注意到身边哪些自然事物？</li>
-  </ul>
-
-</section>
-
-<!-- RELATED GUIDES -->
-
-<section class="card">
-
-  <h2>📚 探索 Yangocean</h2>
-
-  <div class="features">
-
-```
-<div class="feature">
-  <a href="/zh/reduce-carbon-footprint.html">🌍 碳足迹</a>
-  <p>
-    了解日常生活中温室气体排放的来源，以及理解自身影响的实际方法。
-  </p>
 </div>
 
-<div class="feature">
-  <a href="/zh/mindful-ethical-living.html">🌱 正念与责任生活</a>
-  <p>
-    思考日常选择和消费可能产生的更广泛影响。
-  </p>
+<div class="tool-card">
+
+<h3>🛍️ 购物影响评估工具</h3>
+
+<p>
+购买之前，思考这件商品是否必要、耐用、可重复使用、可维修，以及包装是否合理。
+</p>
+
+<a href="/tools/shopping-impact-tool.html">
+使用购物影响工具 →
+</a>
+
 </div>
 
-<div class="feature">
-  <a href="/zh/nature-connection.html">🌳 亲近自然</a>
-  <p>
-    放慢脚步，留意身边的自然世界。
-  </p>
 </div>
 
-<div class="feature">
-  <a href="/zh/blog.html">📝 Yangocean 日志</a>
-  <p>
-    阅读原创思考、观察记录和日常生活体验。
-  </p>
-</div>
-```
-
-  </div>
+<p class="tool-note">
+这些工具采用简化的假设，旨在帮助使用者提高认识、学习和思考。
+实际结果可能因地点、产品、材料、天气、使用方式及其他条件而有所不同。
+</p>
 
 </section>
 
-<!-- JOURNAL -->
+<section>
 
-<section class="card">
+<h2>🥗 日常身心健康</h2>
 
-  <h2>📝 Yangocean 日志</h2>
+<p>
+饮食和身体活动也是日常生活的重要部分。
+关注食物选择、身体活动、生活习惯和资源使用方式，
+有助于我们作出兼顾个人健康与实际生活需要的决定。
+</p>
 
-  <p>
-    当理念与真实经历联系起来时，可持续生活会变得更加有意义。
-  </p>
+<div class="feature-link">
 
-  <p>
-    Yangocean 日志将逐步分享日常观察、个人尝试、有用的发现，
-    以及可以在普通生活中实践的小小改变。
-  </p>
+<a href="/diet-exercise.html">
+🥗 探索饮食与运动 →
+</a>
 
-  <p>
-    <a href="/zh/blog.html">
-      👉 浏览 Yangocean 日志
-    </a>
-  </p>
+</div>
 
 </section>
 
-<!-- FINAL THOUGHT -->
+<section>
 
-<section class="card">
+<h2>🌍 让可持续生活融入日常</h2>
 
-  <h2>🌱 从觉察开始</h2>
+<p>
+当环保意识与实际行动相结合时，可持续生活就更容易落实。
+与其试图一次改变所有事情，不如从一个适合自己日常生活的方面开始。
+</p>
 
-  <p>
-    可持续生活不是从完美开始的。
-    它从留意开始。
-  </p>
+<p>
+例如，减少食物浪费、少用一次性产品、节约用水、
+减少不必要的能源消耗，或者在购买物品之前多考虑一下是否真的需要。
+</p>
 
-  <p>
-    留意你买了什么。留意你浪费了什么。留意你如何使用电力和水。
-    留意盘中的食物。留意进入家中的塑料。留意身边的自然。
-  </p>
-
-  <p>
-    <strong>
-      当我们留意得更多，就会拥有更多机会做出经过思考的选择。
-    </strong>
-  </p>
+<p>
+这些小小的选择看似平常，但持续实践，就有机会逐渐成为长久的生活习惯。
+</p>
 
 </section>
 
-<!-- FOOTER -->
+<section>
 
-<footer class="footer">
+<h2>🌱 从觉察开始</h2>
 
-  <p>© 2026 Yangocean</p>
+<p>
+可持续生活始于觉察，了解日常选择与更广阔的世界之间的联系。
+我们不必要求自己每一次都作出最完美的选择。
+重要的是逐渐提高意识、持续学习，并选择那些切合实际、能够长期坚持的改变。
+</p>
 
-  <p>
-    <a href="/zh/about.html">关于我们</a> |
-    <a href="/zh/contact.html">联系我们</a> |
-    <a href="/zh/privacy.html">隐私</a> |
-    <a href="/zh/terms.html">条款</a> |
-    <a href="/zh/apps.html">应用</a>
-  </p>
+</section>
+
+</main>
+
+<footer>
+
+<p>
+<a href="/zh/">首页</a> |
+<a href="/zh/mindfulness.html">正念生活</a> |
+<a href="/zh/nature-connection.html">亲近自然</a> |
+<a href="/zh/blog.html">生活札记</a> |
+<a href="/apps.html">相关应用</a> |
+<a href="/contact.html">联系我们</a>
+</p>
+
+<p>
+© 2026 • 正念生活 • 亲近自然 • 日常可持续生活
+</p>
 
 </footer>
 
-</div>
+<script>
+
+let speechQueue = [];
+let speechIndex = 0;
+let isPaused = false;
+
+function getReadAloudText() {
+
+    const container =
+        document.getElementById("content-to-read");
+
+    if (!container) return [];
+
+    return Array.from(
+        container.querySelectorAll("h1, h2, h3, p, li")
+    )
+    .map(function(element) {
+        return element.innerText.trim();
+    })
+    .filter(function(text) {
+        return text.length > 0;
+    });
+
+}
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("抱歉，您的浏览器不支持朗读功能。");
+
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    speechQueue = getReadAloudText();
+
+    speechIndex = 0;
+
+    isPaused = false;
+
+    readNext();
+
+}
+
+function readNext() {
+
+    if (speechIndex >= speechQueue.length) {
+
+        speechIndex = 0;
+
+        isPaused = false;
+
+        return;
+    }
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[speechIndex]
+        );
+
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+
+    utterance.onend = function() {
+
+        speechIndex++;
+
+        if (!isPaused) {
+            readNext();
+        }
+
+    };
+
+    speechSynthesis.speak(utterance);
+
+}
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
+        isPaused = true;
+
+    }
+
+}
+
+function resumeReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.paused
+    ) {
+
+        speechSynthesis.resume();
+
+        isPaused = false;
+
+    }
+
+}
+
+function stopReading() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+        speechIndex = 0;
+
+        isPaused = false;
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
+
