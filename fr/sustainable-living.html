@@ -1,136 +1,543 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 
-<title>Vie durable | Eau, déchets, plastique et choix quotidiens | Yangocean</title>
+<title>Mode de vie durable | Des habitudes pour une planète en meilleure santé | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Découvrez la vie durable à travers une consommation réfléchie, l’utilisation de l’eau et de l’énergie, la réduction du plastique, le gaspillage alimentaire, les transports et les choix environnementaux du quotidien.">
-<meta name="keywords" content="vie durable, mode de vie durable, réduction du plastique, économie d’eau, réduction des déchets, consommation consciente, durabilité au quotidien">
+<meta name="description"
+content="Découvrez des moyens pratiques d'adopter un mode de vie durable grâce au jardinage, aux économies d'énergie, à la protection des arbres, à une consommation réfléchie et à des habitudes quotidiennes plus responsables.">
+
 <meta name="robots" content="index, follow">
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
-<!-- OPEN GRAPH -->
-<meta property="og:title" content="Vie durable | Yangocean">
-<meta property="og:description" content="Découvrez des façons pratiques de vivre plus consciemment avec les ressources, la consommation, l’eau, l’énergie et les déchets.">
-<meta property="og:url" content="https://yangocean.com/fr/sustainable-living.html">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
-
-<!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Vie durable | Yangocean">
-<meta name="twitter:description" content="Découvrez des façons pratiques de vivre plus consciemment avec les ressources, la consommation, l’eau, l’énergie et les déchets.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
-
-<!-- CANONICAL -->
 <link rel="canonical" href="https://yangocean.com/fr/sustainable-living.html">
 
-<!-- HREFLANG -->
 <link rel="alternate" hreflang="en" href="https://yangocean.com/sustainable-living.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/sustainable-living.html">
 <link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/sustainable-living.html">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/sustainable-living.html">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/sustainable-living.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/sustainable-living.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/sustainable-living.html">
 
-<!-- STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Vie durable | Yangocean",
-  "url": "https://yangocean.com/fr/sustainable-living.html",
-  "description": "Guide pratique pour une consommation réfléchie, une utilisation responsable des ressources, la réduction des déchets et une vie quotidienne plus durable.",
-  "isPartOf": {
-    "@type": "WebSite",
-    "name": "Yangocean",
-    "url": "https://yangocean.com/"
-  }
+<meta property="og:title" content="Mode de vie durable | Yangocean">
+<meta property="og:description" content="De petits choix quotidiens peuvent nous aider à protéger la nature et à construire un avenir plus durable.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yangocean.com/fr/sustainable-living.html">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mode de vie durable | Yangocean">
+<meta name="twitter:description" content="Découvrez des idées pratiques pour vivre de manière plus consciente et durable.">
+
+<style>
+* {
+    box-sizing: border-box;
 }
-</script>
 
-<!-- STYLES -->
-<link rel="stylesheet" href="/styles.css">
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f8faf7;
+}
 
-<!-- ADSENSE -->
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous"></script>
+header {
+    background: #ffffff;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e9e3;
+}
 
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px 20px;
+}
+
+nav a {
+    color: #315c43;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 50px;
+}
+
+h1, h2, h3 {
+    color: #315c43;
+    line-height: 1.4;
+}
+
+h1 {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin: 15px 0 20px;
+}
+
+h2 {
+    margin-top: 35px;
+    font-size: 1.55rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.section {
+    margin: 30px 0;
+}
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.tool-card {
+    background: #ffffff;
+    border: 1px solid #e1e8df;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.tool-card h3 {
+    margin-top: 0;
+}
+
+.tool-card a,
+.content-link {
+    color: #287447;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tool-card a:hover,
+.content-link:hover {
+    text-decoration: underline;
+}
+
+.reflection {
+    background: #edf4e9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.read-aloud-controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 30px;
+}
+
+.read-aloud-controls button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    cursor: pointer;
+    background: #315c43;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.read-aloud-controls button:hover {
+    background: #244732;
+}
+
+footer {
+    background: #edf2eb;
+    padding: 24px 20px;
+    text-align: center;
+    color: #526052;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #315c43;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 14px 12px;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    main {
+        padding: 22px 16px 40px;
+    }
+
+    .tool-card {
+        padding: 17px;
+    }
+}
+</style>
 </head>
 
-<body class="theme-default">
+<body>
 
-<div class="container">
+<header>
+    <nav aria-label="Navigation principale">
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/mindfulness.html">Pleine conscience</a>
+        <a href="/fr/mindful-living.html">Vie en pleine conscience</a>
+        <a href="/fr/mindful-eating.html">Alimentation en pleine conscience</a>
+        <a href="/fr/nature-connection.html">Connexion à la nature</a>
+        <a href="/fr/sustainable-living.html">Vie durable</a>
+        <a href="/fr/blog.html">Journal</a>
+        <a href="/apps.html">Applications</a>
+    </nav>
+</header>
 
-<!-- NAV -->
-<nav>
+<main id="content-to-read">
 
-  <a href="/">EN</a>
-  <a href="/ms/">BM</a>
-  <a href="/zh/">中文</a>
-  <a href="/fr/">FR</a>
-  <a href="/es/">ES</a>
+    <h1>Mode de vie durable : de petits gestes pour un avenir plus sain</h1>
 
-  <span style="margin-left:10px;">|</span>
+    <div class="intro">
+        <p>
+            Adopter un mode de vie durable ne signifie pas devoir tout changer d'un seul coup.
+            Nous pouvons commencer par de petits choix quotidiens qui réduisent les déchets,
+            préservent les ressources et nous aident à entretenir une relation plus consciente
+            avec le monde naturel.
+        </p>
 
-  <a href="/fr/mindful-ethical-living.html">Vie consciente</a>
-  <a href="/fr/mindful-eating.html">Alimentation consciente</a>
-  <a href="/fr/nature-connection.html">Connexion à la nature</a>
-  <a href="/fr/sustainable-living.html">Vie durable</a>
-  <a href="/fr/blog.html">Journal</a>
-  <a href="/fr/apps.html">Applications</a>
+        <p>
+            Prendre soin d'une plante, réfléchir à nos achats ou utiliser l'énergie avec
+            davantage d'attention : chaque geste peut devenir une occasion de réfléchir
+            à notre impact sur l'environnement.
+        </p>
+    </div>
 
-</nav>
+    <div class="read-aloud-controls" aria-label="Commandes de lecture à voix haute">
+        <button type="button" onclick="startReading()" aria-label="Commencer la lecture">
+            🔊 Lire à voix haute
+        </button>
 
-<!-- HERO -->
-<section class="card">
+        <button type="button" onclick="pauseReading()" aria-label="Mettre en pause">
+            ⏸ Pause
+        </button>
 
-  <h1>🌱 Vie durable</h1>
+        <button type="button" onclick="stopReading()" aria-label="Arrêter la lecture">
+            ⏹ Arrêter
+        </button>
+    </div>
 
-  <p style="text-align:center; color:#555;">
-    Vivre durablement ne signifie pas être parfait.
-    Il s’agit de remarquer comment nos choix quotidiens utilisent les ressources,
-    créent des déchets et affectent le monde qui nous entoure.
-  </p>
+    <section class="section">
+        <h2>1. Cultiver des plantes et prendre soin de la nature</h2>
 
-</section>
+        <p>
+            Faire pousser des plantes chez soi peut nous aider à mieux comprendre les
+            cycles naturels et à apprécier les ressources nécessaires à la vie.
+            Même un petit jardin, quelques pots sur un balcon ou des herbes aromatiques
+            peuvent nous rapprocher de la nature.
+        </p>
 
-<!-- INTRODUCTION -->
-<section class="card">
+        <p>
+            Avant de planter, prenez en compte l'ensoleillement, l'espace disponible,
+            le type de sol et les besoins en eau de chaque plante. Dans la mesure du
+            possible, choisissez des plantes adaptées au climat local et évitez le
+            gaspillage d'eau.
+        </p>
 
-  <h2>🌍 Qu’est-ce que la vie durable ?</h2>
+        <p>
+            Le jardinage nous apprend aussi la patience : les plantes ont besoin de
+            temps, d'attention et de conditions appropriées pour pousser.
+        </p>
 
-  <p>
-    La vie durable consiste à prendre en compte les effets environnementaux
-    de nos activités quotidiennes et à rechercher des moyens pratiques de
-    réduire la consommation et le gaspillage inutiles.
-  </p>
+        <p>
+            Découvrez notre
+            <a class="content-link" href="/blog/how-to-grow-aloe-vera.html">
+                article sur la culture de l'aloe vera
+            </a>
+            pour un exemple pratique de jardinage à domicile.
+        </p>
+    </section>
 
-  <p>
-    Cela comprend les aliments que nous mangeons, les produits que nous
-    achetons, l’énergie et l’eau que nous utilisons, nos moyens de transport,
-    ce que nous jetons et la manière dont nous prenons soin des lieux
-    qui nous entourent.
-  </p>
+    <section class="section">
+        <h2>2. Utiliser l'énergie de manière responsable</h2>
 
-  <p>
-    Il n’existe pas un mode de vie unique qui convienne à tout le monde.
-    Un bon point de départ consiste à observer ses propres habitudes et
-    à déterminer où un petit changement pourrait avoir du sens.
-  </p>
+        <p>
+            L'énergie intervient dans de nombreuses activités quotidiennes, de
+            l'éclairage de nos maisons à la cuisine et aux déplacements.
+            Une utilisation plus réfléchie peut contribuer à réduire la consommation
+            inutile.
+        </p>
 
-</section>
+        <ul>
+            <li>Éteignez les lumières lorsque vous n'en avez pas besoin.</li>
+            <li>Débranchez les appareils inutilisés lorsque cela est approprié.</li>
+            <li>Profitez autant que possible de la lumière naturelle.</li>
+            <li>Envisagez des solutions d'énergie renouvelable adaptées à votre logement.</li>
+        </ul>
 
-<!-- WHOLE PICTURE -->
-<section class="card">
+        <p>
+            Si l'énergie solaire vous intéresse, explorez l'outil ci-dessous pour
+            mieux comprendre le potentiel solaire et les facteurs qui influencent
+            son utilisation.
+        </p>
+    </section>
 
-  <h2>🔄 Regardez l’ensemble du cycle</h2>
+    <section class="section">
+        <h2>3. Comprendre le rôle des arbres, de l'air et de notre environnement</h2>
 
-  <p>
-    Le parcours environn
-```
+        <p>
+            Les arbres fournissent de l'ombre, offrent un habitat à de nombreux êtres
+            vivants et contribuent au bien-être des écosystèmes. En ville, la végétation
+            peut également aider à modérer les températures locales et rendre les
+            espaces publics plus agréables.
+        </p>
+
+        <p>
+            La qualité de l'air dépend de nombreux facteurs, notamment de la circulation,
+            des activités industrielles, des conditions météorologiques et des sources
+            de pollution. Comprendre notre environnement nous aide à prendre des
+            décisions mieux informées et à apprécier l'importance des espaces verts.
+        </p>
+
+        <p>
+            Observez les arbres de votre quartier, renseignez-vous sur les espèces
+            locales et soutenez les initiatives responsables de conservation et
+            de plantation.
+        </p>
+
+        <p>
+            Vous pouvez également consulter notre
+            <a class="content-link" href="/fr/tree-haze-tool.html">
+                outil sur les arbres et la brume de pollution
+            </a>
+            pour approfondir ce sujet.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>4. Acheter de manière plus réfléchie</h2>
+
+        <p>
+            Chaque achat mobilise des ressources pour fabriquer, transporter,
+            emballer et distribuer un produit. Prendre le temps de réfléchir avant
+            d'acheter peut nous aider à éviter les dépenses inutiles et à réduire
+            les déchets.
+        </p>
+
+        <ul>
+            <li>Demandez-vous si vous avez réellement besoin du produit.</li>
+            <li>Privilégiez les articles durables et réparables lorsque c'est possible.</li>
+            <li>Réutilisez les sacs, les contenants et les objets adaptés.</li>
+            <li>Évitez les emballages superflus lorsqu'il existe des solutions pratiques.</li>
+            <li>Tenez compte de l'origine, de la durabilité et de l'usage prévu du produit.</li>
+        </ul>
+
+        <p>
+            Il n'existe pas de choix parfait dans toutes les situations. L'essentiel
+            est d'examiner les options disponibles et de faire des choix éclairés,
+            en tenant compte de vos besoins et de votre situation.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>Outils pour explorer la durabilité</h2>
+
+        <p>
+            Ces outils peuvent vous aider à explorer différents aspects d'un mode
+            de vie durable. Leurs résultats sont indicatifs et doivent être interprétés
+            en tenant compte des conditions et des données disponibles.
+        </p>
+
+        <div class="tool-grid">
+
+            <article class="tool-card">
+                <h3>🌱 Calculateur de jardinage et de plantation</h3>
+                <p>
+                    Explorez les aspects pratiques de la plantation et de l'entretien
+                    des plantes afin de mieux planifier votre petit jardin.
+                </p>
+                <a href="/tools/garden-calculator.html">
+                    Découvrir l'outil
+                </a>
+            </article>
+
+            <article class="tool-card">
+                <h3>☀️ Calculateur de potentiel solaire</h3>
+                <p>
+                    Découvrez les facteurs qui peuvent influencer l'utilisation
+                    de l'énergie solaire.
+                </p>
+                <a href="/tools/solar-calculator.html">
+                    Découvrir l'outil
+                </a>
+            </article>
+
+            <article class="tool-card">
+                <h3>🌳 Outil sur les arbres et la brume de pollution</h3>
+                <p>
+                    Apprenez-en davantage sur les arbres, les espaces verts et les
+                    facteurs liés à la qualité de l'air.
+                </p>
+                <a href="/fr/tree-haze-tool.html">
+                    Découvrir l'outil
+                </a>
+            </article>
+
+            <article class="tool-card">
+                <h3>🛍️ Outil sur l'impact des achats</h3>
+                <p>
+                    Réfléchissez à vos décisions d'achat et aux effets possibles
+                    de la consommation quotidienne.
+                </p>
+                <a href="/tools/shopping-impact.html">
+                    Découvrir l'outil
+                </a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Prendre soin de son corps contribue aussi au bien-être</h2>
+
+        <p>
+            La durabilité peut également être liée à la manière dont nous prenons
+            soin de nous-mêmes et organisons notre vie quotidienne. Une alimentation
+            équilibrée, une activité physique régulière, un repos suffisant et du
+            temps passé en plein air peuvent contribuer au bien-être général.
+        </p>
+
+        <p>
+            Chaque personne a des besoins différents. Choisissez des habitudes
+            réalistes qui correspondent à votre situation et demandez conseil à
+            un professionnel lorsque vous avez des questions concernant votre santé.
+        </p>
+
+        <p>
+            Pour approfondir ce sujet, consultez notre page consacrée à
+            <a class="content-link" href="/diet-exercise.html">
+                l'alimentation, au régime et à l'exercice physique
+            </a>.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>6. Commencer par de petits changements</h2>
+
+        <p>
+            Il n'est pas nécessaire de tout changer en même temps. Vous pouvez
+            commencer par une seule action : prendre soin d'une plante, gaspiller
+            moins de nourriture, réutiliser un objet ou marcher lorsque cela
+            constitue une solution pratique.
+        </p>
+
+        <p>
+            Lorsqu'une habitude simple s'intègre à la vie quotidienne, vous pouvez
+            en adopter une autre. Avec le temps, ces choix peuvent vous aider à
+            vivre de manière plus consciente et à mieux comprendre votre relation
+            avec les ressources naturelles.
+        </p>
+    </section>
+
+    <section class="reflection">
+        <h2>Un petit moment de réflexion</h2>
+
+        <p>
+            Vivre de manière durable ne signifie pas rechercher la perfection.
+            Il s'agit de prêter attention à nos choix, de reconnaître que les
+            ressources sont limitées et de faire ce qui est à notre portée pour
+            prendre soin de notre environnement.
+        </p>
+
+        <p>
+            Aujourd'hui, quel petit changement pouvez-vous faire pour vivre plus
+            consciemment et avec davantage de respect pour la nature ?
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>
+        <a href="/fr/">Accueil</a> |
+        <a href="/fr/mindfulness.html">Pleine conscience</a> |
+        <a href="/fr/nature-connection.html">Connexion à la nature</a> |
+        <a href="/fr/blog.html">Journal</a> |
+        <a href="/apps.html">Applications</a>
+    </p>
+
+    <p>© Yangocean. Vivre en pleine conscience, prendre soin de la nature.</p>
+</footer>
+
+<script>
+let readingUtterance = null;
+
+function startReading() {
+    if (!("speechSynthesis" in window)) {
+        alert("Désolé, votre navigateur ne prend pas en charge la lecture à voix haute.");
+        return;
+    }
+
+    if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+        return;
+    }
+
+    if (window.speechSynthesis.speaking) {
+        return;
+    }
+
+    const content = document.getElementById("content-to-read");
+    const textToRead = content.innerText;
+
+    readingUtterance = new SpeechSynthesisUtterance(textToRead);
+    readingUtterance.lang = "fr-FR";
+    readingUtterance.rate = 0.95;
+    readingUtterance.pitch = 1;
+
+    window.speechSynthesis.speak(readingUtterance);
+}
+
+function pauseReading() {
+    if ("speechSynthesis" in window && window.speechSynthesis.speaking) {
+        window.speechSynthesis.pause();
+    }
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+        readingUtterance = null;
+    }
+}
+
+window.addEventListener("beforeunload", function () {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
+});
+</script>
+
+</body>
+</html>
+
