@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Outil Arbres et Brume Sèche | Yangocean</title>
+
+<meta name="description" content="Découvrez les objectifs de plantation d’arbres, leur rôle dans la protection de l’environnement et les conseils pratiques face à la brume sèche en Malaisie.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/fr/tree-haze-tool.html">
+
+<style>
+:root {
+    --green: #315c3a;
+    --green-dark: #24472c;
+    --green-soft: #edf5ed;
+    --text: #263329;
+    --muted: #5c6a5e;
+    --border: #dce7dc;
+    --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    background: #f7faf7;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+a { color: var(--green); }
+a:hover { color: var(--green-dark); }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    background: white;
+    padding: 10px 14px;
+    z-index: 1000;
+}
+
+.skip-link:focus { left: 8px; }
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner,
+main,
+.site-footer-inner {
+    width: min(1100px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.header-inner {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.hero {
+    margin: 28px 0 22px;
+    padding: clamp(26px, 5vw, 54px);
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eaf4e9, #f7faf7 70%);
+    border: 1px solid var(--border);
+}
+
+.eyebrow {
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    font-size: .82rem;
+}
+
+h1, h2, h3 {
+    color: var(--green-dark);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 8px 0 12px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 0;
+}
+
+h3 { font-size: 1.2rem; }
+
+main { padding-bottom: 38px; }
+
+section {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.tool-card {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fcfefc;
+}
+
+.tool-card h3 { margin-top: 0; }
+
+.form-field { margin: 18px 0; }
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    padding: 12px;
+    border: 1px solid #aabbaa;
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #a7d2a8;
+    outline-offset: 2px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover { background: var(--green-dark); }
+
+.secondary-button {
+    background: #e8f0e8;
+    color: var(--green-dark);
+    border: 1px solid var(--border);
+}
+
+.secondary-button:hover { background: #dceadc; }
+
+.result {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 10px;
+    background: var(--green-soft);
+    border: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.result p:last-child { margin-bottom: 0; }
+
+.note {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+.callout {
+    padding: 16px 18px;
+    background: #f5f7ee;
+    border-left: 4px solid #8a9d54;
+    border-radius: 8px;
+}
+
+ul { padding-left: 1.4rem; }
+li { margin: 7px 0; }
+
+.action-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.site-footer {
+    background: #edf4ed;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer-inner {
+    padding: 24px 0;
+    color: var(--muted);
+    font-size: .93rem;
+}
+
+.read-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.read-controls button {
+    padding: 8px 12px;
+    font-size: .92rem;
+}
+
+@media (max-width: 600px) {
+    .header-inner,
+    main,
+    .site-footer-inner {
+        width: min(100% - 24px, 1100px);
+    }
+
+    nav { gap: 10px; }
+    .hero { margin-top: 14px; }
+    section { padding: 20px; }
+}
+
+@media print {
+    .read-controls,
+    .site-header nav,
+    .action-row,
+    button {
+        display: none !important;
+    }
+
+    body { background: white; }
+
+    section, .hero {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">Aller au contenu</a>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a class="brand" href="index.html" aria-label="Accueil Yangocean">
+            Yangocean
+        </a>
+
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="sustainable-living.html">Mode de vie durable</a>
+            <a href="blog.html">Journal</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main-content">
+
+    <div class="hero">
+
+        <p class="eyebrow">Yangocean · Outils de durabilité</p>
+
+        <h1>🌳 Outil Arbres et Brume Sèche</h1>
+
+        <p>
+            Découvrez comment les arbres contribuent à un environnement
+            plus sain, définissez un objectif de plantation et apprenez
+            les mesures importantes à prendre en période de brume sèche
+            en Malaisie.
+        </p>
+
+        <p>
+            <a href="sustainable-living.html">
+                ← Retour au mode de vie durable
+            </a>
+        </p>
+
+        <div class="read-controls" aria-label="Commandes de lecture à voix haute">
+
+            <button type="button" id="readButton">
+                🔊 Lire à voix haute
+            </button>
+
+            <button type="button" id="pauseButton" class="secondary-button">
+                ⏸ Pause
+            </button>
+
+            <button type="button" id="stopButton" class="secondary-button">
+                ⏹ Arrêter
+            </button>
+
+        </div>
+
+        <p class="note">
+            La lecture à voix haute utilise la synthèse vocale de votre
+            navigateur. Les voix et les langues disponibles dépendent
+            de votre appareil.
+        </p>
+
+    </div>
+
+    <div id="content-to-read">
+
+        <section id="tree-haze-tool">
+
+            <h2>🌫️ Les arbres peuvent-ils lutter contre la brume sèche ?</h2>
+
+            <p>
+                Les arbres favorisent la biodiversité, procurent de l’ombre
+                et peuvent capter certaines particules présentes dans l’air.
+                Cependant, la brume sèche causée par les incendies de forêt,
+                les incendies de tourbières et d’autres sources de pollution
+                ne peut pas être éliminée simplement en plantant un certain
+                nombre d’arbres.
+            </p>
+
+            <p>
+                Ce calculateur vous aide à planifier un objectif de
+                plantation d’arbres. Il ne calcule pas le nombre d’arbres
+                nécessaires pour éliminer la brume sèche.
+            </p>
+
+            <div class="tool-card">
+
+                <h3>🌱 Planifiez votre objectif de plantation</h3>
+
+                <p>
+                    Indiquez le nombre d’arbres que vous souhaitez voir
+                    s’établir et grandir. Choisissez un taux de survie
+                    estimé des jeunes plants pour calculer combien de
+                    plants vous pourriez devoir planter.
+                </p>
+
+                <div class="form-field">
+
+                    <label for="targetTrees">
+                        Nombre d’arbres que vous souhaitez voir grandir
+                    </label>
+
+                    <input
+                        type="number"
+                        id="targetTrees"
+                        min="1"
+                        max="1000000"
+                        step="1"
+                        value="100"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="survivalRate">
+                        Taux de survie estimé des jeunes plants
+                    </label>
+
+                    <select id="survivalRate">
+                        <option value="0.5">50 %</option>
+                        <option value="0.6">60 %</option>
+                        <option value="0.7" selected>
+                            70 % — exemple illustratif
+                        </option>
+                        <option value="0.8">80 %</option>
+                        <option value="0.9">90 %</option>
+                    </select>
+
+                </div>
+
+                <p class="note">
+                    Le taux de survie est une hypothèse et non une garantie.
+                    La survie réelle dépend de l’espèce, du lieu, des conditions
+                    météorologiques, des conditions de plantation et de
+                    l’entretien régulier.
+                </p>
+
+                <div class="action-row">
+
+                    <button type="button" id="calculateButton">
+                        Calculer le nombre de plants nécessaires
+                    </button>
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        Réinitialiser
+                    </button>
+
+                </div>
+
+                <div
+                    id="treeResult"
+                    class="result"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
+                    <strong>Votre estimation apparaîtra ici.</strong>
+
+                    <p>
+                        Exemple : pour obtenir 100 arbres établis avec
+                        un taux de survie estimé de 70 %, il faudrait
+                        planter environ 143 jeunes plants.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌿 Que pouvons-nous faire pendant un épisode de brume sèche ?</h2>
+
+            <ul>
+                <li>
+                    Consultez l’indice officiel de pollution atmosphérique
+                    de Malaisie (API).
+                </li>
+
+                <li>
+                    Suivez les recommandations des autorités sanitaires
+                    et limitez les activités en plein air lorsque cela
+                    est nécessaire.
+                </li>
+
+                <li>
+                    Évitez le brûlage à l’air libre et soutenez les efforts
+                    de prévention des incendies.
+                </li>
+
+                <li>
+                    Protégez les forêts et les tourbières existantes.
+                </li>
+
+                <li>
+                    Plantez des espèces d’arbres adaptées aux lieux choisis
+                    et prenez-en soin pendant leur croissance.
+                </li>
+            </ul>
+
+            <p>
+                <a
+                    href="https://www.doe.gov.my/en/api-2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Consulter l’indice de pollution atmosphérique (API)
+                    de Malaisie →
+                </a>
+            </p>
+
+            <div class="callout">
+                <strong>À retenir :</strong> planter des arbres est un
+                investissement environnemental à long terme. Lorsqu’un
+                épisode de brume sèche est en cours, réduire les émissions
+                de fumée et protéger les personnes contre l’exposition
+                sont des priorités plus immédiates.
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌱 Planter le bon arbre au bon endroit</h2>
+
+            <p>
+                La réussite d’un projet de plantation ne dépend pas
+                uniquement du nombre de jeunes plants. Choisissez des
+                espèces adaptées aux conditions locales, évitez
+                d’endommager les habitats naturels et prévoyez l’arrosage
+                ainsi que l’entretien des jeunes arbres. La protection
+                des arbres matures et des forêts existantes est également
+                importante.
+            </p>
+
+            <p>
+                Ce calculateur est un outil simple de planification.
+                Il ne prédit ni la survie des arbres à long terme,
+                ni la quantité de carbone retirée de l’atmosphère,
+                ni la réduction de la brume sèche.
+            </p>
+
+        </section>
+
+    </div>
+
+    <p>
+        <a href="tools/tree-calculator.html">
+            ← Découvrir un calculateur de compensation carbone par les arbres
+        </a>
+    </p>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <p>
+            <strong>Yangocean</strong> · Pleine conscience, nature
+            et durabilité au quotidien
+        </p>
+
+        <p>
+            Cette page fournit des informations générales sur
+            l’environnement et ne constitue pas un conseil médical
+            ni des instructions d’urgence. En période de brume sèche,
+            suivez les recommandations officielles en vigueur.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+(function () {
+
+    const targetInput = document.getElementById("targetTrees");
+    const survivalSelect = document.getElementById("survivalRate");
+    const result = document.getElementById("treeResult");
+
+    function calculateTreeTarget() {
+
+        const rawTarget = targetInput.value.trim();
+        const target = Number(rawTarget);
+        const survival = Number(survivalSelect.value);
+
+        if (
+            rawTarget === "" ||
+            !Number.isSafeInteger(target) ||
+            target < 1 ||
+            target > 1000000
+        ) {
+
+            result.replaceChildren();
+
+            const message = document.createElement("p");
+
+            message.textContent =
+                "Veuillez saisir un nombre entier compris entre 1 et 1 000 000.";
+
+            result.appendChild(message);
+            targetInput.focus();
+
+            return;
+        }
+
+        if (
+            !Number.isFinite(survival) ||
+            survival <= 0 ||
+            survival > 1
+        ) {
+
+            result.textContent =
+                "Veuillez sélectionner un taux de survie valide.";
+
+            survivalSelect.focus();
+
+            return;
+        }
+
+        const seedlings = Math.ceil(target / survival);
+
+        result.replaceChildren();
+
+        const heading = document.createElement("p");
+        const strong = document.createElement("strong");
+
+        strong.textContent =
+            "Nombre estimé de jeunes plants à planter : " +
+            seedlings.toLocaleString("fr-FR");
+
+        heading.appendChild(strong);
+        result.appendChild(heading);
+
+        const details = document.createElement("p");
+
+        details.textContent =
+            "Objectif d’arbres établis : " +
+            target.toLocaleString("fr-FR") +
+            ". Taux de survie estimé : " +
+            (survival * 100) +
+            " %.";
+
+        result.appendChild(details);
+
+        const note = document.createElement("p");
+
+        note.textContent =
+            "Il s’agit uniquement d’une estimation de planification. " +
+            "La survie réelle peut varier et ce nombre ne représente pas " +
+            "le nombre d’arbres nécessaires pour lutter contre la brume sèche.";
+
+        result.appendChild(note);
+    }
+
+    document
+        .getElementById("calculateButton")
+        .addEventListener("click", calculateTreeTarget);
+
+    document
+        .getElementById("resetButton")
+        .addEventListener("click", function () {
+
+            targetInput.value = "100";
+            survivalSelect.value = "0.7";
+
+            result.replaceChildren();
+
+            const strong = document.createElement("strong");
+
+            strong.textContent = "Votre estimation apparaîtra ici.";
+
+            result.appendChild(strong);
+
+            const example = document.createElement("p");
+
+            example.textContent =
+                "Exemple : pour obtenir 100 arbres établis avec " +
+                "un taux de survie estimé de 70 %, il faudrait " +
+                "planter environ 143 jeunes plants.";
+
+            result.appendChild(example);
+        });
+
+    let utterance = null;
+
+    const readButton = document.getElementById("readButton");
+    const pauseButton = document.getElementById("pauseButton");
+    const stopButton = document.getElementById("stopButton");
+
+    function getSpeechText() {
+
+        const content = document.getElementById("content-to-read");
+
+        return content.innerText.replace(/\s+/g, " ").trim();
+    }
+
+    readButton.addEventListener("click", function () {
+
+        if (
+            !("speechSynthesis" in window) ||
+            !("SpeechSynthesisUtterance" in window)
+        ) {
+
+            alert(
+                "La lecture à voix haute n’est pas prise en charge " +
+                "par ce navigateur. Essayez un navigateur récent ou " +
+                "le lecteur d’accessibilité de votre appareil."
+            );
+
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        utterance = new SpeechSynthesisUtterance(getSpeechText());
+        utterance.lang = "fr-FR";
+        utterance.rate = 0.95;
+
+        window.speechSynthesis.speak(utterance);
+    });
+
+    pauseButton.addEventListener("click", function () {
+
+        if (
+            "speechSynthesis" in window &&
+            window.speechSynthesis.speaking
+        ) {
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            } else {
+                window.speechSynthesis.pause();
+            }
+        }
+    });
+
+    stopButton.addEventListener("click", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+            utterance = null;
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
+
+})();
+</script>
+
+</body>
+</html>
+
