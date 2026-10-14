@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>သစ်ပင်နှင့် မြူခိုးညစ်ညမ်းမှု ကိရိယာ | Yangocean</title>
+
+<meta name="description" content="သစ်ပင်စိုက်ပျိုးရေး ရည်မှန်းချက်များကို စီစဉ်ပြီး သစ်ပင်များ၏ ပတ်ဝန်းကျင်အကျိုးကျေးဇူးများနှင့် မလေးရှားနိုင်ငံတွင် မြူခိုးညစ်ညမ်းမှု ဖြစ်ပွားချိန် လိုက်နာသင့်သည့် လမ်းညွှန်ချက်များကို လေ့လာပါ။">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/my/tree-haze-tool.html">
+
+<style>
+:root {
+    --green: #315c3a;
+    --green-dark: #24472c;
+    --green-soft: #edf5ed;
+    --text: #263329;
+    --muted: #5c6a5e;
+    --border: #dce7dc;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #f7faf7;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+a {
+    color: var(--green);
+}
+
+a:hover {
+    color: var(--green-dark);
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 8px;
+    background: white;
+    padding: 10px 14px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 8px;
+}
+
+.site-header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.header-inner,
+main,
+.site-footer-inner {
+    width: min(1100px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.header-inner {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    color: var(--green-dark);
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+}
+
+nav {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: .95rem;
+}
+
+.hero {
+    margin: 28px 0 22px;
+    padding: clamp(26px, 5vw, 54px);
+    border-radius: 18px;
+    background: linear-gradient(135deg, #eaf4e9, #f7faf7 70%);
+    border: 1px solid var(--border);
+}
+
+.eyebrow {
+    color: var(--green);
+    font-weight: 700;
+    letter-spacing: .02em;
+    font-size: .9rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--green-dark);
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 8px 0 12px;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+main {
+    padding-bottom: 38px;
+}
+
+section {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+.tool-card {
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fcfefc;
+}
+
+.tool-card h3 {
+    margin-top: 0;
+}
+
+.form-field {
+    margin: 18px 0;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+input,
+select {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    padding: 12px;
+    border: 1px solid #aabbaa;
+    border-radius: 8px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+}
+
+input:focus,
+select:focus,
+button:focus,
+a:focus {
+    outline: 3px solid #a7d2a8;
+    outline-offset: 2px;
+}
+
+button {
+    border: 0;
+    border-radius: 8px;
+    padding: 12px 18px;
+    background: var(--green);
+    color: white;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--green-dark);
+}
+
+.secondary-button {
+    background: #e8f0e8;
+    color: var(--green-dark);
+    border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+    background: #dceadc;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 18px;
+    border-radius: 10px;
+    background: var(--green-soft);
+    border: 1px solid var(--border);
+    overflow-wrap: anywhere;
+}
+
+.result p:last-child {
+    margin-bottom: 0;
+}
+
+.note {
+    color: var(--muted);
+    font-size: .94rem;
+}
+
+.callout {
+    padding: 16px 18px;
+    background: #f5f7ee;
+    border-left: 4px solid #8a9d54;
+    border-radius: 8px;
+}
+
+ul {
+    padding-left: 1.4rem;
+}
+
+li {
+    margin: 7px 0;
+}
+
+.action-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+}
+
+.site-footer {
+    background: #edf4ed;
+    border-top: 1px solid var(--border);
+}
+
+.site-footer-inner {
+    padding: 24px 0;
+    color: var(--muted);
+    font-size: .93rem;
+}
+
+.read-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.read-controls button {
+    padding: 8px 12px;
+    font-size: .92rem;
+}
+
+@media (max-width: 600px) {
+    .header-inner,
+    main,
+    .site-footer-inner {
+        width: min(100% - 24px, 1100px);
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    .hero {
+        margin-top: 14px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
+
+@media print {
+    .read-controls,
+    .site-header nav,
+    .action-row,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    section,
+    .hero {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<a class="skip-link" href="#main-content">အဓိကအကြောင်းအရာသို့ ကျော်သွားရန်</a>
+
+<header class="site-header">
+    <div class="header-inner">
+
+        <a class="brand" href="index.html" aria-label="Yangocean ပင်မစာမျက်နှာ">
+            Yangocean
+        </a>
+
+        <nav aria-label="ပင်မလမ်းညွှန်">
+            <a href="index.html">ပင်မစာမျက်နှာ</a>
+            <a href="sustainable-living.html">ရေရှည်တည်တံ့သော လူနေမှုဘဝ</a>
+            <a href="blog.html">ဆောင်းပါးများ</a>
+        </nav>
+
+    </div>
+</header>
+
+<main id="main-content">
+
+    <div class="hero">
+
+        <p class="eyebrow">Yangocean · ပတ်ဝန်းကျင်ထိန်းသိမ်းရေး ကိရိယာများ</p>
+
+        <h1>🌳 သစ်ပင်နှင့် မြူခိုးညစ်ညမ်းမှု ကိရိယာ</h1>
+
+        <p>
+            သစ်ပင်များက ပိုမိုကျန်းမာသော ပတ်ဝန်းကျင်ကို
+            မည်သို့အထောက်အကူပြုကြောင်း လေ့လာပါ။
+            သစ်ပင်စိုက်ပျိုးရေး ရည်မှန်းချက်ကို စီစဉ်ပြီး
+            မလေးရှားနိုင်ငံတွင် မြူခိုးညစ်ညမ်းမှု ဖြစ်ပွားချိန်
+            သတိပြုလိုက်နာသင့်သည့် အချက်များကို သိရှိပါ။
+        </p>
+
+        <p>
+            <a href="sustainable-living.html">
+                ← ရေရှည်တည်တံ့သော လူနေမှုဘဝသို့ ပြန်သွားရန်
+            </a>
+        </p>
+
+        <div class="read-controls" aria-label="အသံဖြင့် ဖတ်ရှုခြင်း ထိန်းချုပ်မှုများ">
+
+            <button type="button" id="readButton">
+                🔊 အသံဖြင့် ဖတ်ရန်
+            </button>
+
+            <button type="button" id="pauseButton" class="secondary-button">
+                ⏸ ခေတ္တရပ်ရန်
+            </button>
+
+            <button type="button" id="stopButton" class="secondary-button">
+                ⏹ ရပ်ရန်
+            </button>
+
+        </div>
+
+        <p class="note">
+            အသံဖြင့် ဖတ်ရှုခြင်းသည် သင့်ဘရောက်ဇာ၏ အသံစနစ်ကို အသုံးပြုပါသည်။
+            ရရှိနိုင်သော အသံနှင့် ဘာသာစကားများသည် သင့်စက်ပေါ်တွင်
+            ပံ့ပိုးထားမှုအပေါ် မူတည်ပါသည်။
+        </p>
+
+    </div>
+
+    <div id="content-to-read">
+
+        <section id="tree-haze-tool">
+
+            <h2>🌫️ သစ်ပင်များက မြူခိုးညစ်ညမ်းမှုကို လျှော့ချရာတွင် ကူညီနိုင်ပါသလား။</h2>
+
+            <p>
+                သစ်ပင်များသည် ဇီဝမျိုးစုံမျိုးကွဲများကို ထောက်ပံ့ပေးပြီး
+                အရိပ်ပေးနိုင်သည့်အပြင် လေထဲရှိ အမှုန်အမွှားအချို့ကိုလည်း
+                ဖမ်းယူနိုင်ပါသည်။ သို့သော် သစ်တောမီးလောင်မှု၊
+                သစ်ဆွေးမြေမီးလောင်မှုနှင့် အခြားညစ်ညမ်းမှုများကြောင့်
+                ဖြစ်ပေါ်သော မြူခိုးညစ်ညမ်းမှုကို သစ်ပင်အရေအတွက်
+                တစ်ခုတည်းဖြင့် ဖယ်ရှား၍ မရနိုင်ပါ။
+            </p>
+
+            <p>
+                ဤတွက်ချက်ကိရိယာသည် သစ်ပင်စိုက်ပျိုးရေး ရည်မှန်းချက်ကို
+                စီစဉ်ရာတွင် ကူညီပေးပါသည်။
+                မြူခိုးညစ်ညမ်းမှုကို ဖယ်ရှားရန် သစ်ပင်မည်မျှလိုအပ်ကြောင်း
+                တွက်ချက်ပေးသည့် ကိရိယာ မဟုတ်ပါ။
+            </p>
+
+            <div class="tool-card">
+
+                <h3>🌱 သစ်ပင်စိုက်ပျိုးရေး ရည်မှန်းချက်ကို စီစဉ်ပါ</h3>
+
+                <p>
+                    နောက်ဆုံးတွင် ရှင်သန်ကြီးထွားစေလိုသော သစ်ပင်အရေအတွက်ကို
+                    ထည့်သွင်းပါ။ ထို့နောက် ပျိုးပင်များ၏ ခန့်မှန်းရှင်သန်နှုန်းကို
+                    ရွေးချယ်ပြီး စိုက်ပျိုးရန် လိုအပ်နိုင်သည့် ပျိုးပင်အရေအတွက်ကို
+                    တွက်ချက်ပါ။
+                </p>
+
+                <div class="form-field">
+
+                    <label for="targetTrees">
+                        နောက်ဆုံးတွင် ရှင်သန်ကြီးထွားစေလိုသော သစ်ပင်အရေအတွက်
+                    </label>
+
+                    <input
+                        type="number"
+                        id="targetTrees"
+                        min="1"
+                        max="1000000"
+                        step="1"
+                        value="100"
+                        inputmode="numeric"
+                    >
+
+                </div>
+
+                <div class="form-field">
+
+                    <label for="survivalRate">
+                        ပျိုးပင်များ၏ ခန့်မှန်းရှင်သန်နှုန်း
+                    </label>
+
+                    <select id="survivalRate">
+                        <option value="0.5">50%</option>
+                        <option value="0.6">60%</option>
+                        <option value="0.7" selected>
+                            70% — ဥပမာအတွက် ခန့်မှန်းနှုန်း
+                        </option>
+                        <option value="0.8">80%</option>
+                        <option value="0.9">90%</option>
+                    </select>
+
+                </div>
+
+                <p class="note">
+                    ရွေးချယ်ထားသော ရှင်သန်နှုန်းသည် ခန့်မှန်းချက်သာဖြစ်ပြီး
+                    အာမခံချက် မဟုတ်ပါ။ အမှန်တကယ် ရှင်သန်နှုန်းသည်
+                    သစ်ပင်မျိုးစိတ်၊ နေရာဒေသ၊ ရာသီဥတု၊ စိုက်ပျိုးမှုအခြေအနေနှင့်
+                    ဆက်လက်ပြုစုစောင့်ရှောက်မှုတို့အပေါ် မူတည်ပါသည်။
+                </p>
+
+                <div class="action-row">
+
+                    <button type="button" id="calculateButton">
+                        လိုအပ်သော ပျိုးပင်အရေအတွက်ကို တွက်ချက်ရန်
+                    </button>
+
+                    <button
+                        type="button"
+                        id="resetButton"
+                        class="secondary-button"
+                    >
+                        ပြန်လည်သတ်မှတ်ရန်
+                    </button>
+
+                </div>
+
+                <div
+                    id="treeResult"
+                    class="result"
+                    aria-live="polite"
+                    aria-atomic="true"
+                >
+                    <strong>သင့်တွက်ချက်မှုရလဒ်ကို ဤနေရာတွင် ဖော်ပြပါမည်။</strong>
+
+                    <p>
+                        ဥပမာ - နောက်ဆုံးတွင် ရှင်သန်ကြီးထွားစေလိုသော သစ်ပင် 100 ပင်ရှိပြီး
+                        ပျိုးပင်ရှင်သန်နှုန်းကို 70% ဟု ခန့်မှန်းပါက
+                        ပျိုးပင် 143 ပင်ခန့် စိုက်ပျိုးရန် လိုအပ်ပါသည်။
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌿 မြူခိုးညစ်ညမ်းမှု ဖြစ်ပွားချိန်တွင် ဘာလုပ်နိုင်ပါသလဲ။</h2>
+
+            <ul>
+                <li>
+                    မလေးရှားနိုင်ငံ၏ တရားဝင် လေထုညစ်ညမ်းမှုညွှန်းကိန်း (IPU) ကို စစ်ဆေးပါ။
+                </li>
+
+                <li>
+                    ပြည်သူ့ကျန်းမာရေးဆိုင်ရာ အကြံပြုချက်များကို လိုက်နာပြီး
+                    လိုအပ်ပါက အပြင်ဘက်တွင် နေထိုင်ချိန်ကို လျှော့ချပါ။
+                </li>
+
+                <li>
+                    အပြင်တွင် မီးရှို့ခြင်းကို ရှောင်ကြဉ်ပြီး မီးလောင်မှုကာကွယ်ရေး
+                    လုပ်ငန်းများကို အားပေးပါ။
+                </li>
+
+                <li>
+                    လက်ရှိရှိနေသော သစ်တောများနှင့် သစ်ဆွေးမြေများကို ကာကွယ်ပါ။
+                </li>
+
+                <li>
+                    သင့်တော်သော နေရာတွင် သင့်တော်သော သစ်ပင်မျိုးစိတ်များကို စိုက်ပျိုးပြီး
+                    ကြီးထွားလာသည်အထိ ပြုစုစောင့်ရှောက်ပါ။
+                </li>
+            </ul>
+
+            <p>
+                <a
+                    href="https://www.doe.gov.my/en/api-2/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    မလေးရှားနိုင်ငံ၏ လေထုညစ်ညမ်းမှုညွှန်းကိန်း (IPU) ကို စစ်ဆေးရန် →
+                </a>
+            </p>
+
+            <div class="callout">
+                <strong>သတိပြုရန် -</strong>
+                သစ်ပင်စိုက်ပျိုးခြင်းသည် ရေရှည်ပတ်ဝန်းကျင်ထိန်းသိမ်းရေး
+                ရင်းနှီးမြှုပ်နှံမှုတစ်ခု ဖြစ်ပါသည်။
+                မြူခိုးညစ်ညမ်းမှု ဖြစ်ပွားနေချိန်တွင်မူ
+                မီးခိုးထုတ်လွှတ်မှုကို လျှော့ချခြင်းနှင့်
+                လူများအား မြူခိုးညစ်ညမ်းမှု၏ သက်ရောက်မှုမှ ကာကွယ်ခြင်းတို့သည်
+                ပိုမိုအရေးပေါ် လုပ်ဆောင်ရမည့် အချက်များဖြစ်ပါသည်။
+            </div>
+
+        </section>
+
+        <section>
+
+            <h2>🌱 သင့်တော်သောနေရာတွင် သင့်တော်သောသစ်ပင်ကို စိုက်ပျိုးပါ</h2>
+
+            <p>
+                သစ်ပင်စိုက်ပျိုးမှု အောင်မြင်ခြင်းသည် ပျိုးပင်အရေအတွက်ပေါ်တွင်သာ
+                မူတည်ခြင်း မဟုတ်ပါ။ ဒေသနှင့် ကိုက်ညီသော သစ်ပင်မျိုးစိတ်များကို
+                ရွေးချယ်ပါ။ သဘာဝနေထိုင်ရာဒေသများကို မထိခိုက်စေရန် ဂရုပြုပါ။
+                သစ်ပင်ငယ်များကို ရေလောင်းခြင်းနှင့် ဆက်လက်ပြုစုစောင့်ရှောက်ခြင်းအတွက်
+                အစီအစဉ်တစ်ခု ပြုလုပ်ပါ။ အရွယ်ရောက်ပြီးသော သစ်ပင်များနှင့်
+                ရှိပြီးသားသစ်တောများကို ကာကွယ်ခြင်းသည်လည်း အရေးကြီးပါသည်။
+            </p>
+
+            <p>
+                ဤတွက်ချက်ကိရိယာသည် ရိုးရှင်းသော စီမံကိန်းရေးဆွဲရေး
+                အထောက်အကူတစ်ခုသာဖြစ်ပါသည်။ သစ်ပင်များ၏ ရေရှည်ရှင်သန်မှု၊
+                ကာဗွန်ဖယ်ရှားနိုင်မှုပမာဏ သို့မဟုတ် မြူခိုးညစ်ညမ်းမှု လျော့နည်းမှုကို
+                ခန့်မှန်းပေးသည့် ကိရိယာ မဟုတ်ပါ။
+            </p>
+
+        </section>
+
+    </div>
+
+    <p>
+        <a href="tools/tree-calculator.html">
+            ← သစ်ပင်ကာဗွန်လျှော့ချမှု တွက်ချက်ကိရိယာကို လေ့လာရန်
+        </a>
+    </p>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="site-footer-inner">
+
+        <p>
+            <strong>Yangocean</strong> · သတိရှိစွာ နေထိုင်ခြင်း၊ သဘာဝနှင့်
+            နေ့စဉ်ရေရှည်တည်တံ့မှု
+        </p>
+
+        <p>
+            ဤစာမျက်နှာသည် ပတ်ဝန်းကျင်ဆိုင်ရာ အထွေထွေအချက်အလက်များကိုသာ
+            ပေးထားခြင်းဖြစ်ပြီး အရေးပေါ်အခြေအနေ သို့မဟုတ် ဆေးဘက်ဆိုင်ရာ
+            အကြံဉာဏ် မဟုတ်ပါ။ မြူခိုးညစ်ညမ်းမှု ဖြစ်ပွားချိန်တွင်
+            လက်ရှိတရားဝင် လမ်းညွှန်ချက်များကို လိုက်နာပါ။
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+(function () {
+
+    const targetInput = document.getElementById("targetTrees");
+    const survivalSelect = document.getElementById("survivalRate");
+    const result = document.getElementById("treeResult");
+
+    function calculateTreeTarget() {
+
+        const rawTarget = targetInput.value.trim();
+        const target = Number(rawTarget);
+        const survival = Number(survivalSelect.value);
+
+        if (
+            rawTarget === "" ||
+            !Number.isSafeInteger(target) ||
+            target < 1 ||
+            target > 1000000
+        ) {
+
+            result.replaceChildren();
+
+            const message = document.createElement("p");
+
+            message.textContent =
+                "ကျေးဇူးပြု၍ 1 မှ 1,000,000 အတွင်းရှိ ကိန်းပြည့်တစ်ခုကို ထည့်သွင်းပါ။";
+
+            result.appendChild(message);
+            targetInput.focus();
+
+            return;
+        }
+
+        if (
+            !Number.isFinite(survival) ||
+            survival <= 0 ||
+            survival > 1
+        ) {
+
+            result.textContent =
+                "ကျေးဇူးပြု၍ မှန်ကန်သော ရှင်သန်နှုန်းတစ်ခုကို ရွေးချယ်ပါ။";
+
+            survivalSelect.focus();
+
+            return;
+        }
+
+        const seedlings = Math.ceil(target / survival);
+
+        result.replaceChildren();
+
+        const heading = document.createElement("p");
+        const strong = document.createElement("strong");
+
+        strong.textContent =
+            "စိုက်ပျိုးရန် ခန့်မှန်းလိုအပ်သော ပျိုးပင်အရေအတွက် - " +
+            seedlings.toLocaleString("en-US");
+
+        heading.appendChild(strong);
+        result.appendChild(heading);
+
+        const details = document.createElement("p");
+
+        details.textContent =
+            "ရည်မှန်းထားသော ရှင်သန်ကြီးထွားသည့် သစ်ပင်အရေအတွက် - " +
+            target.toLocaleString("en-US") +
+            " ပင်။ ခန့်မှန်းထားသော ရှင်သန်နှုန်း - " +
+            (survival * 100) +
+            "%။";
+
+        result.appendChild(details);
+
+        const note = document.createElement("p");
+
+        note.textContent =
+            "ဤသည်မှာ စီမံကိန်းရေးဆွဲရန်အတွက် ခန့်မှန်းချက်သာဖြစ်ပါသည်။ " +
+            "အမှန်တကယ် ရှင်သန်နှုန်းသည် ကွာခြားနိုင်ပြီး " +
+            "ဤအရေအတွက်သည် မြူခိုးညစ်ညမ်းမှုကို ဖယ်ရှားရန် လိုအပ်သော သစ်ပင်အရေအတွက်ကို မဆိုလိုပါ။";
+
+        result.appendChild(note);
+    }
+
+    document
+        .getElementById("calculateButton")
+        .addEventListener("click", calculateTreeTarget);
+
+    document
+        .getElementById("resetButton")
+        .addEventListener("click", function () {
+
+            targetInput.value = "100";
+            survivalSelect.value = "0.7";
+
+            result.replaceChildren();
+
+            const strong = document.createElement("strong");
+
+            strong.textContent =
+                "သင့်တွက်ချက်မှုရလဒ်ကို ဤနေရာတွင် ဖော်ပြပါမည်။";
+
+            result.appendChild(strong);
+
+            const example = document.createElement("p");
+
+            example.textContent =
+                "ဥပမာ - နောက်ဆုံးတွင် ရှင်သန်ကြီးထွားစေလိုသော သစ်ပင် 100 ပင်ရှိပြီး " +
+                "ပျိုးပင်ရှင်သန်နှုန်းကို 70% ဟု ခန့်မှန်းပါက " +
+                "ပျိုးပင် 143 ပင်ခန့် စိုက်ပျိုးရန် လိုအပ်ပါသည်။";
+
+            result.appendChild(example);
+        });
+
+    let utterance = null;
+
+    const readButton = document.getElementById("readButton");
+    const pauseButton = document.getElementById("pauseButton");
+    const stopButton = document.getElementById("stopButton");
+
+    function getSpeechText() {
+
+        const content = document.getElementById("content-to-read");
+
+        return content.innerText.replace(/\s+/g, " ").trim();
+    }
+
+    readButton.addEventListener("click", function () {
+
+        if (
+            !("speechSynthesis" in window) ||
+            !("SpeechSynthesisUtterance" in window)
+        ) {
+
+            alert(
+                "ဤဘရောက်ဇာတွင် အသံဖြင့် ဖတ်ရှုခြင်းကို မပံ့ပိုးပါ။ " +
+                "ပိုမိုခေတ်မီသော ဘရောက်ဇာ သို့မဟုတ် သင့်စက်၏ ဖတ်ရှုနိုင်စွမ်း အထောက်အကူပြုစနစ်ကို အသုံးပြုကြည့်ပါ။"
+            );
+
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        utterance = new SpeechSynthesisUtterance(getSpeechText());
+        utterance.lang = "my-MM";
+        utterance.rate = 0.95;
+
+        window.speechSynthesis.speak(utterance);
+    });
+
+    pauseButton.addEventListener("click", function () {
+
+        if (
+            "speechSynthesis" in window &&
+            window.speechSynthesis.speaking
+        ) {
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+            } else {
+                window.speechSynthesis.pause();
+            }
+        }
+    });
+
+    stopButton.addEventListener("click", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+            utterance = null;
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
+
+})();
+</script>
+
+</body>
+</html>
+
