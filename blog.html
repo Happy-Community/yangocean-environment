@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 
-<title>Journal | Mindful Living, Nature &amp; Everyday Reflections | Yangocean</title>
+<title>Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Read reflections and observations about mindful living, nature, sustainability, mindful eating and simple everyday experiences.">
+content="Explore Yangocean Journal for reflections on mindful living, nature, sustainability, mindful eating, growing plants and everyday experiences.">
 
 <meta name="robots" content="index, follow">
 
@@ -23,15 +23,14 @@ content="Read reflections and observations about mindful living, nature, sustain
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
 <meta property="og:title"
-content="Journal | Mindful Living, Nature &amp; Everyday Reflections">
+content="Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections">
 
 <meta property="og:description"
-content="Reflections and observations about mindful living, nature, sustainability and everyday experiences.">
+content="Reflections and practical observations about mindful living, nature, sustainability, growing plants and everyday experiences.">
 
 <meta property="og:type" content="website">
 
-<meta property="og:url"
-content="https://yangocean.com/blog.html">
+<meta property="og:url" content="https://yangocean.com/blog.html">
 
 <meta property="og:image"
 content="https://yangocean.com/images/yangocean-og.jpg">
@@ -39,10 +38,10 @@ content="https://yangocean.com/images/yangocean-og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 
 <meta name="twitter:title"
-content="Journal | Mindful Living, Nature &amp; Everyday Reflections">
+content="Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections">
 
 <meta name="twitter:description"
-content="Reflections and observations about mindful living, nature, sustainability and everyday experiences.">
+content="Discover reflections on mindful living, nature, sustainability and everyday experiences.">
 
 <meta name="twitter:image"
 content="https://yangocean.com/images/yangocean-og.jpg">
@@ -154,7 +153,8 @@ nav a:hover,
     background: #f1f6f1;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
@@ -174,7 +174,7 @@ nav a:hover,
     color: #2f6b3f;
 }
 
-/* MAIN */
+/* MAIN CONTENT */
 
 main {
     max-width: 1100px;
@@ -195,7 +195,7 @@ main {
 
 .hero p {
     max-width: 760px;
-    margin: auto;
+    margin: 0 auto 14px;
     color: #555;
     font-size: 1.05rem;
 }
@@ -223,7 +223,7 @@ main {
 
 .journal-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -261,7 +261,7 @@ main {
 
 .guides-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
@@ -338,7 +338,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE LAYOUT */
 
 @media (max-width: 850px) {
     .header-inner {
@@ -357,6 +357,10 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
+    .hero {
+        padding: 35px 10px;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
@@ -372,6 +376,11 @@ footer a:hover {
         border: 1px solid #eee;
         margin-top: 8px;
     }
+
+    .language {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 </style>
 </head>
@@ -381,245 +390,294 @@ footer a:hover {
 <!-- HEADER -->
 
 <header>
-<div class="header-inner">
+    <div class="header-inner">
 
-<div>
-<a href="/" class="logo">Yangocean</a>
+        <div>
+            <a href="/" class="logo">Yangocean</a>
 
-<div class="tagline">
-Mindful Living • Nature • Sustainability
-</div>
-</div>
+            <div class="tagline">
+                Mindful Living • Nature • Sustainability
+            </div>
+        </div>
 
-<nav>
-<a href="/">Home</a>
+        <nav aria-label="Main navigation">
 
-<div class="dropdown">
-<button class="dropbtn">🌿 Mindful Living ▾</button>
-<div class="dropdown-content">
-<a href="/mindfulness.html">🧘 Mindfulness &amp; Dhamma</a>
-<a href="/mindful-eating.html">🥗 Mindful Eating</a>
-<a href="/sustainable-living.html">♻️ Sustainable Living</a>
-</div>
-</div>
+            <a href="/">Home</a>
 
-<div class="dropdown">
-<button class="dropbtn">🌳 Nature Connection ▾</button>
-<div class="dropdown-content">
-<a href="/nature-connection.html">🌳 Nature Connection</a>
-<a href="/eco.html">🌍 Environmental Awareness</a>
-<a href="/blog.html">📝 Journal</a>
-</div>
-</div>
+            <div class="dropdown">
+                <button class="dropbtn" type="button">
+                    🌿 Mindful Living ▾
+                </button>
 
-<div class="dropdown">
-<button class="dropbtn">📱 Related Apps ▾</button>
-<div class="dropdown-content">
-<a href="/apps.html">📱 All Related Apps</a>
-<a href="/apps.html#eft">🌿 Yangocean App</a>
-<a href="/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
-<a href="/apps.html#duidui-fit">🏃 DuoFit</a>
-</div>
-</div>
+                <div class="dropdown-content">
+                    <a href="/mindfulness.html">
+                        🧘 Mindfulness &amp; Dhamma
+                    </a>
 
-<div class="language">
-<a href="/">EN</a>
-<a href="/ms/">BM</a>
-<a href="/zh/">中文</a>
-<a href="/fr/">FR</a>
-<a href="/es/">ES</a>
-<a href="/my/">မြန်မာ</a>
-</div>
-</nav>
+                    <a href="/mindful-eating.html">
+                        🥗 Mindful Eating
+                    </a>
 
-</div>
+                    <a href="/sustainable-living.html">
+                        ♻️ Sustainable Living
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button">
+                    🌳 Nature Connection ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/nature-connection.html">
+                        🌳 Nature Connection
+                    </a>
+
+                    <!-- Keep this link because eco.html still exists -->
+                    <a href="/eco.html">
+                        🌍 Environmental Awareness
+                    </a>
+
+                    <a href="/blog.html">
+                        📝 Journal
+                    </a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn" type="button">
+                    📱 Related Apps ▾
+                </button>
+
+                <div class="dropdown-content">
+                    <a href="/apps.html">
+                        📱 All Related Apps
+                    </a>
+
+                    <a href="/apps.html#eft">
+                        🌿 Yangocean App
+                    </a>
+
+                    <a href="/apps.html#healthy-body">
+                        ❤️ QuQu Healthy Body
+                    </a>
+
+                    <a href="/apps.html#duidui-fit">
+                        🏃 DuoFit
+                    </a>
+                </div>
+            </div>
+
+            <div class="language" aria-label="Language selection">
+                <a href="/">EN</a>
+                <a href="/ms/">BM</a>
+                <a href="/zh/">中文</a>
+                <a href="/fr/">FR</a>
+                <a href="/es/">ES</a>
+                <a href="/my/">မြန်မာ</a>
+            </div>
+
+        </nav>
+    </div>
 </header>
 
 <!-- MAIN CONTENT -->
 
 <main id="content-to-read">
 
-<section class="hero">
-<h1>📝 Journal</h1>
+    <!-- JOURNAL INTRODUCTION -->
 
-<p>
-Reflections, observations and simple stories about mindful living,
-nature, sustainability and everyday experiences.
-</p>
+    <section class="hero">
+        <h1>📝 Journal</h1>
 
-<p>
-Some entries begin with an ordinary observation and lead to a
-thought about how we live, eat, notice and connect with the world
-around us.
-</p>
-</section>
+        <p>
+            Reflections, observations and simple stories about mindful
+            living, nature, sustainability and everyday experiences.
+        </p>
 
-<section class="section">
-<h2>About the Journal</h2>
+        <p>
+            Some entries begin with an ordinary observation and lead
+            to a thought about how we live, eat, notice and connect
+            with the world around us.
+        </p>
+    </section>
 
-<p class="section-intro">
-The Journal brings together longer reflections and observations
-that do not fit neatly into a single topic. Some explore nature
-and the environment, while others look at everyday wellbeing,
-mindful living and simple experiences.
-</p>
-</section>
+    <!-- ABOUT THE JOURNAL -->
 
-<section class="section">
-<h2>🌿 Latest Journal Entries</h2>
+    <section class="section">
+        <h2>About the Journal</h2>
 
-<p class="section-intro">
-Recent reflections and observations from everyday life.
-</p>
+        <p class="section-intro">
+            The Journal brings together longer reflections and
+            observations that do not fit neatly into a single topic.
+            Some explore nature and the environment, while others
+            look at everyday wellbeing, mindful living and simple
+            experiences.
+        </p>
+    </section>
 
-<div class="journal-grid">
+    <!-- LATEST JOURNAL ENTRIES -->
 
-<div class="journal-card">
-<h3>🌿 Wellness &amp; Sustainability</h3>
+    <section class="section">
+        <h2>🌿 Latest Journal Entries</h2>
 
-<p>
-A reflection on the relationship between personal wellbeing,
-everyday choices and the environment around us.
-</p>
+        <p class="section-intro">
+            Recent reflections, practical observations and stories
+            from everyday life.
+        </p>
 
-<a href="/blog/wellness-and-sustainability.html">
-Read the Reflection →
-</a>
-</div>
+        <div class="journal-grid">
 
-<div class="journal-card">
-<h3>🌳 Why Trees Matter</h3>
+            <div class="journal-card">
+                <h3>🌿 Wellness &amp; Sustainability</h3>
 
-<p>
-A closer look at trees, their living environment and the small
-details that can change the way we notice them.
-</p>
+                <p>
+                    A reflection on the relationship between personal
+                    wellbeing, everyday choices and the environment
+                    around us.
+                </p>
 
-<a href="/blog/why-trees-matter.html">
-Read the Journal →
-</a>
-</div>
+                <a href="/blog/wellness-and-sustainability.html">
+                    Read the Reflection →
+                </a>
+            </div>
 
-<!-- NEW JOURNAL ENTRY -->
+            <div class="journal-card">
+                <h3>🌳 Why Trees Matter</h3>
 
-<div class="journal-card">
-<h3>🙏🌿 A Moment of Mindfulness and Appreciation</h3>
+                <p>
+                    A closer look at trees, their living environment
+                    and the small details that can change the way
+                    we notice them.
+                </p>
 
-<p>
-A quiet encounter with a monitor lizard at a monastery becomes
-a reflection on mindfulness, gratitude and loving-kindness
-towards all living beings.
-</p>
+                <a href="/blog/why-trees-matter.html">
+                    Read the Journal →
+                </a>
+            </div>
 
-<a href="/blog/a-moment-of-mindfulness-and-appreciation.html">
-Read the Reflection →
-</a>
-</div>
+            <div class="journal-card">
+                <h3>🙏🌿 A Moment of Mindfulness and Appreciation</h3>
 
+                <p>
+                    A quiet encounter with a monitor lizard at a
+                    monastery becomes a reflection on mindfulness,
+                    gratitude and loving-kindness towards all
+                    living beings.
+                </p>
 
+                <a href="/blog/a-moment-of-mindfulness-and-appreciation.html">
+                    Read the Reflection →
+                </a>
+            </div>
 
+            <div class="journal-card">
+                <h3>🔥 How to Prevent Forest Fires</h3>
 
-<!-- FOREST FIRE PREVENTION ARTICLE -->
+                <p>
+                    Discover practical ways to reduce wildfire risks,
+                    protect forests and wildlife, and explore
+                    international sources of fire information and
+                    historical data.
+                </p>
 
-<div class="journal-card">
-    <h3>🔥 How to Prevent Forest Fires</h3>
+                <a href="/blog/how-to-prevent-forest-fires.html">
+                    Read the Article →
+                </a>
+            </div>
 
-    <p>
-        Learn practical ways to reduce forest-fire risks,
-        protect wildlife and forests, and explore reliable
-        sources of forest-fire statistics and historical data.
-    </p>
+        </div>
+    </section>
 
-    <a href="/blog/how-to-prevent-forest-fires.html">
-        Read the Article →
-    </a>
-</div>
-</div>
-</section>
-    
-<section class="section">
-<h2>🌱 Growing Guides</h2>
+    <!-- GROWING GUIDES -->
 
-<p class="section-intro">
-Simple guides for growing plants and learning through direct
-observation and everyday experience.
-</p>
+    <section class="section">
+        <h2>🌱 Growing Guides</h2>
 
-<div class="guides-grid">
+        <p class="section-intro">
+            Simple guides for growing plants and learning through
+            direct observation and everyday experience.
+        </p>
 
-<div class="guide-card">
-<h3>🌱 How to Plant</h3>
+        <div class="guides-grid">
 
-<p>
-A simple introduction to planting and caring for plants at home
-or in a small growing space.
-</p>
+            <div class="guide-card">
+                <h3>🌱 How to Plant</h3>
 
-<a href="/blog/how-to-plant.html">
-Read the Guide →
-</a>
-</div>
+                <p>
+                    A simple introduction to planting and caring for
+                    plants at home or in a small growing space.
+                </p>
 
-<div class="guide-card">
-<h3>🌳 How to Plant a Tree</h3>
+                <a href="/blog/how-to-plant.html">
+                    Read the Guide →
+                </a>
+            </div>
 
-<p>
-Simple steps for planting a tree and giving it a good start
-in its new environment.
-</p>
+            <div class="guide-card">
+                <h3>🌳 How to Plant a Tree</h3>
 
-<a href="/blog/how-to-plant-a-tree.html">
-Read the Guide →
-</a>
-</div>
+                <p>
+                    Simple steps for planting a tree and giving it
+                    a good start in its new environment.
+                </p>
 
-<div class="guide-card">
-<h3>🌿 How to Grow Aloe Vera</h3>
+                <a href="/blog/how-to-plant-a-tree.html">
+                    Read the Guide →
+                </a>
+            </div>
 
-<p>
-A practical growing guide based on simple observation and
-everyday plant care.
-</p>
+            <div class="guide-card">
+                <h3>🌿 How to Grow Aloe Vera</h3>
 
-<a href="/blog/how-to-grow-aloe-vera.html">
-Read the Guide →
-</a>
-</div>
+                <p>
+                    A practical growing guide based on simple
+                    observation and everyday plant care.
+                </p>
 
-</div>
+                <a href="/blog/how-to-grow-aloe-vera.html">
+                    Read the Guide →
+                </a>
+            </div>
 
-<p class="section-intro" style="margin-top:25px;">
-More growing guides can be added over time as new observations
-and practical experiences are shared.
-</p>
-</section>
+        </div>
 
-<section class="simple-thought">
-<h2>🌱 A Simple Thought</h2>
+        <p class="section-intro" style="margin-top:25px;">
+            More growing guides can be added over time as new
+            observations and practical experiences are shared.
+        </p>
+    </section>
 
-<p>
-Not everything needs to be rushed. Sometimes a closer look at
-something ordinary is enough to notice something new.
-</p>
-</section>
+    <!-- CLOSING REFLECTION -->
+
+    <section class="simple-thought">
+        <h2>🌱 A Simple Thought</h2>
+
+        <p>
+            Not everything needs to be rushed. Sometimes a closer
+            look at something ordinary is enough to notice
+            something new.
+        </p>
+    </section>
 
 </main>
 
 <!-- FOOTER -->
 
 <footer>
-<div>
-<a href="/">Home</a>
-<a href="/mindfulness.html">Mindful Living</a>
-<a href="/nature-connection.html">Nature Connection</a>
-<a href="/blog.html">Journal</a>
-<a href="/apps.html">Related Apps</a>
-<a href="/contact.html">Contact</a>
-</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/mindfulness.html">Mindful Living</a>
+        <a href="/nature-connection.html">Nature Connection</a>
+        <a href="/blog.html">Journal</a>
+        <a href="/apps.html">Related Apps</a>
+        <a href="/contact.html">Contact</a>
+    </div>
 
-<p>
-&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
-</p>
+    <p>
+        &copy; 2026 • Mindful Living • Nature • Everyday Sustainability
+    </p>
 </footer>
 
 <!-- READ ALOUD -->
@@ -633,6 +691,7 @@ something ordinary is enough to notice something new.
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = "🔊 Read Aloud";
+    button.setAttribute("aria-label", "Read the journal aloud");
 
     button.style.position = "fixed";
     button.style.bottom = "20px";
@@ -642,6 +701,7 @@ something ordinary is enough to notice something new.
     button.style.border = "1px solid #ccc";
     button.style.borderRadius = "8px";
     button.style.background = "#ffffff";
+    button.style.color = "#333";
     button.style.cursor = "pointer";
     button.style.boxShadow = "0 2px 8px rgba(0,0,0,0.12)";
 
@@ -665,7 +725,9 @@ something ordinary is enough to notice something new.
         );
 
         const text = Array.from(elements)
-            .map(el => el.innerText.trim())
+            .map(function (element) {
+                return element.innerText.trim();
+            })
             .filter(Boolean)
             .join(". ");
 
@@ -700,4 +762,3 @@ something ordinary is enough to notice something new.
 
 </body>
 </html>
-
