@@ -34,13 +34,15 @@
 <meta name="twitter:image" content="https://yangocean.com/images/og-food.jpg">
 
 <style>
-/* FOOD PHOTO GALLERY */
+
+/* SMALLER FOOD PHOTO GALLERY */
 
 .food-gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    margin: 24px 0;
+    gap: 18px;
+    margin: 20px auto;
+    max-width: 760px;
 }
 
 .food-gallery figure {
@@ -51,16 +53,17 @@
 .food-gallery img {
     display: block;
     width: 100%;
-    height: 280px;
+    height: 200px;
     object-fit: contain;
     background: #f7f7f4;
-    border-radius: 12px;
+    border-radius: 10px;
 }
 
 .food-gallery figcaption {
-    padding: 12px 4px;
-    line-height: 1.7;
+    padding: 8px 2px;
+    line-height: 1.6;
     text-align: center;
+    font-size: 0.92rem;
 }
 
 .food-gallery figcaption strong {
@@ -72,6 +75,25 @@
     font-size: 0.92rem;
     line-height: 1.7;
 }
+
+/* MOBILE DISPLAY */
+
+@media (max-width: 600px) {
+    .food-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .food-gallery img {
+        height: 130px;
+    }
+
+    .food-gallery figcaption {
+        font-size: 0.85rem;
+    }
+}
+
+
 
 /* RESPONSIVE YOUTUBE SHORTS */
 
