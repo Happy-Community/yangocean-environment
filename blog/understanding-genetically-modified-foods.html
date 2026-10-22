@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Explore genetically modified foods, their potential benefits, food safety assessments, environmental considerations and how mindful eating can support informed food choices.">
+content="Explore genetically modified foods, their potential benefits, food safety assessments, environmental considerations and mindful food choices.">
 
 <meta name="robots" content="index, follow">
 
@@ -20,7 +20,7 @@ href="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
 content="Understanding Genetically Modified Foods | Yangocean">
 
 <meta property="og:description"
-content="A balanced introduction to genetically modified foods, food safety, farming and mindful eating.">
+content="A balanced introduction to genetically modified foods, food safety, farming, environmental awareness and mindful eating.">
 
 <meta property="og:url"
 content="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
@@ -172,30 +172,24 @@ button:focus {
     margin-top: 22px;
 }
 
-.photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
-    margin: 24px 0;
+.article-image {
+    margin: 24px auto;
+    text-align: center;
 }
 
-.photo-gallery figure {
-    margin: 0;
-    min-width: 0;
-}
-
-.photo-gallery img {
+.article-image img {
     display: block;
     width: 100%;
+    max-width: 1000px;
     height: auto;
+    margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #e3e8df;
 }
 
-.photo-gallery figcaption {
+.article-image figcaption {
     font-size: 0.92rem;
     color: #555;
-    text-align: center;
     margin-top: 10px;
 }
 
@@ -275,10 +269,6 @@ footer a {
     .card {
         padding: 20px 17px;
     }
-
-    .photo-gallery {
-        grid-template-columns: 1fr;
-    }
 }
 </style>
 </head>
@@ -306,7 +296,7 @@ footer a {
     <a href="/mindful-ethical-living.html">Mindful Living</a>
     <a href="/mindful-eating.html">Mindful Eating</a>
     <a href="/nature-connection.html">Nature Connection</a>
-    <a href="/sustainable-living.html">Sustainable Living</a>
+    <a href="/eco.html">Environmental Awareness</a>
     <a href="/blog.html">Journal</a>
     <a href="/apps.html">Apps</a>
 </nav>
@@ -355,14 +345,17 @@ voice quality depend on your browser and device.
 </p>
 
 <div class="tts-controls">
-    <button type="button" onclick="startReading()"
-    aria-label="Start or resume reading">▶ Read</button>
+    <button type="button" onclick="startReading()">
+        ▶ Read
+    </button>
 
-    <button type="button" onclick="pauseReading()"
-    aria-label="Pause reading">⏸ Pause</button>
+    <button type="button" onclick="pauseReading()">
+        ⏸ Pause
+    </button>
 
-    <button type="button" onclick="stopReading()"
-    aria-label="Stop reading">⏹ Stop</button>
+    <button type="button" onclick="stopReading()">
+        ⏹ Stop
+    </button>
 </div>
 
 </section>
@@ -577,9 +570,23 @@ available, labels and official guidance can help consumers
 make informed choices.
 </p>
 
+<p>
+Environmental awareness also means considering the wider
+effects of food production, including soil health, water use,
+biodiversity, agricultural inputs and the livelihoods of
+farming communities. These questions are relevant to food
+production generally and should be assessed using evidence
+about each situation.
+</p>
+
+<p>
+Explore more environmental topics on our
+<a href="/eco.html">Environmental Awareness</a> page.
+</p>
+
 </section>
 
-<!-- SECTION 5: PHOTOS -->
+<!-- SECTION 5: ONE COMBINED PHOTO -->
 
 <section class="card" id="tomatoes-bananas">
 
@@ -587,45 +594,30 @@ make informed choices.
 
 <p>
 Tomatoes and bananas are familiar foods that connect us
-with farming, gardens and nature. The photos below show
-ordinary tomatoes and banana plants, rather than genetically
-modified produce.
+with gardens, farms and nature. The combined photograph
+below brings these familiar crops into our discussion
+about genetically modified foods.
 </p>
 
-<div class="photo-gallery">
+<figure class="article-image">
+    <img
+        src="/images/encombined-tomato-banana-photo.png"
+        alt="A combined illustrative photograph of ordinary tomatoes and banana plants, not genetically modified produce"
+        loading="lazy"
+    >
 
-    <figure>
-        <img
-            src="/images/entomato-photo.jpg"
-            alt="Tomatoes from the original photograph, shown as an example of familiar food crops"
-            loading="lazy"
-        >
-        <figcaption>
-            🍅 Tomatoes — the tomatoes shown here are not GM produce.
-        </figcaption>
-    </figure>
-
-    <figure>
-        <img
-            src="/images/enbanana-photo.jpg"
-            alt="Banana plants from the original photograph, shown as an example of familiar food-producing plants"
-            loading="lazy"
-        >
-        <figcaption>
-            🍌 Banana plants — the plants shown here are not GM produce.
-        </figcaption>
-    </figure>
-
-</div>
+    <figcaption>
+        Familiar food crops: tomatoes and banana plants.
+    </figcaption>
+</figure>
 
 <p class="photo-disclaimer">
-<strong>About these photos:</strong>
-These are illustrative photographs of non-GM tomatoes and
-banana plants. They are included to help readers connect
-the discussion with familiar crops. They are not photographs
-of genetically modified produce. A plant's or fruit's
-appearance alone cannot establish whether it has been
-genetically modified.
+<strong>About this photograph:</strong>
+This image shows ordinary tomatoes and banana plants, not
+genetically modified produce. It is included as an illustration
+of familiar food crops and is not an example of GM produce.
+A plant's or fruit's appearance alone cannot establish whether
+it has been genetically modified.
 </p>
 
 <p>
@@ -670,8 +662,8 @@ are developed for different purposes.
 
 <p>
 Likewise, a non-GM label does not automatically mean that
-a food is healthier. Overall nutrition depends on the
-food's composition and how it fits into our eating pattern.
+a food is healthier. Nutritional value depends on the food
+itself and how it fits into our overall eating pattern.
 </p>
 
 <p>
@@ -864,7 +856,7 @@ current guidance.
 
 </section>
 
-<!-- BACK TO MINDFUL EATING -->
+<!-- RELATED TOPICS -->
 
 <section class="card">
 
@@ -882,6 +874,12 @@ choices relate to our wider lives.
 </a>
 </p>
 
+<p>
+<a class="resource-link" href="/eco.html">
+🌱 Explore Environmental Awareness
+</a>
+</p>
+
 </section>
 
 </main>
@@ -894,6 +892,7 @@ choices relate to our wider lives.
     <p>
         <a href="/">Home</a> ·
         <a href="/mindful-eating.html">Mindful Eating</a> ·
+        <a href="/eco.html">Environmental Awareness</a> ·
         <a href="/blog.html">Journal</a>
     </p>
 </footer>
