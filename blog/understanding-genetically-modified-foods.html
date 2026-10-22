@@ -1,500 +1,966 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Understanding Genetically Modified Foods | Yangocean</title>
-<meta name="description" content="Explore genetically modified foods, potential benefits, food-safety considerations and environmental questions through a mindful eating perspective.">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
 
-<meta property="og:title" content="Understanding Genetically Modified Foods | Yangocean">
-<meta property="og:description" content="A balanced guide to GM foods, food safety, agriculture and thoughtful food choices.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Explore genetically modified foods, their potential benefits, food safety assessments, environmental considerations and how mindful eating can support informed food choices.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
+
+<meta property="og:title"
+content="Understanding Genetically Modified Foods | Yangocean">
+
+<meta property="og:description"
+content="A balanced introduction to genetically modified foods, food safety, farming and mindful eating.">
+
+<meta property="og:url"
+content="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
+
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://yangocean.com/blog/understanding-genetically-modified-foods.html">
+
 <meta property="og:site_name" content="Yangocean">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Understanding Genetically Modified Foods | Yangocean">
-<meta name="twitter:description" content="Knowledge, balance and thoughtful choices about genetically modified foods.">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
 
 <style>
 * {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.8;
-    color: #34443a;
-    background: #fbfaf5;
+    color: #333;
+    background: #f7f9f6;
 }
-header, footer {
-    background: #fff;
-    padding: 20px;
-}
+
 header {
-    border-bottom: 1px solid #dce8dc;
+    background: #fff;
+    border-bottom: 1px solid #e5e9e4;
+    padding: 16px 20px;
 }
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.logo {
+    color: #2f5d3a;
+    text-decoration: none;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    color: #777;
+    font-size: 0.82rem;
+}
+
 nav {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 18px;
-    max-width: 1000px;
-    margin: auto;
+    gap: 12px 20px;
+    padding: 14px 20px;
+    background: #fff;
+    border-bottom: 1px solid #e5e9e4;
 }
-nav a, footer a {
-    color: #286747;
+
+nav a {
+    color: #444;
     text-decoration: none;
+    font-size: 0.94rem;
 }
-nav a:hover, footer a:hover {
+
+nav a:hover,
+nav a:focus {
+    color: #2f6b3f;
     text-decoration: underline;
 }
+
 main {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 20px 50px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 18px;
 }
-h1, h2 {
-    color: #286747;
+
+.card {
+    background: #fff;
+    padding: 28px;
+    margin-bottom: 24px;
+    border: 1px solid #e6ebe4;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(35, 65, 40, 0.04);
+}
+
+h1,
+h2,
+h3 {
+    color: #2f5d3a;
     line-height: 1.4;
 }
+
 h1 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
+    margin-top: 0;
 }
+
 h2 {
-    margin-top: 30px;
+    font-size: 1.55rem;
+    margin-top: 0;
 }
-.article-card {
-    background: #fff;
+
+h3 {
+    font-size: 1.15rem;
+}
+
+p {
+    margin: 14px 0;
+}
+
+ul,
+ol {
+    padding-left: 26px;
+}
+
+li {
+    margin-bottom: 9px;
+}
+
+a {
+    color: #28663c;
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #86b995;
+    outline-offset: 3px;
+}
+
+.intro {
+    font-size: 1.08rem;
+}
+
+.hero-note {
+    background: #edf5eb;
+    border-left: 5px solid #5b8c60;
+    padding: 18px 20px;
+    border-radius: 6px;
+    margin-top: 22px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin: 24px 0;
+}
+
+.photo-gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.photo-gallery img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid #e3e8df;
+}
+
+.photo-gallery figcaption {
+    font-size: 0.92rem;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.photo-disclaimer {
+    background: #f5f7f2;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 0.94rem;
+}
+
+.reflection {
+    text-align: center;
+    background: #edf5eb;
+    border-radius: 10px;
     padding: 24px;
-    margin: 22px 0;
-    border: 1px solid #dce8dc;
-    border-radius: 12px;
+    color: #2f5d3a;
 }
-.hero {
-    background: #eef6ed;
-    padding: 25px;
-    border-radius: 12px;
+
+.reflection p {
+    font-size: 1.08rem;
 }
-.read-aloud {
+
+.resource-link {
+    display: inline-block;
+    margin: 4px 0;
+}
+
+.tts-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 22px 0;
+    margin: 20px 0 28px;
 }
-.read-aloud button {
-    padding: 10px 16px;
+
+.tts-controls button {
     border: 0;
     border-radius: 7px;
-    background: #286747;
-    color: #fff;
+    padding: 10px 16px;
+    font-size: 0.95rem;
     cursor: pointer;
-    font-size: 1rem;
+    background: #e7f0e4;
+    color: #244f30;
 }
-a {
-    overflow-wrap: anywhere;
+
+.tts-controls button:hover {
+    background: #d6e7d2;
 }
-.small-note {
-    color: #5b6b60;
-    font-size: 0.94rem;
-}
+
 footer {
     text-align: center;
-    border-top: 1px solid #dce8dc;
+    background: #fff;
+    border-top: 1px solid #e5e9e4;
+    padding: 25px 18px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    margin: 0 7px;
+}
+
+@media (max-width: 650px) {
+    .header-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        gap: 10px 14px;
+    }
+
+    main {
+        margin-top: 18px;
+        padding: 0 12px;
+    }
+
+    .card {
+        padding: 20px 17px;
+    }
+
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-    <nav aria-label="Main navigation">
-        <a href="/">Home</a>
-        <a href="/mindfulness.html">Mindfulness</a>
-        <a href="/mindful-eating.html">Mindful Eating</a>
-        <a href="/nature-connection.html">Nature Connection</a>
-        <a href="/sustainable-living.html">Sustainable Living</a>
-        <a href="/blog.html">Journal</a>
-        <a href="/apps.html">Apps</a>
-    </nav>
+    <div class="header-inner">
+        <div>
+            <a class="logo" href="/">Yangocean</a>
+            <div class="tagline">
+                Mindful Living, Nature & Everyday Sustainability
+            </div>
+        </div>
+    </div>
 </header>
+
+<!-- NAVIGATION -->
+
+<nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/mindfulness.html">Mindfulness</a>
+    <a href="/mindful-ethical-living.html">Mindful Living</a>
+    <a href="/mindful-eating.html">Mindful Eating</a>
+    <a href="/nature-connection.html">Nature Connection</a>
+    <a href="/sustainable-living.html">Sustainable Living</a>
+    <a href="/blog.html">Journal</a>
+    <a href="/apps.html">Apps</a>
+</nav>
+
+<!-- ARTICLE -->
 
 <main id="content-to-read">
 
-<section class="hero">
-    <p><a href="/mindful-eating.html">Mindful Eating</a> / Food Awareness</p>
+<section class="card">
 
-    <h1>🧬 Mindful Eating: Understanding Genetically Modified Foods</h1>
+<h1>🧬 Understanding Genetically Modified Foods</h1>
 
-    <p><strong>Beyond the label: knowledge, balance and thoughtful food choices</strong></p>
-
-    <p>
-        Every day, we make choices about what to eat. We may consider
-        freshness, taste, nutrition, price and where our food comes from.
-        But what does it mean when a food has been genetically modified?
-    </p>
-
-    <p>
-        Mindful eating invites us to approach this subject with curiosity
-        rather than fear, and with discernment rather than blind acceptance.
-    </p>
-</section>
-
-<div class="read-aloud">
-    <button type="button" id="readAloudButton">🔊 Read Aloud</button>
-    <button type="button" id="stopReadingButton">⏹ Stop</button>
-</div>
-
-<p id="readAloudStatus" class="small-note" role="status" aria-live="polite">
-    Use Read Aloud to listen to this article.
+<p class="intro">
+Food connects us to nature, agriculture, culture and the people
+who grow and prepare what we eat. As food technology develops,
+we may encounter the term genetically modified, or GM, foods.
+Understanding what this term means can help us make thoughtful
+choices without unnecessary fear or unrealistic expectations.
 </p>
 
-<section class="article-card">
-    <h2>1. What Are Genetically Modified Foods?</h2>
+<p>
+Mindful eating is not about accepting every new technology
+without question, nor is it about assuming that everything
+unfamiliar is harmful. It encourages us to learn, ask questions
+and consider reliable evidence.
+</p>
 
-    <p>
-        Living things contain DNA, which carries genetic instructions.
-        For generations, farmers have selected and bred plants with
-        desirable characteristics, such as improved taste, size or
-        resistance to disease.
-    </p>
+<div class="hero-note">
+<strong>A mindful approach:</strong>
+Learn how a food was developed, consider the available safety
+information, and look at the wider effects on farming, people
+and the environment.
+</div>
 
-    <p>
-        Modern genetic engineering allows scientists to change an
-        organism's genetic material using specific techniques. Depending
-        on the method, this may involve introducing genetic material or
-        altering particular genes. These techniques differ from
-        traditional breeding, and gene editing is not identical to every
-        form of genetic modification.
-    </p>
-
-    <p>
-        Some genetically modified crops have been developed to resist
-        particular insect pests, tolerate certain herbicides or withstand
-        specific plant diseases. Research has also explored changes in
-        nutritional composition and storage characteristics.
-    </p>
-
-    <p>
-        <strong>Genetic modification describes a method, not one food
-        or one outcome.</strong>
-    </p>
 </section>
 
-<section class="article-card">
-    <h2>2. Are Genetically Modified Foods Safe to Eat?</h2>
+<!-- READ ALOUD -->
 
-    <p>
-        Food-safety authorities assess individual GM foods rather than
-        assuming every genetically modified product has identical
-        characteristics. Assessments may consider toxicity, the potential
-        to cause allergic reactions, nutritional composition and
-        unintended changes.
-    </p>
+<section class="card">
 
-    <p>
-        The World Health Organization states that GM foods currently
-        available on the international market have passed safety
-        assessments in the countries where they have been approved and
-        are not likely to present risks to human health. It also
-        emphasises that individual GM foods should be assessed
-        case by case.
-    </p>
+<h2>🔊 Read This Article Aloud</h2>
 
-    <p>
-        This is not a reason to assume that every possible GM product
-        is risk-free. Rather, it reminds us to consider the evidence
-        and assessment for the particular food instead of judging all
-        GM foods as though they were the same.
-    </p>
+<p>
+Use these controls to listen to the article. Availability and
+voice quality depend on your browser and device.
+</p>
 
-    <p>
-        Food safety also depends on other factors, including
-        contamination, storage, preparation and individual allergies.
-    </p>
+<div class="tts-controls">
+    <button type="button" onclick="startReading()"
+    aria-label="Start or resume reading">▶ Read</button>
 
-    <p>
-        <a href="https://www.who.int/news-room/questions-and-answers/item/FAQ-genetically-modified-foods"
-           target="_blank" rel="noopener noreferrer">
-            Read more: World Health Organization — Genetically Modified Foods
+    <button type="button" onclick="pauseReading()"
+    aria-label="Pause reading">⏸ Pause</button>
+
+    <button type="button" onclick="stopReading()"
+    aria-label="Stop reading">⏹ Stop</button>
+</div>
+
+</section>
+
+<!-- SECTION 1 -->
+
+<section class="card" id="what-is-gm">
+
+<h2>1. What Are Genetically Modified Foods?</h2>
+
+<p>
+Genetically modified foods come from organisms whose genetic
+material has been changed using genetic engineering or other
+specific genetic modification techniques. These techniques
+can be used to introduce, remove or alter particular genetic
+characteristics.
+</p>
+
+<p>
+In agriculture, researchers may develop crops with particular
+traits, such as resistance to certain insect pests, tolerance
+to specific herbicides, resistance to certain plant diseases
+or changes in nutritional composition.
+</p>
+
+<p>
+Genetic modification is not the same as every form of plant
+breeding. Farmers and plant breeders have selected and crossed
+plants for desirable characteristics for generations. Genetic
+engineering can allow scientists to make more targeted changes
+using techniques that differ from conventional breeding.
+</p>
+
+<p>
+The methods and resulting traits vary. Therefore, it is useful
+to ask which crop has been modified, what change was made and
+what purpose the change is intended to serve.
+</p>
+
+</section>
+
+<!-- SECTION 2 -->
+
+<section class="card" id="food-safety">
+
+<h2>2. Are GM Foods Safe to Eat?</h2>
+
+<p>
+Food safety should be considered carefully and on the basis
+of evidence. It would be misleading to say that every GM food
+is automatically safe, or that every GM food is automatically
+harmful simply because genetic modification was used.
+</p>
+
+<p>
+Safety assessments consider the specific food and the
+characteristics introduced. Depending on the product and
+regulatory framework, assessments may examine its composition,
+nutritional characteristics, potential toxicity, potential
+allergenicity and other relevant concerns.
+</p>
+
+<p>
+Major scientific and public health organisations have
+explained that authorised GM foods are assessed according
+to applicable safety requirements. However, a conclusion
+about one GM crop should not automatically be applied to
+every other GM crop or future product.
+</p>
+
+<p>
+It is also important to distinguish between food safety
+and other questions. A food may meet applicable food safety
+requirements while people still debate its environmental
+effects, farming practices, ownership or social implications.
+These are related but different considerations.
+</p>
+
+<p>
+When considering a particular product, consult reliable
+information from relevant food safety authorities and
+scientific organisations rather than relying on appearance,
+rumours or a single social media post.
+</p>
+
+</section>
+
+<!-- SECTION 3 -->
+
+<section class="card" id="potential-benefits">
+
+<h2>3. What Are the Potential Benefits?</h2>
+
+<p>
+Some genetically modified crops have been developed to
+address particular agricultural challenges. The potential
+benefits depend on the crop, the introduced trait, local
+conditions and how the crop is managed.
+</p>
+
+<h3>Possible agricultural benefits</h3>
+
+<ul>
+    <li>
+        <strong>Managing certain pests:</strong>
+        Some crops have traits that help protect them against
+        particular insect pests. This may reduce the need for
+        some insecticide applications, depending on the crop
+        and farming system.
+    </li>
+
+    <li>
+        <strong>Addressing plant diseases:</strong>
+        Some research and crop-development programmes aim to
+        improve resistance to specific plant diseases.
+    </li>
+
+    <li>
+        <strong>Supporting crop production:</strong>
+        Certain traits may help farmers manage particular
+        agricultural challenges. Actual outcomes depend on
+        local growing conditions and farming practices.
+    </li>
+
+    <li>
+        <strong>Changing nutritional composition:</strong>
+        Some GM crops have been developed with the aim of
+        changing levels of particular nutrients.
+    </li>
+
+    <li>
+        <strong>Reducing food losses:</strong>
+        Some crop traits are intended to reduce particular
+        types of damage or spoilage, potentially helping to
+        limit food losses in specific circumstances.
+    </li>
+</ul>
+
+<p>
+These are possible benefits, not guarantees that apply to
+all GM crops. For example, resistance to one pest does not
+mean a crop is resistant to every pest, and a crop designed
+to tolerate a particular herbicide does not automatically
+mean less herbicide will be used.
+</p>
+
+<p>
+The actual effects should be evaluated using evidence about
+the particular crop and how it is grown.
+</p>
+
+</section>
+
+<!-- SECTION 4 -->
+
+<section class="card" id="concerns">
+
+<h2>4. What Concerns Should We Consider?</h2>
+
+<p>
+Mindful eating also invites us to consider the wider food
+system. Questions about GM crops can extend beyond what
+happens when we eat the food.
+</p>
+
+<h3>Environmental considerations</h3>
+
+<p>
+The environmental effects of a GM crop depend on its traits,
+where it is grown and how it is managed. Relevant issues may
+include effects on non-target organisms, biodiversity,
+gene flow to related plants, pest resistance and herbicide
+use.
+</p>
+
+<p>
+For example, pests can evolve resistance when control
+measures are used repeatedly without suitable management.
+Weed populations can also develop herbicide resistance.
+Appropriate agricultural practices and ongoing monitoring
+can help manage these challenges.
+</p>
+
+<h3>Farming and livelihoods</h3>
+
+<p>
+Farmers may need to consider seed prices, access to suitable
+seeds, contracts, market requirements and the availability
+of technical support. These issues can differ considerably
+between regions and farming systems.
+</p>
+
+<p>
+It is worth considering whether a particular technology
+meets local needs, who benefits from it and what alternatives
+are available to farmers.
+</p>
+
+<h3>Consumer information and choice</h3>
+
+<p>
+People may have questions about how food is produced for
+health, environmental, cultural, ethical or personal reasons.
+Clear and accurate information helps consumers understand
+their options.
+</p>
+
+<p>
+Food labelling requirements differ by country. Where
+information about genetic modification is required or
+available, labels and official guidance can help consumers
+make informed choices.
+</p>
+
+</section>
+
+<!-- SECTION 5: PHOTOS -->
+
+<section class="card" id="tomatoes-bananas">
+
+<h2>5. Tomatoes and Bananas: Understanding the Difference</h2>
+
+<p>
+Tomatoes and bananas are familiar foods that connect us
+with farming, gardens and nature. The photos below show
+ordinary tomatoes and banana plants, rather than genetically
+modified produce.
+</p>
+
+<div class="photo-gallery">
+
+    <figure>
+        <img
+            src="/images/entomato-photo.jpg"
+            alt="Tomatoes from the original photograph, shown as an example of familiar food crops"
+            loading="lazy"
+        >
+        <figcaption>
+            🍅 Tomatoes — the tomatoes shown here are not GM produce.
+        </figcaption>
+    </figure>
+
+    <figure>
+        <img
+            src="/images/enbanana-photo.jpg"
+            alt="Banana plants from the original photograph, shown as an example of familiar food-producing plants"
+            loading="lazy"
+        >
+        <figcaption>
+            🍌 Banana plants — the plants shown here are not GM produce.
+        </figcaption>
+    </figure>
+
+</div>
+
+<p class="photo-disclaimer">
+<strong>About these photos:</strong>
+These are illustrative photographs of non-GM tomatoes and
+banana plants. They are included to help readers connect
+the discussion with familiar crops. They are not photographs
+of genetically modified produce. A plant's or fruit's
+appearance alone cannot establish whether it has been
+genetically modified.
+</p>
+
+<p>
+Tomatoes and bananas, like many crops, have many varieties.
+Plant breeders have developed varieties through different
+methods over time, including conventional selection and
+breeding. Genetic modification has also been explored or
+used for particular traits in some crop varieties, but this
+does not mean that every tomato or banana is genetically
+modified.
+</p>
+
+<p>
+The correct way to assess a particular product is to seek
+reliable information about its variety, development method
+and source. We should not identify food as GM or non-GM
+based on its colour, size, shape or other visible features
+alone.
+</p>
+
+</section>
+
+<!-- SECTION 6 -->
+
+<section class="card" id="nutrition">
+
+<h2>6. Does GM Automatically Mean More or Less Nutritious?</h2>
+
+<p>
+No. Genetic modification by itself does not tell us whether
+a food is more nutritious, less nutritious or nutritionally
+similar to another food.
+</p>
+
+<p>
+Nutritional composition depends on the specific crop and
+variety, the traits it has, growing conditions, maturity,
+storage and preparation. Some GM crops are designed to
+change a particular nutritional characteristic; many others
+are developed for different purposes.
+</p>
+
+<p>
+Likewise, a non-GM label does not automatically mean that
+a food is healthier. Overall nutrition depends on the
+food's composition and how it fits into our eating pattern.
+</p>
+
+<p>
+Fresh fruits and vegetables, whole grains, beans, lentils,
+nuts and other nutritious foods can all contribute to a
+balanced diet. Variety, appropriate portions and preparation
+methods remain important, whatever breeding method was
+used to produce a crop.
+</p>
+
+</section>
+
+<!-- SECTION 7 -->
+
+<section class="card" id="mindful-choices">
+
+<h2>7. How Can We Make Mindful Food Choices?</h2>
+
+<p>
+We do not need to become experts in genetics to approach
+food thoughtfully. A few practical habits can help us
+make more informed decisions.
+</p>
+
+<ul>
+    <li>
+        <strong>Look for reliable information.</strong>
+        Consult food safety authorities, scientific
+        organisations and trustworthy agricultural resources.
+    </li>
+
+    <li>
+        <strong>Read labels where relevant.</strong>
+        Learn how food labelling works in the country where
+        the product is sold.
+    </li>
+
+    <li>
+        <strong>Ask specific questions.</strong>
+        What trait was introduced? Why was the crop developed?
+        What evidence is available about its safety and effects?
+    </li>
+
+    <li>
+        <strong>Consider the wider picture.</strong>
+        Food production can affect farmers, communities,
+        biodiversity, resources and the environment. Consider
+        the available evidence for the particular product.
+    </li>
+
+    <li>
+        <strong>Choose a varied diet.</strong>
+        Include a variety of nutritious foods and prepare
+        them in ways that suit your needs and circumstances.
+    </li>
+
+    <li>
+        <strong>Avoid assumptions based on appearance.</strong>
+        Size, colour, shape and taste alone cannot establish
+        whether a food is genetically modified.
+    </li>
+</ul>
+
+<p>
+Our food choices are influenced by availability, affordability,
+culture, personal values and individual needs. There is no
+need to feel anxious about every meal. We can learn gradually
+and make reasonable decisions using the information available
+to us.
+</p>
+
+</section>
+
+<!-- SECTION 8 -->
+
+<section class="card" id="questions">
+
+<h2>8. Questions Worth Asking</h2>
+
+<h3>Are all GM foods the same?</h3>
+
+<p>
+No. Different crops can have different genetic changes,
+intended traits and uses. Assessments and conclusions need
+to relate to the specific food or product.
+</p>
+
+<h3>Can we identify GM food by looking at it?</h3>
+
+<p>
+Not reliably. Appearance alone cannot establish whether
+a food has been genetically modified.
+</p>
+
+<h3>Does choosing non-GM food guarantee better nutrition?</h3>
+
+<p>
+No. Nutritional value depends on the food itself and the
+overall eating pattern, rather than the GM or non-GM
+designation alone.
+</p>
+
+<h3>Should we ignore environmental concerns if a food passes a safety assessment?</h3>
+
+<p>
+No. Food safety and environmental impact are different
+questions. Both may deserve consideration, using evidence
+appropriate to each issue.
+</p>
+
+<h3>What if we remain uncertain?</h3>
+
+<p>
+It is reasonable to acknowledge uncertainty. Look for
+reliable information, distinguish established findings
+from claims that still need evidence, and avoid rushing
+to conclusions.
+</p>
+
+</section>
+
+<!-- FINAL REFLECTION -->
+
+<section class="card" id="reflection">
+
+<div class="reflection">
+
+<h2>🌿 A Small Reflection</h2>
+
+<p>
+Mindful eating is not about fear, but about knowledge,
+balance and thoughtful choices.
+</p>
+
+<p>
+We can appreciate the food that nourishes us, respect
+the people who grow it, and remain curious about the
+science and practices behind it.
+</p>
+
+<p>
+By asking questions and seeking reliable information,
+we give ourselves a better opportunity to choose with
+awareness and care.
+</p>
+
+</div>
+
+</section>
+
+<!-- FURTHER READING -->
+
+<section class="card" id="further-reading">
+
+<h2>📚 Further Reading</h2>
+
+<p>
+For more information about genetically modified foods,
+food safety and agricultural biotechnology, consult
+reliable scientific and public health resources.
+</p>
+
+<ul>
+    <li>
+        <a class="resource-link"
+           href="https://www.who.int/health-topics/food-genetically-modified"
+           target="_blank"
+           rel="noopener noreferrer">
+            World Health Organization (WHO): Food, genetically modified
         </a>
-    </p>
+    </li>
+
+    <li>
+        <a class="resource-link"
+           href="https://www.fao.org/food/food-safety-quality/gm-foods-platform/en/"
+           target="_blank"
+           rel="noopener noreferrer">
+            Food and Agriculture Organization of the United Nations (FAO):
+            GM Foods Platform
+        </a>
+    </li>
+</ul>
+
+<p>
+Regulations, approved products and labelling requirements
+may differ between countries. For decisions about a
+particular food, check the relevant local authority's
+current guidance.
+</p>
+
 </section>
 
-<section class="article-card">
-    <h2>3. What Are the Potential Benefits?</h2>
+<!-- BACK TO MINDFUL EATING -->
 
-    <p>
-        Depending on the crop and the trait introduced, genetic
-        modification may offer potential benefits:
-    </p>
+<section class="card">
 
-    <ul>
-        <li><strong>Crop protection:</strong> Some crops are designed to resist particular insect pests or plant diseases.</li>
-        <li><strong>Reduced crop losses:</strong> Certain traits may help protect harvests under specific conditions.</li>
-        <li><strong>Potential nutritional improvements:</strong> Some developments aim to improve particular nutritional characteristics.</li>
-        <li><strong>Agricultural efficiency:</strong> Some technologies may help address specific farming challenges.</li>
-    </ul>
+<h2>🍽️ Continue Exploring Mindful Eating</h2>
 
-    <p>
-        These benefits are not guaranteed in every situation. Their
-        actual effects depend on the crop, local conditions and farming
-        practices. We can ask what problem a technology is intended
-        to solve and whether it delivers meaningful benefits in practice.
-    </p>
-</section>
+<p>
+Mindful eating includes paying attention to the food we
+choose, how we prepare it, how we eat and how our food
+choices relate to our wider lives.
+</p>
 
-<section class="article-card">
-    <h2>4. What Concerns Should We Consider?</h2>
+<p>
+<a class="resource-link" href="/mindful-eating.html">
+← Return to Mindful Eating at Yangocean
+</a>
+</p>
 
-    <h3>Environmental effects</h3>
-    <p>
-        Depending on the crop and its traits, concerns may include
-        changes in pesticide use, the development of resistant pests
-        or weeds, and the movement of genes into related plants.
-        These effects should be considered in their specific context.
-    </p>
-
-    <h3>Biodiversity</h3>
-    <p>
-        Protecting biodiversity, conserving traditional plant varieties
-        and maintaining diverse farming systems remain important goals,
-        whether or not genetic engineering is used.
-    </p>
-
-    <h3>Farming and economic practices</h3>
-    <p>
-        Seed ownership, access to technology, farmer independence and
-        market concentration are important social and economic questions.
-        They are different from the question of whether a particular
-        food has passed a food-safety assessment.
-    </p>
-
-    <h3>Transparency and consumer choice</h3>
-    <p>
-        People may have different ethical, cultural or personal reasons
-        for choosing certain foods. Clear and accurate labelling can
-        help consumers make informed decisions, although requirements
-        vary from country to country.
-    </p>
-</section>
-
-<section class="article-card">
-    <h2>5. What Can Tomatoes and Bananas Tell Us?</h2>
-
-    <p>
-        Tomatoes and bananas are familiar foods that can help us start
-        a conversation about crop breeding and agricultural technology.
-        However, a photograph of tomatoes at a market or banana plants
-        in a garden cannot tell us whether that particular produce is
-        genetically modified. Appearance alone is not reliable evidence.
-    </p>
-
-    <p>
-        Some genetically modified tomato varieties have been developed
-        or commercialised in particular places for specific traits.
-        Research has also explored genetically modified bananas,
-        including disease-resistance goals. These examples do not mean
-        that ordinary tomatoes or banana plants in a photograph are GM,
-        or that every such variety is widely available commercially.
-    </p>
-
-    <p>
-        When considering a particular product, look for reliable
-        information about its variety, origin and relevant approval
-        or labelling rules.
-    </p>
-
-    <p class="small-note">
-        Illustrations of tomatoes and banana plants are used to introduce
-        the topic; they do not identify the pictured produce as GM.
-    </p>
-</section>
-
-<section class="article-card">
-    <h2>6. Does Non-GM Automatically Mean Healthier?</h2>
-
-    <p>
-        Not necessarily. A food's nutritional value depends on its
-        composition, how it is grown and processed, and how it fits
-        into our overall diet. A non-GM food is not automatically
-        more nutritious than a comparable GM food.
-    </p>
-
-    <p>
-        When comparing foods, consider the ingredients, nutritional
-        information, preparation method and portion size. Genetic
-        modification is different from pesticide use, food additives
-        and processing methods; each subject raises its own questions.
-    </p>
-</section>
-
-<section class="article-card">
-    <h2>7. How Can We Make Mindful Food Choices?</h2>
-
-    <ul>
-        <li><strong>Read labels carefully.</strong> Learn how GM foods are identified where you live.</li>
-        <li><strong>Look beyond marketing words.</strong> Terms such as “natural” or “non-GM” do not by themselves prove that a food is healthier.</li>
-        <li><strong>Choose variety.</strong> Include a range of vegetables, fruits, legumes, whole grains, nuts and other nutritious foods that suit your needs.</li>
-        <li><strong>Consider production practices.</strong> Learn about farming methods and environmental effects where reliable information is available.</li>
-        <li><strong>Consult reliable sources.</strong> Be cautious of frightening claims or unsupported promises.</li>
-        <li><strong>Respect personal choices.</strong> People may have different preferences based on culture, cost, availability, ethics or environmental values.</li>
-    </ul>
-
-    <p>
-        We do not need to become genetics experts before making thoughtful
-        choices. We can learn gradually and ask better questions as
-        reliable information becomes available.
-    </p>
-</section>
-
-<section class="article-card">
-    <h2>💚 A Small Reflection</h2>
-
-    <p>
-        The next time we encounter a food labelled GM or non-GM,
-        we might pause and ask:
-    </p>
-
-    <ul>
-        <li>What do we actually know about this food?</li>
-        <li>Are our concerns supported by reliable evidence?</li>
-        <li>Have we considered nutrition, food safety and environmental effects separately?</li>
-        <li>Can we make a thoughtful choice without judging others who choose differently?</li>
-    </ul>
-
-    <p>
-        We may not always have every answer. Nevertheless, we can keep
-        learning, remain open to evidence and make decisions with care.
-    </p>
-
-    <p>
-        <strong>Mindful eating is not about fearing what we do not
-        understand. It is about becoming more aware, asking better
-        questions and choosing with wisdom and compassion.</strong>
-    </p>
-</section>
-
-<section class="article-card">
-    <h2>📚 Further Reading</h2>
-
-    <ul>
-        <li>
-            <a href="https://www.who.int/news-room/questions-and-answers/item/FAQ-genetically-modified-foods"
-               target="_blank" rel="noopener noreferrer">
-                World Health Organization: Genetically Modified Foods — Questions and Answers
-            </a>
-        </li>
-        <li>
-            <a href="https://www.fao.org/food-safety/scientific-advice/biotechnology--gmo-and-gm-foods/en"
-               target="_blank" rel="noopener noreferrer">
-                Food and Agriculture Organization: Biotechnology and GM Foods
-            </a>
-        </li>
-        <li>
-            <a href="/mindful-eating.html">Return to Yangocean Mindful Eating →</a>
-        </li>
-        <li>
-            <a href="/blog.html">Explore More Articles in the Yangocean Journal →</a>
-        </li>
-    </ul>
-
-    <p class="small-note">
-        This article is for general educational purposes. It is not a
-        substitute for advice from qualified food-safety, agricultural
-        or healthcare professionals.
-    </p>
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-    <p>© 2026 Yangocean</p>
+    <p>Yangocean — Mindful Living, Nature & Everyday Sustainability</p>
+
     <p>
-        <a href="/about.html">About</a> |
-        <a href="/contact.html">Contact</a> |
-        <a href="/privacy.html">Privacy</a> |
-        <a href="/terms.html">Terms</a> |
-        <a href="/apps.html">Apps</a>
+        <a href="/">Home</a> ·
+        <a href="/mindful-eating.html">Mindful Eating</a> ·
+        <a href="/blog.html">Journal</a>
     </p>
 </footer>
 
+<!-- READ ALOUD SCRIPT -->
+
 <script>
-(function () {
-    const readButton = document.getElementById("readAloudButton");
-    const stopButton = document.getElementById("stopReadingButton");
-    const status = document.getElementById("readAloudStatus");
-    const mainContent = document.getElementById("content-to-read");
+let speechUtterance = null;
 
-    if (!readButton || !stopButton || !status || !mainContent) return;
-
-    function reset() {
-        readButton.textContent = "🔊 Read Aloud";
+function startReading() {
+    if (!("speechSynthesis" in window)) {
+        alert("Read Aloud is not supported by this browser.");
+        return;
     }
 
-    readButton.addEventListener("click", function () {
-        if (!("speechSynthesis" in window)) {
-            status.textContent = "Read Aloud is not supported by this browser.";
-            return;
-        }
+    if (window.speechSynthesis.paused) {
+        window.speechSynthesis.resume();
+        return;
+    }
 
-        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
-            window.speechSynthesis.pause();
-            readButton.textContent = "▶ Resume";
-            status.textContent = "Reading paused. Select Resume to continue.";
-            return;
-        }
+    window.speechSynthesis.cancel();
 
-        if (window.speechSynthesis.paused) {
-            window.speechSynthesis.resume();
-            readButton.textContent = "⏸ Pause";
-            status.textContent = "Reading resumed.";
-            return;
-        }
+    const content = document.getElementById("content-to-read");
 
-        const copy = mainContent.cloneNode(true);
-        copy.querySelectorAll("script, style, .read-aloud, #readAloudStatus")
-            .forEach(function (element) { element.remove(); });
+    if (!content) {
+        return;
+    }
 
-        const text = copy.innerText || copy.textContent || "";
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = "en-US";
-        utterance.rate = 0.95;
+    const readableElements = content.querySelectorAll(
+        "h1, h2, h3, p, li"
+    );
 
-        utterance.onstart = function () {
-            readButton.textContent = "⏸ Pause";
-            status.textContent = "Reading the article aloud.";
-        };
+    const text = Array.from(readableElements)
+        .map(function(element) {
+            return element.innerText.trim();
+        })
+        .filter(function(value) {
+            return value.length > 0;
+        })
+        .join(". ");
 
-        utterance.onend = function () {
-            reset();
-            status.textContent = "Finished reading the article.";
-        };
+    speechUtterance = new SpeechSynthesisUtterance(text);
+    speechUtterance.lang = document.documentElement.lang || "en";
 
-        utterance.onerror = function (event) {
-            reset();
-            if (event.error !== "canceled" && event.error !== "interrupted") {
-                status.textContent = "Reading could not be completed. Please try again.";
-            }
-        };
+    window.speechSynthesis.speak(speechUtterance);
+}
 
+function pauseReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.pause();
+    }
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utterance);
-    });
+        speechUtterance = null;
+    }
+}
 
-    stopButton.addEventListener("click", function () {
-        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-        reset();
-        status.textContent = "Reading stopped.";
-    });
-
-    window.addEventListener("beforeunload", function () {
-        if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-    });
-})();
+window.addEventListener("pagehide", function() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
+});
 </script>
 
 </body>
 </html>
+```
