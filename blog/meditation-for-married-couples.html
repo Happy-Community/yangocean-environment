@@ -90,43 +90,76 @@
             margin: 24px 0;
         }
 
-        .social-share {
-            margin-top: 32px;
-            padding: 18px;
-            background: #f1f5ec;
-            border-radius: 10px;
+        /* Four-card meditation footer */
+
+        .meditation-footer {
+            margin-top: 42px;
+            padding-top: 8px;
         }
 
-        .social-share p {
-            margin-top: 0;
+        .meditation-footer h2 {
+            margin: 0 0 22px;
+            color: #064b3b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 1.3;
         }
 
-        .social-share a {
-            display: inline-block;
-            margin: 5px 8px 5px 0;
-            padding: 8px 12px;
-            color: #385c45;
-            border: 1px solid #385c45;
-            border-radius: 6px;
+        .meditation-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px 16px;
+        }
+
+        .meditation-footer-card {
+            display: block;
+            min-height: 66px;
+            padding: 20px;
+            color: #064b3b;
+            background: #fff;
+            border: 1px solid #d8e5d8;
+            border-radius: 14px;
             text-decoration: none;
-            font-size: 0.95rem;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
         }
 
-        .social-share a:hover {
-            background: #385c45;
-            color: white;
+        .meditation-footer-card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.08rem;
+            line-height: 1.45;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 24px;
-            color: #385c45;
-            font-weight: bold;
-            text-decoration: none;
+        .meditation-footer-card span {
+            display: block;
+            color: #667568;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .meditation-footer-card:hover {
+            background: #f7faf5;
+            border-color: #9db9a0;
+        }
+
+        .meditation-footer-card:focus-visible {
+            outline: 3px solid #7b9e82;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 620px) {
+            .meditation-footer h2 {
+                font-size: 1.65rem;
+            }
+
+            .meditation-footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meditation-footer-card {
+                padding: 18px;
+            }
         }
     </style>
 </head>
@@ -266,18 +299,10 @@
         </p>
 
         <div class="reflection">
-            <p>
-                May I be peaceful and wise.
-            </p>
-            <p>
-                May my partner be peaceful and well.
-            </p>
-            <p>
-                May we treat each other with kindness and respect.
-            </p>
-            <p>
-                May we learn to understand one another with patience.
-            </p>
+            <p>May I be peaceful and wise.</p>
+            <p>May my partner be peaceful and well.</p>
+            <p>May we treat each other with kindness and respect.</p>
+            <p>May we learn to understand one another with patience.</p>
         </div>
 
         <p>
@@ -488,74 +513,31 @@
             their journey together.
         </p>
 
-        <div class="social-share">
-            <p><strong>Enjoyed this article? Share it with others:</strong></p>
+        <nav class="meditation-footer" aria-label="Continue exploring mindfulness and Dhamma">
+            <h2>Continue Exploring Mindfulness &amp; Dhamma</h2>
 
-            <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-married-couples.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on Facebook">
-                Facebook
-            </a>
+            <div class="meditation-footer-grid">
+                <a class="meditation-footer-card" href="/mindfulness.html">
+                    <strong>&larr; Mindfulness &amp; Dhamma</strong>
+                    <span>Explore more meditation topics and reflections</span>
+                </a>
 
-            <a
-                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-married-couples.html&text=Meditation%20for%20Married%20Couples%20%7C%20Yangocean"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on X">
-                X (Twitter)
-            </a>
+                <a class="meditation-footer-card" href="/blog/mindfulness-of-breathing.html">
+                    <strong>Mindfulness of Breathing</strong>
+                    <span>An introduction to noticing the natural breath</span>
+                </a>
 
-            <a
-                href="https://api.whatsapp.com/send?text=Meditation%20for%20Married%20Couples%20%7C%20Yangocean%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-married-couples.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on WhatsApp">
-                WhatsApp
-            </a>
+                <a class="meditation-footer-card" href="/blog/building-a-meditation-habit.html">
+                    <strong>Building a Meditation Habit</strong>
+                    <span>Small steps towards a sustainable routine</span>
+                </a>
 
-            <a
-                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-married-couples.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on LinkedIn">
-                LinkedIn
-            </a>
-
-            <button
-                type="button"
-                id="copyArticleLink"
-                style="display:inline-block; margin:5px 8px 5px 0;
-                       padding:8px 12px; color:#385c45;
-                       background:#fffdf7; border:1px solid #385c45;
-                       border-radius:6px; cursor:pointer; font-size:0.95rem;">
-                Copy Link
-            </button>
-
-            <p id="copyMessage" aria-live="polite"></p>
-        </div>
-
-        <script>
-            document.getElementById("copyArticleLink").addEventListener("click", async function () {
-                const articleUrl =
-                    "https://www.yangocean.com/blog/meditation-for-married-couples.html";
-
-                const message = document.getElementById("copyMessage");
-
-                try {
-                    await navigator.clipboard.writeText(articleUrl);
-                    message.textContent = "Article link copied.";
-                } catch (error) {
-                    message.textContent =
-                        "Please copy this link: " + articleUrl;
-                }
-            });
-        </script>
-
-        <a class="back-link" href="/mindfulness.html">
-            &larr; Back to Mindfulness
-        </a>
+                <a class="meditation-footer-card" href="/blog/meditation-in-the-pa-auk-tradition.html">
+                    <strong>Meditation in the Pa-Auk Tradition</strong>
+                    <span>Explore virtue, concentration and wisdom</span>
+                </a>
+            </div>
+        </nav>
     </article>
 </main>
 </body>
