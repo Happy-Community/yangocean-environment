@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Discover how meditation can help retirees cultivate inner peace, gratitude, patience and a meaningful life after retirement.">
+          content="Discover how meditation helps retirees cultivate inner peace, gratitude, patience and a meaningful life after retirement.">
+
+    <meta name="robots" content="index, follow">
 
     <link rel="canonical"
           href="https://www.yangocean.com/blog/meditation-for-retirees.html">
@@ -18,6 +20,8 @@
     <meta property="og:type" content="article">
     <meta property="og:url"
           content="https://www.yangocean.com/blog/meditation-for-retirees.html">
+    <meta property="og:image"
+          content="https://www.yangocean.com/images/REPLACE-WITH-YOUR-IMAGE-FILENAME">
 
     <style>
         body {
@@ -42,6 +46,10 @@
 
         h1 {
             margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 30px;
         }
 
         .article-subtitle {
@@ -77,6 +85,33 @@
             margin: 24px 0;
         }
 
+        .social-share {
+            margin-top: 32px;
+            padding: 18px;
+            background: #f1f5ec;
+            border-radius: 10px;
+        }
+
+        .social-share p {
+            margin-top: 0;
+        }
+
+        .social-share a {
+            display: inline-block;
+            margin: 5px 8px 5px 0;
+            padding: 8px 12px;
+            color: #385c45;
+            border: 1px solid #385c45;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .social-share a:hover {
+            background: #385c45;
+            color: white;
+        }
+
         .back-link {
             display: inline-block;
             margin-top: 24px;
@@ -103,7 +138,7 @@
 
         <figure>
             <img
-                src="/images/meditation-for-retirees.png"
+                src="/images/REPLACE-WITH-YOUR-IMAGE-FILENAME"
                 alt="A retired person enjoying a peaceful moment of meditation"
                 loading="lazy">
             <figcaption>
@@ -285,16 +320,19 @@
 
         <div class="reflection">
             <h2>A Gentle Daily Reflection</h2>
+
             <p>
                 At the beginning or end of each day, take a quiet moment
                 to reflect:
             </p>
+
             <ul>
                 <li>What can I appreciate about this day?</li>
                 <li>Have I treated myself and others with kindness?</li>
                 <li>What can I learn from today's experiences?</li>
                 <li>What worries can I approach wisely, and what must I learn to release?</li>
             </ul>
+
             <p>
                 There is no need to find perfect answers. The purpose is to
                 develop awareness and live with greater care.
@@ -327,7 +365,70 @@
             and find peace in the simple moments of life.
         </p>
 
-        <a class="back-link" href="/mindful-living.html">
+        <div class="social-share">
+            <p><strong>Enjoyed this article? Share it with others:</strong></p>
+
+            <a
+                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Share on Facebook">
+                Facebook
+            </a>
+
+            <a
+                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html&text=Meditation%20for%20Retirees%20%7C%20Yangocean"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Share on X">
+                X (Twitter)
+            </a>
+
+            <a
+                href="https://api.whatsapp.com/send?text=Meditation%20for%20Retirees%20%7C%20Yangocean%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Share on WhatsApp">
+                WhatsApp
+            </a>
+
+            <a
+                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Share on LinkedIn">
+                LinkedIn
+            </a>
+
+            <button
+                type="button"
+                id="copyArticleLink"
+                style="display:inline-block; margin:5px 8px 5px 0;
+                       padding:8px 12px; color:#385c45;
+                       background:#fffdf7; border:1px solid #385c45;
+                       border-radius:6px; cursor:pointer; font-size:0.95rem;">
+                Copy Link
+            </button>
+
+            <p id="copyMessage" aria-live="polite"></p>
+        </div>
+
+        <script>
+            document.getElementById("copyArticleLink").addEventListener("click", async function () {
+                const articleUrl = "https://www.yangocean.com/blog/meditation-for-retirees.html";
+                const message = document.getElementById("copyMessage");
+
+                try {
+                    await navigator.clipboard.writeText(articleUrl);
+                    message.textContent = "Article link copied.";
+                } catch (error) {
+                    message.textContent =
+                        "Please copy this link: " + articleUrl;
+                }
+            });
+        </script>
+
+        <a class="back-link" href="/mindfulness.html">
             &larr; Back to Mindful Living
         </a>
     </article>
