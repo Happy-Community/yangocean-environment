@@ -143,19 +143,66 @@
             color: #ffffff;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 30px;
-            color: #385c45;
+        /* Four-card meditation footer */
+
+        .meditation-footer {
+            margin-top: 42px;
+            padding-top: 8px;
+        }
+
+        .meditation-footer h2 {
+            margin: 0 0 22px;
+            color: #064b3b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+
+        .meditation-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px 16px;
+        }
+
+        .meditation-footer-card {
+            display: block;
+            min-height: 66px;
+            padding: 20px;
+            color: #064b3b;
+            background: #ffffff;
+            border: 1px solid #d8e5d8;
+            border-radius: 14px;
             text-decoration: none;
-            font-weight: bold;
+            transition: background-color 0.2s ease,
+                        border-color 0.2s ease;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .meditation-footer-card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.08rem;
+            line-height: 1.45;
         }
 
-        @media (max-width: 600px) {
+        .meditation-footer-card span {
+            display: block;
+            color: #667568;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .meditation-footer-card:hover {
+            background: #f7faf5;
+            border-color: #9db9a0;
+        }
+
+        .meditation-footer-card:focus-visible {
+            outline: 3px solid #7b9e82;
+            outline-offset: 3px;
+        }
+
+        @media (max-width: 620px) {
             body {
                 font-size: 16px;
             }
@@ -171,283 +218,380 @@
             h2 {
                 font-size: 1.3em;
             }
+
+            .meditation-footer h2 {
+                font-size: 1.65rem;
+            }
+
+            .meditation-footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meditation-footer-card {
+                padding: 18px;
+            }
         }
     </style>
 </head>
 
 <body>
 <main>
-    <header>
-        <p class="site-tagline">
-            Mindful Living · Nature · Everyday Reflections
-        </p>
+    <article>
+        <header>
+            <p class="site-tagline">
+                Mindful Living · Nature · Everyday Reflections
+            </p>
 
-        <h1>Meditation for Single Adults: Finding Peace and Contentment</h1>
+            <h1>Meditation for Single Adults: Finding Peace and Contentment</h1>
 
-        <p class="intro">
-            Being single is one of the many ways people experience life.
-            Whether we are single by choice, circumstances, or a change in
-            life, we can use this time to understand ourselves more deeply,
-            cultivate inner peace, and build a life guided by kindness,
-            wisdom and purpose.
-        </p>
-    </header>
+            <p class="intro">
+                Being single is one of the many ways people experience life.
+                Whether we are single by choice, circumstances, or a change in
+                life, we can use this time to understand ourselves more deeply,
+                cultivate inner peace, and build a life guided by kindness,
+                wisdom and purpose.
+            </p>
+        </header>
 
-    <figure>
-        <img
-            class="meditation-image"
-            src="/images/REPLACE-WITH-SINGLE-WOMAN-IMAGE-FILENAME"
-            alt="A single woman practising meditation peacefully in a quiet setting"
-            loading="lazy">
+        <figure>
+            <img
+                class="meditation-image"
+                src="/images/meditation-female-single-adults.png"
+                alt="A single woman practising meditation peacefully in a quiet setting"
+                loading="lazy">
 
-        <figcaption>
-            Taking a quiet moment to reconnect with ourselves.
-        </figcaption>
-    </figure>
+            <figcaption>
+                Taking a quiet moment to reconnect with ourselves.
+            </figcaption>
+        </figure>
 
-    <h2>1. Being Single Does Not Mean Being Incomplete</h2>
-
-    <p>
-        Society sometimes places great importance on marriage and romantic
-        relationships. As a result, single adults may occasionally feel
-        pressure to follow a particular path or compare their lives with
-        those of others.
-    </p>
-
-    <p>
-        Mindfulness invites us to pause and observe these thoughts without
-        immediately believing or judging them. Our worth is not determined
-        by our relationship status. Each person has the potential to learn,
-        grow, care for others and contribute to the world.
-    </p>
-
-    <p>
-        A meaningful life can include friendships, family relationships,
-        learning, meaningful work, creativity, service to others and a
-        connection with nature. We do not need to wait for a particular
-        life event before beginning to live well.
-    </p>
-
-    <div class="reflection">
-        <strong>A gentle reflection:</strong>
-        <p>
-            Instead of asking, “Why is my life different from others?”,
-            we can ask, “How can I make this life meaningful, kind and
-            peaceful?”
-        </p>
-    </div>
-
-    <h2>2. Learn to Enjoy Our Own Company</h2>
-
-    <p>
-        Spending time alone can offer an opportunity to understand our
-        thoughts, feelings and habits. We may discover what genuinely
-        brings us joy, what causes unnecessary worry, and which values
-        we wish to live by.
-    </p>
-
-    <p>
-        We can enjoy simple activities mindfully: drinking a cup of tea,
-        reading a book, preparing a meal, tending plants, walking outdoors
-        or listening to the sounds of nature. When we give our full
-        attention to an ordinary moment, it can become an opportunity
-        for calm and appreciation.
-    </p>
-
-    <p>
-        However, enjoying solitude does not mean that we must do everything
-        alone. Healthy friendships, family connections and supportive
-        communities remain important. We can value quiet time while also
-        making room for companionship and asking for support when needed.
-    </p>
-
-    <figure>
-        <img
-            class="meditation-image"
-            src="/images/REPLACE-WITH-SINGLE-MAN-IMAGE-FILENAME"
-            alt="A single man sitting quietly and practising meditation"
-            loading="lazy">
-
-        <figcaption>
-            Meditation helps us meet ourselves with patience and understanding.
-        </figcaption>
-    </figure>
-
-    <h2>3. Observe Thoughts Without Being Carried Away</h2>
-
-    <p>
-        At times, thoughts about the past or future may arise. We may
-        remember a difficult relationship, worry about growing older,
-        wonder about the future, or feel lonely when others are celebrating
-        important occasions.
-    </p>
-
-    <p>
-        Mindfulness does not require us to suppress these feelings or
-        pretend that everything is fine. Instead, we learn to recognise
-        what is happening in the present moment.
-    </p>
-
-    <p>
-        We can gently acknowledge, “This is sadness,” “This is worry,”
-        or “This is a feeling of loneliness.” We then return our attention
-        to the breath or another present-moment experience.
-    </p>
-
-    <p>
-        Feelings naturally change. By observing them with patience rather
-        than reacting immediately, we may create space to respond more
-        wisely and compassionately.
-    </p>
-
-    <h2>4. Practise Loving-Kindness</h2>
-
-    <p>
-        In Buddhist meditation, loving-kindness, or <em>mettā</em>, is the
-        cultivation of goodwill towards ourselves and others. It is not
-        limited to people who are married, in relationships or surrounded
-        by family. Everyone can practise it.
-    </p>
-
-    <p>
-        We can begin by quietly repeating these phrases:
-    </p>
-
-    <div class="reflection">
-        <p>May I be well and peaceful.</p>
-        <p>May I learn to meet life's difficulties with wisdom.</p>
-        <p>May I be free from unnecessary suffering.</p>
-        <p>May others also experience safety, happiness and peace.</p>
-    </div>
-
-    <p>
-        We can gradually extend these wishes to our family, friends,
-        neighbours, people we find difficult, and all living beings.
-        The practice encourages goodwill without requiring others to
-        fulfil our expectations.
-    </p>
-
-    <h2>5. Build a Life Guided by Values and Purpose</h2>
-
-    <p>
-        A fulfilling life is not measured only by relationship status,
-        possessions or achievements. We can also reflect on the qualities
-        we develop and the good we bring to others.
-    </p>
-
-    <p>Consider making space for activities such as:</p>
-
-    <ul>
-        <li><strong>Kindness and generosity:</strong> Offer help when we can, share what is useful, and treat people with respect.</li>
-        <li><strong>Learning and personal growth:</strong> Read, develop a skill, or explore a subject that deepens our understanding.</li>
-        <li><strong>Mindful living:</strong> Make thoughtful choices about spending, consumption and daily habits.</li>
-        <li><strong>Connection with nature:</strong> Walk among trees, grow plants, or care for the environment.</li>
-        <li><strong>Community and friendship:</strong> Nurture supportive relationships and participate in activities that bring people together.</li>
-        <li><strong>Rest and self-care:</strong> Respect our physical and emotional needs without feeling guilty for taking time to recharge.</li>
-    </ul>
-
-    <p>
-        We do not need to accomplish everything at once. Small, consistent
-        actions can gradually shape a life that reflects our values.
-    </p>
-
-    <h2>6. Reflect on Change with Wisdom</h2>
-
-    <p>
-        Buddhist teachings encourage us to contemplate impermanence:
-        experiences, circumstances, relationships and feelings are subject
-        to change. Recognising this does not mean becoming indifferent
-        to life. Rather, it can help us appreciate what we have while
-        meeting change with greater understanding.
-    </p>
-
-    <p>
-        We may not be able to control every circumstance, but we can learn
-        to pay attention to our intentions, actions and responses. Instead
-        of measuring our lives against another person's journey, we can
-        focus on cultivating wisdom, compassion and wholesome qualities.
-    </p>
-
-    <p>
-        Being single is not a problem that everyone needs to solve. For
-        some, it is a fulfilling choice; for others, it may be a temporary
-        or difficult circumstance. Whatever our situation, we can approach
-        ourselves and others without shame or judgement.
-    </p>
-
-    <h2>7. A Simple Daily Meditation Practice</h2>
-
-    <div class="practice">
-        <p><strong>Begin with five to ten minutes.</strong></p>
-
-        <ol>
-            <li>Find a quiet place and sit in a comfortable, balanced posture. You may sit on a chair if that feels better.</li>
-            <li>Allow the body to relax while keeping the mind gently attentive.</li>
-            <li>Notice the natural breath without forcing it to become deeper or slower.</li>
-            <li>When thoughts or feelings arise, acknowledge them gently and return your attention to the breath.</li>
-            <li>For the final minute, cultivate gratitude or silently offer wishes of loving-kindness to yourself and others.</li>
-            <li>Before finishing, consider one small wholesome action you can take during the day.</li>
-        </ol>
+        <h2>1. Being Single Does Not Mean Being Incomplete</h2>
 
         <p>
-            There is no need to judge a meditation session as successful
-            or unsuccessful. The practice is to begin again patiently,
-            whenever we notice that the mind has wandered.
+            Society sometimes places great importance on marriage and romantic
+            relationships. As a result, single adults may occasionally feel
+            pressure to follow a particular path or compare their lives with
+            those of others.
         </p>
-    </div>
 
-    <h2>Closing Reflection: A Life Worth Nurturing</h2>
-
-    <p>
-        Our lives do not all follow the same timetable. Some people marry,
-        some remain single, some experience changes in relationships, and
-        others find fulfilment in different forms of companionship and
-        community.
-    </p>
-
-    <p>
-        Rather than judging ourselves by comparison, we can learn to
-        appreciate the life before us. Through mindfulness, we can better
-        understand our emotions, make wiser choices and cultivate
-        compassion for ourselves and others.
-    </p>
-
-    <p>
-        May we learn to live with a peaceful heart, a wise mind and
-        kindness towards all beings. May our lives be meaningful not
-        because they look like someone else's, but because of the care,
-        understanding and goodness we bring to each day.
-    </p>
-
-    <div class="share-section">
-        <h2>Share This Article</h2>
         <p>
-            If you find this reflection helpful, feel free to share it
-            with family and friends.
+            Mindfulness invites us to pause and observe these thoughts without
+            immediately believing or judging them. Our worth is not determined
+            by our relationship status. Each person has the potential to learn,
+            grow, care for others and contribute to the world.
         </p>
 
-        <div class="share-links">
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
-               target="_blank" rel="noopener noreferrer">Facebook</a>
+        <p>
+            A meaningful life can include friendships, family relationships,
+            learning, meaningful work, creativity, service to others and a
+            connection with nature. We do not need to wait for a particular
+            life event before beginning to live well.
+        </p>
 
-            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html&text=Meditation%20for%20Single%20Adults%3A%20Finding%20Peace%20and%20Contentment"
-               target="_blank" rel="noopener noreferrer">X</a>
-
-            <a href="https://api.whatsapp.com/send?text=Meditation%20for%20Single%20Adults%3A%20Finding%20Peace%20and%20Contentment%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
-               target="_blank" rel="noopener noreferrer">WhatsApp</a>
-
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
-               target="_blank" rel="noopener noreferrer">LinkedIn</a>
-
-            <button type="button" onclick="copyArticleLink()">Copy Link</button>
+        <div class="reflection">
+            <strong>A gentle reflection:</strong>
+            <p>
+                Instead of asking, “Why is my life different from others?”,
+                we can ask, “How can I make this life meaningful, kind and
+                peaceful?”
+            </p>
         </div>
 
-        <p id="copy-message" role="status" aria-live="polite"></p>
-    </div>
+        <h2>2. Learn to Enjoy Our Own Company</h2>
 
-    <a class="back-link" href="/mindfulness.html">
-        &larr; Back to Mindfulness
-    </a>
+        <p>
+            Spending time alone can offer an opportunity to understand our
+            thoughts, feelings and habits. We may discover what genuinely
+            brings us joy, what causes unnecessary worry, and which values
+            we wish to live by.
+        </p>
+
+        <p>
+            We can enjoy simple activities mindfully: drinking a cup of tea,
+            reading a book, preparing a meal, tending plants, walking outdoors
+            or listening to the sounds of nature. When we give our full
+            attention to an ordinary moment, it can become an opportunity
+            for calm and appreciation.
+        </p>
+
+        <p>
+            However, enjoying solitude does not mean that we must do everything
+            alone. Healthy friendships, family connections and supportive
+            communities remain important. We can value quiet time while also
+            making room for companionship and asking for support when needed.
+        </p>
+
+        <figure>
+            <img
+                class="meditation-image"
+                src="/images/meditation-male-single-adults.png"
+                alt="A single man sitting quietly and practising meditation"
+                loading="lazy">
+
+            <figcaption>
+                Meditation helps us meet ourselves with patience and understanding.
+            </figcaption>
+        </figure>
+
+        <h2>3. Observe Thoughts Without Being Carried Away</h2>
+
+        <p>
+            At times, thoughts about the past or future may arise. We may
+            remember a difficult relationship, worry about growing older,
+            wonder about the future, or feel lonely when others are celebrating
+            important occasions.
+        </p>
+
+        <p>
+            Mindfulness does not require us to suppress these feelings or
+            pretend that everything is fine. Instead, we learn to recognise
+            what is happening in the present moment.
+        </p>
+
+        <p>
+            We can gently acknowledge, “This is sadness,” “This is worry,”
+            or “This is a feeling of loneliness.” We then return our attention
+            to the breath or another present-moment experience.
+        </p>
+
+        <p>
+            Feelings naturally change. By observing them with patience rather
+            than reacting immediately, we may create space to respond more
+            wisely and compassionately.
+        </p>
+
+        <h2>4. Practise Loving-Kindness</h2>
+
+        <p>
+            In Buddhist meditation, loving-kindness, or <em>mettā</em>, is the
+            cultivation of goodwill towards ourselves and others. It is not
+            limited to people who are married, in relationships or surrounded
+            by family. Everyone can practise it.
+        </p>
+
+        <p>
+            We can begin by quietly repeating these phrases:
+        </p>
+
+        <div class="reflection">
+            <p>May I be well and peaceful.</p>
+            <p>May I learn to meet life's difficulties with wisdom.</p>
+            <p>May I be free from unnecessary suffering.</p>
+            <p>May others also experience safety, happiness and peace.</p>
+        </div>
+
+        <p>
+            We can gradually extend these wishes to our family, friends,
+            neighbours, people we find difficult, and all living beings.
+            The practice encourages goodwill without requiring others to
+            fulfil our expectations.
+        </p>
+
+        <h2>5. Build a Life Guided by Values and Purpose</h2>
+
+        <p>
+            A fulfilling life is not measured only by relationship status,
+            possessions or achievements. We can also reflect on the qualities
+            we develop and the good we bring to others.
+        </p>
+
+        <p>Consider making space for activities such as:</p>
+
+        <ul>
+            <li>
+                <strong>Kindness and generosity:</strong>
+                Offer help when we can, share what is useful, and treat people with respect.
+            </li>
+            <li>
+                <strong>Learning and personal growth:</strong>
+                Read, develop a skill, or explore a subject that deepens our understanding.
+            </li>
+            <li>
+                <strong>Mindful living:</strong>
+                Make thoughtful choices about spending, consumption and daily habits.
+            </li>
+            <li>
+                <strong>Connection with nature:</strong>
+                Walk among trees, grow plants, or care for the environment.
+            </li>
+            <li>
+                <strong>Community and friendship:</strong>
+                Nurture supportive relationships and participate in activities that bring people together.
+            </li>
+            <li>
+                <strong>Rest and self-care:</strong>
+                Respect our physical and emotional needs without feeling guilty for taking time to recharge.
+            </li>
+        </ul>
+
+        <p>
+            We do not need to accomplish everything at once. Small, consistent
+            actions can gradually shape a life that reflects our values.
+        </p>
+
+        <h2>6. Reflect on Change with Wisdom</h2>
+
+        <p>
+            Buddhist teachings encourage us to contemplate impermanence:
+            experiences, circumstances, relationships and feelings are subject
+            to change. Recognising this does not mean becoming indifferent
+            to life. Rather, it can help us appreciate what we have while
+            meeting change with greater understanding.
+        </p>
+
+        <p>
+            We may not be able to control every circumstance, but we can learn
+            to pay attention to our intentions, actions and responses. Instead
+            of measuring our lives against another person's journey, we can
+            focus on cultivating wisdom, compassion and wholesome qualities.
+        </p>
+
+        <p>
+            Being single is not a problem that everyone needs to solve. For
+            some, it is a fulfilling choice; for others, it may be a temporary
+            or difficult circumstance. Whatever our situation, we can approach
+            ourselves and others without shame or judgement.
+        </p>
+
+        <h2>7. A Simple Daily Meditation Practice</h2>
+
+        <div class="practice">
+            <p><strong>Begin with five to ten minutes.</strong></p>
+
+            <ol>
+                <li>
+                    Find a quiet place and sit in a comfortable, balanced posture.
+                    You may sit on a chair if that feels better.
+                </li>
+                <li>
+                    Allow the body to relax while keeping the mind gently attentive.
+                </li>
+                <li>
+                    Notice the natural breath without forcing it to become deeper or slower.
+                </li>
+                <li>
+                    When thoughts or feelings arise, acknowledge them gently and return your attention to the breath.
+                </li>
+                <li>
+                    For the final minute, cultivate gratitude or silently offer wishes of loving-kindness to yourself and others.
+                </li>
+                <li>
+                    Before finishing, consider one small wholesome action you can take during the day.
+                </li>
+            </ol>
+
+            <p>
+                There is no need to judge a meditation session as successful
+                or unsuccessful. The practice is to begin again patiently,
+                whenever we notice that the mind has wandered.
+            </p>
+        </div>
+
+        <h2>Closing Reflection: A Life Worth Nurturing</h2>
+
+        <p>
+            Our lives do not all follow the same timetable. Some people marry,
+            some remain single, some experience changes in relationships, and
+            others find fulfilment in different forms of companionship and
+            community.
+        </p>
+
+        <p>
+            Rather than judging ourselves by comparison, we can learn to
+            appreciate the life before us. Through mindfulness, we can better
+            understand our emotions, make wiser choices and cultivate
+            compassion for ourselves and others.
+        </p>
+
+        <p>
+            May we learn to live with a peaceful heart, a wise mind and
+            kindness towards all beings. May our lives be meaningful not
+            because they look like someone else's, but because of the care,
+            understanding and goodness we bring to each day.
+        </p>
+
+        <div class="share-section">
+            <h2>Share This Article</h2>
+
+            <p>
+                If you find this reflection helpful, feel free to share it
+                with family and friends.
+            </p>
+
+            <div class="share-links">
+                <a
+                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Facebook
+                </a>
+
+                <a
+                    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html&text=Meditation%20for%20Single%20Adults%3A%20Finding%20Peace%20and%20Contentment"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    X
+                </a>
+
+                <a
+                    href="https://api.whatsapp.com/send?text=Meditation%20for%20Single%20Adults%3A%20Finding%20Peace%20and%20Contentment%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    WhatsApp
+                </a>
+
+                <a
+                    href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-single-adults.html"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    LinkedIn
+                </a>
+
+                <button type="button" onclick="copyArticleLink()">
+                    Copy Link
+                </button>
+            </div>
+
+            <p id="copy-message" role="status" aria-live="polite"></p>
+        </div>
+
+        <!-- Four-card meditation footer -->
+
+        <nav class="meditation-footer"
+             aria-label="Continue exploring mindfulness and Dhamma">
+
+            <h2>Continue Exploring Mindfulness &amp; Dhamma</h2>
+
+            <div class="meditation-footer-grid">
+
+                <a class="meditation-footer-card"
+                   href="/mindfulness.html">
+                    <strong>&larr; Mindfulness &amp; Dhamma</strong>
+                    <span>Explore more meditation topics and reflections</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/mindfulness-of-breathing.html">
+                    <strong>Mindfulness of Breathing</strong>
+                    <span>An introduction to noticing the natural breath</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/building-a-meditation-habit.html">
+                    <strong>Building a Meditation Habit</strong>
+                    <span>Small steps towards a sustainable routine</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/meditation-in-the-pa-auk-tradition.html">
+                    <strong>Meditation in the Pa-Auk Tradition</strong>
+                    <span>Explore virtue, concentration and wisdom</span>
+                </a>
+
+            </div>
+        </nav>
+
+    </article>
 </main>
 
 <script>
