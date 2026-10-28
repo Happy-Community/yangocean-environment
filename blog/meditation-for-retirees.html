@@ -117,16 +117,79 @@
             color: white;
         }
 
-        .back-link {
-            display: inline-block;
-            margin-top: 24px;
-            color: #385c45;
-            font-weight: bold;
-            text-decoration: none;
+        /* Four-card meditation footer */
+
+        .meditation-footer {
+            margin-top: 42px;
+            padding-top: 8px;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        .meditation-footer h2 {
+            margin: 0 0 22px;
+            color: #064b3b;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+
+        .meditation-footer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px 16px;
+        }
+
+        .meditation-footer-card {
+            display: block;
+            min-height: 66px;
+            padding: 20px;
+            color: #064b3b;
+            background: #fff;
+            border: 1px solid #d8e5d8;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: background-color 0.2s ease,
+                        border-color 0.2s ease;
+        }
+
+        .meditation-footer-card strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.08rem;
+            line-height: 1.45;
+        }
+
+        .meditation-footer-card span {
+            display: block;
+            color: #667568;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .meditation-footer-card:hover {
+            background: #f7faf5;
+            border-color: #9db9a0;
+        }
+
+        .meditation-footer-card:focus-visible {
+            outline: 3px solid #7b9e82;
+            outline-offset: 3px;
+        }
+
+        /* Mobile layout */
+
+        @media (max-width: 620px) {
+            .meditation-footer h2 {
+                font-size: 1.65rem;
+            }
+
+            .meditation-footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meditation-footer-card {
+                padding: 18px;
+            }
         }
     </style>
 </head>
@@ -550,9 +613,41 @@
             });
         </script>
 
-        <a class="back-link" href="/mindfulness.html">
-            &larr; Back to Mindfulness
-        </a>
+        <!-- Four-card meditation footer -->
+        <nav class="meditation-footer"
+             aria-label="Continue exploring mindfulness and Dhamma">
+
+            <h2>Continue Exploring Mindfulness &amp; Dhamma</h2>
+
+            <div class="meditation-footer-grid">
+
+                <a class="meditation-footer-card"
+                   href="/mindfulness.html">
+                    <strong>&larr; Mindfulness &amp; Dhamma</strong>
+                    <span>Explore more meditation topics and reflections</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/mindfulness-of-breathing.html">
+                    <strong>Mindfulness of Breathing</strong>
+                    <span>An introduction to noticing the natural breath</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/building-a-meditation-habit.html">
+                    <strong>Building a Meditation Habit</strong>
+                    <span>Small steps towards a sustainable routine</span>
+                </a>
+
+                <a class="meditation-footer-card"
+                   href="/blog/meditation-in-the-pa-auk-tradition.html">
+                    <strong>Meditation in the Pa-Auk Tradition</strong>
+                    <span>Explore virtue, concentration and wisdom</span>
+                </a>
+
+            </div>
+        </nav>
+
     </article>
 </main>
 </body>
