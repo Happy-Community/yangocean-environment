@@ -819,7 +819,7 @@
     </article>
 </main>
 
-<script>
+
 (function () {
     "use strict";
 
@@ -834,17 +834,27 @@
         !("SpeechSynthesisUtterance" in window)) {
         if (readStatus) {
             readStatus.textContent =
-                "Read-aloud is not supported by this browser. Please try a current version of Chrome, Edge or Safari.";
+                "Read-aloud is not supported by this browser.";
         }
+
         if (readButton) readButton.disabled = true;
         return;
     }
 
     const synth = window.speechSynthesis;
+
     let chunks = [];
     let currentIndex = 0;
     let isReading = false;
+    let isPaused = false;
     let runId = 0;
+
+    function updateButtons() {
+        readButton.disabled = isReading;
+        pauseButton.disabled = !isReading || isPaused;
+        resumeButton.disabled = !isReading || !isPaused;
+        stopButton.disabled = !isReading;
+    }
 
     function getArticleText() {
         const clone = article.cloneNode(true);
@@ -855,9 +865,7 @@
             element.remove();
         });
 
-        return clone.innerText
-            .replace(/\s+/g, " ")
-            .trim();
+        return clone.innerText.replace(/\s+/g, " ").trim();
     }
 
     function splitText(text, maxLength) {
@@ -875,34 +883,27 @@
                 current = "";
             }
 
-            if (sentence.length > maxLength) {
-                const words = sentence.split(/\s+/);
-                words.forEach(function (word) {
-                    if ((current + " " + word).trim().length > maxLength &&
-                        current) {
-                        result.push(current.trim());
-                        current = "";
-                    }
-                    current = (current + " " + word).trim();
-                });
-            } else {
-                current = (current + " " + sentence).trim();
-            }
+            const words = sentence.split(/\s+/);
+
+            words.forEach(function (word) {
+                if ((current + " " + word).trim().length > maxLength &&
+                    current) {
+                    result.push(current.trim());
+                    current = "";
+                }
+
+                current = (current + " " + word).trim();
+            });
         });
 
         if (current) result.push(current.trim());
-        return result;
-    }
 
-    function updateButtons() {
-        readButton.disabled = isReading;
-        pauseButton.disabled = !isReading || synth.paused;
-        resumeButton.disabled = !isReading || !synth.paused;
-        stopButton.disabled = !isReading;
+        return result;
     }
 
     function finishReading(message) {
         isReading = false;
+        isPaused = false;
         chunks = [];
         currentIndex = 0;
         updateButtons();
@@ -910,7 +911,7 @@
     }
 
     function speakNext(activeRun) {
-        if (activeRun !== runId || !isReading) return;
+        if (activeRun !== runId || !isReading || isPaused) return;
 
         if (currentIndex >= chunks.length) {
             finishReading("Finished reading the article.");
@@ -924,25 +925,32 @@
         utterance.lang = "en";
         utterance.rate = 0.92;
 
-        const voices = synth.getVoices();
-        const englishVoice = voices.find(function (voice) {
+        const englishVoice = synth.getVoices().find(function (voice) {
             return /^en(-|_)/i.test(voice.lang);
         });
 
-        if (englishVoice) utterance.voice = englishVoice;
+        if (englishVoice) {
+            utterance.voice = englishVoice;
+        }
 
         utterance.onend = function () {
             if (activeRun !== runId || !isReading) return;
-            currentIndex += 1;
+
+            currentIndex++;
             speakNext(activeRun);
         };
 
         utterance.onerror = function (event) {
             if (activeRun !== runId) return;
-            if (event.error === "canceled" || event.error === "interrupted") {
+
+            if (event.error === "canceled" ||
+                event.error === "interrupted") {
                 return;
             }
-            finishReading("Sorry, the browser could not continue reading. Please try again.");
+
+            finishReading(
+                "Sorry, reading was interrupted. Please try again."
+            );
         };
 
         synth.speak(utterance);
@@ -950,10 +958,12 @@
 
     readButton.addEventListener("click", function () {
         synth.cancel();
-        runId += 1;
+
+        runId++;
         chunks = splitText(getArticleText(), 180);
         currentIndex = 0;
         isReading = true;
+        isPaused = false;
 
         if (!chunks.length) {
             finishReading("There is no article text available to read.");
@@ -966,29 +976,33 @@
     });
 
     pauseButton.addEventListener("click", function () {
-        if (isReading && synth.speaking && !synth.paused) {
-            synth.pause();
-            readStatus.textContent = "Reading paused.";
-            updateButtons();
-        }
+        if (!isReading || isPaused) return;
+
+        isPaused = true;
+        synth.pause();
+
+        readStatus.textContent = "Reading paused.";
+        updateButtons();
     });
 
     resumeButton.addEventListener("click", function () {
-        if (isReading && synth.paused) {
-            synth.resume();
-            readStatus.textContent = "Reading resumed.";
-            updateButtons();
-        }
+        if (!isReading || !isPaused) return;
+
+        isPaused = false;
+        synth.resume();
+
+        readStatus.textContent = "Reading resumed.";
+        updateButtons();
     });
 
     stopButton.addEventListener("click", function () {
-        runId += 1;
+        runId++;
         synth.cancel();
         finishReading("Reading stopped.");
     });
 
     window.addEventListener("pagehide", function () {
-        runId += 1;
+        runId++;
         synth.cancel();
     });
 
