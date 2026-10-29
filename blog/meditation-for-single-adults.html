@@ -114,7 +114,7 @@
         }
 
         .breadcrumb {
-            margin: 0 0 22px;
+            margin: 0 0 18px;
             font-size: 0.9rem;
             color: var(--muted);
         }
@@ -125,6 +125,57 @@
 
         .breadcrumb a:hover {
             text-decoration: underline;
+        }
+
+        /* Read Aloud controls */
+        .read-aloud-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            margin: 18px 0 28px;
+            padding: 14px;
+            background: var(--soft-green);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .read-aloud-controls button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            min-height: 42px;
+            padding: 9px 15px;
+            border: 1px solid var(--green);
+            border-radius: 8px;
+            background: var(--green);
+            color: #fff;
+            font-size: 0.94rem;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .read-aloud-controls button:hover:not(:disabled) {
+            background: var(--deep-green);
+        }
+
+        .read-aloud-controls button:focus-visible {
+            outline: 3px solid #7b9e82;
+            outline-offset: 3px;
+        }
+
+        .read-aloud-controls button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .read-aloud-status {
+            flex-basis: 100%;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.88rem;
+            line-height: 1.5;
         }
 
         h1, h2, h3 {
@@ -283,6 +334,17 @@
                 padding: 22px 18px 35px;
             }
 
+            .read-aloud-controls {
+                gap: 8px;
+                padding: 12px;
+            }
+
+            .read-aloud-controls button {
+                flex: 1 1 auto;
+                padding: 9px 11px;
+                font-size: 0.9rem;
+            }
+
             .meditation-footer-grid {
                 grid-template-columns: 1fr;
             }
@@ -331,7 +393,17 @@
         Meditation for Single Adults
     </div>
 
-    <article>
+    <!-- Read Aloud controls -->
+    <div class="read-aloud-controls" role="group" aria-label="Article audio controls">
+        <button type="button" id="readAloudBtn">🔊 Read Aloud</button>
+        <button type="button" id="pauseResumeBtn" disabled>⏸ Pause</button>
+        <button type="button" id="stopReadingBtn" disabled>⏹ Stop</button>
+        <p class="read-aloud-status" id="readAloudStatus" aria-live="polite">
+            Select Read Aloud to listen to this article.
+        </p>
+    </div>
+
+    <article id="articleContent">
         <header class="article-heading">
             <h1>Meditation for Single Adults: Living Fully and Mindfully</h1>
             <p class="article-subtitle">
@@ -771,6 +843,140 @@
 <script>
     document.getElementById("current-year").textContent =
         new Date().getFullYear();
+</script>
+
+<script>
+(function () {
+    const readBtn = document.getElementById("readAloudBtn");
+    const pauseBtn = document.getElementById("pauseResumeBtn");
+    const stopBtn = document.getElementById("stopReadingBtn");
+    const status = document.getElementById("readAloudStatus");
+    const article = document.getElementById("articleContent");
+
+    if (!readBtn || !pauseBtn || !stopBtn || !status || !article) {
+        return;
+    }
+
+    if (!("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)) {
+        readBtn.disabled = true;
+        pauseBtn.disabled = true;
+        stopBtn.disabled = true;
+        status.textContent =
+            "Read Aloud is not supported by this browser. Please try a modern browser.";
+        return;
+    }
+
+    let isPaused = false;
+    let isReading = false;
+    let utterance = null;
+
+    function updateControls() {
+        readBtn.disabled = isReading;
+        pauseBtn.disabled = !isReading;
+        stopBtn.disabled = !isReading;
+    }
+
+    function resetReading(message) {
+        isReading = false;
+        isPaused = false;
+        utterance = null;
+
+        readBtn.textContent = "🔊 Read Aloud";
+        pauseBtn.textContent = "⏸ Pause";
+        updateControls();
+
+        if (message) {
+            status.textContent = message;
+        }
+    }
+
+    function getArticleText() {
+        const copy = article.cloneNode(true);
+
+        copy.querySelectorAll(
+            "script, style, button, nav, .read-aloud-controls, footer"
+        ).forEach(function (element) {
+            element.remove();
+        });
+
+        return copy.innerText
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    readBtn.addEventListener("click", function () {
+        window.speechSynthesis.cancel();
+
+        const text = getArticleText();
+
+        if (!text) {
+            status.textContent = "No article text is available to read.";
+            return;
+        }
+
+        utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = document.documentElement.lang || "en";
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+
+        utterance.onstart = function () {
+            isReading = true;
+            isPaused = false;
+            readBtn.textContent = "🔊 Reading...";
+            pauseBtn.textContent = "⏸ Pause";
+            status.textContent = "Reading the article aloud.";
+            updateControls();
+        };
+
+        utterance.onend = function () {
+            resetReading("Finished reading the article.");
+        };
+
+        utterance.onerror = function (event) {
+            if (event.error === "canceled" ||
+                event.error === "interrupted") {
+                return;
+            }
+
+            resetReading(
+                "Audio playback encountered a problem. Please try again."
+            );
+        };
+
+        isReading = true;
+        isPaused = false;
+        updateControls();
+        status.textContent = "Preparing audio...";
+
+        window.speechSynthesis.speak(utterance);
+    });
+
+    pauseBtn.addEventListener("click", function () {
+        if (!isReading) return;
+
+        if (!isPaused) {
+            window.speechSynthesis.pause();
+            isPaused = true;
+            pauseBtn.textContent = "▶ Resume";
+            status.textContent = "Reading paused.";
+        } else {
+            window.speechSynthesis.resume();
+            isPaused = false;
+            pauseBtn.textContent = "⏸ Pause";
+            status.textContent = "Resuming article audio.";
+        }
+    });
+
+    stopBtn.addEventListener("click", function () {
+        window.speechSynthesis.cancel();
+        resetReading("Reading stopped.");
+    });
+
+    window.addEventListener("pagehide", function () {
+        window.speechSynthesis.cancel();
+    });
+})();
 </script>
 
 </body>
