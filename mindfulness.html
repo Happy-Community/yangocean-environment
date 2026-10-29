@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Mindfulness &amp; Dhamma | Awareness, Wisdom &amp; Compassion | Yangocean</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Explore mindfulness and Dhamma through awareness, meditation, compassion, wisdom, impermanence, and simple reflections for everyday life.">
+
+<title>Mindfulness &amp; Dhamma | Awareness, Wisdom &amp; Compassion | Yangocean</title>
+
+<meta name="description" content="Explore mindfulness and Dhamma through meditation, awareness, compassion, wisdom, impermanence, gratitude and practical reflections for everyday life.">
 <meta name="robots" content="index, follow">
+
 <link rel="stylesheet" href="/styles.css">
 <link rel="canonical" href="https://yangocean.com/mindfulness.html">
 
@@ -21,7 +24,7 @@
 <!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="Mindfulness &amp; Dhamma | Awareness, Wisdom &amp; Compassion">
-<meta property="og:description" content="Explore mindfulness and Dhamma through awareness, meditation, compassion, wisdom, impermanence, and simple reflections for everyday life.">
+<meta property="og:description" content="Explore mindfulness, meditation, compassion, wisdom, gratitude and reflections for everyday life.">
 <meta property="og:url" content="https://yangocean.com/mindfulness.html">
 <meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
@@ -30,65 +33,133 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515" crossorigin="anonymous"></script>
 
 <style>
-.read-aloud {
-    text-align: center;
-    margin: 25px 0 35px;
+:root {
+    --green: #245b45;
+    --deep-green: #174532;
+    --soft-green: #edf4eb;
+    --cream: #fffdf6;
+    --warm-cream: #f8f3e6;
+    --text: #34453b;
+    --muted: #66756b;
+    --border: #dce7da;
+    --gold: #d5a84f;
 }
 
-.read-aloud button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #285943;
-    color: white;
-    margin: 4px;
+* {
+    box-sizing: border-box;
 }
 
-.read-aloud button:hover {
-    opacity: 0.9;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
 }
 
-.read-aloud button:focus-visible {
-    outline: 3px solid #d5a84f;
-    outline-offset: 3px;
-}
-
-#content-to-read .card {
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     line-height: 1.8;
 }
 
-#content-to-read .card h2 {
-    margin-bottom: 15px;
+a {
+    color: var(--green);
+    text-underline-offset: 4px;
 }
 
-#content-to-read .card h3 {
-    margin-top: 25px;
+a:hover {
+    color: var(--deep-green);
 }
 
-#content-to-read ul {
-    line-height: 1.9;
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
 }
 
-.meditation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
-    gap: 16px;
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 22px;
 }
 
-.meditation-item {
-    padding: 16px;
-    border: 1px solid #dce8df;
-    border-radius: 12px;
+/* HEADER */
+
+.site-header {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-top: 18px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.04);
 }
 
-.meditation-item h3 {
-    margin-top: 0 !important;
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.meditation-item a {
+.site-name {
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-tagline {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+}
+
+.language-selector a {
+    text-decoration: none;
     font-weight: 600;
+}
+
+.language-selector a[lang="en"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.main-nav > a,
+.dropdown > a {
+    color: var(--green);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-nav > a:hover,
+.dropdown > a:hover {
+    color: var(--deep-green);
+    text-decoration: underline;
 }
 
 .dropdown {
@@ -99,11 +170,14 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background: white;
-    min-width: 210px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
     padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(23, 69, 50, 0.12);
     z-index: 1000;
     text-align: left;
 }
@@ -111,12 +185,13 @@
 .dropdown-content a {
     display: block;
     padding: 10px 15px;
+    color: var(--green);
+    font-size: 0.92rem;
     text-decoration: none;
-    color: #285943;
 }
 
 .dropdown-content a:hover {
-    background: #f2f7f3;
+    background: var(--soft-green);
 }
 
 .dropdown:hover .dropdown-content,
@@ -124,13 +199,348 @@
     display: block;
 }
 
-@media (max-width: 600px) {
+/* MAIN CONTENT */
+
+main {
+    padding-top: 18px;
+    padding-bottom: 48px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--soft-green), var(--warm-cream));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(30px, 6vw, 52px) 26px;
+    margin: 24px 0 30px;
+    text-align: center;
+}
+
+.hero-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    color: #53645a;
+    font-size: 1.06rem;
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.hero-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid var(--green);
+    border-radius: 9px;
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-links a:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    text-align: center;
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    margin: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--green);
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.read-aloud button:hover {
+    background: var(--deep-green);
+}
+
+.read-aloud button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#readAloudStatus {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* CONTENT CARDS */
+
+#content-to-read > section.card,
+#content-to-read > section.mindfulness-topic {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.045);
+}
+
+#content-to-read .card h2,
+#content-to-read .mindfulness-topic h2 {
+    margin: 0 0 17px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+    line-height: 1.4;
+}
+
+#content-to-read .card h3,
+#content-to-read .mindfulness-topic h3 {
+    margin-top: 25px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#content-to-read .card p,
+#content-to-read .mindfulness-topic p {
+    margin: 0 0 17px;
+    line-height: 1.85;
+}
+
+#content-to-read .card p:last-child,
+#content-to-read .mindfulness-topic p:last-child {
+    margin-bottom: 0;
+}
+
+#content-to-read .card ul,
+#content-to-read .card ol {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+#content-to-read .card li {
+    margin-bottom: 7px;
+}
+
+#content-to-read .card a,
+#content-to-read .mindfulness-topic a {
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+}
+
+#content-to-read .card a:hover,
+#content-to-read .mindfulness-topic a:hover {
+    color: var(--deep-green);
+}
+
+/* MEDITATION GRID */
+
+.meditation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.meditation-item {
+    min-width: 0;
+    padding: 22px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.meditation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 69, 50, 0.08);
+}
+
+.meditation-item h3 {
+    margin: 0 0 12px !important;
+    color: var(--deep-green);
+    font-size: 1.15rem;
+}
+
+.meditation-item p {
+    margin-bottom: 15px !important;
+}
+
+.meditation-item a {
+    display: inline-block;
+}
+
+/* FEATURED GRATITUDE ARTICLE */
+
+.gratitude-card {
+    background: var(--warm-cream) !important;
+    border-left: 5px solid var(--green) !important;
+}
+
+.gratitude-card .card-subtitle {
+    margin-top: -8px !important;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    font-style: italic;
+}
+
+/* FEATURED RETREAT */
+
+.retreat-card {
+    background: #f7faf4 !important;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 36px;
+    padding: 28px 20px;
+    background: var(--warm-cream);
+    border: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.footer p {
+    margin: 7px 0;
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .site-header {
+        margin-top: 10px;
+        padding: 18px 14px;
+    }
+
+    .header-top {
+        align-items: flex-start;
+    }
+
+    .site-name {
+        font-size: 1.65rem;
+    }
+
+    .language-selector {
+        gap: 5px;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 12px;
+        line-height: 1.8;
+    }
+
     .dropdown-content {
+        left: auto;
+        right: 0;
+        min-width: min(230px, 85vw);
         max-width: 90vw;
     }
 
+    .hero {
+        padding: 30px 18px;
+        margin: 20px 0 24px;
+    }
+
+    #content-to-read > section.card,
+    #content-to-read > section.mindfulness-topic {
+        margin: 18px 0;
+        padding: 22px 18px;
+    }
+
+    .meditation-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .meditation-item {
+        padding: 20px;
+    }
+
+    .read-aloud {
+        padding: 15px 10px;
+    }
+
     .read-aloud button {
-        padding: 11px 16px;
+        padding: 11px 14px;
+        margin: 4px 2px;
+    }
+
+    .footer-links {
+        gap: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .read-aloud button,
+    .meditation-item {
+        transition: none;
+    }
+
+    .meditation-item:hover {
+        transform: none;
     }
 }
 </style>
@@ -139,14 +549,15 @@
 <body>
 <div class="container">
 
-<header>
-    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
-        <a href="/" style="font-size:1.4rem;font-weight:700;text-decoration:none;color:#285943;">
-            Yangocean
-        </a>
+<header class="site-header">
+    <div class="header-top">
+        <div>
+            <a class="site-name" href="/">Yangocean</a>
+            <span class="site-tagline">Mindful Living • Nature Connection • Sustainability</span>
+        </div>
 
-        <div aria-label="Choose language">
-            <a href="/mindfulness.html" lang="en">EN</a> |
+        <div class="language-selector" aria-label="Choose language">
+            <a href="/mindfulness.html" lang="en" aria-current="page">EN</a> |
             <a href="/ms/mindfulness.html" lang="ms">BM</a> |
             <a href="/zh/mindfulness.html" lang="zh">中文</a> |
             <a href="/fr/mindfulness.html" lang="fr">FR</a> |
@@ -155,11 +566,11 @@
         </div>
     </div>
 
-    <nav style="margin-top:18px;text-align:center;" aria-label="Main navigation">
-        <a href="/" style="margin:0 8px;">Home</a>
+    <nav class="main-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
 
         <span class="dropdown">
-            <a href="/mindfulness.html" style="margin:0 8px;">🌿 Mindful Living ▾</a>
+            <a href="/mindfulness.html" aria-haspopup="true">🌿 Mindful Living ▾</a>
             <span class="dropdown-content">
                 <a href="/mindfulness.html">🧘 Mindfulness &amp; Dhamma</a>
                 <a href="/mindful-ethical-living.html">💚 Mindful &amp; Ethical Living</a>
@@ -169,7 +580,7 @@
         </span>
 
         <span class="dropdown">
-            <a href="/nature-connection.html" style="margin:0 8px;">🌳 Nature Connection ▾</a>
+            <a href="/nature-connection.html" aria-haspopup="true">🌳 Nature Connection ▾</a>
             <span class="dropdown-content">
                 <a href="/nature-connection.html">🌳 Nature Connection</a>
                 <a href="/blog.html">📝 Journal</a>
@@ -177,7 +588,7 @@
         </span>
 
         <span class="dropdown">
-            <a href="/apps.html" style="margin:0 8px;">📱 Related Apps ▾</a>
+            <a href="/apps.html" aria-haspopup="true">📱 Related Apps ▾</a>
             <span class="dropdown-content">
                 <a href="/apps.html">📱 All Related Apps</a>
                 <a href="/apps.html#eft">🌿 Yangocean App</a>
@@ -190,9 +601,25 @@
 
 <main id="content-to-read">
 
+<!-- HERO -->
 <section class="hero">
-    <h1>🧘 Mindfulness &amp; Dhamma</h1>
-    <p>Cultivating awareness, wisdom, compassion, and a more peaceful way of living.</p>
+    <span class="hero-icon" aria-hidden="true">🧘</span>
+    <h1>Mindfulness &amp; Dhamma</h1>
+
+    <p>
+        Cultivating awareness, wisdom, compassion, and a more peaceful
+        way of living.
+    </p>
+
+    <p>
+        Explore meditation, Buddhist reflections and practical ways
+        to bring mindfulness into everyday life.
+    </p>
+
+    <div class="hero-links">
+        <a href="#meditation-collection">Explore Meditation</a>
+        <a href="#daily-mindfulness">Everyday Mindfulness</a>
+    </div>
 </section>
 
 <!-- READ ALOUD -->
@@ -201,28 +628,35 @@
         🔊 Read Aloud
     </button>
 
-    <button type="button" id="stopReadAloudButton" aria-label="Stop reading aloud" style="background:#64756b;">
+    <button type="button" id="stopReadAloudButton"
+            aria-label="Stop reading aloud"
+            style="background:#64756b;">
         ■ Stop
     </button>
 
-    <p id="readAloudStatus" role="status" aria-live="polite" style="margin-top:10px;font-size:0.9rem;color:#53645a;">
-        Tap Read Aloud to listen. If there is no sound, check your phone's media volume and browser settings.
+    <p id="readAloudStatus" role="status" aria-live="polite">
+        Tap Read Aloud to listen. If there is no sound, check your device's
+        media volume and browser settings.
     </p>
 </div>
 
+<!-- INTRODUCTION -->
 <section class="card">
     <h2>🌿 What Is Mindfulness?</h2>
+
     <p>
         Mindfulness is the practice of paying attention to the present
         moment with awareness and without immediately reacting to
         everything we experience.
     </p>
+
     <p>
         We can become aware of our breathing, thoughts, emotions,
-        sensations, and actions as they happen. This simple awareness
+        sensations and actions as they happen. This simple awareness
         can help us notice our habits and respond to everyday situations
         more thoughtfully.
     </p>
+
     <p>
         Mindfulness does not require every moment to be calm or pleasant.
         It begins with learning to see what is actually happening,
@@ -232,30 +666,36 @@
 
 <section class="card">
     <h2>🪷 Mindfulness and Dhamma</h2>
+
     <p>
         In the Buddhist tradition, mindfulness is closely connected with
         the development of wisdom and ethical conduct. It is not simply
         a relaxation technique, but part of a wider path of understanding
         the mind and life.
     </p>
+
     <p>
         Dhamma teachings encourage us to observe change, understand
-        causes and conditions, recognize attachment, and develop
+        causes and conditions, recognise attachment, and develop
         compassion and wisdom.
     </p>
+
     <p>
-        Different Buddhist traditions explain and practice these teachings
+        Different Buddhist traditions explain and practise these teachings
         in different ways. This page focuses on simple reflections inspired
         by Theravada Buddhist perspectives.
     </p>
 </section>
 
-<section class="card">
+<!-- DAILY MINDFULNESS -->
+<section class="card" id="daily-mindfulness">
     <h2>🌱 Bringing Awareness Into Daily Life</h2>
+
     <p>
-        Mindfulness can be practiced during ordinary activities. We do
+        Mindfulness can be practised during ordinary activities. We do
         not have to wait until we are sitting quietly in meditation.
     </p>
+
     <ul>
         <li>Notice your breathing while walking.</li>
         <li>Pay attention to the food you are eating.</li>
@@ -264,33 +704,41 @@
         <li>Pause before sending an angry message.</li>
         <li>Observe your thoughts without immediately believing or following them.</li>
     </ul>
-    <p>These small moments of awareness can become part of ordinary life.</p>
+
+    <p>
+        These small moments of awareness can become part of ordinary life.
+    </p>
 </section>
 
 <section class="card">
     <h2>🧘 A Simple Meditation Practice</h2>
+
     <p>
         Meditation provides a quiet opportunity to train attention and
         observe the mind. Beginners do not need to force the mind to
         become completely empty.
     </p>
+
     <p>
         One simple approach is to use the natural breath as an object
         of attention. Sit comfortably, allow the body to relax, and
         notice the sensation of breathing.
     </p>
+
     <p>
-        When the mind wanders, gently recognize that it has wandered
+        When the mind wanders, gently recognise that it has wandered
         and return attention to the breath. This process may happen
         many times. The returning itself is part of the practice.
     </p>
 
     <h3>A Simple Routine</h3>
+
     <ul>
         <li><strong>Morning:</strong> Spend 5–15 minutes quietly observing the breath.</li>
         <li><strong>During the day:</strong> Take a few conscious breaths before important actions.</li>
-        <li><strong>Evening:</strong> Reflect briefly on the day's thoughts, words, and actions.</li>
+        <li><strong>Evening:</strong> Reflect briefly on the day's thoughts, words and actions.</li>
     </ul>
+
     <p>
         The purpose is not to achieve a particular feeling. It is to
         develop awareness and learn to observe experience more clearly.
@@ -298,8 +746,9 @@
 </section>
 
 <!-- MEDITATION COLLECTION -->
-<section class="card">
+<section class="card" id="meditation-collection">
     <h2>🪷 Understanding Meditation</h2>
+
     <p>
         Meditation can be approached in different ways. In the Pa-Auk
         tradition, training is grounded in virtue (<em>sīla</em>),
@@ -308,104 +757,192 @@
         other practices may be taught according to a meditator's needs
         and stage of practice.
     </p>
+
     <p>
-        The articles in this collection will introduce these ideas in
+        The articles in this collection introduce these ideas in
         accessible language. They are educational reflections, not a
         substitute for personal instruction from a qualified meditation
         teacher, especially for formal concentration and insight practices.
     </p>
+
     <ul>
-        <li><a href="/blog/pa-auk-meditation-tradition.html">Meditation in the Pa-Auk Tradition: From Virtue to Concentration and Wisdom →</a></li>
-        <li><a href="/blog/mindfulness-of-breathing.html">Mindfulness of Breathing: Beginning a Meditation Practice →</a></li>
-        <li><a href="/blog/building-a-meditation-habit.html">Building a Regular Meditation Habit: Patience, Effort and Balance →</a></li>
+        <li>
+            <a href="/blog/pa-auk-meditation-tradition.html">
+                Meditation in the Pa-Auk Tradition: From Virtue to Concentration and Wisdom →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/mindfulness-of-breathing.html">
+                Mindfulness of Breathing: Beginning a Meditation Practice →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/building-a-meditation-habit.html">
+                Building a Regular Meditation Habit: Patience, Effort and Balance →
+            </a>
+        </li>
     </ul>
 </section>
 
+<!-- MEDITATION FOR EVERY STAGE OF LIFE -->
 <section class="card">
     <h2>🌱 Meditation for Every Stage of Life</h2>
+
     <p>
         Our responsibilities, schedules and physical abilities change
-        throughout life. These planned articles will explore ways to make
-        room for reflection and meditation while respecting each person's
+        throughout life. These articles explore ways to make room for
+        reflection and meditation while respecting each person's
         circumstances. The suggestions are adaptable starting points,
         not promises of particular results.
     </p>
 
     <div class="meditation-grid">
+
         <article class="meditation-item">
             <h3>🎓 Students</h3>
-       <p>Student life can be busy and challenging. Discover how a few
-        minutes of mindfulness and gentle breathing can help students
-        cultivate calmness, patience and greater awareness while learning
-        to navigate everyday pressures with a balanced mind.</p>
-       <a href="/blog/meditation-for-students.html">Meditation for Students →</a>
+
+            <p>
+                Student life can be busy and challenging. Discover how
+                a few minutes of mindfulness and gentle breathing can
+                help students cultivate calmness, patience and greater
+                awareness while navigating everyday pressures.
+            </p>
+
+            <a href="/blog/meditation-for-students.html">
+                Meditation for Students →
+            </a>
         </article>
 
         <article class="meditation-item">
             <h3>💚 Mothers and Fathers</h3>
-            <p>Finding small moments of quiet amid caregiving, household duties and family life.</p>
-            <a href="/blog/meditation-for-parents.html">Meditation for Parents →</a>
+
+            <p>
+                Find small moments of quiet amid caregiving, household
+                duties and family life. Explore ways to bring patience
+                and awareness into parenting.
+            </p>
+
+            <a href="/blog/meditation-for-parents.html">
+                Meditation for Parents →
+            </a>
         </article>
 
         <article class="meditation-item">
             <h3>💼 Working Adults</h3>
-            <p>Making space for practice while balancing work, rest and other responsibilities.</p>
-            <a href="/blog/meditation-for-working-adults.html">Meditation for Working Adults →</a>
+
+            <p>
+                Make space for meditation while balancing work, rest
+                and other responsibilities. Begin with manageable
+                moments of awareness throughout the day.
+            </p>
+
+            <a href="/blog/meditation-for-working-adults.html">
+                Meditation for Working Adults →
+            </a>
         </article>
 
         <article class="meditation-item">
             <h3>💑 Married Couples</h3>
-            <p>Reflecting on patience, kindness, honest communication and listening.</p>
-            <a href="/blog/meditation-for-married-couples.html">Meditation for Married Couples →</a>
+
+            <p>
+                Reflect on patience, kindness, honest communication
+                and listening. Explore how individual mindfulness
+                can support thoughtful interactions with a partner.
+            </p>
+
+            <a href="/blog/meditation-for-married-couples.html">
+                Meditation for Married Couples →
+            </a>
         </article>
 
         <article class="meditation-item">
             <h3>🌿 Single Adults</h3>
-            <p>Exploring contentment, independence, connection and inner development.</p>
-            <a href="/blog/meditation-for-single-adults.html">Meditation for Single Adults →</a>
+
+            <p>
+                Explore contentment, independence, meaningful
+                connection and inner development through a
+                practical meditation routine.
+            </p>
+
+            <a href="/blog/meditation-for-single-adults.html">
+                Meditation for Single Adults →
+            </a>
         </article>
 
         <article class="meditation-item">
             <h3>🌼 Retirees, Grandparents and Older Adults</h3>
-            <p>Adapting practice to changing routines, energy levels and physical comfort.</p>
-            <a href="/blog/meditation-for-retirees.html">Meditation for Older Adults →</a>
+
+            <p>
+                Adapt meditation to changing routines, energy levels
+                and physical comfort. Discover how reflection can
+                support a meaningful daily life in older age.
+            </p>
+
+            <a href="/blog/meditation-for-retirees.html">
+                Meditation for Older Adults →
+            </a>
         </article>
+
     </div>
 
-    <p style="margin-top:16px;">
+    <p style="margin-top:22px;">
         Meditation can be practised in a comfortable posture. There is no
         need to sit cross-legged if another safe, supported position is
         more suitable.
     </p>
 </section>
 
+<!-- MEDITATION PRACTICES -->
 <section class="card">
     <h2>📚 Meditation Practices and Dhamma Reflections</h2>
+
     <p>
-        Alongside everyday guidance, we will explore selected Buddhist
-        teachings and meditation subjects with care and respect for their
-        traditional context.
+        Alongside everyday guidance, we explore selected Buddhist
+        teachings and meditation subjects with care and respect for
+        their traditional context.
     </p>
+
     <ul>
-        <li><a href="/blog/metta-loving-kindness-meditation.html">Loving-Kindness Meditation (<em>mettā</em>): Cultivating a Kind Heart →</a></li>
-        <li><a href="/blog/samatha-and-vipassana.html"><em>Samatha</em> and <em>Vipassanā</em>: Concentration and Insight →</a></li>
-        <li><a href="/blog/four-elements-meditation.html">Four-Elements Meditation: An Introduction to Material Qualities →</a></li>
-        <li><a href="/blog/learning-meditation-with-a-teacher.html">Learning Meditation with a Qualified Teacher →</a></li>
-        <li><a href="/blog/working-with-meditation-difficulties.html">Working with Restlessness, Sleepiness and Discouragement →</a></li>
+        <li>
+            <a href="/blog/metta-loving-kindness-meditation.html">
+                Loving-Kindness Meditation (<em>mettā</em>): Cultivating a Kind Heart →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/samatha-and-vipassana.html">
+                <em>Samatha</em> and <em>Vipassanā</em>: Concentration and Insight →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/four-elements-meditation.html">
+                Four-Elements Meditation: An Introduction to Material Qualities →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/learning-meditation-with-a-teacher.html">
+                Learning Meditation with a Qualified Teacher →
+            </a>
+        </li>
+        <li>
+            <a href="/blog/working-with-meditation-difficulties.html">
+                Working with Restlessness, Sleepiness and Discouragement →
+            </a>
+        </li>
     </ul>
 </section>
 
-<!-- CORPORATE MINDFULNESS TRAINING -->
+<!-- CORPORATE MINDFULNESS -->
 <section class="mindfulness-topic">
     <h2>🌿 Corporate Mindfulness Training</h2>
+
     <p>
-        Discover how mindfulness and meditation can support
-        greater awareness, emotional balance, focus and
-        well-being in the workplace. We welcome enquiries
-        from organisations interested in online mindfulness
-        sessions, with an approach that can be adapted to
-        workplace needs.
+        Discover how mindfulness and meditation can support greater
+        awareness, emotional balance, focus and well-being in the
+        workplace. We welcome enquiries from organisations interested
+        in online mindfulness sessions, with an approach that can be
+        adapted to workplace needs.
     </p>
+
     <p>
         <a href="/blog/corporate-mindfulness-training.html">
             Learn about Corporate Mindfulness Training →
@@ -413,14 +950,18 @@
     </p>
 </section>
 
+<!-- KINDNESS AND COMPASSION -->
 <section class="card">
     <h2>💛 Kindness and Compassion</h2>
+
     <p>
         Mindfulness can help us notice how our words and actions affect
         other people. Awareness becomes especially meaningful when it
         supports kindness and compassion.
     </p>
+
     <p>Simple expressions of kindness may include:</p>
+
     <ul>
         <li>Speaking honestly without unnecessary harshness.</li>
         <li>Listening when someone needs to be heard.</li>
@@ -428,6 +969,7 @@
         <li>Practising patience when situations are difficult.</li>
         <li>Giving without always expecting something in return.</li>
     </ul>
+
     <p>
         Compassion does not mean agreeing with everything. It can mean
         responding with understanding while still maintaining appropriate
@@ -435,62 +977,113 @@
     </p>
 </section>
 
+<!-- THOUGHTS AND EMOTIONS -->
 <section class="card">
     <h2>🌊 Observing Thoughts and Emotions</h2>
+
     <p>
         Our thoughts and emotions can feel very powerful, especially
         when we react to them immediately. Mindfulness gives us an
         opportunity to notice them before deciding what to do.
     </p>
+
     <p>
         For example, when anger appears, we might first notice:
         <strong>“Anger is present.”</strong>
         Rather than immediately acting on it, we can observe the feeling,
-        breathe, and allow ourselves time to choose a response.
+        breathe and allow ourselves time to choose a response.
     </p>
+
     <p>
         The same approach can be applied to worry, excitement, sadness,
-        jealousy, fear, and other changing experiences.
+        jealousy, fear and other changing experiences.
     </p>
+
     <p>
         The goal is not to suppress emotions. It is to understand them
         more clearly and avoid being controlled by every passing reaction.
     </p>
 </section>
 
+<!-- NEW: GRATITUDE AND APPRECIATION -->
+<section class="card gratitude-card">
+    <h2>💚 When Life Does Not Go Our Way</h2>
+
+    <p class="card-subtitle">
+        The Practice of Gratitude and Appreciation
+    </p>
+
+    <p>
+        Life does not always unfold according to our wishes. We may feel
+        hurt, disappointed or frustrated when things go wrong. Yet, if we
+        pause and look at our circumstances from a wider perspective, we
+        may realise that there are still many things worth appreciating.
+    </p>
+
+    <p>
+        Mindfulness reminds us that we can acknowledge our difficulties
+        without allowing them to overshadow the goodness that remains in
+        our lives. By reflecting on impermanence, accepting what we cannot
+        always control and appreciating the kindness of others, we can
+        gradually learn to meet life's challenges with greater wisdom,
+        gratitude and compassion.
+    </p>
+
+    <p>
+        Gratitude does not mean denying our pain. It means remembering that
+        even during difficult times, our lives may still contain meaningful
+        moments, opportunities to learn and reasons to be thankful.
+    </p>
+
+    <p>
+        <a href="/blog/when-life-does-not-go-our-way-gratitude-and-appreciation.html">
+            Read the full article: When Life Does Not Go Our Way →
+        </a>
+    </p>
+</section>
+
+<!-- FROM AWARENESS TO WISDOM -->
 <section class="card">
     <h2>📖 From Awareness to Wisdom</h2>
+
     <p>
         Mindfulness and wisdom support each other. When we observe
-        experience carefully, we can begin to recognize that thoughts,
-        feelings, circumstances, and relationships continually change.
+        experience carefully, we can begin to recognise that thoughts,
+        feelings, circumstances and relationships continually change.
     </p>
+
     <p>
         This observation can encourage us to question automatic
         assumptions and understand the consequences of our choices.
     </p>
+
     <p>
-        Learning from reliable teachings, reflecting on experience,
+        Learning from reliable teachings, reflecting on experience
         and applying what we learn in daily life can gradually deepen
         understanding.
     </p>
+
     <p>
         Good knowledge should encourage clarity, ethical conduct,
-        compassion, and a willingness to examine our own assumptions.
+        compassion and a willingness to examine our own assumptions.
     </p>
 </section>
 
+<!-- IMPERMANENCE -->
 <section class="card">
     <h2>🍃 Learning From Change</h2>
+
     <p>
         One important theme in Buddhist teachings is impermanence:
         experiences and conditions are continually changing.
     </p>
+
     <p>
         We can observe this directly in everyday life. Morning becomes
         evening, young plants grow, weather changes, relationships
         develop, and our own thoughts and feelings arise and pass away.
     </p>
+
     <p>
         Noticing change does not mean becoming detached from life.
         Instead, it can help us appreciate experiences without assuming
@@ -498,13 +1091,16 @@
     </p>
 </section>
 
+<!-- MINDFUL CHOICES -->
 <section class="card">
     <h2>⚖️ Mindfulness in Our Choices</h2>
+
     <p>
         Awareness can also influence the way we live in the wider world.
         Before making a choice, we can pause and consider its effects on
-        ourselves, other people, animals, and the natural environment.
+        ourselves, other people, animals and the natural environment.
     </p>
+
     <ul>
         <li>Do I really need this?</li>
         <li>Could I choose something simpler?</li>
@@ -512,58 +1108,81 @@
         <li>How might my words affect another person?</li>
         <li>Am I acting from awareness or simply from habit?</li>
     </ul>
+
     <p>
         These questions connect inner awareness with mindful and
         responsible living.
     </p>
+
+    <p>
+        <a href="/mindful-ethical-living.html">
+            Explore Mindful and Ethical Living →
+        </a>
+    </p>
 </section>
 
+<!-- QUIET REFLECTION -->
 <section class="card">
     <h2>🌿 A Quiet Reflection</h2>
+
     <p>
         Sometimes mindfulness begins with something very ordinary:
         stopping for a moment and noticing what is already here.
     </p>
+
     <p>
         The sound of rain, the movement of leaves, a meal shared with
         another person, or simply the feeling of breathing can become
         an opportunity to return to the present.
     </p>
-    <p>We do not have to make every moment special. We can simply learn to notice it.</p>
+
+    <p>
+        We do not have to make every moment special. We can simply
+        learn to notice it.
+    </p>
+
     <p>
         One approachable aspect of mindfulness is this simple reminder:
         <strong>look closely, notice clearly, and respond with care.</strong>
     </p>
 </section>
 
-<section class="card">
-    <h2>🌿 A Quiet Retreat: Finding Time to Look Within</h2>
+<!-- DHAMMAGOONYE RETREAT -->
+<section class="card retreat-card">
+    <h2>🪷 A Quiet Retreat: Finding Time to Look Within</h2>
+
     <p>
         Sometimes, spending time in a peaceful natural environment
         gives us an opportunity to slow down, appreciate the beauty
-        around us, and turn our attention towards our own minds.
+        around us and turn our attention towards our own minds.
     </p>
+
     <p>
         Through a personal reflection and photographs of flowers
         and trees taken during a meditation retreat at Dhammagoonye,
         we explore how a quiet environment can support our interest
-        in meditation, mindfulness, and inner understanding.
+        in meditation, mindfulness and inner understanding.
     </p>
+
     <p>
         Everyone's journey is different, but we can all begin with
-        a moment of awareness, a gentle breath, and a willingness
+        a moment of awareness, a gentle breath and a willingness
         to observe life more clearly.
     </p>
+
     <p>
-        <a href="/blog/dhammagoonye-meditation-retreat.html" class="water-link">
-            🪷 Read the personal retreat reflection →
+        <a href="/blog/dhammagoonye-meditation-retreat.html">
+            🪷 Read the Personal Retreat Reflection →
         </a>
     </p>
 </section>
 
+<!-- REFLECTION QUESTIONS -->
 <section class="card">
     <h2>🪷 Questions for Reflection</h2>
+
     <p>You may occasionally sit quietly with one of these questions:</p>
+
     <ul>
         <li>What am I experiencing right now?</li>
         <li>What thoughts are influencing my actions?</li>
@@ -572,48 +1191,69 @@
         <li>Where could I practise more patience?</li>
         <li>How can I bring more kindness into an ordinary day?</li>
     </ul>
+
     <p>
         There is no need to find an immediate answer. Sometimes the
         value is simply in observing the question honestly.
     </p>
 </section>
 
+<!-- CLOSING -->
 <section class="card">
     <h2>💚 Begin With One Moment</h2>
+
     <p>
         Mindfulness does not have to begin with a complicated routine.
         It can begin with one breath, one careful observation, one kind
-        word, or one pause before reacting.
+        word or one pause before reacting.
     </p>
+
     <p>
         With continued practice, these small moments can become
         opportunities to understand ourselves more clearly and live
-        with greater awareness, compassion, and wisdom.
+        with greater awareness, compassion and wisdom.
+    </p>
+
+    <p>
+        <a href="/mindful-ethical-living.html">
+            Continue exploring mindful and ethical living →
+        </a>
     </p>
 </section>
 
 </main>
 
 <footer class="footer">
-    <p>© 2026 Yangocean</p>
-    <p>
-        <a href="/about.html">About</a> |
-        <a href="/privacy.html">Privacy Policy</a> |
-        <a href="/terms.html">Terms</a> |
+    <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/mindfulness.html">Mindfulness &amp; Dhamma</a>
+        <a href="/mindful-ethical-living.html">Mindful &amp; Ethical Living</a>
+        <a href="/nature-connection.html">Nature Connection</a>
+        <a href="/blog.html">Journal</a>
+        <a href="/about.html">About</a>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms</a>
         <a href="/contact.html">Contact</a>
-    </p>
+    </div>
+
+    <p>© 2026 Yangocean</p>
+    <p>Mindful Living • Nature Connection • Sustainability</p>
+    <p>Cultivating awareness, appreciation and kindness in everyday life.</p>
 </footer>
 
 </div>
 
-<!-- MOBILE-FRIENDLIER READ ALOUD SCRIPT -->
+<!-- READ-ALOUD SCRIPT -->
 <script>
 (function () {
+    "use strict";
+
     const readButton = document.getElementById("readAloudButton");
     const stopButton = document.getElementById("stopReadAloudButton");
     const status = document.getElementById("readAloudStatus");
+    const content = document.getElementById("content-to-read");
 
-    if (!readButton || !stopButton || !status) return;
+    if (!readButton || !stopButton || !status || !content) return;
 
     if (!("speechSynthesis" in window) ||
         !("SpeechSynthesisUtterance" in window)) {
@@ -624,6 +1264,7 @@
     }
 
     const synth = window.speechSynthesis;
+
     let chunks = [];
     let chunkIndex = 0;
     let isReading = false;
@@ -635,9 +1276,6 @@
     }
 
     function getReadableText() {
-        const content = document.getElementById("content-to-read");
-        if (!content) return "";
-
         const elements = content.querySelectorAll("h1, h2, h3, p, li");
 
         return Array.from(elements)
@@ -667,6 +1305,7 @@
         });
 
         if (current) result.push(current.trim());
+
         return result;
     }
 
@@ -705,6 +1344,7 @@
         isPaused = false;
         chunks = [];
         chunkIndex = 0;
+
         setButton("🔊 Read Aloud");
         status.textContent = message || "Finished reading this page.";
     }
@@ -722,6 +1362,7 @@
 
         utterance.onend = function () {
             if (activeRunId !== runId) return;
+
             chunkIndex += 1;
             speakNext(activeRunId);
         };
@@ -735,7 +1376,7 @@
             }
 
             finishReading(
-                "Your browser could not continue speaking. Try tapping Read Aloud again, or check your phone's browser and speech settings."
+                "Your browser could not continue speaking. Try Read Aloud again, or check your browser and speech settings."
             );
         };
 
@@ -760,6 +1401,7 @@
             if (!synth.speaking && chunkIndex < chunks.length) {
                 speakNext(runId);
             }
+
             return;
         }
 
@@ -781,7 +1423,7 @@
         setButton("⏸ Pause");
         status.textContent = "Reading aloud…";
 
-        // Speech starts directly from the user's tap for mobile compatibility.
+        // Start speech directly from the user's tap for mobile compatibility.
         speakNext(runId);
     });
 
@@ -791,7 +1433,6 @@
         finishReading("Reading stopped.");
     });
 
-    // Some mobile browsers load speech voices asynchronously.
     if ("onvoiceschanged" in synth) {
         synth.onvoiceschanged = function () {
             synth.getVoices();
@@ -799,6 +1440,11 @@
     }
 
     synth.getVoices();
+
+    window.addEventListener("pagehide", function () {
+        runId += 1;
+        synth.cancel();
+    });
 })();
 </script>
 
