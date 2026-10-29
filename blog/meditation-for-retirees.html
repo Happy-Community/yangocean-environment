@@ -28,39 +28,133 @@
     <meta property="og:image"
           content="https://www.yangocean.com/images/meditation-for-retirees.png">
 
+    <meta name="twitter:card" content="summary_large_image">
+
     <style>
+        :root {
+            --green: #245b45;
+            --deep-green: #174532;
+            --soft-green: #edf4eb;
+            --cream: #fffdf6;
+            --warm-cream: #f8f3e6;
+            --text: #34453b;
+            --muted: #66756b;
+            --border: #dce7da;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             line-height: 1.8;
-            color: #333;
-            background-color: #fffdf7;
+            color: var(--text);
+            background-color: var(--cream);
             margin: 0;
-            padding: 0;
+        }
+
+        a {
+            color: var(--green);
+        }
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        .brand {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .site-name {
+            color: var(--deep-green);
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 1.8rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .site-tagline {
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .site-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 18px;
+        }
+
+        .site-nav a {
+            color: var(--green);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .site-nav a:hover,
+        .site-nav a:focus-visible {
+            text-decoration: underline;
         }
 
         main {
-            max-width: 900px;
+            max-width: 940px;
             margin: 0 auto;
-            padding: 24px 20px 40px;
+            padding: 24px 20px 44px;
+        }
+
+        .breadcrumb {
+            margin: 0 0 18px;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
         }
 
         h1, h2 {
-            color: #385c45;
+            color: var(--green);
             line-height: 1.4;
         }
 
         h1 {
-            margin-bottom: 10px;
+            margin: 0 0 10px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(1.9rem, 4vw, 2.6rem);
         }
 
         h2 {
-            margin-top: 30px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            font-size: 1.55rem;
+        }
+
+        p, li {
+            font-size: 1.05rem;
         }
 
         .article-subtitle {
-            color: #667568;
+            color: var(--muted);
             font-size: 1.05rem;
-            margin-bottom: 24px;
+            margin: 0 0 24px;
         }
 
         figure {
@@ -79,21 +173,88 @@
         figcaption {
             text-align: center;
             font-size: 0.9rem;
-            color: #666;
+            color: var(--muted);
             margin-top: 8px;
         }
 
         .reflection {
-            background: #f1f5ec;
+            background: var(--soft-green);
             padding: 18px 22px;
             border-radius: 10px;
             margin: 24px 0;
         }
 
+        .reflection p:first-child {
+            margin-top: 0;
+        }
+
+        .reflection p:last-child {
+            margin-bottom: 0;
+        }
+
+        .reflection li {
+            margin-bottom: 6px;
+        }
+
+        /* Read-aloud controls */
+
+        .article-controls {
+            margin: 22px 0 28px;
+            padding: 16px;
+            background: var(--soft-green);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .article-controls p {
+            margin: 0 0 10px;
+            font-size: 0.98rem;
+        }
+
+        .control-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .control-buttons button {
+            padding: 10px 15px;
+            color: #ffffff;
+            background: var(--green);
+            border: 1px solid var(--green);
+            border-radius: 7px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .control-buttons button:hover {
+            background: var(--deep-green);
+        }
+
+        .control-buttons button:focus-visible,
+        .social-share a:focus-visible,
+        .copy-button:focus-visible {
+            outline: 3px solid #7b9e82;
+            outline-offset: 3px;
+        }
+
+        .control-buttons button:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+
+        #readingStatus {
+            display: block;
+            margin-top: 10px;
+            color: var(--muted);
+            font-size: 0.92rem;
+        }
+
         .social-share {
             margin-top: 32px;
             padding: 18px;
-            background: #f1f5ec;
+            background: var(--soft-green);
             border-radius: 10px;
         }
 
@@ -101,20 +262,30 @@
             margin-top: 0;
         }
 
-        .social-share a {
+        .social-share a,
+        .copy-button {
             display: inline-block;
             margin: 5px 8px 5px 0;
             padding: 8px 12px;
-            color: #385c45;
-            border: 1px solid #385c45;
+            color: var(--green);
+            background: var(--cream);
+            border: 1px solid var(--green);
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.95rem;
+            cursor: pointer;
         }
 
-        .social-share a:hover {
-            background: #385c45;
-            color: white;
+        .social-share a:hover,
+        .copy-button:hover {
+            color: #ffffff;
+            background: var(--green);
+        }
+
+        #copyMessage {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.92rem;
         }
 
         /* Four-card meditation footer */
@@ -126,7 +297,7 @@
 
         .meditation-footer h2 {
             margin: 0 0 22px;
-            color: #064b3b;
+            color: var(--deep-green);
             font-family: Georgia, "Times New Roman", serif;
             font-size: 2rem;
             line-height: 1.3;
@@ -140,10 +311,10 @@
 
         .meditation-footer-card {
             display: block;
-            min-height: 66px;
+            min-height: 100px;
             padding: 20px;
-            color: #064b3b;
-            background: #fff;
+            color: var(--deep-green);
+            background: #ffffff;
             border: 1px solid #d8e5d8;
             border-radius: 14px;
             text-decoration: none;
@@ -160,7 +331,7 @@
 
         .meditation-footer-card span {
             display: block;
-            color: #667568;
+            color: var(--muted);
             font-size: 1rem;
             font-weight: 600;
             line-height: 1.5;
@@ -176,9 +347,27 @@
             outline-offset: 3px;
         }
 
-        /* Mobile layout */
+        footer {
+            padding: 22px 20px;
+            color: var(--muted);
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.92rem;
+        }
 
         @media (max-width: 620px) {
+            .header-inner {
+                align-items: flex-start;
+            }
+
+            .site-nav {
+                gap: 10px 14px;
+            }
+
+            main {
+                padding: 20px 16px 36px;
+            }
+
             .meditation-footer h2 {
                 font-size: 1.65rem;
             }
@@ -190,13 +379,48 @@
             .meditation-footer-card {
                 padding: 18px;
             }
+
+            .control-buttons button {
+                flex: 1 1 auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition: none !important;
+            }
         }
     </style>
 </head>
 
 <body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <a class="site-name" href="https://www.yangocean.com/">Yangocean</a>
+            <span class="site-tagline">Mindful Living • Nature Connection • Sustainability</span>
+        </div>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="https://www.yangocean.com/">Home</a>
+            <a href="https://www.yangocean.com/mindfulness.html">Mindfulness &amp; Dhamma</a>
+            <a href="https://www.yangocean.com/mindful-ethical-living.html">Mindful &amp; Ethical Living</a>
+            <a href="https://www.yangocean.com/journal.html">Journal</a>
+        </nav>
+    </div>
+</header>
+
 <main>
-    <article>
+    <p class="breadcrumb">
+        <a href="/mindfulness.html">Mindfulness &amp; Dhamma</a>
+        &rsaquo; Meditation for Retirees and Older Adults
+    </p>
+
+    <article id="articleContent">
         <header>
             <h1>Meditation for Retirees and Older Adults: Ageing with Peace and Purpose</h1>
 
@@ -204,6 +428,20 @@
                 Mindful Living · Nature · Everyday Reflections
             </p>
         </header>
+
+        <div class="article-controls" aria-label="Article listening controls">
+            <p><strong>Prefer to listen? Read this article aloud.</strong></p>
+
+            <div class="control-buttons">
+                <button type="button" id="readAloud">▶ Read Aloud</button>
+                <button type="button" id="pauseResume" disabled>⏸ Pause</button>
+                <button type="button" id="stopReading" disabled>■ Stop</button>
+            </div>
+
+            <span id="readingStatus" role="status" aria-live="polite">
+                Select Read Aloud to listen. Voice availability depends on your browser and device.
+            </span>
+        </div>
 
         <figure>
             <img
@@ -547,108 +785,240 @@
             people and moments around us, and meet the changes of life
             with kindness and peace.
         </p>
-
-        <div class="social-share">
-            <p><strong>Enjoyed this article? Share it with others:</strong></p>
-
-            <a
-                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on Facebook">
-                Facebook
-            </a>
-
-            <a
-                href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html&text=Meditation%20for%20Retirees%20and%20Older%20Adults%20%7C%20Yangocean"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on X">
-                X (Twitter)
-            </a>
-
-            <a
-                href="https://api.whatsapp.com/send?text=Meditation%20for%20Retirees%20and%20Older%20Adults%20%7C%20Yangocean%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on WhatsApp">
-                WhatsApp
-            </a>
-
-            <a
-                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Share on LinkedIn">
-                LinkedIn
-            </a>
-
-            <button
-                type="button"
-                id="copyArticleLink"
-                style="display:inline-block; margin:5px 8px 5px 0;
-                       padding:8px 12px; color:#385c45;
-                       background:#fffdf7; border:1px solid #385c45;
-                       border-radius:6px; cursor:pointer; font-size:0.95rem;">
-                Copy Link
-            </button>
-
-            <p id="copyMessage" aria-live="polite"></p>
-        </div>
-
-        <script>
-            document.getElementById("copyArticleLink").addEventListener("click", async function () {
-                const articleUrl =
-                    "https://www.yangocean.com/blog/meditation-for-retirees.html";
-
-                const message = document.getElementById("copyMessage");
-
-                try {
-                    await navigator.clipboard.writeText(articleUrl);
-                    message.textContent = "Article link copied.";
-                } catch (error) {
-                    message.textContent =
-                        "Please copy this link: " + articleUrl;
-                }
-            });
-        </script>
-
-        <!-- Four-card meditation footer -->
-        <nav class="meditation-footer"
-             aria-label="Continue exploring mindfulness and Dhamma">
-
-            <h2>Continue Exploring Mindfulness &amp; Dhamma</h2>
-
-            <div class="meditation-footer-grid">
-
-                <a class="meditation-footer-card"
-                   href="/mindfulness.html">
-                    <strong>&larr; Mindfulness &amp; Dhamma</strong>
-                    <span>Explore more meditation topics and reflections</span>
-                </a>
-
-                <a class="meditation-footer-card"
-                   href="/blog/mindfulness-of-breathing.html">
-                    <strong>Mindfulness of Breathing</strong>
-                    <span>An introduction to noticing the natural breath</span>
-                </a>
-
-                <a class="meditation-footer-card"
-                   href="/blog/building-a-meditation-habit.html">
-                    <strong>Building a Meditation Habit</strong>
-                    <span>Small steps towards a sustainable routine</span>
-                </a>
-
-                <a class="meditation-footer-card"
-                   href="/blog/meditation-in-the-pa-auk-tradition.html">
-                    <strong>Meditation in the Pa-Auk Tradition</strong>
-                    <span>Explore virtue, concentration and wisdom</span>
-                </a>
-
-            </div>
-        </nav>
-
     </article>
+
+    <section class="social-share" aria-label="Share this article">
+        <p><strong>Enjoyed this article? Share it with others:</strong></p>
+
+        <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share on Facebook">
+            Facebook
+        </a>
+
+        <a
+            href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html&text=Meditation%20for%20Retirees%20and%20Older%20Adults%20%7C%20Yangocean"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share on X">
+            X (Twitter)
+        </a>
+
+        <a
+            href="https://api.whatsapp.com/send?text=Meditation%20for%20Retirees%20and%20Older%20Adults%20%7C%20Yangocean%20https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share on WhatsApp">
+            WhatsApp
+        </a>
+
+        <a
+            href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.yangocean.com%2Fblog%2Fmeditation-for-retirees.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Share on LinkedIn">
+            LinkedIn
+        </a>
+
+        <button type="button" id="copyArticleLink" class="copy-button">
+            Copy Link
+        </button>
+
+        <p id="copyMessage" role="status" aria-live="polite"></p>
+    </section>
+
+    <nav class="meditation-footer"
+         aria-label="Continue exploring mindfulness and Dhamma">
+
+        <h2>Continue Exploring Mindfulness &amp; Dhamma</h2>
+
+        <div class="meditation-footer-grid">
+
+            <a class="meditation-footer-card"
+               href="/mindfulness.html">
+                <strong>&larr; Mindfulness &amp; Dhamma</strong>
+                <span>Explore more meditation topics and reflections</span>
+            </a>
+
+            <a class="meditation-footer-card"
+               href="/blog/mindfulness-of-breathing.html">
+                <strong>Mindfulness of Breathing</strong>
+                <span>An introduction to noticing the natural breath</span>
+            </a>
+
+            <a class="meditation-footer-card"
+               href="/blog/building-a-meditation-habit.html">
+                <strong>Building a Meditation Habit</strong>
+                <span>Small steps towards a sustainable routine</span>
+            </a>
+
+            <a class="meditation-footer-card"
+               href="/blog/pa-auk-meditation-tradition.html">
+                <strong>Meditation in the Pa-Auk Tradition</strong>
+                <span>Explore virtue, concentration and wisdom</span>
+            </a>
+
+        </div>
+    </nav>
 </main>
+
+<footer>
+    <p>&copy; <span id="currentYear"></span> Yangocean. Mindful living, nature connection and sustainability.</p>
+</footer>
+
+<script>
+(function () {
+    "use strict";
+
+    const readButton = document.getElementById("readAloud");
+    const pauseButton = document.getElementById("pauseResume");
+    const stopButton = document.getElementById("stopReading");
+    const status = document.getElementById("readingStatus");
+    const article = document.getElementById("articleContent");
+
+    let utterance = null;
+    let reading = false;
+
+    function setIdle(message) {
+        reading = false;
+        utterance = null;
+        readButton.disabled = false;
+        pauseButton.disabled = true;
+        stopButton.disabled = true;
+        pauseButton.textContent = "⏸ Pause";
+        status.textContent = message;
+    }
+
+    function stopSpeech(message) {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+
+        setIdle(message || "Reading stopped.");
+    }
+
+    function getArticleText() {
+        const clone = article.cloneNode(true);
+
+        clone.querySelectorAll(
+            ".article-controls, script, style, nav, button"
+        ).forEach(function (element) {
+            element.remove();
+        });
+
+        return clone.innerText
+            .replace(/\s+/g, " ")
+            .trim();
+    }
+
+    if (!("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)) {
+        readButton.disabled = true;
+        pauseButton.disabled = true;
+        stopButton.disabled = true;
+        status.textContent =
+            "Sorry, read-aloud is not supported by this browser. Please try another browser or device.";
+    } else {
+        readButton.addEventListener("click", function () {
+            stopSpeech("Preparing the article for reading…");
+
+            const text = getArticleText();
+
+            if (!text) {
+                setIdle("The article text could not be found.");
+                return;
+            }
+
+            utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "en-US";
+            utterance.rate = 0.95;
+            utterance.pitch = 1;
+
+            utterance.onstart = function () {
+                reading = true;
+                readButton.disabled = true;
+                pauseButton.disabled = false;
+                stopButton.disabled = false;
+                status.textContent = "Reading the article aloud…";
+            };
+
+            utterance.onend = function () {
+                setIdle("Finished reading the article.");
+            };
+
+            utterance.onerror = function (event) {
+                if (event.error === "canceled" ||
+                    event.error === "interrupted") {
+                    setIdle("Reading stopped.");
+                } else {
+                    setIdle("Reading could not continue. Please try again.");
+                }
+            };
+
+            try {
+                window.speechSynthesis.cancel();
+                window.speechSynthesis.speak(utterance);
+                readButton.disabled = true;
+                pauseButton.disabled = false;
+                stopButton.disabled = false;
+                status.textContent = "Starting read-aloud…";
+            } catch (error) {
+                setIdle("Unable to start read-aloud. Please try again.");
+            }
+        });
+
+        pauseButton.addEventListener("click", function () {
+            if (!reading) {
+                return;
+            }
+
+            if (window.speechSynthesis.paused) {
+                window.speechSynthesis.resume();
+                pauseButton.textContent = "⏸ Pause";
+                status.textContent = "Reading resumed…";
+            } else {
+                window.speechSynthesis.pause();
+                pauseButton.textContent = "▶ Resume";
+                status.textContent = "Reading paused.";
+            }
+        });
+
+        stopButton.addEventListener("click", function () {
+            stopSpeech("Reading stopped.");
+        });
+    }
+
+    document.getElementById("copyArticleLink").addEventListener(
+        "click",
+        async function () {
+            const articleUrl =
+                "https://www.yangocean.com/blog/meditation-for-retirees.html";
+
+            const message = document.getElementById("copyMessage");
+
+            try {
+                await navigator.clipboard.writeText(articleUrl);
+                message.textContent = "Article link copied.";
+            } catch (error) {
+                message.textContent =
+                    "Automatic copying is unavailable. Please copy this link: " +
+                    articleUrl;
+            }
+        }
+    );
+
+    document.getElementById("currentYear").textContent =
+        new Date().getFullYear();
+
+    window.addEventListener("pagehide", function () {
+        if ("speechSynthesis" in window) {
+            window.speechSynthesis.cancel();
+        }
+    });
+})();
+</script>
+
 </body>
 </html>
