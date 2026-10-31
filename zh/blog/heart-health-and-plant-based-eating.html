@@ -7,8 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="了解如何通过植物性饮食、正念饮食、适量运动、充足睡眠及健康生活习惯，在日常生活中呵护心脏健康。">
+<meta name="description" content="了解如何通过植物性食物、正念饮食、适量运动、充足睡眠和健康生活习惯，在日常生活中呵护心脏健康。">
 
 <meta name="robots" content="index, follow">
 
@@ -18,19 +17,19 @@ content="了解如何通过植物性饮食、正念饮食、适量运动、充�
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/blog/heart-health-and-plant-based-eating.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog/heart-health-and-plant-based-eating.html">
-<link rel="alternate" hreflang="zh-CN" href="https://yangocean.com/zh/blog/heart-health-and-plant-based-eating.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog/heart-health-and-plant-based-eating.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog/heart-health-and-plant-based-eating.html">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="呵护心脏健康 | Yangocean">
-<meta property="og:description" content="通过植物性饮食和日常健康习惯，以简单实用的方式维护心脏健康。">
+<meta property="og:description" content="通过植物性饮食和日常健康习惯，以简单实用的方式支持心脏健康。">
 <meta property="og:url" content="https://yangocean.com/zh/blog/heart-health-and-plant-based-eating.html">
 <meta property="og:site_name" content="Yangocean">
 <meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="呵护心脏健康 | Yangocean">
-<meta name="twitter:description" content="探索有益心脏健康的饮食、植物性食物及日常健康生活习惯。">
+<meta name="twitter:description" content="了解有益心脏健康的饮食、植物性食物和日常生活习惯。">
 <meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
 
 <script async
@@ -41,8 +40,8 @@ crossorigin="anonymous"></script>
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "呵护心脏健康：植物性饮食与日常健康习惯",
-  "description": "通过均衡的植物性饮食、身体活动、充足睡眠及预防性医疗保健，支持心脏健康的实用指南。",
+  "headline": "呵护心脏健康：植物性饮食与日常生活习惯",
+  "description": "通过均衡的植物性饮食、身体活动、充足睡眠和预防性医疗保健，帮助支持心脏健康的实用指南。",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://yangocean.com/zh/blog/heart-health-and-plant-based-eating.html"
@@ -58,6 +57,11 @@ crossorigin="anonymous"></script>
 <link rel="stylesheet" href="/styles.css">
 
 <style>
+
+/* =====================================
+   文章布局
+===================================== */
+
 .article-container {
     max-width: 900px;
     margin: 0 auto;
@@ -68,7 +72,7 @@ crossorigin="anonymous"></script>
 .article-container h1,
 .article-container h2,
 .article-container h3 {
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .article-container h1 {
@@ -130,7 +134,179 @@ crossorigin="anonymous"></script>
     text-underline-offset: 3px;
 }
 
+
+/* =====================================
+   中文页眉与导航
+===================================== */
+
+#site-header {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+}
+
+#site-header .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 20px;
+}
+
+#site-header .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+}
+
+#site-header .language-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#site-header .language-links a {
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+#site-header .main-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    padding: 12px 18px;
+}
+
+#site-header .main-navigation > a,
+#site-header .nav-dropdown > summary {
+    display: inline-block;
+    padding: 8px 4px;
+    color: inherit;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+#site-header .nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#site-header .nav-dropdown > summary {
+    list-style: none;
+}
+
+#site-header .nav-dropdown > summary::-webkit-details-marker {
+    display: none;
+}
+
+#site-header .nav-dropdown > summary::after {
+    content: " ▾";
+    font-size: 0.8em;
+}
+
+/* 默认隐藏下拉菜单 */
+
+#site-header .nav-dropdown > .dropdown-menu {
+    display: none !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 250px;
+    padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
+    z-index: 2000;
+}
+
+/* 点击后才显示下拉菜单 */
+
+#site-header .nav-dropdown[open] > .dropdown-menu {
+    display: block !important;
+}
+
+#site-header .dropdown-menu a {
+    display: block !important;
+    padding: 10px 16px;
+    color: #333333;
+    text-decoration: none;
+    white-space: normal;
+}
+
+#site-header .dropdown-menu a:hover,
+#site-header .dropdown-menu a:focus {
+    background: #f2f5ef;
+}
+
+#site-header a:focus-visible,
+#site-header summary:focus-visible {
+    outline: 2px solid #6b9475;
+    outline-offset: 3px;
+}
+
+
+/* =====================================
+   页脚
+===================================== */
+
+#site-footer {
+    text-align: center;
+    padding: 24px 16px;
+    line-height: 1.8;
+}
+
+#site-footer a {
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+
+/* =====================================
+   手机屏幕适配
+===================================== */
+
+@media (max-width: 700px) {
+
+    #site-header .header-top {
+        justify-content: center;
+    }
+
+    #site-header .main-navigation {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    #site-header .main-navigation > a,
+    #site-header .nav-dropdown > summary {
+        display: block;
+        padding: 10px 12px;
+    }
+
+    #site-header .nav-dropdown {
+        display: block;
+        width: 100%;
+    }
+
+    #site-header .nav-dropdown > .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: 0;
+        margin: 4px 0 8px;
+        box-shadow: none;
+        border: 1px solid #eeeeee;
+    }
+}
+
 @media (max-width: 600px) {
+
     .article-container {
         padding: 16px 12px 36px;
     }
@@ -142,64 +318,105 @@ crossorigin="anonymous"></script>
         padding: 16px;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="site-header">
+<header id="site-header">
+
+    <div class="header-top">
+
         <a href="/zh/" class="logo" aria-label="Yangocean 首页">
             Yangocean
         </a>
 
-        <div class="language-links" aria-label="语言">
+        <div class="language-links" aria-label="选择语言">
+
             <a href="/blog/heart-health-and-plant-based-eating.html" lang="en">EN</a>
+
             <a href="/ms/blog/heart-health-and-plant-based-eating.html" lang="ms">BM</a>
-            <a href="/zh/blog/heart-health-and-plant-based-eating.html" lang="zh">中文</a>
+
+            <a href="/zh/blog/heart-health-and-plant-based-eating.html"
+               lang="zh" aria-current="page">中文</a>
+
             <a href="/fr/" lang="fr">FR</a>
+
             <a href="/es/" lang="es">ES</a>
+
+            <a href="/my/" lang="my">MY</a>
+
         </div>
+
     </div>
 
-    <nav aria-label="主导航">
+    <nav class="main-navigation" aria-label="主导航">
+
         <a href="/zh/">首页</a>
 
-        <div class="dropdown">
-            <a href="/mindfulness.html">正念生活</a>
-            <div class="dropdown-content">
-                <a href="/mindfulness.html">正念与佛法</a>
-                <a href="/mindful-eating.html">正念饮食</a>
-                <a href="/mindful-ethical-living.html">💚 正念与道德生活</a>
-                <a href="/mindful-food.html">🍲 健康食物与美食视频</a>
-            </div>
-        </div>
+        <details class="nav-dropdown">
 
-        <div class="dropdown">
-            <a href="/zh/nature-connection.html">亲近大自然</a>
-            <div class="dropdown-content">
-                <a href="/zh/nature-connection.html">亲近大自然</a>
-                <a href="/zh/eco.html">环境保护意识</a>
-                <a href="/zh/blog.html">生活日志</a>
-            </div>
-        </div>
+            <summary>正念生活</summary>
 
-        <a href="/apps.html">相关应用</a>
+            <div class="dropdown-menu">
+
+                <a href="/zh/mindfulness.html">
+                    🧘 正念与佛法
+                </a>
+
+                <a href="/zh/mindful-ethical-living.html">
+                    💚 正念与道德生活
+                </a>
+
+                <a href="/zh/mindful-eating.html">
+                    🥗 正念饮食
+                </a>
+
+                <a href="/zh/mindful-food.html">
+                    🍲 正念饮食与美食视频
+                </a>
+
+            </div>
+
+        </details>
+
+        <a href="/zh/nature-connection.html">
+            亲近自然
+        </a>
+
+        <a href="/zh/eco.html">
+            环境意识
+        </a>
+
+        <a href="/zh/blog.html">
+            生活札记
+        </a>
+
+        <a href="/zh/apps.html">
+            相关应用
+        </a>
+
     </nav>
+
 </header>
+
 
 <main class="article-container" id="content-to-read">
 
     <p>
-        <a href="/zh/blog.html">生活日志</a> &raquo;
+        <a href="/zh/blog.html">生活札记</a> &raquo;
         <a href="/zh/mindful-eating.html">正念饮食</a> &raquo;
         心脏健康
     </p>
 
     <article>
-        <h1>呵护心脏健康：植物性饮食与日常健康习惯</h1>
 
-        <p><em>只要用心坚持日常生活中的小小改变，也能为我们的健康带来积极而深远的影响。</em></p>
+        <h1>呵护心脏健康：植物性饮食与日常生活习惯</h1>
+
+        <p>
+            <em>每天坚持一些小小的健康选择，日积月累，也能为我们的身心健康带来积极的改变。</em>
+        </p>
 
         <div class="read-aloud">
             <button type="button" onclick="startReading()">🔊 朗读文章</button>
@@ -207,333 +424,354 @@ crossorigin="anonymous"></script>
             <button type="button" onclick="stopReading()">⏹ 停止</button>
         </div>
 
+
         <section class="article-intro">
+
             <p>
-                我们的心脏日以继夜地工作，将血液和氧气输送到身体各个部位。
-                虽然我们很少察觉它每天所付出的努力，但长期以来养成的生活习惯，
-                却会影响心脏及血管的健康。
+                我们的心脏日以继夜地工作，将血液和氧气输送到全身。
+                虽然我们平时很少留意它的辛勤运作，但日常生活中的习惯，
+                会随着时间影响心脏和血管的健康。
             </p>
 
             <p>
-                呵护心脏并不意味着必须拥有完美的饮食习惯，
+                呵护心脏并不意味着必须拥有完美的饮食，
                 也不需要在一夜之间彻底改变生活方式。
-                我们可以从一些容易实践的小事开始，例如摄取更多营养丰富的食物、
-                保持规律运动、获得充足休息，并在有需要时寻求专业医疗建议。
+                我们可以从容易实践的选择开始：
+                多吃不同种类的营养食物、保持规律活动、获得充足休息，
+                并在需要时寻求专业医疗建议。
             </p>
 
             <p>
-                植物性食物在这方面可以发挥重要作用。
+                植物性食物可以在这方面发挥重要作用。
                 蔬菜、水果、豆类、扁豆、全谷物、坚果和种子，
                 都能提供膳食纤维及其他营养素，
-                有助于建立整体有益于心脏健康的饮食模式。
+                帮助我们建立整体上更有益于心脏健康的饮食模式。
             </p>
+
         </section>
 
+
         <section class="article-section">
+
             <h2>1. 了解心脏健康的重要性</h2>
 
             <p>
-                心脏与血管共同构成心血管系统。
-                当血管变窄或堵塞，或其他心血管问题影响血液循环时，
-                便可能引发冠心病及中风等疾病。
+                心脏和血管共同组成心血管系统。
+                当血管变窄或阻塞，或其他心血管疾病影响血液循环时，
+                便可能发生冠心病、中风等健康问题。
             </p>
 
             <p>
                 多种因素可能影响心血管疾病的风险，
                 包括高血压、胆固醇水平异常、糖尿病、吸烟、
-                缺乏运动以及家族病史。
+                缺乏身体活动以及家族病史。
             </p>
 
             <p>
                 有些风险因素并非我们能够控制，
-                但许多因素可以通过适当的生活方式及医疗管理加以改善。
-                定期进行健康检查，有助于在症状出现之前及早发现问题。
+                但许多因素可以通过适当的生活方式和医疗管理来改善。
+                定期健康检查有助于在症状出现之前发现潜在问题。
             </p>
 
             <p>
-                因此，呵护心脏不仅仅是在生病时才采取行动，
-                更重要的是在日常生活中培养良好习惯，
-                为一生的健康打下基础。
+                因此，照顾心脏不只是为了应对疾病，
+                也是为了建立能够长期支持健康的生活习惯。
             </p>
+
         </section>
 
+
         <section class="article-section">
+
             <h2>2. 让植物性食物丰富我们的餐盘</h2>
 
             <p>
                 有益心脏健康的饮食模式，可以包含各种不同的植物性食物。
-                我们不一定需要成为素食者或纯素食者才能获得这些益处。
-                一个简单的开始，就是在日常餐食中增加植物性食物的比例。
+                我们不一定要成为素食者或纯素食者，
+                才能从多吃植物性食物中获得好处。
+                一个简单的开始，就是让这些食物经常出现在日常餐桌上。
             </p>
 
             <h3>蔬菜与绿叶蔬菜</h3>
 
             <p>
-                蔬菜提供膳食纤维、维生素、矿物质及其他有益的植物化合物。
-                尝试在一周内摄取不同颜色和种类的蔬菜。
+                蔬菜能够提供膳食纤维、维生素、矿物质和其他有益的植物成分。
+                尝试在一周内选择不同颜色和种类的蔬菜。
             </p>
 
             <p>
                 例如菠菜、小白菜、西兰花、卷心菜、胡萝卜、番茄、
-                南瓜、秋葵，以及当地容易购买的其他蔬菜。
+                南瓜、秋葵，以及当地容易买到的其他蔬菜。
             </p>
 
             <h3>新鲜水果与完整水果</h3>
 
             <p>
-                水果是方便又天然的膳食纤维和营养素来源。
-                苹果、橙子、番石榴、木瓜、香蕉、莓果及其他水果，
-                都可以为日常饮食增添多样性。
+                水果是方便获取膳食纤维和营养素的食物。
+                苹果、橙子、番石榴、木瓜、香蕉、莓果，
+                以及其他完整水果，都可以为日常饮食增添变化。
             </p>
 
             <p>
-                在条件允许的情况下，尽量优先选择完整水果，
-                而不是经常饮用果汁。
-                果汁可能含有较少的膳食纤维，也更容易在短时间内摄取过量。
-                如果您患有糖尿病或其他需要调整饮食的疾病，
+                在条件允许时，尽量多选择完整水果，而不是果汁。
+                果汁的膳食纤维可能较少，也比较容易在短时间内摄取过量。
+                如果患有糖尿病或其他需要调整饮食的疾病，
                 请遵循医疗专业人员的建议。
             </p>
 
-            <h3>豆类、扁豆及大豆制品</h3>
+            <h3>豆类、扁豆与大豆食品</h3>
 
             <p>
-                各类豆子、鹰嘴豆、印度扁豆（Dhal）、扁豆、豌豆、
-                豆腐及天贝（Tempeh），都是植物性蛋白质的来源。
+                各种豆类、鹰嘴豆、扁豆、豌豆、豆腐和天贝，
+                都能提供植物性蛋白质。
                 其中许多食物也含有膳食纤维，
-                在均衡饮食中有助于维持健康的胆固醇水平。
+                在整体饮食适当的情况下，有助于支持健康的胆固醇水平。
             </p>
 
             <p>
-                这些食材可以用于煮汤、制作蔬菜料理、沙拉、咖喱及家常菜。
-                购买罐装豆类时，可以考虑选择少盐或不额外添加盐的产品。
+                这些食材可以用于汤品、蔬菜料理、沙拉、咖喱和简单的家常菜。
+                购买罐装豆类时，可以考虑选择低盐或无添加盐的产品。
             </p>
 
             <h3>全谷物</h3>
 
             <p>
                 燕麦、大麦、糙米、全麦面包及其他全谷物，
-                都能提供膳食纤维和身体所需的能量。
-                在适当的情况下，可以逐渐以全谷物取代部分精制谷物。
+                能够提供膳食纤维和能量。
+                在实际可行的情况下，可以逐渐以全谷物取代部分精制谷物。
             </p>
 
             <p>
-                我们不必一次过改变所有饮食习惯。
+                我们不必一次改变所有饮食习惯。
                 例如，可以先从早餐吃燕麦开始，
-                或者将糙米与平时食用的白米混合。
+                或者在平时煮的米饭中加入一些糙米。
             </p>
 
             <h3>坚果、种子与健康脂肪</h3>
 
             <p>
-                无盐坚果和种子，例如核桃、杏仁、花生、芝麻及亚麻籽，
+                无盐坚果和种子，例如核桃、杏仁、花生、芝麻和亚麻籽，
                 含有不饱和脂肪及其他营养素。
                 由于这些食物的能量密度较高，适量食用通常已经足够。
             </p>
 
             <p>
-                烹饪时，可以考虑使用橄榄油、菜籽油或花生油等
-                含有不饱和脂肪的植物油，
-                代替黄油或其他饱和脂肪含量较高的油脂。
-                不过，使用的油量仍然需要适度。
+                烹饪时，可以考虑使用橄榄油、芥花油或花生油等不饱和植物油，
+                取代黄油或其他饱和脂肪含量较高的脂肪来源。
+                不过，使用的总量仍然需要留意。
             </p>
 
             <p>
                 没有任何一种水果、蔬菜、种子或营养补充剂，
                 能够单独保护我们的心脏。
                 与其依赖某一种所谓的超级食物，
-                整体饮食模式才是更重要的关键。
+                不如关注整体的饮食模式。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>3. 留意盐、糖及高度加工食品的摄取</h2>
+
+            <h2>3. 留意盐、糖与高度加工食品</h2>
 
             <p>
-                多吃植物性食物是一个良好的开始，
-                但并不是所有植物性产品都一定有益于心脏健康。
-                包装零食、含糖饮料、即食食品及某些植物肉替代品，
-                可能含有较高的盐分、添加糖或饱和脂肪。
+                多吃植物性食物是一个有益的开始，
+                但并不是所有植物性产品都自然有益于心脏健康。
+                包装零食、含糖饮料、即食食品和某些植物肉替代品，
+                也可能含有较多的盐、添加糖或饱和脂肪。
             </p>
 
-            <p>以下是一些简单实用的改善方法：</p>
+            <p>以下是一些简单的调整方法：</p>
 
             <ul>
-                <li>烹饪时减少盐、咸味酱料及调味粉的使用量。</li>
-                <li>利用大蒜、生姜、香草、香料、青柠或柠檬增加食物风味。</li>
-                <li>多选择白开水或无糖饮料，减少含糖饮料的摄取。</li>
-                <li>阅读食品标签，比较钠、添加糖及饱和脂肪的含量。</li>
-                <li>在条件允许时，尽量在家准备简单的家常菜。</li>
-                <li>适量享用喜欢的零食和美食，而不是将它们作为日常主食。</li>
+                <li>烹饪时减少盐、咸味酱料和调味粉的使用。</li>
+                <li>利用大蒜、生姜、香草、香料、青柠或柠檬增添风味。</li>
+                <li>多选择白开水或无糖饮料，减少含糖饮料。</li>
+                <li>阅读食品标签，比较钠、添加糖和饱和脂肪的含量。</li>
+                <li>在条件允许时，尽量在家准备简单的饭菜。</li>
+                <li>适量享用喜爱的食物，不要让零食成为每天的主要饮食。</li>
             </ul>
 
             <p>
-                传统家常菜也可以成为有益心脏健康饮食的一部分。
-                例如，蔬菜豆腐汤配米饭，
-                或者搭配蔬菜的扁豆料理，
-                都可以是营养丰富的选择。
-                不过，烹饪方式、食物分量及盐的使用量，
-                同样会影响一餐的整体健康程度。
+                传统食物同样可以融入有益心脏健康的饮食模式。
+                例如，蔬菜豆腐汤配米饭，或搭配蔬菜的扁豆咖喱，
+                都可以成为营养丰富的选择。
+                食物的烹调方式、分量和盐的用量，
+                也会影响整餐的健康程度。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>4. 培养正念饮食的习惯</h2>
+
+            <h2>4. 实践正念饮食，留意自己的习惯</h2>
 
             <p>
                 正念饮食是指在进食时保持觉察，
                 留意食物的味道、口感和香气，
-                同时关注身体发出的饥饿与饱足信号，
-                以及促使我们进食的各种情境。
+                同时观察自己的饥饿感、饱足感，
+                以及当时的进食环境和习惯。
             </p>
 
-            <p>可以尝试以下简单的做法：</p>
+            <p>我们可以尝试以下简单的方法：</p>
 
             <ul>
-                <li>尽可能坐下来用餐，避免一边吃饭一边处理太多其他事情。</li>
-                <li>放慢进食速度，留意自己何时开始感到满足。</li>
-                <li>觉察自己究竟是肚子饿、口渴、疲倦，还是因为习惯而进食。</li>
-                <li>规划包含蔬菜、蛋白质来源及谷物的均衡餐食。</li>
-                <li>自在地享用食物，不必将每一种饮食选择都贴上好或坏的标签。</li>
+                <li>尽可能坐下来用餐，避免一边分心一边吃东西。</li>
+                <li>以舒适的速度进食，并留意自己何时开始感到满足。</li>
+                <li>觉察自己究竟是饥饿、口渴、疲倦，还是因为习惯而进食。</li>
+                <li>安排包含蔬菜、蛋白质来源和谷物的均衡餐食。</li>
+                <li>享受食物，不必把每一种饮食选择简单地贴上好或坏的标签。</li>
             </ul>
 
             <p>
-                正念饮食并不是治疗心脏疾病的方法，
-                也不能取代必要的医疗照护。
-                然而，它可以帮助我们更了解自己的饮食选择及日常习惯。
+                正念饮食并不是治疗心脏病的方法，也不能取代医疗照护。
+                不过，它可以帮助我们更加了解自己的饮食选择和日常习惯。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>5. 保持规律活动，让身体动起来</h2>
+
+            <h2>5. 保持规律的身体活动</h2>
 
             <p>
-                身体活动有助于维护心血管健康，
-                并可能帮助管理血压、胆固醇、血糖及健康体重。
+                身体活动有助于支持心血管健康，
+                也可能帮助改善血压、胆固醇和血糖水平，
+                并维持健康体重。
             </p>
 
             <p>
-                运动不一定意味着必须加入健身房。
-                根据个人能力及健康状况，
-                可以选择散步、骑自行车、游泳、跳舞、园艺活动，
+                运动并不一定意味着要加入健身房。
+                根据个人能力和健康状况，
+                可以选择散步、骑自行车、游泳、跳舞、园艺，
                 或在家进行温和的运动。
             </p>
 
             <p>
-                一般建议成年人每周逐步达到至少150分钟的中等强度有氧运动，
-                同时每周至少两天进行肌肉强化活动。
-                不过，有些人可能因为健康状况或身体活动能力的限制，
-                而需要采用不同的运动计划。
+                一般建议成年人每周逐步达到至少150分钟的中等强度有氧活动，
+                并在每周两天或以上进行肌肉强化活动。
+                不过，某些人可能因为健康状况或身体限制，
+                而需要不同的活动安排。
             </p>
 
             <p>
-                如果您目前缺乏运动，可以从自己感到舒适的程度开始，
+                如果目前缺乏运动，可以从自己感觉舒适的程度开始，
                 再逐渐增加活动量。
-                如果您患有心脏疾病、有令人担忧的症状，
-                或存在明显的健康限制，
-                请先咨询医疗专业人员，了解适合自己的活动方式。
+                如果患有心脏疾病、出现令人担忧的症状，
+                或有明显的健康限制，请先向医疗专业人员了解适合自己的活动方式。
             </p>
+
         </section>
 
+
         <section class="article-section">
+
             <h2>6. 重视睡眠与情绪健康</h2>
 
             <p>
-                睡眠和情绪健康同样是健康生活方式的重要组成部分。
-                大多数成年人每晚需要大约七至九小时的睡眠，
-                但每个人的实际需求可能有所不同。
+                睡眠和情绪健康也是健康生活方式的重要组成部分。
+                许多成年人每晚需要大约七至九小时的睡眠，
+                但每个人的实际需要可能有所不同。
             </p>
 
             <p>
                 保持规律的睡眠时间、建立轻松的睡前习惯，
-                以及减少临睡前使用电子屏幕的时间，
-                都可能有助于改善休息质量。
+                并减少临睡前使用电子屏幕的时间，
+                可能有助于改善休息质量。
             </p>
 
             <p>
-                压力是生活中常见的一部分。
-                到大自然中走走、练习轻柔的呼吸、
-                与信任的人交谈，或让自己安静休息片刻，
-                都可能有助于管理日常压力。
+                压力是生活中正常的一部分。
+                亲近大自然、练习温和的呼吸、
+                与信任的人交谈，或给自己一点安静的休息时间，
+                都可能帮助我们更好地面对压力。
             </p>
 
             <p>
                 这些做法可以支持整体身心健康，
-                但不能取代高血压、心脏疾病或其他医疗状况的正规治疗。
+                但不能取代高血压、心脏病或其他疾病所需要的医疗治疗。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>7. 远离吸烟，并谨慎对待酒精</h2>
+
+            <h2>7. 避免吸烟，并谨慎看待饮酒</h2>
 
             <p>
                 吸烟会损害血管，并增加心血管疾病的风险。
-                戒烟是保护心脏健康的重要一步。
-                如果您有吸烟习惯，可以向医疗专业人员寻求帮助，
-                了解适合自己的戒烟支持及方法。
+                戒烟是保护心脏的重要一步。
+                如果您有吸烟习惯，可以向医疗专业人员寻求协助，
+                了解适合自己的戒烟支持和方法。
             </p>
 
             <p>
-                酒精也可能影响健康，而饮用量越多，
-                可能增加多种健康风险。
-                不要为了所谓的心脏健康益处而开始饮酒。
-                如果您有饮酒习惯，可以考虑减少摄取量，
+                酒精也会影响健康，饮酒越多，可能带来的健康风险也越高。
+                不要为了所谓的心脏益处而开始饮酒。
+                如果有饮酒习惯，可以考虑减少摄取量，
                 并在有疑虑时咨询医疗专业人员。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>8. 定期健康检查，并遵循医生的治疗建议</h2>
+
+            <h2>8. 定期健康检查，并遵循处方治疗</h2>
 
             <p>
-                高血压和高胆固醇可能在没有明显症状的情况下出现。
-                定期健康检查有助于及早发现这些问题，
-                并识别其他心血管疾病的风险因素。
+                高血压和高胆固醇可能在没有明显症状的情况下存在。
+                定期健康检查有助于发现这些问题，
+                以及其他可能影响心血管健康的风险因素。
             </p>
 
             <p>
-                根据年龄、病史及个人风险，
-                医疗专业人员可能建议进行以下检查：
+                根据年龄、病史和个人风险，
+                医疗专业人员可能建议检查以下项目：
             </p>
 
             <ul>
-                <li>血压检查</li>
-                <li>胆固醇及其他血脂检查</li>
-                <li>血糖检查或糖尿病风险评估</li>
-                <li>根据个人健康状况及家族病史进行的其他检查</li>
+                <li>血压</li>
+                <li>胆固醇及其他血脂指标</li>
+                <li>血糖或糖尿病风险</li>
+                <li>根据个人健康状况和家族病史而需要检查的其他项目</li>
             </ul>
 
             <p>
-                如果您已经因为高血压、高胆固醇、糖尿病或心脏疾病而服药，
-                请按照医生的指示服用药物。
-                不要因为改善了饮食或开始运动，
-                就自行停止服药或更改药物剂量。
-                在作出任何调整之前，请先咨询医疗专业人员。
+                如果已经因高血压、高胆固醇、糖尿病或心脏病而接受药物治疗，
+                请按照医嘱服药。
+                即使改善了饮食或开始运动，
+                也不要在未咨询医疗专业人员的情况下自行停药或更改药物剂量。
             </p>
 
             <p>
-                饮食与生活方式的改善可以配合适当的医疗治疗，
+                饮食和生活方式的调整可以配合适当的医疗治疗，
                 但并不一定能够取代药物或其他必要治疗。
             </p>
+
         </section>
 
+
         <section class="article-section">
+
             <h2>9. 认识需要紧急处理的症状</h2>
 
             <p>
-                心脏病发作可能出现胸部压迫感、紧绷感、
-                挤压感或疼痛。
-                不适感可能扩散至一侧或双侧手臂、背部、
-                颈部、下颌或腹部。
-                其他可能出现的症状包括呼吸急促、冒冷汗、
-                恶心、头晕或异常虚弱。
-                每个人的症状可能不同，有些人也可能出现
-                不太典型的症状。
+                心脏病发作可能引起胸部压迫感、紧绷感、挤压感或疼痛。
+                不适可能扩散至一侧或双侧手臂、背部、颈部、下颌或腹部。
+                其他可能出现的症状包括呼吸急促、冒冷汗、恶心、
+                头晕或异常虚弱。
+                不同人的症状可能有所不同，有些人也可能出现较不典型的表现。
             </p>
 
             <p>
                 <strong>
                     如果您或身边的人可能正在经历心脏病发作，
-                    请立即寻求紧急医疗援助。
+                    请立即寻求紧急医疗协助。
                 </strong>
                 不要等待症状自行消失。
                 请联系当地紧急救援服务，并遵循接线人员的指示。
@@ -541,91 +779,100 @@ crossorigin="anonymous"></script>
 
             <p>
                 如果突然出现脸部歪斜、手臂无力、说话困难，
-                或其他突然发生的中风征兆，
-                同样必须立即接受紧急医疗救治。
+                或其他中风的突然症状，也必须立即寻求紧急医疗救助。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>10. 简单的护心每日饮食安排</h2>
+
+            <h2>10. 简单的一日护心饮食示例</h2>
 
             <p>
                 当健康习惯能够融入日常生活时，
-                就更容易长期坚持。
-                以下是一个将植物性食物融入每日饮食的简单例子。
-                请根据个人喜好、营养需求及医疗建议，
-                调整食物种类和分量。
+                我们通常更容易长期坚持。
+                以下是一个将植物性食物融入日常饮食的简单示例。
+                请根据个人喜好、营养需求和医疗建议调整食物种类及分量。
             </p>
 
             <h3>早餐</h3>
+
             <p>
-                燕麦搭配香蕉或其他完整水果，
-                再加入少量无盐坚果或种子。
+                燕麦粥搭配香蕉或其他完整水果，
+                再加上一小份无盐坚果或种子。
             </p>
 
             <h3>午餐</h3>
+
             <p>
-                糙米或其他全谷物，搭配蔬菜及豆腐、天贝、
-                豆类或扁豆。
-                可以使用香草和香料增加风味，
-                减少过量依赖盐来调味。
+                糙米或其他全谷物，搭配蔬菜和豆腐、天贝、豆类或扁豆。
+                可以利用香草和香料增添风味，减少对过量盐分的依赖。
             </p>
 
             <h3>下午</h3>
+
             <p>
-                如果身体状况允许，可以进行一段轻松的散步。
+                如果身体状况允许，可以舒适地散步一会儿。
                 如果感到饥饿，可以吃一份水果，
                 或适量享用无盐坚果。
             </p>
 
             <h3>晚餐</h3>
+
             <p>
-                以豆类或豆腐烹煮的蔬菜汤，
+                一碗加入豆类或豆腐的蔬菜汤，
                 搭配适量米饭或其他谷物。
             </p>
 
             <p>
-                这只是一个饮食示例，并非针对个人制定的饮食计划。
-                患有特定疾病或有特殊饮食需求的人士，
-                可能需要专业的个别化指导。
+                以上仅供日常饮食参考，并非个人专属的饮食处方。
+                患有特定疾病或有特殊饮食需求的人，
+                可能需要接受个别化的专业指导。
             </p>
+
         </section>
 
+
         <section class="reflection-box">
+
             <h2>一份小小的生活感悟</h2>
 
             <p>
-                我们常常认为，呵护心脏是一项艰巨的任务，
-                需要严格的自律和许多牺牲。
-                然而，许多改变其实都始于日常生活中的普通选择：
-                在餐盘中多添一种蔬菜、更经常选择豆类、
-                出门散步、获得充足休息，
-                或为自己安排一次健康检查。
+                我们有时会认为，呵护心脏是一项艰巨的任务，
+                需要严格自律和许多牺牲。
+                其实，许多改变都始于平凡的日常决定：
+                在餐盘中多添一种蔬菜、增加豆类的摄取、
+                出门散步、获得充足休息，或安排一次健康检查。
             </p>
 
             <p>
-                我们不需要在一天之内改变所有事情。
+                我们不必在一天之内改变所有事情。
                 可以先从一个切实可行的小步骤开始，
-                持之以恒地实践，再逐渐建立更多良好的习惯。
+                持之以恒，再慢慢建立更多健康习惯。
             </p>
 
             <p>
                 呵护心脏，也是珍惜生命的一种方式。
-                只要保持觉察、耐心，并在需要时寻求适当的医疗指导，
-                每天的小小努力也能逐渐成为关爱身心健康的重要部分。
+                通过觉察、耐心和适当的医疗指导，
+                每天的小小习惯都能成为我们更用心照顾身心健康的一部分。
             </p>
+
         </section>
 
+
         <section class="article-section">
-            <h2>探索值得信赖的健康资讯</h2>
+
+            <h2>探索可靠的健康资讯</h2>
 
             <ul>
+
                 <li>
                     <a class="resource-link"
                        href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/nutrition-basics/your-guide-to-healthy-eating-habits-that-stick"
                        target="_blank"
                        rel="noopener noreferrer">
-                        美国心脏协会：健康饮食习惯指南
+                        美国心脏协会：建立健康饮食习惯
                     </a>
                 </li>
 
@@ -655,33 +902,41 @@ crossorigin="anonymous"></script>
                         英国国家医疗服务体系（NHS）：预防冠心病
                     </a>
                 </li>
+
             </ul>
+
         </section>
+
 
         <section class="medical-note">
-            <h2>健康资讯免责声明</h2>
+
+            <h2>健康资讯说明</h2>
 
             <p>
-                本文仅供一般健康教育与资讯参考之用，
-                不用于诊断、预防或治疗任何个人疾病，
+                本文仅供一般健康教育和资讯参考，
+                不能用于诊断、预防或治疗个人疾病，
                 也不能取代专业医疗建议。
-                每个人的营养需求和健康状况各不相同。
-                请向合格的医疗专业人员咨询，
-                以便根据您的健康状况、正在服用的药物
-                及个人实际情况获得适当的建议。
+                每个人的饮食需求各不相同。
+                如需针对个人健康状况、药物或生活情况获得建议，
+                请咨询合格的医疗专业人员。
             </p>
+
         </section>
+
 
         <p>
             <a href="/zh/mindful-eating.html">← 探索正念饮食</a>
             &nbsp; | &nbsp;
-            <a href="/zh/blog.html">返回 Yangocean 生活日志</a>
+            <a href="/zh/blog.html">返回 Yangocean 生活札记</a>
         </p>
 
     </article>
+
 </main>
 
-<footer>
+
+<footer id="site-footer">
+
     <p>
         <a href="/zh/about.html">关于我们</a> |
         <a href="/zh/contact.html">联系我们</a> |
@@ -690,18 +945,33 @@ crossorigin="anonymous"></script>
         <a href="/zh/apps.html">相关应用</a>
     </p>
 
-    <p>&copy; <span id="current-year"></span> Yangocean。版权所有。</p>
+    <p>
+        &copy; <span id="current-year"></span> Yangocean。版权所有。
+    </p>
+
 </footer>
 
+
 <script>
+
+/* =====================================
+   当前年份
+===================================== */
+
 document.getElementById("current-year").textContent =
     new Date().getFullYear();
+
+
+/* =====================================
+   文章朗读功能
+===================================== */
 
 let speechUtterance = null;
 
 function startReading() {
+
     if (!("speechSynthesis" in window)) {
-        alert("抱歉，您的浏览器不支持语音朗读功能。");
+        alert("抱歉，您的浏览器不支持文章朗读功能。");
         return;
     }
 
@@ -730,20 +1000,28 @@ function startReading() {
     window.speechSynthesis.speak(speechUtterance);
 }
 
+
 function pauseReading() {
+
     if (!("speechSynthesis" in window)) {
         return;
     }
 
     if (window.speechSynthesis.speaking &&
         !window.speechSynthesis.paused) {
+
         window.speechSynthesis.pause();
+
     } else if (window.speechSynthesis.paused) {
+
         window.speechSynthesis.resume();
+
     }
 }
 
+
 function stopReading() {
+
     if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
     }
@@ -751,11 +1029,15 @@ function stopReading() {
     speechUtterance = null;
 }
 
+
 window.addEventListener("beforeunload", function() {
+
     if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
     }
+
 });
+
 </script>
 
 </body>
