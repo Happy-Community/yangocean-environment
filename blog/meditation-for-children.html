@@ -325,6 +325,25 @@ footer a {
     A calm mind helps us see the good in ourselves and the world around us.
 </p>
 
+<!-- Read Aloud Feature -->
+
+<div class="read-aloud">
+
+    <h3>🔊 Read Aloud</h3>
+
+    <p>
+        Prefer to listen? Use the controls below to listen to this article.
+    </p>
+
+    <button id="readButton" onclick="startReading()">▶ Read Aloud</button>
+    <button id="pauseButton" onclick="pauseReading()" disabled>⏸ Pause</button>
+    <button id="resumeButton" onclick="resumeReading()" disabled>▶ Resume</button>
+    <button id="stopButton" onclick="stopReading()" disabled>⏹ Stop</button>
+
+    <p id="readStatus" aria-live="polite">Ready to read.</p>
+
+</div>
+
 <p class="intro">
 Children live in a busy and exciting world. They experience joy, curiosity, friendship, and also worries and strong emotions. Sometimes they may feel angry, sad, restless or overwhelmed.
 
@@ -535,9 +554,9 @@ Let us encourage our children to be kind to themselves, kind to others and kind 
         Explore more meditation topics and reflections.
     </a>
 
-    <a class="journey-card" href="/blog/meditation-for-working-adults.html">
-        <strong>🌼 Meditation for Working Adults</strong>
-        Discover simple ways to find balance in a busy life.
+    <a class="journey-card" href="/blog/meditation-for-parents.html">
+        <strong>🌼 Meditation for Parents</strong>
+        Discover gentle ways to bring mindfulness, patience and calm into family life.
     </a>
 
     <a class="journey-card" href="/nature-connection.html">
@@ -549,25 +568,6 @@ Let us encourage our children to be kind to themselves, kind to others and kind 
         <strong>💚 Mindful &amp; Ethical Living</strong>
         Learn to live with kindness, awareness and care.
     </a>
-
-</div>
-
-<!-- Read Aloud Feature -->
-
-<div class="read-aloud">
-
-    <h3>🔊 Read Aloud</h3>
-
-    <p>
-        Prefer to listen? Use the controls below to listen to this article.
-    </p>
-
-    <button id="readButton" onclick="startReading()">▶ Read Aloud</button>
-    <button id="pauseButton" onclick="pauseReading()" disabled>⏸ Pause</button>
-    <button id="resumeButton" onclick="resumeReading()" disabled>▶ Resume</button>
-    <button id="stopButton" onclick="stopReading()" disabled>⏹ Stop</button>
-
-    <p id="readStatus" aria-live="polite">Ready to read.</p>
 
 </div>
 
@@ -599,8 +599,6 @@ let isReading = false;
 
 function prepareSpeech() {
     const main = document.querySelector("main");
-    const readAloud = document.querySelector(".read-aloud");
-
     const clone = main.cloneNode(true);
 
     const controls = clone.querySelector(".read-aloud");
