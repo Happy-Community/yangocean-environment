@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Meditación para jubilados y adultos mayores: Envejecer con paz y propósito | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Descubre cómo la atención plena y la meditación pueden ayudar a los jubilados y adultos mayores a vivir con paz, gratitud, sabiduría y propósito.">
+
+<meta name="keywords"
+content="meditación para adultos mayores, meditación para jubilados, atención plena, envejecimiento saludable, paz interior, gratitud, Yangocean">
+
+<meta property="og:title"
+content="Meditación para jubilados y adultos mayores: Envejecer con paz y propósito">
+
+<meta property="og:description"
+content="Una reflexión sobre cómo cultivar la paz interior, la gratitud y el propósito durante la jubilación y las últimas etapas de la vida.">
+
+<meta property="og:image"
+content="https://www.yangocean.com/images/meditation-for-retirees.png">
+
+<meta property="og:url"
+content="https://www.yangocean.com/es/blog/meditation-for-retirees.html">
+
+<meta property="og:type" content="article">
+
+<link rel="canonical"
+href="https://www.yangocean.com/es/blog/meditation-for-retirees.html">
+
+<style>
+:root {
+    --green: #456b50;
+    --dark-green: #294b35;
+    --cream: #fbf8ef;
+    --light-green: #edf3e9;
+    --text: #344238;
+    --white: #ffffff;
+    --border: #dce5d9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    color: var(--text);
+    background: var(--cream);
+}
+
+header {
+    background: var(--green);
+    color: var(--white);
+    padding: 22px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.9rem;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+}
+
+nav {
+    background: var(--dark-green);
+    padding: 12px 10px;
+    text-align: center;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 12px;
+    display: inline-block;
+    font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+    text-decoration: underline;
+}
+
+.container {
+    max-width: 950px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+article {
+    background: var(--white);
+    padding: 32px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+h2,
+h3 {
+    color: var(--dark-green);
+    line-height: 1.45;
+}
+
+h2 {
+    margin-top: 32px;
+}
+
+h3 {
+    margin-top: 20px;
+}
+
+p {
+    margin: 15px 0;
+}
+
+.intro {
+    font-size: 1.08rem;
+}
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 25px auto;
+    border-radius: 12px;
+}
+
+.read-aloud {
+    background: var(--light-green);
+    border: 1px solid var(--border);
+    padding: 18px 20px;
+    margin: 20px 0 25px;
+    border-radius: 12px;
+}
+
+.read-aloud h3 {
+    margin-top: 0;
+}
+
+.read-aloud p {
+    margin: 5px 0 12px;
+    font-size: 0.93rem;
+}
+
+.audio-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.audio-controls button {
+    border: none;
+    border-radius: 7px;
+    padding: 10px 16px;
+    background: var(--green);
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.audio-controls button:hover {
+    background: var(--dark-green);
+}
+
+.audio-controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.practice {
+    background: var(--light-green);
+    padding: 20px 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.practice ol {
+    padding-left: 22px;
+}
+
+.practice li {
+    margin-bottom: 12px;
+}
+
+.share {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+}
+
+.share-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+}
+
+.share a,
+.share button {
+    display: inline-block;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 7px;
+    background: var(--green);
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.share a:hover,
+.share button:hover {
+    background: var(--dark-green);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: var(--dark-green);
+    color: var(--white);
+    padding: 35px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer h2 {
+    color: var(--white);
+    margin-top: 0;
+}
+
+.footer-cards {
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.footer-card {
+    background: rgba(255,255,255,0.1);
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.footer-card a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-card a:hover {
+    text-decoration: underline;
+}
+
+.footer-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+footer p {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #d5b86a;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        margin: 5px 8px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    .container {
+        padding: 0 12px;
+    }
+
+    .audio-controls button {
+        flex: 1 1 auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Yangocean</h1>
+    <p>Vida consciente • Conexión con la naturaleza • Sostenibilidad</p>
+</header>
+
+<nav aria-label="Navegación principal">
+    <a href="/es/index.html">Inicio</a>
+    <a href="/es/mindfulness.html">Atención plena y Dhamma</a>
+    <a href="/es/mindful-ethical-living.html">Vida consciente y ética</a>
+    <a href="/es/journal.html">Diario</a>
+</nav>
+
+<main class="container">
+
+<article id="article-content">
+
+<h2>Meditación para jubilados y adultos mayores: Envejecer con paz y propósito</h2>
+
+<p class="intro">
+La jubilación y la vejez pueden ser etapas valiosas de la vida. Después de muchos años dedicados al trabajo, la familia y otras responsabilidades, llega el momento de reducir el ritmo, reflexionar y descubrir nuevas maneras de encontrar satisfacción y significado en la vida.
+</p>
+
+<p>
+La meditación y la atención plena pueden ayudarnos a afrontar esta etapa con serenidad, paciencia y sabiduría. No necesitamos grandes logros ni actividades complicadas para experimentar la felicidad. A menudo, la paz se encuentra en los momentos sencillos de cada día.
+</p>
+
+<!-- Read Aloud Controls -->
+
+<div class="read-aloud" aria-label="Controles de lectura en voz alta">
+
+    <h3>Escuchar este artículo</h3>
+
+    <p>
+        Utilice los controles para escuchar el artículo en español.
+    </p>
+
+    <div class="audio-controls">
+
+        <button type="button" id="readButton" onclick="startReading()">
+            ▶ Leer en voz alta
+        </button>
+
+        <button type="button" id="pauseButton" onclick="pauseReading()" disabled>
+            ⏸ Pausar
+        </button>
+
+        <button type="button" id="resumeButton" onclick="resumeReading()" disabled>
+            ▶ Reanudar
+        </button>
+
+        <button type="button" id="stopButton" onclick="stopReading()" disabled>
+            ■ Detener
+        </button>
+
+    </div>
+
+    <p id="audioStatus" aria-live="polite"></p>
+
+</div>
+
+<img
+    src="/images/meditation-for-retirees.png"
+    alt="Adultos mayores practicando meditación con tranquilidad"
+    class="article-image"
+    loading="lazy"
+>
+
+<h2>1. Comenzar con el momento presente</h2>
+
+<p>
+En lugar de preocuparnos constantemente por el pasado o el futuro, podemos aprender a prestar atención al momento presente.
+</p>
+
+<p>
+Al sentarnos tranquilamente, observar nuestra respiración y sentir el cuerpo, podemos desarrollar una mayor conciencia de lo que sucede aquí y ahora. No es necesario forzar la mente para que deje de pensar. Simplemente reconocemos nuestros pensamientos y regresamos suavemente a la respiración.
+</p>
+
+<p>
+Cada respiración nos ofrece una oportunidad para comenzar de nuevo y experimentar el momento presente con tranquilidad.
+</p>
+
+<h2>2. Aceptar los cambios con sabiduría</h2>
+
+<p>
+El envejecimiento trae consigo cambios físicos, emocionales y sociales. La energía puede disminuir, la salud puede cambiar y algunas actividades que antes disfrutábamos pueden resultar más difíciles.
+</p>
+
+<p>
+En lugar de luchar constantemente contra estos cambios, podemos aprender a aceptarlos con comprensión y sabiduría. Aceptar no significa rendirse, sino reconocer la realidad y adaptarnos de una manera saludable.
+</p>
+
+<p>
+La meditación nos ayuda a observar nuestras experiencias sin juzgarlas precipitadamente y a desarrollar una actitud más tranquila ante los cambios inevitables de la vida.
+</p>
+
+<h2>3. Apreciar las cosas sencillas de la vida</h2>
+
+<p>
+La felicidad no siempre depende de grandes acontecimientos. Podemos encontrar alegría en una taza de té caliente, una comida sencilla, una conversación agradable, las flores del jardín o la luz del sol por la mañana.
+</p>
+
+<p>
+Cuando practicamos la atención plena, aprendemos a apreciar estos pequeños momentos en lugar de darlos por sentados.
+</p>
+
+<p>
+Dedicar unos instantes cada día a reconocer las cosas buenas que tenemos puede cultivar un corazón agradecido y una mente más satisfecha.
+</p>
+
+<h2>4. Afrontar las preocupaciones y la incertidumbre con paciencia</h2>
+
+<p>
+A medida que envejecemos, podemos preocuparnos por nuestra salud, nuestra independencia, nuestra familia o el futuro.
+</p>
+
+<p>
+Estas preocupaciones son comprensibles. Sin embargo, pensar continuamente en situaciones que no podemos controlar puede aumentar nuestro sufrimiento.
+</p>
+
+<p>
+La meditación nos enseña a reconocer las preocupaciones sin dejarnos dominar por ellas. Podemos respirar con calma, observar nuestros pensamientos y concentrarnos en aquello que podemos hacer en el presente.
+</p>
+
+<p>
+Cuando surjan dificultades, recordemos tratarnos con paciencia y amabilidad.
+</p>
+
+<h2>5. Mantenerse conectado con los demás</h2>
+
+<p>
+Las relaciones humanas siguen siendo importantes durante todas las etapas de la vida. Mantener el contacto con familiares, amigos y miembros de la comunidad puede aportar compañía, apoyo y alegría.
+</p>
+
+<p>
+Podemos compartir una comida, conversar con un amigo, participar en actividades comunitarias o dedicar tiempo a escuchar a nuestros seres queridos.
+</p>
+
+<p>
+La atención plena también puede mejorar nuestras relaciones. Cuando escuchamos con paciencia y hablamos con consideración, creamos oportunidades para comprendernos mejor y fortalecer nuestros vínculos.
+</p>
+
+<h2>6. Cultivar la bondad y el amor benevolente</h2>
+
+<p>
+La bondad y el amor benevolente pueden enriquecer nuestra vida y la de quienes nos rodean.
+</p>
+
+<p>
+Podemos comenzar deseándonos paz y bienestar, y después extender estos buenos deseos a nuestros familiares, amigos, vecinos e incluso a personas con quienes tengamos dificultades.
+</p>
+
+<p>
+Una actitud amable no requiere grandes esfuerzos. Una palabra afectuosa, una sonrisa sincera o un pequeño acto de generosidad pueden marcar una diferencia.
+</p>
+
+<p>
+Al cultivar la bondad, también podemos desarrollar una mente más abierta, paciente y comprensiva.
+</p>
+
+<h2>7. Encontrar significado más allá del trabajo y las responsabilidades familiares</h2>
+
+<p>
+La jubilación puede cambiar nuestra rutina y nuestra percepción de identidad. Algunas personas pueden sentir que han perdido una parte importante de su propósito al dejar de trabajar.
+</p>
+
+<p>
+Sin embargo, el significado de la vida no se limita a una profesión o a las responsabilidades familiares.
+</p>
+
+<p>
+Esta etapa puede ofrecernos tiempo para aprender, cultivar intereses personales, practicar la meditación, ayudar a otras personas, cuidar las plantas o participar en actividades comunitarias.
+</p>
+
+<p>
+También podemos compartir nuestras experiencias y conocimientos con las generaciones más jóvenes. Nuestra sabiduría y nuestras vivencias pueden seguir siendo valiosas para los demás.
+</p>
+
+<h2>8. Reconectar con la naturaleza</h2>
+
+<p>
+La naturaleza puede ofrecernos tranquilidad e inspiración. Pasar tiempo en un jardín, caminar por un parque, observar los árboles o escuchar el canto de los pájaros puede ayudarnos a reducir el ritmo y apreciar nuestro entorno.
+</p>
+
+<p>
+No es necesario realizar actividades físicas intensas. Podemos disfrutar de la naturaleza de una manera adecuada a nuestra condición física, incluso sentándonos tranquilamente al aire libre.
+</p>
+
+<p>
+Al observar los ciclos naturales, también podemos reflexionar sobre los cambios y la interconexión de toda forma de vida.
+</p>
+
+<h2>9. Reflexionar sobre la vida con gratitud y sabiduría</h2>
+
+<p>
+La vejez puede ser una oportunidad para contemplar el camino recorrido. Hemos experimentado alegrías, dificultades, aprendizajes y cambios.
+</p>
+
+<p>
+En lugar de centrarnos únicamente en los errores o los arrepentimientos, podemos reconocer las lecciones que nos han ayudado a crecer.
+</p>
+
+<p>
+La gratitud nos permite apreciar las personas, las oportunidades y las experiencias que han formado parte de nuestra vida.
+</p>
+
+<p>
+La reflexión consciente también puede ayudarnos a comprender mejor nuestras prioridades y a vivir el presente con mayor claridad.
+</p>
+
+<h2>Una práctica diaria sencilla de atención plena</h2>
+
+<p>
+No necesitamos dedicar muchas horas a la meditación para comenzar. Podemos establecer una práctica breve y constante, adaptada a nuestra comodidad y capacidad física.
+</p>
+
+<div class="practice">
+
+<h3>Seis pasos para una práctica diaria</h3>
+
+<ol>
+
+<li>
+<strong>Buscar un lugar tranquilo:</strong>
+Siéntese cómodamente en una silla o sobre un cojín, manteniendo una postura relajada y estable.
+</li>
+
+<li>
+<strong>Prestar atención a la respiración:</strong>
+Observe cómo entra y sale el aire de manera natural, sin intentar controlar la respiración.
+</li>
+
+<li>
+<strong>Relajar el cuerpo:</strong>
+Observe suavemente las sensaciones del cuerpo y permita que los músculos se relajen.
+</li>
+
+<li>
+<strong>Reconocer los pensamientos:</strong>
+Cuando aparezcan pensamientos, reconózcalos sin juzgarse y regrese suavemente a la respiración.
+</li>
+
+<li>
+<strong>Cultivar buenos deseos:</strong>
+Dedique unos momentos a desearse salud, tranquilidad y bienestar, y extienda esos deseos a los demás.
+</li>
+
+<li>
+<strong>Terminar con gratitud:</strong>
+Antes de finalizar, reconozca el tiempo que ha dedicado a cuidar su mente y su bienestar.
+</li>
+
+</ol>
+
+<p>
+Puede comenzar con cinco a diez minutos al día y aumentar gradualmente el tiempo si se siente cómodo.
+</p>
+
+</div>
+
+<h2>Cada etapa de la vida tiene su propio valor</h2>
+
+<p>
+Envejecer no significa que nuestra capacidad para aprender, amar, crecer y contribuir a la sociedad haya terminado. Cada etapa de la vida tiene sus propias oportunidades y enseñanzas.
+</p>
+
+<p>
+A través de la atención plena, la meditación, la bondad y la gratitud, podemos aprender a vivir con mayor serenidad y comprensión.
+</p>
+
+<p>
+No podemos detener el paso del tiempo, pero sí podemos cultivar una actitud sabia y amable hacia cada momento que vivimos.
+</p>
+
+<p>
+Que nuestros años posteriores estén llenos de paz, dignidad, conexión y propósito.
+</p>
+
+<div class="share">
+
+<h3>Compartir este artículo</h3>
+
+<div class="share-buttons">
+
+<a
+href="https://www.facebook.com/sharer/sharer.php?u=https://www.yangocean.com/es/blog/meditation-for-retirees.html"
+target="_blank"
+rel="noopener noreferrer">
+Facebook
+</a>
+
+<a
+href="https://twitter.com/intent/tweet?url=https://www.yangocean.com/es/blog/meditation-for-retirees.html"
+target="_blank"
+rel="noopener noreferrer">
+X / Twitter
+</a>
+
+<a
+href="https://api.whatsapp.com/send?text=https://www.yangocean.com/es/blog/meditation-for-retirees.html"
+target="_blank"
+rel="noopener noreferrer">
+WhatsApp
+</a>
+
+<a
+href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.yangocean.com/es/blog/meditation-for-retirees.html"
+target="_blank"
+rel="noopener noreferrer">
+LinkedIn
+</a>
+
+<button type="button" onclick="copyArticleLink()">
+Copiar enlace
+</button>
+
+</div>
+</div>
+
+<a class="back-link" href="/es/mindfulness.html">
+← Volver a Atención plena y meditación
+</a>
+
+</article>
+
+</main>
+
+<footer>
+
+<h2>Explora más sobre la atención plena</h2>
+
+<div class="footer-cards">
+
+<div class="footer-card">
+    <a href="/es/mindfulness.html">Atención plena y Dhamma</a>
+    <p>
+    Descubre cómo incorporar la atención plena y las enseñanzas del Dhamma a la vida cotidiana.
+    </p>
+</div>
+
+<div class="footer-card">
+    <a href="/es/blog/mindfulness-of-breathing.html">Atención plena en la respiración</a>
+    <p>
+    Aprende a cultivar la concentración y la calma mediante la observación de la respiración.
+    </p>
+</div>
+
+<div class="footer-card">
+    <a href="/es/blog/building-a-meditation-habit.html">Crear el hábito de meditar</a>
+    <p>
+    Descubre maneras sencillas de establecer una práctica de meditación constante.
+    </p>
+</div>
+
+<div class="footer-card">
+    <a href="/es/blog/meditation-in-the-pa-auk-tradition.html">Meditación según la tradición Pa-Auk</a>
+    <p>
+    Conoce el enfoque tradicional de la meditación Samatha y Vipassanā.
+    </p>
+</div>
+
+</div>
+
+<p>
+© <span id="year"></span> Yangocean. Todos los derechos reservados.
+</p>
+
+<p>
+Vida consciente • Conexión con la naturaleza • Sostenibilidad
+</p>
+
+</footer>
+
+<script>
+
+// Update copyright year
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+// Read Aloud functionality
+
+let speechUtterance = null;
+
+function getArticleText() {
+
+    const article = document.getElementById("article-content");
+
+    const clone = article.cloneNode(true);
+
+    // Remove controls and sharing buttons from spoken content
+    const elementsToRemove = clone.querySelectorAll(
+        ".read-aloud, .share, .back-link"
+    );
+
+    elementsToRemove.forEach(element => element.remove());
+
+    return clone.innerText.trim();
+}
+
+
+function updateAudioButtons(isSpeaking) {
+
+    document.getElementById("readButton").disabled = isSpeaking;
+
+    document.getElementById("pauseButton").disabled = !isSpeaking;
+
+    document.getElementById("resumeButton").disabled = true;
+
+    document.getElementById("stopButton").disabled = !isSpeaking;
+}
+
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        document.getElementById("audioStatus").textContent =
+            "Lo sentimos, su navegador no admite la lectura en voz alta.";
+
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const textToRead = getArticleText();
+
+    speechUtterance = new SpeechSynthesisUtterance(textToRead);
+
+    // Spanish voice and language
+    speechUtterance.lang = "es-ES";
+
+    speechUtterance.rate = 0.9;
+
+    speechUtterance.pitch = 1;
+
+    speechUtterance.volume = 1;
+
+
+    // Prefer a Spanish voice when available
+    const voices = window.speechSynthesis.getVoices();
+
+    const spanishVoice = voices.find(voice =>
+        voice.lang.toLowerCase().startsWith("es-es")
+    ) || voices.find(voice =>
+        voice.lang.toLowerCase().startsWith("es")
+    );
+
+    if (spanishVoice) {
+        speechUtterance.voice = spanishVoice;
+    }
+
+
+    speechUtterance.onstart = function() {
+
+        updateAudioButtons(true);
+
+        document.getElementById("audioStatus").textContent =
+            "Leyendo el artículo...";
+    };
+
+
+    speechUtterance.onend = function() {
+
+        updateAudioButtons(false);
+
+        document.getElementById("audioStatus").textContent =
+            "La lectura ha finalizado.";
+
+        speechUtterance = null;
+    };
+
+
+    speechUtterance.onerror = function() {
+
+        updateAudioButtons(false);
+
+        document.getElementById("audioStatus").textContent =
+            "No se pudo completar la lectura. Inténtelo de nuevo.";
+
+        speechUtterance = null;
+    };
+
+
+    window.speechSynthesis.speak(speechUtterance);
+}
+
+
+function pauseReading() {
+
+    if (window.speechSynthesis.speaking &&
+        !window.speechSynthesis.paused) {
+
+        window.speechSynthesis.pause();
+
+        document.getElementById("pauseButton").disabled = true;
+
+        document.getElementById("resumeButton").disabled = false;
+
+        document.getElementById("audioStatus").textContent =
+            "Lectura pausada.";
+    }
+}
+
+
+function resumeReading() {
+
+    if (window.speechSynthesis.paused) {
+
+        window.speechSynthesis.resume();
+
+        document.getElementById("pauseButton").disabled = false;
+
+        document.getElementById("resumeButton").disabled = true;
+
+        document.getElementById("audioStatus").textContent =
+            "Reanudando la lectura...";
+    }
+}
+
+
+function stopReading() {
+
+    if ("speechSynthesis" in window) {
+
+        window.speechSynthesis.cancel();
+    }
+
+    speechUtterance = null;
+
+    updateAudioButtons(false);
+
+    document.getElementById("audioStatus").textContent =
+        "Lectura detenida.";
+}
+
+
+// Copy article link
+
+function copyArticleLink() {
+
+    const articleUrl =
+        "https://www.yangocean.com/es/blog/meditation-for-retirees.html";
+
+    if (navigator.clipboard && window.isSecureContext) {
+
+        navigator.clipboard.writeText(articleUrl)
+            .then(() => {
+                alert("¡Enlace copiado!");
+            })
+            .catch(() => {
+                fallbackCopy(articleUrl);
+            });
+
+    } else {
+
+        fallbackCopy(articleUrl);
+    }
+}
+
+
+function fallbackCopy(text) {
+
+    const textArea = document.createElement("textarea");
+
+    textArea.value = text;
+
+    textArea.style.position = "fixed";
+
+    textArea.style.opacity = "0";
+
+    document.body.appendChild(textArea);
+
+    textArea.select();
+
+    try {
+
+        document.execCommand("copy");
+
+        alert("¡Enlace copiado!");
+
+    } catch (error) {
+
+        alert("No se pudo copiar el enlace. Puede copiarlo desde la barra de direcciones.");
+    }
+
+    document.body.removeChild(textArea);
+}
+
+
+// Stop speech when leaving the page
+
+window.addEventListener("pagehide", function() {
+
+    if ("speechSynthesis" in window) {
+
+        window.speechSynthesis.cancel();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
