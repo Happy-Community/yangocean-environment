@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-
-<title>Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Yangocean Journal | Mindful Living, Nature & Everyday Reflections</title>
+
 <meta name="description"
-content="Explore Yangocean Journal for reflections on mindful living, nature, sustainability, mindful eating, growing plants and everyday experiences.">
+content="Explore Yangocean Journal reflections on mindful living, nature, sustainability, wildlife, and everyday experiences, alongside practical growing guides.">
 
 <meta name="robots" content="index, follow">
 
@@ -23,58 +22,59 @@ content="Explore Yangocean Journal for reflections on mindful living, nature, su
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
 <meta property="og:title"
-content="Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections">
-
+content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 <meta property="og:description"
-content="Reflections and practical observations about mindful living, nature, sustainability, growing plants and everyday experiences.">
-
+content="Reflections and observations about mindful living, nature, sustainability, wildlife and everyday experiences.">
 <meta property="og:type" content="website">
-
 <meta property="og:url" content="https://yangocean.com/blog.html">
-
-<meta property="og:image"
-content="https://yangocean.com/images/yangocean-og.jpg">
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title"
-content="Yangocean Journal | Mindful Living, Nature &amp; Everyday Reflections">
-
+content="Yangocean Journal | Mindful Living, Nature & Everyday Reflections">
 <meta name="twitter:description"
-content="Discover reflections on mindful living, nature, sustainability and everyday experiences.">
+content="Reflections and observations about mindful living, nature, sustainability and everyday experiences.">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<meta name="twitter:image"
-content="https://yangocean.com/images/yangocean-og.jpg">
-
-<meta name="google-adsense-account"
-content="ca-pub-6929570744326515">
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
 <style>
 * {
     box-sizing: border-box;
 }
 
+:root {
+    --green: #315d3b;
+    --green-dark: #24472d;
+    --green-light: #eaf2e8;
+    --cream: #faf9f3;
+    --text: #354039;
+    --muted: #68736a;
+    --white: #ffffff;
+    --border: #e2e9df;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;
-    color: #333;
-    background: #f7f9f6;
+    color: var(--text);
+    background: var(--cream);
 }
 
 /* HEADER */
 
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 16px 20px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .header-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -84,22 +84,22 @@ header {
 
 .logo {
     text-decoration: none;
-    color: #2f5d3a;
-    font-size: 1.45rem;
+    color: var(--green);
+    font-size: 1.5rem;
     font-weight: bold;
     white-space: nowrap;
 }
 
 .tagline {
     font-size: 0.8rem;
-    color: #777;
+    color: var(--muted);
     margin-top: 2px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 17px;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
@@ -108,13 +108,13 @@ nav a,
 .dropbtn {
     color: #444;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     cursor: pointer;
 }
 
 nav a:hover,
 .dropbtn:hover {
-    color: #2f6b3f;
+    color: var(--green);
 }
 
 .dropdown {
@@ -135,9 +135,10 @@ nav a:hover,
     right: 0;
     top: 28px;
     min-width: 220px;
-    background: #ffffff;
+    background: var(--white);
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-    border-radius: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     padding: 8px 0;
     z-index: 1001;
 }
@@ -145,12 +146,11 @@ nav a:hover,
 .dropdown-content a {
     display: block;
     padding: 9px 16px;
-    color: #444;
     white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-    background: #f1f6f1;
+    background: var(--green-light);
 }
 
 .dropdown:hover .dropdown-content,
@@ -170,16 +170,12 @@ nav a:hover,
     color: #666;
 }
 
-.language a:hover {
-    color: #2f6b3f;
-}
-
-/* MAIN CONTENT */
+/* MAIN */
 
 main {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 30px 20px 60px;
+    padding: 30px 22px 70px;
 }
 
 .hero {
@@ -188,15 +184,15 @@ main {
 }
 
 .hero h1 {
-    margin: 0 0 14px;
-    color: #2f5d3a;
-    font-size: 2.4rem;
+    margin: 0 0 15px;
+    color: var(--green);
+    font-size: 2.7rem;
 }
 
 .hero p {
-    max-width: 760px;
-    margin: 0 auto 14px;
-    color: #555;
+    max-width: 780px;
+    margin: 12px auto;
+    color: var(--muted);
     font-size: 1.05rem;
 }
 
@@ -208,49 +204,144 @@ main {
 
 .section h2 {
     text-align: center;
-    color: #2f5d3a;
+    color: var(--green);
     margin-bottom: 12px;
+    font-size: 1.8rem;
 }
 
 .section-intro {
-    max-width: 760px;
-    margin: 0 auto 25px;
+    max-width: 780px;
+    margin: 0 auto 28px;
     text-align: center;
-    color: #666;
+    color: var(--muted);
 }
 
-/* JOURNAL CARDS */
+/* ABOUT JOURNAL */
+
+.about-journal {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.035);
+}
+
+.about-journal h2 {
+    text-align: center;
+    color: var(--green);
+    margin-top: 0;
+}
+
+/* FEATURED ARTICLE */
+
+.featured-article {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin-bottom: 32px;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-content {
+    padding: 30px 35px 30px 5px;
+}
+
+.featured-label {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 6px 13px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+}
+
+.featured-content h3 {
+    color: var(--green);
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin: 0 0 15px;
+}
+
+.featured-content p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.read-link {
+    display: inline-block;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    background: var(--green-light);
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.read-link:hover {
+    background: #dce9d8;
+}
+
+/* JOURNAL GRID */
 
 .journal-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
 }
 
 .journal-card {
-    background: #ffffff;
-    border-radius: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
 }
 
 .journal-card h3 {
-    margin-top: 0;
-    color: #315f3b;
+    color: var(--green);
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
 }
 
 .journal-card p {
-    color: #666;
+    color: var(--muted);
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .journal-card a {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    color: #2f6b3f;
+    color: var(--green);
     font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
 }
 
 .journal-card a:hover {
@@ -266,29 +357,31 @@ main {
 }
 
 .guide-card {
-    background: #ffffff;
-    border-radius: 12px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
 }
 
 .guide-card h3 {
-    margin-top: 0;
-    color: #315f3b;
+    color: var(--green);
+    margin: 0 0 12px;
 }
 
 .guide-card p {
-    color: #666;
+    color: var(--muted);
     font-size: 0.95rem;
+    flex-grow: 1;
 }
 
 .guide-card a {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    color: #2f6b3f;
+    color: var(--green);
     font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
 }
 
 .guide-card a:hover {
@@ -298,20 +391,20 @@ main {
 /* SIMPLE THOUGHT */
 
 .simple-thought {
-    background: #edf4ec;
-    border-radius: 12px;
-    padding: 30px;
+    background: var(--green-light);
+    border-radius: 18px;
+    padding: 35px 25px;
     text-align: center;
-    margin-top: 45px;
+    margin-top: 55px;
 }
 
 .simple-thought h2 {
     margin-top: 0;
-    color: #2f5d3a;
+    color: var(--green);
 }
 
 .simple-thought p {
-    max-width: 720px;
+    max-width: 760px;
     margin: auto;
     color: #405944;
     font-style: italic;
@@ -321,26 +414,47 @@ main {
 
 footer {
     background: #eef2ed;
-    border-top: 1px solid #dfe5df;
-    padding: 25px 20px;
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
     text-align: center;
-    color: #666;
+    color: var(--muted);
     font-size: 0.9rem;
 }
 
 footer a {
     color: #49664e;
     text-decoration: none;
-    margin: 0 8px;
+    margin: 0 9px;
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* RESPONSIVE LAYOUT */
+footer p {
+    margin-top: 15px;
+}
 
-@media (max-width: 850px) {
+/* READ ALOUD BUTTON */
+
+.read-aloud-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 11px 16px;
+    border: 1px solid #d5dfd3;
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--green);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
     .header-inner {
         flex-direction: column;
         align-items: center;
@@ -352,17 +466,40 @@ footer a:hover {
 
     .journal-grid,
     .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-article {
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .featured-image {
+        height: 320px;
+        min-height: 0;
+    }
+
+    .featured-content {
+        padding: 28px;
     }
 }
 
 @media (max-width: 600px) {
+    main {
+        padding: 20px 15px 55px;
+    }
+
     .hero {
         padding: 35px 10px;
     }
 
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: 1fr;
     }
 
     nav {
@@ -373,13 +510,24 @@ footer a:hover {
     .dropdown-content {
         position: static;
         box-shadow: none;
-        border: 1px solid #eee;
+        border: 1px solid var(--border);
         margin-top: 8px;
     }
 
-    .language {
-        flex-wrap: wrap;
-        justify-content: center;
+    .featured-image {
+        height: 240px;
+    }
+
+    .featured-content {
+        padding: 22px;
+    }
+
+    .featured-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-journal {
+        padding: 22px;
     }
 }
 </style>
@@ -390,314 +538,308 @@ footer a:hover {
 <!-- HEADER -->
 
 <header>
-    <div class="header-inner">
+<div class="header-inner">
 
-        <div>
-            <a href="/" class="logo">Yangocean</a>
+<div>
+<a href="/" class="logo">Yangocean</a>
+<div class="tagline">
+Mindful Living • Nature Connection • Sustainability
+</div>
+</div>
 
-            <div class="tagline">
-                Mindful Living • Nature • Sustainability
-            </div>
-        </div>
+<nav>
+<a href="/">Home</a>
 
-        <nav aria-label="Main navigation">
+<div class="dropdown">
+<button class="dropbtn">🌿 Mindful Living ▾</button>
+<div class="dropdown-content">
+<a href="/mindfulness.html">🧘 Mindfulness &amp; Dhamma</a>
+<a href="/mindful-ethical-living.html">🌱 Mindful &amp; Ethical Living</a>
+<a href="/mindful-eating.html">🥗 Mindful Eating</a>
+<a href="/mindful-food.html">🍎 Mindful Food &amp; Food Videos</a>
+</div>
+</div>
 
-            <a href="/">Home</a>
+<div class="dropdown">
+<button class="dropbtn">🌳 Nature Connection ▾</button>
+<div class="dropdown-content">
+<a href="/nature-connection.html">🌳 Nature Connection</a>
+<a href="/eco.html">🌍 Environmental Awareness</a>
+<a href="/blog.html">📝 Journal</a>
+</div>
+</div>
 
-            <div class="dropdown">
-                <button class="dropbtn" type="button">
-                    🌿 Mindful Living ▾
-                </button>
+<div class="dropdown">
+<button class="dropbtn">📱 Related Apps ▾</button>
+<div class="dropdown-content">
+<a href="/apps.html">📱 All Related Apps</a>
+<a href="/apps.html#eft">🌿 Yangocean App</a>
+<a href="/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+<a href="/apps.html#duidui-fit">🏃 DuoFit</a>
+</div>
+</div>
 
-                <div class="dropdown-content">
-                    <a href="/mindfulness.html">
-                        🧘 Mindfulness &amp; Dhamma
-                    </a>
-                    <a href="/mindful-ethical-living.html">
-                    💚 Mindful &amp; Ethical Living
-                    </a>
-                    <a href="/mindful-eating.html">
-                        🥗 Mindful Eating
-                    </a>
-                    <a href="/mindful-food.html">
-                    🍲 Mindful Food &amp; Food Videos
-                    </a>
+<div class="language">
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+</div>
+</nav>
 
-                </div>
-            </div>
-
-
-
-            
-            <div class="dropdown">
-                <button class="dropbtn" type="button">
-                    🌳 Nature Connection ▾
-                </button>
-
-                <div class="dropdown-content">
-                    <a href="/nature-connection.html">
-                        🌳 Nature Connection
-                    </a>
-
-                    <!-- Keep this link because eco.html still exists -->
-                    <a href="/eco.html">
-                        🌍 Environmental Awareness
-                    </a>
-
-                    <a href="/blog.html">
-                        📝 Journal
-                    </a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn" type="button">
-                    📱 Related Apps ▾
-                </button>
-
-                <div class="dropdown-content">
-                    <a href="/apps.html">
-                        📱 All Related Apps
-                    </a>
-
-                    <a href="/apps.html#eft">
-                        🌿 Yangocean App
-                    </a>
-
-                    <a href="/apps.html#healthy-body">
-                        ❤️ QuQu Healthy Body
-                    </a>
-
-                    <a href="/apps.html#duidui-fit">
-                        🏃 DuoFit
-                    </a>
-                </div>
-            </div>
-
-            <div class="language" aria-label="Language selection">
-                <a href="/">EN</a>
-                <a href="/ms/">BM</a>
-                <a href="/zh/">中文</a>
-                <a href="/fr/">FR</a>
-                <a href="/es/">ES</a>
-                <a href="/my/">မြန်မာ</a>
-            </div>
-
-        </nav>
-    </div>
+</div>
 </header>
 
 <!-- MAIN CONTENT -->
 
 <main id="content-to-read">
 
-    <!-- JOURNAL INTRODUCTION -->
+<!-- HERO -->
 
-    <section class="hero">
-        <h1>📝 Journal</h1>
+<section class="hero">
+<h1>📝 Yangocean Journal</h1>
 
-        <p>
-            Reflections, observations and simple stories about mindful
-            living, nature, sustainability and everyday experiences.
-        </p>
+<p>
+Reflections, observations and simple stories about mindful living,
+nature, sustainability, wildlife and everyday experiences.
+</p>
 
-        <p>
-            Some entries begin with an ordinary observation and lead
-            to a thought about how we live, eat, notice and connect
-            with the world around us.
-        </p>
-    </section>
+<p>
+Sometimes a small observation — a bird, a tree, a meal, a growing plant
+or a quiet moment — can inspire a deeper reflection on how we live
+and connect with the world around us.
+</p>
+</section>
 
-    <!-- ABOUT THE JOURNAL -->
+<!-- ABOUT THE JOURNAL -->
 
-    <section class="section">
-        <h2>About the Journal</h2>
+<section class="section about-journal">
 
-        <p class="section-intro">
-            The Journal brings together longer reflections and
-            observations that do not fit neatly into a single topic.
-            Some explore nature and the environment, while others
-            look at everyday wellbeing, mindful living and simple
-            experiences.
-        </p>
-    </section>
+<h2>🌿 What Is the Yangocean Journal?</h2>
 
-    <!-- LATEST JOURNAL ENTRIES -->
+<p>
+The Yangocean Journal is a place for ideas that begin with paying
+attention. A walk outside, a changing tree, a meal eaten slowly,
+a new plant growing, or a small everyday choice can become an
+opportunity to observe and reflect.
+</p>
 
-    <section class="section">
-        <h2>🌿 Latest Journal Entries</h2>
+<p>
+Some entries are personal reflections. Others share observations,
+practical ideas, photographs, drawings, or things learned through
+everyday experience.
+</p>
 
-        <p class="section-intro">
-            Recent reflections, practical observations and stories
-            from everyday life.
-        </p>
+<p>
+The aim is not to have all the answers. It is to encourage curiosity,
+awareness, and a willingness to look a little more closely at
+ordinary life.
+</p>
 
-        <div class="journal-grid">
+</section>
 
-            <div class="journal-card">
-                <h3>🌿 Wellness &amp; Sustainability</h3>
+<!-- LATEST JOURNAL ENTRIES -->
 
-                <p>
-                    A reflection on the relationship between personal
-                    wellbeing, everyday choices and the environment
-                    around us.
-                </p>
+<section class="section">
 
-                <a href="/blog/wellness-and-sustainability.html">
-                    Read the Reflection →
-                </a>
-            </div>
+<h2>📖 Latest Journal Entries</h2>
 
-            <div class="journal-card">
-                <h3>🌳 Why Trees Matter</h3>
+<p class="section-intro">
+Discover the newest reflection first, followed by earlier journal entries.
+</p>
 
-                <p>
-                    A closer look at trees, their living environment
-                    and the small details that can change the way
-                    we notice them.
-                </p>
+<!--
+FEATURED ARTICLE:
+When a new journal article is published, place its featured card here.
+Move the previous featured article into the journal-grid below.
+-->
 
-                <a href="/blog/why-trees-matter.html">
-                    Read the Journal →
-                </a>
-            </div>
+<div class="featured-article">
 
-            <div class="journal-card">
-                <h3>🙏🌿 A Moment of Mindfulness and Appreciation</h3>
+<img
+class="featured-image"
+src="/images/pigeon-being-fed.jpg"
+alt="A pigeon being gently fed">
 
-                <p>
-                    A quiet encounter with a monitor lizard at a
-                    monastery becomes a reflection on mindfulness,
-                    gratitude and loving-kindness towards all
-                    living beings.
-                </p>
+<div class="featured-content">
 
-                <a href="/blog/a-moment-of-mindfulness-and-appreciation.html">
-                    Read the Reflection →
-                </a>
-            </div>
+<span class="featured-label">🌟 Featured Journal Entry</span>
 
-            <div class="journal-card">
-                <h3>🔥 How to Prevent Forest Fires</h3>
+<h3>🐦 Feeding Birds with Care: Kindness, Responsibility and Respect for Nature</h3>
 
-                <p>
-                    Discover practical ways to reduce wildfire risks,
-                    protect forests and wildlife, and explore
-                    international sources of fire information and
-                    historical data.
-                </p>
+<p>
+Feeding birds may seem like a simple act of kindness, but responsible
+care involves understanding their natural needs and behaviour.
+Discover why feeding pigeons in public places can create challenges,
+why bread is not an ideal staple, and how we can support wild birds
+through clean water, suitable food, bird-friendly gardens and respect
+for nature. True compassion means caring for wildlife without harming
+its wellbeing or the environment we share.
+</p>
 
-                <a href="/blog/how-to-prevent-forest-fires.html">
-                    Read the Article →
-                </a>
-            </div>
+<a class="read-link" href="/blog/feeding-birds-with-care.html">
+Read the Article →
+</a>
 
-            <div class="journal-card">
-                <h3>🪷 Finding Inner Peace Through Meditation</h3>
+</div>
+</div>
 
-                <p>
-                    A personal reflection on the peaceful surroundings
-                    of Dhammagonyee, the beauty of flowers and trees,
-                    and how meditation can encourage mindfulness
-                    and a deeper understanding of the mind.
-                </p>
+<!-- OLDER JOURNAL ENTRIES -->
 
-                <a href="/blog/dhammagoonye-meditation-retreat.html">
-                    Read the Reflection →
-                </a>
-            </div>
+<div class="journal-grid">
 
-        </div>
-    </section>
+<div class="journal-card">
+<h3>🌿 Wellness &amp; Sustainability</h3>
 
-    <!-- GROWING GUIDES -->
+<p>
+A reflection on the relationship between personal wellbeing,
+everyday choices and the environment around us.
+</p>
 
-    <section class="section">
-        <h2>🌱 Growing Guides</h2>
+<a href="/blog/wellness-and-sustainability.html">
+Read the Reflection →
+</a>
+</div>
 
-        <p class="section-intro">
-            Simple guides for growing plants and learning through
-            direct observation and everyday experience.
-        </p>
+<div class="journal-card">
+<h3>🌳 Why Trees Matter</h3>
 
-        <div class="guides-grid">
+<p>
+A closer look at trees, their living environment and the small
+details that can change the way we notice them.
+</p>
 
-            <div class="guide-card">
-                <h3>🌱 How to Plant</h3>
+<a href="/blog/why-trees-matter.html">
+Read the Journal →
+</a>
+</div>
 
-                <p>
-                    A simple introduction to planting and caring for
-                    plants at home or in a small growing space.
-                </p>
+<div class="journal-card">
+<h3>🙏🌿 A Moment of Mindfulness and Appreciation</h3>
 
-                <a href="/blog/how-to-plant.html">
-                    Read the Guide →
-                </a>
-            </div>
+<p>
+A quiet encounter with a monitor lizard at a monastery becomes
+a reflection on mindfulness, gratitude and loving-kindness
+towards all living beings.
+</p>
 
-            <div class="guide-card">
-                <h3>🌳 How to Plant a Tree</h3>
+<a href="/blog/a-moment-of-mindfulness-and-appreciation.html">
+Read the Reflection →
+</a>
+</div>
 
-                <p>
-                    Simple steps for planting a tree and giving it
-                    a good start in its new environment.
-                </p>
+<div class="journal-card">
+<h3>🔥 How to Prevent Forest Fires</h3>
 
-                <a href="/blog/how-to-plant-a-tree.html">
-                    Read the Guide →
-                </a>
-            </div>
+<p>
+Learn practical ways to reduce wildfire risks, protect forests
+and wildlife, and explore reliable sources of fire information
+and historical data.
+</p>
 
-            <div class="guide-card">
-                <h3>🌿 How to Grow Aloe Vera</h3>
+<a href="/blog/how-to-prevent-forest-fires.html">
+Read the Article →
+</a>
+</div>
 
-                <p>
-                    A practical growing guide based on simple
-                    observation and everyday plant care.
-                </p>
+</div>
+</section>
 
-                <a href="/blog/how-to-grow-aloe-vera.html">
-                    Read the Guide →
-                </a>
-            </div>
+<!-- GROWING GUIDES -->
 
-        </div>
+<section class="section">
 
-        <p class="section-intro" style="margin-top:25px;">
-            More growing guides can be added over time as new
-            observations and practical experiences are shared.
-        </p>
-    </section>
+<h2>🌱 Growing Guides</h2>
 
-    <!-- CLOSING REFLECTION -->
+<p class="section-intro">
+Simple guides for growing plants and learning through direct
+observation and everyday experience.
+</p>
 
-    <section class="simple-thought">
-        <h2>🌱 A Simple Thought</h2>
+<div class="guides-grid">
 
-        <p>
-            Not everything needs to be rushed. Sometimes a closer
-            look at something ordinary is enough to notice
-            something new.
-        </p>
-    </section>
+<div class="guide-card">
+<h3>🌱 How to Plant</h3>
+
+<p>
+A simple introduction to planting and caring for plants at home
+or in a small growing space.
+</p>
+
+<a href="/blog/how-to-plant.html">
+Read the Guide →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌳 How to Plant a Tree</h3>
+
+<p>
+Simple steps for planting a tree and giving it a good start
+in its new environment.
+</p>
+
+<a href="/blog/how-to-plant-a-tree.html">
+Read the Guide →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌿 How to Grow Aloe Vera</h3>
+
+<p>
+A practical growing guide based on simple observation and
+everyday plant care.
+</p>
+
+<a href="/blog/how-to-grow-aloe-vera.html">
+Read the Guide →
+</a>
+</div>
+
+</div>
+
+<p class="section-intro" style="margin-top:25px;">
+More growing guides can be added over time as new observations
+and practical experiences are shared.
+</p>
+
+</section>
+
+<!-- CLOSING THOUGHT -->
+
+<section class="simple-thought">
+
+<h2>🌱 A Simple Thought</h2>
+
+<p>
+Not everything needs to be rushed. Sometimes a closer look at
+something ordinary is enough to notice something new.
+</p>
+
+</section>
 
 </main>
 
 <!-- FOOTER -->
 
 <footer>
-    <div>
-        <a href="/">Home</a>
-        <a href="/mindfulness.html">Mindful Living</a>
-        <a href="/nature-connection.html">Nature Connection</a>
-        <a href="/blog.html">Journal</a>
-        <a href="/apps.html">Related Apps</a>
-        <a href="/contact.html">Contact</a>
-    </div>
 
-    <p>
-        &copy; 2026 • Mindful Living • Nature • Everyday Sustainability
-    </p>
+<div>
+<a href="/">Home</a>
+<a href="/mindfulness.html">Mindfulness &amp; Dhamma</a>
+<a href="/nature-connection.html">Nature Connection</a>
+<a href="/blog.html">Journal</a>
+<a href="/apps.html">Related Apps</a>
+<a href="/contact.html">Contact</a>
+</div>
+
+<p>
+&copy; 2026 • Mindful Living • Nature • Everyday Sustainability
+</p>
+
 </footer>
 
 <!-- READ ALOUD -->
@@ -710,20 +852,9 @@ footer a:hover {
 
     const button = document.createElement("button");
     button.type = "button";
+    button.className = "read-aloud-btn";
     button.textContent = "🔊 Read Aloud";
-    button.setAttribute("aria-label", "Read the journal aloud");
-
-    button.style.position = "fixed";
-    button.style.bottom = "20px";
-    button.style.right = "20px";
-    button.style.zIndex = "9999";
-    button.style.padding = "10px 15px";
-    button.style.border = "1px solid #ccc";
-    button.style.borderRadius = "8px";
-    button.style.background = "#ffffff";
-    button.style.color = "#333";
-    button.style.cursor = "pointer";
-    button.style.boxShadow = "0 2px 8px rgba(0,0,0,0.12)";
+    button.setAttribute("aria-label", "Read the Journal aloud");
 
     document.body.appendChild(button);
 
@@ -745,9 +876,7 @@ footer a:hover {
         );
 
         const text = Array.from(elements)
-            .map(function (element) {
-                return element.innerText.trim();
-            })
+            .map(el => el.innerText.trim())
             .filter(Boolean)
             .join(". ");
 
@@ -761,7 +890,7 @@ footer a:hover {
 
         utterance.onstart = function () {
             speaking = true;
-            button.textContent = "⏸ Stop Reading";
+            button.textContent = "⏹ Stop Reading";
         };
 
         utterance.onend = function () {
