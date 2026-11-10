@@ -1,408 +1,853 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <meta charset="UTF-8">
-
-<title>Journal Yangocean | Vie consciente, nature et réflexions du quotidien</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Journal Yangocean | Vie en pleine conscience, nature et réflexions quotidiennes</title>
+
 <meta name="description"
-content="Le Journal Yangocean partage des réflexions et des observations sur la vie consciente, la nature, l'alimentation en pleine conscience, la durabilité, la culture des plantes et les expériences du quotidien.">
+content="Découvrez les réflexions du Journal Yangocean sur la vie en pleine conscience, la nature, le développement durable, la faune et les expériences quotidiennes, ainsi que des guides pratiques de jardinage.">
 
 <meta name="robots" content="index, follow">
 
-<meta name="google-adsense-account"
-content="ca-pub-6929570744326515">
+<link rel="canonical" href="https://yangocean.com/fr/blog.html">
 
-<link rel="canonical"
-href="https://yangocean.com/fr/blog.html">
-
-<link rel="alternate" hreflang="en"
-href="https://yangocean.com/blog.html">
-
-<link rel="alternate" hreflang="ms"
-href="https://yangocean.com/ms/blog.html">
-
-<link rel="alternate" hreflang="zh"
-href="https://yangocean.com/zh/blog.html">
-
-<link rel="alternate" hreflang="fr"
-href="https://yangocean.com/fr/blog.html">
-
-<link rel="alternate" hreflang="es"
-href="https://yangocean.com/es/blog.html">
-
-<link rel="alternate" hreflang="x-default"
-href="https://yangocean.com/blog.html">
+<link rel="alternate" hreflang="en" href="https://yangocean.com/blog.html">
+<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog.html">
+<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
 <meta property="og:title"
-content="Journal Yangocean | Vie consciente, nature et réflexions du quotidien">
-
+content="Journal Yangocean | Vie en pleine conscience, nature et réflexions quotidiennes">
 <meta property="og:description"
-content="Des réflexions et des observations sur la vie consciente, la nature, l'alimentation, la durabilité et les expériences du quotidien.">
-
-<meta property="og:url"
-content="https://yangocean.com/fr/blog.html">
-
+content="Des réflexions et des observations sur la vie en pleine conscience, la nature, le développement durable, la faune et les expériences quotidiennes.">
 <meta property="og:type" content="website">
-
-<meta property="og:image"
-content="https://yangocean.com/images/og-image.jpg">
+<meta property="og:url" content="https://yangocean.com/fr/blog.html">
+<meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-
 <meta name="twitter:title"
-content="Journal Yangocean | Vie consciente, nature et réflexions du quotidien">
-
+content="Journal Yangocean | Vie en pleine conscience, nature et réflexions quotidiennes">
 <meta name="twitter:description"
-content="Des réflexions et des observations sur la vie consciente, la nature, l'alimentation, la durabilité et les expériences du quotidien.">
+content="Des réflexions et des observations sur la vie en pleine conscience, la nature, le développement durable et les expériences quotidiennes.">
+<meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
-<meta name="twitter:image"
-content="https://yangocean.com/images/og-image.jpg">
-
-<link rel="stylesheet" href="/styles.css">
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
 
 <style>
-.tts-controls {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin: 20px 0 30px;
-    flex-wrap: wrap;
+* {
+    box-sizing: border-box;
 }
 
-.tts-btn {
-    border: none;
-    border-radius: 10px;
-    padding: 10px 16px;
-    font-size: 18px;
+:root {
+    --green: #315d3b;
+    --green-dark: #24472d;
+    --green-light: #eaf2e8;
+    --cream: #faf9f3;
+    --text: #354039;
+    --muted: #68736a;
+    --white: #ffffff;
+    --border: #e2e9df;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--cream);
+}
+
+/* HEADER */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.92rem;
     cursor: pointer;
 }
 
-.tts-btn:hover {
-    opacity: 0.85;
+nav a:hover,
+.dropbtn:hover {
+    color: var(--green);
 }
 
-.feature {
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: var(--white);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: var(--green-light);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 22px 70px;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    color: var(--green);
+    font-size: 2.7rem;
+}
+
+.hero p {
+    max-width: 780px;
+    margin: 12px auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-top: 45px;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin: 0 auto 28px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* ABOUT JOURNAL */
+
+.about-journal {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.035);
+}
+
+.about-journal h2 {
+    text-align: center;
+    color: var(--green);
+    margin-top: 0;
+}
+
+/* FEATURED ARTICLE */
+
+.featured-article {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin-bottom: 32px;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-content {
+    padding: 30px 35px 30px 5px;
+}
+
+.featured-label {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 6px 13px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+}
+
+.featured-content h3 {
+    color: var(--green);
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin: 0 0 15px;
+}
+
+.featured-content p {
+    color: var(--muted);
     margin-bottom: 20px;
 }
 
-.feature a {
-    font-weight: 600;
+.read-link {
+    display: inline-block;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    background: var(--green-light);
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.read-link:hover {
+    background: #dce9d8;
+}
+
+/* JOURNAL GRID */
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.journal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+}
+
+.journal-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.journal-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.journal-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.journal-card a:hover {
+    text-decoration: underline;
+}
+
+/* GROWING GUIDES */
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.guide-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+}
+
+.guide-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.guide-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.guide-card a:hover {
+    text-decoration: underline;
+}
+
+/* SIMPLE THOUGHT */
+
+.simple-thought {
+    background: var(--green-light);
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.simple-thought h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.simple-thought p {
+    max-width: 760px;
+    margin: auto;
+    color: #405944;
+    font-style: italic;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 9px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 15px;
+}
+
+/* READ ALOUD BUTTON */
+
+.read-aloud-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 11px 16px;
+    border: 1px solid #d5dfd3;
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--green);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-article {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .featured-image {
+        height: 320px;
+        min-height: 0;
+    }
+
+    .featured-content {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 15px 55px;
+    }
+
+    .hero {
+        padding: 35px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid var(--border);
+        margin-top: 8px;
+    }
+
+    .featured-image {
+        height: 240px;
+    }
+
+    .featured-content {
+        padding: 22px;
+    }
+
+    .featured-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-journal {
+        padding: 22px;
+    }
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- EN-TÊTE -->
 
-<nav aria-label="Navigation principale">
+<header>
+<div class="header-inner">
 
+<div>
+<a href="/fr/" class="logo">Yangocean</a>
+<div class="tagline">
+Vie en pleine conscience • Connexion avec la nature • Développement durable
+</div>
+</div>
+
+<nav>
 <a href="/fr/">Accueil</a>
 
-<a href="/fr/mindfulness.html">
-Pleine conscience
-</a>
+<div class="dropdown">
+<button class="dropbtn">🌿 Vie en pleine conscience ▾</button>
+<div class="dropdown-content">
+<a href="/fr/mindfulness.html">🧘 Pleine conscience et Dhamma</a>
+<a href="/fr/mindful-ethical-living.html">🌱 Vie consciente et éthique</a>
+<a href="/fr/mindful-eating.html">🥗 Alimentation en pleine conscience</a>
+<a href="/fr/mindful-food.html">🍎 Alimentation consciente et vidéos culinaires</a>
+</div>
+</div>
 
-<a href="/fr/mindful-ethical-living.html">
-Vie consciente
-</a>
+<div class="dropdown">
+<button class="dropbtn">🌳 Connexion avec la nature ▾</button>
+<div class="dropdown-content">
+<a href="/fr/nature-connection.html">🌳 Connexion avec la nature</a>
+<a href="/fr/eco.html">🌍 Sensibilisation à l'environnement</a>
+<a href="/fr/blog.html">📝 Journal</a>
+</div>
+</div>
 
-<a href="/fr/mindful-eating.html">
-Alimentation consciente
-</a>
+<div class="dropdown">
+<button class="dropbtn">📱 Applications associées ▾</button>
+<div class="dropdown-content">
+<a href="/fr/apps.html">📱 Toutes les applications associées</a>
+<a href="/fr/apps.html#eft">🌿 Application Yangocean</a>
+<a href="/fr/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+<a href="/fr/apps.html#duidui-fit">🏃 DuoFit</a>
+</div>
+</div>
 
-<a href="/fr/nature-connection.html">
-Lien avec la nature
-</a>
-
-<a href="/fr/sustainable-living.html">
-Mode de vie durable
-</a>
-
-<a href="/fr/blog.html" aria-current="page">
-Journal
-</a>
-
-<a href="/fr/apps.html">
-Applications
-</a>
-
+<div class="language">
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+</div>
 </nav>
+
+</div>
+</header>
 
 <!-- CONTENU PRINCIPAL -->
 
 <main id="content-to-read">
 
-<!-- INTRODUCTION -->
+<!-- PRÉSENTATION -->
 
-<section class="card">
-
-<h1>📝 Le Journal Yangocean</h1>
+<section class="hero">
+<h1>📝 Journal Yangocean</h1>
 
 <p>
-Bienvenue dans le Journal Yangocean, un recueil de réflexions,
-d'observations et d'expériences du quotidien liées à la vie
-consciente, à la nature, à l'alimentation en pleine conscience
-et au développement durable.
+Des réflexions, des observations et de petites histoires
+sur la vie en pleine conscience, la nature, le développement durable,
+la faune et les expériences du quotidien.
 </p>
 
 <p>
-Ce journal nous invite à ralentir, à observer ce qui nous entoure
-et à réfléchir à la manière dont nos petits choix quotidiens
-peuvent nous influencer, toucher les autres et affecter
-le monde naturel.
+Parfois, une petite observation — un oiseau, un arbre, un repas,
+une plante qui pousse ou un moment de calme — peut nous inspirer
+à réfléchir plus profondément à notre façon de vivre
+et à notre relation avec le monde qui nous entoure.
 </p>
-
 </section>
-
-<!-- COMMANDES DE LECTURE AUDIO -->
-
-<div class="tts-controls">
-
-<button
-type="button"
-class="tts-btn play"
-onclick="togglePlay()"
-aria-label="Commencer ou reprendre la lecture">
-🔊
-</button>
-
-<button
-type="button"
-class="tts-btn pause"
-onclick="pauseReading()"
-aria-label="Mettre la lecture en pause">
-⏸
-</button>
-
-<button
-type="button"
-class="tts-btn stop"
-onclick="stopReading()"
-aria-label="Arrêter la lecture">
-⏹
-</button>
-
-</div>
 
 <!-- À PROPOS DU JOURNAL -->
 
-<section class="card">
+<section class="section about-journal">
 
-<h2>🌱 À propos du Journal</h2>
+<h2>🌿 Qu'est-ce que le Journal Yangocean ?</h2>
 
 <p>
-Le Journal Yangocean partage des observations personnelles
-et des réflexions sur la vie quotidienne, la pleine conscience,
-la nature et le développement durable.
+Le Journal Yangocean est un espace consacré aux idées qui naissent
+de l'attention portée à notre environnement. Une promenade en plein air,
+un arbre qui change au fil des saisons, un repas savouré lentement,
+une nouvelle plante qui pousse ou un petit choix du quotidien
+peuvent devenir des occasions d'observer et de réfléchir.
 </p>
 
 <p>
-Certaines histoires peuvent commencer par quelque chose
-de très simple : un arbre, une fleur, un repas, une goutte d'eau,
-un moment de calme ou une expérience ordinaire.
+Certaines publications sont des réflexions personnelles.
+D'autres partagent des observations, des idées pratiques,
+des photographies, des dessins ou des enseignements tirés
+des expériences de la vie quotidienne.
 </p>
 
 <p>
-À partir de ces petites observations, nous pouvons parfois
-découvrir des questions plus profondes sur notre façon de vivre
-et sur notre relation avec le monde qui nous entoure.
-</p>
-
-<p>
-Le but n'est pas de fournir des réponses parfaites, mais
-d'encourager la conscience, la curiosité et des choix
-quotidiens plus réfléchis.
+L'objectif n'est pas de prétendre avoir toutes les réponses.
+Il s'agit plutôt d'encourager la curiosité, la conscience
+et la volonté d'observer un peu plus attentivement
+les choses ordinaires de la vie.
 </p>
 
 </section>
 
-<!-- DERNIERS ARTICLES -->
+<!-- DERNIÈRES PUBLICATIONS -->
 
-<section class="card">
+<section class="section">
 
-<h2>📖 Les derniers articles du Journal</h2>
+<h2>📖 Dernières publications du journal</h2>
 
-<div class="feature">
+<p class="section-intro">
+Découvrez d'abord la réflexion la plus récente,
+puis retrouvez les publications précédentes.
+</p>
 
-<a href="/blog/wellness-and-sustainability.html">
-🌿 Bien-être et développement durable
-</a>
+<!--
+ARTICLE À LA UNE :
+Lorsqu'un nouvel article est publié, placez sa carte à la une ici.
+Déplacez l'ancien article à la une dans la section des publications précédentes.
+-->
+
+<div class="featured-article">
+
+<img
+class="featured-image"
+src="/images/Kind Woman Feeding Stray Animals.png"
+alt="Prendre soin des chiens et des chats errants">
+
+<div class="featured-content">
+
+<span class="featured-label">🌟 Article à la une</span>
+
+<h3>🐕🐈 Nourrir les chiens et les chats errants avec bienveillance et responsabilité</h3>
 
 <p>
-Découvrez comment le bien-être au quotidien et l'environnement
-peuvent influencer nos choix.
+Prendre soin des chiens et des chats errants est une expression
+de compassion, mais une attention responsable va bien au-delà
+du simple fait de leur donner à manger. Découvrez comment
+une alimentation adaptée, des espaces de nourrissage propres,
+une bonne hygiène et des pratiques respectueuses du bien-être animal
+peuvent contribuer à protéger les animaux et la communauté.
+Informez-vous sur les risques sanitaires éventuels et sur l'importance
+de la vaccination, de la stérilisation et des soins vétérinaires
+dans une démarche responsable de protection animale.
 </p>
+
+<a class="read-link" href="/fr/blog/feeding-stray-dogs-and-cats.html">
+Lire l'article →
+</a>
+
+</div>
+</div>
+
+<!-- PUBLICATIONS PRÉCÉDENTES -->
+
+<div class="journal-card">
+
+<h3>🐦 Nourrir les oiseaux et les pigeons avec bienveillance</h3>
+
+<p>
+Nourrir les oiseaux peut sembler être un simple geste de bonté,
+mais en prendre soin de manière responsable nécessite de comprendre
+leurs besoins naturels et leur comportement. Découvrez pourquoi
+le pain ne constitue pas un aliment de base idéal pour les pigeons,
+quels aliments peuvent être plus appropriés, et comment l'eau propre,
+de bonnes pratiques de nourrissage et un environnement accueillant
+pour les oiseaux peuvent nous aider à protéger la faune de manière responsable.
+</p>
+
+<a href="/fr/blog/feeding-birds-with-care.html">
+Lire l'article →
+</a>
 
 </div>
 
-<div class="feature">
-
-<a href="/blog/why-trees-matter.html">
-🌳 Pourquoi les arbres sont importants
-</a>
+<div class="journal-card">
+<h3>🌿 Bien-être et développement durable</h3>
 
 <p>
-Une réflexion sur les arbres, notre environnement vivant
-et la façon dont l'observation des arbres qui nous entourent
-peut transformer notre regard sur la nature.
+Une réflexion sur les liens entre le bien-être personnel,
+les choix de la vie quotidienne et l'environnement qui nous entoure.
 </p>
 
+<a href="/fr/blog/wellness-and-sustainability.html">
+Lire la réflexion →
+</a>
 </div>
 
-<div class="feature">
-
-<a href="/blog/journey-one-drop-water.html">
-💧 Le voyage d'une goutte d'eau
-</a>
+<div class="journal-card">
+<h3>🌳 Pourquoi les arbres sont-ils importants ?</h3>
 
 <p>
-Une réflexion sur le cycle de l'eau, l'eau douce,
-la préservation des ressources en eau et l'importance
-de chaque goutte.
+Un regard plus attentif sur les arbres, leur environnement vivant
+et les petits détails qui peuvent changer notre façon de les observer.
 </p>
 
+<a href="/fr/blog/why-trees-matter.html">
+Lire le journal →
+</a>
 </div>
 
+<div class="journal-card">
+<h3>🙏🌿 Un moment de pleine conscience et de gratitude</h3>
+
+<p>
+Une rencontre paisible avec un varan dans un monastère
+devient une occasion de réfléchir à la pleine conscience,
+à la gratitude et à la bienveillance envers tous les êtres vivants.
+</p>
+
+<a href="/fr/blog/a-moment-of-mindfulness-and-appreciation.html">
+Lire la réflexion →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🔥 Comment prévenir les incendies de forêt</h3>
+
+<p>
+Découvrez des moyens pratiques de réduire les risques d'incendie,
+de protéger les forêts et la faune, ainsi que des sources fiables
+d'informations et de données historiques sur les incendies.
+</p>
+
+<a href="/fr/blog/how-to-prevent-forest-fires.html">
+Lire l'article →
+</a>
+</div>
+
+</div>
 </section>
 
 <!-- GUIDES DE CULTURE -->
 
-<section class="card">
+<section class="section">
 
-<h2>🌱 Guides de culture</h2>
+<h2>🌱 Guides de jardinage et de culture</h2>
 
-<p>
-Cultiver une plante peut être une manière simple de renouer
-avec la nature. Vous n'avez pas besoin d'un grand jardin :
-un pot, un balcon, un rebord de fenêtre ou un petit espace
-extérieur peuvent suffire pour commencer.
+<p class="section-intro">
+Des guides simples pour apprendre à cultiver des plantes
+et progresser grâce à l'observation directe
+et aux expériences du quotidien.
 </p>
 
-<div class="feature">
+<div class="guides-grid">
 
-<a href="/blog/how-to-plant.html">
-🌱 Découvrir les guides de culture Yangocean →
+<div class="guide-card">
+<h3>🌱 Comment planter</h3>
+
+<p>
+Une introduction simple à la plantation
+et à l'entretien des plantes à la maison
+ou dans un petit espace de culture.
+</p>
+
+<a href="/fr/blog/how-to-plant.html">
+Lire le guide →
 </a>
+</div>
+
+<div class="guide-card">
+<h3>🌳 Comment planter un arbre</h3>
 
 <p>
-Des guides pratiques et simples pour planter des arbres,
-cultiver des plantes utiles et développer une relation
-plus attentive avec le monde végétal.
+Des étapes simples pour planter un arbre
+et lui offrir un bon départ dans son nouvel environnement.
 </p>
+
+<a href="/fr/blog/how-to-plant-a-tree.html">
+Lire le guide →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌿 Comment cultiver l'aloe vera</h3>
+
+<p>
+Un guide pratique de culture fondé sur l'observation
+et les gestes simples d'entretien des plantes au quotidien.
+</p>
+
+<a href="/fr/blog/how-to-grow-aloe-vera.html">
+Lire le guide →
+</a>
+</div>
 
 </div>
 
-<div class="feature">
-
-<a href="/blog/how-to-plant-a-tree.html">
-🌳 Comment planter un arbre →
-</a>
-
-<p>
-Un guide étape par étape pour choisir un arbre et un emplacement
-adaptés, le planter correctement, l'arroser et en prendre soin
-pendant sa croissance.
-</p>
-
-</div>
-
-<div class="feature">
-
-<a href="/blog/how-to-grow-aloe-vera.html">
-🌿 Comment cultiver l'aloe vera →
-</a>
-
-<p>
-Apprenez à cultiver l'aloe vera dans un pot ou dans un espace
-de jardin adapté, en découvrant ses besoins en lumière,
-en drainage, en arrosage et en entretien.
-</p>
-
-</div>
-
-<p>
-D'autres guides consacrés aux herbes aromatiques, aux plantes
-utiles et à la culture dans de petits espaces pourront être
-ajoutés progressivement.
+<p class="section-intro" style="margin-top:25px;">
+D'autres guides de jardinage pourront être ajoutés au fil du temps,
+à mesure que de nouvelles observations et expériences pratiques
+seront partagées.
 </p>
 
 </section>
 
-<!-- THÈMES DU JOURNAL -->
+<!-- PENSÉE FINALE -->
 
-<section class="card">
+<section class="simple-thought">
 
-<h2>🌍 Les thèmes du Journal</h2>
-
-<div class="feature">
-
-<h3>🧘 Vie en pleine conscience</h3>
+<h2>🌱 Une pensée simple</h2>
 
 <p>
-Des réflexions sur la conscience de soi, la bienveillance,
-la simplicité, les choix éthiques et une manière de vivre
-plus attentive.
+Tout ne doit pas nécessairement être fait dans la précipitation.
+Parfois, regarder de plus près quelque chose d'ordinaire
+suffit pour découvrir quelque chose de nouveau.
 </p>
-
-<a href="/fr/mindful-ethical-living.html">
-Découvrir la vie consciente →
-</a>
-
-</div>
-
-<div class="feature">
-
-<h3>🍃 Nature</h3>
-
-<p>
-Des observations sur les arbres, les plantes, la météo,
-les jardins, les espaces extérieurs et les petits détails
-du monde naturel.
-</p>
-
-<a href="/fr/nature-connection.html">
-Découvrir notre lien avec la nature →
-</a>
-
-</div>
-
-<div class="feature">
-
-<h3>🥗 Alimentation en pleine conscience</h3>
-
-<p>
-Des réflexions sur les aliments, le fait de manger lentement,
-l'appréciation des ingrédients, la réduction du gaspillage
-et des choix alimentaires plus réfléchis.
-</p>
-
-<a href="/fr/mindful-eating.html">
-Découvrir l'alimentation consciente →
-</a>
-
-</div>
-
-<div class="feature">
-
-<h3>🌍 Développement durable</h3>
-
-<p>
-Des réflexions pratiques sur les ressources, la consommation,
-les déchets, l'énergie, l'eau, les transports et les choix
-environnementaux du quotidien.
-</p>
-
-<a href="/fr/sustainable-living.html">
-Découvrir un mode de vie durable →
-</a>
-
-</div>
 
 </section>
 
@@ -412,123 +857,87 @@ Découvrir un mode de vie durable →
 
 <footer>
 
-<p>
-<strong>Yangocean</strong> — Vie consciente, nature et durabilité au quotidien
-</p>
-
-<p>
-<a href="/fr/about.html">À propos</a>
-
-<a href="/fr/contact.html">Contact</a>
-
+<div>
+<a href="/fr/">Accueil</a>
+<a href="/fr/mindfulness.html">Pleine conscience et Dhamma</a>
+<a href="/fr/nature-connection.html">Connexion avec la nature</a>
 <a href="/fr/blog.html">Journal</a>
-
-<a href="/fr/apps.html">Applications</a>
-</p>
+<a href="/fr/apps.html">Applications associées</a>
+<a href="/fr/contact.html">Contact</a>
+</div>
 
 <p>
-© 2026 Yangocean. Tous droits réservés.
+&copy; 2026 • Vie en pleine conscience • Nature • Développement durable au quotidien
 </p>
 
 </footer>
 
-<!-- LECTURE AUDIO DE L'ENSEMBLE DU CONTENU -->
+<!-- LECTURE À VOIX HAUTE -->
 
 <script>
-let speechQueue = [];
-let currentIndex = 0;
-let isPaused = false;
-
-function getReadableText() {
-    const content = document.getElementById("content-to-read");
-
-    if (!content) {
-        return [];
-    }
-
-    const elements = content.querySelectorAll(
-        "h1, h2, h3, p, a"
-    );
-
-    return Array.from(elements)
-        .map(element => element.innerText.trim())
-        .filter(text => text.length > 0);
-}
-
-function speakNext() {
-    if (currentIndex >= speechQueue.length) {
-        speechQueue = [];
-        currentIndex = 0;
-        isPaused = false;
-        return;
-    }
-
-    const utterance = new SpeechSynthesisUtterance(
-        speechQueue[currentIndex]
-    );
-
-    utterance.lang = "fr-FR";
-    utterance.rate = 0.95;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    utterance.onend = function () {
-        if (!isPaused) {
-            currentIndex++;
-            speakNext();
-        }
-    };
-
-    speechSynthesis.speak(utterance);
-}
-
-function togglePlay() {
+(function () {
     if (!("speechSynthesis" in window)) {
-        alert("Désolé, votre navigateur ne prend pas en charge la lecture audio.");
         return;
     }
 
-    if (speechSynthesis.paused) {
-        isPaused = false;
-        speechSynthesis.resume();
-        return;
-    }
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "read-aloud-btn";
+    button.textContent = "🔊 Lire à voix haute";
+    button.setAttribute("aria-label", "Lire le journal à voix haute");
 
-    if (speechSynthesis.speaking) {
-        return;
-    }
+    document.body.appendChild(button);
 
-    speechQueue = getReadableText();
-    currentIndex = 0;
-    isPaused = false;
+    let speaking = false;
 
-    speechSynthesis.cancel();
-    speakNext();
-}
+    button.addEventListener("click", function () {
+        if (speaking) {
+            speechSynthesis.cancel();
+            speaking = false;
+            button.textContent = "🔊 Lire à voix haute";
+            return;
+        }
 
-function pauseReading() {
-    if ("speechSynthesis" in window) {
-        isPaused = true;
-        speechSynthesis.pause();
-    }
-}
+        const elements = document.querySelectorAll(
+            "#content-to-read h1, " +
+            "#content-to-read h2, " +
+            "#content-to-read h3, " +
+            "#content-to-read p"
+        );
 
-function stopReading() {
-    if ("speechSynthesis" in window) {
-        isPaused = false;
-        speechQueue = [];
-        currentIndex = 0;
+        const text = Array.from(elements)
+            .map(el => el.innerText.trim())
+            .filter(Boolean)
+            .join(". ");
+
+        if (!text) {
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "fr-FR";
+        utterance.rate = 0.95;
+
+        utterance.onstart = function () {
+            speaking = true;
+            button.textContent = "⏹ Arrêter la lecture";
+        };
+
+        utterance.onend = function () {
+            speaking = false;
+            button.textContent = "🔊 Lire à voix haute";
+        };
+
+        utterance.onerror = function () {
+            speaking = false;
+            button.textContent = "🔊 Lire à voix haute";
+        };
+
         speechSynthesis.cancel();
-    }
-}
-
-window.addEventListener("beforeunload", function () {
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
-    }
-});
+        speechSynthesis.speak(utterance);
+    });
+})();
 </script>
 
 </body>
 </html>
-
