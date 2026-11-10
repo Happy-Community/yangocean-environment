@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
 <meta charset="UTF-8">
-
-<title>日志 | 正念生活、自然与日常感悟 | Yangocean</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Yangocean 生活日志 | 正念生活、自然与日常感悟</title>
+
 <meta name="description"
-content="Yangocean 日志分享有关正念生活、自然、可持续发展、正念饮食及日常体验的感悟、观察与生活故事。">
+content="阅读 Yangocean 生活日志，探索正念生活、自然、可持续发展、野生动物及日常生活感悟，并了解实用的植物种植指南。">
 
 <meta name="robots" content="index, follow">
 
@@ -22,15 +21,19 @@ content="Yangocean 日志分享有关正念生活、自然、可持续发展、�
 <link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog.html">
 
+<meta property="og:title"
+content="Yangocean 生活日志 | 正念生活、自然与日常感悟">
+<meta property="og:description"
+content="分享关于正念生活、自然、可持续发展、野生动物及日常生活的观察与感悟。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="日志 | Yangocean">
-<meta property="og:description" content="关于正念生活、自然、可持续发展与日常体验的感悟和观察。">
 <meta property="og:url" content="https://yangocean.com/zh/blog.html">
 <meta property="og:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="日志 | Yangocean">
-<meta name="twitter:description" content="关于正念生活、自然与日常体验的感悟。">
+<meta name="twitter:title"
+content="Yangocean 生活日志 | 正念生活、自然与日常感悟">
+<meta name="twitter:description"
+content="分享关于正念生活、自然、可持续发展及日常生活的观察与感悟。">
 <meta name="twitter:image" content="https://yangocean.com/images/yangocean-og.jpg">
 
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
@@ -40,68 +43,78 @@ content="Yangocean 日志分享有关正念生活、自然、可持续发展、�
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+:root {
+    --green: #315d3b;
+    --green-dark: #24472d;
+    --green-light: #eaf2e8;
+    --cream: #faf9f3;
+    --text: #354039;
+    --muted: #68736a;
+    --white: #ffffff;
+    --border: #e2e9df;
 }
 
 body {
     margin: 0;
-    font-family: Arial, "Microsoft YaHei", "Noto Sans SC", sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.7;
-    color: #333;
-    background: #f7f8f4;
+    color: var(--text);
+    background: var(--cream);
 }
 
-a {
-    color: #356b45;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
+/* HEADER */
 
 header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .header-inner {
-    max-width: 1150px;
+    max-width: 1200px;
     margin: auto;
-    padding: 12px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 1.65rem;
+    text-decoration: none;
+    color: var(--green);
+    font-size: 1.5rem;
     font-weight: bold;
-    color: #356b45;
+    white-space: nowrap;
 }
 
 .tagline {
-    font-size: 0.82rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 2px;
 }
 
 nav {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 17px;
     flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 nav a,
 .dropbtn {
-    color: #333;
-    font-size: 0.94rem;
+    color: #444;
+    text-decoration: none;
+    font-size: 0.92rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: var(--green);
 }
 
 .dropdown {
@@ -110,32 +123,34 @@ nav a,
 }
 
 .dropbtn {
+    background: none;
     border: none;
-    background: transparent;
-    font-family: inherit;
-    cursor: pointer;
-    padding: 8px 0;
+    font: inherit;
+    padding: 0;
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 210px;
-    background: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    border-radius: 6px;
-    overflow: hidden;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: var(--white);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 0;
+    z-index: 1001;
 }
 
 .dropdown-content a {
     display: block;
-    padding: 10px 14px;
+    padding: 9px 16px;
+    white-space: nowrap;
 }
 
 .dropdown-content a:hover {
-    background: #edf3e9;
+    background: var(--green-light);
 }
 
 .dropdown:hover .dropdown-content,
@@ -143,150 +158,376 @@ nav a,
     display: block;
 }
 
-.languages {
+.language {
     display: flex;
-    gap: 9px;
+    gap: 7px;
+    align-items: center;
     font-size: 0.85rem;
 }
 
-.languages a {
-    color: #356b45;
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 22px 70px;
 }
 
 .hero {
-    background: #e8efe4;
     text-align: center;
-    padding: 60px 20px 50px;
+    padding: 55px 20px 45px;
 }
 
 .hero h1 {
     margin: 0 0 15px;
-    font-size: 2.4rem;
-    color: #2f5e3d;
+    color: var(--green);
+    font-size: 2.7rem;
 }
 
 .hero p {
-    max-width: 760px;
-    margin: 10px auto;
+    max-width: 780px;
+    margin: 12px auto;
+    color: var(--muted);
     font-size: 1.05rem;
 }
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px 60px;
+/* SECTIONS */
+
+.section {
+    margin-top: 45px;
 }
 
-section {
-    margin: 35px 0;
+.section h2 {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 12px;
+    font-size: 1.8rem;
 }
 
-section h2 {
-    color: #356b45;
-    font-size: 1.65rem;
-    margin-bottom: 15px;
+.section-intro {
+    max-width: 780px;
+    margin: 0 auto 28px;
+    text-align: center;
+    color: var(--muted);
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 22px;
-    margin-top: 20px;
+/* ABOUT JOURNAL */
+
+.about-journal {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.035);
 }
 
-.card {
-    background: #ffffff;
-    border-radius: 10px;
-    padding: 22px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e6e9e1;
-}
-
-.card h3 {
+.about-journal h2 {
+    text-align: center;
+    color: var(--green);
     margin-top: 0;
-    color: #356b45;
-    font-size: 1.2rem;
 }
 
-.card p {
-    margin-bottom: 18px;
+/* FEATURED ARTICLE */
+
+.featured-article {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin-bottom: 32px;
 }
 
-.card-link {
+.featured-image {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-content {
+    padding: 30px 35px 30px 5px;
+}
+
+.featured-label {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 0.8rem;
     font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 6px 13px;
+    border-radius: 30px;
+    margin-bottom: 14px;
 }
+
+.featured-content h3 {
+    color: var(--green);
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin: 0 0 15px;
+}
+
+.featured-content p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.read-link {
+    display: inline-block;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    background: var(--green-light);
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.read-link:hover {
+    background: #dce9d8;
+}
+
+/* JOURNAL GRID */
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.journal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+}
+
+.journal-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.journal-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.journal-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.journal-card a:hover {
+    text-decoration: underline;
+}
+
+/* GROWING GUIDES */
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.guide-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+}
+
+.guide-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.guide-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.guide-card a:hover {
+    text-decoration: underline;
+}
+
+/* SIMPLE THOUGHT */
 
 .simple-thought {
-    background: #edf3e9;
-    border-left: 4px solid #6a936d;
-    border-radius: 5px;
-    padding: 22px;
-    margin-top: 35px;
+    background: var(--green-light);
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.simple-thought h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.simple-thought p {
+    max-width: 760px;
+    margin: auto;
+    color: #405944;
     font-style: italic;
 }
 
+/* FOOTER */
+
 footer {
-    background: #294b34;
-    color: #ffffff;
-    text-align: center;
+    background: #eef2ed;
+    border-top: 1px solid var(--border);
     padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #ffffff;
-    margin: 0 8px;
-    display: inline-block;
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 9px;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 footer p {
-    margin: 8px 0;
+    margin-top: 15px;
 }
 
-#readAloudButton {
+/* READ ALOUD BUTTON */
+
+.read-aloud-btn {
     position: fixed;
-    right: 20px;
     bottom: 20px;
-    z-index: 2000;
-    background: #356b45;
-    color: #ffffff;
-    border: none;
-    border-radius: 30px;
-    padding: 12px 18px;
-    font-size: 1rem;
+    right: 20px;
+    z-index: 9999;
+    padding: 11px 16px;
+    border: 1px solid #d5dfd3;
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--green);
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
 }
 
-#readAloudButton:hover {
-    background: #294b34;
-}
+/* RESPONSIVE */
 
-@media (max-width: 760px) {
+@media (max-width: 950px) {
     .header-inner {
-        justify-content: center;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav {
         justify-content: center;
-        gap: 12px;
     }
 
-    .dropdown-content {
-        left: 50%;
-        transform: translateX(-50%);
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-article {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .featured-image {
+        height: 320px;
+        min-height: 0;
+    }
+
+    .featured-content {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 15px 55px;
     }
 
     .hero {
-        padding: 42px 18px;
+        padding: 35px 10px;
     }
 
     .hero h1 {
         font-size: 2rem;
     }
 
-    main {
-        padding: 20px 16px 45px;
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid var(--border);
+        margin-top: 8px;
+    }
+
+    .featured-image {
+        height: 240px;
+    }
+
+    .featured-content {
+        padding: 22px;
+    }
+
+    .featured-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-journal {
+        padding: 22px;
     }
 }
 </style>
@@ -294,350 +535,397 @@ footer p {
 
 <body>
 
+<!-- 页眉 -->
+
 <header>
-    <div class="header-inner">
-        <div>
-            <a class="logo" href="/zh/">Yangocean</a>
-            <div class="tagline">正念生活 • 自然 • 可持续发展</div>
-        </div>
+<div class="header-inner">
 
-        <nav aria-label="主导航">
-            <a href="/zh/">首页</a>
-
-            <div class="dropdown">
-                <button class="dropbtn" type="button">🌿 正念生活 ▾</button>
-                <div class="dropdown-content">
-                    <a href="/zh/mindfulness.html">正念与觉察</a>
-                    <a href="/zh/mindful-eating.html">正念饮食</a>
-                    <a href="/zh/sustainable-living.html">可持续生活</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn" type="button">🌳 亲近自然 ▾</button>
-                <div class="dropdown-content">
-                    <a href="/zh/nature-connection.html">与自然建立联系</a>
-                    <a href="/zh/eco.html">环境意识</a>
-                    <a href="/zh/blog.html">日志</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-                <button class="dropbtn" type="button">📱 相关应用 ▾</button>
-                <div class="dropdown-content">
-                    <a href="/zh/apps.html">所有应用</a>
-                    <a href="/zh/apps.html#eft">Yangocean EFT 敲击疗法</a>
-                    <a href="/zh/apps.html#healthy-body">QuQu Healthy Body</a>
-                    <a href="/zh/apps.html#duidui-fit">DuiDui Fit</a>
-                </div>
-            </div>
-        </nav>
-
-        <div class="languages" aria-label="语言选择">
-            <a href="/blog.html" lang="en">EN</a>
-            <a href="/ms/blog.html" lang="ms">BM</a>
-            <a href="/zh/blog.html" lang="zh" aria-current="page">中文</a>
-            <a href="/fr/blog.html" lang="fr">FR</a>
-            <a href="/es/blog.html" lang="es">ES</a>
-            <a href="/my/blog.html" lang="my">MY</a>
-        </div>
-    </div>
-</header>
-
-<div id="content-to-read">
-
-    <section class="hero">
-        <h1>📝 日志</h1>
-
-        <p>
-            分享有关正念生活、自然、可持续发展及日常体验的感悟、
-            观察与简单故事。
-        </p>
-
-        <p>
-            有些思考始于日常生活中的一个普通发现，
-            继而引导我们反思自己的生活方式、饮食习惯、
-            观察周围事物的方式，以及我们与这个世界的联系。
-        </p>
-    </section>
-
-    <main>
-
-        <section>
-            <h2>关于本日志</h2>
-
-            <p>
-                本日志汇集了来自日常生活的深入感悟、观察与故事。
-                内容涵盖自然、环境、身心健康、正念生活，
-                以及帮助我们更仔细地观察周围世界的日常体验。
-            </p>
-        </section>
-
-        <section>
-            <h2>最新日志</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>🌿 身心健康与可持续发展</h3>
-
-                    <p>
-                        思考个人身心健康、日常生活中的选择，
-                        以及我们的生活方式与自然环境之间的联系。
-                    </p>
-
-                    <a class="card-link"
-                       href="/zh/blog/wellness-and-sustainability.html">
-                        阅读文章 →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌳 为什么树木如此重要</h3>
-
-                    <p>
-                        探索树木的重要性、我们生活的环境，
-                        以及那些容易被忽略的细节，
-                        如何改变我们观察自然的方式。
-                    </p>
-
-                    <a class="card-link"
-                       href="/zh/blog/why-trees-matter.html">
-                        阅读文章 →
-                    </a>
-                </article>
-
-            </div>
-        </section>
-
-        <section>
-            <h2>种植与植物养护指南</h2>
-
-            <div class="card-grid">
-
-                <article class="card">
-                    <h3>🌱 如何种植植物</h3>
-
-                    <p>
-                        从准备所需材料到照顾生长中的植物，
-                        了解开始种植的基本步骤。
-                    </p>
-
-                    <a class="card-link"
-                       href="/zh/blog/how-to-plant.html">
-                        阅读指南 →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌳 如何种植一棵树</h3>
-
-                    <p>
-                        了解种树的基本步骤，
-                        帮助幼树在成长初期获得良好的条件。
-                    </p>
-
-                    <a class="card-link"
-                       href="/zh/blog/how-to-plant-a-tree.html">
-                        阅读指南 →
-                    </a>
-                </article>
-
-                <article class="card">
-                    <h3>🌿 如何种植芦荟</h3>
-
-                    <p>
-                        学习如何种植和照顾芦荟，
-                        认识芦荟叶片的不同部分，
-                        并了解透明的内部凝胶、
-                        绿色外皮与黄色汁液之间的区别。
-                    </p>
-
-                    <a class="card-link"
-                       href="/zh/blog/how-to-grow-aloe-vera.html">
-                        阅读指南 →
-                    </a>
-                </article>
-
-            </div>
-
-            <p>
-                我们会逐步分享更多种植与养护指南，
-                希望以简单易懂的方式提供实用信息，
-                让大家更容易理解并应用于日常生活。
-            </p>
-        </section>
-
-        <section class="simple-thought">
-            <h2>一则简单的感悟</h2>
-
-            <p>
-                并非所有事情都需要匆忙完成。
-                有时候，只要仔细观察一件平凡的小事，
-                我们就可能发现新的意义。
-            </p>
-        </section>
-
-    </main>
+<div>
+<a href="/zh/" class="logo">Yangocean</a>
+<div class="tagline">
+正念生活 • 亲近自然 • 可持续发展
+</div>
 </div>
 
-<footer>
-    <p>
-        <a href="/zh/">首页</a>
-        <a href="/zh/mindfulness.html">正念生活</a>
-        <a href="/zh/nature-connection.html">亲近自然</a>
-        <a href="/zh/blog.html">日志</a>
-        <a href="/zh/apps.html">相关应用</a>
-        <a href="/zh/contact.html">联系我们</a>
-    </p>
+<nav>
+<a href="/zh/">首页</a>
 
-    <p>© 2026 Yangocean。保留所有权利。</p>
+<div class="dropdown">
+<button class="dropbtn">🌿 正念生活 ▾</button>
+<div class="dropdown-content">
+<a href="/zh/mindfulness.html">🧘 正念与佛法</a>
+<a href="/zh/mindful-ethical-living.html">🌱 正念与道德生活</a>
+<a href="/zh/mindful-eating.html">🥗 正念饮食</a>
+<a href="/zh/mindful-food.html">🍎 正念食物与美食视频</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">🌳 亲近自然 ▾</button>
+<div class="dropdown-content">
+<a href="/zh/nature-connection.html">🌳 亲近自然</a>
+<a href="/zh/eco.html">🌍 环境意识</a>
+<a href="/zh/blog.html">📝 生活日志</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">📱 相关应用 ▾</button>
+<div class="dropdown-content">
+<a href="/zh/apps.html">📱 所有相关应用</a>
+<a href="/zh/apps.html#eft">🌿 Yangocean 应用</a>
+<a href="/zh/apps.html#healthy-body">❤️ QuQu 健康身体</a>
+<a href="/zh/apps.html#duidui-fit">🏃 DuoFit</a>
+</div>
+</div>
+
+<div class="language">
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+</div>
+</nav>
+
+</div>
+</header>
+
+<!-- 主要内容 -->
+
+<main id="content-to-read">
+
+<!-- 首页介绍 -->
+
+<section class="hero">
+<h1>📝 Yangocean 生活日志</h1>
+
+<p>
+分享关于正念生活、自然、可持续发展、野生动物
+以及日常生活体验的感悟、观察与小故事。
+</p>
+
+<p>
+有时候，一个小小的观察——一只鸟、一棵树、一顿饭、
+一株正在生长的植物，或一段宁静的时光——
+都可能启发我们深入思考自己的生活，
+以及我们如何与周围的世界建立联系。
+</p>
+</section>
+
+<!-- 关于生活日志 -->
+
+<section class="section about-journal">
+
+<h2>🌿 什么是 Yangocean 生活日志？</h2>
+
+<p>
+Yangocean 生活日志是一个从用心观察生活开始的分享空间。
+一次户外散步、一棵正在变化的树、一顿慢慢享用的餐食、
+一株新生的植物，或一个日常生活中的小小选择，
+都可以成为观察与反思的契机。
+</p>
+
+<p>
+这里有个人生活感悟，也有日常观察、
+实用建议、照片、绘画作品，
+以及从生活体验中学习到的点滴。
+</p>
+
+<p>
+我们的目的并不是要拥有所有答案，
+而是希望鼓励大家保持好奇心、提高觉察力，
+并愿意更仔细地观察平凡生活中的点点滴滴。
+</p>
+
+</section>
+
+<!-- 最新日志文章 -->
+
+<section class="section">
+
+<h2>📖 最新生活日志</h2>
+
+<p class="section-intro">
+先来看看最新分享的感悟，再继续阅读之前的日志文章。
+</p>
+
+<!--
+精选文章：
+发布新的生活日志文章时，请将精选文章卡片放在这里。
+之前的精选文章可以移至下方的日志文章区域。
+-->
+
+<div class="featured-article">
+
+<img
+class="featured-image"
+src="/images/Kind Woman Feeding Stray Animals.png"
+alt="关爱流浪狗和流浪猫">
+
+<div class="featured-content">
+
+<span class="featured-label">🌟 精选日志文章</span>
+
+<h3>🐕🐈 以善心与责任照顾流浪狗和流浪猫</h3>
+
+<p>
+关爱流浪狗和流浪猫是一种慈悲的表现，
+但负责任的关怀不仅仅是提供食物。
+了解合适的食物、干净的喂食环境、良好的卫生习惯，
+以及人道的动物福利措施，如何帮助保护动物与社区。
+同时认识潜在的健康风险，以及疫苗接种、
+绝育和兽医护理为何是负责任照顾动物的重要环节。
+</p>
+
+<a class="read-link" href="/zh/blog/feeding-stray-dogs-and-cats.html">
+阅读文章 →
+</a>
+
+</div>
+</div>
+
+<!-- 过往生活日志文章 -->
+
+<div class="journal-card">
+
+<h3>🐦 以善心和关怀喂养鸟类与鸽子</h3>
+
+<p>
+喂鸟看似是一个简单的善举，
+但负责任的照顾需要了解鸟类的自然需求与行为。
+了解为什么面包不适合作为鸽子的主要食物、
+哪些食物可能更适合它们，
+以及干净的饮水、适当的喂食方式和友善的鸟类环境，
+如何帮助我们以负责任的方式支持野生动物。
+</p>
+
+<a href="/zh/blog/feeding-birds-with-care.html">
+阅读文章 →
+</a>
+
+</div>
+
+<div class="journal-card">
+<h3>🌿 身心健康与可持续发展</h3>
+
+<p>
+思考个人身心健康、日常生活选择，
+以及我们周围环境之间的关系。
+</p>
+
+<a href="/zh/blog/wellness-and-sustainability.html">
+阅读感悟 →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🌳 树木为何如此重要？</h3>
+
+<p>
+进一步认识树木及其生长环境，
+以及生活中的一些小细节，
+如何改变我们观察树木的方式。
+</p>
+
+<a href="/zh/blog/why-trees-matter.html">
+阅读生活日志 →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🙏🌿 一刻正念与感恩的体验</h3>
+
+<p>
+在寺院里与一只巨蜥的宁静相遇，
+引发了对正念、感恩以及善待一切众生的慈心反思。
+</p>
+
+<a href="/zh/blog/a-moment-of-mindfulness-and-appreciation.html">
+阅读感悟 →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🔥 如何预防森林火灾</h3>
+
+<p>
+了解减少野火风险、保护森林与野生动物的实用方法，
+并探索可靠的火灾资讯来源与历史数据。
+</p>
+
+<a href="/zh/blog/how-to-prevent-forest-fires.html">
+阅读文章 →
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- 种植指南 -->
+
+<section class="section">
+
+<h2>🌱 植物种植指南</h2>
+
+<p class="section-intro">
+通过简单的种植指南，学习如何种植植物，
+并从亲身观察和日常体验中获得知识。
+</p>
+
+<div class="guides-grid">
+
+<div class="guide-card">
+<h3>🌱 如何种植植物</h3>
+
+<p>
+简单介绍如何在家中或小型种植空间里
+种植和照顾植物。
+</p>
+
+<a href="/zh/blog/how-to-plant.html">
+阅读指南 →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌳 如何种植一棵树</h3>
+
+<p>
+了解种植树木的简单步骤，
+帮助树木在新的生长环境中有一个良好的开始。
+</p>
+
+<a href="/zh/blog/how-to-plant-a-tree.html">
+阅读指南 →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌿 如何种植芦荟</h3>
+
+<p>
+一份实用的芦荟种植指南，
+通过简单观察和日常照料，
+学习如何让植物健康生长。
+</p>
+
+<a href="/zh/blog/how-to-grow-aloe-vera.html">
+阅读指南 →
+</a>
+</div>
+
+</div>
+
+<p class="section-intro" style="margin-top:25px;">
+随着我们分享更多观察与实际种植经验，
+未来也会逐步增加更多种植指南。
+</p>
+
+</section>
+
+<!-- 结语 -->
+
+<section class="simple-thought">
+
+<h2>🌱 一点简单的感悟</h2>
+
+<p>
+生活中的每件事不一定都需要匆忙。
+有时候，只要静下心来仔细观察一件平凡的小事，
+就足以让我们发现新的事物。
+</p>
+
+</section>
+
+</main>
+
+<!-- 页脚 -->
+
+<footer>
+
+<div>
+<a href="/zh/">首页</a>
+<a href="/zh/mindfulness.html">正念与佛法</a>
+<a href="/zh/nature-connection.html">亲近自然</a>
+<a href="/zh/blog.html">生活日志</a>
+<a href="/zh/apps.html">相关应用</a>
+<a href="/zh/contact.html">联系我们</a>
+</div>
+
+<p>
+&copy; 2026 • 正念生活 • 自然 • 日常可持续发展
+</p>
+
 </footer>
 
-<button id="readAloudButton" type="button"
-        aria-label="朗读本页面">
-    🔊 朗读页面
-</button>
+<!-- 朗读功能 -->
 
 <script>
 (function () {
-    const button = document.getElementById("readAloudButton");
-    const content = document.getElementById("content-to-read");
-
-    let isReading = false;
-    let isPaused = false;
-    let utterances = [];
-    let currentIndex = 0;
-
-    function getSpeechLanguage() {
-        const voices = window.speechSynthesis.getVoices();
-        const preferredLanguages = ["zh-CN", "zh-SG", "zh"];
-
-        for (const language of preferredLanguages) {
-            if (voices.some(voice =>
-                voice.lang.toLowerCase() === language.toLowerCase()
-            )) {
-                return language;
-            }
-        }
-
-        return "zh-CN";
+    if (!("speechSynthesis" in window)) {
+        return;
     }
 
-    function updateButton() {
-        if (!isReading) {
-            button.textContent = "🔊 朗读页面";
-            button.setAttribute("aria-label", "朗读本页面");
-        } else if (isPaused) {
-            button.textContent = "▶ 继续朗读";
-            button.setAttribute("aria-label", "继续朗读");
-        } else {
-            button.textContent = "⏸ 暂停朗读";
-            button.setAttribute("aria-label", "暂停朗读");
-        }
-    }
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "read-aloud-btn";
+    button.textContent = "🔊 朗读文章";
+    button.setAttribute("aria-label", "朗读生活日志");
 
-    function finishReading() {
-        isReading = false;
-        isPaused = false;
-        currentIndex = 0;
-        utterances = [];
-        updateButton();
-    }
+    document.body.appendChild(button);
 
-    function speakNext() {
-        if (!isReading || isPaused) {
+    let speaking = false;
+
+    button.addEventListener("click", function () {
+        if (speaking) {
+            speechSynthesis.cancel();
+            speaking = false;
+            button.textContent = "🔊 朗读文章";
             return;
         }
 
-        if (currentIndex >= utterances.length) {
-            finishReading();
-            return;
-        }
-
-        const utterance = new SpeechSynthesisUtterance(
-            utterances[currentIndex]
+        const elements = document.querySelectorAll(
+            "#content-to-read h1, " +
+            "#content-to-read h2, " +
+            "#content-to-read h3, " +
+            "#content-to-read p"
         );
 
-        utterance.lang = getSpeechLanguage();
-        utterance.rate = 0.9;
+        const text = Array.from(elements)
+            .map(el => el.innerText.trim())
+            .filter(Boolean)
+            .join("。");
+
+        if (!text) {
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "zh-CN";
+        utterance.rate = 0.95;
+
+        utterance.onstart = function () {
+            speaking = true;
+            button.textContent = "⏹ 停止朗读";
+        };
 
         utterance.onend = function () {
-            currentIndex++;
-            speakNext();
+            speaking = false;
+            button.textContent = "🔊 朗读文章";
         };
 
         utterance.onerror = function () {
-            currentIndex++;
-            speakNext();
+            speaking = false;
+            button.textContent = "🔊 朗读文章";
         };
 
-        window.speechSynthesis.speak(utterance);
-    }
-
-    function startReading() {
-        if (!("speechSynthesis" in window)) {
-            alert("抱歉，您的浏览器不支持语音朗读功能。");
-            return;
-        }
-
-        window.speechSynthesis.cancel();
-
-        const elements = content.querySelectorAll("h1, h2, h3, p");
-
-        utterances = Array.from(elements)
-            .map(element => element.innerText.trim())
-            .filter(text => text.length > 0);
-
-        if (utterances.length === 0) {
-            return;
-        }
-
-        currentIndex = 0;
-        isReading = true;
-        isPaused = false;
-
-        updateButton();
-        speakNext();
-    }
-
-    button.addEventListener("click", function () {
-        if (!("speechSynthesis" in window)) {
-            alert("抱歉，您的浏览器不支持语音朗读功能。");
-            return;
-        }
-
-        if (!isReading) {
-            startReading();
-            return;
-        }
-
-        if (isPaused) {
-            isPaused = false;
-            updateButton();
-
-            if (window.speechSynthesis.paused) {
-                window.speechSynthesis.resume();
-            } else {
-                speakNext();
-            }
-        } else {
-            isPaused = true;
-            window.speechSynthesis.pause();
-            updateButton();
-        }
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
     });
-
-    window.addEventListener("beforeunload", function () {
-        if ("speechSynthesis" in window) {
-            window.speechSynthesis.cancel();
-        }
-    });
-
-    updateButton();
 })();
 </script>
 
 </body>
 </html>
-
