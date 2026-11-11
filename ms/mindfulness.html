@@ -1,820 +1,166 @@
 <!DOCTYPE html>
 <html lang="ms">
-
 <head>
 <meta charset="UTF-8">
-
-<title>Kesedaran Minda & Dhamma | Kesedaran, Kebijaksanaan & Belas Kasihan | Yangocean</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-content="Terokai kesedaran minda dan Dhamma melalui kesedaran masa kini, meditasi, belas kasihan, kebijaksanaan, ketidakkekalan dan renungan ringkas untuk kehidupan seharian.">
+<title>Kesedaran Minda &amp; Dhamma | Kesedaran, Kebijaksanaan &amp; Belas Kasihan | Yangocean</title>
 
+<meta name="description" content="Terokai kesedaran minda dan Dhamma melalui meditasi, kesedaran, belas kasihan, kebijaksanaan, ketidakkekalan, kesyukuran dan refleksi praktikal untuk kehidupan seharian.">
 <meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="/styles.css">
-
-<link rel="canonical"
-href="https://yangocean.com/ms/mindfulness.html">
-
+<link rel="canonical" href="https://yangocean.com/ms/mindfulness.html">
 
 <!-- HREFLANG -->
-
-<link rel="alternate" hreflang="en"
-href="https://yangocean.com/mindfulness.html">
-
-<link rel="alternate" hreflang="ms"
-href="https://yangocean.com/ms/mindfulness.html">
-
-<link rel="alternate" hreflang="zh"
-href="https://yangocean.com/zh/mindfulness.html">
-
-<link rel="alternate" hreflang="fr"
-href="https://yangocean.com/fr/mindfulness.html">
-
-<link rel="alternate" hreflang="es"
-href="https://yangocean.com/es/mindfulness.html">
-
-<link rel="alternate" hreflang="my"
-href="https://yangocean.com/my/mindfulness.html">
-
-<link rel="alternate" hreflang="x-default"
-href="https://yangocean.com/mindfulness.html">
-
+<link rel="alternate" hreflang="en" href="https://yangocean.com/mindfulness.html">
+<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/mindfulness.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/mindfulness.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/mindfulness.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/mindfulness.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/mindfulness.html">
+<link rel="alternate" hreflang="x-default" href="https://yangocean.com/mindfulness.html">
 
 <!-- OPEN GRAPH -->
-
 <meta property="og:type" content="website">
-
-<meta property="og:title"
-content="Kesedaran Minda & Dhamma | Kesedaran, Kebijaksanaan & Belas Kasihan">
-
-<meta property="og:description"
-content="Terokai kesedaran minda dan Dhamma melalui kesedaran masa kini, meditasi, belas kasihan, kebijaksanaan, ketidakkekalan dan renungan ringkas untuk kehidupan seharian.">
-
-<meta property="og:url"
-content="https://yangocean.com/ms/mindfulness.html">
-
-<meta property="og:image"
-content="https://yangocean.com/images/og-image.jpg">
-
+<meta property="og:title" content="Kesedaran Minda &amp; Dhamma | Kesedaran, Kebijaksanaan &amp; Belas Kasihan">
+<meta property="og:description" content="Terokai kesedaran minda, meditasi, belas kasihan, kebijaksanaan, kesyukuran dan refleksi untuk kehidupan seharian.">
+<meta property="og:url" content="https://yangocean.com/ms/mindfulness.html">
+<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
 <!-- ADSENSE -->
-
-<meta name="google-adsense-account"
-content="ca-pub-6929570744326515">
-
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous">
-</script>
-
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515" crossorigin="anonymous"></script>
 
 <style>
-
-/* =========================
-   BACAAN SUARA
-========================= */
-
-.read-aloud {
-    text-align: center;
-    margin: 25px 0 35px;
+:root {
+    --green: #245b45;
+    --deep-green: #174532;
+    --soft-green: #edf4eb;
+    --cream: #fffdf6;
+    --warm-cream: #f8f3e6;
+    --text: #34453b;
+    --muted: #66756b;
+    --border: #dce7da;
+    --gold: #d5a84f;
 }
 
-.read-aloud button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #285943;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-.read-aloud button:hover {
-    opacity: 0.9;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
 }
 
-
-/* =========================
-   KANDUNGAN
-========================= */
-
-#content-to-read .card {
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     line-height: 1.8;
 }
 
-#content-to-read .card h2 {
-    margin-bottom: 15px;
+a {
+    color: var(--green);
+    text-underline-offset: 4px;
 }
 
-#content-to-read .card h3 {
-    margin-top: 25px;
+a:hover {
+    color: var(--deep-green);
 }
 
-#content-to-read ul {
-    line-height: 1.9;
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
 }
 
-</style>
-
-</head>
-
-
-<body>
-
-<div class="container">
-
-
-<!-- =========================
-     HEADER
-========================= -->
-
-<header>
-
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:15px;
-">
-
-<a href="/ms/"
-style="
-font-size:1.4rem;
-font-weight:700;
-text-decoration:none;
-color:#285943;
-">
-Yangocean
-</a>
-
-
-<!-- PILIHAN BAHASA -->
-
-<div>
-
-<a href="/mindfulness.html">EN</a> |
-<a href="/ms/mindfulness.html">BM</a> |
-<a href="/zh/mindfulness.html">中文</a> |
-<a href="/fr/mindfulness.html">FR</a> |
-<a href="/es/mindfulness.html">ES</a> |
-<a href="/my/mindfulness.html">မြန်မာ</a>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     NAVIGASI UTAMA
-========================= -->
-
-<nav style="margin-top:18px; text-align:center;">
-
-<a href="/ms/" style="margin:0 8px;">
-Laman Utama
-</a>
-
-
-<!-- KEHIDUPAN BERKESedaran -->
-
-<span class="dropdown">
-
-<a href="/ms/mindfulness.html" style="margin:0 8px;">
-🌿 Kehidupan Berkesedaran ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/ms/mindfulness.html">
-🧘 Kesedaran Minda & Dhamma
-</a>
-
-<a href="/ms/mindful-eating.html">
-🥗 Pemakanan Berkesedaran
-</a>
-
-<a href="/ms/sustainable-living.html">
-♻️ Kehidupan Lestari
-</a>
-
-</span>
-
-</span>
-
-
-<!-- HUBUNGAN DENGAN ALAM -->
-
-<span class="dropdown">
-
-<a href="/ms/nature-connection.html" style="margin:0 8px;">
-🌳 Hubungan dengan Alam ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/ms/nature-connection.html">
-🌳 Hubungan dengan Alam
-</a>
-
-<a href="/ms/eco.html">
-🌍 Kesedaran Alam Sekitar
-</a>
-
-<a href="/blog.html">
-📝 Jurnal
-</a>
-
-</span>
-
-</span>
-
-
-<!-- APLIKASI BERKAITAN -->
-
-<span class="dropdown">
-
-<a href="/ms/apps.html" style="margin:0 8px;">
-📱 Aplikasi Berkaitan ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/ms/apps.html">
-📱 Semua Aplikasi Berkaitan
-</a>
-
-<a href="/ms/apps.html#eft">
-🌿 Aplikasi Yangocean
-</a>
-
-<a href="/ms/apps.html#healthy-body">
-🥗 QuQu Healthy Body
-</a>
-
-<a href="/ms/apps.html#duidui-fit">
-🏃 DuoFit
-</a>
-
-</span>
-
-</span>
-
-</nav>
-
-</header>
-
-
-
-<!-- =========================
-     KANDUNGAN UTAMA
-========================= -->
-
-<main id="content-to-read">
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>🧘 Kesedaran Minda & Dhamma</h1>
-
-<p>
-Memupuk kesedaran, kebijaksanaan, belas kasihan dan cara hidup
-yang lebih tenang.
-</p>
-
-</section>
-
-
-
-<!-- BACAAN SUARA -->
-
-<div class="read-aloud">
-
-<button
-type="button"
-id="readAloudButton"
-aria-label="Baca halaman ini dengan suara">
-
-🔊 Baca Dengan Suara
-
-</button>
-
-</div>
-
-
-
-<!-- APA ITU KESedaran MINDA -->
-
-<section class="card">
-
-<h2>🌿 Apakah Itu Kesedaran Minda?</h2>
-
-<p>
-Kesedaran minda ialah amalan memberikan perhatian kepada saat
-ini dengan penuh kesedaran, tanpa terus bertindak balas terhadap
-setiap perkara yang kita alami.
-</p>
-
-<p>
-Kita boleh menyedari pernafasan, fikiran, emosi, sensasi tubuh
-dan tindakan kita ketika semuanya berlaku. Kesedaran yang
-sederhana ini boleh membantu kita mengenali tabiat sendiri dan
-memberikan tindak balas yang lebih bijaksana terhadap situasi
-seharian.
-</p>
-
-<p>
-Kesedaran minda tidak bermaksud setiap saat mesti tenang atau
-menyenangkan. Ia bermula dengan belajar melihat apa yang benar-benar
-sedang berlaku, satu saat demi satu saat.
-</p>
-
-</section>
-
-
-
-<!-- DHAMMA -->
-
-<section class="card">
-
-<h2>🪷 Kesedaran Minda dan Dhamma</h2>
-
-<p>
-Dalam tradisi Buddha, kesedaran minda berkait rapat dengan
-perkembangan kebijaksanaan dan tingkah laku beretika. Ia bukan
-sekadar teknik untuk berehat, tetapi sebahagian daripada jalan
-yang lebih luas untuk memahami minda dan kehidupan.
-</p>
-
-<p>
-Ajaran Dhamma menggalakkan kita memerhatikan perubahan,
-memahami sebab dan keadaan yang mempengaruhi sesuatu,
-mengenali keterikatan serta mengembangkan belas kasihan dan
-kebijaksanaan.
-</p>
-
-<p>
-Tradisi Buddha yang berbeza mungkin menerangkan dan mengamalkan
-ajaran ini dengan cara yang berlainan. Halaman ini memberi
-tumpuan kepada renungan ringkas yang diilhamkan oleh perspektif
-Buddha Theravada.
-</p>
-
-</section>
-
-
-
-<!-- KESEDARAN HARIAN -->
-
-<section class="card">
-
-<h2>🌱 Membawa Kesedaran ke dalam Kehidupan Seharian</h2>
-
-<p>
-Kesedaran minda boleh diamalkan semasa melakukan aktiviti biasa.
-Kita tidak perlu menunggu sehingga duduk diam untuk bermeditasi.
-</p>
-
-<ul>
-
-<li>
-Perhatikan pernafasan ketika berjalan.
-</li>
-
-<li>
-Berikan perhatian kepada makanan yang sedang dimakan.
-</li>
-
-<li>
-Dengarlah dengan sepenuh perhatian apabila orang lain bercakap.
-</li>
-
-<li>
-Perhatikan ketegangan dalam tubuh sebelum bertindak balas.
-</li>
-
-<li>
-Berhenti seketika sebelum menghantar mesej ketika marah.
-</li>
-
-<li>
-Perhatikan fikiran tanpa terus mempercayai atau mengikutinya.
-</li>
-
-</ul>
-
-<p>
-Detik-detik kecil yang penuh kesedaran ini boleh menjadi sebahagian
-daripada kehidupan seharian.
-</p>
-
-</section>
-
-
-
-<!-- MEDITASI -->
-
-<section class="card">
-
-<h2>🧘 Amalan Meditasi yang Ringkas</h2>
-
-<p>
-Meditasi memberikan ruang yang tenang untuk melatih perhatian
-dan memerhatikan minda. Bagi pemula, tidak perlu memaksa minda
-menjadi kosong sepenuhnya.
-</p>
-
-<p>
-Salah satu pendekatan yang mudah ialah menjadikan pernafasan
-semula jadi sebagai tumpuan perhatian. Duduk dengan selesa,
-biarkan tubuh berehat dan perhatikan sensasi ketika bernafas.
-</p>
-
-<p>
-Apabila fikiran melayang, sedari dengan lembut bahawa perhatian
-telah beralih, kemudian kembalikan perhatian kepada pernafasan.
-Perkara ini mungkin berlaku berkali-kali. Usaha mengembalikan
-perhatian itu sendiri merupakan sebahagian daripada latihan.
-</p>
-
-<h3>Rutin Ringkas</h3>
-
-<ul>
-
-<li>
-<strong>Pada waktu pagi:</strong>
-Luangkan 5–15 minit untuk memerhatikan pernafasan dengan tenang.
-</li>
-
-<li>
-<strong>Sepanjang hari:</strong>
-Tarik nafas dengan penuh kesedaran beberapa kali sebelum
-melakukan perkara penting.
-</li>
-
-<li>
-<strong>Pada waktu malam:</strong>
-Renungkan secara ringkas fikiran, pertuturan dan tindakan
-sepanjang hari.
-</li>
-
-</ul>
-
-<p>
-Tujuannya bukan untuk mencapai perasaan tertentu. Sebaliknya,
-kita berusaha mengembangkan kesedaran dan belajar memerhatikan
-pengalaman dengan lebih jelas.
-</p>
-
-</section>
-
-
-
-<!-- BELAS KASIHAN -->
-
-<section class="card">
-
-<h2>💛 Kebaikan Hati dan Belas Kasihan</h2>
-
-<p>
-Kesedaran minda boleh membantu kita melihat bagaimana kata-kata
-dan tindakan kita mempengaruhi orang lain. Kesedaran menjadi
-lebih bermakna apabila ia mendorong kita untuk bersikap baik
-dan berbelas kasihan.
-</p>
-
-<p>
-Antara cara mudah untuk menunjukkan kebaikan hati ialah:
-</p>
-
-<ul>
-
-<li>
-Bercakap dengan jujur tanpa bersikap kasar secara tidak perlu.
-</li>
-
-<li>
-Mendengar apabila seseorang memerlukan perhatian.
-</li>
-
-<li>
-Memberikan bantuan apabila bantuan itu benar-benar diperlukan.
-</li>
-
-<li>
-Bersabar apabila menghadapi situasi yang sukar.
-</li>
-
-<li>
-Memberi tanpa sentiasa mengharapkan sesuatu sebagai balasan.
-</li>
-
-</ul>
-
-<p>
-Belas kasihan tidak bermaksud kita perlu bersetuju dengan
-segala-galanya. Kita boleh bertindak dengan penuh pemahaman
-sambil tetap menjaga batasan yang sewajarnya.
-</p>
-
-</section>
-
-
-
-<!-- FIKIRAN DAN EMOSI -->
-
-<section class="card">
-
-<h2>🌊 Memerhatikan Fikiran dan Emosi</h2>
-
-<p>
-Fikiran dan emosi boleh terasa sangat kuat, terutamanya apabila
-kita terus bertindak balas terhadapnya. Kesedaran minda memberi
-kita peluang untuk menyedarinya sebelum membuat keputusan
-tentang tindakan seterusnya.
-</p>
-
-<p>
-Sebagai contoh, apabila kemarahan muncul, kita boleh terlebih
-dahulu menyedari: <strong>“Kemarahan sedang hadir.”</strong>
-Daripada terus bertindak mengikut perasaan itu, kita boleh
-memerhatikannya, bernafas dan memberikan masa kepada diri
-sendiri untuk memilih tindak balas.
-</p>
-
-<p>
-Pendekatan yang sama boleh digunakan apabila mengalami
-kebimbangan, keterujaan, kesedihan, cemburu, ketakutan dan
-pengalaman lain yang sentiasa berubah.
-</p>
-
-<p>
-Tujuannya bukan untuk menekan emosi, tetapi untuk memahaminya
-dengan lebih jelas dan mengelakkan diri daripada dikawal oleh
-setiap reaksi yang muncul dan berlalu.
-</p>
-
-</section>
-
-
-
-<!-- KEBIJAKSANAAN -->
-
-<section class="card">
-
-<h2>📖 Daripada Kesedaran kepada Kebijaksanaan</h2>
-
-<p>
-Kesedaran minda dan kebijaksanaan saling menyokong. Apabila
-kita memerhatikan pengalaman dengan teliti, kita boleh mula
-menyedari bahawa fikiran, perasaan, keadaan dan hubungan sentiasa
-mengalami perubahan.
-</p>
-
-<p>
-Pemerhatian ini boleh mendorong kita mempersoalkan andaian
-automatik dan memahami akibat daripada pilihan yang dibuat.
-</p>
-
-<p>
-Mempelajari ajaran daripada sumber yang boleh dipercayai,
-merenungkan pengalaman dan menerapkan apa yang dipelajari
-dalam kehidupan seharian boleh memperdalam pemahaman secara
-beransur-ansur.
-</p>
-
-<p>
-Pengetahuan yang baik seharusnya membantu kita melihat sesuatu
-dengan lebih jelas, bertindak secara beretika, mengembangkan
-belas kasihan dan bersedia menilai semula andaian sendiri.
-</p>
-
-</section>
-
-
-
-<!-- KETIDAKKEKALAN -->
-
-<section class="card">
-
-<h2>🍃 Belajar daripada Perubahan</h2>
-
-<p>
-Salah satu tema penting dalam ajaran Buddha ialah ketidakkekalan:
-pengalaman dan keadaan sentiasa berubah.
-</p>
-
-<p>
-Kita boleh memerhatikan perkara ini dalam kehidupan seharian.
-Pagi bertukar menjadi petang, tumbuhan muda membesar, cuaca
-berubah, hubungan berkembang, dan fikiran serta perasaan kita
-muncul sebelum berlalu.
-</p>
-
-<p>
-Menyedari perubahan tidak bermaksud menjauhkan diri daripada
-kehidupan. Sebaliknya, kesedaran ini boleh membantu kita
-menghargai pengalaman tanpa menganggap bahawa semuanya akan
-kekal dalam keadaan yang sama.
-</p>
-
-</section>
-
-
-
-<!-- PILIHAN BERKESEDARAN -->
-
-<section class="card">
-
-<h2>⚖️ Kesedaran dalam Membuat Pilihan</h2>
-
-<p>
-Kesedaran juga boleh mempengaruhi cara kita hidup dalam dunia
-yang lebih luas. Sebelum membuat pilihan, kita boleh berhenti
-seketika dan mempertimbangkan kesannya terhadap diri sendiri,
-orang lain, haiwan dan alam semula jadi.
-</p>
-
-<ul>
-
-<li>
-Adakah saya benar-benar memerlukan perkara ini?
-</li>
-
-<li>
-Bolehkah saya memilih sesuatu yang lebih sederhana?
-</li>
-
-<li>
-Adakah tindakan ini akan menghasilkan pembaziran yang tidak perlu?
-</li>
-
-<li>
-Bagaimanakah kata-kata saya mungkin mempengaruhi orang lain?
-</li>
-
-<li>
-Adakah saya bertindak dengan penuh kesedaran atau sekadar
-mengikut kebiasaan?
-</li>
-
-</ul>
-
-<p>
-Soalan-soalan ini menghubungkan kesedaran dalaman dengan
-kehidupan yang lebih berhemah dan bertanggungjawab.
-</p>
-
-</section>
-
-
-
-<!-- RENUNGAN PERIBADI -->
-
-<section class="card">
-
-<h2>🌿 Renungan dalam Ketenangan</h2>
-
-<p>
-Kadangkala, kesedaran minda bermula dengan sesuatu yang sangat
-biasa: berhenti seketika dan menyedari apa yang sudah ada di
-hadapan kita.
-</p>
-
-<p>
-Bunyi hujan, pergerakan daun, hidangan yang dikongsi bersama
-orang lain, atau sekadar sensasi pernafasan boleh menjadi
-peluang untuk kembali kepada saat ini.
-</p>
-
-<p>
-Kita tidak perlu menjadikan setiap detik sesuatu yang istimewa.
-Kita hanya perlu belajar menyedarinya.
-</p>
-
-<p>
-Bagi saya, inilah salah satu aspek kesedaran minda yang mudah
-diamalkan: <strong>perhatikan dengan teliti, sedari dengan jelas
-dan bertindak dengan penuh kepedulian.</strong>
-</p>
-
-</section>
-
-
-
-<!-- SOALAN RENUNGAN -->
-
-<section class="card">
-
-<h2>🪷 Soalan untuk Renungan</h2>
-
-<p>
-Sekali-sekala, anda boleh duduk dengan tenang sambil merenungkan
-salah satu soalan berikut:
-</p>
-
-<ul>
-
-<li>
-Apakah yang sedang saya alami sekarang?
-</li>
-
-<li>
-Apakah fikiran yang mempengaruhi tindakan saya?
-</li>
-
-<li>
-Adakah saya sekadar bertindak balas atau memilih tindak balas
-dengan sedar?
-</li>
-
-<li>
-Apakah perubahan yang saya perhatikan dalam diri sejak kebelakangan ini?
-</li>
-
-<li>
-Dalam keadaan apakah saya boleh melatih lebih banyak kesabaran?
-</li>
-
-<li>
-Bagaimanakah saya boleh membawa lebih banyak kebaikan hati
-ke dalam kehidupan seharian?
-</li>
-
-</ul>
-
-<p>
-Anda tidak perlu mencari jawapan dengan segera. Kadangkala,
-nilainya terletak pada usaha memerhatikan soalan itu dengan jujur.
-</p>
-
-</section>
-
-
-
-<!-- PENUTUP -->
-
-<section class="card">
-
-<h2>💚 Mulakan dengan Satu Detik</h2>
-
-<p>
-Kesedaran minda tidak perlu bermula dengan rutin yang rumit.
-Ia boleh bermula dengan satu tarikan nafas, satu pemerhatian
-yang teliti, satu kata-kata yang baik atau satu jeda sebelum
-bertindak balas.
-</p>
-
-<p>
-Dengan latihan yang berterusan, detik-detik kecil ini boleh
-menjadi peluang untuk memahami diri dengan lebih jelas dan
-menjalani kehidupan dengan kesedaran, belas kasihan dan
-kebijaksanaan yang lebih mendalam.
-</p>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer class="footer">
-
-<p>
-© 2026 Yangocean
-</p>
-
-<p>
-
-<a href="/ms/about.html">Tentang Kami</a> |
-<a href="/ms/privacy.html">Dasar Privasi</a> |
-<a href="/ms/terms.html">Terma</a> |
-<a href="/ms/contact.html">Hubungi Kami</a>
-
-</p>
-
-</footer>
-
-
-</div>
-
-
-
-<!-- =========================
-     GAYA MENU DROPDOWN
-========================= -->
-
-<style>
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-top: 18px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.04);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-name {
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-tagline {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+}
+
+.language-selector a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-selector a[lang="ms"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.main-nav > a,
+.dropdown > a {
+    color: var(--green);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-nav > a:hover,
+.dropdown > a:hover {
+    color: var(--deep-green);
+    text-decoration: underline;
+}
 
 .dropdown {
     position: relative;
@@ -824,11 +170,14 @@ kebijaksanaan yang lebih mendalam.
 .dropdown-content {
     display: none;
     position: absolute;
-    background: white;
-    min-width: 210px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
     padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(23, 69, 50, 0.12);
     z-index: 1000;
     text-align: left;
 }
@@ -836,128 +185,1485 @@ kebijaksanaan yang lebih mendalam.
 .dropdown-content a {
     display: block;
     padding: 10px 15px;
+    color: var(--green);
+    font-size: 0.92rem;
     text-decoration: none;
-    color: #285943;
 }
 
 .dropdown-content a:hover {
-    background: #f2f7f3;
+    background: var(--soft-green);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
+/* MAIN CONTENT */
+
+main {
+    padding-top: 18px;
+    padding-bottom: 48px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--soft-green), var(--warm-cream));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(30px, 6vw, 52px) 26px;
+    margin: 24px 0 30px;
+    text-align: center;
+}
+
+.hero-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    color: #53645a;
+    font-size: 1.06rem;
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.hero-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid var(--green);
+    border-radius: 9px;
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-links a:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    text-align: center;
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    margin: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--green);
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.read-aloud button:hover {
+    background: var(--deep-green);
+}
+
+.read-aloud button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#readAloudStatus {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* CONTENT CARDS */
+
+#content-to-read > section.card,
+#content-to-read > section.mindfulness-topic {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.045);
+}
+
+#content-to-read .card h2,
+#content-to-read .mindfulness-topic h2 {
+    margin: 0 0 17px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+    line-height: 1.4;
+}
+
+#content-to-read .card h3,
+#content-to-read .mindfulness-topic h3 {
+    margin-top: 25px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#content-to-read .card p,
+#content-to-read .mindfulness-topic p {
+    margin: 0 0 17px;
+    line-height: 1.85;
+}
+
+#content-to-read .card p:last-child,
+#content-to-read .mindfulness-topic p:last-child {
+    margin-bottom: 0;
+}
+
+#content-to-read .card ul,
+#content-to-read .card ol {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+#content-to-read .card li {
+    margin-bottom: 7px;
+}
+
+#content-to-read .card a,
+#content-to-read .mindfulness-topic a {
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+}
+
+#content-to-read .card a:hover,
+#content-to-read .mindfulness-topic a:hover {
+    color: var(--deep-green);
+}
+
+/* MEDITATION GRID */
+
+.meditation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.meditation-item {
+    min-width: 0;
+    padding: 22px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.meditation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 69, 50, 0.08);
+}
+
+.meditation-item h3 {
+    margin: 0 0 12px !important;
+    color: var(--deep-green);
+    font-size: 1.15rem;
+}
+
+.meditation-item p {
+    margin-bottom: 15px !important;
+}
+
+.meditation-item a {
+    display: inline-block;
+}
+
+/* FEATURED GRATITUDE ARTICLE */
+
+.gratitude-card {
+    background: var(--warm-cream) !important;
+    border-left: 5px solid var(--green) !important;
+}
+
+.gratitude-card .card-subtitle {
+    margin-top: -8px !important;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    font-style: italic;
+}
+
+/* FEATURED RETREAT */
+
+.retreat-card {
+    background: #f7faf4 !important;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 36px;
+    padding: 28px 20px;
+    background: var(--warm-cream);
+    border: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.footer p {
+    margin: 7px 0;
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .site-header {
+        margin-top: 10px;
+        padding: 18px 14px;
+    }
+
+    .header-top {
+        align-items: flex-start;
+    }
+
+    .site-name {
+        font-size: 1.65rem;
+    }
+
+    .language-selector {
+        gap: 5px;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 12px;
+        line-height: 1.8;
+    }
+
+    .dropdown-content {
+        left: auto;
+        right: 0;
+        min-width: min(230px, 85vw);
+        max-width: 90vw;
+    }
+
+    .hero {
+        padding: 30px 18px;
+        margin: 20px 0 24px;
+    }
+
+    #content-to-read > section.card,
+    #content-to-read > section.mindfulness-topic {
+        margin: 18px 0;
+        padding: 22px 18px;
+    }
+
+    .meditation-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .meditation-item {
+        padding: 20px;
+    }
+
+    .read-aloud {
+        padding: 15px 10px;
+    }
+
+    .read-aloud button {
+        padding: 11px 14px;
+        margin: 4px 2px;
+    }
+
+    .footer-links {
+        gap: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .read-aloud button,
+    .meditation-item {
+        transition: none;
+    }
+
+    .meditation-item:hover {
+        transform: none;
+    }
+}
 </style>
+</head>
+
+<body>
+<div class="container">
+
+<header class="site-header">
+    <div class="header-top">
+        <div>
+            <a class="site-name" href="/ms/">Yangocean</a>
+            <span class="site-tagline">Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian</span>
+        </div>
+
+        <div class="language-selector" aria-label="Pilih bahasa">
+            <a href="/mindfulness.html" lang="en">EN</a> |
+            <a href="/ms/mindfulness.html" lang="ms" aria-current="page">BM</a> |
+            <a href="/zh/mindfulness.html" lang="zh">中文</a> |
+            <a href="/fr/mindfulness.html" lang="fr">FR</a> |
+            <a href="/es/mindfulness.html" lang="es">ES</a> |
+            <a href="/my/mindfulness.html" lang="my">မြန်မာ</a>
+        </div>
+    </div>
+
+    <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="/ms/">Laman Utama</a>
+
+        <span class="dropdown">
+            <a href="/ms/mindfulness.html" aria-haspopup="true">🌿 Kehidupan Berkesedaran ▾</a>
+            <span class="dropdown-content">
+                <a href="/ms/mindfulness.html">🧘 Kesedaran Minda &amp; Dhamma</a>
+                <a href="/ms/mindful-ethical-living.html">💚 Kehidupan Berkesedaran &amp; Beretika</a>
+                <a href="/ms/mindful-eating.html">🥗 Pemakanan Berkesedaran</a>
+                <a href="/ms/mindful-food.html">🍲 Makanan Berkesedaran &amp; Video Makanan</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/ms/nature-connection.html" aria-haspopup="true">🌳 Hubungan dengan Alam ▾</a>
+            <span class="dropdown-content">
+                <a href="/ms/nature-connection.html">🌳 Hubungan dengan Alam</a>
+                <a href="/ms/eco.html">🌍 Kesedaran Alam Sekitar</a>
+                <a href="/ms/blog.html">📝 Jurnal</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/ms/apps.html" aria-haspopup="true">📱 Aplikasi Berkaitan ▾</a>
+            <span class="dropdown-content">
+                <a href="/ms/apps.html">📱 Semua Aplikasi Berkaitan</a>
+                <a href="/ms/apps.html#eft">🌿 Aplikasi Yangocean</a>
+                <a href="/ms/apps.html#healthy-body">🥗 QuQu Healthy Body</a>
+                <a href="/ms/apps.html#duidui-fit">🏃 DuiDui Fit</a>
+            </span>
+        </span>
+    </nav>
+</header>
+
+<main id="content-to-read">
+
+<!-- HERO -->
+<section class="hero">
+    <span class="hero-icon" aria-hidden="true">🧘</span>
+    <h1>Kesedaran Minda &amp; Dhamma</h1>
+
+    <p>
+        Memupuk kesedaran, kebijaksanaan, belas kasihan dan
+        cara hidup yang lebih damai.
+    </p>
+
+    <p>
+        Terokai meditasi, refleksi Buddhisme dan cara praktikal
+        untuk menerapkan kesedaran minda dalam kehidupan seharian.
+    </p>
+
+    <div class="hero-links">
+        <a href="#meditation-collection">Terokai Meditasi</a>
+        <a href="#daily-mindfulness">Kesedaran Minda Seharian</a>
+    </div>
+</section>
+
+<!-- READ ALOUD -->
+<div class="read-aloud" aria-label="Bacakan halaman ini">
+    <button type="button" id="readAloudButton" aria-label="Bacakan halaman ini">
+        🔊 Bacakan
+    </button>
+
+    <button type="button" id="stopReadAloudButton"
+            aria-label="Hentikan bacaan suara"
+            style="background:#64756b;">
+        ■ Henti
+    </button>
+
+    <p id="readAloudStatus" role="status" aria-live="polite">
+        Tekan Bacakan untuk mendengar. Jika tiada bunyi, periksa
+        kelantangan media peranti dan tetapan pelayar anda.
+    </p>
+</div>
+
+<!-- INTRODUCTION -->
+<section class="card">
+    <h2>🌿 Apakah Kesedaran Minda?</h2>
+
+    <p>
+        Kesedaran minda ialah amalan memberikan perhatian kepada
+        saat kini dengan penuh kesedaran, tanpa terus bertindak
+        balas terhadap segala yang kita alami.
+    </p>
+
+    <p>
+        Kita boleh menyedari pernafasan, fikiran, emosi, sensasi
+        dan tindakan kita ketika semuanya berlaku. Kesedaran
+        sederhana ini dapat membantu kita mengenali tabiat dan
+        bertindak balas terhadap situasi harian dengan lebih
+        bijaksana.
+    </p>
+
+    <p>
+        Kesedaran minda tidak memerlukan setiap saat menjadi
+        tenang atau menyenangkan. Ia bermula dengan belajar
+        melihat apa yang sebenarnya sedang berlaku, satu saat
+        demi satu saat.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🪷 Kesedaran Minda dan Dhamma</h2>
+
+    <p>
+        Dalam tradisi Buddhisme, kesedaran minda berkait rapat
+        dengan perkembangan kebijaksanaan dan tingkah laku
+        beretika. Ia bukan sekadar teknik untuk berehat, tetapi
+        sebahagian daripada jalan yang lebih luas untuk memahami
+        minda dan kehidupan.
+    </p>
+
+    <p>
+        Ajaran Dhamma menggalakkan kita memerhatikan perubahan,
+        memahami sebab dan keadaan, mengenali kemelekatan serta
+        mengembangkan belas kasihan dan kebijaksanaan.
+    </p>
+
+    <p>
+        Tradisi Buddhisme yang berbeza menerangkan dan mengamalkan
+        ajaran ini dengan cara yang berbeza. Halaman ini
+        memfokuskan refleksi ringkas yang diinspirasikan oleh
+        perspektif Buddhisme Theravada.
+    </p>
+</section>
+
+<!-- DAILY MINDFULNESS -->
+<section class="card" id="daily-mindfulness">
+    <h2>🌱 Membawa Kesedaran ke dalam Kehidupan Seharian</h2>
+
+    <p>
+        Kesedaran minda boleh diamalkan semasa melakukan aktiviti
+        biasa. Kita tidak perlu menunggu sehingga duduk diam
+        untuk bermeditasi.
+    </p>
+
+    <ul>
+        <li>Perhatikan pernafasan ketika berjalan.</li>
+        <li>Berikan perhatian kepada makanan yang sedang dimakan.</li>
+        <li>Dengar dengan sepenuh perhatian apabila seseorang bercakap.</li>
+        <li>Perhatikan ketegangan dalam tubuh sebelum bertindak balas.</li>
+        <li>Berhenti seketika sebelum menghantar mesej yang berunsur kemarahan.</li>
+        <li>Perhatikan fikiran tanpa terus mempercayai atau mengikutinya.</li>
+    </ul>
+
+    <p>
+        Detik-detik kecil kesedaran ini boleh menjadi sebahagian
+        daripada kehidupan biasa.
+    </p>
+</section>
 
 
+<section class="card">
+    <h2>🧘 Amalan Meditasi Ringkas</h2>
 
-<!-- =========================
-     SKRIP BACAAN SUARA
-========================= -->
+    <p>
+        Meditasi memberikan peluang yang tenang untuk melatih
+        perhatian dan memerhatikan minda. Bagi pemula, tidak
+        perlu memaksa minda menjadi kosong sepenuhnya.
+    </p>
 
+    <p>
+        Salah satu pendekatan mudah ialah menggunakan pernafasan
+        semula jadi sebagai objek perhatian. Duduk dengan selesa,
+        biarkan tubuh berehat dan perhatikan sensasi pernafasan.
+    </p>
+
+    <p>
+        Apabila minda mengembara, kenali dengan lembut bahawa
+        perhatian telah beralih, kemudian kembalikan perhatian
+        kepada pernafasan. Proses ini mungkin berlaku berkali-kali.
+        Tindakan kembali kepada pernafasan itu sendiri merupakan
+        sebahagian daripada latihan.
+    </p>
+
+    <h3>Rutin Ringkas</h3>
+
+    <ul>
+        <li><strong>Pagi:</strong> Luangkan 5–15 minit untuk memerhatikan pernafasan dengan tenang.</li>
+        <li><strong>Sepanjang hari:</strong> Ambil beberapa nafas dengan sedar sebelum melakukan tindakan penting.</li>
+        <li><strong>Petang:</strong> Renungkan secara ringkas fikiran, pertuturan dan tindakan sepanjang hari.</li>
+    </ul>
+
+    <p>
+        Tujuannya bukan untuk mencapai perasaan tertentu. Tujuannya
+        ialah mengembangkan kesedaran dan belajar memerhatikan
+        pengalaman dengan lebih jelas.
+    </p>
+</section>
+
+<!-- MEDITATION COLLECTION -->
+<section class="card" id="meditation-collection">
+    <h2>🪷 Memahami Meditasi</h2>
+
+    <p>
+        Meditasi boleh didekati melalui pelbagai cara. Dalam
+        tradisi Pa-Auk, latihan berasaskan moraliti
+        (<em>sīla</em>), konsentrasi (<em>samādhi</em>) dan
+        kebijaksanaan (<em>paññā</em>). Kesedaran terhadap
+        pernafasan merupakan salah satu objek meditasi yang
+        lazim, manakala amalan lain boleh diajarkan mengikut
+        keperluan dan tahap latihan seseorang meditator.
+    </p>
+
+    <p>
+        Artikel dalam koleksi ini memperkenalkan idea-idea tersebut
+        menggunakan bahasa yang mudah difahami. Artikel ini
+        merupakan refleksi pendidikan dan bukan pengganti
+        bimbingan peribadi daripada guru meditasi yang
+        berkelayakan, khususnya bagi latihan konsentrasi dan
+        pandangan terang yang formal.
+    </p>
+
+    <ul>
+        <li>
+            <a href="/ms/blog/pa-auk-meditation-tradition.html">
+                Meditasi dalam Tradisi Pa-Auk: Daripada Moraliti kepada Konsentrasi dan Kebijaksanaan →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/mindfulness-of-breathing.html">
+                Kesedaran terhadap Pernafasan: Memulakan Amalan Meditasi →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/building-a-meditation-habit.html">
+                Membina Tabiat Meditasi yang Tetap: Kesabaran, Usaha dan Keseimbangan →
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- MEDITATION FOR EVERY STAGE OF LIFE -->
+<section class="card">
+    <h2>🌱 Meditasi untuk Setiap Peringkat Kehidupan</h2>
+
+    <p>
+        Tanggungjawab, jadual harian dan keupayaan fizikal kita
+        berubah sepanjang kehidupan. Artikel-artikel ini meneroka
+        cara menyediakan ruang untuk refleksi dan meditasi sambil
+        menghormati keadaan setiap individu. Cadangan ini ialah
+        titik permulaan yang boleh disesuaikan, bukannya jaminan
+        hasil tertentu.
+    </p>
+
+
+<div class="meditation-card">
+    <a href="/ms/blog/meditation-for-children.html">
+        <h3>Meditasi untuk Kanak-kanak</h3>
+
+        <p>
+            Perkenalkan kanak-kanak kepada keseronokan kesedaran
+            minda melalui pernafasan yang lembut, aktiviti yang
+            menyeronokkan dan meditasi kasih sayang. Ketahui
+            cara mudah membantu kanak-kanak mengembangkan
+            ketenangan, tumpuan, rasa syukur dan belas kasihan
+            dalam kehidupan seharian.
+        </p>
+
+        <span class="read-more">Baca Selanjutnya →</span>
+    </a>
+</div>
+
+
+    <div class="meditation-grid">
+
+        <article class="meditation-item">
+            <h3>🎓 Pelajar</h3>
+
+            <p>
+                Kehidupan sebagai pelajar boleh menjadi sibuk dan
+                mencabar. Ketahui bagaimana beberapa minit
+                kesedaran minda dan pernafasan lembut dapat
+                membantu pelajar memupuk ketenangan, kesabaran
+                dan kesedaran yang lebih mendalam ketika
+                menghadapi tekanan harian.
+            </p>
+
+            <a href="/ms/blog/meditation-for-students.html">
+                Meditasi untuk Pelajar →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💚 Ibu dan Bapa</h3>
+
+            <p>
+                Temui detik-detik kecil untuk berehat di tengah-tengah
+                penjagaan keluarga, tugas rumah dan kehidupan
+                berkeluarga. Terokai cara membawa kesabaran dan
+                kesedaran minda ke dalam keibubapaan.
+            </p>
+
+            <a href="/ms/blog/meditation-for-parents.html">
+                Meditasi untuk Ibu Bapa →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💼 Orang Dewasa yang Bekerja</h3>
+
+            <p>
+                Sediakan ruang untuk meditasi sambil mengimbangi
+                pekerjaan, rehat dan tanggungjawab lain. Mulakan
+                dengan detik-detik kesedaran yang mudah
+                dilaksanakan sepanjang hari.
+            </p>
+
+            <a href="/ms/blog/meditation-for-working-adults.html">
+                Meditasi untuk Orang Dewasa yang Bekerja →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💑 Pasangan Suami Isteri</h3>
+
+            <p>
+                Renungkan kesabaran, kebaikan, komunikasi yang
+                jujur dan sikap mendengar. Terokai bagaimana
+                kesedaran minda individu dapat menyokong
+                interaksi yang lebih bijaksana bersama pasangan.
+            </p>
+
+            <a href="/ms/blog/meditation-for-married-couples.html">
+                Meditasi untuk Pasangan Suami Isteri →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌿 Orang Dewasa Bujang</h3>
+
+            <p>
+                Terokai rasa puas hati, berdikari, hubungan yang
+                bermakna dan perkembangan dalaman melalui
+                rutin meditasi yang praktikal.
+            </p>
+
+            <a href="/ms/blog/meditation-for-single-adults.html">
+                Meditasi untuk Orang Dewasa Bujang →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌼 Pesara, Datuk Nenek dan Warga Emas</h3>
+
+            <p>
+                Sesuaikan meditasi dengan perubahan rutin,
+                tahap tenaga dan keselesaan fizikal. Ketahui
+                bagaimana refleksi dapat menyokong kehidupan
+                harian yang bermakna pada usia lanjut.
+            </p>
+
+            <a href="/ms/blog/meditation-for-retirees.html">
+                Meditasi untuk Warga Emas →
+            </a>
+        </article>
+
+    </div>
+
+
+<!-- GENTLE LOVING-KINDNESS MEDITATION FOR THOSE FACING ILLNESS -->
+<article class="meditation-item" style="margin-top:22px;">
+    <h3>💚 Meditasi Kasih Sayang yang Lembut untuk Mereka yang Menghadapi Penyakit</h3>
+
+    <p>
+        Apabila tubuh menjadi lemah atau menghadapi penyakit,
+        meditasi kasih sayang yang lembut boleh memberikan
+        peluang untuk memupuk kehangatan, belas kasihan dan
+        kedamaian dalaman tanpa membebankan tubuh. Ketahui
+        cara mudah mengamalkan <em>mettā</em> sambil berehat
+        dengan selesa, dengan menyampaikan harapan baik kepada
+        diri sendiri, orang tersayang dan semua makhluk hidup.
+    </p>
+
+    <a href="/ms/blog/gentle-loving-kindness-meditation-for-illness.html">
+        Meditasi Kasih Sayang yang Lembut untuk Mereka yang Menghadapi Penyakit →
+    </a>
+</article>
+
+
+    <p style="margin-top:22px;">
+        Meditasi boleh dilakukan dalam postur yang selesa. Tidak
+        perlu duduk bersila jika posisi lain yang selamat dan
+        disokong lebih sesuai.
+    </p>
+</section>
+
+<!-- MEDITATION PRACTICES -->
+<section class="card">
+    <h2>📚 Amalan Meditasi dan Refleksi Dhamma</h2>
+
+    <p>
+        Selain panduan untuk kehidupan seharian, kami turut
+        meneroka ajaran Buddhisme dan subjek meditasi terpilih
+        dengan teliti serta menghormati konteks tradisinya.
+    </p>
+
+    <ul>
+        <li>
+            <a href="/ms/blog/metta-loving-kindness-meditation.html">
+                Meditasi Kasih Sayang (<em>mettā</em>): Memupuk Hati yang Baik →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/samatha-and-vipassana.html">
+                <em>Samatha</em> dan <em>Vipassanā</em>: Konsentrasi dan Pandangan Terang →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/four-elements-meditation.html">
+                Meditasi Empat Unsur: Pengenalan kepada Sifat-sifat Materi →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/learning-meditation-with-a-teacher.html">
+                Belajar Meditasi Bersama Guru yang Berkelayakan →
+            </a>
+        </li>
+        <li>
+            <a href="/ms/blog/working-with-meditation-difficulties.html">
+                Menghadapi Kegelisahan, Mengantuk dan Rasa Putus Asa dalam Meditasi →
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- CORPORATE MINDFULNESS -->
+<section class="mindfulness-topic">
+    <h2>🌿 Latihan Kesedaran Minda Korporat</h2>
+
+    <p>
+        Ketahui bagaimana kesedaran minda dan meditasi dapat
+        menyokong kesedaran yang lebih tinggi, keseimbangan
+        emosi, tumpuan dan kesejahteraan di tempat kerja.
+        Kami mengalu-alukan pertanyaan daripada organisasi
+        yang berminat dengan sesi kesedaran minda secara
+        dalam talian, dengan pendekatan yang boleh disesuaikan
+        mengikut keperluan tempat kerja.
+    </p>
+
+    <p>
+        <a href="/ms/blog/corporate-mindfulness-training.html">
+            Ketahui tentang Latihan Kesedaran Minda Korporat →
+        </a>
+    </p>
+</section>
+
+<!-- KINDNESS AND COMPASSION -->
+<section class="card">
+    <h2>💛 Kebaikan dan Belas Kasihan</h2>
+
+    <p>
+        Kesedaran minda dapat membantu kita menyedari bagaimana
+        kata-kata dan tindakan kita mempengaruhi orang lain.
+        Kesedaran menjadi lebih bermakna apabila ia menyokong
+        kebaikan dan belas kasihan.
+    </p>
+
+    <p>Antara ungkapan kebaikan yang sederhana ialah:</p>
+
+    <ul>
+        <li>Bercakap dengan jujur tanpa kekasaran yang tidak perlu.</li>
+        <li>Mendengar apabila seseorang memerlukan perhatian.</li>
+        <li>Membantu apabila bantuan benar-benar diperlukan.</li>
+        <li>Mempraktikkan kesabaran apabila menghadapi situasi sukar.</li>
+        <li>Memberi tanpa sentiasa mengharapkan sesuatu sebagai balasan.</li>
+    </ul>
+
+    <p>
+        Belas kasihan tidak bermaksud bersetuju dengan segala-galanya.
+        Ia boleh bermaksud bertindak balas dengan pemahaman sambil
+        tetap mengekalkan batasan yang sewajarnya.
+    </p>
+</section>
+
+<!-- THOUGHTS AND EMOTIONS -->
+<section class="card">
+    <h2>🌊 Memerhatikan Fikiran dan Emosi</h2>
+
+    <p>
+        Fikiran dan emosi kita boleh terasa sangat kuat,
+        terutamanya apabila kita bertindak balas terhadapnya
+        dengan serta-merta. Kesedaran minda memberi kita
+        peluang untuk menyedarinya sebelum membuat keputusan
+        tentang tindakan seterusnya.
+    </p>
+
+    <p>
+        Sebagai contoh, apabila kemarahan muncul, kita boleh
+        terlebih dahulu menyedari:
+        <strong>“Kemarahan sedang hadir.”</strong>
+        Daripada terus bertindak mengikut kemarahan itu,
+        kita boleh memerhatikan perasaan tersebut, bernafas
+        dan memberikan masa kepada diri sendiri untuk memilih
+        tindak balas.
+    </p>
+
+    <p>
+        Pendekatan yang sama boleh digunakan terhadap
+        kebimbangan, keterujaan, kesedihan, cemburu,
+        ketakutan dan pengalaman lain yang sentiasa berubah.
+    </p>
+
+    <p>
+        Matlamatnya bukan untuk menekan emosi. Matlamatnya
+        ialah memahami emosi dengan lebih jelas dan
+        mengelakkan diri daripada dikawal oleh setiap
+        tindak balas yang berlalu.
+    </p>
+</section>
+
+<!-- NEW: GRATITUDE AND APPRECIATION -->
+<section class="card gratitude-card">
+    <h2>💚 Apabila Kehidupan Tidak Berjalan Seperti yang Kita Harapkan</h2>
+
+    <p class="card-subtitle">
+        Amalan Kesyukuran dan Penghargaan
+    </p>
+
+    <p>
+        Kehidupan tidak selalu berjalan mengikut kehendak kita.
+        Kita mungkin berasa terluka, kecewa atau frustrasi
+        apabila sesuatu tidak berjalan dengan baik. Namun,
+        jika kita berhenti seketika dan melihat keadaan
+        daripada perspektif yang lebih luas, kita mungkin
+        menyedari bahawa masih terdapat banyak perkara
+        yang wajar dihargai.
+    </p>
+
+    <p>
+        Kesedaran minda mengingatkan kita bahawa kita boleh
+        mengakui kesukaran tanpa membiarkannya menenggelamkan
+        segala kebaikan yang masih ada dalam kehidupan.
+        Dengan merenungkan ketidakkekalan, menerima perkara
+        yang tidak selalu dapat kita kawal dan menghargai
+        kebaikan orang lain, kita boleh secara beransur-ansur
+        belajar menghadapi cabaran kehidupan dengan lebih
+        bijaksana, bersyukur dan berbelas kasihan.
+    </p>
+
+    <p>
+        Kesyukuran tidak bermaksud menafikan kesakitan kita.
+        Ia bermaksud mengingati bahawa walaupun dalam masa
+        yang sukar, kehidupan kita mungkin masih mengandungi
+        detik-detik bermakna, peluang untuk belajar dan
+        sebab untuk berterima kasih.
+    </p>
+
+    <p>
+        <a href="/ms/blog/when-life-does-not-go-our-way-gratitude-and-appreciation.html">
+            Baca artikel penuh: Apabila Kehidupan Tidak Berjalan Seperti yang Kita Harapkan →
+        </a>
+    </p>
+</section>
+
+<!-- FROM AWARENESS TO WISDOM -->
+<section class="card">
+    <h2>📖 Daripada Kesedaran kepada Kebijaksanaan</h2>
+
+    <p>
+        Kesedaran minda dan kebijaksanaan saling menyokong.
+        Apabila kita memerhatikan pengalaman dengan teliti,
+        kita boleh mula mengenali bahawa fikiran, perasaan,
+        keadaan dan hubungan sentiasa berubah.
+    </p>
+
+    <p>
+        Pemerhatian ini dapat menggalakkan kita mempersoalkan
+        andaian automatik dan memahami akibat daripada
+        pilihan yang kita buat.
+    </p>
+
+    <p>
+        Belajar daripada ajaran yang boleh dipercayai,
+        merenungkan pengalaman dan menerapkan apa yang
+        dipelajari dalam kehidupan seharian dapat
+        memperdalam pemahaman secara beransur-ansur.
+    </p>
+
+    <p>
+        Pengetahuan yang baik seharusnya menggalakkan
+        kejelasan, tingkah laku beretika, belas kasihan
+        dan kesediaan untuk meneliti andaian kita sendiri.
+    </p>
+</section>
+
+<!-- IMPERMANENCE -->
+<section class="card">
+    <h2>🍃 Belajar daripada Perubahan</h2>
+
+    <p>
+        Salah satu tema penting dalam ajaran Buddhisme
+        ialah ketidakkekalan: pengalaman dan keadaan
+        sentiasa berubah.
+    </p>
+
+    <p>
+        Kita boleh memerhatikannya secara langsung dalam
+        kehidupan seharian. Pagi menjadi petang, tumbuhan
+        muda membesar, cuaca berubah, hubungan berkembang,
+        dan fikiran serta perasaan kita muncul lalu berlalu.
+    </p>
+
+    <p>
+        Menyedari perubahan tidak bermaksud menjauhkan diri
+        daripada kehidupan. Sebaliknya, ia dapat membantu
+        kita menghargai pengalaman tanpa menganggap bahawa
+        semuanya akan kekal seperti sedia ada.
+    </p>
+</section>
+
+<!-- MINDFUL CHOICES -->
+<section class="card">
+    <h2>⚖️ Kesedaran Minda dalam Pilihan Kita</h2>
+
+    <p>
+        Kesedaran juga boleh mempengaruhi cara kita hidup
+        dalam dunia yang lebih luas. Sebelum membuat pilihan,
+        kita boleh berhenti seketika dan mempertimbangkan
+        kesannya terhadap diri sendiri, orang lain,
+        haiwan dan alam semula jadi.
+    </p>
+
+    <ul>
+        <li>Adakah saya benar-benar memerlukan perkara ini?</li>
+        <li>Bolehkah saya memilih sesuatu yang lebih sederhana?</li>
+        <li>Adakah tindakan ini akan menghasilkan sisa yang tidak perlu?</li>
+        <li>Bagaimanakah kata-kata saya mungkin mempengaruhi orang lain?</li>
+        <li>Adakah saya bertindak dengan kesedaran atau sekadar mengikut tabiat?</li>
+    </ul>
+
+    <p>
+        Soalan-soalan ini menghubungkan kesedaran dalaman
+        dengan kehidupan yang berkesedaran dan bertanggungjawab.
+    </p>
+
+    <p>
+        <a href="/ms/mindful-ethical-living.html">
+            Terokai Kehidupan Berkesedaran dan Beretika →
+        </a>
+    </p>
+</section>
+
+<!-- HIRI AND OTTAPPA -->
+<section class="card">
+    <h2>🪷 Hiri dan Ottappa: Biarkan Hati Nurani dan Kebijaksanaan Membimbing Pilihan Kita</h2>
+
+    <p>
+        Kesedaran minda bukan hanya tentang memerhatikan
+        fikiran dan emosi. Ia juga dapat membantu kita
+        menyedari niat di sebalik keputusan serta kesan
+        tindakan kita terhadap orang lain.
+    </p>
+
+    <p>
+        Dalam ajaran Buddhisme Theravada, <em>Hiri</em> dan
+        <em>Ottappa</em> ialah dua sifat penting yang membantu
+        melindungi tingkah laku beretika. Hiri merujuk kepada
+        hati nurani moral atau rasa malu terhadap perbuatan
+        salah, manakala Ottappa merujuk kepada kebimbangan
+        moral terhadap akibat buruk daripada tindakan
+        yang tidak baik.
+    </p>
+
+    <p>
+        Bersama-sama, sifat-sifat ini menggalakkan kita
+        berhenti seketika sebelum bertindak, meneliti niat
+        dan mempertimbangkan sama ada pilihan kita jujur,
+        adil, baik dan bermanfaat.
+    </p>
+
+    <p>
+        Daripada mengukur setiap keputusan hanya berdasarkan
+        keuntungan peribadi, kita boleh bertanya kepada diri
+        sendiri sama ada tindakan kita mungkin menyakiti
+        seseorang, sama ada kita melayan orang lain dengan
+        adil, dan sama ada terdapat cara yang lebih baik
+        atau lebih bijaksana untuk bertindak.
+    </p>
+
+    <p>
+        Refleksi ini mengingatkan kita bahawa kehidupan
+        beretika bukan sekadar mengelakkan perbuatan salah.
+        Ia juga tentang mengembangkan tanggungjawab,
+        kemurahan hati, integriti dan keprihatinan
+        terhadap orang lain.
+    </p>
+
+    <p>
+        <a href="/ms/blog/wisdom-of-right-action-hiri-ottappa.html">
+            Baca refleksi penuh: Sebelum Bertindak: Biarkan Hati Nurani,
+            Kebaikan dan Kebijaksanaan Membimbing Anda →
+        </a>
+    </p>
+</section>
+
+
+<!-- THINK BEFORE YOU BELIEVE -->
+<section class="card">
+    <h2>💡 Fikir Sebelum Percaya: Kepentingan Mengesahkan Maklumat</h2>
+
+    <p>
+        Setiap hari, kita menerima maklumat daripada
+        perbualan, media sosial, laporan berita dan
+        orang di sekeliling kita. Namun, adakah kita
+        patut mempercayai segala-galanya hanya kerana
+        kita mendengarnya, melihatnya berulang kali
+        atau menerimanya daripada seseorang yang kita
+        percayai?
+    </p>
+
+    <p>
+        Lebih daripada 2,500 tahun yang lalu, Buddha
+        memberikan panduan tentang cabaran manusia
+        ini dalam satu wacana yang dikenali sebagai
+        <em>Kalama Sutta</em>. Wacana ini menggalakkan
+        kita agar tidak menerima sesuatu dakwaan secara
+        membuta tuli berdasarkan khabar angin, tradisi,
+        reputasi atau autoriti, tetapi menelitinya
+        dengan berhati-hati dan mempertimbangkan
+        sama ada ia membawa kepada kemudaratan
+        atau kesejahteraan.
+    </p>
+
+    <p>
+        Dalam dunia hari ini, kesedaran minda dapat
+        membantu kita berhenti seketika sebelum
+        mempercayai atau berkongsi maklumat.
+        Kita boleh menyemak sumber, mempertimbangkan
+        bukti, mengenali andaian sendiri dan
+        merenung sebelum membuat kesimpulan.
+    </p>
+
+    <p>
+        Berfikiran terbuka tidak bermaksud
+        mempercayai segala-galanya. Ia bermaksud
+        bersedia untuk menyiasat, belajar dan
+        mengubah pemahaman apabila maklumat
+        yang lebih baik tersedia.
+    </p>
+
+    <p>
+        <a href="/ms/blog/think-before-you-believe.html">
+            Baca refleksi penuh: Fikir Sebelum Percaya —
+            Kepentingan Mengesahkan Maklumat →
+        </a>
+    </p>
+</section>
+
+<!-- QUIET REFLECTION -->
+<section class="card">
+    <h2>🌿 Refleksi yang Tenang</h2>
+
+    <p>
+        Kadangkala, kesedaran minda bermula dengan sesuatu
+        yang sangat biasa: berhenti seketika dan menyedari
+        apa yang sudah ada di sini.
+    </p>
+
+    <p>
+        Bunyi hujan, pergerakan daun, hidangan yang
+        dikongsi bersama orang lain atau sekadar
+        sensasi pernafasan boleh menjadi peluang
+        untuk kembali kepada saat kini.
+    </p>
+
+    <p>
+        Kita tidak perlu menjadikan setiap saat
+        sesuatu yang istimewa. Kita hanya perlu
+        belajar untuk menyedarinya.
+    </p>
+
+    <p>
+        Salah satu aspek kesedaran minda yang mudah
+        diamalkan ialah peringatan ringkas ini:
+        <strong>perhatikan dengan teliti, sedari dengan jelas dan bertindak dengan penuh keprihatinan.</strong>
+    </p>
+</section>
+
+<!-- DHAMMAGOONYE RETREAT -->
+<section class="card retreat-card">
+    <h2>🪷 Retret yang Tenang: Mencari Masa untuk Melihat ke Dalam Diri</h2>
+
+    <p>
+        Kadangkala, meluangkan masa dalam persekitaran
+        semula jadi yang damai memberikan kita peluang
+        untuk memperlahankan langkah, menghargai keindahan
+        di sekeliling dan mengalihkan perhatian kepada
+        minda sendiri.
+    </p>
+
+    <p>
+        Melalui refleksi peribadi dan gambar bunga serta
+        pokok yang diambil semasa retret meditasi di
+        Dhammagoonye, kita meneroka bagaimana persekitaran
+        yang tenang dapat menyokong minat kita terhadap
+        meditasi, kesedaran minda dan pemahaman dalaman.
+    </p>
+
+    <p>
+        Perjalanan setiap orang adalah berbeza, namun
+        kita semua boleh bermula dengan satu detik
+        kesedaran, satu nafas yang lembut dan kesediaan
+        untuk memerhatikan kehidupan dengan lebih jelas.
+    </p>
+
+    <p>
+        <a href="/ms/blog/dhammagoonye-meditation-retreat.html">
+            🪷 Baca Refleksi Retret Peribadi →
+        </a>
+    </p>
+</section>
+
+<!-- REFLECTION QUESTIONS -->
+<section class="card">
+    <h2>🪷 Soalan untuk Refleksi</h2>
+
+    <p>Sesekali, anda boleh duduk dengan tenang dan merenungkan salah satu soalan ini:</p>
+
+    <ul>
+        <li>Apakah yang sedang saya alami sekarang?</li>
+        <li>Apakah fikiran yang mempengaruhi tindakan saya?</li>
+        <li>Adakah saya sedang bertindak secara spontan atau memberikan tindak balas yang bijaksana?</li>
+        <li>Apakah perubahan yang saya perhatikan dalam diri saya baru-baru ini?</li>
+        <li>Di manakah saya boleh mempraktikkan lebih banyak kesabaran?</li>
+        <li>Bagaimanakah saya boleh membawa lebih banyak kebaikan ke dalam hari yang biasa?</li>
+    </ul>
+
+    <p>
+        Tidak perlu mencari jawapan dengan segera.
+        Kadangkala, nilainya terletak pada usaha
+        memerhatikan soalan itu dengan jujur.
+    </p>
+</section>
+
+<!-- CLOSING -->
+<section class="card">
+    <h2>💚 Mulakan dengan Satu Detik</h2>
+
+    <p>
+        Kesedaran minda tidak perlu bermula dengan
+        rutin yang rumit. Ia boleh bermula dengan
+        satu nafas, satu pemerhatian yang teliti,
+        satu kata-kata baik atau satu jeda sebelum
+        bertindak balas.
+    </p>
+
+    <p>
+        Dengan latihan yang berterusan, detik-detik
+        kecil ini boleh menjadi peluang untuk
+        memahami diri dengan lebih jelas dan hidup
+        dengan kesedaran, belas kasihan serta
+        kebijaksanaan yang lebih mendalam.
+    </p>
+
+    <p>
+        <a href="/ms/mindful-ethical-living.html">
+            Teruskan meneroka kehidupan berkesedaran dan beretika →
+        </a>
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="/ms/">Laman Utama</a>
+        <a href="/ms/mindfulness.html">Kesedaran Minda &amp; Dhamma</a>
+        <a href="/ms/mindful-ethical-living.html">Kehidupan Berkesedaran &amp; Beretika</a>
+        <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
+        <a href="/ms/blog.html">Jurnal</a>
+        <a href="/ms/about.html">Tentang Kami</a>
+        <a href="/ms/privacy.html">Dasar Privasi</a>
+        <a href="/ms/terms.html">Terma</a>
+        <a href="/ms/contact.html">Hubungi Kami</a>
+    </div>
+
+    <p>© 2026 Yangocean</p>
+    <p>Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian</p>
+    <p>Memupuk kesedaran, penghargaan dan kebaikan dalam kehidupan seharian.</p>
+</footer>
+
+</div>
+
+<!-- READ-ALOUD SCRIPT -->
 <script>
+(function () {
+    "use strict";
 
-const readAloudButton =
-document.getElementById("readAloudButton");
+    const readButton = document.getElementById("readAloudButton");
+    const stopButton = document.getElementById("stopReadAloudButton");
+    const status = document.getElementById("readAloudStatus");
+    const content = document.getElementById("content-to-read");
 
-let currentSpeech = null;
+    if (!readButton || !stopButton || !status || !content) return;
 
-
-readAloudButton.addEventListener("click", function () {
-
-    if (!("speechSynthesis" in window)) {
-
-        alert("Bacaan suara tidak disokong oleh pelayar ini.");
-
+    if (!("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)) {
+        readButton.disabled = true;
+        status.textContent =
+            "Fungsi Bacakan tidak disokong oleh pelayar ini. Sila cuba versi Safari atau Chrome yang lebih terkini.";
         return;
-
     }
 
+    const synth = window.speechSynthesis;
 
-    if (speechSynthesis.speaking &&
-        !speechSynthesis.paused) {
+    let chunks = [];
+    let chunkIndex = 0;
+    let isReading = false;
+    let isPaused = false;
+    let runId = 0;
 
-        speechSynthesis.pause();
-
-        readAloudButton.textContent = "▶ Sambung";
-
-        return;
-
+    function setButton(label) {
+        readButton.textContent = label;
     }
 
+    function getReadableText() {
+        const elements = content.querySelectorAll("h1, h2, h3, p, li");
 
-    if (speechSynthesis.paused) {
-
-        speechSynthesis.resume();
-
-        readAloudButton.textContent = "⏸ Jeda";
-
-        return;
-
+        return Array.from(elements)
+            .map(function (element) {
+                return (element.innerText || element.textContent || "").trim();
+            })
+            .filter(Boolean)
+            .join(". ")
+            .replace(/\s+/g, " ");
     }
 
+    function makeChunks(text) {
+        const sentences = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+        const result = [];
+        let current = "";
 
-    const elements =
-    document.querySelectorAll(
-        "#content-to-read h1, " +
-        "#content-to-read h2, " +
-        "#content-to-read h3, " +
-        "#content-to-read p, " +
-        "#content-to-read li"
-    );
+        sentences.forEach(function (sentence) {
+            const part = sentence.trim();
+            if (!part) return;
 
+            if ((current + " " + part).trim().length > 180 && current) {
+                result.push(current.trim());
+                current = part;
+            } else {
+                current = (current + " " + part).trim();
+            }
+        });
 
-    let text = "";
+        if (current) result.push(current.trim());
 
-    elements.forEach(function (element) {
+        return result;
+    }
 
-        text += element.innerText + " ";
+    function chooseVoice(utterance) {
+        const voices = synth.getVoices();
 
+        const preferred =
+            voices.find(function (voice) {
+                return /^ms-MY$/i.test(voice.lang) &&
+                    /natural|enhanced/i.test(voice.name);
+            }) ||
+            voices.find(function (voice) {
+                return /^ms-MY$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^ms/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^en-US$/i.test(voice.lang) &&
+                    /natural|enhanced/i.test(voice.name);
+            }) ||
+            voices.find(function (voice) {
+                return /^en-US$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^en-GB$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^en/i.test(voice.lang);
+            });
+
+        if (preferred) {
+            utterance.voice = preferred;
+            utterance.lang = preferred.lang;
+        } else {
+            utterance.lang = "ms-MY";
+        }
+
+        utterance.rate = 0.92;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+    }
+
+    function finishReading(message) {
+        isReading = false;
+        isPaused = false;
+        chunks = [];
+        chunkIndex = 0;
+
+        setButton("🔊 Bacakan");
+        status.textContent = message || "Bacaan halaman telah selesai.";
+    }
+
+    function speakNext(activeRunId) {
+        if (activeRunId !== runId || !isReading || isPaused) return;
+
+        if (chunkIndex >= chunks.length) {
+            finishReading("Bacaan halaman telah selesai.");
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+        chooseVoice(utterance);
+
+        utterance.onend = function () {
+            if (activeRunId !== runId) return;
+
+            chunkIndex += 1;
+            speakNext(activeRunId);
+        };
+
+        utterance.onerror = function (event) {
+            if (activeRunId !== runId) return;
+
+            if (event.error === "canceled" ||
+                event.error === "interrupted") {
+                return;
+            }
+
+            finishReading(
+                "Pelayar anda tidak dapat meneruskan bacaan suara. Cuba fungsi Bacakan sekali lagi atau periksa tetapan pelayar dan suara anda."
+            );
+        };
+
+        synth.speak(utterance);
+    }
+
+    readButton.addEventListener("click", function () {
+        if (isReading && !isPaused) {
+            synth.pause();
+            isPaused = true;
+            setButton("▶ Sambung");
+            status.textContent = "Bacaan dijeda. Tekan Sambung untuk meneruskan.";
+            return;
+        }
+
+        if (isReading && isPaused) {
+            isPaused = false;
+            synth.resume();
+            setButton("⏸ Jeda");
+            status.textContent = "Sedang membaca dengan suara…";
+
+            if (!synth.speaking && chunkIndex < chunks.length) {
+                speakNext(runId);
+            }
+
+            return;
+        }
+
+        synth.cancel();
+        runId += 1;
+
+        const text = getReadableText();
+
+        if (!text) {
+            status.textContent = "Tiada teks halaman yang tersedia untuk dibacakan.";
+            return;
+        }
+
+        chunks = makeChunks(text);
+        chunkIndex = 0;
+        isReading = true;
+        isPaused = false;
+
+        setButton("⏸ Jeda");
+        status.textContent = "Sedang membaca dengan suara…";
+
+        // Mulakan bacaan suara terus daripada sentuhan pengguna untuk keserasian mudah alih.
+        speakNext(runId);
     });
 
+    stopButton.addEventListener("click", function () {
+        runId += 1;
+        synth.cancel();
+        finishReading("Bacaan telah dihentikan.");
+    });
 
-    currentSpeech =
-    new SpeechSynthesisUtterance(text);
+    if ("onvoiceschanged" in synth) {
+        synth.onvoiceschanged = function () {
+            synth.getVoices();
+        };
+    }
 
-    currentSpeech.rate = 0.95;
+    synth.getVoices();
 
-    currentSpeech.pitch = 1;
-
-    currentSpeech.lang = "ms-MY";
-
-
-    currentSpeech.onend = function () {
-
-        readAloudButton.textContent =
-        "🔊 Baca Dengan Suara";
-
-        currentSpeech = null;
-
-    };
-
-
-    currentSpeech.onerror = function () {
-
-        readAloudButton.textContent =
-        "🔊 Baca Dengan Suara";
-
-        currentSpeech = null;
-
-    };
-
-
-    speechSynthesis.speak(currentSpeech);
-
-    readAloudButton.textContent =
-    "⏸ Jeda";
-
-});
-
+    window.addEventListener("pagehide", function () {
+        runId += 1;
+        synth.cancel();
+    });
+})();
 </script>
 
-
 </body>
-
 </html>
-
