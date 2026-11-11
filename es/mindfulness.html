@@ -2,639 +2,1593 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Atención Plena y Dhamma | Conciencia, Sabiduría y Compasión | Yangocean</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="Explora la atención plena y el Dhamma a través de la conciencia, la meditación, la bondad, la compasión y la sabiduría para la vida cotidiana.">
-
+<meta name="description" content="Explora la atención plena y el Dhamma a través de la meditación, la conciencia, la compasión, la sabiduría, la impermanencia, la gratitud y reflexiones prácticas para la vida cotidiana.">
 <meta name="robots" content="index, follow">
 
+<link rel="stylesheet" href="/styles.css">
 <link rel="canonical" href="https://yangocean.com/es/mindfulness.html">
 
+<!-- HREFLANG -->
 <link rel="alternate" hreflang="en" href="https://yangocean.com/mindfulness.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/mindfulness.html">
-<link rel="alternate" hreflang="zh-Hans" href="https://yangocean.com/zh/mindfulness.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/mindfulness.html">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/mindfulness.html">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/mindfulness.html">
 <link rel="alternate" hreflang="my" href="https://yangocean.com/my/mindfulness.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/mindfulness.html">
 
-<meta property="og:title" content="Atención Plena y Dhamma | Yangocean">
-<meta property="og:description"
-content="Reflexiones sobre la atención plena, el Dhamma, la sabiduría y la compasión en la vida cotidiana.">
+<!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
+<meta property="og:title" content="Atención Plena y Dhamma | Conciencia, Sabiduría y Compasión">
+<meta property="og:description" content="Explora la atención plena, la meditación, la compasión, la sabiduría, la gratitud y reflexiones para la vida cotidiana.">
 <meta property="og:url" content="https://yangocean.com/es/mindfulness.html">
 <meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Atención Plena y Dhamma | Yangocean">
-<meta name="twitter:description"
-content="Descubre cómo cultivar la conciencia, la sabiduría y la compasión en la vida cotidiana.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
-
+<!-- ADSENSE -->
 <meta name="google-adsense-account" content="ca-pub-6929570744326515">
-
-<link rel="stylesheet" href="/styles.css">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515" crossorigin="anonymous"></script>
 
 <style>
-.read-aloud-container {
-    text-align: center;
-    margin: 20px auto 30px;
+:root {
+    --green: #245b45;
+    --deep-green: #174532;
+    --soft-green: #edf4eb;
+    --cream: #fffdf6;
+    --warm-cream: #f8f3e6;
+    --text: #34453b;
+    --muted: #66756b;
+    --border: #dce7da;
+    --gold: #d5a84f;
 }
 
-.read-aloud-button {
-    display: inline-block;
-    padding: 10px 18px;
-    border: none;
-    border-radius: 8px;
-    background: #47775b;
-    color: #ffffff;
-    font-size: 1rem;
-    cursor: pointer;
+* {
+    box-sizing: border-box;
 }
 
-.read-aloud-button:hover {
-    background: #365d46;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
 }
 
-.read-aloud-note {
-    margin-top: 8px;
-    font-size: 0.9rem;
-    color: #666;
-}
-
-.content-section {
-    margin-bottom: 28px;
-}
-
-.content-section h2 {
-    margin-bottom: 12px;
-}
-
-.content-section p,
-.content-section li {
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     line-height: 1.8;
 }
 
-.reflection-list {
-    padding-left: 24px;
+a {
+    color: var(--green);
+    text-underline-offset: 4px;
 }
 
-@media (max-width: 768px) {
-    .content-section {
-        margin-bottom: 22px;
+a:hover {
+    color: var(--deep-green);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-top: 18px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.04);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-name {
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-tagline {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+}
+
+.language-selector a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-selector a[lang="es"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.main-nav > a,
+.dropdown > a {
+    color: var(--green);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-nav > a:hover,
+.dropdown > a:hover {
+    color: var(--deep-green);
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(23, 69, 50, 0.12);
+    z-index: 1000;
+    text-align: left;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--green);
+    font-size: 0.92rem;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background: var(--soft-green);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+/* MAIN CONTENT */
+
+main {
+    padding-top: 18px;
+    padding-bottom: 48px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--soft-green), var(--warm-cream));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(30px, 6vw, 52px) 26px;
+    margin: 24px 0 30px;
+    text-align: center;
+}
+
+.hero-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    color: #53645a;
+    font-size: 1.06rem;
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.hero-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid var(--green);
+    border-radius: 9px;
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-links a:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    text-align: center;
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    margin: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--green);
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.read-aloud button:hover {
+    background: var(--deep-green);
+}
+
+.read-aloud button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#readAloudStatus {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* CONTENT CARDS */
+
+#content-to-read > section.card,
+#content-to-read > section.mindfulness-topic {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.045);
+}
+
+#content-to-read .card h2,
+#content-to-read .mindfulness-topic h2 {
+    margin: 0 0 17px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+    line-height: 1.4;
+}
+
+#content-to-read .card h3,
+#content-to-read .mindfulness-topic h3 {
+    margin-top: 25px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#content-to-read .card p,
+#content-to-read .mindfulness-topic p {
+    margin: 0 0 17px;
+    line-height: 1.85;
+}
+
+#content-to-read .card p:last-child,
+#content-to-read .mindfulness-topic p:last-child {
+    margin-bottom: 0;
+}
+
+#content-to-read .card ul,
+#content-to-read .card ol {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+#content-to-read .card li {
+    margin-bottom: 7px;
+}
+
+#content-to-read .card a,
+#content-to-read .mindfulness-topic a {
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+}
+
+#content-to-read .card a:hover,
+#content-to-read .mindfulness-topic a:hover {
+    color: var(--deep-green);
+}
+
+/* MEDITATION GRID */
+
+.meditation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.meditation-item {
+    min-width: 0;
+    padding: 22px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.meditation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 69, 50, 0.08);
+}
+
+.meditation-item h3 {
+    margin: 0 0 12px !important;
+    color: var(--deep-green);
+    font-size: 1.15rem;
+}
+
+.meditation-item p {
+    margin-bottom: 15px !important;
+}
+
+.meditation-item a {
+    display: inline-block;
+}
+
+/* FEATURED GRATITUDE ARTICLE */
+
+.gratitude-card {
+    background: var(--warm-cream) !important;
+    border-left: 5px solid var(--green) !important;
+}
+
+.gratitude-card .card-subtitle {
+    margin-top: -8px !important;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    font-style: italic;
+}
+
+/* FEATURED RETREAT */
+
+.retreat-card {
+    background: #f7faf4 !important;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 36px;
+    padding: 28px 20px;
+    background: var(--warm-cream);
+    border: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.footer p {
+    margin: 7px 0;
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 12px;
     }
 
-    .read-aloud-button {
-        max-width: 100%;
+    .site-header {
+        margin-top: 10px;
+        padding: 18px 14px;
+    }
+
+    .header-top {
+        align-items: flex-start;
+    }
+
+    .site-name {
+        font-size: 1.65rem;
+    }
+
+    .language-selector {
+        gap: 5px;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 12px;
+        line-height: 1.8;
+    }
+
+    .dropdown-content {
+        left: auto;
+        right: 0;
+        min-width: min(230px, 85vw);
+        max-width: 90vw;
+    }
+
+    .hero {
+        padding: 30px 18px;
+        margin: 20px 0 24px;
+    }
+
+    #content-to-read > section.card,
+    #content-to-read > section.mindfulness-topic {
+        margin: 18px 0;
+        padding: 22px 18px;
+    }
+
+    .meditation-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .meditation-item {
+        padding: 20px;
+    }
+
+    .read-aloud {
+        padding: 15px 10px;
+    }
+
+    .read-aloud button {
+        padding: 11px 14px;
+        margin: 4px 2px;
+    }
+
+    .footer-links {
+        gap: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .read-aloud button,
+    .meditation-item {
+        transition: none;
+    }
+
+    .meditation-item:hover {
+        transform: none;
     }
 }
 </style>
 </head>
 
 <body>
+<div class="container">
 
 <header class="site-header">
-    <div class="header-inner">
+    <div class="header-top">
+        <div>
+            <a class="site-name" href="/es/">Yangocean</a>
+            <span class="site-tagline">Vida consciente • Conexión con la naturaleza • Sostenibilidad</span>
+        </div>
 
-        <a href="/es/index.html" class="brand">
-            <span class="brand-name">Yangocean</span>
-            <span class="brand-tagline">Vivir con conciencia y armonía</span>
-        </a>
-
-        <nav aria-label="Navegación principal">
-            <a href="/es/index.html">Inicio</a>
-
-            <div class="dropdown">
-                <button type="button" class="dropbtn">
-                    Atención plena
-                </button>
-                <div class="dropdown-content">
-                    <a href="/es/mindfulness.html">Atención plena y Dhamma</a>
-                    <a href="/es/mindful-living.html">Vida consciente</a>
-                    <a href="/es/mindful-eating.html">Alimentación consciente</a>
-                </div>
-            </div>
-
-            <a href="/es/nature-connection.html">Naturaleza</a>
-            <a href="/es/sustainable-living.html">Vida sostenible</a>
-            <a href="/es/blog.html">Diario</a>
-            <a href="/es/apps.html">Aplicaciones</a>
-        </nav>
-
+        <div class="language-selector" aria-label="Elegir idioma">
+            <a href="/mindfulness.html" lang="en">EN</a> |
+            <a href="/ms/mindfulness.html" lang="ms">BM</a> |
+            <a href="/zh/mindfulness.html" lang="zh">中文</a> |
+            <a href="/fr/mindfulness.html" lang="fr">FR</a> |
+            <a href="/es/mindfulness.html" lang="es" aria-current="page">ES</a> |
+            <a href="/my/mindfulness.html" lang="my">မြန်မာ</a>
+        </div>
     </div>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+
+        <span class="dropdown">
+            <a href="/es/mindfulness.html" aria-haspopup="true">🌿 Vida consciente ▾</a>
+            <span class="dropdown-content">
+                <a href="/es/mindfulness.html">🧘 Atención Plena y Dhamma</a>
+                <a href="/es/mindful-ethical-living.html">💚 Vida consciente y ética</a>
+                <a href="/es/mindful-eating.html">🥗 Alimentación consciente</a>
+                <a href="/es/mindful-food.html">🍲 Alimentación consciente y vídeos de comida</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/es/nature-connection.html" aria-haspopup="true">🌳 Conexión con la naturaleza ▾</a>
+            <span class="dropdown-content">
+                <a href="/es/nature-connection.html">🌳 Conexión con la naturaleza</a>
+                <a href="/es/eco.html">🌍 Conciencia medioambiental</a>
+                <a href="/es/blog.html">📝 Diario</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/es/apps.html" aria-haspopup="true">📱 Aplicaciones relacionadas ▾</a>
+            <span class="dropdown-content">
+                <a href="/es/apps.html">📱 Todas las aplicaciones relacionadas</a>
+                <a href="/es/apps.html#eft">🌿 Aplicación Yangocean</a>
+                <a href="/es/apps.html#healthy-body">🥗 QuQu Healthy Body</a>
+                <a href="/es/apps.html#duidui-fit">🏃 DuiDui Fit</a>
+            </span>
+        </span>
+    </nav>
 </header>
 
 <main id="content-to-read">
 
-    <section class="hero">
-        <h1>Atención plena y Dhamma</h1>
+<!-- HERO -->
+<section class="hero">
+    <span class="hero-icon" aria-hidden="true">🧘</span>
+    <h1>Atención Plena y Dhamma</h1>
+
+    <p>
+        Cultivar la conciencia, la sabiduría, la compasión y una forma
+        de vivir más tranquila.
+    </p>
+
+    <p>
+        Explora la meditación, las reflexiones budistas y las formas prácticas
+        de incorporar la atención plena a la vida cotidiana.
+    </p>
+
+    <div class="hero-links">
+        <a href="#meditation-collection">Explorar la meditación</a>
+        <a href="#daily-mindfulness">Atención plena en la vida diaria</a>
+    </div>
+</section>
+
+<!-- READ ALOUD -->
+<div class="read-aloud" aria-label="Escuchar esta página en voz alta">
+    <button type="button" id="readAloudButton" aria-label="Leer esta página en voz alta">
+        🔊 Escuchar
+    </button>
+
+    <button type="button" id="stopReadAloudButton"
+            aria-label="Detener la lectura en voz alta"
+            style="background:#64756b;">
+        ■ Detener
+    </button>
+
+    <p id="readAloudStatus" role="status" aria-live="polite">
+        Pulsa «Escuchar» para oír el contenido. Si no hay sonido, comprueba
+        el volumen multimedia de tu dispositivo y la configuración del navegador.
+    </p>
+</div>
+
+<!-- INTRODUCTION -->
+<section class="card">
+    <h2>🌿 ¿Qué es la atención plena?</h2>
+
+    <p>
+        La atención plena es la práctica de prestar atención al momento
+        presente con conciencia, sin reaccionar inmediatamente a
+        todo lo que experimentamos.
+    </p>
+
+    <p>
+        Podemos tomar conciencia de nuestra respiración, pensamientos,
+        emociones, sensaciones y acciones a medida que ocurren. Esta sencilla
+        atención puede ayudarnos a reconocer nuestros hábitos y responder
+        a las situaciones cotidianas de una manera más reflexiva.
+    </p>
+
+    <p>
+        La atención plena no exige que cada momento sea tranquilo o agradable.
+        Comienza aprendiendo a observar lo que realmente está sucediendo,
+        momento a momento.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🪷 Atención plena y Dhamma</h2>
+
+    <p>
+        En la tradición budista, la atención plena está estrechamente relacionada
+        con el desarrollo de la sabiduría y la conducta ética. No es simplemente
+        una técnica de relajación, sino una parte de un camino más amplio
+        para comprender la mente y la vida.
+    </p>
+
+    <p>
+        Las enseñanzas del Dhamma nos animan a observar el cambio, comprender
+        las causas y condiciones, reconocer el apego y desarrollar
+        la compasión y la sabiduría.
+    </p>
+
+    <p>
+        Las distintas tradiciones budistas explican y practican estas enseñanzas
+        de diferentes maneras. Esta página se centra en reflexiones sencillas
+        inspiradas en las perspectivas del budismo Theravada.
+    </p>
+</section>
+
+<!-- DAILY MINDFULNESS -->
+<section class="card" id="daily-mindfulness">
+    <h2>🌱 Incorporar la conciencia a la vida cotidiana</h2>
+
+    <p>
+        Podemos practicar la atención plena durante nuestras actividades
+        habituales. No necesitamos esperar a estar sentados en silencio
+        para meditar.
+    </p>
+
+    <ul>
+        <li>Observa tu respiración mientras caminas.</li>
+        <li>Presta atención a los alimentos que estás comiendo.</li>
+        <li>Escucha plenamente cuando otra persona esté hablando.</li>
+        <li>Reconoce la tensión en tu cuerpo antes de reaccionar.</li>
+        <li>Haz una pausa antes de enviar un mensaje escrito con enfado.</li>
+        <li>Observa tus pensamientos sin creerlos ni seguirlos inmediatamente.</li>
+    </ul>
+
+    <p>
+        Estos pequeños momentos de conciencia pueden convertirse en parte
+        de nuestra vida cotidiana.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🧘 Una práctica sencilla de meditación</h2>
+
+    <p>
+        La meditación nos ofrece una oportunidad tranquila para entrenar
+        la atención y observar la mente. Los principiantes no necesitan
+        obligar a la mente a quedarse completamente vacía.
+    </p>
+
+    <p>
+        Un método sencillo consiste en utilizar la respiración natural
+        como objeto de atención. Siéntate cómodamente, permite que el cuerpo
+        se relaje y observa las sensaciones de la respiración.
+    </p>
+
+    <p>
+        Cuando la mente se distraiga, reconoce suavemente que se ha distraído
+        y vuelve a dirigir la atención a la respiración. Esto puede ocurrir
+        muchas veces. El acto de volver a prestar atención también forma
+        parte de la práctica.
+    </p>
+
+    <h3>Una rutina sencilla</h3>
+
+    <ul>
+        <li><strong>Por la mañana:</strong> Dedica de 5 a 15 minutos a observar tranquilamente la respiración.</li>
+        <li><strong>Durante el día:</strong> Respira conscientemente unas cuantas veces antes de realizar acciones importantes.</li>
+        <li><strong>Por la noche:</strong> Reflexiona brevemente sobre tus pensamientos, palabras y acciones del día.</li>
+    </ul>
+
+    <p>
+        El propósito no es conseguir una sensación determinada. Es desarrollar
+        la conciencia y aprender a observar la experiencia con mayor claridad.
+    </p>
+</section>
+
+<!-- MEDITATION COLLECTION -->
+<section class="card" id="meditation-collection">
+    <h2>🪷 Comprender la meditación</h2>
+
+    <p>
+        La meditación puede abordarse de distintas maneras. En la tradición
+        Pa-Auk, el entrenamiento se fundamenta en la virtud (<em>sīla</em>),
+        la concentración (<em>samādhi</em>) y la sabiduría (<em>paññā</em>).
+        La atención plena a la respiración es uno de los objetos habituales
+        de meditación, mientras que otras prácticas pueden enseñarse según
+        las necesidades y la etapa de práctica de cada meditador.
+    </p>
+
+    <p>
+        Los artículos de esta colección presentan estas ideas con un lenguaje
+        accesible. Son reflexiones educativas, no un sustituto de la instrucción
+        personal de un profesor de meditación cualificado, especialmente
+        para las prácticas formales de concentración y visión profunda.
+    </p>
+
+    <ul>
+        <li>
+            <a href="/es/blog/pa-auk-meditation-tradition.html">
+                La meditación en la tradición Pa-Auk: de la virtud a la concentración y la sabiduría →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/mindfulness-of-breathing.html">
+                Atención plena a la respiración: cómo comenzar una práctica de meditación →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/building-a-meditation-habit.html">
+                Crear un hábito regular de meditación: paciencia, esfuerzo y equilibrio →
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- MEDITATION FOR EVERY STAGE OF LIFE -->
+<section class="card">
+    <h2>🌱 Meditación para cada etapa de la vida</h2>
+
+    <p>
+        Nuestras responsabilidades, horarios y capacidades físicas cambian
+        a lo largo de la vida. Estos artículos exploran formas de reservar
+        tiempo para la reflexión y la meditación, respetando las circunstancias
+        de cada persona. Las sugerencias son puntos de partida adaptables,
+        no promesas de resultados concretos.
+    </p>
+
+    <div class="meditation-card">
+        <a href="/es/blog/meditation-for-children.html">
+            <h3>Meditación para niños</h3>
+
+            <p>
+                Acerca a los niños a la alegría de la atención plena mediante
+                una respiración suave, actividades divertidas y meditación
+                de amor benevolente. Descubre formas sencillas de ayudarles
+                a desarrollar tranquilidad, concentración, gratitud y
+                compasión en la vida cotidiana.
+            </p>
+
+            <span class="read-more">Leer más →</span>
+        </a>
+    </div>
+
+    <div class="meditation-grid">
+
+        <article class="meditation-item">
+            <h3>🎓 Estudiantes</h3>
+
+            <p>
+                La vida estudiantil puede ser ajetreada y exigente. Descubre cómo
+                unos minutos de atención plena y respiración suave pueden ayudar
+                a los estudiantes a cultivar la tranquilidad, la paciencia
+                y una mayor conciencia al afrontar las presiones cotidianas.
+            </p>
+
+            <a href="/es/blog/meditation-for-students.html">
+                Meditación para estudiantes →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💚 Madres y padres</h3>
+
+            <p>
+                Encuentra pequeños momentos de tranquilidad entre el cuidado
+                de la familia, las tareas del hogar y las responsabilidades
+                familiares. Explora formas de incorporar paciencia y conciencia
+                a la crianza de los hijos.
+            </p>
+
+            <a href="/es/blog/meditation-for-parents.html">
+                Meditación para madres y padres →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💼 Adultos que trabajan</h3>
+
+            <p>
+                Reserva tiempo para meditar mientras equilibras el trabajo,
+                el descanso y otras responsabilidades. Comienza con momentos
+                manejables de conciencia a lo largo del día.
+            </p>
+
+            <a href="/es/blog/meditation-for-working-adults.html">
+                Meditación para adultos que trabajan →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💑 Parejas casadas</h3>
+
+            <p>
+                Reflexiona sobre la paciencia, la amabilidad, la comunicación
+                sincera y la escucha. Descubre cómo la atención plena individual
+                puede favorecer una relación más consciente con la pareja.
+            </p>
+
+            <a href="/es/blog/meditation-for-married-couples.html">
+                Meditación para parejas casadas →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌿 Adultos solteros</h3>
+
+            <p>
+                Explora el contentamiento, la independencia, las relaciones
+                significativas y el desarrollo interior mediante una rutina
+                práctica de meditación.
+            </p>
+
+            <a href="/es/blog/meditation-for-single-adults.html">
+                Meditación para adultos solteros →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌼 Jubilados, abuelos y personas mayores</h3>
+
+            <p>
+                Adapta la meditación a los cambios en las rutinas, los niveles
+                de energía y la comodidad física. Descubre cómo la reflexión
+                puede contribuir a una vida cotidiana significativa durante
+                la vejez.
+            </p>
+
+            <a href="/es/blog/meditation-for-retirees.html">
+                Meditación para personas mayores →
+            </a>
+        </article>
+
+    </div>
+
+    <!-- GENTLE LOVING-KINDNESS MEDITATION FOR THOSE FACING ILLNESS -->
+    <article class="meditation-item" style="margin-top:22px;">
+        <h3>💚 Meditación suave de amor benevolente para quienes afrontan una enfermedad</h3>
+
         <p>
-            Cultivar la conciencia, la sabiduría y la compasión
-            mediante la observación de nuestra propia vida.
+            Cuando el cuerpo se debilita o afronta una enfermedad, la práctica
+            suave del amor benevolente puede ofrecer una oportunidad para
+            cultivar calidez, compasión y paz interior sin imponer exigencias
+            adicionales al cuerpo. Descubre formas sencillas de practicar
+            <em>mettā</em> mientras descansas cómodamente, ofreciendo buenos
+            deseos para ti mismo, tus seres queridos y todos los seres vivos.
         </p>
-    </section>
 
-    <div class="read-aloud-container">
-        <button
-            type="button"
-            id="readAloudButton"
-            class="read-aloud-button"
-            onclick="toggleReading()"
-            aria-label="Leer o pausar el contenido">
-            🔊 Escuchar esta página
-        </button>
+        <a href="/es/blog/gentle-loving-kindness-meditation-for-illness.html">
+            Meditación suave de amor benevolente para quienes afrontan una enfermedad →
+        </a>
+    </article>
 
-        <p class="read-aloud-note">
-            Escucha el contenido de esta página en español.
-        </p>
-    </div>
+    <p style="margin-top:22px;">
+        La meditación puede practicarse en una postura cómoda. No es necesario
+        sentarse con las piernas cruzadas si otra posición segura y bien
+        apoyada resulta más adecuada.
+    </p>
+</section>
 
-    <div class="container">
+<!-- MEDITATION PRACTICES -->
+<section class="card">
+    <h2>📚 Prácticas de meditación y reflexiones sobre el Dhamma</h2>
 
-        <section class="content-section">
-            <h2>1. ¿Qué es la atención plena?</h2>
+    <p>
+        Además de las orientaciones para la vida cotidiana, exploramos
+        determinadas enseñanzas budistas y temas de meditación con cuidado
+        y respeto por su contexto tradicional.
+    </p>
 
-            <p>
-                La atención plena consiste en prestar atención al momento
-                presente, observando lo que sucede dentro de nosotros y
-                a nuestro alrededor. Podemos observar la respiración,
-                las sensaciones corporales, los pensamientos y las emociones
-                sin reaccionar inmediatamente ante ellos.
-            </p>
+    <ul>
+        <li>
+            <a href="/es/blog/metta-loving-kindness-meditation.html">
+                Meditación de amor benevolente (<em>mettā</em>): cultivar un corazón amable →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/samatha-and-vipassana.html">
+                <em>Samatha</em> y <em>Vipassanā</em>: concentración y visión profunda →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/four-elements-meditation.html">
+                Meditación de los cuatro elementos: introducción a las cualidades materiales →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/learning-meditation-with-a-teacher.html">
+                Aprender meditación con un profesor cualificado →
+            </a>
+        </li>
+        <li>
+            <a href="/es/blog/working-with-meditation-difficulties.html">
+                Afrontar la inquietud, la somnolencia y el desánimo durante la meditación →
+            </a>
+        </li>
+    </ul>
+</section>
 
-            <p>
-                No significa dejar la mente completamente en blanco ni
-                intentar eliminar todos los pensamientos. Significa aprender
-                a reconocer lo que está ocurriendo con mayor claridad,
-                paciencia y comprensión.
-            </p>
+<!-- CORPORATE MINDFULNESS -->
+<section class="mindfulness-topic">
+    <h2>🌿 Formación en atención plena para empresas</h2>
 
-            <p>
-                Podemos practicar la atención plena mientras caminamos,
-                comemos, escuchamos a otra persona, cuidamos las plantas
-                o realizamos nuestras tareas cotidianas.
-            </p>
-        </section>
+    <p>
+        Descubre cómo la atención plena y la meditación pueden favorecer
+        una mayor conciencia, equilibrio emocional, concentración y bienestar
+        en el entorno laboral. Invitamos a las organizaciones interesadas
+        en sesiones de atención plena en línea a ponerse en contacto con
+        nosotros. El enfoque puede adaptarse a las necesidades del lugar
+        de trabajo.
+    </p>
 
-        <section class="content-section">
-            <h2>2. La atención plena y el Dhamma</h2>
+    <p>
+        <a href="/es/blog/corporate-mindfulness-training.html">
+            Más información sobre la formación en atención plena para empresas →
+        </a>
+    </p>
+</section>
 
-            <p>
-                En las enseñanzas budistas, el Dhamma se refiere a las
-                enseñanzas del Buda y a la comprensión de la naturaleza
-                de la vida. Estas enseñanzas nos invitan a observar
-                nuestras experiencias y a investigar cómo surgen
-                el sufrimiento, el apego y la insatisfacción.
-            </p>
+<!-- KINDNESS AND COMPASSION -->
+<section class="card">
+    <h2>💛 Amabilidad y compasión</h2>
 
-            <p>
-                La atención plena, conocida en pali como
-                <em>sati</em>, es una parte importante del Noble Óctuple
-                Sendero. Nos ayuda a reconocer nuestras acciones,
-                palabras y pensamientos, y a desarrollar una comprensión
-                más profunda de sus consecuencias.
-            </p>
+    <p>
+        La atención plena puede ayudarnos a reconocer cómo nuestras palabras
+        y acciones afectan a otras personas. La conciencia adquiere un
+        significado especial cuando favorece la amabilidad y la compasión.
+    </p>
 
-            <p>
-                La práctica no consiste simplemente en sentirse tranquilo.
-                También implica desarrollar sabiduría, actuar con
-                responsabilidad y cultivar una actitud de no causar daño.
-            </p>
-        </section>
+    <p>Algunas formas sencillas de expresar amabilidad son:</p>
 
-        <section class="content-section">
-            <h2>3. Llevar la conciencia a la vida cotidiana</h2>
+    <ul>
+        <li>Hablar con sinceridad sin recurrir a una dureza innecesaria.</li>
+        <li>Escuchar cuando alguien necesita ser escuchado.</li>
+        <li>Ayudar cuando realmente se necesita ayuda.</li>
+        <li>Practicar la paciencia cuando las situaciones son difíciles.</li>
+        <li>Dar sin esperar siempre algo a cambio.</li>
+    </ul>
 
-            <p>
-                No necesitamos esperar a estar sentados en silencio
-                para practicar la atención plena. Cada actividad cotidiana
-                puede convertirse en una oportunidad para observar
-                nuestra experiencia.
-            </p>
+    <p>
+        La compasión no significa estar de acuerdo con todo. Puede significar
+        responder con comprensión y, al mismo tiempo, mantener límites
+        adecuados.
+    </p>
+</section>
 
-            <ul>
-                <li>
-                    Al caminar, observa el movimiento del cuerpo y el
-                    contacto de los pies con el suelo.
-                </li>
-                <li>
-                    Al comer, presta atención al sabor, la textura y
-                    el origen de los alimentos.
-                </li>
-                <li>
-                    Al conversar, escucha sin preparar inmediatamente
-                    una respuesta.
-                </li>
-                <li>
-                    Al sentir irritación, reconoce la emoción antes
-                    de hablar o actuar.
-                </li>
-                <li>
-                    Al estar en la naturaleza, observa los árboles,
-                    las hojas, la luz y los sonidos que te rodean.
-                </li>
-            </ul>
+<!-- THOUGHTS AND EMOTIONS -->
+<section class="card">
+    <h2>🌊 Observar los pensamientos y las emociones</h2>
 
-            <p>
-                Estos pequeños momentos pueden ayudarnos a vivir con
-                mayor conciencia, en lugar de actuar siempre por hábito
-                o impulso.
-            </p>
-        </section>
+    <p>
+        Nuestros pensamientos y emociones pueden parecer muy poderosos,
+        especialmente cuando reaccionamos a ellos de inmediato. La atención
+        plena nos ofrece la oportunidad de observarlos antes de decidir
+        qué hacer.
+    </p>
 
-        <section class="content-section">
-            <h2>4. Una práctica sencilla de meditación</h2>
+    <p>
+        Por ejemplo, cuando aparece la ira, primero podemos reconocer:
+        <strong>«La ira está presente».</strong>
+        En lugar de actuar inmediatamente bajo su influencia, podemos
+        observar el sentimiento, respirar y darnos tiempo para elegir
+        cómo responder.
+    </p>
 
-            <p>
-                Busca un lugar tranquilo y adopta una postura cómoda.
-                Puedes sentarte en una silla o en un cojín, manteniendo
-                una postura natural y relajada.
-            </p>
+    <p>
+        El mismo enfoque puede aplicarse a la preocupación, la emoción,
+        la tristeza, los celos, el miedo y otras experiencias cambiantes.
+    </p>
 
-            <ol>
-                <li>Cierra los ojos suavemente o deja la mirada baja.</li>
-                <li>Observa la respiración tal como es, sin forzarla.</li>
-                <li>
-                    Nota cómo el aire entra y sale del cuerpo.
-                </li>
-                <li>
-                    Cuando aparezcan pensamientos, reconoce que estás
-                    pensando y vuelve suavemente a la respiración.
-                </li>
-                <li>
-                    Si aparece una emoción o una sensación corporal,
-                    obsérvala con paciencia.
-                </li>
-            </ol>
+    <p>
+        El objetivo no es reprimir las emociones. Es comprenderlas con mayor
+        claridad y evitar que cada reacción pasajera controle nuestra conducta.
+    </p>
+</section>
 
-            <p>
-                Puedes empezar con cinco minutos. No es necesario
-                juzgar la práctica como buena o mala. Lo importante
-                es volver a observar con paciencia cada vez que notes
-                que tu atención se ha distraído.
-            </p>
-        </section>
+<!-- NEW: GRATITUDE AND APPRECIATION -->
+<section class="card gratitude-card">
+    <h2>💚 Cuando la vida no sale como esperamos</h2>
 
-        <section class="content-section">
-            <h2>5. La bondad y la compasión</h2>
+    <p class="card-subtitle">
+        La práctica de la gratitud y el aprecio
+    </p>
 
-            <p>
-                La atención plena puede ayudarnos a reconocer cómo
-                nuestras palabras y acciones afectan a los demás.
-                Sin embargo, la conciencia por sí sola no garantiza
-                que siempre actuemos con bondad. También necesitamos
-                cultivar la intención de comprender y no causar daño.
-            </p>
+    <p>
+        La vida no siempre se desarrolla de acuerdo con nuestros deseos.
+        Podemos sentirnos heridos, decepcionados o frustrados cuando las
+        cosas salen mal. Sin embargo, si hacemos una pausa y observamos
+        nuestras circunstancias desde una perspectiva más amplia, quizá
+        nos demos cuenta de que todavía hay muchas cosas que merecen
+        nuestro aprecio.
+    </p>
 
-            <p>
-                La bondad amorosa, conocida en pali como
-                <em>mettā</em>, es el deseo sincero de que los seres
-                puedan vivir en paz y bienestar. La compasión,
-                o <em>karuṇā</em>, es la sensibilidad ante el sufrimiento
-                y la disposición a responder de una manera considerada.
-            </p>
+    <p>
+        La atención plena nos recuerda que podemos reconocer nuestras
+        dificultades sin permitir que eclipsen todo lo bueno que permanece
+        en nuestras vidas. Al reflexionar sobre la impermanencia, aceptar
+        aquello que no siempre podemos controlar y apreciar la amabilidad
+        de los demás, podemos aprender gradualmente a afrontar los desafíos
+        de la vida con mayor sabiduría, gratitud y compasión.
+    </p>
 
-            <p>
-                Podemos practicar estas cualidades hablando con respeto,
-                ayudando cuando sea apropiado, cuidando a los seres vivos
-                y evitando causar sufrimiento innecesario.
-            </p>
+    <p>
+        La gratitud no significa negar nuestro dolor. Significa recordar que,
+        incluso durante los momentos difíciles, nuestras vidas pueden seguir
+        conteniendo momentos significativos, oportunidades para aprender
+        y motivos para estar agradecidos.
+    </p>
 
-            <p>
-                La compasión también incluye tratarnos con paciencia
-                cuando cometemos errores, sin dejar de aprender de ellos.
-            </p>
-        </section>
+    <p>
+        <a href="/es/blog/when-life-does-not-go-our-way-gratitude-and-appreciation.html">
+            Leer el artículo completo: Cuando la vida no sale como esperamos →
+        </a>
+    </p>
+</section>
 
-        <section class="content-section">
-            <h2>6. Observar los pensamientos y las emociones</h2>
+<!-- FROM AWARENESS TO WISDOM -->
+<section class="card">
+    <h2>📖 De la conciencia a la sabiduría</h2>
 
-            <p>
-                Los pensamientos y las emociones aparecen por muchas
-                razones: nuestras experiencias anteriores, las
-                circunstancias presentes, las expectativas y las
-                condiciones físicas.
-            </p>
+    <p>
+        La atención plena y la sabiduría se apoyan mutuamente. Cuando
+        observamos cuidadosamente nuestras experiencias, podemos empezar
+        a reconocer que los pensamientos, sentimientos, circunstancias
+        y relaciones cambian continuamente.
+    </p>
 
-            <p>
-                Cuando estamos enfadados, por ejemplo, podemos sentir
-                el cuerpo tenso y tener pensamientos de crítica.
-                Si reaccionamos inmediatamente, podríamos decir o hacer
-                algo que después lamentemos.
-            </p>
+    <p>
+        Esta observación puede animarnos a cuestionar nuestras suposiciones
+        automáticas y comprender las consecuencias de nuestras decisiones.
+    </p>
 
-            <p>
-                La atención plena nos permite detenernos un momento
-                y reconocer: «Hay enfado presente». Esta observación
-                crea una oportunidad para responder con mayor cuidado.
-            </p>
+    <p>
+        Aprender de enseñanzas fiables, reflexionar sobre nuestras experiencias
+        y aplicar lo aprendido a la vida cotidiana puede profundizar
+        gradualmente nuestra comprensión.
+    </p>
 
-            <p>
-                No necesitamos reprimir las emociones ni obedecer
-                todos nuestros pensamientos. Podemos observarlos,
-                comprender sus condiciones y decidir cómo actuar.
-            </p>
-        </section>
+    <p>
+        El conocimiento auténtico debería fomentar la claridad, la conducta
+        ética, la compasión y la disposición a examinar nuestras propias
+        suposiciones.
+    </p>
+</section>
 
-        <section class="content-section">
-            <h2>7. De la conciencia a la sabiduría</h2>
+<!-- IMPERMANENCE -->
+<section class="card">
+    <h2>🍃 Aprender del cambio</h2>
 
-            <p>
-                La conciencia nos ayuda a reconocer lo que sucede.
-                La sabiduría va más allá: implica comprender mejor
-                la naturaleza de nuestra experiencia y las consecuencias
-                de nuestras elecciones.
-            </p>
+    <p>
+        Uno de los temas importantes de las enseñanzas budistas es la
+        impermanencia: las experiencias y las condiciones cambian
+        continuamente.
+    </p>
 
-            <p>
-                En las enseñanzas budistas, la sabiduría incluye investigar
-                la impermanencia, el sufrimiento y la ausencia de una
-                identidad permanente e independiente en los fenómenos.
-                Estas enseñanzas se conocen tradicionalmente como las
-                tres características de la existencia.
-            </p>
+    <p>
+        Podemos observarlo directamente en la vida cotidiana. La mañana
+        se convierte en tarde, las plantas jóvenes crecen, el tiempo cambia,
+        las relaciones evolucionan y nuestros propios pensamientos y
+        sentimientos aparecen y desaparecen.
+    </p>
 
-            <p>
-                Comprenderlas no consiste simplemente en memorizar
-                conceptos. Requiere observación, reflexión y práctica,
-                junto con una comprensión gradual de cómo se manifiestan
-                en nuestra propia vida.
-            </p>
+    <p>
+        Reconocer el cambio no significa distanciarnos de la vida. Por el
+        contrario, puede ayudarnos a apreciar nuestras experiencias sin
+        suponer que permanecerán exactamente como son.
+    </p>
+</section>
 
-            <p>
-                A medida que comprendemos mejor las causas y las
-                consecuencias, podemos aprender a responder con menos
-                apego, menos aversión y mayor claridad.
-            </p>
-        </section>
+<!-- MINDFUL CHOICES -->
+<section class="card">
+    <h2>⚖️ La atención plena en nuestras decisiones</h2>
 
-        <section class="content-section">
-            <h2>8. Aprender del cambio y la impermanencia</h2>
+    <p>
+        La conciencia también puede influir en nuestra manera de vivir
+        en el mundo. Antes de tomar una decisión, podemos hacer una pausa
+        y considerar sus efectos sobre nosotros mismos, otras personas,
+        los animales y el entorno natural.
+    </p>
 
-            <p>
-                Todo lo que experimentamos está sujeto a cambios.
-                El cuerpo cambia, las estaciones cambian, las relaciones
-                evolucionan y nuestros sentimientos no permanecen
-                siempre iguales.
-            </p>
+    <ul>
+        <li>¿Realmente necesito esto?</li>
+        <li>¿Podría elegir algo más sencillo?</li>
+        <li>¿Esta acción generará residuos innecesarios?</li>
+        <li>¿Cómo podrían afectar mis palabras a otra persona?</li>
+        <li>¿Estoy actuando con conciencia o simplemente por costumbre?</li>
+    </ul>
 
-            <p>
-                La impermanencia, llamada <em>anicca</em> en pali,
-                es una enseñanza fundamental del budismo. Observar
-                el cambio puede ayudarnos a comprender por qué aferrarnos
-                a experiencias agradables o intentar controlar todas
-                las circunstancias puede generar frustración.
-            </p>
+    <p>
+        Estas preguntas conectan la conciencia interior con una vida
+        consciente y responsable.
+    </p>
 
-            <p>
-                Reconocer la impermanencia no significa que debamos
-                dejar de cuidar lo que valoramos. Al contrario, puede
-                ayudarnos a apreciar el presente y a actuar con mayor
-                responsabilidad mientras las condiciones lo permitan.
-            </p>
+    <p>
+        <a href="/es/mindful-ethical-living.html">
+            Explorar la vida consciente y ética →
+        </a>
+    </p>
+</section>
 
-            <p>
-                Una flor se abre y se marchita. Un día comienza y termina.
-                Cuando observamos estos cambios, podemos recordar que
-                cada momento tiene sus propias condiciones y que no
-                podemos conservarlo para siempre.
-            </p>
-        </section>
+<!-- HIRI AND OTTAPPA -->
+<section class="card">
+    <h2>🪷 Hiri y Ottappa: dejar que la conciencia moral y la sabiduría guíen nuestras decisiones</h2>
 
-        <section class="content-section">
-            <h2>9. La atención plena en nuestras decisiones</h2>
+    <p>
+        La atención plena no consiste únicamente en observar nuestros
+        pensamientos y emociones. También puede ayudarnos a ser más
+        conscientes de las intenciones que hay detrás de nuestras
+        decisiones y de los efectos que nuestras acciones pueden tener
+        sobre los demás.
+    </p>
 
-            <p>
-                Las decisiones cotidianas afectan a nuestra salud,
-                nuestras relaciones, otros seres vivos y el entorno.
-                La atención plena puede ayudarnos a detenernos antes
-                de actuar y considerar las consecuencias de nuestras
-                elecciones.
-            </p>
+    <p>
+        En las enseñanzas budistas Theravada, <em>Hiri</em> y
+        <em>Ottappa</em> son dos cualidades importantes que ayudan
+        a proteger la conducta ética. Hiri se refiere a la conciencia
+        moral o al sentido de vergüenza ante las malas acciones,
+        mientras que Ottappa se refiere a la preocupación moral por
+        las consecuencias perjudiciales de las acciones no virtuosas.
+    </p>
 
-            <p>
-                Antes de comprar algo, podemos preguntarnos si realmente
-                lo necesitamos. Antes de desechar un objeto, podemos
-                considerar si se puede reutilizar. Al elegir alimentos,
-                podemos prestar atención a nuestras necesidades,
-                al desperdicio y a los recursos utilizados para producirlos.
-            </p>
+    <p>
+        Juntas, estas cualidades nos animan a hacer una pausa antes
+        de actuar, examinar nuestras intenciones y considerar si
+        nuestras decisiones son honestas, justas, amables y beneficiosas.
+    </p>
 
-            <p>
-                En nuestras relaciones, podemos preguntarnos si nuestras
-                palabras son verdaderas, útiles y oportunas. En el trabajo,
-                podemos reflexionar sobre si nuestras acciones son
-                responsables y respetuosas.
-            </p>
+    <p>
+        En lugar de medir cada decisión únicamente por el beneficio
+        personal, podemos preguntarnos si nuestras acciones podrían
+        perjudicar a alguien, si estamos tratando a los demás con justicia
+        y si existe una forma más amable o sabia de proceder.
+    </p>
 
-            <p>
-                No podemos controlar todas las circunstancias, pero sí
-                podemos aprender a observar nuestras intenciones y
-                tomar decisiones más conscientes.
-            </p>
-        </section>
+    <p>
+        Esta reflexión nos recuerda que la vida ética no consiste
+        simplemente en evitar las malas acciones. También implica
+        desarrollar responsabilidad, generosidad, integridad y
+        consideración hacia los demás.
+    </p>
 
-        <section class="content-section">
-            <h2>10. Una reflexión tranquila</h2>
+    <p>
+        <a href="/es/blog/wisdom-of-right-action-hiri-ottappa.html">
+            Leer la reflexión completa: Antes de actuar, deja que tu conciencia,
+            amabilidad y sabiduría te guíen →
+        </a>
+    </p>
+</section>
 
-            <p>
-                A veces pasamos tanto tiempo pensando en lo que ocurrió
-                ayer o en lo que podría suceder mañana que apenas
-                prestamos atención a lo que está ocurriendo ahora.
-            </p>
+<!-- THINK BEFORE YOU BELIEVE -->
+<section class="card">
+    <h2>💡 Piensa antes de creer: la importancia de verificar la información</h2>
 
-            <p>
-                Podemos detenernos un instante. Sentir la respiración.
-                Escuchar los sonidos cercanos. Observar los pensamientos
-                que aparecen y desaparecen.
-            </p>
+    <p>
+        Cada día recibimos información a través de conversaciones,
+        redes sociales, noticias y personas que nos rodean.
+        Pero ¿deberíamos creer todo simplemente porque lo escuchamos,
+        lo vemos repetidamente o procede de alguien en quien confiamos?
+    </p>
 
-            <p>
-                No es necesario cambiar todo de inmediato. Podemos
-                comenzar reconociendo lo que sentimos, comprendiendo
-                nuestras reacciones y procurando actuar con un poco
-                más de paciencia y amabilidad.
-            </p>
+    <p>
+        Hace más de 2.500 años, el Buda ofreció orientación sobre
+        este desafío tan humano en un discurso conocido como el
+        <em>Kalama Sutta</em>. Nos anima a no aceptar afirmaciones
+        ciegamente basándonos en rumores, tradiciones, reputación
+        o autoridad, sino a examinarlas cuidadosamente y considerar
+        si conducen al daño o al bienestar.
+    </p>
 
-            <p>
-                A veces, una pequeña pausa consciente basta para
-                recordarnos que tenemos la oportunidad de elegir
-                nuestra respuesta.
-            </p>
-        </section>
+    <p>
+        En el mundo actual, la atención plena puede ayudarnos a hacer
+        una pausa antes de creer o compartir información. Podemos
+        comprobar la fuente, considerar las pruebas, reconocer nuestras
+        propias suposiciones y reflexionar antes de llegar a una conclusión.
+    </p>
 
-        <section class="content-section">
-            <h2>11. Preguntas para la reflexión</h2>
+    <p>
+        Tener una mente abierta no significa creerlo todo. Significa
+        estar dispuestos a investigar, aprender y cambiar nuestra
+        comprensión cuando disponemos de información mejor.
+    </p>
 
-            <p>
-                Puedes dedicar unos minutos a contemplar estas preguntas.
-                No es necesario encontrar una respuesta inmediata.
-                Lo importante es observar con sinceridad.
-            </p>
+    <p>
+        <a href="/es/blog/think-before-you-believe.html">
+            Leer la reflexión completa: Piensa antes de creer: la importancia
+            de verificar la información →
+        </a>
+    </p>
+</section>
 
-            <ul class="reflection-list">
-                <li>
-                    ¿En qué momentos del día actúo sin prestar atención?
-                </li>
-                <li>
-                    ¿Qué sucede en mi cuerpo y en mi mente cuando
-                    experimento enfado o preocupación?
-                </li>
-                <li>
-                    ¿Puedo escuchar a otra persona sin interrumpir
-                    ni juzgar demasiado pronto?
-                </li>
-                <li>
-                    ¿Qué puedo aprender de los cambios que estoy
-                    experimentando?
-                </li>
-                <li>
-                    ¿Cómo pueden mis decisiones reducir el daño
-                    y contribuir al bienestar de los demás?
-                </li>
-                <li>
-                    ¿Qué pequeño acto de bondad puedo realizar hoy?
-                </li>
-            </ul>
+<!-- QUIET REFLECTION -->
+<section class="card">
+    <h2>🌿 Una reflexión tranquila</h2>
 
-            <p>
-                Estas preguntas no son un examen. Son invitaciones
-                a observar nuestra experiencia y aprender de ella
-                con paciencia.
-            </p>
-        </section>
+    <p>
+        A veces, la atención plena comienza con algo muy sencillo:
+        detenernos un momento y observar lo que ya está aquí.
+    </p>
 
-        <section class="content-section">
-            <h2>12. Comienza con un solo momento</h2>
+    <p>
+        El sonido de la lluvia, el movimiento de las hojas, una comida
+        compartida con otra persona o simplemente la sensación de respirar
+        pueden convertirse en una oportunidad para regresar al presente.
+    </p>
 
-            <p>
-                No necesitas transformar toda tu vida en un día.
-                Puedes empezar con una respiración consciente,
-                una comida observada con atención o una conversación
-                en la que escuches de verdad.
-            </p>
+    <p>
+        No tenemos que hacer que cada momento sea especial. Simplemente
+        podemos aprender a observarlo.
+    </p>
 
-            <p>
-                Cuando te distraigas, vuelve suavemente al momento
-                presente. Cuando cometas un error, reconócelo y aprende.
-                Cuando encuentres una oportunidad para ayudar, considera
-                cómo hacerlo de manera apropiada.
-            </p>
+    <p>
+        Un aspecto sencillo y accesible de la atención plena puede resumirse
+        en este recordatorio:
+        <strong>observa con atención, reconoce con claridad y responde con cuidado.</strong>
+    </p>
+</section>
 
-            <p>
-                La atención plena es una práctica que se desarrolla
-                gradualmente. A través de la observación, la reflexión
-                y las acciones conscientes, podemos cultivar una
-                comprensión más profunda de nosotros mismos y del mundo
-                que compartimos.
-            </p>
+<!-- DHAMMAGOONYE RETREAT -->
+<section class="card retreat-card">
+    <h2>🪷 Un retiro tranquilo: encontrar tiempo para mirar hacia nuestro interior</h2>
 
-            <p>
-                <strong>
-                    Comienza con un solo momento. Observa con claridad.
-                    Actúa con sabiduría. Vive con compasión.
-                </strong>
-            </p>
-        </section>
+    <p>
+        A veces, pasar tiempo en un entorno natural y tranquilo nos ofrece
+        la oportunidad de reducir el ritmo, apreciar la belleza que nos
+        rodea y dirigir nuestra atención hacia nuestra propia mente.
+    </p>
 
-    </div>
+    <p>
+        A través de una reflexión personal y fotografías de flores y árboles
+        tomadas durante un retiro de meditación en Dhammagoonye, exploramos
+        cómo un entorno tranquilo puede favorecer nuestro interés por la
+        meditación, la atención plena y la comprensión interior.
+    </p>
+
+    <p>
+        El camino de cada persona es diferente, pero todos podemos comenzar
+        con un momento de conciencia, una respiración suave y la disposición
+        a observar la vida con mayor claridad.
+    </p>
+
+    <p>
+        <a href="/es/blog/dhammagoonye-meditation-retreat.html">
+            🪷 Leer la reflexión personal sobre el retiro →
+        </a>
+    </p>
+</section>
+
+<!-- REFLECTION QUESTIONS -->
+<section class="card">
+    <h2>🪷 Preguntas para la reflexión</h2>
+
+    <p>De vez en cuando, puedes sentarte en silencio y reflexionar sobre una de estas preguntas:</p>
+
+    <ul>
+        <li>¿Qué estoy experimentando en este momento?</li>
+        <li>¿Qué pensamientos están influyendo en mis acciones?</li>
+        <li>¿Estoy reaccionando o respondiendo conscientemente?</li>
+        <li>¿Qué cambios he observado recientemente en mí mismo?</li>
+        <li>¿En qué situaciones podría practicar más paciencia?</li>
+        <li>¿Cómo puedo incorporar más amabilidad a un día cotidiano?</li>
+    </ul>
+
+    <p>
+        No es necesario encontrar una respuesta inmediata. A veces,
+        el valor está simplemente en observar la pregunta con sinceridad.
+    </p>
+</section>
+
+<!-- CLOSING -->
+<section class="card">
+    <h2>💚 Comienza con un solo momento</h2>
+
+    <p>
+        La atención plena no tiene que comenzar con una rutina complicada.
+        Puede empezar con una respiración, una observación cuidadosa,
+        una palabra amable o una pausa antes de reaccionar.
+    </p>
+
+    <p>
+        Con una práctica constante, estos pequeños momentos pueden
+        convertirse en oportunidades para comprendernos mejor y vivir
+        con mayor conciencia, compasión y sabiduría.
+    </p>
+
+    <p>
+        <a href="/es/mindful-ethical-living.html">
+            Sigue explorando la vida consciente y ética →
+        </a>
+    </p>
+</section>
+
 </main>
 
-<footer class="site-footer">
-    <div class="container">
-        <p>
-            Yangocean — Vivir con conciencia, compasión y armonía
-            con la naturaleza.
-        </p>
-
-        <nav aria-label="Enlaces del pie de página">
-            <a href="/es/about.html">Acerca de nosotros</a>
-            <a href="/es/privacy.html">Privacidad</a>
-            <a href="/es/terms.html">Términos</a>
-            <a href="/es/contact.html">Contacto</a>
-        </nav>
-
-        <p>
-            © <span id="currentYear"></span> Yangocean. Todos los derechos reservados.
-        </p>
+<footer class="footer">
+    <div class="footer-links">
+        <a href="/es/">Inicio</a>
+        <a href="/es/mindfulness.html">Atención Plena y Dhamma</a>
+        <a href="/es/mindful-ethical-living.html">Vida consciente y ética</a>
+        <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
+        <a href="/es/blog.html">Diario</a>
+        <a href="/es/about.html">Acerca de nosotros</a>
+        <a href="/es/privacy.html">Política de privacidad</a>
+        <a href="/es/terms.html">Términos</a>
+        <a href="/es/contact.html">Contacto</a>
     </div>
+
+    <p>© 2026 Yangocean</p>
+    <p>Vida consciente • Conexión con la naturaleza • Sostenibilidad</p>
+    <p>Cultivando la conciencia, el aprecio y la amabilidad en la vida cotidiana.</p>
 </footer>
 
+</div>
+
+<!-- READ-ALOUD SCRIPT -->
 <script>
-let currentSpeech = null;
-let isPaused = false;
+(function () {
+    "use strict";
 
-function toggleReading() {
-    const button = document.getElementById("readAloudButton");
-
-    if (!("speechSynthesis" in window)) {
-        alert("Lo sentimos, tu navegador no admite la lectura en voz alta.");
-        return;
-    }
-
-    if (window.speechSynthesis.speaking && isPaused) {
-        window.speechSynthesis.resume();
-        isPaused = false;
-        button.textContent = "⏸ Pausar lectura";
-        return;
-    }
-
-    if (window.speechSynthesis.speaking && !isPaused) {
-        window.speechSynthesis.pause();
-        isPaused = true;
-        button.textContent = "▶ Continuar lectura";
-        return;
-    }
-
-    startReading();
-}
-
-function startReading() {
-    const button = document.getElementById("readAloudButton");
+    const readButton = document.getElementById("readAloudButton");
+    const stopButton = document.getElementById("stopReadAloudButton");
+    const status = document.getElementById("readAloudStatus");
     const content = document.getElementById("content-to-read");
 
-    window.speechSynthesis.cancel();
+    if (!readButton || !stopButton || !status || !content) return;
 
-    const textToRead = content.innerText
-        .replace(/🔊/g, "")
-        .replace(/⏸/g, "")
-        .replace(/▶/g, "")
-        .replace(/Escuchar esta página/g, "")
-        .replace(/Pausar lectura/g, "")
-        .replace(/Continuar lectura/g, "")
-        .trim();
+    if (!("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)) {
+        readButton.disabled = true;
+        status.textContent =
+            "La función de lectura en voz alta no es compatible con este navegador. Prueba una versión actualizada de Safari o Chrome.";
+        return;
+    }
 
-    currentSpeech = new SpeechSynthesisUtterance(textToRead);
-    currentSpeech.lang = "es-ES";
-    currentSpeech.rate = 0.9;
-    currentSpeech.pitch = 1;
+    const synth = window.speechSynthesis;
 
-    currentSpeech.onstart = function () {
-        button.textContent = "⏸ Pausar lectura";
+    let chunks = [];
+    let chunkIndex = 0;
+    let isReading = false;
+    let isPaused = false;
+    let runId = 0;
+
+    function setButton(label) {
+        readButton.textContent = label;
+    }
+
+    function getReadableText() {
+        const elements = content.querySelectorAll("h1, h2, h3, p, li");
+
+        return Array.from(elements)
+            .map(function (element) {
+                return (element.innerText || element.textContent || "").trim();
+            })
+            .filter(Boolean)
+            .join(". ")
+            .replace(/\s+/g, " ");
+    }
+
+    function makeChunks(text) {
+        const sentences = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+        const result = [];
+        let current = "";
+
+        sentences.forEach(function (sentence) {
+            const part = sentence.trim();
+            if (!part) return;
+
+            if ((current + " " + part).trim().length > 180 && current) {
+                result.push(current.trim());
+                current = part;
+            } else {
+                current = (current + " " + part).trim();
+            }
+        });
+
+        if (current) result.push(current.trim());
+
+        return result;
+    }
+
+    function chooseVoice(utterance) {
+        const voices = synth.getVoices();
+
+        const preferred =
+            voices.find(function (voice) {
+                return /^es-ES$/i.test(voice.lang) &&
+                    /natural|enhanced/i.test(voice.name);
+            }) ||
+            voices.find(function (voice) {
+                return /^es-ES$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^es-MX$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^es/i.test(voice.lang);
+            });
+
+        if (preferred) {
+            utterance.voice = preferred;
+            utterance.lang = preferred.lang;
+        } else {
+            utterance.lang = "es-ES";
+        }
+
+        utterance.rate = 0.92;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+    }
+
+    function finishReading(message) {
+        isReading = false;
         isPaused = false;
-    };
+        chunks = [];
+        chunkIndex = 0;
 
-    currentSpeech.onend = function () {
-        button.textContent = "🔊 Escuchar esta página";
+        setButton("🔊 Escuchar");
+        status.textContent = message || "La lectura de esta página ha finalizado.";
+    }
+
+    function speakNext(activeRunId) {
+        if (activeRunId !== runId || !isReading || isPaused) return;
+
+        if (chunkIndex >= chunks.length) {
+            finishReading("La lectura de esta página ha finalizado.");
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+        chooseVoice(utterance);
+
+        utterance.onend = function () {
+            if (activeRunId !== runId) return;
+
+            chunkIndex += 1;
+            speakNext(activeRunId);
+        };
+
+        utterance.onerror = function (event) {
+            if (activeRunId !== runId) return;
+
+            if (event.error === "canceled" ||
+                event.error === "interrupted") {
+                return;
+            }
+
+            finishReading(
+                "El navegador no ha podido continuar la lectura. Inténtalo de nuevo o comprueba la configuración del navegador y de voz."
+            );
+        };
+
+        synth.speak(utterance);
+    }
+
+    readButton.addEventListener("click", function () {
+        if (isReading && !isPaused) {
+            synth.pause();
+            isPaused = true;
+            setButton("▶ Reanudar");
+            status.textContent = "Lectura pausada. Pulsa «Reanudar» para continuar.";
+            return;
+        }
+
+        if (isReading && isPaused) {
+            isPaused = false;
+            synth.resume();
+            setButton("⏸ Pausar");
+            status.textContent = "Leyendo en voz alta…";
+
+            if (!synth.speaking && chunkIndex < chunks.length) {
+                speakNext(runId);
+            }
+
+            return;
+        }
+
+        synth.cancel();
+        runId += 1;
+
+        const text = getReadableText();
+
+        if (!text) {
+            status.textContent = "No hay texto disponible en la página para leer.";
+            return;
+        }
+
+        chunks = makeChunks(text);
+        chunkIndex = 0;
+        isReading = true;
         isPaused = false;
-    };
 
-    currentSpeech.onerror = function () {
-        button.textContent = "🔊 Escuchar esta página";
-        isPaused = false;
-    };
+        setButton("⏸ Pausar");
+        status.textContent = "Leyendo en voz alta…";
 
-    window.speechSynthesis.speak(currentSpeech);
-}
+        // Start speech directly from the user's tap for mobile compatibility.
+        speakNext(runId);
+    });
 
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
+    stopButton.addEventListener("click", function () {
+        runId += 1;
+        synth.cancel();
+        finishReading("La lectura se ha detenido.");
+    });
+
+    if ("onvoiceschanged" in synth) {
+        synth.onvoiceschanged = function () {
+            synth.getVoices();
+        };
+    }
+
+    synth.getVoices();
+
+    window.addEventListener("pagehide", function () {
+        runId += 1;
+        synth.cancel();
+    });
+})();
 </script>
 
 </body>
 </html>
-
