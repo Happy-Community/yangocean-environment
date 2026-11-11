@@ -1,820 +1,166 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Pleine conscience et Dhamma | Présence, sagesse et compassion | Yangocean</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description"
-content="Découvrez la pleine conscience et le Dhamma à travers la présence attentive, la méditation, la compassion, la sagesse, l'impermanence et des réflexions simples pour la vie quotidienne.">
-
+<meta name="description" content="Découvrez la pleine conscience et le Dhamma à travers la méditation, la présence attentive, la compassion, la sagesse, l'impermanence, la gratitude et des réflexions pratiques pour la vie quotidienne.">
 <meta name="robots" content="index, follow">
 
 <link rel="stylesheet" href="/styles.css">
-
-<link rel="canonical"
-href="https://yangocean.com/fr/mindfulness.html">
-
+<link rel="canonical" href="https://yangocean.com/fr/mindfulness.html">
 
 <!-- HREFLANG -->
-
-<link rel="alternate" hreflang="en"
-href="https://yangocean.com/mindfulness.html">
-
-<link rel="alternate" hreflang="ms"
-href="https://yangocean.com/ms/mindfulness.html">
-
-<link rel="alternate" hreflang="zh"
-href="https://yangocean.com/zh/mindfulness.html">
-
-<link rel="alternate" hreflang="fr"
-href="https://yangocean.com/fr/mindfulness.html">
-
-<link rel="alternate" hreflang="es"
-href="https://yangocean.com/es/mindfulness.html">
-
-<link rel="alternate" hreflang="my"
-href="https://yangocean.com/my/mindfulness.html">
-
-<link rel="alternate" hreflang="x-default"
-href="https://yangocean.com/mindfulness.html">
-
+<link rel="alternate" hreflang="en" href="https://yangocean.com/mindfulness.html">
+<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/mindfulness.html">
+<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/mindfulness.html">
+<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/mindfulness.html">
+<link rel="alternate" hreflang="es" href="https://yangocean.com/es/mindfulness.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/mindfulness.html">
+<link rel="alternate" hreflang="x-default" href="https://yangocean.com/mindfulness.html">
 
 <!-- OPEN GRAPH -->
-
 <meta property="og:type" content="website">
-
-<meta property="og:title"
-content="Pleine conscience et Dhamma | Présence, sagesse et compassion">
-
-<meta property="og:description"
-content="Découvrez la pleine conscience et le Dhamma à travers la présence attentive, la méditation, la compassion, la sagesse, l'impermanence et des réflexions simples pour la vie quotidienne.">
-
-<meta property="og:url"
-content="https://yangocean.com/fr/mindfulness.html">
-
-<meta property="og:image"
-content="https://yangocean.com/images/og-image.jpg">
-
+<meta property="og:title" content="Pleine conscience et Dhamma | Présence, sagesse et compassion">
+<meta property="og:description" content="Découvrez la pleine conscience, la méditation, la compassion, la sagesse, la gratitude et des réflexions pour la vie quotidienne.">
+<meta property="og:url" content="https://yangocean.com/fr/mindfulness.html">
+<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
 
 <!-- ADSENSE -->
-
-<meta name="google-adsense-account"
-content="ca-pub-6929570744326515">
-
-<script async
-src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-crossorigin="anonymous">
-</script>
-
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515" crossorigin="anonymous"></script>
 
 <style>
-
-/* =========================
-   LECTURE À VOIX HAUTE
-========================= */
-
-.read-aloud {
-    text-align: center;
-    margin: 25px 0 35px;
+:root {
+    --green: #245b45;
+    --deep-green: #174532;
+    --soft-green: #edf4eb;
+    --cream: #fffdf6;
+    --warm-cream: #f8f3e6;
+    --text: #34453b;
+    --muted: #66756b;
+    --border: #dce7da;
+    --gold: #d5a84f;
 }
 
-.read-aloud button {
-    border: none;
-    border-radius: 8px;
-    padding: 10px 18px;
-    cursor: pointer;
-    font-size: 15px;
-    background: #285943;
-    color: white;
+* {
+    box-sizing: border-box;
 }
 
-.read-aloud button:hover {
-    opacity: 0.9;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 24px;
 }
 
-
-/* =========================
-   CONTENU
-========================= */
-
-#content-to-read .card {
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     line-height: 1.8;
 }
 
-#content-to-read .card h2 {
-    margin-bottom: 15px;
+a {
+    color: var(--green);
+    text-underline-offset: 4px;
 }
 
-#content-to-read .card h3 {
-    margin-top: 25px;
+a:hover {
+    color: var(--deep-green);
 }
 
-#content-to-read ul {
-    line-height: 1.9;
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 4px;
 }
 
-</style>
-
-</head>
-
-
-<body>
-
-<div class="container">
-
-
-<!-- =========================
-     EN-TÊTE
-========================= -->
-
-<header>
-
-<div style="
-display:flex;
-justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:15px;
-">
-
-<a href="/fr/"
-style="
-font-size:1.4rem;
-font-weight:700;
-text-decoration:none;
-color:#285943;
-">
-Yangocean
-</a>
-
-
-<!-- LANGUES -->
-
-<div>
-
-<a href="/mindfulness.html">EN</a> |
-<a href="/ms/mindfulness.html">BM</a> |
-<a href="/zh/mindfulness.html">中文</a> |
-<a href="/fr/mindfulness.html">FR</a> |
-<a href="/es/mindfulness.html">ES</a> |
-<a href="/my/mindfulness.html">မြန်မာ</a>
-
-</div>
-
-</div>
-
-
-<!-- =========================
-     NAVIGATION PRINCIPALE
-========================= -->
-
-<nav style="margin-top:18px; text-align:center;">
-
-<a href="/fr/" style="margin:0 8px;">
-Accueil
-</a>
-
-
-<!-- VIE EN PLEINE CONSCIENCE -->
-
-<span class="dropdown">
-
-<a href="/fr/mindfulness.html" style="margin:0 8px;">
-🌿 Vivre en pleine conscience ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/fr/mindfulness.html">
-🧘 Pleine conscience et Dhamma
-</a>
-
-<a href="/fr/mindful-eating.html">
-🥗 Alimentation en pleine conscience
-</a>
-
-<a href="/fr/sustainable-living.html">
-♻️ Mode de vie durable
-</a>
-
-</span>
-
-</span>
-
-
-<!-- LIEN AVEC LA NATURE -->
-
-<span class="dropdown">
-
-<a href="/fr/nature-connection.html" style="margin:0 8px;">
-🌳 Connexion à la nature ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/fr/nature-connection.html">
-🌳 Connexion à la nature
-</a>
-
-<a href="/fr/eco.html">
-🌍 Sensibilisation à l'environnement
-</a>
-
-<a href="/blog.html">
-📝 Journal
-</a>
-
-</span>
-
-</span>
-
-
-<!-- APPLICATIONS -->
-
-<span class="dropdown">
-
-<a href="/fr/apps.html" style="margin:0 8px;">
-📱 Applications associées ▾
-</a>
-
-<span class="dropdown-content">
-
-<a href="/fr/apps.html">
-📱 Toutes les applications
-</a>
-
-<a href="/fr/apps.html#eft">
-🌿 Application Yangocean
-</a>
-
-<a href="/fr/apps.html#healthy-body">
-🥗 QuQu Healthy Body
-</a>
-
-<a href="/fr/apps.html#duidui-fit">
-🏃 DuoFit
-</a>
-
-</span>
-
-</span>
-
-</nav>
-
-</header>
-
-
-
-<!-- =========================
-     CONTENU PRINCIPAL
-========================= -->
-
-<main id="content-to-read">
-
-
-<!-- INTRODUCTION -->
-
-<section class="hero">
-
-<h1>🧘 Pleine conscience et Dhamma</h1>
-
-<p>
-Cultiver la présence attentive, la sagesse et la compassion
-pour vivre de manière plus paisible.
-</p>
-
-</section>
-
-
-
-<!-- LECTURE À VOIX HAUTE -->
-
-<div class="read-aloud">
-
-<button
-type="button"
-id="readAloudButton"
-aria-label="Lire cette page à voix haute">
-
-🔊 Lire à voix haute
-
-</button>
-
-</div>
-
-
-
-<!-- QU'EST-CE QUE LA PLEINE CONSCIENCE ? -->
-
-<section class="card">
-
-<h2>🌿 Qu'est-ce que la pleine conscience ?</h2>
-
-<p>
-La pleine conscience consiste à porter attention au moment
-présent, en restant conscient de ce qui se passe sans réagir
-immédiatement à tout ce que nous vivons.
-</p>
-
-<p>
-Nous pouvons prendre conscience de notre respiration, de nos
-pensées, de nos émotions, des sensations de notre corps et de
-nos actions au moment où elles se produisent. Cette simple
-attention peut nous aider à reconnaître nos habitudes et à
-répondre aux situations quotidiennes avec davantage de réflexion.
-</p>
-
-<p>
-La pleine conscience n'exige pas que chaque instant soit calme
-ou agréable. Elle commence par apprendre à voir ce qui se passe
-réellement, un moment après l'autre.
-</p>
-
-</section>
-
-
-
-<!-- DHAMMA -->
-
-<section class="card">
-
-<h2>🪷 Pleine conscience et Dhamma</h2>
-
-<p>
-Dans la tradition bouddhiste, la pleine conscience est étroitement
-liée au développement de la sagesse et d'une conduite éthique.
-Elle n'est pas simplement une technique de relaxation, mais fait
-partie d'une voie plus large visant à comprendre l'esprit et la vie.
-</p>
-
-<p>
-Les enseignements du Dhamma nous encouragent à observer les
-changements, à comprendre les causes et les conditions, à
-reconnaître l'attachement et à développer la compassion et
-la sagesse.
-</p>
-
-<p>
-Les différentes traditions bouddhistes peuvent expliquer et
-pratiquer ces enseignements de diverses manières. Cette page
-propose des réflexions simples inspirées de la perspective
-du bouddhisme Theravāda.
-</p>
-
-</section>
-
-
-
-<!-- ATTENTION AU QUOTIDIEN -->
-
-<section class="card">
-
-<h2>🌱 Intégrer la pleine conscience au quotidien</h2>
-
-<p>
-La pleine conscience peut se pratiquer pendant les activités
-ordinaires. Il n'est pas nécessaire d'attendre de s'asseoir
-tranquillement pour méditer.
-</p>
-
-<ul>
-
-<li>
-Remarquez votre respiration lorsque vous marchez.
-</li>
-
-<li>
-Portez attention aux aliments que vous mangez.
-</li>
-
-<li>
-Écoutez pleinement lorsqu'une autre personne vous parle.
-</li>
-
-<li>
-Remarquez les tensions dans votre corps avant de réagir.
-</li>
-
-<li>
-Faites une pause avant d'envoyer un message sous le coup
-de la colère.
-</li>
-
-<li>
-Observez vos pensées sans nécessairement les croire ni les suivre.
-</li>
-
-</ul>
-
-<p>
-Ces petits moments de présence attentive peuvent faire partie
-de la vie de tous les jours.
-</p>
-
-</section>
-
-
-
-<!-- MÉDITATION -->
-
-<section class="card">
-
-<h2>🧘 Une pratique de méditation simple</h2>
-
-<p>
-La méditation offre un moment de calme pour entraîner l'attention
-et observer l'esprit. Les débutants n'ont pas besoin de forcer
-leur esprit à devenir complètement vide.
-</p>
-
-<p>
-Une approche simple consiste à prendre la respiration naturelle
-comme objet d'attention. Asseyez-vous confortablement, laissez
-votre corps se détendre et observez les sensations liées
-à la respiration.
-</p>
-
-<p>
-Lorsque l'esprit s'égare, reconnaissez doucement cette distraction,
-puis ramenez votre attention vers la respiration. Cela peut se
-produire de nombreuses fois. Le fait de revenir à la respiration
-fait lui-même partie de la pratique.
-</p>
-
-<h3>Une routine simple</h3>
-
-<ul>
-
-<li>
-<strong>Le matin :</strong>
-Prenez 5 à 15 minutes pour observer tranquillement votre respiration.
-</li>
-
-<li>
-<strong>Pendant la journée :</strong>
-Prenez quelques respirations conscientes avant une action importante.
-</li>
-
-<li>
-<strong>Le soir :</strong>
-Réfléchissez brièvement à vos pensées, à vos paroles et à vos
-actions de la journée.
-</li>
-
-</ul>
-
-<p>
-Le but n'est pas d'atteindre un état émotionnel particulier,
-mais de développer la présence attentive et d'apprendre à
-observer plus clairement ce que nous vivons.
-</p>
-
-</section>
-
-
-
-<!-- COMPASSION -->
-
-<section class="card">
-
-<h2>💛 Bienveillance et compassion</h2>
-
-<p>
-La pleine conscience peut nous aider à remarquer l'effet de nos
-paroles et de nos actions sur les autres. Elle prend tout son sens
-lorsqu'elle favorise la bienveillance et la compassion.
-</p>
-
-<p>
-Voici quelques façons simples de faire preuve de bienveillance :
-</p>
-
-<ul>
-
-<li>
-Parler honnêtement sans être inutilement dur.
-</li>
-
-<li>
-Écouter lorsqu'une personne a besoin d'être entendue.
-</li>
-
-<li>
-Aider lorsqu'une aide est réellement nécessaire.
-</li>
-
-<li>
-Faire preuve de patience dans les situations difficiles.
-</li>
-
-<li>
-Donner sans toujours attendre quelque chose en retour.
-</li>
-
-</ul>
-
-<p>
-La compassion ne signifie pas qu'il faut être d'accord avec tout.
-Elle peut consister à répondre avec compréhension tout en
-maintenant des limites appropriées.
-</p>
-
-</section>
-
-
-
-<!-- PENSÉES ET ÉMOTIONS -->
-
-<section class="card">
-
-<h2>🌊 Observer les pensées et les émotions</h2>
-
-<p>
-Nos pensées et nos émotions peuvent sembler très puissantes,
-surtout lorsque nous y réagissons immédiatement. La pleine
-conscience nous donne l'occasion de les remarquer avant de
-décider comment agir.
-</p>
-
-<p>
-Par exemple, lorsque la colère apparaît, nous pouvons d'abord
-constater : <strong>« La colère est présente. »</strong>
-Au lieu d'agir immédiatement sous son influence, nous pouvons
-observer ce sentiment, respirer et nous accorder le temps de
-choisir notre réponse.
-</p>
-
-<p>
-La même approche peut s'appliquer à l'inquiétude, à l'enthousiasme,
-à la tristesse, à la jalousie, à la peur et à d'autres expériences
-qui évoluent au fil du temps.
-</p>
-
-<p>
-Le but n'est pas de supprimer les émotions, mais de mieux les
-comprendre et d'éviter que chaque réaction passagère ne dirige
-notre comportement.
-</p>
-
-</section>
-
-
-
-<!-- SAGESSE -->
-
-<section class="card">
-
-<h2>📖 De la présence attentive à la sagesse</h2>
-
-<p>
-La pleine conscience et la sagesse se renforcent mutuellement.
-En observant attentivement notre expérience, nous pouvons
-commencer à reconnaître que nos pensées, nos sentiments,
-les circonstances et les relations changent continuellement.
-</p>
-
-<p>
-Cette observation peut nous encourager à remettre en question
-nos suppositions automatiques et à comprendre les conséquences
-de nos choix.
-</p>
-
-<p>
-Étudier des enseignements fiables, réfléchir à notre expérience
-et appliquer ce que nous apprenons dans la vie quotidienne
-peuvent approfondir progressivement notre compréhension.
-</p>
-
-<p>
-Les connaissances utiles devraient favoriser la clarté, une
-conduite éthique, la compassion et la volonté d'examiner
-nos propres suppositions.
-</p>
-
-</section>
-
-
-
-<!-- IMPERMANENCE -->
-
-<section class="card">
-
-<h2>🍃 Apprendre à travers le changement</h2>
-
-<p>
-L'impermanence est un thème important des enseignements
-bouddhistes : les expériences et les conditions changent
-continuellement.
-</p>
-
-<p>
-Nous pouvons observer ce phénomène dans la vie quotidienne.
-Le matin devient le soir, les jeunes plantes grandissent,
-le temps change, les relations évoluent, et nos pensées et
-nos émotions apparaissent puis disparaissent.
-</p>
-
-<p>
-Reconnaître le changement ne signifie pas se détacher de la vie.
-Cela peut plutôt nous aider à apprécier ce que nous vivons sans
-supposer que les choses resteront exactement comme elles sont.
-</p>
-
-</section>
-
-
-
-<!-- CHOIX CONSCIENTS -->
-
-<section class="card">
-
-<h2>⚖️ La pleine conscience dans nos choix</h2>
-
-<p>
-La présence attentive peut également influencer notre manière
-de vivre dans le monde. Avant de faire un choix, nous pouvons
-nous arrêter pour réfléchir à ses effets sur nous-mêmes, les
-autres personnes, les animaux et l'environnement naturel.
-</p>
-
-<ul>
-
-<li>
-Ai-je vraiment besoin de cela ?
-</li>
-
-<li>
-Pourrais-je choisir quelque chose de plus simple ?
-</li>
-
-<li>
-Cette action entraînera-t-elle un gaspillage inutile ?
-</li>
-
-<li>
-Quel effet mes paroles pourraient-elles avoir sur une autre personne ?
-</li>
-
-<li>
-Est-ce que j'agis consciemment ou simplement par habitude ?
-</li>
-
-</ul>
-
-<p>
-Ces questions relient la conscience intérieure à un mode de vie
-plus réfléchi et plus responsable.
-</p>
-
-</section>
-
-
-
-<!-- RÉFLEXION PERSONNELLE -->
-
-<section class="card">
-
-<h2>🌿 Un moment de réflexion paisible</h2>
-
-<p>
-Parfois, la pleine conscience commence par quelque chose de
-très ordinaire : s'arrêter un instant et remarquer ce qui est
-déjà présent.
-</p>
-
-<p>
-Le bruit de la pluie, le mouvement des feuilles, un repas partagé
-avec une autre personne ou simplement la sensation de respirer
-peuvent devenir des occasions de revenir au moment présent.
-</p>
-
-<p>
-Nous n'avons pas besoin de rendre chaque instant extraordinaire.
-Nous pouvons simplement apprendre à le remarquer.
-</p>
-
-<p>
-Pour moi, c'est l'un des aspects les plus accessibles de la pleine
-conscience : <strong>observer attentivement, voir clairement et
-répondre avec bienveillance.</strong>
-</p>
-
-</section>
-
-
-
-<!-- QUESTIONS DE RÉFLEXION -->
-
-<section class="card">
-
-<h2>🪷 Questions de réflexion</h2>
-
-<p>
-De temps en temps, vous pouvez vous asseoir tranquillement et
-réfléchir à l'une de ces questions :
-</p>
-
-<ul>
-
-<li>
-Qu'est-ce que je vis en ce moment ?
-</li>
-
-<li>
-Quelles pensées influencent mes actions ?
-</li>
-
-<li>
-Suis-je en train de réagir ou de répondre consciemment ?
-</li>
-
-<li>
-Quels changements ai-je remarqués en moi récemment ?
-</li>
-
-<li>
-Dans quelles situations pourrais-je faire preuve de plus de patience ?
-</li>
-
-<li>
-Comment puis-je apporter davantage de bienveillance dans une
-journée ordinaire ?
-</li>
-
-</ul>
-
-<p>
-Il n'est pas nécessaire de trouver immédiatement une réponse.
-Parfois, le simple fait d'observer honnêtement la question
-a déjà de la valeur.
-</p>
-
-</section>
-
-
-
-<!-- CONCLUSION -->
-
-<section class="card">
-
-<h2>💚 Commencer par un seul instant</h2>
-
-<p>
-La pleine conscience n'a pas besoin de commencer par une routine
-compliquée. Elle peut commencer par une respiration, une
-observation attentive, une parole bienveillante ou une pause
-avant de réagir.
-</p>
-
-<p>
-Avec une pratique régulière, ces petits moments peuvent devenir
-des occasions de mieux nous comprendre et de vivre avec
-davantage de présence attentive, de compassion et de sagesse.
-</p>
-
-</section>
-
-
-</main>
-
-
-
-<!-- =========================
-     PIED DE PAGE
-========================= -->
-
-<footer class="footer">
-
-<p>
-© 2026 Yangocean
-</p>
-
-<p>
-
-<a href="/fr/about.html">À propos</a> |
-<a href="/fr/privacy.html">Politique de confidentialité</a> |
-<a href="/fr/terms.html">Conditions d'utilisation</a> |
-<a href="/fr/contact.html">Contact</a>
-
-</p>
-
-</footer>
-
-
-</div>
-
-
-
-<!-- =========================
-     STYLE DES MENUS DÉROULANTS
-========================= -->
-
-<style>
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* HEADER */
+
+.site-header {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-top: 18px;
+    padding: 22px 26px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.04);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.site-name {
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-tagline {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.language-selector {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.9rem;
+}
+
+.language-selector a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.language-selector a[lang="fr"] {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.main-nav > a,
+.dropdown > a {
+    color: var(--green);
+    font-size: 0.94rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.main-nav > a:hover,
+.dropdown > a:hover {
+    color: var(--deep-green);
+    text-decoration: underline;
+}
 
 .dropdown {
     position: relative;
@@ -824,11 +170,14 @@ davantage de présence attentive, de compassion et de sagesse.
 .dropdown-content {
     display: none;
     position: absolute;
-    background: white;
-    min-width: 210px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
     padding: 8px 0;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(23, 69, 50, 0.12);
     z-index: 1000;
     text-align: left;
 }
@@ -836,128 +185,1466 @@ davantage de présence attentive, de compassion et de sagesse.
 .dropdown-content a {
     display: block;
     padding: 10px 15px;
+    color: var(--green);
+    font-size: 0.92rem;
     text-decoration: none;
-    color: #285943;
 }
 
 .dropdown-content a:hover {
-    background: #f2f7f3;
+    background: var(--soft-green);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
 }
 
+/* MAIN CONTENT */
+
+main {
+    padding-top: 18px;
+    padding-bottom: 48px;
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--soft-green), var(--warm-cream));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: clamp(30px, 6vw, 52px) 26px;
+    margin: 24px 0 30px;
+    text-align: center;
+}
+
+.hero-icon {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 12px;
+    color: #53645a;
+    font-size: 1.06rem;
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+}
+
+.hero-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.hero-links a {
+    display: inline-block;
+    padding: 10px 17px;
+    border: 1px solid var(--green);
+    border-radius: 9px;
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-links a:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    text-align: center;
+    margin: 24px 0 32px;
+    padding: 20px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+.read-aloud button {
+    border: none;
+    border-radius: 9px;
+    padding: 11px 18px;
+    margin: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    background: var(--green);
+    color: #ffffff;
+    transition: background 0.2s ease;
+}
+
+.read-aloud button:hover {
+    background: var(--deep-green);
+}
+
+.read-aloud button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#readAloudStatus {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+/* CONTENT CARDS */
+
+#content-to-read > section.card,
+#content-to-read > section.mindfulness-topic {
+    margin: 24px 0;
+    padding: clamp(22px, 4vw, 34px);
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(23, 69, 50, 0.045);
+}
+
+#content-to-read .card h2,
+#content-to-read .mindfulness-topic h2 {
+    margin: 0 0 17px;
+    color: var(--deep-green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.35rem, 3vw, 1.7rem);
+    line-height: 1.4;
+}
+
+#content-to-read .card h3,
+#content-to-read .mindfulness-topic h3 {
+    margin-top: 25px;
+    color: var(--green);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+#content-to-read .card p,
+#content-to-read .mindfulness-topic p {
+    margin: 0 0 17px;
+    line-height: 1.85;
+}
+
+#content-to-read .card p:last-child,
+#content-to-read .mindfulness-topic p:last-child {
+    margin-bottom: 0;
+}
+
+#content-to-read .card ul,
+#content-to-read .card ol {
+    padding-left: 25px;
+    line-height: 1.9;
+}
+
+#content-to-read .card li {
+    margin-bottom: 7px;
+}
+
+#content-to-read .card a,
+#content-to-read .mindfulness-topic a {
+    font-weight: 600;
+    text-decoration-thickness: 1px;
+}
+
+#content-to-read .card a:hover,
+#content-to-read .mindfulness-topic a:hover {
+    color: var(--deep-green);
+}
+
+/* MEDITATION GRID */
+
+.meditation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.meditation-item {
+    min-width: 0;
+    padding: 22px;
+    background: var(--soft-green);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.meditation-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(23, 69, 50, 0.08);
+}
+
+.meditation-item h3 {
+    margin: 0 0 12px !important;
+    color: var(--deep-green);
+    font-size: 1.15rem;
+}
+
+.meditation-item p {
+    margin-bottom: 15px !important;
+}
+
+.meditation-item a {
+    display: inline-block;
+}
+
+/* FEATURED GRATITUDE ARTICLE */
+
+.gratitude-card {
+    background: var(--warm-cream) !important;
+    border-left: 5px solid var(--green) !important;
+}
+
+.gratitude-card .card-subtitle {
+    margin-top: -8px !important;
+    color: var(--muted);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.12rem;
+    font-style: italic;
+}
+
+/* FEATURED RETREAT */
+
+.retreat-card {
+    background: #f7faf4 !important;
+}
+
+/* FOOTER */
+
+.footer {
+    margin-top: 36px;
+    padding: 28px 20px;
+    background: var(--warm-cream);
+    border: 1px solid var(--border);
+    border-radius: 16px 16px 0 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.footer p {
+    margin: 7px 0;
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin-bottom: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .container {
+        padding: 0 12px;
+    }
+
+    .site-header {
+        margin-top: 10px;
+        padding: 18px 14px;
+    }
+
+    .header-top {
+        align-items: flex-start;
+    }
+
+    .site-name {
+        font-size: 1.65rem;
+    }
+
+    .language-selector {
+        gap: 5px;
+    }
+
+    .main-nav {
+        justify-content: flex-start;
+        gap: 12px;
+        line-height: 1.8;
+    }
+
+    .dropdown-content {
+        left: auto;
+        right: 0;
+        min-width: min(230px, 85vw);
+        max-width: 90vw;
+    }
+
+    .hero {
+        padding: 30px 18px;
+        margin: 20px 0 24px;
+    }
+
+    #content-to-read > section.card,
+    #content-to-read > section.mindfulness-topic {
+        margin: 18px 0;
+        padding: 22px 18px;
+    }
+
+    .meditation-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .meditation-item {
+        padding: 20px;
+    }
+
+    .read-aloud {
+        padding: 15px 10px;
+    }
+
+    .read-aloud button {
+        padding: 11px 14px;
+        margin: 4px 2px;
+    }
+
+    .footer-links {
+        gap: 10px 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .read-aloud button,
+    .meditation-item {
+        transition: none;
+    }
+
+    .meditation-item:hover {
+        transform: none;
+    }
+}
 </style>
+</head>
 
+<body>
+<div class="container">
 
+<header class="site-header">
+    <div class="header-top">
+        <div>
+            <a class="site-name" href="/fr/">Yangocean</a>
+            <span class="site-tagline">Vie en pleine conscience • Connexion avec la nature • Durabilité</span>
+        </div>
 
-<!-- =========================
-     SCRIPT DE LECTURE À VOIX HAUTE
-========================= -->
+        <div class="language-selector" aria-label="Choisir la langue">
+            <a href="/mindfulness.html" lang="en">EN</a> |
+            <a href="/ms/mindfulness.html" lang="ms">BM</a> |
+            <a href="/zh/mindfulness.html" lang="zh">中文</a> |
+            <a href="/fr/mindfulness.html" lang="fr" aria-current="page">FR</a> |
+            <a href="/es/mindfulness.html" lang="es">ES</a> |
+            <a href="/my/mindfulness.html" lang="my">မြန်မာ</a>
+        </div>
+    </div>
 
+    <nav class="main-nav" aria-label="Navigation principale">
+        <a href="/fr/">Accueil</a>
+
+        <span class="dropdown">
+            <a href="/fr/mindfulness.html" aria-haspopup="true">🌿 Vie en pleine conscience ▾</a>
+            <span class="dropdown-content">
+                <a href="/fr/mindfulness.html">🧘 Pleine conscience et Dhamma</a>
+                <a href="/fr/mindful-ethical-living.html">💚 Vie consciente et éthique</a>
+                <a href="/fr/mindful-eating.html">🥗 Alimentation en pleine conscience</a>
+                <a href="/fr/mindful-food.html">🍲 Alimentation consciente et vidéos culinaires</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/fr/nature-connection.html" aria-haspopup="true">🌳 Connexion avec la nature ▾</a>
+            <span class="dropdown-content">
+                <a href="/fr/nature-connection.html">🌳 Connexion avec la nature</a>
+                <a href="/fr/eco.html">🌍 Sensibilisation à l'environnement</a>
+                <a href="/fr/blog.html">📝 Journal</a>
+            </span>
+        </span>
+
+        <span class="dropdown">
+            <a href="/fr/apps.html" aria-haspopup="true">📱 Applications associées ▾</a>
+            <span class="dropdown-content">
+                <a href="/fr/apps.html">📱 Toutes les applications</a>
+                <a href="/fr/apps.html#eft">🌿 Application Yangocean</a>
+                <a href="/fr/apps.html#healthy-body">🥗 QuQu Healthy Body</a>
+                <a href="/fr/apps.html#duidui-fit">🏃 DuiDui Fit</a>
+            </span>
+        </span>
+    </nav>
+</header>
+
+<main id="content-to-read">
+
+<!-- HERO -->
+<section class="hero">
+    <span class="hero-icon" aria-hidden="true">🧘</span>
+    <h1>Pleine conscience et Dhamma</h1>
+
+    <p>
+        Cultiver la présence attentive, la sagesse et la compassion
+        pour vivre de manière plus paisible.
+    </p>
+
+    <p>
+        Découvrez la méditation, les réflexions bouddhistes
+        et des pratiques simples pour intégrer la pleine conscience
+        dans la vie quotidienne.
+    </p>
+
+    <div class="hero-links">
+        <a href="#meditation-collection">Découvrir la méditation</a>
+        <a href="#daily-mindfulness">La pleine conscience au quotidien</a>
+    </div>
+</section>
+
+<!-- READ ALOUD -->
+<div class="read-aloud" aria-label="Écouter cette page">
+    <button type="button" id="readAloudButton" aria-label="Lire cette page à voix haute">
+        🔊 Écouter
+    </button>
+
+    <button type="button" id="stopReadAloudButton"
+            aria-label="Arrêter la lecture"
+            style="background:#64756b;">
+        ■ Arrêter
+    </button>
+
+    <p id="readAloudStatus" role="status" aria-live="polite">
+        Cliquez sur « Écouter » pour entendre le texte. En l'absence de son, vérifiez le volume de votre appareil et les paramètres de votre navigateur.
+    </p>
+</div>
+
+<!-- INTRODUCTION -->
+<section class="card">
+    <h2>🌿 Qu'est-ce que la pleine conscience ?</h2>
+
+    <p>
+        La pleine conscience consiste à porter attention au moment présent
+        avec lucidité, sans réagir immédiatement à tout ce que nous vivons.
+    </p>
+
+    <p>
+        Nous pouvons prendre conscience de notre respiration,
+        de nos pensées, de nos émotions, de nos sensations
+        et de nos actions au moment où elles se produisent.
+        Cette simple attention peut nous aider à reconnaître
+        nos habitudes et à répondre plus consciemment
+        aux situations de la vie quotidienne.
+    </p>
+
+    <p>
+        La pleine conscience n'exige pas que chaque instant soit calme
+        ou agréable. Elle commence par apprendre à voir ce qui se passe
+        réellement, un moment après l'autre.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🪷 La pleine conscience et le Dhamma</h2>
+
+    <p>
+        Dans la tradition bouddhiste, la pleine conscience est étroitement
+        liée au développement de la sagesse et d'une conduite éthique.
+        Elle n'est pas simplement une technique de relaxation,
+        mais fait partie d'une voie plus vaste visant à comprendre
+        l'esprit et la vie.
+    </p>
+
+    <p>
+        Les enseignements du Dhamma nous encouragent à observer
+        le changement, à comprendre les causes et les conditions,
+        à reconnaître l'attachement et à développer
+        la compassion et la sagesse.
+    </p>
+
+    <p>
+        Les différentes traditions bouddhistes expliquent
+        et pratiquent ces enseignements de diverses manières.
+        Cette page présente des réflexions simples inspirées
+        principalement des perspectives du bouddhisme Theravāda.
+    </p>
+</section>
+
+<!-- DAILY MINDFULNESS -->
+<section class="card" id="daily-mindfulness">
+    <h2>🌱 Intégrer la présence attentive dans la vie quotidienne</h2>
+
+    <p>
+        La pleine conscience peut être pratiquée au cours
+        de nos activités ordinaires. Il n'est pas nécessaire
+        d'attendre de s'asseoir tranquillement pour méditer.
+    </p>
+
+    <ul>
+        <li>Remarquez votre respiration lorsque vous marchez.</li>
+        <li>Accordez toute votre attention aux aliments que vous mangez.</li>
+        <li>Écoutez pleinement lorsqu'une autre personne vous parle.</li>
+        <li>Remarquez les tensions dans votre corps avant de réagir.</li>
+        <li>Prenez une pause avant d'envoyer un message sous le coup de la colère.</li>
+        <li>Observez vos pensées sans nécessairement les croire ni les suivre.</li>
+    </ul>
+
+    <p>
+        Ces petits moments d'attention peuvent progressivement
+        faire partie de notre quotidien.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🧘 Une pratique simple de méditation</h2>
+
+    <p>
+        La méditation nous offre un moment de calme pour entraîner
+        notre attention et observer l'esprit.
+        Les débutants n'ont pas besoin de forcer leur esprit
+        à devenir complètement vide.
+    </p>
+
+    <p>
+        Une approche simple consiste à prendre la respiration naturelle
+        comme objet d'attention. Asseyez-vous confortablement,
+        laissez votre corps se détendre et remarquez les sensations
+        liées à la respiration.
+    </p>
+
+    <p>
+        Lorsque l'esprit s'égare, reconnaissez doucement cette distraction,
+        puis ramenez votre attention vers la respiration.
+        Cela peut se produire de nombreuses fois.
+        Le fait de revenir à la respiration fait lui-même partie
+        de la pratique.
+    </p>
+
+    <h3>Une routine simple</h3>
+
+    <ul>
+        <li><strong>Le matin :</strong> consacrez 5 à 15 minutes à observer tranquillement votre respiration.</li>
+        <li><strong>Pendant la journée :</strong> prenez quelques respirations conscientes avant les actions importantes.</li>
+        <li><strong>Le soir :</strong> réfléchissez brièvement aux pensées, aux paroles et aux actions de la journée.</li>
+    </ul>
+
+    <p>
+        Le but n'est pas d'obtenir une sensation particulière.
+        Il s'agit de développer la présence attentive
+        et d'apprendre à observer plus clairement nos expériences.
+    </p>
+</section>
+
+<!-- MEDITATION COLLECTION -->
+<section class="card" id="meditation-collection">
+    <h2>🪷 Comprendre la méditation</h2>
+
+    <p>
+        La méditation peut être abordée de différentes façons.
+        Dans la tradition Pa-Auk, l'entraînement repose sur la vertu
+        (<em>sīla</em>), la concentration (<em>samādhi</em>)
+        et la sagesse (<em>paññā</em>).
+        L'attention portée à la respiration est un objet de méditation
+        courant, tandis que d'autres pratiques peuvent être enseignées
+        selon les besoins et le stade de progression du méditant.
+    </p>
+
+    <p>
+        Les articles de cette collection présentent ces idées
+        dans un langage accessible.
+        Ils proposent des informations et des réflexions éducatives,
+        mais ne remplacent pas les conseils personnels
+        d'un enseignant de méditation qualifié,
+        en particulier pour les pratiques formelles
+        de concentration et de méditation de la vision pénétrante.
+    </p>
+
+    <ul>
+        <li>
+            <a href="/fr/blog/pa-auk-meditation-tradition.html">
+                La tradition de méditation Pa-Auk : de la vertu à la concentration et à la sagesse →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/mindfulness-of-breathing.html">
+                L'attention à la respiration : commencer une pratique de méditation →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/building-a-meditation-habit.html">
+                Développer une habitude régulière de méditation : patience, effort et équilibre →
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- MEDITATION FOR EVERY STAGE OF LIFE -->
+<section class="card">
+    <h2>🌱 La méditation à chaque étape de la vie</h2>
+
+    <p>
+        Nos responsabilités, nos emplois du temps et nos capacités
+        physiques évoluent au fil de la vie.
+        Ces articles explorent différentes façons de réserver
+        du temps à la réflexion et à la méditation,
+        tout en respectant les circonstances de chacun.
+        Les suggestions proposées sont des points de départ adaptables,
+        et non des promesses de résultats particuliers.
+    </p>
+
+    <div class="meditation-card">
+        <a href="/fr/blog/meditation-for-children.html">
+            <h3>La méditation pour les enfants</h3>
+
+            <p>
+                Faites découvrir aux enfants les bienfaits de la pleine
+                conscience grâce à une respiration douce,
+                des activités amusantes et la méditation de bienveillance.
+                Découvrez des moyens simples de les aider à développer
+                le calme, la concentration, la gratitude et la compassion
+                dans la vie quotidienne.
+            </p>
+
+            <span class="read-more">Lire la suite →</span>
+        </a>
+    </div>
+
+    <div class="meditation-grid">
+
+        <article class="meditation-item">
+            <h3>🎓 Étudiants</h3>
+
+            <p>
+                La vie étudiante peut être intense et exigeante.
+                Découvrez comment quelques minutes de pleine conscience
+                et de respiration douce peuvent aider les étudiants
+                à développer le calme, la patience et une meilleure
+                présence attentive face aux pressions quotidiennes.
+            </p>
+
+            <a href="/fr/blog/meditation-for-students.html">
+                Méditation pour les étudiants →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💚 Mères et pères</h3>
+
+            <p>
+                Trouvez de petits moments de calme au milieu
+                des responsabilités familiales, des tâches ménagères
+                et des soins apportés aux enfants.
+                Découvrez comment intégrer la patience
+                et la présence attentive dans l'éducation des enfants.
+            </p>
+
+            <a href="/fr/blog/meditation-for-parents.html">
+                Méditation pour les parents →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💼 Adultes actifs</h3>
+
+            <p>
+                Faites une place à la méditation tout en conciliant
+                travail, repos et autres responsabilités.
+                Commencez par de courts moments de présence attentive
+                répartis dans la journée.
+            </p>
+
+            <a href="/fr/blog/meditation-for-working-adults.html">
+                Méditation pour les adultes actifs →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>💑 Couples mariés</h3>
+
+            <p>
+                Réfléchissez à la patience, à la gentillesse,
+                à la communication sincère et à l'écoute.
+                Découvrez comment la pleine conscience individuelle
+                peut favoriser des échanges plus réfléchis avec son partenaire.
+            </p>
+
+            <a href="/fr/blog/meditation-for-married-couples.html">
+                Méditation pour les couples mariés →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌿 Adultes célibataires</h3>
+
+            <p>
+                Explorez le contentement, l'indépendance,
+                les relations enrichissantes et le développement intérieur
+                grâce à une pratique de méditation adaptée à votre quotidien.
+            </p>
+
+            <a href="/fr/blog/meditation-for-single-adults.html">
+                Méditation pour les adultes célibataires →
+            </a>
+        </article>
+
+        <article class="meditation-item">
+            <h3>🌼 Retraités, grands-parents et personnes âgées</h3>
+
+            <p>
+                Adaptez la méditation aux changements de rythme de vie,
+                de niveau d'énergie et de confort physique.
+                Découvrez comment la réflexion peut contribuer
+                à une vie quotidienne riche de sens à un âge avancé.
+            </p>
+
+            <a href="/fr/blog/meditation-for-retirees.html">
+                Méditation pour les personnes âgées →
+            </a>
+        </article>
+
+    </div>
+
+    <!-- GENTLE LOVING-KINDNESS MEDITATION FOR THOSE FACING ILLNESS -->
+    <article class="meditation-item" style="margin-top:22px;">
+        <h3>💚 Une méditation douce de bienveillance pour les personnes confrontées à la maladie</h3>
+
+        <p>
+            Lorsque le corps s'affaiblit ou doit faire face à la maladie,
+            une méditation douce de bienveillance peut offrir
+            une occasion de cultiver la chaleur humaine,
+            la compassion et la paix intérieure,
+            sans imposer d'efforts supplémentaires au corps.
+            Découvrez des façons simples de pratiquer le <em>mettā</em>
+            tout en vous reposant confortablement,
+            en adressant des souhaits bienveillants à vous-même,
+            à vos proches et à tous les êtres vivants.
+        </p>
+
+        <a href="/fr/blog/gentle-loving-kindness-meditation-for-illness.html">
+            Méditation douce de bienveillance face à la maladie →
+        </a>
+    </article>
+
+    <p style="margin-top:22px;">
+        La méditation peut se pratiquer dans une posture confortable.
+        Il n'est pas nécessaire de s'asseoir en tailleur
+        si une autre position sûre et bien soutenue
+        vous convient davantage.
+    </p>
+</section>
+
+<!-- MEDITATION PRACTICES -->
+<section class="card">
+    <h2>📚 Pratiques méditatives et réflexions sur le Dhamma</h2>
+
+    <p>
+        En complément des conseils pratiques pour la vie quotidienne,
+        nous explorons certains enseignements bouddhistes
+        et sujets de méditation en respectant leur contexte traditionnel.
+    </p>
+
+    <ul>
+        <li>
+            <a href="/fr/blog/metta-loving-kindness-meditation.html">
+                La méditation de bienveillance (<em>mettā</em>) : cultiver un cœur bienveillant →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/samatha-and-vipassana.html">
+                <em>Samatha</em> et <em>Vipassanā</em> : concentration et vision pénétrante →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/four-elements-meditation.html">
+                La méditation sur les quatre éléments : introduction aux qualités matérielles →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/learning-meditation-with-a-teacher.html">
+                Apprendre la méditation avec un enseignant qualifié →
+            </a>
+        </li>
+        <li>
+            <a href="/fr/blog/working-with-meditation-difficulties.html">
+                Faire face à l'agitation, à la somnolence et au découragement →
+            </a>
+        </li>
+    </ul>
+</section>
+
+<!-- CORPORATE MINDFULNESS -->
+<section class="mindfulness-topic">
+    <h2>🌿 Formation à la pleine conscience en entreprise</h2>
+
+    <p>
+        Découvrez comment la pleine conscience et la méditation
+        peuvent favoriser une meilleure présence attentive,
+        l'équilibre émotionnel, la concentration et le bien-être
+        dans le milieu professionnel.
+        Nous accueillons les demandes des organisations intéressées
+        par des séances de pleine conscience en ligne,
+        avec une approche adaptable aux besoins de chaque environnement
+        de travail.
+    </p>
+
+    <p>
+        <a href="/fr/blog/corporate-mindfulness-training.html">
+            En savoir plus sur la formation à la pleine conscience en entreprise →
+        </a>
+    </p>
+</section>
+
+<!-- KINDNESS AND COMPASSION -->
+<section class="card">
+    <h2>💛 Bienveillance et compassion</h2>
+
+    <p>
+        La pleine conscience peut nous aider à remarquer
+        comment nos paroles et nos actions affectent les autres.
+        La présence attentive prend tout son sens
+        lorsqu'elle favorise la bienveillance et la compassion.
+    </p>
+
+    <p>Quelques expressions simples de la bienveillance :</p>
+
+    <ul>
+        <li>Parler honnêtement sans dureté inutile.</li>
+        <li>Écouter lorsqu'une personne a besoin d'être entendue.</li>
+        <li>Apporter son aide lorsqu'elle est réellement nécessaire.</li>
+        <li>Faire preuve de patience lorsque les situations sont difficiles.</li>
+        <li>Donner sans toujours attendre quelque chose en retour.</li>
+    </ul>
+
+    <p>
+        La compassion ne signifie pas que nous devons être d'accord
+        avec tout. Elle peut consister à répondre avec compréhension
+        tout en maintenant des limites appropriées.
+    </p>
+</section>
+
+<!-- THOUGHTS AND EMOTIONS -->
+<section class="card">
+    <h2>🌊 Observer les pensées et les émotions</h2>
+
+    <p>
+        Nos pensées et nos émotions peuvent sembler très puissantes,
+        surtout lorsque nous y réagissons immédiatement.
+        La pleine conscience nous donne l'occasion de les remarquer
+        avant de décider quoi faire.
+    </p>
+
+    <p>
+        Par exemple, lorsque la colère apparaît,
+        nous pouvons d'abord constater :
+        <strong>« La colère est présente. »</strong>
+        Au lieu d'agir immédiatement sous son influence,
+        nous pouvons observer cette émotion, respirer
+        et nous accorder le temps de choisir notre réponse.
+    </p>
+
+    <p>
+        La même approche peut s'appliquer à l'inquiétude,
+        à l'enthousiasme, à la tristesse, à la jalousie,
+        à la peur et à d'autres expériences changeantes.
+    </p>
+
+    <p>
+        Le but n'est pas de réprimer les émotions,
+        mais de mieux les comprendre et d'éviter
+        d'être contrôlé par chaque réaction passagère.
+    </p>
+</section>
+
+<!-- GRATITUDE AND APPRECIATION -->
+<section class="card gratitude-card">
+    <h2>💚 Lorsque la vie ne se déroule pas comme nous le souhaitons</h2>
+
+    <p class="card-subtitle">
+        La pratique de la gratitude et de la reconnaissance
+    </p>
+
+    <p>
+        La vie ne se déroule pas toujours comme nous le souhaitons.
+        Lorsque les choses tournent mal, nous pouvons nous sentir blessés,
+        déçus ou frustrés.
+        Pourtant, si nous prenons le temps de faire une pause
+        et de regarder notre situation avec davantage de recul,
+        nous pouvons réaliser qu'il existe encore beaucoup de choses
+        qui méritent notre reconnaissance.
+    </p>
+
+    <p>
+        La pleine conscience nous rappelle que nous pouvons reconnaître
+        nos difficultés sans laisser celles-ci éclipser
+        tout ce qui reste de bon dans notre vie.
+        En réfléchissant à l'impermanence,
+        en acceptant ce que nous ne pouvons pas toujours contrôler
+        et en appréciant la gentillesse des autres,
+        nous pouvons progressivement apprendre à faire face
+        aux défis de la vie avec davantage de sagesse,
+        de gratitude et de compassion.
+    </p>
+
+    <p>
+        La gratitude ne signifie pas nier notre souffrance.
+        Elle signifie se rappeler que même dans les moments difficiles,
+        notre vie peut encore contenir des instants précieux,
+        des occasions d'apprendre et des raisons d'être reconnaissants.
+    </p>
+
+    <p>
+        <a href="/fr/blog/when-life-does-not-go-our-way-gratitude-and-appreciation.html">
+            Lire l'article complet : Lorsque la vie ne se déroule pas comme nous le souhaitons →
+        </a>
+    </p>
+</section>
+
+<!-- FROM AWARENESS TO WISDOM -->
+<section class="card">
+    <h2>📖 De la présence attentive à la sagesse</h2>
+
+    <p>
+        La pleine conscience et la sagesse se soutiennent mutuellement.
+        Lorsque nous observons attentivement nos expériences,
+        nous pouvons commencer à reconnaître que les pensées,
+        les sentiments, les circonstances et les relations
+        sont en constante évolution.
+    </p>
+
+    <p>
+        Cette observation peut nous encourager à remettre en question
+        nos idées automatiques et à comprendre les conséquences
+        de nos choix.
+    </p>
+
+    <p>
+        L'apprentissage à partir d'enseignements fiables,
+        la réflexion sur nos expériences et l'application
+        de ce que nous apprenons dans la vie quotidienne
+        peuvent progressivement approfondir notre compréhension.
+    </p>
+
+    <p>
+        Une bonne connaissance devrait favoriser la clarté,
+        une conduite éthique, la compassion et la volonté
+        d'examiner nos propres idées et présupposés.
+    </p>
+</section>
+
+<!-- IMPERMANENCE -->
+<section class="card">
+    <h2>🍃 Apprendre du changement</h2>
+
+    <p>
+        L'impermanence est l'un des thèmes importants
+        des enseignements bouddhistes :
+        les expériences et les conditions sont en constante évolution.
+    </p>
+
+    <p>
+        Nous pouvons l'observer directement dans la vie quotidienne.
+        Le matin devient le soir, les jeunes plantes grandissent,
+        le temps change, les relations évoluent
+        et nos propres pensées et émotions apparaissent puis disparaissent.
+    </p>
+
+    <p>
+        Remarquer le changement ne signifie pas se détacher de la vie.
+        Cela peut plutôt nous aider à apprécier nos expériences
+        sans supposer qu'elles resteront toujours exactement les mêmes.
+    </p>
+</section>
+
+<!-- MINDFUL CHOICES -->
+<section class="card">
+    <h2>⚖️ La pleine conscience dans nos choix</h2>
+
+    <p>
+        La présence attentive peut également influencer
+        notre manière de vivre dans le monde.
+        Avant de faire un choix, nous pouvons prendre un moment
+        pour réfléchir à ses effets sur nous-mêmes,
+        les autres, les animaux et l'environnement naturel.
+    </p>
+
+    <ul>
+        <li>Ai-je vraiment besoin de cela ?</li>
+        <li>Pourrais-je choisir quelque chose de plus simple ?</li>
+        <li>Cette action risque-t-elle de créer des déchets inutiles ?</li>
+        <li>Quel effet mes paroles pourraient-elles avoir sur une autre personne ?</li>
+        <li>Est-ce que j'agis avec conscience ou simplement par habitude ?</li>
+    </ul>
+
+    <p>
+        Ces questions relient la présence intérieure
+        à une manière de vivre plus consciente et responsable.
+    </p>
+
+    <p>
+        <a href="/fr/mindful-ethical-living.html">
+            Découvrir une vie consciente et éthique →
+        </a>
+    </p>
+</section>
+
+<!-- HIRI AND OTTAPPA -->
+<section class="card">
+    <h2>🪷 Hiri et Ottappa : laisser la conscience morale et la sagesse guider nos choix</h2>
+
+    <p>
+        La pleine conscience ne consiste pas uniquement
+        à observer nos pensées et nos émotions.
+        Elle peut également nous aider à prendre conscience
+        des intentions qui se trouvent derrière nos décisions
+        et des effets que nos actions peuvent avoir sur les autres.
+    </p>
+
+    <p>
+        Dans les enseignements du bouddhisme Theravāda,
+        <em>Hiri</em> et <em>Ottappa</em> sont deux qualités importantes
+        qui protègent la conduite éthique.
+        Hiri désigne la conscience morale ou le sentiment
+        de honte face aux actes répréhensibles,
+        tandis qu'Ottappa désigne la crainte morale
+        des conséquences nuisibles des actions malsaines.
+    </p>
+
+    <p>
+        Ensemble, ces qualités nous encouragent à faire une pause
+        avant d'agir, à examiner nos intentions et à nous demander
+        si nos choix sont honnêtes, justes, bienveillants et bénéfiques.
+    </p>
+
+    <p>
+        Plutôt que de mesurer chaque décision uniquement
+        en fonction de notre intérêt personnel,
+        nous pouvons nous demander si nos actions risquent
+        de blesser quelqu'un, si nous traitons les autres équitablement
+        et s'il existe une manière plus bienveillante ou plus sage d'agir.
+    </p>
+
+    <p>
+        Cette réflexion nous rappelle que vivre de manière éthique
+        ne consiste pas seulement à éviter les mauvaises actions.
+        Il s'agit aussi de développer le sens des responsabilités,
+        la générosité, l'intégrité et la considération envers autrui.
+    </p>
+
+    <p>
+        <a href="/fr/blog/wisdom-of-right-action-hiri-ottappa.html">
+            Lire la réflexion complète : Avant d'agir, laissez votre conscience,
+            votre bienveillance et votre sagesse vous guider →
+        </a>
+    </p>
+</section>
+
+<!-- THINK BEFORE YOU BELIEVE -->
+<section class="card">
+    <h2>💡 Réfléchir avant de croire : l'importance de vérifier les informations</h2>
+
+    <p>
+        Chaque jour, nous recevons des informations provenant
+        de conversations, des réseaux sociaux, des actualités
+        et des personnes qui nous entourent.
+        Mais devons-nous croire tout ce que nous entendons,
+        voyons régulièrement ou recevons de quelqu'un en qui nous avons confiance ?
+    </p>
+
+    <p>
+        Il y a plus de 2 500 ans, le Bouddha a proposé des conseils
+        face à ce défi profondément humain dans un discours
+        connu sous le nom de <em>Kalama Sutta</em>.
+        Il nous encourage à ne pas accepter aveuglément
+        des affirmations fondées sur des rumeurs,
+        des traditions, une réputation ou une autorité,
+        mais à les examiner attentivement et à réfléchir
+        à leurs conséquences sur le bien-être ou la souffrance.
+    </p>
+
+    <p>
+        Dans le monde actuel, la pleine conscience peut nous aider
+        à faire une pause avant de croire ou de partager une information.
+        Nous pouvons vérifier la source, examiner les preuves,
+        reconnaître nos propres suppositions
+        et réfléchir avant de tirer une conclusion.
+    </p>
+
+    <p>
+        Avoir l'esprit ouvert ne signifie pas tout croire.
+        Cela signifie être disposé à examiner, à apprendre
+        et à modifier notre compréhension
+        lorsque de meilleures informations deviennent disponibles.
+    </p>
+
+    <p>
+        <a href="/fr/blog/think-before-you-believe.html">
+            Lire la réflexion complète : Réfléchir avant de croire —
+            l'importance de vérifier les informations →
+        </a>
+    </p>
+</section>
+
+<!-- QUIET REFLECTION -->
+<section class="card">
+    <h2>🌿 Un moment de réflexion tranquille</h2>
+
+    <p>
+        Parfois, la pleine conscience commence par quelque chose
+        de très ordinaire : s'arrêter un instant
+        et remarquer ce qui est déjà présent.
+    </p>
+
+    <p>
+        Le bruit de la pluie, le mouvement des feuilles,
+        un repas partagé avec une autre personne,
+        ou simplement la sensation de respirer
+        peuvent devenir une occasion de revenir au moment présent.
+    </p>
+
+    <p>
+        Nous n'avons pas besoin de rendre chaque instant exceptionnel.
+        Nous pouvons simplement apprendre à le remarquer.
+    </p>
+
+    <p>
+        Un aspect simple et accessible de la pleine conscience
+        peut se résumer ainsi :
+        <strong>observer attentivement, prendre conscience clairement
+        et répondre avec bienveillance.</strong>
+    </p>
+</section>
+
+<!-- DHAMMAGOONYE RETREAT -->
+<section class="card retreat-card">
+    <h2>🪷 Une retraite paisible : prendre le temps de regarder en soi</h2>
+
+    <p>
+        Parfois, passer du temps dans un environnement naturel paisible
+        nous donne l'occasion de ralentir,
+        d'apprécier la beauté qui nous entoure
+        et de tourner notre attention vers notre propre esprit.
+    </p>
+
+    <p>
+        À travers une réflexion personnelle et des photographies
+        de fleurs et d'arbres prises lors d'une retraite de méditation
+        à Dhammagoonye, nous explorons comment un environnement calme
+        peut nourrir notre intérêt pour la méditation,
+        la pleine conscience et la compréhension intérieure.
+    </p>
+
+    <p>
+        Le parcours de chacun est différent,
+        mais nous pouvons tous commencer par un instant de présence,
+        une respiration douce et la volonté d'observer la vie plus clairement.
+    </p>
+
+    <p>
+        <a href="/fr/blog/dhammagoonye-meditation-retreat.html">
+            🪷 Lire le témoignage personnel sur cette retraite →
+        </a>
+    </p>
+</section>
+
+<!-- REFLECTION QUESTIONS -->
+<section class="card">
+    <h2>🪷 Questions de réflexion</h2>
+
+    <p>Vous pouvez parfois vous asseoir tranquillement et réfléchir à l'une de ces questions :</p>
+
+    <ul>
+        <li>Qu'est-ce que je suis en train de vivre en ce moment ?</li>
+        <li>Quelles pensées influencent mes actions ?</li>
+        <li>Est-ce que je réagis impulsivement ou est-ce que je réponds consciemment ?</li>
+        <li>Quels changements ai-je remarqués en moi récemment ?</li>
+        <li>Dans quels domaines pourrais-je pratiquer davantage la patience ?</li>
+        <li>Comment puis-je apporter davantage de bienveillance dans une journée ordinaire ?</li>
+    </ul>
+
+    <p>
+        Il n'est pas nécessaire de trouver une réponse immédiatement.
+        Parfois, la valeur réside simplement dans le fait
+        d'observer honnêtement la question.
+    </p>
+</section>
+
+<!-- CLOSING -->
+<section class="card">
+    <h2>💚 Commencer par un seul instant</h2>
+
+    <p>
+        La pleine conscience n'a pas besoin de commencer
+        par une routine compliquée.
+        Elle peut débuter par une respiration,
+        une observation attentive, une parole bienveillante
+        ou une pause avant de réagir.
+    </p>
+
+    <p>
+        Avec une pratique régulière,
+        ces petits instants peuvent devenir des occasions
+        de mieux nous comprendre et de vivre avec davantage
+        de présence attentive, de compassion et de sagesse.
+    </p>
+
+    <p>
+        <a href="/fr/mindful-ethical-living.html">
+            Continuer à découvrir une vie consciente et éthique →
+        </a>
+    </p>
+</section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="/fr/">Accueil</a>
+        <a href="/fr/mindfulness.html">Pleine conscience et Dhamma</a>
+        <a href="/fr/mindful-ethical-living.html">Vie consciente et éthique</a>
+        <a href="/fr/nature-connection.html">Connexion avec la nature</a>
+        <a href="/fr/blog.html">Journal</a>
+        <a href="/fr/about.html">À propos</a>
+        <a href="/fr/privacy.html">Politique de confidentialité</a>
+        <a href="/fr/terms.html">Conditions d'utilisation</a>
+        <a href="/fr/contact.html">Contact</a>
+    </div>
+
+    <p>© 2026 Yangocean</p>
+    <p>Vie en pleine conscience • Connexion avec la nature • Durabilité</p>
+    <p>Cultiver la présence attentive, la reconnaissance et la bienveillance au quotidien.</p>
+</footer>
+
+</div>
+
+<!-- READ-ALOUD SCRIPT -->
 <script>
+(function () {
+    "use strict";
 
-const readAloudButton =
-document.getElementById("readAloudButton");
+    const readButton = document.getElementById("readAloudButton");
+    const stopButton = document.getElementById("stopReadAloudButton");
+    const status = document.getElementById("readAloudStatus");
+    const content = document.getElementById("content-to-read");
 
-let currentSpeech = null;
+    if (!readButton || !stopButton || !status || !content) return;
 
-
-readAloudButton.addEventListener("click", function () {
-
-    if (!("speechSynthesis" in window)) {
-
-        alert("La lecture à voix haute n'est pas prise en charge par ce navigateur.");
-
+    if (!("speechSynthesis" in window) ||
+        !("SpeechSynthesisUtterance" in window)) {
+        readButton.disabled = true;
+        status.textContent =
+            "La lecture à voix haute n'est pas prise en charge par ce navigateur. Veuillez essayer une version récente de Safari ou Chrome.";
         return;
-
     }
 
+    const synth = window.speechSynthesis;
 
-    if (speechSynthesis.speaking &&
-        !speechSynthesis.paused) {
+    let chunks = [];
+    let chunkIndex = 0;
+    let isReading = false;
+    let isPaused = false;
+    let runId = 0;
 
-        speechSynthesis.pause();
-
-        readAloudButton.textContent = "▶ Reprendre";
-
-        return;
-
+    function setButton(label) {
+        readButton.textContent = label;
     }
 
+    function getReadableText() {
+        const elements = content.querySelectorAll("h1, h2, h3, p, li");
 
-    if (speechSynthesis.paused) {
-
-        speechSynthesis.resume();
-
-        readAloudButton.textContent = "⏸ Mettre en pause";
-
-        return;
-
+        return Array.from(elements)
+            .map(function (element) {
+                return (element.innerText || element.textContent || "").trim();
+            })
+            .filter(Boolean)
+            .join(". ")
+            .replace(/\s+/g, " ");
     }
 
+    function makeChunks(text) {
+        const sentences = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [text];
+        const result = [];
+        let current = "";
 
-    const elements =
-    document.querySelectorAll(
-        "#content-to-read h1, " +
-        "#content-to-read h2, " +
-        "#content-to-read h3, " +
-        "#content-to-read p, " +
-        "#content-to-read li"
-    );
+        sentences.forEach(function (sentence) {
+            const part = sentence.trim();
+            if (!part) return;
 
+            if ((current + " " + part).trim().length > 180 && current) {
+                result.push(current.trim());
+                current = part;
+            } else {
+                current = (current + " " + part).trim();
+            }
+        });
 
-    let text = "";
+        if (current) result.push(current.trim());
 
-    elements.forEach(function (element) {
+        return result;
+    }
 
-        text += element.innerText + " ";
+    function chooseVoice(utterance) {
+        const voices = synth.getVoices();
 
+        const preferred =
+            voices.find(function (voice) {
+                return /^fr-FR$/i.test(voice.lang) &&
+                    /natural|enhanced/i.test(voice.name);
+            }) ||
+            voices.find(function (voice) {
+                return /^fr-FR$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^fr-BE$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^fr-CA$/i.test(voice.lang);
+            }) ||
+            voices.find(function (voice) {
+                return /^fr/i.test(voice.lang);
+            });
+
+        if (preferred) {
+            utterance.voice = preferred;
+            utterance.lang = preferred.lang;
+        } else {
+            utterance.lang = "fr-FR";
+        }
+
+        utterance.rate = 0.92;
+        utterance.pitch = 1;
+        utterance.volume = 1;
+    }
+
+    function finishReading(message) {
+        isReading = false;
+        isPaused = false;
+        chunks = [];
+        chunkIndex = 0;
+
+        setButton("🔊 Écouter");
+        status.textContent = message || "La lecture de cette page est terminée.";
+    }
+
+    function speakNext(activeRunId) {
+        if (activeRunId !== runId || !isReading || isPaused) return;
+
+        if (chunkIndex >= chunks.length) {
+            finishReading("La lecture de cette page est terminée.");
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(chunks[chunkIndex]);
+        chooseVoice(utterance);
+
+        utterance.onend = function () {
+            if (activeRunId !== runId) return;
+
+            chunkIndex += 1;
+            speakNext(activeRunId);
+        };
+
+        utterance.onerror = function (event) {
+            if (activeRunId !== runId) return;
+
+            if (event.error === "canceled" ||
+                event.error === "interrupted") {
+                return;
+            }
+
+            finishReading(
+                "Votre navigateur n'a pas pu poursuivre la lecture. Réessayez ou vérifiez les paramètres du navigateur et de la synthèse vocale."
+            );
+        };
+
+        synth.speak(utterance);
+    }
+
+    readButton.addEventListener("click", function () {
+        if (isReading && !isPaused) {
+            synth.pause();
+            isPaused = true;
+            setButton("▶ Reprendre");
+            status.textContent = "Lecture en pause. Cliquez sur « Reprendre » pour continuer.";
+            return;
+        }
+
+        if (isReading && isPaused) {
+            isPaused = false;
+            synth.resume();
+            setButton("⏸ Pause");
+            status.textContent = "Lecture en cours…";
+
+            if (!synth.speaking && chunkIndex < chunks.length) {
+                speakNext(runId);
+            }
+
+            return;
+        }
+
+        synth.cancel();
+        runId += 1;
+
+        const text = getReadableText();
+
+        if (!text) {
+            status.textContent = "Aucun texte n'est disponible pour la lecture.";
+            return;
+        }
+
+        chunks = makeChunks(text);
+        chunkIndex = 0;
+        isReading = true;
+        isPaused = false;
+
+        setButton("⏸ Pause");
+        status.textContent = "Lecture en cours…";
+
+        // Start speech directly from the user's tap for mobile compatibility.
+        speakNext(runId);
     });
 
+    stopButton.addEventListener("click", function () {
+        runId += 1;
+        synth.cancel();
+        finishReading("La lecture a été arrêtée.");
+    });
 
-    currentSpeech =
-    new SpeechSynthesisUtterance(text);
+    if ("onvoiceschanged" in synth) {
+        synth.onvoiceschanged = function () {
+            synth.getVoices();
+        };
+    }
 
-    currentSpeech.rate = 0.95;
+    synth.getVoices();
 
-    currentSpeech.pitch = 1;
-
-    currentSpeech.lang = "fr-FR";
-
-
-    currentSpeech.onend = function () {
-
-        readAloudButton.textContent =
-        "🔊 Lire à voix haute";
-
-        currentSpeech = null;
-
-    };
-
-
-    currentSpeech.onerror = function () {
-
-        readAloudButton.textContent =
-        "🔊 Lire à voix haute";
-
-        currentSpeech = null;
-
-    };
-
-
-    speechSynthesis.speak(currentSpeech);
-
-    readAloudButton.textContent =
-    "⏸ Mettre en pause";
-
-});
-
+    window.addEventListener("pagehide", function () {
+        runId += 1;
+        synth.cancel();
+    });
+})();
 </script>
 
-
 </body>
-
 </html>
-
