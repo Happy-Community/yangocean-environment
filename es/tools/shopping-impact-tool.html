@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Herramienta de Impacto de las Compras | Compras Sostenibles | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Utiliza esta sencilla herramienta de impacto de las compras para reflexionar sobre la necesidad, la durabilidad, la reutilización, la reparación, el embalaje y otros factores antes de comprar.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/es/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="zh"
+href="https://yangocean.com/zh/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="my"
+href="https://yangocean.com/my/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/tools/shopping-impact-tool.html">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26352b;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #dfe7df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #2f6b45;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756b;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #304438;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b45;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 225px;
+    background: white;
+    border: 1px solid #dfe7df;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.language a {
+    font-size: 0.82rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+    background: linear-gradient(135deg, #edf7ee, #f8fbf7);
+    border-radius: 18px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f6b45;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #526158;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px;
+}
+
+.tts-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    background: #2f6b45;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.tts-btn:hover {
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    margin-top: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2f6b45;
+    margin-top: 0;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin-bottom: 25px;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    max-width: 760px;
+    margin: 10px auto 0;
+    background: #f5f8f4;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.field select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd8ce;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+}
+
+.help {
+    display: block;
+    margin-top: 5px;
+    color: #6a756d;
+    font-size: 0.86rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #2f6b45;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #245636;
+}
+
+.result {
+    display: none;
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 12px;
+    background: #eaf5eb;
+    text-align: center;
+}
+
+.score {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #2f6b45;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+.result p {
+    margin: 8px auto;
+    max-width: 650px;
+}
+
+.advice {
+    margin-top: 18px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #f7faf7;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2f6b45;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 30px 20px;
+    color: #59645b;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #45604d;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.84rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/es/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Vida consciente • Naturaleza • Sostenibilidad
+</div>
+
+</div>
+
+<nav>
+
+<a href="/es/">Inicio</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Vida consciente ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/mindfulness.html">
+🧘 Atención plena y Dhamma
+</a>
+
+<a href="/es/mindful-eating.html">
+🥗 Alimentación consciente
+</a>
+
+<a href="/es/mindful-ethical-living.html">
+♻️ Vida sostenible
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Conexión con la naturaleza ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/nature-connection.html">
+🌳 Conexión con la naturaleza
+</a>
+
+<a href="/es/eco.html">
+🌍 Conciencia medioambiental
+</a>
+
+<a href="/es/blog.html">
+📝 Blog
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Aplicaciones relacionadas ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/apps.html">
+📱 Todas las aplicaciones relacionadas
+</a>
+
+<a href="/es/apps.html#eft">
+🌿 Aplicación Yangocean
+</a>
+
+<a href="/es/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/es/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+
+<a href="/ms/">BM</a>
+
+<a href="/zh/">中文</a>
+
+<a href="/fr/">FR</a>
+
+<a href="/es/">ES</a>
+
+<a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<section class="hero">
+
+<h1>🛍️ Herramienta de Impacto de las Compras</h1>
+
+<p>
+Una forma sencilla de hacer una pausa antes de comprar y reflexionar
+sobre la necesidad, la durabilidad, la reutilización, la reparación,
+el embalaje y la posibilidad de pedir prestado, compartir o comprar
+un artículo de segunda mano.
+</p>
+
+</section>
+
+<div class="read-aloud">
+
+<button
+type="button"
+class="tts-btn"
+onclick="startReading()">
+🔊 Leer en voz alta
+</button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="pauseReading()">
+⏸ Pausar
+</button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="stopReading()">
+⏹ Detener
+</button>
+
+</div>
+
+<section class="section">
+
+<h2>🛍️ Antes de comprar</h2>
+
+<p class="section-intro">
+Las compras tienen un impacto medioambiental que va más allá del
+momento de la adquisición. Los materiales, la fabricación, el
+transporte, el embalaje, el uso y la eliminación pueden contribuir
+a ese impacto. Esta herramienta te anima a hacer una breve pausa
+antes de comprar para considerar todo el ciclo de vida de un producto.
+</p>
+
+<div class="calculator">
+
+<div class="field">
+
+<label for="necessity">
+1. ¿Hasta qué punto es necesaria esta compra?
+</label>
+
+<select id="necessity">
+
+<option value="1">
+En realidad, no lo necesito
+</option>
+
+<option value="2">
+Sería agradable tenerlo
+</option>
+
+<option value="3">
+Es útil, pero no urgente
+</option>
+
+<option value="4">
+Lo necesito
+</option>
+
+<option value="5">
+Definitivamente lo necesito
+</option>
+
+</select>
+
+<span class="help">
+Piensa si ya tienes algo que pueda cumplir la misma función.
+</span>
+
+</div>
+
+<div class="field">
+
+<label for="lifespan">
+2. ¿Cuánto tiempo se espera que dure este artículo?
+</label>
+
+<select id="lifespan">
+
+<option value="1">
+Vida útil muy corta
+</option>
+
+<option value="2">
+Menos de un año
+</option>
+
+<option value="3">
+Varios años
+</option>
+
+<option value="4">
+Muchos años
+</option>
+
+<option value="5">
+Muy duradero / diseñado para durar
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="reuse">
+3. ¿Se puede reutilizar?
+</label>
+
+<select id="reuse">
+
+<option value="1">
+Principalmente de un solo uso
+</option>
+
+<option value="2">
+Reutilización limitada
+</option>
+
+<option value="3">
+Se puede reutilizar ocasionalmente
+</option>
+
+<option value="4">
+Se puede reutilizar muchas veces
+</option>
+
+<option value="5">
+Altamente reutilizable
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="repair">
+4. ¿Se puede reparar o mantener?
+</label>
+
+<select id="repair">
+
+<option value="1">
+No se puede reparar
+</option>
+
+<option value="2">
+Es difícil de reparar
+</option>
+
+<option value="3">
+Algunas piezas se pueden reparar
+</option>
+
+<option value="4">
+Generalmente se puede reparar
+</option>
+
+<option value="5">
+Fácil de mantener y reparar
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="packaging">
+5. ¿Cuánto embalaje utiliza?
+</label>
+
+<select id="packaging">
+
+<option value="1">
+Mucho embalaje innecesario
+</option>
+
+<option value="2">
+Bastante embalaje
+</option>
+
+<option value="3">
+Cantidad moderada de embalaje
+</option>
+
+<option value="4">
+Poco embalaje
+</option>
+
+<option value="5">
+Muy poco embalaje / embalaje reutilizable
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="secondhand">
+6. ¿Podrías pedirlo prestado, compartirlo o comprarlo de segunda mano?
+</label>
+
+<select id="secondhand">
+
+<option value="1">
+No he considerado ninguna alternativa
+</option>
+
+<option value="2">
+Probablemente no
+</option>
+
+<option value="3">
+Es posible
+</option>
+
+<option value="4">
+Sí, vale la pena considerarlo
+</option>
+
+<option value="5">
+Sí, puedo pedirlo prestado, compartirlo o comprarlo de segunda mano
+</option>
+
+</select>
+
+</div>
+
+<button
+type="button"
+class="calculate-btn"
+onclick="calculateImpact()">
+Calcular la puntuación del impacto de la compra
+</button>
+
+<div
+id="result"
+class="result"
+aria-live="polite">
+
+<div class="score"
+id="score">
+0
+</div>
+
+<div
+class="result-title"
+id="resultTitle">
+Puntuación del impacto de la compra
+</div>
+
+<p id="resultText"></p>
+
+<div
+class="advice"
+id="advice">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 ¿Qué significa la puntuación?</h2>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>80–100: Opción de menor impacto</h3>
+
+<p>
+Esta compra parece tener varias cualidades positivas, como ser
+necesaria, duradera, reutilizable, reparable o tener poco embalaje.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>60–79: Impacto moderado</h3>
+
+<p>
+Hay algunos aspectos positivos, pero quizá puedas mejorar la elección
+teniendo en cuenta la durabilidad, el embalaje, la reutilización
+u otra alternativa.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>40–59: Conviene reconsiderarlo</h3>
+
+<p>
+Puede ser útil hacer una breve pausa. Pregúntate si ya tienes algo
+parecido o si pedirlo prestado, repararlo o comprarlo de segunda mano
+podría funcionar.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>0–39: Opción de mayor impacto</h3>
+
+<p>
+Considera si la compra es realmente necesaria y si existe una
+alternativa más duradera, reutilizable, reparable o con menos embalaje.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>♻️ ¿Qué hace que una compra sea más sostenible?</h2>
+
+<p>
+No existe un único factor que determine si un producto es sostenible.
+Considerar varios factores en conjunto puede ofrecer una visión
+más útil.
+</p>
+
+<ul>
+
+<li>
+<strong>Necesidad:</strong>
+Comprar solo lo que realmente necesitas puede reducir el uso
+innecesario de recursos.
+</li>
+
+<li>
+<strong>Durabilidad:</strong>
+Un producto que dura más tiempo puede reducir la necesidad
+de reemplazarlo con frecuencia.
+</li>
+
+<li>
+<strong>Reutilización:</strong>
+Los productos que pueden utilizarse muchas veces pueden reducir
+los residuos en comparación con las alternativas de un solo uso.
+</li>
+
+<li>
+<strong>Reparación:</strong>
+Reparar un artículo puede prolongar su vida útil y retrasar
+su eliminación.
+</li>
+
+<li>
+<strong>Embalaje:</strong>
+Elegir menos embalaje o embalajes reutilizables puede reducir
+los residuos de materiales.
+</li>
+
+<li>
+<strong>Segunda mano y uso compartido:</strong>
+Pedir prestado, compartir, alquilar o comprar artículos usados
+puede evitar en algunos casos la necesidad de adquirir un producto nuevo.
+</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌍 Piensa más allá de la compra</h2>
+
+<p>
+El impacto medioambiental de un producto puede producirse en muchas
+etapas de su ciclo de vida. Puede ser necesario extraer materias
+primas, fabricar y transportar los productos y producir los embalajes.
+Después de la compra, también pueden influir el consumo de energía
+y agua, el mantenimiento y la eliminación final.
+</p>
+
+<p>
+Esto no significa que cada compra necesite un cálculo complicado.
+Para las decisiones cotidianas, unas pocas preguntas sencillas
+pueden ser suficientes:
+</p>
+
+<ul>
+
+<li>¿Realmente necesito esto?</li>
+
+<li>¿Ya tengo algo que pueda cumplir la misma función?</li>
+
+<li>¿Durará mucho tiempo?</li>
+
+<li>¿Puedo repararlo?</li>
+
+<li>¿Puedo reutilizarlo?</li>
+
+<li>¿Puedo elegir un producto con menos embalaje?</li>
+
+<li>¿Podría pedirlo prestado, compartirlo o comprarlo de segunda mano?</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 Una forma más consciente de comprar</h2>
+
+<p>
+Comprar de forma sostenible no significa que cada compra tenga que
+ser perfecta. Se trata de ser más conscientes de las decisiones
+que tomamos y de reducir gradualmente el consumo innecesario.
+</p>
+
+<p>
+A veces, la opción más sostenible es simplemente utilizar lo que
+ya tenemos.
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>ℹ️ Acerca de esta herramienta</h2>
+
+<p>
+La puntuación del impacto de las compras es una sencilla guía educativa.
+No constituye una medición científica de las emisiones exactas de
+carbono, los daños ecológicos ni la huella medioambiental total
+de un producto.
+</p>
+
+<p>
+Los impactos medioambientales reales varían según los materiales,
+los métodos de fabricación, las fuentes de energía, el transporte,
+la vida útil del producto, su uso, reparación, embalaje y tratamiento
+al final de su vida útil.
+</p>
+
+<p>
+Utiliza esta puntuación como una ayuda para tomar decisiones más
+conscientes, no como una evaluación medioambiental precisa.
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/es/">Inicio</a>
+
+<a href="/es/mindfulness.html">
+Vida consciente
+</a>
+
+<a href="/es/nature-connection.html">
+Conexión con la naturaleza
+</a>
+
+<a href="/es/blog.html">
+Blog
+</a>
+
+<a href="/es/apps.html">
+Aplicaciones relacionadas
+</a>
+
+<a href="/es/contact.html">
+Contacto
+</a>
+
+</div>
+
+<p>
+&copy; 2026 • Vida consciente • Naturaleza • Sostenibilidad cotidiana
+</p>
+
+</footer>
+
+<script>
+
+/* HERRAMIENTA DE IMPACTO DE LAS COMPRAS */
+
+function calculateImpact() {
+
+    const necessity =
+        Number(document.getElementById("necessity").value);
+
+    const lifespan =
+        Number(document.getElementById("lifespan").value);
+
+    const reuse =
+        Number(document.getElementById("reuse").value);
+
+    const repair =
+        Number(document.getElementById("repair").value);
+
+    const packaging =
+        Number(document.getElementById("packaging").value);
+
+    const secondhand =
+        Number(document.getElementById("secondhand").value);
+
+
+    /*
+     * Seis factores.
+     *
+     * Cada factor recibe una puntuación de 1 a 5.
+     * El total se convierte en una puntuación de 0 a 100.
+     */
+
+    const total =
+        necessity +
+        lifespan +
+        reuse +
+        repair +
+        packaging +
+        secondhand;
+
+    const score =
+        Math.round((total / 30) * 100);
+
+
+    let title = "";
+    let text = "";
+    let advice = "";
+
+
+    if (score >= 80) {
+
+        title = "Opción de menor impacto";
+
+        text =
+            "Esta elección tiene varias cualidades que pueden favorecer un consumo más consciente.";
+
+        advice =
+            "Si necesitas este artículo, considera utilizarlo durante el mayor tiempo posible, mantenerlo en buen estado y evitar reemplazarlo innecesariamente.";
+
+    }
+
+    else if (score >= 60) {
+
+        title = "Impacto moderado";
+
+        text =
+            "Esta elección tiene algunos aspectos positivos, aunque puede haber formas de reducir aún más su impacto.";
+
+        advice =
+            "Considera elegir una versión más duradera, reducir el embalaje, reparar un artículo que ya tengas o elegir una opción de segunda mano.";
+
+    }
+
+    else if (score >= 40) {
+
+        title = "Conviene reconsiderarlo";
+
+        text =
+            "Hacer una breve pausa puede ayudarte a decidir si esta compra es realmente necesaria.";
+
+        advice =
+            "Comprueba si ya tienes un artículo parecido o si pedirlo prestado, compartirlo, repararlo o comprarlo de segunda mano podría satisfacer la misma necesidad.";
+
+    }
+
+    else {
+
+        title = "Opción de mayor impacto";
+
+        text =
+            "Esta elección presenta varios factores que pueden aumentar su impacto medioambiental.";
+
+        advice =
+            "Antes de comprar, piensa si realmente necesitas este artículo y si existe una alternativa duradera, reutilizable, reparable o de segunda mano.";
+
+    }
+
+
+    document.getElementById("score").textContent =
+        score + "/100";
+
+    document.getElementById("resultTitle").textContent =
+        title;
+
+    document.getElementById("resultText").textContent =
+        text;
+
+    document.getElementById("advice").textContent =
+        advice;
+
+    document.getElementById("result").style.display =
+        "block";
+
+
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* LECTURA EN VOZ ALTA */
+
+let speechQueue = [];
+let currentIndex = 0;
+
+
+function getReadingText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+
+    const elements =
+        content.querySelectorAll("h1, h2, h3, p, li");
+
+
+    const texts = [];
+
+
+    elements.forEach(function(element) {
+
+        const text =
+            element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
+        }
+
+    });
+
+
+    return texts;
+
+}
+
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "La lectura en voz alta no es compatible con este navegador."
+        );
+
+        return;
+
+    }
+
+
+    if (speechSynthesis.paused) {
+
+        speechSynthesis.resume();
+
+        return;
+
+    }
+
+
+    speechSynthesis.cancel();
+
+
+    speechQueue =
+        getReadingText();
+
+    currentIndex = 0;
+
+
+    speakNext();
+
+}
+
+
+function speakNext() {
+
+    if (
+        currentIndex >= speechQueue.length
+    ) {
+
+        return;
+
+    }
+
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
+
+
+    utterance.lang = "es-ES";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+
+    utterance.onend = function() {
+
+        currentIndex++;
+
+        speakNext();
+
+    };
+
+
+    speechSynthesis.speak(
+        utterance
+    );
+
+}
+
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
+    }
+
+}
+
+
+function stopReading() {
+
+    if (
+        "speechSynthesis" in window
+    ) {
+
+        speechSynthesis.cancel();
+
+        speechQueue = [];
+
+        currentIndex = 0;
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
