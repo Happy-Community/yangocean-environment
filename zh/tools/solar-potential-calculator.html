@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>太阳能潜力计算器 | 可再生能源 | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="使用简单的太阳能潜力计算器，估算屋顶或可用区域的潜在太阳能发电量。">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/zh/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* TOOL */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+    margin-bottom: 18px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/zh/" class="logo">Yangocean</a>
+
+<div class="tagline">
+正念生活 • 自然 • 可持续发展
+</div>
+
+</div>
+
+<nav>
+
+<a href="/zh/">首页</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 正念生活 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/mindful-ethical-living.html">
+♻️ 可持续生活
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 亲近自然 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/eco.html">
+🌍 环境意识
+</a>
+
+<a href="/zh/blog.html">
+📝 日志
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 相关应用 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/apps.html">
+📱 所有相关应用
+</a>
+
+<a href="/zh/apps.html#eft">
+🌿 Yangocean 应用
+</a>
+
+<a href="/zh/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/zh/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>☀️ 太阳能潜力计算器</h1>
+
+<p>
+探索利用可用的屋顶或地面区域，太阳能板系统可能产生多少电力。
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 朗读
+</button>
+
+<button type="button" id="pauseButton">
+⏸ 暂停
+</button>
+
+<button type="button" id="stopButton">
+⏹ 停止
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>估算太阳能潜力</h2>
+
+<p class="intro">
+输入有关可用区域和太阳能系统的几个简单信息。计算结果是用于教育和初步规划的近似估算。
+</p>
+
+<form id="solarForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="roofArea">
+可用面积 (m²)
+</label>
+
+<input
+type="number"
+id="roofArea"
+min="1"
+max="100000"
+step="0.1"
+value="30"
+required>
+
+<small>
+可用于安装太阳能板的屋顶或地面面积
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="panelEfficiency">
+太阳能板效率 (%)
+</label>
+
+<input
+type="number"
+id="panelEfficiency"
+min="5"
+max="30"
+step="0.1"
+value="20"
+required>
+
+<small>
+现代太阳能板的效率通常约为 18–23%
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="sunHours">
+每日平均峰值日照小时数
+</label>
+
+<input
+type="number"
+id="sunHours"
+min="1"
+max="10"
+step="0.1"
+value="4.5"
+required>
+
+<small>
+如有当地太阳能资源数据，请使用相关估算值
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="systemFactor">
+系统性能 (%)
+</label>
+
+<input
+type="number"
+id="systemFactor"
+min="50"
+max="100"
+step="1"
+value="80"
+required>
+
+<small>
+考虑温度、逆变器、线路、灰尘及其他因素造成的损耗
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+计算太阳能潜力
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>☀️ 预计太阳能发电量</h3>
+
+<div class="result-number" id="annualEnergy">
+0 kWh/年
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="systemSize">
+0 kW
+</strong>
+
+预计系统容量
+
+</div>
+
+<div class="result-item">
+
+<strong id="dailyEnergy">
+0 kWh
+</strong>
+
+平均每日发电量
+
+</div>
+
+<div class="result-item">
+
+<strong id="monthlyEnergy">
+0 kWh
+</strong>
+
+平均每月发电量
+
+</div>
+
+</div>
+
+<p id="solarMessage" style="margin-top:18px;"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>☀️ 估算方法</h2>
+
+<p>
+计算器首先根据可用面积和太阳能板效率估算潜在的太阳能容量。随后，利用每日平均峰值日照小时数和系统性能系数来估算电力产量。
+</p>
+
+<p>
+基本计算方式为近似估算：
+
+<strong>
+太阳能板面积 × 太阳辐照度 × 太阳能板效率 × 日照小时数 × 系统性能。
+</strong>
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🏠 哪些因素会影响太阳能发电量？</h2>
+
+<ul>
+
+<li>屋顶或地面的方向和朝向</li>
+
+<li>屋顶角度和太阳能板倾斜角度</li>
+
+<li>树木或附近建筑物造成的遮阴</li>
+
+<li>当地天气和季节性日照</li>
+
+<li>太阳能板温度</li>
+
+<li>太阳能板和逆变器的效率</li>
+
+<li>污垢、灰尘和维护情况</li>
+
+<li>可使用的屋顶面积</li>
+
+</ul>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 为什么太阳能很重要？</h2>
+
+<p>
+太阳能利用阳光产生电力，在发电过程中不会直接燃烧化石燃料。对于住宅和其他建筑而言，屋顶太阳能是探索使用可再生能源的一种方式。
+</p>
+
+<p>
+然而，太阳能板只是可持续能源方法的一部分。减少不必要的电力使用以及提高能源效率，同样能够带来积极而有意义的影响。
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>⚠️ 重要说明</h2>
+
+<p>
+本计算器提供简化的估算，仅用于一般认知和初步规划。它并不构成现场评估、工程计算、财务预测或安装报价。
+</p>
+
+<p>
+在安装太阳能系统之前，应由具备资质的太阳能专业人员评估实际场地、屋顶结构、遮阴情况、朝向、当地太阳能条件、电气要求以及适用法规。
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/zh/">首页</a> <a href="/zh/nature-connection.html">亲近自然</a> <a href="/zh/mindful-ethical-living.html">可持续生活</a> <a href="/zh/blog.html">日志</a> <a href="/zh/apps.html">相关应用</a> <a href="/zh/contact.html">联系我们</a>
+
+</div>
+
+<p>
+&copy; 2026 • 正念生活 • 自然 • 日常可持续发展
+</p>
+
+</footer>
+
+<script>
+
+const solarForm = document.getElementById("solarForm");
+const solarResult = document.getElementById("result");
+
+solarForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const area = Number(document.getElementById("roofArea").value);
+    const efficiency = Number(document.getElementById("panelEfficiency").value) / 100;
+    const sunHours = Number(document.getElementById("sunHours").value);
+    const systemFactor = Number(document.getElementById("systemFactor").value) / 100;
+
+    if (
+        !Number.isFinite(area) ||
+        !Number.isFinite(efficiency) ||
+        !Number.isFinite(sunHours) ||
+        !Number.isFinite(systemFactor) ||
+        area <= 0 ||
+        efficiency <= 0 ||
+        sunHours <= 0 ||
+        systemFactor <= 0
+    ) {
+
+        solarResult.style.display = "block";
+
+        document.getElementById("annualEnergy").textContent =
+            "请输入有效数值。";
+
+        document.getElementById("solarMessage").textContent = "";
+
+        return;
+
+    }
+
+
+    /*
+        太阳能功率近似计算：
+
+        每平方米 1 kW 的太阳光功率
+        × 可用面积
+        × 太阳能板效率
+
+        然后考虑日照小时数和系统性能。
+    */
+
+    const systemSize = area * efficiency;
+
+    const dailyEnergy =
+        systemSize *
+        sunHours *
+        systemFactor;
+
+    const annualEnergy =
+        dailyEnergy * 365;
+
+    const monthlyEnergy =
+        annualEnergy / 12;
+
+
+    document.getElementById("annualEnergy").textContent =
+        annualEnergy.toLocaleString(undefined, {
+            maximumFractionDigits: 0
+        }) + " kWh/年";
+
+
+    document.getElementById("systemSize").textContent =
+        systemSize.toFixed(1) + " kW";
+
+
+    document.getElementById("dailyEnergy").textContent =
+        dailyEnergy.toFixed(1) + " kWh";
+
+
+    document.getElementById("monthlyEnergy").textContent =
+        monthlyEnergy.toFixed(0) + " kWh";
+
+
+    let message;
+
+
+    if (systemSize < 2) {
+
+        message =
+            "这代表一个相对较小的太阳能安装系统。实际太阳能板布局取决于可用空间和所使用的设备。";
+
+    } else if (systemSize < 5) {
+
+        message =
+            "根据可用屋顶面积和当地条件，这可能代表一个中等规模的住宅太阳能系统。";
+
+    } else {
+
+        message =
+            "这代表一个潜在规模较大的太阳能系统。在作出安装决定之前，进行专业现场评估非常重要。";
+
+    }
+
+
+    document.getElementById("solarMessage").textContent = message;
+
+    solarResult.style.display = "block";
+
+});
+
+
+/* READ ALOUD */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("此浏览器不支持朗读功能。");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
