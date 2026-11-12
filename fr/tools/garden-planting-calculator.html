@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Calculateur de jardin et de plantation | Jardinage durable | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Estimez le nombre de plantes pouvant être installées dans un jardin, une jardinière surélevée ou un contenant en fonction de la surface de plantation et de l'espacement. Un outil simple pour le jardinage durable.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/fr/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* TOOL */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/fr/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Vivre en pleine conscience • Nature • Durabilité
+</div>
+
+</div>
+
+<nav>
+
+<a href="/fr/">Accueil</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Pleine conscience ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/mindfulness.html">
+🧘 Pleine conscience et Dhamma
+</a>
+
+<a href="/fr/mindful-eating.html">
+🥗 Alimentation en pleine conscience
+</a>
+
+<a href="/fr/mindful-ethical-living.html">
+♻️ Mode de vie durable
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Connexion à la nature ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/nature-connection.html">
+🌳 Connexion à la nature
+</a>
+
+<a href="/fr/eco.html">
+🌍 Sensibilisation à l'environnement
+</a>
+
+<a href="/fr/blog.html">
+📝 Journal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Applications associées ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/apps.html">
+📱 Toutes les applications associées
+</a>
+
+<a href="/fr/apps.html#eft">
+🌿 Application Yangocean
+</a>
+
+<a href="/fr/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/fr/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>🌱 Calculateur de jardin et de plantation</h1>
+
+<p>
+Estimez le nombre de plantes pouvant être installées dans votre jardin, votre jardinière surélevée ou votre contenant en fonction de l'espace disponible et de la distance de plantation.
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 Lire à voix haute
+</button>
+
+<button type="button" id="pauseButton">
+⏸ Pause
+</button>
+
+<button type="button" id="stopButton">
+⏹ Arrêter
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>Calculer votre espace de plantation</h2>
+
+<p class="intro">
+Saisissez les dimensions de votre zone de plantation ainsi que l'espacement que vous souhaitez laisser entre les plantes.
+</p>
+
+<form id="plantForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="length">
+Longueur du jardin (mètres)
+</label>
+
+<input
+type="number"
+id="length"
+min="0.1"
+max="1000"
+step="0.1"
+value="2"
+required>
+
+<small>Par exemple : 2 mètres</small>
+
+</div>
+
+<div class="field">
+
+<label for="width">
+Largeur du jardin (mètres)
+</label>
+
+<input
+type="number"
+id="width"
+min="0.1"
+max="1000"
+step="0.1"
+value="1"
+required>
+
+<small>Par exemple : 1 mètre</small>
+
+</div>
+
+<div class="field">
+
+<label for="spacing">
+Espacement entre les plantes (centimètres)
+</label>
+
+<input
+type="number"
+id="spacing"
+min="5"
+max="300"
+step="1"
+value="30"
+required>
+
+<small>Distance entre les plantes</small>
+
+</div>
+
+<div class="field">
+
+<label for="plantType">
+Disposition des plantations
+</label>
+
+<select id="plantType">
+
+<option value="square">
+Espacement en carré
+</option>
+
+<option value="row">
+Rangées avec espacement standard
+</option>
+
+</select>
+
+<small>
+L'espacement en carré fournit une estimation simple pour les plantations courantes.
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+Calculer la capacité de plantation
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>🌿 Votre capacité de plantation estimée</h3>
+
+<div class="result-number" id="plantCount">
+0 plantes
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="areaResult">
+0 m²
+</strong>
+
+Surface de plantation
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacingResult">
+0 cm
+</strong>
+
+Espacement entre les plantes
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacePerPlant">
+0 m²
+</strong>
+
+Espace approximatif par plante
+
+</div>
+
+</div>
+
+<p class="message" id="resultMessage"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>🌱 Comment utiliser ce calculateur</h2>
+
+<ol>
+
+<li>
+Mesurez la longueur et la largeur de votre zone de plantation.
+</li>
+
+<li>
+Choisissez la distance approximative que vous souhaitez laisser entre les plantes.
+</li>
+
+<li>
+Saisissez les mesures ci-dessus et sélectionnez la disposition des plantations.
+</li>
+
+<li>
+Utilisez le résultat comme estimation de départ pour planifier votre jardin.
+</li>
+
+</ol>
+
+</section>
+
+<section class="info">
+
+<h2>🌿 Pourquoi l'espacement entre les plantes est important</h2>
+
+<p>
+Les plantes ont besoin de suffisamment d'espace pour leurs racines, leurs feuilles et leur croissance générale. Une plantation trop dense peut rendre la zone de culture plus difficile à gérer, tandis qu'un espacement excessif peut laisser inutilisé un espace précieux.
+</p>
+
+<p>
+La distance appropriée dépend de la plante. Les petites herbes aromatiques, comme le basilic, peuvent nécessiter moins d'espace que les légumes plus volumineux ou les plantes fruitières.
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 Jardinage durable</h2>
+
+<p>
+Cultiver quelques herbes aromatiques, légumes ou autres plantes utiles chez soi peut être un moyen simple de se rapprocher de la nature. Même un balcon, un contenant ou un petit jardin peut offrir l'occasion d'observer les plantes et d'utiliser l'espace disponible de manière réfléchie.
+</p>
+
+<p>
+Commencez par ce que votre espace peut accueillir confortablement, plutôt que d'essayer de cultiver trop de plantes en même temps.
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>🌱 Un simple rappel</h2>
+
+<p>
+Ce calculateur fournit une estimation et non un plan de plantation exact. La capacité réelle peut varier en fonction de la variété des plantes, de leur taille à maturité, de l'ensoleillement, de la forme du contenant, des allées et de l'espace nécessaire pour se déplacer dans votre jardin.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/fr/">Accueil</a> <a href="/fr/nature-connection.html">Connexion à la nature</a> <a href="/fr/mindful-ethical-living.html">Mode de vie durable</a> <a href="/fr/blog.html">Journal</a> <a href="/fr/apps.html">Applications associées</a> <a href="/fr/contact.html">Contact</a>
+
+</div>
+
+<p>
+&copy; 2026 • Pleine conscience • Nature • Durabilité au quotidien
+</p>
+
+</footer>
+
+<script>
+
+const form = document.getElementById("plantForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const length = Number(document.getElementById("length").value);
+    const width = Number(document.getElementById("width").value);
+    const spacingCm = Number(document.getElementById("spacing").value);
+    const arrangement = document.getElementById("plantType").value;
+
+    if (
+        !Number.isFinite(length) ||
+        !Number.isFinite(width) ||
+        !Number.isFinite(spacingCm) ||
+        length <= 0 ||
+        width <= 0 ||
+        spacingCm <= 0
+    ) {
+        result.style.display = "block";
+        document.getElementById("plantCount").textContent =
+            "Veuillez saisir des mesures valides.";
+        document.getElementById("resultMessage").textContent = "";
+        return;
+    }
+
+    const spacing = spacingCm / 100;
+
+    const area = length * width;
+
+    let plants;
+
+    if (arrangement === "square") {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    } else {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    }
+
+    const spacePerPlant = spacing * spacing;
+
+    document.getElementById("plantCount").textContent =
+        plants.toLocaleString() + " plantes";
+
+    document.getElementById("areaResult").textContent =
+        area.toFixed(2) + " m²";
+
+    document.getElementById("spacingResult").textContent =
+        spacingCm + " cm";
+
+    document.getElementById("spacePerPlant").textContent =
+        spacePerPlant.toFixed(2) + " m²";
+
+    let message;
+
+    if (plants <= 4) {
+
+        message =
+            "Il s'agit d'une petite zone de plantation. Des herbes aromatiques ou quelques plantes soigneusement choisies peuvent constituer un bon point de départ.";
+
+    } else if (plants <= 20) {
+
+        message =
+            "Vous disposez de suffisamment d'espace pour un petit jardin. Prévoyez de la place pour la croissance des plantes et pour leur entretien.";
+
+    } else {
+
+        message =
+            "Cette zone peut accueillir de nombreuses plantes. Pensez à les regrouper selon leur taille à maturité, leurs besoins en lumière et en eau.";
+
+    }
+
+    document.getElementById("resultMessage").textContent = message;
+
+    result.style.display = "block";
+
+});
+
+
+/* READ ALOUD */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("La lecture à voix haute n'est pas prise en charge par ce navigateur.");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "fr-FR";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
