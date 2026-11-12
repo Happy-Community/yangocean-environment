@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>ဥယျာဉ်နှင့် အပင်စိုက်ပျိုးမှု တွက်ချက်စက် | ရေရှည်တည်တံ့သော ဥယျာဉ်စိုက်ပျိုးရေး | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="စိုက်ပျိုးဧရိယာနှင့် အပင်များကြား အကွာအဝေးကို အခြေခံ၍ ဥယျာဉ်၊ မြှင့်တင်ထားသော စိုက်ခင်း သို့မဟုတ် အိုးအတွင်း မည်မျှသော အပင်များ စိုက်ပျိုးနိုင်သည်ကို ခန့်မှန်းပါ။ ရေရှည်တည်တံ့သော ဥယျာဉ်စိုက်ပျိုးရေးအတွက် ရိုးရှင်းသော ကိရိယာတစ်ခုဖြစ်သည်။">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/my/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* TOOL */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/my/" class="logo">Yangocean</a>
+
+<div class="tagline">
+သတိရှိသော နေထိုင်မှု • သဘာဝ • ရေရှည်တည်တံ့မှု
+</div>
+
+</div>
+
+<nav>
+
+<a href="/my/">ပင်မစာမျက်နှာ</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 သတိရှိသော နေထိုင်မှု ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/mindfulness.html">
+🧘 သတိပဋ္ဌာန်နှင့် ဓမ္မ
+</a>
+
+<a href="/my/mindful-eating.html">
+🥗 သတိရှိစွာ စားသောက်ခြင်း
+</a>
+
+<a href="/my/mindful-ethical-living.html">
+♻️ ရေရှည်တည်တံ့သော နေထိုင်မှု
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 သဘာဝနှင့် ဆက်သွယ်မှု ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/nature-connection.html">
+🌳 သဘာဝနှင့် ဆက်သွယ်မှု
+</a>
+
+<a href="/my/eco.html">
+🌍 ပတ်ဝန်းကျင်ဆိုင်ရာ အသိပညာ
+</a>
+
+<a href="/my/blog.html">
+📝 မှတ်တမ်း
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 ဆက်စပ်အက်ပ်များ ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/apps.html">
+📱 ဆက်စပ်အက်ပ်များအားလုံး
+</a>
+
+<a href="/my/apps.html#eft">
+🌿 Yangocean အက်ပ်
+</a>
+
+<a href="/my/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/my/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>🌱 ဥယျာဉ်နှင့် အပင်စိုက်ပျိုးမှု တွက်ချက်စက်</h1>
+
+<p>
+ရရှိနိုင်သော နေရာနှင့် အပင်စိုက်ပျိုးသည့် အကွာအဝေးကို အခြေခံ၍ သင့်ဥယျာဉ်၊ မြှင့်တင်ထားသော စိုက်ခင်း သို့မဟုတ် အိုးအတွင်း မည်မျှသော အပင်များ စိုက်ပျိုးနိုင်သည်ကို ခန့်မှန်းပါ။
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 အသံဖြင့် ဖတ်ရန်
+</button>
+
+<button type="button" id="pauseButton">
+⏸ ခေတ္တရပ်ရန်
+</button>
+
+<button type="button" id="stopButton">
+⏹ ရပ်ရန်
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>သင့်စိုက်ပျိုးဧရိယာကို တွက်ချက်ပါ</h2>
+
+<p class="intro">
+သင့်စိုက်ပျိုးဧရိယာ၏ အတိုင်းအတာများနှင့် အပင်များကြား ထားရှိလိုသော အကွာအဝေးကို ထည့်သွင်းပါ။
+</p>
+
+<form id="plantForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="length">
+ဥယျာဉ်အလျား (မီတာ)
+</label>
+
+<input
+type="number"
+id="length"
+min="0.1"
+max="1000"
+step="0.1"
+value="2"
+required>
+
+<small>ဥပမာ - ၂ မီတာ</small>
+
+</div>
+
+<div class="field">
+
+<label for="width">
+ဥယျာဉ်အနံ (မီတာ)
+</label>
+
+<input
+type="number"
+id="width"
+min="0.1"
+max="1000"
+step="0.1"
+value="1"
+required>
+
+<small>ဥပမာ - ၁ မီတာ</small>
+
+</div>
+
+<div class="field">
+
+<label for="spacing">
+အပင်များကြား အကွာအဝေး (စင်တီမီတာ)
+</label>
+
+<input
+type="number"
+id="spacing"
+min="5"
+max="300"
+step="1"
+value="30"
+required>
+
+<small>အပင်တစ်ပင်နှင့် တစ်ပင်ကြား အကွာအဝေး</small>
+
+</div>
+
+<div class="field">
+
+<label for="plantType">
+အပင်စိုက်ပျိုးပုံ
+</label>
+
+<select id="plantType">
+
+<option value="square">
+စတုရန်းပုံစံ အကွာအဝေး
+</option>
+
+<option value="row">
+ပုံမှန်အကွာအဝေးဖြင့် တန်းစီစိုက်ပျိုးခြင်း
+</option>
+
+</select>
+
+<small>
+စတုရန်းပုံစံ အကွာအဝေးသည် အပင်စိုက်ပျိုးမှုအတွက် ရိုးရှင်းသော ခန့်မှန်းချက်ကို ပေးပါသည်။
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+စိုက်ပျိုးနိုင်သော အပင်အရေအတွက်ကို တွက်ချက်ပါ
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>🌿 ခန့်မှန်းစိုက်ပျိုးနိုင်သော အပင်အရေအတွက်</h3>
+
+<div class="result-number" id="plantCount">
+အပင် ၀ ပင်
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="areaResult">
+0 m²
+</strong>
+
+စိုက်ပျိုးဧရိယာ
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacingResult">
+0 cm
+</strong>
+
+အပင်များကြား အကွာအဝေး
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacePerPlant">
+0 m²
+</strong>
+
+အပင်တစ်ပင်အတွက် ခန့်မှန်းနေရာ
+
+</div>
+
+</div>
+
+<p class="message" id="resultMessage"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>🌱 ဤတွက်ချက်စက်ကို အသုံးပြုပုံ</h2>
+
+<ol>
+
+<li>
+သင့်စိုက်ပျိုးဧရိယာ၏ အလျားနှင့် အနံကို တိုင်းတာပါ။
+</li>
+
+<li>
+အပင်များကြား ထားရှိလိုသော ခန့်မှန်းအကွာအဝေးကို ရွေးချယ်ပါ။
+</li>
+
+<li>
+အထက်ပါ အတိုင်းအတာများကို ထည့်သွင်းပြီး အပင်စိုက်ပျိုးပုံကို ရွေးချယ်ပါ။
+</li>
+
+<li>
+သင့်ဥယျာဉ်ကို စီစဉ်ရာတွင် ရလဒ်ကို ကနဦး ခန့်မှန်းချက်အဖြစ် အသုံးပြုပါ။
+</li>
+
+</ol>
+
+</section>
+
+<section class="info">
+
+<h2>🌿 အပင်များကြား အကွာအဝေးသည် အဘယ်ကြောင့် အရေးကြီးသနည်း</h2>
+
+<p>
+အပင်များသည် ၎င်းတို့၏ အမြစ်များ၊ အရွက်များနှင့် အလုံးစုံ ကြီးထွားမှုအတွက် လုံလောက်သော နေရာလိုအပ်ပါသည်။ အပင်များကို အလွန်နီးကပ်စွာ စိုက်ပျိုးပါက စိုက်ပျိုးဧရိယာကို စီမံခန့်ခွဲရန် ပိုမိုခက်ခဲနိုင်ပြီး၊ အကွာအဝေး အလွန်များပါက အသုံးဝင်သော နေရာများကို မသုံးဘဲ ကျန်ရှိနိုင်ပါသည်။
+</p>
+
+<p>
+သင့်လျော်သော အကွာအဝေးသည် အပင်အမျိုးအစားပေါ် မူတည်ပါသည်။ ပင်စိမ်းကဲ့သို့သော အရွယ်အစားသေးငယ်သည့် ဟင်းခတ်အပင်များသည် ပိုမိုကြီးမားသော ဟင်းသီးဟင်းရွက်များ သို့မဟုတ် အသီးသီးသော အပင်များထက် နေရာနည်းနည်းသာ လိုအပ်နိုင်ပါသည်။
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 ရေရှည်တည်တံ့သော ဥယျာဉ်စိုက်ပျိုးရေး</h2>
+
+<p>
+ကိုယ်ပိုင် ဟင်းခတ်အပင်များ၊ ဟင်းသီးဟင်းရွက်များ သို့မဟုတ် အသုံးဝင်သော အပင်အချို့ကို စိုက်ပျိုးခြင်းသည် သဘာဝနှင့် ပိုမိုနီးကပ်လာစေရန် ရိုးရှင်းသော နည်းလမ်းတစ်ခုဖြစ်ပါသည်။ လသာဆောင်၊ အိုးတစ်လုံး သို့မဟုတ် ဥယျာဉ်ငယ်တစ်ခုသာ ရှိသော်လည်း အပင်များကို လေ့လာကြည့်ရှုနိုင်ပြီး ရရှိနိုင်သော နေရာကို စဉ်းစားဆင်ခြင်စွာ အသုံးပြုနိုင်ပါသည်။
+</p>
+
+<p>
+တစ်ကြိမ်တည်းတွင် အပင်များစွာ စိုက်ပျိုးရန် ကြိုးစားမည့်အစား သင့်နေရာက အဆင်ပြေစွာ ထောက်ပံ့နိုင်သည့် အတိုင်းအတာမှ စတင်ပါ။
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>🌱 ရိုးရှင်းသော သတိပေးချက်</h2>
+
+<p>
+ဤတွက်ချက်စက်သည် တိကျသော စိုက်ပျိုးရေးအစီအစဉ်မဟုတ်ဘဲ ခန့်မှန်းချက်ကိုသာ ပေးပါသည်။ အမှန်တကယ် စိုက်ပျိုးနိုင်သော အပင်အရေအတွက်သည် အပင်မျိုးစိတ်၊ အရွယ်ရောက်ချိန်ရှိ အပင်အရွယ်အစား၊ နေရောင်ခြည်၊ အိုးပုံစံ၊ လမ်းကြောင်းများနှင့် ဥယျာဉ်အတွင်း လှုပ်ရှားသွားလာရန် လိုအပ်သော နေရာတို့ကြောင့် ကွဲပြားနိုင်ပါသည်။
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/my/">ပင်မစာမျက်နှာ</a> <a href="/my/nature-connection.html">သဘာဝနှင့် ဆက်သွယ်မှု</a> <a href="/my/mindful-ethical-living.html">ရေရှည်တည်တံ့သော နေထိုင်မှု</a> <a href="/my/blog.html">မှတ်တမ်း</a> <a href="/my/apps.html">ဆက်စပ်အက်ပ်များ</a> <a href="/my/contact.html">ဆက်သွယ်ရန်</a>
+
+</div>
+
+<p>
+&copy; 2026 • သတိရှိသော နေထိုင်မှု • သဘာဝ • နေ့စဉ် ရေရှည်တည်တံ့မှု
+</p>
+
+</footer>
+
+<script>
+
+const form = document.getElementById("plantForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const length = Number(document.getElementById("length").value);
+    const width = Number(document.getElementById("width").value);
+    const spacingCm = Number(document.getElementById("spacing").value);
+    const arrangement = document.getElementById("plantType").value;
+
+    if (
+        !Number.isFinite(length) ||
+        !Number.isFinite(width) ||
+        !Number.isFinite(spacingCm) ||
+        length <= 0 ||
+        width <= 0 ||
+        spacingCm <= 0
+    ) {
+        result.style.display = "block";
+        document.getElementById("plantCount").textContent =
+            "ကျေးဇူးပြု၍ မှန်ကန်သော အတိုင်းအတာများကို ထည့်သွင်းပါ။";
+        document.getElementById("resultMessage").textContent = "";
+        return;
+    }
+
+    const spacing = spacingCm / 100;
+
+    const area = length * width;
+
+    let plants;
+
+    if (arrangement === "square") {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    } else {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    }
+
+    const spacePerPlant = spacing * spacing;
+
+    document.getElementById("plantCount").textContent =
+        plants.toLocaleString() + " ပင်";
+
+    document.getElementById("areaResult").textContent =
+        area.toFixed(2) + " m²";
+
+    document.getElementById("spacingResult").textContent =
+        spacingCm + " cm";
+
+    document.getElementById("spacePerPlant").textContent =
+        spacePerPlant.toFixed(2) + " m²";
+
+    let message;
+
+    if (plants <= 4) {
+
+        message =
+            "ဤသည်မှာ စိုက်ပျိုးဧရိယာငယ်တစ်ခုဖြစ်ပါသည်။ ဟင်းခတ်အပင်များ သို့မဟုတ် သေချာရွေးချယ်ထားသော အပင်အနည်းငယ်ဖြင့် စတင်ခြင်းသည် ကောင်းမွန်သော နည်းလမ်းတစ်ခု ဖြစ်နိုင်ပါသည်။";
+
+    } else if (plants <= 20) {
+
+        message =
+            "သင့်တွင် ဥယျာဉ်ငယ်တစ်ခုအတွက် လုံလောက်သော နေရာရှိပါသည်။ အပင်များ အရွယ်ရောက်လာရန်နှင့် ၎င်းတို့ကို ပြုစုစောင့်ရှောက်ရန် နေရာချန်ထားပါ။";
+
+    } else {
+
+        message =
+            "ဤဧရိယာတွင် အပင်များစွာ စိုက်ပျိုးနိုင်ပါသည်။ အပင်များကို အရွယ်ရောက်ချိန်ရှိ အရွယ်အစား၊ အလင်းရောင်လိုအပ်ချက်နှင့် ရေလိုအပ်ချက်တို့အလိုက် အုပ်စုဖွဲ့စိုက်ပျိုးရန် စဉ်းစားပါ။";
+
+    }
+
+    document.getElementById("resultMessage").textContent = message;
+
+    result.style.display = "block";
+
+});
+
+
+/* READ ALOUD */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("ဤဘရောက်ဆာတွင် အသံဖြင့် ဖတ်ရှုခြင်းကို မပံ့ပိုးပါ။");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "my-MM";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
