@@ -7,16 +7,18 @@
 <title>De las cáscaras de frutas al compost | Yangocean</title>
 
 <meta name="description"
-content="Descubre cómo transformar las cáscaras de frutas en compost, aprovechar los residuos orgánicos en casa y comprender la diferencia entre el compost y el ecoenzima.">
+content="Descubre cómo transformar las cáscaras de frutas en compost, aprovechar los residuos orgánicos en casa y comprender la diferencia entre el compost y la ecoenzima.">
+
+<meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://yangocean.com/es/blog/from-fruit-peels-to-compost.html">
 
 <link rel="alternate" hreflang="en" href="https://yangocean.com/blog/from-fruit-peels-to-compost.html">
 <link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog/from-fruit-peels-to-compost.html">
 <link rel="alternate" hreflang="zh-CN" href="https://yangocean.com/zh/blog/from-fruit-peels-to-compost.html">
-<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog/from-fruit-peels-to-compost.html">
 <link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog/from-fruit-peels-to-compost.html">
 <link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog/from-fruit-peels-to-compost.html">
+<link rel="alternate" hreflang="my" href="https://yangocean.com/my/blog/from-fruit-peels-to-compost.html">
 <link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog/from-fruit-peels-to-compost.html">
 
 <meta property="og:type" content="article">
@@ -27,7 +29,7 @@ content="Descubre cómo transformar las cáscaras de frutas en compost, aprovech
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="De las cáscaras de frutas al compost | Yangocean">
-<meta name="twitter:description" content="Aprovecha las cáscaras de frutas y descubre la diferencia entre el compost y el ecoenzima.">
+<meta name="twitter:description" content="Aprovecha las cáscaras de frutas y descubre la diferencia entre el compost y la ecoenzima.">
 <meta name="twitter:image" content="https://yangocean.com/images/esfruitpeel.png">
 
 <style>
@@ -73,6 +75,30 @@ nav {
     text-decoration: none;
     font-size: 1.35rem;
     font-weight: bold;
+}
+
+.language-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    align-items: center;
+}
+
+.language-switch a {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--green);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.language-switch a:hover,
+.language-switch a[aria-current="page"] {
+    background: var(--light-green);
+    border-color: var(--green);
 }
 
 .nav-links {
@@ -210,6 +236,10 @@ footer a {
         align-items: flex-start;
     }
 
+    .language-switch {
+        gap: 6px;
+    }
+
     .nav-links {
         gap: 9px 12px;
     }
@@ -225,21 +255,30 @@ footer a {
 
 <header>
     <nav aria-label="Navegación principal">
+
         <a class="brand" href="/es/index.html">Yangocean</a>
 
-        <div class="nav-links">
-         
-    <a href="/">Inicio</a>
-    <a href="/es/mindfulness.html">Atención plena</a>
-    <a href="/es/mindful-ethical-living.html">Vida consciente</a>
-    <a href="/es/mindful-eating.html">Alimentación consciente</a>
-    <a href="/es/mindful-food.html">🍲 Alimentación Consciente y Vídeos de Comida</a>
-    <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
-    <a href="/es/eco.html">Conciencia Ambiental</a>
-    <a href="/es/blog.html">Diario</a>
-    <a href="/es/apps.html">Aplicaciones</a>
-
+        <div class="language-switch" aria-label="Seleccionar idioma">
+            <a href="/blog/from-fruit-peels-to-compost.html" lang="en">EN</a>
+            <a href="/ms/blog/from-fruit-peels-to-compost.html" lang="ms">BM</a>
+            <a href="/zh/blog/from-fruit-peels-to-compost.html" lang="zh-CN">中文</a>
+            <a href="/fr/blog/from-fruit-peels-to-compost.html" lang="fr">FR</a>
+            <a href="/es/blog/from-fruit-peels-to-compost.html" lang="es" aria-current="page">ES</a>
+            <a href="/my/blog/from-fruit-peels-to-compost.html" lang="my">မြန်မာ</a>
         </div>
+
+        <div class="nav-links">
+            <a href="/es/index.html">Inicio</a>
+            <a href="/es/mindfulness.html">Atención plena</a>
+            <a href="/es/mindful-ethical-living.html">Vida consciente</a>
+            <a href="/es/mindful-eating.html">Alimentación consciente</a>
+            <a href="/es/mindful-food.html">🍲 Alimentación Consciente y Vídeos de Comida</a>
+            <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
+            <a href="/es/eco.html">Conciencia Ambiental</a>
+            <a href="/es/blog.html">Diario</a>
+            <a href="/es/apps.html">Aplicaciones</a>
+        </div>
+
     </nav>
 </header>
 
@@ -257,19 +296,6 @@ Después de comer fruta, a menudo desechamos las cáscaras. Sin embargo, si se a
     <button type="button" onclick="pauseReading()">⏸ Pausar</button>
     <button type="button" onclick="stopReading()">⏹ Detener</button>
 </div>
-
-<figure class="fruit-peel-guide">
-    <img
-        src="/images/esfruitpeel.png"
-        alt="Guía ilustrada sobre cómo preparar ecoenzima a partir de cáscaras de frutas"
-        loading="lazy"
-        style="display:block; width:100%; max-width:1000px; height:auto; margin:0 auto;"
-    >
-    <figcaption>
-        Guía ilustrada sobre una forma de aprovechar las cáscaras de frutas.
-        La preparación de ecoenzima y la elaboración de compost son procesos diferentes.
-    </figcaption>
-</figure>
 
 <h2>🌿 ¿Por qué convertir las cáscaras de frutas en compost?</h2>
 
@@ -353,9 +379,21 @@ El compost se obtiene mediante la descomposición de materiales orgánicos. Cuan
 La ecoenzima suele referirse a un líquido elaborado mediante la fermentación de cáscaras de frutas con azúcar y agua. Este proceso es diferente del compostaje. La composición y la calidad del líquido obtenido pueden variar según los ingredientes y las condiciones de preparación.
 </p>
 
+<figure class="fruit-peel-guide">
+    <img
+        src="/images/esfruitpeel.png"
+        alt="Infografía ilustrada que muestra los pasos para preparar ecoenzima a partir de cáscaras de frutas"
+        loading="lazy"
+    >
+    <figcaption>
+        Guía ilustrada para preparar ecoenzima con cáscaras de frutas.
+        Este proceso de fermentación es diferente de la elaboración de compost.
+    </figcaption>
+</figure>
+
 <div class="warning">
     <strong>Importante:</strong>
-    Un líquido denominado ecoenzima no equivale al compost maduro. Sus efectos sobre las plantas pueden variar según su composición, concentración y las especies vegetales. Si deseas utilizarlo en las plantas, actúa con precaución, dilúyelo cuando corresponda y pruébalo primero en una pequeña parte del cultivo. No consumas este líquido fermentado.
+    Un líquido denominado ecoenzima no equivale al compost maduro. Sus efectos sobre las plantas pueden variar según su composición, concentración y las especies vegetales. Si deseas utilizarlo en las plantas, actúa con precaución, dilúyelo cuando corresponda y pruébalo primero en una pequeña parte del cultivo. No consumas este líquido fermentado ni lo viertas directamente en lagos, ríos o aguas naturales.
 </div>
 
 <h2>🌏 Reducir los residuos: una forma de cuidar el medio ambiente</h2>
@@ -410,7 +448,15 @@ function startReading() {
     }
 
     const article = document.getElementById("article-content");
-    const textToRead = article.innerText;
+    const articleCopy = article.cloneNode(true);
+
+    const controls = articleCopy.querySelector(".read-aloud");
+
+    if (controls) {
+        controls.remove();
+    }
+
+    const textToRead = articleCopy.innerText;
 
     speechUtterance = new SpeechSynthesisUtterance(textToRead);
     speechUtterance.lang = "es-ES";
