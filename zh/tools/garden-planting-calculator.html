@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>花园与种植计算器 | 可持续园艺 | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="根据种植面积和植物间距，估算花园、高架种植床或容器中可以种植多少植物。一个简单实用的可持续园艺工具。">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/zh/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/tools/garden-planting-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/garden-planting-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* TOOL */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.message {
+    margin-top: 15px;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/zh/" class="logo">Yangocean</a>
+
+<div class="tagline">
+正念生活 • 亲近自然 • 可持续发展
+</div>
+
+</div>
+
+<nav>
+
+<a href="/zh/">首页</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 正念生活 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/mindful-ethical-living.html">
+♻️ 可持续生活
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 亲近自然 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/eco.html">
+🌍 环境意识
+</a>
+
+<a href="/zh/blog.html">
+📝 日志
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 相关应用 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/apps.html">
+📱 所有相关应用
+</a>
+
+<a href="/zh/apps.html#eft">
+🌿 Yangocean 应用
+</a>
+
+<a href="/zh/apps.html#healthy-body">
+❤️ QuQu 健康身体
+</a>
+
+<a href="/zh/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>🌱 花园与种植计算器</h1>
+
+<p>
+根据可用空间和植物间距，估算您的花园、高架种植床或种植容器中可以种植多少植物。
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 朗读
+</button>
+
+<button type="button" id="pauseButton">
+⏸ 暂停
+</button>
+
+<button type="button" id="stopButton">
+⏹ 停止
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>计算您的种植空间</h2>
+
+<p class="intro">
+输入种植区域的尺寸，以及您希望植物之间保持的间距。
+</p>
+
+<form id="plantForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="length">
+花园长度（米）
+</label>
+
+<input
+type="number"
+id="length"
+min="0.1"
+max="1000"
+step="0.1"
+value="2"
+required>
+
+<small>例如：2 米</small>
+
+</div>
+
+<div class="field">
+
+<label for="width">
+花园宽度（米）
+</label>
+
+<input
+type="number"
+id="width"
+min="0.1"
+max="1000"
+step="0.1"
+value="1"
+required>
+
+<small>例如：1 米</small>
+
+</div>
+
+<div class="field">
+
+<label for="spacing">
+植物间距（厘米）
+</label>
+
+<input
+type="number"
+id="spacing"
+min="5"
+max="300"
+step="1"
+value="30"
+required>
+
+<small>植物之间的距离</small>
+
+</div>
+
+<div class="field">
+
+<label for="plantType">
+种植排列方式
+</label>
+
+<select id="plantType">
+
+<option value="square">
+方形间距排列
+</option>
+
+<option value="row">
+按标准间距成行种植
+</option>
+
+</select>
+
+<small>
+方形间距可为一般种植提供简单的估算。
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+计算种植容量
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>🌿 您的预计种植容量</h3>
+
+<div class="result-number" id="plantCount">
+0 株植物
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="areaResult">
+0 m²
+</strong>
+
+种植面积
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacingResult">
+0 cm
+</strong>
+
+植物间距
+
+</div>
+
+<div class="result-item">
+
+<strong id="spacePerPlant">
+0 m²
+</strong>
+
+每株植物的约需空间
+
+</div>
+
+</div>
+
+<p class="message" id="resultMessage"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>🌱 如何使用此计算器</h2>
+
+<ol>
+
+<li>
+测量种植区域的长度和宽度。
+</li>
+
+<li>
+选择您希望植物之间保持的大致距离。
+</li>
+
+<li>
+输入上述尺寸，并选择种植排列方式。
+</li>
+
+<li>
+将计算结果作为规划花园的初步估算。
+</li>
+
+</ol>
+
+</section>
+
+<section class="info">
+
+<h2>🌿 为什么植物间距很重要</h2>
+
+<p>
+植物需要足够的空间来生长根部、叶片及整体植株。植物种植得过于密集，可能会使种植区域更难管理；而间距过大，则可能造成可用空间的浪费。
+</p>
+
+<p>
+适当的间距取决于植物种类。罗勒等小型香草植物可能需要较少的空间，而较大型的蔬菜或结果植物则需要更多空间。
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 可持续园艺</h2>
+
+<p>
+种植一些自己的香草、蔬菜或其他实用植物，是亲近自然的一种简单方式。即使只有阳台、种植容器或小花园，也能让您有机会观察植物，并更有意识地利用现有空间。
+</p>
+
+<p>
+从您的空间能够轻松承载的种植规模开始，而不是一次种植过多植物。
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>🌱 温馨提醒</h2>
+
+<p>
+此计算器提供的是估算值，而非精确的种植方案。实际种植容量可能会因植物品种、成熟植株大小、日照、容器形状、通道以及花园内活动所需的空间而有所不同。
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/zh/">首页</a> <a href="/zh/nature-connection.html">亲近自然</a> <a href="/zh/mindful-ethical-living.html">可持续生活</a> <a href="/zh/blog.html">日志</a> <a href="/zh/apps.html">相关应用</a> <a href="/zh/contact.html">联系我们</a>
+
+</div>
+
+<p>
+&copy; 2026 • 正念生活 • 亲近自然 • 日常可持续发展
+</p>
+
+</footer>
+
+<script>
+
+const form = document.getElementById("plantForm");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const length = Number(document.getElementById("length").value);
+    const width = Number(document.getElementById("width").value);
+    const spacingCm = Number(document.getElementById("spacing").value);
+    const arrangement = document.getElementById("plantType").value;
+
+    if (
+        !Number.isFinite(length) ||
+        !Number.isFinite(width) ||
+        !Number.isFinite(spacingCm) ||
+        length <= 0 ||
+        width <= 0 ||
+        spacingCm <= 0
+    ) {
+        result.style.display = "block";
+        document.getElementById("plantCount").textContent =
+            "请输入有效的测量数据。";
+        document.getElementById("resultMessage").textContent = "";
+        return;
+    }
+
+    const spacing = spacingCm / 100;
+
+    const area = length * width;
+
+    let plants;
+
+    if (arrangement === "square") {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    } else {
+
+        const plantsLength = Math.floor(length / spacing);
+        const plantsWidth = Math.floor(width / spacing);
+
+        plants = plantsLength * plantsWidth;
+
+    }
+
+    const spacePerPlant = spacing * spacing;
+
+    document.getElementById("plantCount").textContent =
+        plants.toLocaleString() + " 株植物";
+
+    document.getElementById("areaResult").textContent =
+        area.toFixed(2) + " m²";
+
+    document.getElementById("spacingResult").textContent =
+        spacingCm + " cm";
+
+    document.getElementById("spacePerPlant").textContent =
+        spacePerPlant.toFixed(2) + " m²";
+
+    let message;
+
+    if (plants <= 4) {
+
+        message =
+            "这是一个较小的种植区域。种植香草或精心挑选几株植物，可能是不错的起点。";
+
+    } else if (plants <= 20) {
+
+        message =
+            "您的空间足以打造一个小型花园。请为植物成熟生长以及日常养护留出空间。";
+
+    } else {
+
+        message =
+            "该区域可以种植较多植物。建议根据植物成熟后的大小、光照需求和水分需求进行分组种植。";
+
+    }
+
+    document.getElementById("resultMessage").textContent = message;
+
+    result.style.display = "block";
+
+});
+
+
+/* READ ALOUD */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("您的浏览器不支持朗读功能。");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
