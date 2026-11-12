@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+
+<html lang="my">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>နေရောင်ခြည်စွမ်းအင် အလားအလာတွက်ချက်စက် | ပြန်လည်ပြည့်ဖြိုးမြဲစွမ်းအင် | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="ရိုးရှင်းသော နေရောင်ခြည်စွမ်းအင် အလားအလာတွက်ချက်စက်ကို အသုံးပြု၍ အိမ်ခေါင်မိုး သို့မဟုတ် အသုံးပြုနိုင်သော နေရာတစ်ခုမှ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်နိုင်မှုကို ခန့်မှန်းပါ။">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/my/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* အဓိကအကြောင်းအရာ */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* တွက်ချက်စက် */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+    margin-bottom: 18px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* အသံဖြင့်ဖတ်ရှုခြင်း */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* အောက်ခြေ */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* မိုဘိုင်းဖုန်း */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/my/" class="logo">Yangocean</a>
+
+<div class="tagline">
+သတိရှိသော နေထိုင်မှု • သဘာဝ • ရေရှည်တည်တံ့မှု
+</div>
+
+</div>
+
+<nav>
+
+<a href="/my/">ပင်မစာမျက်နှာ</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 သတိရှိသော နေထိုင်မှု ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/mindfulness.html">
+🧘 သတိပဋ္ဌာန်နှင့် ဓမ္မ
+</a>
+
+<a href="/my/mindful-eating.html">
+🥗 သတိရှိစွာ အစားအသောက်စားခြင်း
+</a>
+
+<a href="/my/mindful-ethical-living.html">
+♻️ ရေရှည်တည်တံ့သော နေထိုင်မှု
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 သဘာဝနှင့် ဆက်သွယ်မှု ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/nature-connection.html">
+🌳 သဘာဝနှင့် ဆက်သွယ်မှု
+</a>
+
+<a href="/my/eco.html">
+🌍 ပတ်ဝန်းကျင်ဆိုင်ရာ အသိပညာ
+</a>
+
+<a href="/my/blog.html">
+📝 မှတ်တမ်း
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 ဆက်စပ်အက်ပ်များ ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/my/apps.html">
+📱 ဆက်စပ်အက်ပ်များအားလုံး
+</a>
+
+<a href="/my/apps.html#eft">
+🌿 Yangocean အက်ပ်
+</a>
+
+<a href="/my/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/my/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>☀️ နေရောင်ခြည်စွမ်းအင် အလားအလာတွက်ချက်စက်</h1>
+
+<p>
+အသုံးပြုနိုင်သော အိမ်ခေါင်မိုး သို့မဟုတ် မြေပြင်ဧရိယာမှ ဆိုလာပြားစနစ်တစ်ခုက လျှပ်စစ်ဓာတ်အား မည်မျှထုတ်လုပ်နိုင်သည်ကို လေ့လာကြည့်ပါ။
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 အသံဖြင့်ဖတ်ရန်
+</button>
+
+<button type="button" id="pauseButton">
+⏸ ခေတ္တရပ်ရန်
+</button>
+
+<button type="button" id="stopButton">
+⏹ ရပ်ရန်
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>နေရောင်ခြည်စွမ်းအင် အလားအလာကို ခန့်မှန်းရန်</h2>
+
+<p class="intro">
+အသုံးပြုနိုင်သော ဧရိယာနှင့် ဆိုလာစနစ်အကြောင်း အချက်အလက်အနည်းငယ်ကို ထည့်သွင်းပါ။ ရလဒ်သည် ပညာရေးနှင့် စီမံကိန်းရေးဆွဲခြင်းအတွက် ခန့်မှန်းချက်တစ်ခုသာ ဖြစ်ပါသည်။
+</p>
+
+<form id="solarForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="roofArea">
+အသုံးပြုနိုင်သော ဧရိယာ (m²)
+</label>
+
+<input
+type="number"
+id="roofArea"
+min="1"
+max="100000"
+step="0.1"
+value="30"
+required>
+
+<small>
+ဆိုလာပြားများ တပ်ဆင်ရန် အသုံးပြုနိုင်သော အိမ်ခေါင်မိုး သို့မဟုတ် မြေပြင်ဧရိယာ
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="panelEfficiency">
+ဆိုလာပြား၏ စွမ်းဆောင်ရည် (%)
+</label>
+
+<input
+type="number"
+id="panelEfficiency"
+min="5"
+max="30"
+step="0.1"
+value="20"
+required>
+
+<small>
+ခေတ်မီဆိုလာပြားများ၏ စွမ်းဆောင်ရည်သည် များသောအားဖြင့် 18–23% ခန့်ရှိသည်
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="sunHours">
+တစ်နေ့လျှင် ပျမ်းမျှ အမြင့်ဆုံးနေရောင်ရရှိချိန် (နာရီ)
+</label>
+
+<input
+type="number"
+id="sunHours"
+min="1"
+max="10"
+step="0.1"
+value="4.5"
+required>
+
+<small>
+ရရှိနိုင်ပါက ဒေသဆိုင်ရာ နေရောင်ခြည်အရင်းအမြစ် ခန့်မှန်းချက်ကို အသုံးပြုပါ
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="systemFactor">
+စနစ်၏ စွမ်းဆောင်ရည် (%)
+</label>
+
+<input
+type="number"
+id="systemFactor"
+min="50"
+max="100"
+step="1"
+value="80"
+required>
+
+<small>
+အပူချိန်၊ အင်ဗာတာ၊ ဝါယာကြိုး၊ ဖုန်မှုန့်နှင့် အခြားဆုံးရှုံးမှုများကို ထည့်သွင်းတွက်ချက်ထားသည်
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+နေရောင်ခြည်စွမ်းအင် အလားအလာကို တွက်ချက်ရန်
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>☀️ ခန့်မှန်းထားသော ဆိုလာလျှပ်စစ်ဓာတ်အား ထုတ်လုပ်မှု</h3>
+
+<div class="result-number" id="annualEnergy">
+0 kWh/နှစ်
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="systemSize">
+0 kW
+</strong>
+
+ခန့်မှန်းစနစ်အရွယ်အစား
+
+</div>
+
+<div class="result-item">
+
+<strong id="dailyEnergy">
+0 kWh
+</strong>
+
+ပျမ်းမျှနေ့စဉ် ထုတ်လုပ်မှု
+
+</div>
+
+<div class="result-item">
+
+<strong id="monthlyEnergy">
+0 kWh
+</strong>
+
+ပျမ်းမျှလစဉ် ထုတ်လုပ်မှု
+
+</div>
+
+</div>
+
+<p id="solarMessage" style="margin-top:18px;"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>☀️ ခန့်မှန်းချက်ကို မည်သို့တွက်ချက်သနည်း</h2>
+
+<p>
+တွက်ချက်စက်သည် အသုံးပြုနိုင်သော ဧရိယာနှင့် ဆိုလာပြား၏ စွမ်းဆောင်ရည်ကို အခြေခံ၍ နေရောင်ခြည်စွမ်းအင် ထုတ်လုပ်နိုင်မှုကို ဦးစွာ ခန့်မှန်းသည်။ ထို့နောက် ပျမ်းမျှ အမြင့်ဆုံးနေရောင်ရရှိချိန်နှင့် စနစ်၏ စွမ်းဆောင်ရည်အချိုးကို အသုံးပြု၍ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်မှုကို ခန့်မှန်းသည်။
+</p>
+
+<p>
+အခြေခံတွက်ချက်မှုသည် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။
+
+<strong>
+ဆိုလာပြားဧရိယာ × နေရောင်ခြည်ပြင်းအား × ဆိုလာပြားစွမ်းဆောင်ရည် × နေရောင်ရရှိချိန် × စနစ်စွမ်းဆောင်ရည်။
+</strong>
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🏠 ဆိုလာလျှပ်စစ်ဓာတ်အား ထုတ်လုပ်မှုကို မည်သည့်အချက်များက သက်ရောက်စေနိုင်သနည်း။</h2>
+
+<ul>
+
+<li>အိမ်ခေါင်မိုး သို့မဟုတ် မြေပြင်၏ ဦးတည်ချက်</li>
+
+<li>အိမ်ခေါင်မိုး၏ ထောင့်နှင့် ဆိုလာပြားများ၏ စောင်းထောင့်</li>
+
+<li>သစ်ပင်များ သို့မဟုတ် အနီးအနားရှိ အဆောက်အအုံများမှ အရိပ်ကျခြင်း</li>
+
+<li>ဒေသဆိုင်ရာ ရာသီဥတုနှင့် ရာသီအလိုက် နေရောင်ရရှိမှု</li>
+
+<li>ဆိုလာပြားများ၏ အပူချိန်</li>
+
+<li>ဆိုလာပြားနှင့် အင်ဗာတာတို့၏ စွမ်းဆောင်ရည်</li>
+
+<li>ဖုန်မှုန့်၊ အညစ်အကြေးနှင့် ပြုပြင်ထိန်းသိမ်းမှု</li>
+
+<li>အသုံးပြုနိုင်သော အိမ်ခေါင်မိုးဧရိယာ</li>
+
+</ul>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 နေရောင်ခြည်စွမ်းအင်သည် အဘယ်ကြောင့် အရေးကြီးသနည်း။</h2>
+
+<p>
+နေရောင်ခြည်စွမ်းအင်သည် လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်ရာနေရာတွင် ရုပ်ကြွင်းလောင်စာများကို တိုက်ရိုက်မီးရှို့ခြင်းမပြုဘဲ နေရောင်ခြည်ကို အသုံးပြု၍ လျှပ်စစ်ဓာတ်အား ထုတ်လုပ်ပေးသည်။ အိမ်များနှင့် အခြားအဆောက်အအုံများအတွက် အိမ်ခေါင်မိုးပေါ်တွင် ဆိုလာပြားတပ်ဆင်ခြင်းသည် ပြန်လည်ပြည့်ဖြိုးမြဲစွမ်းအင်ကို အသုံးပြုရန် နည်းလမ်းတစ်ခု ဖြစ်နိုင်ပါသည်။
+</p>
+
+<p>
+သို့သော် ဆိုလာပြားများသည် ရေရှည်တည်တံ့သော စွမ်းအင်အသုံးပြုမှု၏ အစိတ်အပိုင်းတစ်ခုသာ ဖြစ်ပါသည်။ မလိုအပ်သော လျှပ်စစ်ဓာတ်အားသုံးစွဲမှုကို လျှော့ချခြင်းနှင့် စွမ်းအင်အသုံးပြုမှု ထိရောက်မှုကို မြှင့်တင်ခြင်းတို့သည်လည်း အရေးပါသော အကျိုးသက်ရောက်မှုများ ရှိနိုင်ပါသည်။
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>⚠️ အရေးကြီးသော မှတ်ချက်</h2>
+
+<p>
+ဤတွက်ချက်စက်သည် အထွေထွေ အသိပညာနှင့် စီမံကိန်းရေးဆွဲခြင်းအတွက် ရိုးရှင်းသော ခန့်မှန်းချက်ကိုသာ ပေးပါသည်။ ၎င်းသည် နေရာအလိုက် စစ်ဆေးအကဲဖြတ်မှု၊ အင်ဂျင်နီယာတွက်ချက်မှု၊ ငွေကြေးဆိုင်ရာ ခန့်မှန်းချက် သို့မဟုတ် တပ်ဆင်မှုဈေးနှုန်းကမ်းလှမ်းချက် မဟုတ်ပါ။
+</p>
+
+<p>
+ဆိုလာစနစ်တစ်ခု မတပ်ဆင်မီ အရည်အချင်းပြည့်မီသော ဆိုလာစွမ်းအင်ပညာရှင်တစ်ဦးက အမှန်တကယ် တပ်ဆင်မည့်နေရာ၊ အိမ်ခေါင်မိုးဖွဲ့စည်းပုံ၊ အရိပ်ကျမှု၊ ဦးတည်ချက်၊ ဒေသဆိုင်ရာ နေရောင်ခြည်အခြေအနေများ၊ လျှပ်စစ်လိုအပ်ချက်များနှင့် သက်ဆိုင်ရာ စည်းမျဉ်းများကို စစ်ဆေးအကဲဖြတ်သင့်ပါသည်။
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/my/">ပင်မစာမျက်နှာ</a> <a href="/my/nature-connection.html">သဘာဝနှင့် ဆက်သွယ်မှု</a> <a href="/my/mindful-ethical-living.html">ရေရှည်တည်တံ့သော နေထိုင်မှု</a> <a href="/my/blog.html">မှတ်တမ်း</a> <a href="/my/apps.html">ဆက်စပ်အက်ပ်များ</a> <a href="/my/contact.html">ဆက်သွယ်ရန်</a>
+
+</div>
+
+<p>
+&copy; 2026 • သတိရှိသော နေထိုင်မှု • သဘာဝ • နေ့စဉ်ရေရှည်တည်တံ့မှု
+</p>
+
+</footer>
+
+<script>
+
+const solarForm = document.getElementById("solarForm");
+const solarResult = document.getElementById("result");
+
+solarForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const area = Number(document.getElementById("roofArea").value);
+    const efficiency = Number(document.getElementById("panelEfficiency").value) / 100;
+    const sunHours = Number(document.getElementById("sunHours").value);
+    const systemFactor = Number(document.getElementById("systemFactor").value) / 100;
+
+    if (
+        !Number.isFinite(area) ||
+        !Number.isFinite(efficiency) ||
+        !Number.isFinite(sunHours) ||
+        !Number.isFinite(systemFactor) ||
+        area <= 0 ||
+        efficiency <= 0 ||
+        sunHours <= 0 ||
+        systemFactor <= 0
+    ) {
+
+        solarResult.style.display = "block";
+
+        document.getElementById("annualEnergy").textContent =
+            "မှန်ကန်သော တန်ဖိုးများကို ထည့်သွင်းပါ။";
+
+        document.getElementById("solarMessage").textContent = "";
+
+        return;
+
+    }
+
+
+    /*
+        ခန့်မှန်းထားသော နေရောင်ခြည်စွမ်းအင် :
+
+        1 kW နေရောင်ခြည်ပြင်းအား / m²
+        × အသုံးပြုနိုင်သော ဧရိယာ
+        × ဆိုလာပြားစွမ်းဆောင်ရည်
+
+        ထို့နောက် နေရောင်ရရှိချိန်နှင့်
+        စနစ်စွမ်းဆောင်ရည်ကို ထည့်သွင်းတွက်ချက်သည်။
+    */
+
+    const systemSize = area * efficiency;
+
+    const dailyEnergy =
+        systemSize *
+        sunHours *
+        systemFactor;
+
+    const annualEnergy =
+        dailyEnergy * 365;
+
+    const monthlyEnergy =
+        annualEnergy / 12;
+
+
+    document.getElementById("annualEnergy").textContent =
+        annualEnergy.toLocaleString(undefined, {
+            maximumFractionDigits: 0
+        }) + " kWh/နှစ်";
+
+
+    document.getElementById("systemSize").textContent =
+        systemSize.toFixed(1) + " kW";
+
+
+    document.getElementById("dailyEnergy").textContent =
+        dailyEnergy.toFixed(1) + " kWh";
+
+
+    document.getElementById("monthlyEnergy").textContent =
+        monthlyEnergy.toFixed(0) + " kWh";
+
+
+    let message;
+
+
+    if (systemSize < 2) {
+
+        message =
+            "ဤပမာဏသည် အရွယ်အစားသေးငယ်သော ဆိုလာစနစ်တစ်ခုကို ကိုယ်စားပြုပါသည်။ အမှန်တကယ် ဆိုလာပြားများ တပ်ဆင်မည့်ပုံစံသည် အသုံးပြုနိုင်သော နေရာနှင့် စက်ပစ္စည်းများအပေါ် မူတည်ပါသည်။";
+
+    } else if (systemSize < 5) {
+
+        message =
+            "ဤပမာဏသည် အသုံးပြုနိုင်သော အိမ်ခေါင်မိုးဧရိယာနှင့် ဒေသဆိုင်ရာ အခြေအနေများအပေါ် မူတည်၍ အိမ်သုံးအလတ်စား ဆိုလာစနစ်တစ်ခု ဖြစ်နိုင်ပါသည်။";
+
+    } else {
+
+        message =
+            "ဤပမာဏသည် ပိုမိုကြီးမားသော ဆိုလာစနစ်တစ်ခု ဖြစ်နိုင်ကြောင်း ဖော်ပြပါသည်။ တပ်ဆင်ရန် ဆုံးဖြတ်ချက်မချမီ ပညာရှင်၏ နေရာအလိုက် စစ်ဆေးအကဲဖြတ်မှုသည် အရေးကြီးပါသည်။";
+
+    }
+
+
+    document.getElementById("solarMessage").textContent = message;
+
+    solarResult.style.display = "block";
+
+});
+
+
+/* အသံဖြင့်ဖတ်ရှုခြင်း */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("ဤဘရောက်ဆာတွင် အသံဖြင့်ဖတ်ရှုခြင်းကို မပံ့ပိုးပါ။");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "my-MM";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
