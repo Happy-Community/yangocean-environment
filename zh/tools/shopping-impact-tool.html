@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>购物影响评估工具 | 可持续购物 | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="使用这个简单的购物影响评估工具，在购买前思考商品的必要性、耐用性、重复使用、维修、包装及其他因素。">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/zh/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="zh"
+href="https://yangocean.com/zh/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="my"
+href="https://yangocean.com/my/tools/shopping-impact-tool.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/tools/shopping-impact-tool.html">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26352b;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid #dfe7df;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #2f6b45;
+    text-decoration: none;
+    font-size: 1.35rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756b;
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #304438;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b45;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 225px;
+    background: white;
+    border: 1px solid #dfe7df;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 14px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.language a {
+    font-size: 0.82rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+    background: linear-gradient(135deg, #edf7ee, #f8fbf7);
+    border-radius: 18px;
+    margin-bottom: 35px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f6b45;
+    font-size: 2.2rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 1.05rem;
+    color: #526158;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 0 auto 30px;
+}
+
+.tts-btn {
+    border: none;
+    border-radius: 8px;
+    padding: 9px 15px;
+    cursor: pointer;
+    background: #2f6b45;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.tts-btn:hover {
+    opacity: 0.9;
+}
+
+/* SECTIONS */
+
+.section {
+    background: white;
+    border-radius: 14px;
+    padding: 30px;
+    margin-top: 28px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #2f6b45;
+    margin-top: 0;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin-bottom: 25px;
+}
+
+/* CALCULATOR */
+
+.calculator {
+    max-width: 760px;
+    margin: 10px auto 0;
+    background: #f5f8f4;
+    border-radius: 14px;
+    padding: 25px;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.field select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd8ce;
+    border-radius: 8px;
+    background: white;
+    font-size: 1rem;
+}
+
+.help {
+    display: block;
+    margin-top: 5px;
+    color: #6a756d;
+    font-size: 0.86rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #2f6b45;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #245636;
+}
+
+.result {
+    display: none;
+    margin-top: 25px;
+    padding: 22px;
+    border-radius: 12px;
+    background: #eaf5eb;
+    text-align: center;
+}
+
+.score {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #2f6b45;
+}
+
+.result-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 5px 0 10px;
+}
+
+.result p {
+    margin: 8px auto;
+    max-width: 650px;
+}
+
+.advice {
+    margin-top: 18px;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    text-align: left;
+}
+
+/* CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #f7faf7;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #2f6b45;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 30px 20px;
+    color: #59645b;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #45604d;
+    text-decoration: none;
+    margin: 0 7px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .dropdown-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 1.85rem;
+    }
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a,
+    .dropbtn {
+        font-size: 0.84rem;
+    }
+
+    .section {
+        padding: 22px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/zh/" class="logo">Yangocean</a>
+
+<div class="tagline">
+正念生活 • 自然 • 可持续发展
+</div>
+
+</div>
+
+<nav>
+
+<a href="/zh/">首页</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 正念生活 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/mindful-ethical-living.html">
+♻️ 可持续生活
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 亲近自然 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/eco.html">
+🌍 环境意识
+</a>
+
+<a href="/zh/blog.html">
+📝 日志
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 相关应用 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/apps.html">
+📱 所有相关应用
+</a>
+
+<a href="/zh/apps.html#eft">
+🌿 Yangocean 应用
+</a>
+
+<a href="/zh/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/zh/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+
+<a href="/ms/">BM</a>
+
+<a href="/zh/">中文</a>
+
+<a href="/fr/">FR</a>
+
+<a href="/es/">ES</a>
+
+<a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<section class="hero">
+
+<h1>🛍️ 购物影响评估工具</h1>
+
+<p>
+在购买之前，暂停片刻，思考商品的必要性、耐用性、重复使用、
+维修、包装，以及是否可以借用、共享或购买二手商品。
+</p>
+
+</section>
+
+<div class="read-aloud">
+
+<button
+type="button"
+class="tts-btn"
+onclick="startReading()">
+🔊 朗读 </button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="pauseReading()">
+⏸ 暂停 </button>
+
+<button
+type="button"
+class="tts-btn"
+onclick="stopReading()">
+⏹ 停止 </button>
+
+</div>
+
+<section class="section">
+
+<h2>🛍️ 购买之前</h2>
+
+<p class="section-intro">
+购物对环境的影响不仅发生在购买的那一刻。材料、制造、运输、
+包装、使用和废弃处理都可能造成环境影响。本工具鼓励您在购买
+之前稍作停顿，思考产品的整个生命周期。
+</p>
+
+<div class="calculator">
+
+<div class="field">
+
+<label for="necessity">
+1. 这次购买有多必要？
+</label>
+
+<select id="necessity">
+
+<option value="1">
+我其实并不需要它
+</option>
+
+<option value="2">
+拥有它会很不错
+</option>
+
+<option value="3">
+它有用，但并不紧急
+</option>
+
+<option value="4">
+我需要它
+</option>
+
+<option value="5">
+我确实需要它
+</option>
+
+</select>
+
+<span class="help">
+思考一下，您是否已经拥有可以发挥相同作用的物品。
+</span>
+
+</div>
+
+<div class="field">
+
+<label for="lifespan">
+2. 这件物品预计可以使用多久？
+</label>
+
+<select id="lifespan">
+
+<option value="1">
+使用寿命非常短
+</option>
+
+<option value="2">
+不到一年
+</option>
+
+<option value="3">
+可以使用几年
+</option>
+
+<option value="4">
+可以使用很多年
+</option>
+
+<option value="5">
+非常耐用 / 经久耐用
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="reuse">
+3. 这件物品可以重复使用吗？
+</label>
+
+<select id="reuse">
+
+<option value="1">
+主要是一次性使用
+</option>
+
+<option value="2">
+重复使用的机会有限
+</option>
+
+<option value="3">
+有时可以重复使用
+</option>
+
+<option value="4">
+可以多次重复使用
+</option>
+
+<option value="5">
+非常适合重复使用
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="repair">
+4. 这件物品可以维修或保养吗？
+</label>
+
+<select id="repair">
+
+<option value="1">
+无法维修
+</option>
+
+<option value="2">
+维修困难
+</option>
+
+<option value="3">
+部分零件可以维修
+</option>
+
+<option value="4">
+通常可以维修
+</option>
+
+<option value="5">
+容易保养和维修
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="packaging">
+5. 这件物品使用了多少包装？
+</label>
+
+<select id="packaging">
+
+<option value="1">
+有大量不必要的包装
+</option>
+
+<option value="2">
+包装相当多
+</option>
+
+<option value="3">
+包装适中
+</option>
+
+<option value="4">
+包装较少
+</option>
+
+<option value="5">
+包装非常少 / 使用可重复利用的包装
+</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label for="secondhand">
+6. 您可以借用、共享或购买二手商品吗？
+</label>
+
+<select id="secondhand">
+
+<option value="1">
+没有考虑其他选择
+</option>
+
+<option value="2">
+可能不行
+</option>
+
+<option value="3">
+有可能
+</option>
+
+<option value="4">
+可以，值得考虑
+</option>
+
+<option value="5">
+可以，我能借用、共享或购买二手商品
+</option>
+
+</select>
+
+</div>
+
+<button
+type="button"
+class="calculate-btn"
+onclick="calculateImpact()">
+计算购物影响评分
+</button>
+
+<div
+id="result"
+class="result"
+aria-live="polite">
+
+<div class="score"
+id="score">
+0
+</div>
+
+<div
+class="result-title"
+id="resultTitle">
+购物影响评分
+</div>
+
+<p id="resultText"></p>
+
+<div
+class="advice"
+id="advice">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 评分意味着什么？</h2>
+
+<div class="card-grid">
+
+<div class="card">
+
+<h3>80–100：较低影响的选择</h3>
+
+<p>
+该选择具有多项积极特征，例如确有必要、耐用、可重复使用、
+可维修或包装较少。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>60–79：中等影响</h3>
+
+<p>
+该选择具有一些良好特征，但您仍可以通过考虑耐用性、
+包装、重复使用或其他选择来进一步改善。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>40–59：建议重新考虑</h3>
+
+<p>
+稍作停顿可能会有所帮助。思考一下您是否已经拥有类似物品，
+或者借用、维修或购买二手商品是否可行。
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>0–39：较高影响的选择</h3>
+
+<p>
+考虑这次购买是否必要，以及是否存在更耐用、可重复使用、
+可维修或包装更少的替代品。
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>♻️ 什么样的购物选择更可持续？</h2>
+
+<p>
+没有单一因素可以决定某个产品是否可持续。综合考虑多个因素，
+可以帮助我们获得更有意义的判断。
+</p>
+
+<ul>
+
+<li>
+<strong>必要性：</strong>
+只购买真正需要的物品，可以减少不必要的资源消耗。
+</li>
+
+<li>
+<strong>耐用性：</strong>
+更耐用的产品可能减少反复更换的需求。
+</li>
+
+<li>
+<strong>重复使用：</strong>
+可以多次使用的产品，与一次性产品相比，可能减少废弃物。
+</li>
+
+<li>
+<strong>维修：</strong>
+维修物品可以延长其使用寿命，并推迟废弃处理。
+</li>
+
+<li>
+<strong>包装：</strong>
+选择较少包装或可重复使用的包装，可以减少材料浪费。
+</li>
+
+<li>
+<strong>二手商品与共享：</strong>
+借用、共享、租赁或购买二手物品，有时可以避免购买新产品。
+</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌍 不要只考虑购买的那一刻</h2>
+
+<p>
+产品的环境影响可能发生在其生命周期的多个阶段。原材料需要
+开采，产品需要制造和运输，包装也需要生产。购买之后，
+能源和水的使用、维护以及最终的废弃处理也可能产生影响。
+</p>
+
+<p>
+这并不意味着每次购买都需要复杂的计算。对于日常决定，
+几个简单的问题就足够了：
+</p>
+
+<ul>
+
+<li>我真的需要这个物品吗？</li>
+
+<li>我是否已经拥有可以完成相同任务的东西？</li>
+
+<li>它是否耐用？</li>
+
+<li>我可以维修它吗？</li>
+
+<li>我可以重复使用它吗？</li>
+
+<li>我可以选择更少的包装吗？</li>
+
+<li>我可以借用、共享或购买二手商品吗？</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🌱 更有觉知的购物方式</h2>
+
+<p>
+可持续购物并不是要求每一次购买都做到完美，而是提高我们
+对自身选择的觉察，并逐渐减少不必要的消费。
+</p>
+
+<p>
+有时候，最可持续的选择就是继续使用我们已经拥有的东西。
+</p>
+
+</section>
+
+<section class="section">
+
+<h2>ℹ️ 关于本工具</h2>
+
+<p>
+购物影响评分是一个简单的教育性指南。它并不是对产品准确
+碳排放、生态损害或整体环境足迹的科学测量。
+</p>
+
+<p>
+实际环境影响会因材料、制造方法、能源来源、运输、产品寿命、
+使用方式、维修、包装及产品生命周期结束后的处理方式而有所不同。
+</p>
+
+<p>
+请将评分作为有觉知决策的参考，而不是精确的环境评估。
+</p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/zh/">首页</a>
+
+<a href="/zh/mindfulness.html">
+正念生活
+</a>
+
+<a href="/zh/nature-connection.html">
+亲近自然
+</a>
+
+<a href="/zh/blog.html">
+日志
+</a>
+
+<a href="/zh/apps.html">
+相关应用
+</a>
+
+<a href="/zh/contact.html">
+联系我们
+</a>
+
+</div>
+
+<p>
+&copy; 2026 • 正念生活 • 自然 • 日常可持续发展
+</p>
+
+</footer>
+
+<script>
+
+/* 购物影响评估工具 */
+
+function calculateImpact() {
+
+    const necessity =
+        Number(document.getElementById("necessity").value);
+
+    const lifespan =
+        Number(document.getElementById("lifespan").value);
+
+    const reuse =
+        Number(document.getElementById("reuse").value);
+
+    const repair =
+        Number(document.getElementById("repair").value);
+
+    const packaging =
+        Number(document.getElementById("packaging").value);
+
+    const secondhand =
+        Number(document.getElementById("secondhand").value);
+
+
+    /*
+     * 六个评估因素。
+     *
+     * 每个因素的评分范围为 1 至 5。
+     * 总分转换为 0–100 分。
+     */
+
+    const total =
+        necessity +
+        lifespan +
+        reuse +
+        repair +
+        packaging +
+        secondhand;
+
+    const score =
+        Math.round((total / 30) * 100);
+
+
+    let title = "";
+    let text = "";
+    let advice = "";
+
+
+    if (score >= 80) {
+
+        title = "较低影响的选择";
+
+        text =
+            "这个选择具有多项有助于更有觉知消费的积极特征。";
+
+        advice =
+            "如果您确实需要这件物品，可以考虑尽可能长时间地使用它、做好保养，并避免不必要的更换。";
+
+    }
+
+    else if (score >= 60) {
+
+        title = "中等影响";
+
+        text =
+            "这个选择具有一些积极方面，但仍可能有进一步减少环境影响的方法。";
+
+        advice =
+            "考虑是否可以选择更耐用的版本、减少包装、维修现有物品或选择二手商品。";
+
+    }
+
+    else if (score >= 40) {
+
+        title = "建议重新考虑";
+
+        text =
+            "稍作停顿可能有助于您判断这次购买是否真的必要。";
+
+        advice =
+            "检查您是否已经拥有类似物品，或者借用、共享、维修或购买二手商品是否能够满足相同的需求。";
+
+    }
+
+    else {
+
+        title = "较高影响的选择";
+
+        text =
+            "这个选择具有多个可能增加环境影响的因素。";
+
+        advice =
+            "购买之前，考虑您是否真的需要这件物品，以及是否有耐用、可重复使用、可维修或二手的替代选择。";
+
+    }
+
+
+    document.getElementById("score").textContent =
+        score + "/100";
+
+    document.getElementById("resultTitle").textContent =
+        title;
+
+    document.getElementById("resultText").textContent =
+        text;
+
+    document.getElementById("advice").textContent =
+        advice;
+
+    document.getElementById("result").style.display =
+        "block";
+
+
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+
+/* 朗读功能 */
+
+let speechQueue = [];
+let currentIndex = 0;
+
+
+function getReadingText() {
+
+    const content =
+        document.getElementById("content-to-read");
+
+    if (!content) {
+        return [];
+    }
+
+
+    const elements =
+        content.querySelectorAll("h1, h2, h3, p, li");
+
+
+    const texts = [];
+
+
+    elements.forEach(function(element) {
+
+        const text =
+            element.innerText.trim();
+
+        if (text) {
+            texts.push(text);
+        }
+
+    });
+
+
+    return texts;
+
+}
+
+
+function startReading() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "此浏览器不支持文本转语音功能。"
+        );
+
+        return;
+
+    }
+
+
+    if (speechSynthesis.paused) {
+
+        speechSynthesis.resume();
+
+        return;
+
+    }
+
+
+    speechSynthesis.cancel();
+
+
+    speechQueue =
+        getReadingText();
+
+    currentIndex = 0;
+
+
+    speakNext();
+
+}
+
+
+function speakNext() {
+
+    if (
+        currentIndex >= speechQueue.length
+    ) {
+
+        return;
+
+    }
+
+
+    const utterance =
+        new SpeechSynthesisUtterance(
+            speechQueue[currentIndex]
+        );
+
+
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+
+    utterance.onend = function() {
+
+        currentIndex++;
+
+        speakNext();
+
+    };
+
+
+    speechSynthesis.speak(
+        utterance
+    );
+
+}
+
+
+function pauseReading() {
+
+    if (
+        "speechSynthesis" in window &&
+        speechSynthesis.speaking
+    ) {
+
+        speechSynthesis.pause();
+
+    }
+
+}
+
+
+function stopReading() {
+
+    if (
+        "speechSynthesis" in window
+    ) {
+
+        speechSynthesis.cancel();
+
+        speechQueue = [];
+
+        currentIndex = 0;
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
