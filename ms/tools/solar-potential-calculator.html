@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Kalkulator Potensi Solar | Tenaga Boleh Baharu | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Anggarkan potensi penjanaan elektrik solar daripada bumbung atau kawasan yang tersedia menggunakan kalkulator potensi solar yang ringkas.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/ms/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* TOOL */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+    margin-bottom: 18px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* READ ALOUD */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/ms/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
+</div>
+
+</div>
+
+<nav>
+
+<a href="/ms/">Laman Utama</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Kehidupan Berkesedaran ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/mindfulness.html">
+🧘 Kesedaran Minda &amp; Dhamma
+</a>
+
+<a href="/ms/mindful-eating.html">
+🥗 Pemakanan Berkesedaran
+</a>
+
+<a href="/ms/mindful-ethical-living.html">
+♻️ Kehidupan Lestari
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Hubungan dengan Alam Semula Jadi ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/nature-connection.html">
+🌳 Hubungan dengan Alam Semula Jadi
+</a>
+
+<a href="/ms/eco.html">
+🌍 Kesedaran Alam Sekitar
+</a>
+
+<a href="/ms/blog.html">
+📝 Jurnal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Aplikasi Berkaitan ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/apps.html">
+📱 Semua Aplikasi Berkaitan
+</a>
+
+<a href="/ms/apps.html#eft">
+🌿 Aplikasi Yangocean
+</a>
+
+<a href="/ms/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/ms/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>☀️ Kalkulator Potensi Solar</h1>
+
+<p>
+Terokai jumlah tenaga elektrik yang mungkin dijana oleh sistem panel solar daripada kawasan bumbung atau tanah yang tersedia.
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 Baca dengan Suara
+</button>
+
+<button type="button" id="pauseButton">
+⏸ Jeda
+</button>
+
+<button type="button" id="stopButton">
+⏹ Berhenti
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>Anggarkan Potensi Solar</h2>
+
+<p class="intro">
+Masukkan beberapa maklumat ringkas tentang kawasan yang tersedia dan sistem solar. Hasilnya merupakan anggaran untuk tujuan pendidikan dan perancangan awal.
+</p>
+
+<form id="solarForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="roofArea">
+Kawasan yang Tersedia (m²)
+</label>
+
+<input
+type="number"
+id="roofArea"
+min="1"
+max="100000"
+step="0.1"
+value="30"
+required>
+
+<small>
+Kawasan bumbung atau tanah yang boleh digunakan untuk panel
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="panelEfficiency">
+Kecekapan Panel (%)
+</label>
+
+<input
+type="number"
+id="panelEfficiency"
+min="5"
+max="30"
+step="0.1"
+value="20"
+required>
+
+<small>
+Panel moden lazimnya mempunyai kecekapan sekitar 18–23%
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="sunHours">
+Purata Jam Matahari Puncak Sehari
+</label>
+
+<input
+type="number"
+id="sunHours"
+min="1"
+max="10"
+step="0.1"
+value="4.5"
+required>
+
+<small>
+Gunakan anggaran sumber solar tempatan jika tersedia
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="systemFactor">
+Prestasi Sistem (%)
+</label>
+
+<input
+type="number"
+id="systemFactor"
+min="50"
+max="100"
+step="1"
+value="80"
+required>
+
+<small>
+Mengambil kira kehilangan akibat suhu, inverter, pendawaian, kotoran dan faktor lain
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+Kira Potensi Solar
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>☀️ Anggaran Penjanaan Solar</h3>
+
+<div class="result-number" id="annualEnergy">
+0 kWh/tahun
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="systemSize">
+0 kW
+</strong>
+
+Anggaran kapasiti sistem
+
+</div>
+
+<div class="result-item">
+
+<strong id="dailyEnergy">
+0 kWh
+</strong>
+
+Purata penjanaan harian
+
+</div>
+
+<div class="result-item">
+
+<strong id="monthlyEnergy">
+0 kWh
+</strong>
+
+Purata penjanaan bulanan
+
+</div>
+
+</div>
+
+<p id="solarMessage" style="margin-top:18px;"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>☀️ Bagaimana Anggaran Ini Dikira</h2>
+
+<p>
+Kalkulator ini terlebih dahulu menganggarkan kapasiti solar yang berpotensi berdasarkan kawasan yang tersedia dan kecekapan panel. Kemudian, ia menggunakan purata jam matahari puncak dan faktor prestasi sistem untuk menganggarkan penjanaan elektrik.
+</p>
+
+<p>
+Pengiraan asas ini merupakan anggaran:
+
+<strong>
+Luas panel × sinaran solar × kecekapan panel × jam cahaya matahari × prestasi sistem.
+</strong>
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🏠 Faktor yang Boleh Mempengaruhi Penjanaan Solar</h2>
+
+<ul>
+
+<li>Arah dan orientasi bumbung atau kawasan tanah</li>
+
+<li>Sudut bumbung dan kecondongan panel</li>
+
+<li>Bayang-bayang daripada pokok atau bangunan berhampiran</li>
+
+<li>Cuaca tempatan dan cahaya matahari mengikut musim</li>
+
+<li>Suhu panel</li>
+
+<li>Kecekapan panel dan inverter</li>
+
+<li>Kotoran, habuk dan penyelenggaraan</li>
+
+<li>Keluasan bumbung yang boleh digunakan</li>
+
+</ul>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 Mengapa Tenaga Solar Penting</h2>
+
+<p>
+Tenaga solar menggunakan cahaya matahari untuk menghasilkan elektrik tanpa membakar bahan api fosil secara langsung pada peringkat penjanaan. Bagi rumah dan bangunan lain, solar atas bumbung merupakan salah satu cara untuk meneroka penggunaan tenaga boleh baharu.
+</p>
+
+<p>
+Walau bagaimanapun, panel solar hanyalah salah satu bahagian daripada pendekatan tenaga lestari. Mengurangkan penggunaan elektrik yang tidak diperlukan dan meningkatkan kecekapan tenaga juga boleh memberikan kesan yang bermakna.
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>⚠️ Nota Penting</h2>
+
+<p>
+Kalkulator ini memberikan anggaran ringkas untuk tujuan kesedaran umum dan perancangan awal. Ia bukan penilaian tapak, pengiraan kejuruteraan, ramalan kewangan atau sebut harga pemasangan.
+</p>
+
+<p>
+Sebelum memasang sistem solar, profesional solar yang berkelayakan perlu menilai tapak sebenar, struktur bumbung, bayang-bayang, orientasi, keadaan solar tempatan, keperluan elektrik dan peraturan yang berkaitan.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/ms/">Laman Utama</a> <a href="/ms/nature-connection.html">Hubungan dengan Alam Semula Jadi</a> <a href="/ms/mindful-ethical-living.html">Kehidupan Lestari</a> <a href="/ms/blog.html">Jurnal</a> <a href="/ms/apps.html">Aplikasi Berkaitan</a> <a href="/ms/contact.html">Hubungi Kami</a>
+
+</div>
+
+<p>
+&copy; 2026 • Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian Harian
+</p>
+
+</footer>
+
+<script>
+
+const solarForm = document.getElementById("solarForm");
+const solarResult = document.getElementById("result");
+
+solarForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const area = Number(document.getElementById("roofArea").value);
+    const efficiency = Number(document.getElementById("panelEfficiency").value) / 100;
+    const sunHours = Number(document.getElementById("sunHours").value);
+    const systemFactor = Number(document.getElementById("systemFactor").value) / 100;
+
+    if (
+        !Number.isFinite(area) ||
+        !Number.isFinite(efficiency) ||
+        !Number.isFinite(sunHours) ||
+        !Number.isFinite(systemFactor) ||
+        area <= 0 ||
+        efficiency <= 0 ||
+        sunHours <= 0 ||
+        systemFactor <= 0
+    ) {
+
+        solarResult.style.display = "block";
+
+        document.getElementById("annualEnergy").textContent =
+            "Sila masukkan nilai yang sah.";
+
+        document.getElementById("solarMessage").textContent = "";
+
+        return;
+
+    }
+
+
+    /*
+        Anggaran kuasa solar:
+
+        1 kW cahaya matahari bagi setiap m²
+        × kawasan yang tersedia
+        × kecekapan panel
+
+        Kemudian ambil kira jam cahaya matahari
+        dan prestasi sistem.
+    */
+
+    const systemSize = area * efficiency;
+
+    const dailyEnergy =
+        systemSize *
+        sunHours *
+        systemFactor;
+
+    const annualEnergy =
+        dailyEnergy * 365;
+
+    const monthlyEnergy =
+        annualEnergy / 12;
+
+
+    document.getElementById("annualEnergy").textContent =
+        annualEnergy.toLocaleString(undefined, {
+            maximumFractionDigits: 0
+        }) + " kWh/tahun";
+
+
+    document.getElementById("systemSize").textContent =
+        systemSize.toFixed(1) + " kW";
+
+
+    document.getElementById("dailyEnergy").textContent =
+        dailyEnergy.toFixed(1) + " kWh";
+
+
+    document.getElementById("monthlyEnergy").textContent =
+        monthlyEnergy.toFixed(0) + " kWh";
+
+
+    let message;
+
+
+    if (systemSize < 2) {
+
+        message =
+            "Ini mewakili pemasangan solar yang agak kecil. Susunan panel sebenar bergantung pada ruang yang tersedia dan peralatan yang digunakan.";
+
+    } else if (systemSize < 5) {
+
+        message =
+            "Ini mungkin mewakili sistem solar berskala kediaman yang sederhana, bergantung pada keluasan bumbung dan keadaan tempatan.";
+
+    } else {
+
+        message =
+            "Ini mewakili sistem solar yang berpotensi lebih besar. Penilaian tapak profesional adalah penting sebelum membuat keputusan pemasangan.";
+
+    }
+
+
+    document.getElementById("solarMessage").textContent = message;
+
+    solarResult.style.display = "block";
+
+});
+
+
+/* READ ALOUD */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("Fungsi Baca dengan Suara tidak disokong oleh pelayar ini.");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "ms-MY";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
