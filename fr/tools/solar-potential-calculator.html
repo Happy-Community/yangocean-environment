@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Calculateur de potentiel solaire | Énergie renouvelable | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Estimez la production potentielle d’électricité solaire à partir d’un toit ou d’une surface disponible grâce à un calculateur simple de potentiel solaire.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/fr/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/tools/solar-potential-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/solar-potential-calculator.html">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.7;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    min-width: 190px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+nav a,
+.dropbtn {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    font-family: inherit;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    border: 1px solid #e2e8e1;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    padding: 8px 0;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 15px;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+/* CONTENU PRINCIPAL */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 35px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 20px 30px;
+}
+
+.hero h1 {
+    margin-bottom: 10px;
+    color: #2f6b3f;
+    font-size: 2rem;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+/* CALCULATEUR */
+
+.tool {
+    max-width: 760px;
+    margin: 25px auto 45px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 28px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #ffffff;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #6b776e;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 28px;
+    padding: 22px;
+    border-radius: 10px;
+    background: #eef5ec;
+    border: 1px solid #d6e4d3;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2f6b3f;
+    margin-bottom: 18px;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.result-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #2f6b3f;
+}
+
+.note {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    padding: 20px;
+    background: #f0f3ef;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+section.info {
+    max-width: 760px;
+    margin: 0 auto 35px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+}
+
+section.info h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+ul {
+    padding-left: 22px;
+}
+
+/* LECTURE À VOIX HAUTE */
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px auto 25px;
+}
+
+.read-aloud button {
+    border: 1px solid #cbd6cc;
+    background: #ffffff;
+    color: #334238;
+    border-radius: 7px;
+    padding: 9px 15px;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+/* PIED DE PAGE */
+
+footer {
+    background: #eef2ed;
+    text-align: center;
+    padding: 25px 20px;
+    color: #637066;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4c6653;
+    text-decoration: none;
+    margin: 0 6px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        margin-top: 8px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .tool,
+    section.info {
+        padding: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="brand">
+
+<a href="/fr/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Vie consciente • Nature • Durabilité
+</div>
+
+</div>
+
+<nav>
+
+<a href="/fr/">Accueil</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌿 Vie consciente ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/mindfulness.html">
+🧘 Pleine conscience &amp; Dhamma
+</a>
+
+<a href="/fr/mindful-eating.html">
+🥗 Alimentation consciente
+</a>
+
+<a href="/fr/mindful-ethical-living.html">
+♻️ Mode de vie durable
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Connexion à la nature ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/nature-connection.html">
+🌳 Connexion à la nature
+</a>
+
+<a href="/fr/eco.html">
+🌍 Sensibilisation à l’environnement
+</a>
+
+<a href="/fr/blog.html">
+📝 Journal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Applications associées ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/fr/apps.html">
+📱 Toutes les applications associées
+</a>
+
+<a href="/fr/apps.html#eft">
+🌿 Application Yangocean
+</a>
+
+<a href="/fr/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/fr/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="languages">
+
+<a href="/">EN</a> <a href="/ms/">BM</a> <a href="/zh/">中文</a> <a href="/fr/">FR</a> <a href="/es/">ES</a> <a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+
+<h1>☀️ Calculateur de potentiel solaire</h1>
+
+<p>
+Découvrez la quantité d’électricité qu’un système de panneaux solaires pourrait produire à partir d’une surface de toit ou de terrain disponible.
+</p>
+
+</div>
+
+<div class="read-aloud">
+
+<button type="button" id="readButton">
+🔊 Lire à voix haute
+</button>
+
+<button type="button" id="pauseButton">
+⏸ Pause
+</button>
+
+<button type="button" id="stopButton">
+⏹ Arrêter
+</button>
+
+</div>
+
+<div class="tool">
+
+<h2>Estimer le potentiel solaire</h2>
+
+<p class="intro">
+Saisissez quelques informations simples sur la surface disponible et le système solaire. Le résultat est une estimation approximative à des fins éducatives et de planification.
+</p>
+
+<form id="solarForm">
+
+<div class="form-grid">
+
+<div class="field">
+
+<label for="roofArea">
+Surface disponible (m²)
+</label>
+
+<input
+type="number"
+id="roofArea"
+min="1"
+max="100000"
+step="0.1"
+value="30"
+required>
+
+<small>
+Surface utilisable du toit ou du terrain pour les panneaux
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="panelEfficiency">
+Rendement des panneaux (%)
+</label>
+
+<input
+type="number"
+id="panelEfficiency"
+min="5"
+max="30"
+step="0.1"
+value="20"
+required>
+
+<small>
+Les panneaux modernes ont généralement un rendement d’environ 18 à 23 %
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="sunHours">
+Nombre moyen d’heures d’ensoleillement maximal par jour
+</label>
+
+<input
+type="number"
+id="sunHours"
+min="1"
+max="10"
+step="0.1"
+value="4.5"
+required>
+
+<small>
+Utilisez une estimation locale du potentiel solaire si elle est disponible
+</small>
+
+</div>
+
+<div class="field">
+
+<label for="systemFactor">
+Performance du système (%)
+</label>
+
+<input
+type="number"
+id="systemFactor"
+min="50"
+max="100"
+step="1"
+value="80"
+required>
+
+<small>
+Tient compte des pertes dues à la température, à l’onduleur, au câblage, à la saleté et à d’autres facteurs
+</small>
+
+</div>
+
+</div>
+
+<button type="submit" class="calculate-btn">
+Calculer le potentiel solaire
+</button>
+
+</form>
+
+<div class="result" id="result" aria-live="polite">
+
+<h3>☀️ Production solaire estimée</h3>
+
+<div class="result-number" id="annualEnergy">
+0 kWh/an
+</div>
+
+<div class="result-grid">
+
+<div class="result-item">
+
+<strong id="systemSize">
+0 kW
+</strong>
+
+Puissance estimée du système
+
+</div>
+
+<div class="result-item">
+
+<strong id="dailyEnergy">
+0 kWh
+</strong>
+
+Production quotidienne moyenne
+
+</div>
+
+<div class="result-item">
+
+<strong id="monthlyEnergy">
+0 kWh
+</strong>
+
+Production mensuelle moyenne
+
+</div>
+
+</div>
+
+<p id="solarMessage" style="margin-top:18px;"></p>
+
+</div>
+
+</div>
+
+<section class="info">
+
+<h2>☀️ Comment fonctionne l’estimation</h2>
+
+<p>
+Le calculateur estime d’abord la capacité solaire potentielle à partir de la surface disponible et du rendement des panneaux. Il utilise ensuite le nombre moyen d’heures d’ensoleillement maximal et un facteur de performance du système pour estimer la production d’électricité.
+</p>
+
+<p>
+Le calcul de base est une approximation :
+
+<strong>
+Surface des panneaux × irradiance solaire × rendement des panneaux × heures d’ensoleillement × performance du système.
+</strong>
+</p>
+
+</section>
+
+<section class="info">
+
+<h2>🏠 Quels facteurs peuvent influencer la production solaire ?</h2>
+
+<ul>
+
+<li>Orientation du toit ou du terrain</li>
+
+<li>Inclinaison du toit et angle des panneaux</li>
+
+<li>Ombres des arbres ou des bâtiments voisins</li>
+
+<li>Conditions météorologiques locales et ensoleillement saisonnier</li>
+
+<li>Température des panneaux</li>
+
+<li>Rendement des panneaux et de l’onduleur</li>
+
+<li>Saleté, poussière et entretien</li>
+
+<li>Surface de toit réellement utilisable</li>
+
+</ul>
+
+</section>
+
+<section class="info">
+
+<h2>🌏 Pourquoi l’énergie solaire est-elle importante ?</h2>
+
+<p>
+L’énergie solaire utilise la lumière du soleil pour produire de l’électricité sans brûler directement de combustibles fossiles au point de production. Pour les maisons et autres bâtiments, les panneaux solaires sur les toits peuvent être un moyen d’explorer l’utilisation des énergies renouvelables.
+</p>
+
+<p>
+Cependant, les panneaux solaires ne constituent qu’une partie d’une approche énergétique durable. Réduire la consommation d’électricité inutile et améliorer l’efficacité énergétique peuvent également avoir un impact significatif.
+</p>
+
+</section>
+
+<div class="note">
+
+<h2>⚠️ Remarque importante</h2>
+
+<p>
+Ce calculateur fournit une estimation simplifiée à des fins de sensibilisation générale et de planification. Il ne constitue ni une évaluation du site, ni un calcul d’ingénierie, ni une prévision financière, ni un devis d’installation.
+</p>
+
+<p>
+Avant d’installer un système solaire, un professionnel qualifié devrait évaluer le site réel, la structure du toit, l’ombrage, l’orientation, les conditions solaires locales, les exigences électriques et les réglementations applicables.
+</p>
+
+</div>
+
+</main>
+
+<footer>
+
+<div>
+
+<a href="/fr/">Accueil</a> <a href="/fr/nature-connection.html">Connexion à la nature</a> <a href="/fr/mindful-ethical-living.html">Mode de vie durable</a> <a href="/fr/blog.html">Journal</a> <a href="/fr/apps.html">Applications associées</a> <a href="/fr/contact.html">Contact</a>
+
+</div>
+
+<p>
+&copy; 2026 • Vie consciente • Nature • Durabilité au quotidien
+</p>
+
+</footer>
+
+<script>
+
+const solarForm = document.getElementById("solarForm");
+const solarResult = document.getElementById("result");
+
+solarForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const area = Number(document.getElementById("roofArea").value);
+    const efficiency = Number(document.getElementById("panelEfficiency").value) / 100;
+    const sunHours = Number(document.getElementById("sunHours").value);
+    const systemFactor = Number(document.getElementById("systemFactor").value) / 100;
+
+    if (
+        !Number.isFinite(area) ||
+        !Number.isFinite(efficiency) ||
+        !Number.isFinite(sunHours) ||
+        !Number.isFinite(systemFactor) ||
+        area <= 0 ||
+        efficiency <= 0 ||
+        sunHours <= 0 ||
+        systemFactor <= 0
+    ) {
+
+        solarResult.style.display = "block";
+
+        document.getElementById("annualEnergy").textContent =
+            "Veuillez saisir des valeurs valides.";
+
+        document.getElementById("solarMessage").textContent = "";
+
+        return;
+
+    }
+
+
+    /*
+        Puissance solaire approximative :
+
+        1 kW de rayonnement solaire par m²
+        × surface disponible
+        × rendement des panneaux
+
+        Puis appliquer les heures d’ensoleillement
+        et la performance du système.
+    */
+
+    const systemSize = area * efficiency;
+
+    const dailyEnergy =
+        systemSize *
+        sunHours *
+        systemFactor;
+
+    const annualEnergy =
+        dailyEnergy * 365;
+
+    const monthlyEnergy =
+        annualEnergy / 12;
+
+
+    document.getElementById("annualEnergy").textContent =
+        annualEnergy.toLocaleString(undefined, {
+            maximumFractionDigits: 0
+        }) + " kWh/an";
+
+
+    document.getElementById("systemSize").textContent =
+        systemSize.toFixed(1) + " kW";
+
+
+    document.getElementById("dailyEnergy").textContent =
+        dailyEnergy.toFixed(1) + " kWh";
+
+
+    document.getElementById("monthlyEnergy").textContent =
+        monthlyEnergy.toFixed(0) + " kWh";
+
+
+    let message;
+
+
+    if (systemSize < 2) {
+
+        message =
+            "Cela représente une installation solaire relativement petite. La disposition réelle des panneaux dépendra de l’espace disponible et de l’équipement.";
+
+    } else if (systemSize < 5) {
+
+        message =
+            "Cela pourrait représenter un système solaire résidentiel de taille modeste, selon la surface du toit disponible et les conditions locales.";
+
+    } else {
+
+        message =
+            "Cela représente un système potentiel de plus grande taille. Une évaluation professionnelle du site serait importante avant toute décision d’installation.";
+
+    }
+
+
+    document.getElementById("solarMessage").textContent = message;
+
+    solarResult.style.display = "block";
+
+});
+
+
+/* LECTURE À VOIX HAUTE */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+
+function getReadingText() {
+
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+
+}
+
+
+readButton.addEventListener("click", function() {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert("La lecture à voix haute n’est pas prise en charge par ce navigateur.");
+
+        return;
+
+    }
+
+    speechSynthesis.cancel();
+
+    const text = getReadingText();
+
+    const utterance = new SpeechSynthesisUtterance(text);
+
+    utterance.lang = "fr-FR";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+
+});
+
+
+pauseButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.pause();
+
+    }
+
+});
+
+
+stopButton.addEventListener("click", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+
+window.addEventListener("beforeunload", function() {
+
+    if ("speechSynthesis" in window) {
+
+        speechSynthesis.cancel();
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>
