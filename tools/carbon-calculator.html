@@ -2,54 +2,742 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Carbon Footprint Calculator</title>
+
+<title>Plant-Based Eating and Nature | Yangocean</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="google-adsense-account" content="ca-pub-6929570744326515">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-     crossorigin="anonymous"></script>
-<!-- GLOBAL CSS -->
-<link rel="stylesheet" href="/styles.css">
+
+<meta name="description"
+content="Discover how choosing more vegetables, beans, peas and other plant-based foods instead of meat can help reduce greenhouse gas emissions, land use and environmental impact. Try the Plant-Based Eating and Nature Calculator.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="en" href="https://www.yangocean.com/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/plant-based-eating-and-nature.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/plant-based-eating-and-nature.html">
+
+<meta property="og:title" content="Plant-Based Eating and Nature | Yangocean">
+<meta property="og:description" content="Explore the environmental benefits of eating more plant-based foods and estimate your potential greenhouse gas emission reductions.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yangocean.com/plant-based-eating-and-nature.html">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    color: #35433a;
+    background: #f7f8f1;
+}
+
+header {
+    background: #e7efdf;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #315b38;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    color: #536b54;
+    margin-top: 10px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dce5d6;
+}
+
+nav a {
+    color: #3c6842;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    text-align: center;
+    padding: 14px 10px;
+    background: #f0f4e9;
+}
+
+.language-switch a {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    border: 1px solid #c9d8c1;
+    border-radius: 6px;
+    color: #315b38;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.language-switch a[aria-current="page"] {
+    background: #416b45;
+    color: #ffffff;
+    border-color: #416b45;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 18px 45px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #386641;
+    margin-top: 0;
+}
+
+h3 {
+    color: #4d714f;
+}
+
+.intro {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e1e8dc;
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d9e5d3;
+    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
+}
+
+.calculator label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    padding: 11px;
+    font-size: 1rem;
+    border: 1px solid #cbd7c5;
+    border-radius: 7px;
+    background: #fbfcf8;
+}
+
+.calculator button {
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: #47764b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #345d38;
+}
+
+.result {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf5e8;
+    border-left: 5px solid #5b8754;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #315b38;
+}
+
+.note {
+    background: #f1f3e9;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.94rem;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+footer {
+    background: #e7efdf;
+    text-align: center;
+    padding: 25px 15px;
+    color: #4b644d;
+}
+
+footer a {
+    color: #386641;
+    text-decoration: none;
+}
+
+.read-aloud {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.read-aloud button {
+    background: #557c55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 18px 14px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+}
+</style>
 </head>
 
-<body class="theme-carbon">
+<body>
 
+<header>
+    <h1>Plant-Based Eating and Nature</h1>
+    <p>Mindful Living • Nature Connection • Sustainability</p>
+</header>
 
-<div class="container">
+<nav aria-label="Main navigation">
+    <a href="/index.html">Home</a>
+    <a href="/mindfulness.html">Mindfulness</a>
+    <a href="/mindful-ethical-living.html">Mindful &amp; Ethical Living</a>
+    <a href="/mindful-eating.html">Mindful Eating</a>
+    <a href="/eco.html">Environmental Awareness</a>
+    <a href="/blog.html">Journal</a>
+</nav>
 
-  <div class="card">
-
-    <h1>🌍 Carbon Footprint Calculator</h1>
-
-    <p>Electricity usage (kWh/month):</p>
-    <input type="number" id="electricity" placeholder="e.g. 200">
-
-    <p>Car travel (km/month):</p>
-    <input type="number" id="transport" placeholder="e.g. 150">
-
-    <button onclick="calcCarbon()">Calculate</button>
-
-    <div id="result" class="result" style="display:none;"></div>
-
-    <a class="back" href="../index.html">← Back to Home</a>
-
-  </div>
-
+<div class="language-switch" aria-label="Language selection">
+    <a href="/plant-based-eating-and-nature.html" lang="en" aria-current="page">EN</a>
+    <a href="/ms/plant-based-eating-and-nature.html" lang="ms">BM</a>
+    <a href="/zh/plant-based-eating-and-nature.html" lang="zh-CN">中文</a>
+    <a href="/fr/plant-based-eating-and-nature.html" lang="fr">FR</a>
+    <a href="/es/plant-based-eating-and-nature.html" lang="es">ES</a>
+    <a href="/my/plant-based-eating-and-nature.html" lang="my">မြန်မာ</a>
 </div>
 
+<main>
+
+<div class="read-aloud">
+    <button type="button" onclick="readArticle()">🔊 Read Aloud</button>
+    <button type="button" onclick="stopReading()">⏹ Stop</button>
+</div>
+
+<section class="intro">
+    <h2>Can Eating More Plant-Based Foods Help Nature?</h2>
+
+    <p>
+        The food we choose every day can influence the environment.
+        Producing food requires land, water, energy and other resources.
+        Different foods also produce different amounts of greenhouse gas
+        emissions throughout their supply chains.
+    </p>
+
+    <p>
+        Scientific research generally finds that plant-based foods such as
+        vegetables, beans, peas and tofu have lower environmental impacts
+        than many meat products, especially beef and lamb.
+    </p>
+
+    <p>
+        Choosing more plant-based meals and reducing our consumption of
+        high-impact meats can be one practical way to care for nature.
+        We do not need to make every meal perfect. Small, consistent
+        changes can contribute to a more sustainable food system.
+    </p>
+</section>
+
+<section>
+    <h2>1. How Can Plant-Based Eating Help the Environment?</h2>
+
+    <h3>🌍 Reduce Greenhouse Gas Emissions</h3>
+
+    <p>
+        Livestock production can generate greenhouse gases such as methane
+        and nitrous oxide. Cattle and sheep are particularly associated
+        with higher emissions because of digestion, feed production and
+        land requirements.
+    </p>
+
+    <p>
+        Replacing some meat meals with beans, peas, lentils or tofu may
+        reduce the greenhouse gas emissions associated with our diets.
+        The amount of reduction depends on the foods being replaced and
+        the way those foods are produced.
+    </p>
+
+    <h3>🌳 Reduce Pressure on Land and Forests</h3>
+
+    <p>
+        Meat production requires land for grazing animals and for growing
+        animal feed. In some regions, agricultural expansion contributes
+        to deforestation and habitat loss.
+    </p>
+
+    <p>
+        Eating more plant-based foods can reduce the demand for land
+        associated with livestock production. Protecting natural habitats
+        helps support wildlife, biodiversity and healthy ecosystems.
+    </p>
+
+    <h3>💧 Use Resources More Efficiently</h3>
+
+    <p>
+        Food production requires water, energy and agricultural inputs.
+        The environmental footprint varies considerably between crops
+        and farming systems.
+    </p>
+
+    <p>
+        Many plant-based protein foods generally require fewer resources
+        than high-impact meats. However, water use also depends on
+        the crop, the climate and whether the area experiences water
+        scarcity.
+    </p>
+
+    <h3>🐝 Support Biodiversity</h3>
+
+    <p>
+        Reducing pressure to expand agricultural land can help preserve
+        forests, grasslands and other natural habitats.
+        These habitats provide food and shelter for birds, insects,
+        mammals and many other living organisms.
+    </p>
+
+    <p>
+        Sustainable farming practices, reduced pesticide use and
+        protection of natural ecosystems are also important.
+        Plant-based eating is one part of a broader effort to protect
+        biodiversity.
+    </p>
+</section>
+
+<section>
+    <h2>2. Scientific Comparison of Selected Foods</h2>
+
+    <p>
+        The following illustrative values are based on global-average
+        greenhouse gas emissions per 100 grams of protein from the
+        environmental food-impact dataset associated with Poore and
+        Nemecek (2018), as presented by Our World in Data.
+    </p>
+
+    <p>
+        These figures compare foods by protein content rather than by
+        equal food weight. This makes the comparison more meaningful
+        when considering protein-rich foods as alternatives.
+    </p>
+
+    <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse:collapse; background:#fff;">
+        <thead>
+            <tr style="background:#e7efdf;">
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Food
+                </th>
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Approx. kg CO₂-equivalent per 100 g protein
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Beef (beef herd)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Lamb and mutton</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Pork</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Poultry</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Tofu</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Other pulses (beans, lentils)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Peas</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <p class="note">
+        Important: These are global averages, not exact footprints for
+        every farm or meal. Actual impacts can vary with farming
+        practices, land-use change, processing, transport and other
+        factors. CO₂-equivalent includes the warming effects of different
+        greenhouse gases.
+    </p>
+</section>
+
+<section>
+    <h2>3. Plant-Based Eating and Nature Calculator</h2>
+
+    <p>
+        Estimate the potential greenhouse gas emission reduction when
+        you replace some meat-based meals with plant-based protein foods.
+    </p>
+
+    <div class="calculator">
+
+        <label for="meatFood">
+            Which meat are you replacing?
+        </label>
+
+        <select id="meatFood">
+            <option value="49.89">Beef</option>
+            <option value="19.85">Lamb or mutton</option>
+            <option value="7.61">Pork</option>
+            <option value="5.70">Poultry (chicken)</option>
+        </select>
+
+        <label for="plantFood">
+            Which plant-based protein will you choose?
+        </label>
+
+        <select id="plantFood">
+            <option value="0.84">Beans or lentils</option>
+            <option value="0.44">Peas</option>
+            <option value="1.98">Tofu</option>
+        </select>
+
+        <label for="proteinAmount">
+            Protein amount per meal being compared (grams)
+        </label>
+
+        <input type="number"
+               id="proteinAmount"
+               min="1"
+               max="300"
+               value="20">
+
+        <label for="mealsPerWeek">
+            How many meals per week will you replace?
+        </label>
+
+        <input type="number"
+               id="mealsPerWeek"
+               min="1"
+               max="21"
+               value="3">
+
+        <button type="button" onclick="calculateImpact()">
+            Calculate My Potential Impact
+        </button>
+
+        <div id="result" class="result" aria-live="polite">
+            <h3>Your Estimated Result</h3>
+
+            <p>
+                Estimated emissions from the meat choice:
+            </p>
+
+            <div id="meatResult"></div>
+
+            <p>
+                Estimated emissions from the plant-based choice:
+            </p>
+
+            <div id="plantResult"></div>
+
+            <p>
+                Potential emissions avoided per week:
+            </p>
+
+            <div id="weeklyResult" class="result-number"></div>
+
+            <p>
+                Potential emissions avoided per year:
+            </p>
+
+            <div id="annualResult" class="result-number"></div>
+
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Calculator methodology: the selected values represent kg
+        CO₂-equivalent per 100 g of protein. The calculation assumes
+        the same amount of protein is provided by the meat and plant
+        protein choice. Results are simplified estimates, not a
+        full life-cycle assessment of an actual meal.
+    </p>
+</section>
+
+<section>
+    <h2>4. Simple Ways to Eat More Sustainably</h2>
+
+    <ul>
+        <li>Try one or more meat-free meals each week.</li>
+        <li>Include beans, lentils, peas or tofu as protein sources.</li>
+        <li>Add a variety of vegetables to your meals.</li>
+        <li>Choose seasonal produce when practical.</li>
+        <li>Reduce food waste by planning meals and using leftovers.</li>
+        <li>Store food properly to keep it fresh for longer.</li>
+        <li>Support farmers who use responsible and sustainable practices.</li>
+        <li>Enjoy a balanced diet that meets your nutritional needs.</li>
+    </ul>
+
+    <p>
+        A plant-based meal does not have to be complicated.
+        Rice with vegetables and lentils, tofu with leafy greens,
+        or a bean-based soup can be simple and nourishing options.
+    </p>
+</section>
+
+<section>
+    <h2>5. A Mindful Choice for the Planet</h2>
+
+    <p>
+        Mindful eating invites us to pay attention not only to the food
+        on our plates, but also to the resources and living systems
+        connected to that food.
+    </p>
+
+    <p>
+        Choosing more plant-based meals can be a meaningful step toward
+        reducing our environmental footprint. It can also encourage
+        appreciation for the soil, water, plants, farmers and ecosystems
+        that make our food possible.
+    </p>
+
+    <p>
+        We do not need to judge ourselves or others by their food choices.
+        Instead, we can learn, make informed decisions and gradually
+        develop habits that support both our well-being and the natural
+        world.
+    </p>
+
+    <p>
+        <strong>
+            Every mindful meal is an opportunity to care for ourselves
+            and the Earth.
+        </strong>
+    </p>
+</section>
+
+<section>
+    <h2>Scientific References and Further Reading</h2>
+
+    <ul>
+        <li>
+            Poore, J. &amp; Nemecek, T. (2018).
+            Reducing food’s environmental impacts through producers
+            and consumers. <em>Science</em>, 360(6392), 987–992.
+            <a href="https://doi.org/10.1126/science.aaq0216"
+               target="_blank" rel="noopener noreferrer">
+               Read the research
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Environmental Impacts of Food Production.
+            <a href="https://ourworldindata.org/environmental-impacts-of-food"
+               target="_blank" rel="noopener noreferrer">
+               Explore the data and explanations
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Land Use and Diets.
+            <a href="https://ourworldindata.org/land-use-diets"
+               target="_blank" rel="noopener noreferrer">
+               Learn about food and agricultural land use
+            </a>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Yangocean – Mindful Living • Nature Connection • Sustainability
+    </p>
+
+    <p>
+        <a href="/index.html">Home</a> |
+        <a href="/mindful-eating.html">Mindful Eating</a> |
+        <a href="/eco.html">Environmental Awareness</a> |
+        <a href="/contact.html">Contact</a>
+    </p>
+
+    <p>
+        Educational information only. Environmental estimates are
+        approximate and do not represent the exact impact of an
+        individual meal.
+    </p>
+</footer>
+
 <script>
-function calcCarbon() {
-  let e = document.getElementById("electricity").value || 0;
-  let t = document.getElementById("transport").value || 0;
+function calculateImpact() {
+    const meatFactor = parseFloat(
+        document.getElementById("meatFood").value
+    );
 
-  let co2 = (e * 0.5) + (t * 0.2);
+    const plantFactor = parseFloat(
+        document.getElementById("plantFood").value
+    );
 
-  document.getElementById("result").style.display = "block";
-  document.getElementById("result").innerHTML =
-    "🌱 Estimated CO₂ emission: <b>" + co2.toFixed(1) + " kg/month</b>";
+    const proteinGrams = parseFloat(
+        document.getElementById("proteinAmount").value
+    );
+
+    const mealsPerWeek = parseFloat(
+        document.getElementById("mealsPerWeek").value
+    );
+
+    if (
+        !Number.isFinite(proteinGrams) ||
+        !Number.isFinite(mealsPerWeek) ||
+        proteinGrams <= 0 ||
+        proteinGrams > 300 ||
+        mealsPerWeek <= 0 ||
+        mealsPerWeek > 21
+    ) {
+        alert("Please enter valid amounts for protein and meals per week.");
+        return;
+    }
+
+    const meatEmissionsPerMeal =
+        (meatFactor * proteinGrams) / 100;
+
+    const plantEmissionsPerMeal =
+        (plantFactor * proteinGrams) / 100;
+
+    const reductionPerMeal =
+        meatEmissionsPerMeal - plantEmissionsPerMeal;
+
+    const weeklyReduction =
+        reductionPerMeal * mealsPerWeek;
+
+    const annualReduction =
+        weeklyReduction * 52;
+
+    document.getElementById("meatResult").textContent =
+        meatEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-equivalent per meal";
+
+    document.getElementById("plantResult").textContent =
+        plantEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-equivalent per meal";
+
+    document.getElementById("weeklyResult").textContent =
+        Math.max(0, weeklyReduction).toFixed(3) +
+        " kg CO₂-equivalent";
+
+    document.getElementById("annualResult").textContent =
+        Math.max(0, annualReduction).toFixed(2) +
+        " kg CO₂-equivalent";
+
+    document.getElementById("message").textContent =
+        "By making this substitution consistently, you could " +
+        "potentially reduce the greenhouse gas emissions associated " +
+        "with these meals. This is an estimate based on average " +
+        "food-production data.";
+
+    document.getElementById("result").style.display = "block";
+}
+
+function readArticle() {
+    if (!("speechSynthesis" in window)) {
+        alert("Read-aloud is not supported in this browser.");
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const article = document.querySelector("main").cloneNode(true);
+
+    article.querySelectorAll(".read-aloud").forEach(function(element) {
+        element.remove();
+    });
+
+    article.querySelectorAll("button").forEach(function(element) {
+        element.remove();
+    });
+
+    const text = article.innerText;
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "en-US";
+    speech.rate = 0.95;
+
+    window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 </script>
 
 </body>
 </html>
-
-
