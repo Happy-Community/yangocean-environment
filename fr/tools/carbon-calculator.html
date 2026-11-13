@@ -2,61 +2,768 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Calculateur d’empreinte carbone</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="google-adsense-account" content="ca-pub-6929570744326515">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-     crossorigin="anonymous"></script>
 
-<!-- GLOBAL STYLES -->
-<link rel="stylesheet" href="/styles.css">
+<title>Alimentation végétale et nature | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Découvrez comment choisir davantage de légumes, de légumineuses, de pois et d'autres aliments végétaux à la place de la viande peut contribuer à réduire les émissions de gaz à effet de serre, l'utilisation des terres et l'impact environnemental. Essayez le calculateur d'alimentation végétale et de nature.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
+
+<link rel="alternate" hreflang="en" href="https://www.yangocean.com/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/tools/carbon-calculator.html">
+
+<meta property="og:title" content="Alimentation végétale et nature | Yangocean">
+<meta property="og:description" content="Découvrez les avantages environnementaux d'une alimentation davantage végétale et estimez votre réduction potentielle des émissions de gaz à effet de serre.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yangocean.com/fr/tools/carbon-calculator.html">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    color: #35433a;
+    background: #f7f8f1;
+}
+
+header {
+    background: #e7efdf;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #315b38;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    color: #536b54;
+    margin-top: 10px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dce5d6;
+}
+
+nav a {
+    color: #3c6842;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    text-align: center;
+    padding: 14px 10px;
+    background: #f0f4e9;
+}
+
+.language-switch a {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    border: 1px solid #c9d8c1;
+    border-radius: 6px;
+    color: #315b38;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.language-switch a[aria-current="page"] {
+    background: #416b45;
+    color: #ffffff;
+    border-color: #416b45;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 18px 45px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #386641;
+    margin-top: 0;
+}
+
+h3 {
+    color: #4d714f;
+}
+
+.intro {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e1e8dc;
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d9e5d3;
+    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
+}
+
+.calculator label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    padding: 11px;
+    font-size: 1rem;
+    border: 1px solid #cbd7c5;
+    border-radius: 7px;
+    background: #fbfcf8;
+}
+
+.calculator button {
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: #47764b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #345d38;
+}
+
+.result {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf5e8;
+    border-left: 5px solid #5b8754;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #315b38;
+}
+
+.note {
+    background: #f1f3e9;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.94rem;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+footer {
+    background: #e7efdf;
+    text-align: center;
+    padding: 25px 15px;
+    color: #4b644d;
+}
+
+footer a {
+    color: #386641;
+    text-decoration: none;
+}
+
+.read-aloud {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.read-aloud button {
+    background: #557c55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 18px 14px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+}
+</style>
 </head>
 
-<!-- 🌍 THEME FIX -->
-<body class="theme-carbon">
+<body>
 
+<header>
+    <h1>Alimentation végétale et nature</h1>
+    <p>Vie en pleine conscience • Connexion à la nature • Durabilité</p>
+</header>
 
+<nav aria-label="Navigation principale">
+    <a href="/fr/index.html">Accueil</a>
+    <a href="/fr/mindfulness.html">Pleine conscience</a>
+    <a href="/fr/mindful-ethical-living.html">Vie consciente et éthique</a>
+    <a href="/fr/mindful-eating.html">Alimentation consciente</a>
+    <a href="/fr/eco.html">Sensibilisation à l'environnement</a>
+    <a href="/fr/blog.html">Journal</a>
+</nav>
 
-<div class="container">
-<div class="card">
-
-<h1>🌍 Calculateur d’empreinte carbone</h1>
-
-<p>Consommation d’électricité (kWh/mois) :</p>
-<input type="number" id="electricity">
-
-<p>Trajet en voiture (km/mois) :</p>
-<input type="number" id="transport">
-
-<button onclick="calcCarbon()">Calculer</button>
-
-<div id="result" class="result" style="display:none;"></div>
-
-<a class="back" href="/fr/">← Retour à l’accueil</a>
-
+<div class="language-switch" aria-label="Sélection de la langue">
+    <a href="/tools/carbon-calculator.html" lang="en">EN</a>
+    <a href="/ms/tools/carbon-calculator.html" lang="ms">BM</a>
+    <a href="/zh/tools/carbon-calculator.html" lang="zh-CN">中文</a>
+    <a href="/fr/tools/carbon-calculator.html" lang="fr" aria-current="page">FR</a>
+    <a href="/es/tools/carbon-calculator.html" lang="es">ES</a>
+    <a href="/my/tools/carbon-calculator.html" lang="my">မြန်မာ</a>
 </div>
+
+<main>
+
+<div class="read-aloud">
+    <button type="button" onclick="readArticle()">🔊 Lire à voix haute</button>
+    <button type="button" onclick="stopReading()">⏹ Arrêter</button>
 </div>
+
+<section class="intro">
+    <h2>Une alimentation davantage végétale peut-elle aider la nature ?</h2>
+
+    <p>
+        Les choix alimentaires que nous faisons chaque jour peuvent
+        influencer l'environnement. La production alimentaire nécessite
+        des terres, de l'eau, de l'énergie et d'autres ressources.
+        Les différents aliments produisent également des quantités
+        différentes de gaz à effet de serre tout au long de leur chaîne
+        d'approvisionnement.
+    </p>
+
+    <p>
+        Les recherches scientifiques montrent généralement que les
+        aliments végétaux tels que les légumes, les légumineuses,
+        les pois et le tofu ont un impact environnemental plus faible
+        que de nombreux produits carnés, en particulier le bœuf et l'agneau.
+    </p>
+
+    <p>
+        Choisir davantage de repas végétaux et réduire notre consommation
+        de viandes à fort impact environnemental constitue une manière
+        pratique de prendre soin de la nature.
+        Nous n'avons pas besoin de rendre chaque repas parfait.
+        De petits changements réguliers peuvent contribuer à un système
+        alimentaire plus durable.
+    </p>
+</section>
+
+<section>
+    <h2>1. Comment une alimentation végétale peut-elle aider l'environnement ?</h2>
+
+    <h3>🌍 Réduire les émissions de gaz à effet de serre</h3>
+
+    <p>
+        L'élevage peut produire des gaz à effet de serre tels que
+        le méthane et le protoxyde d'azote. Les bovins et les ovins
+        sont particulièrement associés à des émissions plus élevées
+        en raison de leur digestion, de la production d'aliments
+        pour animaux et des besoins en terres.
+    </p>
+
+    <p>
+        Remplacer certains repas à base de viande par des haricots,
+        des pois, des lentilles ou du tofu peut réduire les émissions
+        de gaz à effet de serre associées à notre alimentation.
+        La quantité de réduction dépend des aliments remplacés
+        et de leur mode de production.
+    </p>
+
+    <h3>🌳 Réduire la pression sur les terres et les forêts</h3>
+
+    <p>
+        La production de viande nécessite des terres pour le pâturage
+        des animaux et la culture de leur alimentation.
+        Dans certaines régions, l'expansion agricole contribue
+        à la déforestation et à la perte d'habitats naturels.
+    </p>
+
+    <p>
+        Consommer davantage d'aliments végétaux peut réduire
+        la demande en terres associée à l'élevage.
+        La protection des habitats naturels contribue à soutenir
+        la faune, la biodiversité et des écosystèmes sains.
+    </p>
+
+    <h3>💧 Utiliser les ressources plus efficacement</h3>
+
+    <p>
+        La production alimentaire nécessite de l'eau, de l'énergie
+        et des intrants agricoles.
+        L'empreinte environnementale varie considérablement
+        selon les cultures et les systèmes agricoles.
+    </p>
+
+    <p>
+        De nombreuses sources de protéines végétales nécessitent
+        généralement moins de ressources que les viandes
+        à fort impact environnemental.
+        Cependant, la consommation d'eau dépend également
+        de la culture, du climat et de la disponibilité locale
+        des ressources en eau.
+    </p>
+
+    <h3>🐝 Soutenir la biodiversité</h3>
+
+    <p>
+        Réduire la pression liée à l'expansion des terres agricoles
+        peut aider à préserver les forêts, les prairies et
+        d'autres habitats naturels.
+        Ces habitats fournissent de la nourriture et un abri
+        aux oiseaux, aux insectes, aux mammifères et à de nombreux
+        autres organismes vivants.
+    </p>
+
+    <p>
+        Les pratiques agricoles durables, la réduction de l'utilisation
+        des pesticides et la protection des écosystèmes naturels
+        sont également importantes.
+        L'alimentation végétale fait partie d'un effort plus large
+        visant à protéger la biodiversité.
+    </p>
+</section>
+
+<section>
+    <h2>2. Comparaison scientifique de certains aliments</h2>
+
+    <p>
+        Les valeurs indicatives suivantes sont fondées sur les moyennes
+        mondiales des émissions de gaz à effet de serre par 100 grammes
+        de protéines, issues du jeu de données sur les impacts
+        environnementaux des aliments associé à Poore et Nemecek (2018),
+        tel que présenté par Our World in Data.
+    </p>
+
+    <p>
+        Les aliments sont comparés en fonction de leur teneur en protéines
+        plutôt que de leur poids total. Cela permet une comparaison
+        plus pertinente lorsqu'on envisage des aliments riches en protéines
+        comme alternatives.
+    </p>
+
+    <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse:collapse; background:#fff;">
+        <thead>
+            <tr style="background:#e7efdf;">
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Aliment
+                </th>
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    kg CO₂-éq. estimés pour 100 g de protéines
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Bœuf (élevage bovin)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Agneau et mouton</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Porc</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Volaille (poulet)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Tofu</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Autres légumineuses (haricots, lentilles)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Pois</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <p class="note">
+        Important : Ces valeurs sont des moyennes mondiales et ne
+        représentent pas l'empreinte exacte de chaque ferme ou repas.
+        Les impacts réels peuvent varier selon les pratiques agricoles,
+        les changements d'utilisation des terres, la transformation,
+        le transport et d'autres facteurs.
+        L'équivalent CO₂ inclut les effets de réchauffement
+        de différents gaz à effet de serre.
+    </p>
+</section>
+
+<section>
+    <h2>3. Calculateur d'alimentation végétale et de nature</h2>
+
+    <p>
+        Estimez la réduction potentielle des émissions de gaz à effet
+        de serre lorsque vous remplacez certains repas à base de viande
+        par des aliments riches en protéines végétales.
+    </p>
+
+    <div class="calculator">
+
+        <label for="meatFood">
+            Quelle viande souhaitez-vous remplacer ?
+        </label>
+
+        <select id="meatFood">
+            <option value="49.89">Bœuf</option>
+            <option value="19.85">Agneau ou mouton</option>
+            <option value="7.61">Porc</option>
+            <option value="5.70">Volaille (poulet)</option>
+        </select>
+
+        <label for="plantFood">
+            Quelle protéine végétale choisirez-vous ?
+        </label>
+
+        <select id="plantFood">
+            <option value="0.84">Haricots ou lentilles</option>
+            <option value="0.44">Pois</option>
+            <option value="1.98">Tofu</option>
+        </select>
+
+        <label for="proteinAmount">
+            Quantité de protéines par repas comparé (grammes)
+        </label>
+
+        <input type="number"
+               id="proteinAmount"
+               min="1"
+               max="300"
+               value="20">
+
+        <label for="mealsPerWeek">
+            Combien de repas par semaine remplacerez-vous ?
+        </label>
+
+        <input type="number"
+               id="mealsPerWeek"
+               min="1"
+               max="21"
+               value="3">
+
+        <button type="button" onclick="calculateImpact()">
+            Calculer mon impact potentiel
+        </button>
+
+        <div id="result" class="result" aria-live="polite">
+            <h3>Votre résultat estimé</h3>
+
+            <p>
+                Émissions estimées pour le choix de viande :
+            </p>
+
+            <div id="meatResult"></div>
+
+            <p>
+                Émissions estimées pour le choix végétal :
+            </p>
+
+            <div id="plantResult"></div>
+
+            <p>
+                Réduction potentielle des émissions par semaine :
+            </p>
+
+            <div id="weeklyResult" class="result-number"></div>
+
+            <p>
+                Réduction potentielle des émissions par an :
+            </p>
+
+            <div id="annualResult" class="result-number"></div>
+
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Méthodologie du calculateur : les valeurs sélectionnées
+        représentent des kg CO₂-éq. par 100 g de protéines.
+        Le calcul suppose que la viande et l'aliment végétal
+        fournissent la même quantité de protéines.
+        Les résultats sont des estimations simplifiées et ne
+        constituent pas une analyse complète du cycle de vie
+        d'un repas réel.
+    </p>
+</section>
+
+<section>
+    <h2>4. Des moyens simples de manger plus durablement</h2>
+
+    <ul>
+        <li>Essayez un ou plusieurs repas sans viande chaque semaine.</li>
+        <li>Intégrez des haricots, des lentilles, des pois ou du tofu comme sources de protéines.</li>
+        <li>Ajoutez une variété de légumes à vos repas.</li>
+        <li>Choisissez des produits de saison lorsque cela est possible.</li>
+        <li>Réduisez le gaspillage alimentaire en planifiant vos repas et en utilisant les restes.</li>
+        <li>Conservez correctement les aliments afin qu'ils restent frais plus longtemps.</li>
+        <li>Soutenez les agriculteurs qui adoptent des pratiques responsables et durables.</li>
+        <li>Profitez d'une alimentation équilibrée répondant à vos besoins nutritionnels.</li>
+    </ul>
+
+    <p>
+        Un repas végétal n'a pas besoin d'être compliqué.
+        Du riz accompagné de légumes et de lentilles,
+        du tofu avec des légumes-feuilles ou une soupe à base
+        de légumineuses peuvent être des options simples et nourrissantes.
+    </p>
+</section>
+
+<section>
+    <h2>5. Un choix conscient pour la planète</h2>
+
+    <p>
+        L'alimentation consciente nous invite à prêter attention
+        non seulement aux aliments dans notre assiette,
+        mais également aux ressources et aux systèmes vivants
+        qui leur sont associés.
+    </p>
+
+    <p>
+        Choisir davantage de repas végétaux peut constituer
+        une étape significative pour réduire notre empreinte
+        environnementale.
+        Cela peut également nous encourager à apprécier davantage
+        les sols, l'eau, les plantes, les agriculteurs et
+        les écosystèmes qui rendent notre alimentation possible.
+    </p>
+
+    <p>
+        Nous n'avons pas besoin de nous juger ou de juger les autres
+        en fonction de leurs choix alimentaires.
+        Nous pouvons plutôt apprendre, prendre des décisions éclairées
+        et développer progressivement des habitudes qui soutiennent
+        notre bien-être et le monde naturel.
+    </p>
+
+    <p>
+        <strong>
+            Chaque repas conscient est une occasion de prendre soin
+            de nous-mêmes et de la Terre.
+        </strong>
+    </p>
+</section>
+
+<section>
+    <h2>Références scientifiques et lectures complémentaires</h2>
+
+    <ul>
+        <li>
+            Poore, J. &amp; Nemecek, T. (2018).
+            Reducing food’s environmental impacts through producers
+            and consumers. <em>Science</em>, 360(6392), 987–992.
+            <a href="https://doi.org/10.1126/science.aaq0216"
+               target="_blank" rel="noopener noreferrer">
+               Lire la recherche
+            </a>
+        </li>
+
+        <li>
+            Our World in Data :
+            Environmental Impacts of Food Production.
+            <a href="https://ourworldindata.org/environmental-impacts-of-food"
+               target="_blank" rel="noopener noreferrer">
+               Explorer les données et les explications
+            </a>
+        </li>
+
+        <li>
+            Our World in Data :
+            Land Use and Diets.
+            <a href="https://ourworldindata.org/land-use-diets"
+               target="_blank" rel="noopener noreferrer">
+               En savoir plus sur l'alimentation et l'utilisation des terres agricoles
+            </a>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Yangocean – Vie en pleine conscience • Connexion à la nature • Durabilité
+    </p>
+
+    <p>
+        <a href="/fr/index.html">Accueil</a> |
+        <a href="/fr/mindful-eating.html">Alimentation consciente</a> |
+        <a href="/fr/eco.html">Sensibilisation à l'environnement</a> |
+        <a href="/fr/contact.html">Contact</a>
+    </p>
+
+    <p>
+        Informations à des fins éducatives uniquement.
+        Les estimations environnementales sont approximatives
+        et ne représentent pas l'impact exact d'un repas individuel.
+    </p>
+</footer>
+
 <script>
-function calcCarbon() {
-  let e = document.getElementById("electricity").value || 0;
-  let t = document.getElementById("transport").value || 0;
+function calculateImpact() {
+    const meatFactor = parseFloat(
+        document.getElementById("meatFood").value
+    );
 
-  if (e <= 0 && t <= 0) {
-    alert("Veuillez entrer des valeurs valides");
-    return;
-  }
+    const plantFactor = parseFloat(
+        document.getElementById("plantFood").value
+    );
 
-  let co2 = (e * 0.5) + (t * 0.2);
+    const proteinGrams = parseFloat(
+        document.getElementById("proteinAmount").value
+    );
 
-  let level =
-    co2 < 50 ? "Faible 🌱" :
-    co2 < 150 ? "Moyen ⚠️" :
-    "Élevé 🔴";
+    const mealsPerWeek = parseFloat(
+        document.getElementById("mealsPerWeek").value
+    );
 
-  document.getElementById("result").style.display = "block";
-  document.getElementById("result").innerHTML =
-    "🌱 Émissions estimées de CO₂ : <b>" + co2.toFixed(1) + " kg/mois</b><br>" +
-    "📊 Niveau d’impact : <b>" + level + "</b>";
+    if (
+        !Number.isFinite(proteinGrams) ||
+        !Number.isFinite(mealsPerWeek) ||
+        proteinGrams <= 0 ||
+        proteinGrams > 300 ||
+        mealsPerWeek <= 0 ||
+        mealsPerWeek > 21
+    ) {
+        alert("Veuillez saisir des quantités valides de protéines et de repas par semaine.");
+        return;
+    }
+
+    const meatEmissionsPerMeal =
+        (meatFactor * proteinGrams) / 100;
+
+    const plantEmissionsPerMeal =
+        (plantFactor * proteinGrams) / 100;
+
+    const reductionPerMeal =
+        meatEmissionsPerMeal - plantEmissionsPerMeal;
+
+    const weeklyReduction =
+        reductionPerMeal * mealsPerWeek;
+
+    const annualReduction =
+        weeklyReduction * 52;
+
+    document.getElementById("meatResult").textContent =
+        meatEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-éq. par repas";
+
+    document.getElementById("plantResult").textContent =
+        plantEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-éq. par repas";
+
+    document.getElementById("weeklyResult").textContent =
+        Math.max(0, weeklyReduction).toFixed(3) +
+        " kg CO₂-éq.";
+
+    document.getElementById("annualResult").textContent =
+        Math.max(0, annualReduction).toFixed(2) +
+        " kg CO₂-éq.";
+
+    document.getElementById("message").textContent =
+        "En effectuant ce remplacement de manière régulière, " +
+        "vous pourriez potentiellement réduire les émissions " +
+        "de gaz à effet de serre associées à ces repas. " +
+        "Il s'agit d'une estimation basée sur des données " +
+        "moyennes de production alimentaire.";
+
+    document.getElementById("result").style.display = "block";
+}
+
+function readArticle() {
+    if (!("speechSynthesis" in window)) {
+        alert("La lecture à voix haute n'est pas prise en charge par ce navigateur.");
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const article = document.querySelector("main").cloneNode(true);
+
+    article.querySelectorAll(".read-aloud").forEach(function(element) {
+        element.remove();
+    });
+
+    article.querySelectorAll("button").forEach(function(element) {
+        element.remove();
+    });
+
+    const text = article.innerText;
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "fr-FR";
+    speech.rate = 0.95;
+
+    window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 </script>
 
