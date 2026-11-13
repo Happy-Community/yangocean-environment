@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+
+<title>ပလတ်စတစ်အမှိုက်နှင့် CO₂ တွက်ချက်စက် | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="တစ်ပတ်လျှင် အသုံးပြုသော ပလတ်စတစ်ဘူးနှင့် ပလတ်စတစ်အိတ် အရေအတွက်ကို ထည့်သွင်းပြီး တစ်နှစ်စာ ပလတ်စတစ်အသုံးပြုမှုနှင့် ခန့်မှန်း CO₂ သက်ရောက်မှုကို တွက်ချက်ပါ။">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://www.yangocean.com/my/tools/plastic-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://www.yangocean.com/tools/plastic-calculator.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://www.yangocean.com/ms/tools/plastic-calculator.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://www.yangocean.com/zh/tools/plastic-calculator.html">
+<link rel="alternate"
+hreflang="fr"
+href="https://www.yangocean.com/fr/tools/plastic-calculator.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://www.yangocean.com/es/tools/plastic-calculator.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://www.yangocean.com/my/tools/plastic-calculator.html">
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.yangocean.com/tools/plastic-calculator.html">
+
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
+
+<!-- GLOBAL CSS -->
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body class="theme-plastic">
+
+<div class="container">
+
+  <div class="card">
+
+    <h1>🧴 ပလတ်စတစ်အမှိုက်နှင့် CO₂ တွက်ချက်စက်</h1>
+
+    <p>
+    တစ်ပတ်လျှင် အသုံးပြုသော ပလတ်စတစ်ဘူး အရေအတွက်:
+    </p>
+
+    <input
+    type="number"
+    id="bottles"
+    min="0"
+    step="1"
+    placeholder="ဥပမာ - ၃">
+
+    <p>
+    တစ်ပတ်လျှင် အသုံးပြုသော ပလတ်စတစ်အိတ် အရေအတွက်:
+    </p>
+
+    <input
+    type="number"
+    id="bags"
+    min="0"
+    step="1"
+    placeholder="ဥပမာ - ၅">
+
+    <button onclick="calcPlastic()">
+    တွက်ချက်ရန်
+    </button>
+
+    <div id="result" class="result" style="display:none;" aria-live="polite"></div>
+
+    <a class="back" href="/my/index.html">
+    ← ပင်မစာမျက်နှာသို့ ပြန်သွားရန်
+    </a>
+
+  </div>
+
+</div>
+
+<script>
+function calcPlastic() {
+
+  let bottlesInput = document.getElementById("bottles").value;
+  let bagsInput = document.getElementById("bags").value;
+
+  let bottles = bottlesInput === "" ? 0 : Number(bottlesInput);
+  let bags = bagsInput === "" ? 0 : Number(bagsInput);
+
+  if (
+    !Number.isFinite(bottles) ||
+    !Number.isFinite(bags) ||
+    bottles < 0 ||
+    bags < 0
+  ) {
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").innerHTML =
+      "ကျေးဇူးပြု၍ မှန်ကန်သော အရေအတွက်များကို ထည့်သွင်းပါ။";
+    return;
+  }
+
+  // တစ်နှစ်စာ အသုံးပြုမှု
+  let yearlyBottles = bottles * 52;
+  let yearlyBags = bags * 52;
+
+  let totalItems = yearlyBottles + yearlyBags;
+
+  // CO₂ ခန့်မှန်းချက် (ပစ္စည်းတစ်ခုလျှင် kg)
+  let bottleCO2 = yearlyBottles * 0.025;
+  let bagCO2 = yearlyBags * 0.005;
+
+  let totalCO2 = bottleCO2 + bagCO2;
+
+  // သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ အဆင့်သတ်မှတ်ချက်
+  let rating = "";
+
+  if (totalCO2 < 10) {
+    rating = "နည်း 🌱 (ကောင်းမွန်)";
+  } else if (totalCO2 < 50) {
+    rating = "အလယ်အလတ် ⚠️ (သင့်တင့်သော သက်ရောက်မှု)";
+  } else {
+    rating = "မြင့် 🔴 (သက်ရောက်မှုများ)";
+  }
+
+  document.getElementById("result").style.display = "block";
+
+  document.getElementById("result").innerHTML =
+    "🧴 တစ်နှစ်စာ ပလတ်စတစ်အသုံးပြုမှု: <b>" +
+    totalItems.toLocaleString() +
+    " ခု</b><br>" +
+
+    "🌍 ခန့်မှန်း CO₂ သက်ရောက်မှု: <b>" +
+    totalCO2.toFixed(2) +
+    " kg/နှစ်</b><br>" +
+
+    "📊 သဘာဝပတ်ဝန်းကျင်ဆိုင်ရာ အဆင့်: <b>" +
+    rating +
+    "</b>";
+}
+</script>
+
+</body>
+</html>
