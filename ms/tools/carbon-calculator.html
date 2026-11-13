@@ -2,58 +2,755 @@
 <html lang="ms">
 <head>
 <meta charset="UTF-8">
-<title>Kalkulator Jejak Karbon</title>
+
+<title>Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi | Yangocean</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-     crossorigin="anonymous"></script>  
-<!-- GLOBAL STYLES -->
-<link rel="stylesheet" href="/styles.css">
-</head>
 
-<!-- 🌍 THEME FIX -->
-<body class="theme-carbon">
+<meta name="description"
+content="Ketahui bagaimana memilih lebih banyak sayur-sayuran, kekacang, kacang pis dan makanan berasaskan tumbuhan berbanding daging dapat membantu mengurangkan pelepasan gas rumah hijau, penggunaan tanah dan kesan terhadap alam sekitar. Cuba Kalkulator Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi.">
 
-<div class="container">
-  <div class="card">
+<meta name="robots" content="index, follow">
 
-    <h1>🌍 Kalkulator Jejak Karbon</h1>
+<link rel="canonical" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
 
-    <p>Penggunaan elektrik (kWh/bulan):</p>
-    <input type="number" id="electricity" placeholder="cth: 200">
+<link rel="alternate" hreflang="en" href="https://www.yangocean.com/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/tools/carbon-calculator.html">
 
-    <p>Perjalanan kereta (km/bulan):</p>
-    <input type="number" id="transport" placeholder="cth: 100">
+<meta property="og:title" content="Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi | Yangocean">
+<meta property="og:description" content="Terokai manfaat alam sekitar daripada pemakanan berasaskan tumbuhan dan anggarkan potensi pengurangan pelepasan gas rumah hijau.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yangocean.com/ms/tools/carbon-calculator.html">
 
-    <button onclick="calcCarbon()">Kira</button>
-
-    <div id="result" class="result" style="display:none;"></div>
-
-    <a class="back" href="/ms/">← Kembali ke Laman Utama</a>
-
-  </div>
-</div>
-
-<script>
-function calcCarbon() {
-  let e = document.getElementById("electricity").value || 0;
-  let t = document.getElementById("transport").value || 0;
-
-  // CO2 estimation
-  let co2 = (e * 0.5) + (t * 0.2);
-
-  let resultBox = document.getElementById("result");
-  resultBox.style.display = "block";
-
-  resultBox.innerHTML =
-    "🌱 Anggaran pelepasan CO₂: <b>" + co2.toFixed(1) + " kg/bulan</b><br>" +
-    "📊 Tahap impak: <b>" + getLevel(co2) + "</b>";
+<style>
+* {
+    box-sizing: border-box;
 }
 
-function getLevel(co2) {
-  if (co2 < 50) return "Rendah 🌱";
-  if (co2 < 150) return "Sederhana ⚠️";
-  return "Tinggi 🔴";
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    color: #35433a;
+    background: #f7f8f1;
+}
+
+header {
+    background: #e7efdf;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #315b38;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    color: #536b54;
+    margin-top: 10px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dce5d6;
+}
+
+nav a {
+    color: #3c6842;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    text-align: center;
+    padding: 14px 10px;
+    background: #f0f4e9;
+}
+
+.language-switch a {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    border: 1px solid #c9d8c1;
+    border-radius: 6px;
+    color: #315b38;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.language-switch a[aria-current="page"] {
+    background: #416b45;
+    color: #ffffff;
+    border-color: #416b45;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 18px 45px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #386641;
+    margin-top: 0;
+}
+
+h3 {
+    color: #4d714f;
+}
+
+.intro {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e1e8dc;
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d9e5d3;
+    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
+}
+
+.calculator label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    padding: 11px;
+    font-size: 1rem;
+    border: 1px solid #cbd7c5;
+    border-radius: 7px;
+    background: #fbfcf8;
+}
+
+.calculator button {
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: #47764b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #345d38;
+}
+
+.result {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf5e8;
+    border-left: 5px solid #5b8754;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #315b38;
+}
+
+.note {
+    background: #f1f3e9;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.94rem;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+footer {
+    background: #e7efdf;
+    text-align: center;
+    padding: 25px 15px;
+    color: #4b644d;
+}
+
+footer a {
+    color: #386641;
+    text-decoration: none;
+}
+
+.read-aloud {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.read-aloud button {
+    background: #557c55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 18px 14px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi</h1>
+    <p>Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian</p>
+</header>
+
+<nav aria-label="Navigasi utama">
+    <a href="/ms/index.html">Laman Utama</a>
+    <a href="/ms/mindfulness.html">Kesedaran Minda</a>
+    <a href="/ms/mindful-ethical-living.html">Kehidupan Beretika</a>
+    <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
+    <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
+    <a href="/ms/blog.html">Jurnal</a>
+</nav>
+
+<div class="language-switch" aria-label="Pemilihan bahasa">
+    <a href="/tools/carbon-calculator.html" lang="en">EN</a>
+    <a href="/ms/tools/carbon-calculator.html" lang="ms" aria-current="page">BM</a>
+    <a href="/zh/tools/carbon-calculator.html" lang="zh-CN">中文</a>
+    <a href="/fr/tools/carbon-calculator.html" lang="fr">FR</a>
+    <a href="/es/tools/carbon-calculator.html" lang="es">ES</a>
+    <a href="/my/tools/carbon-calculator.html" lang="my">မြန်မာ</a>
+</div>
+
+<main>
+
+<div class="read-aloud">
+    <button type="button" onclick="readArticle()">🔊 Baca Kuat</button>
+    <button type="button" onclick="stopReading()">⏹ Berhenti</button>
+</div>
+
+<section class="intro">
+    <h2>Adakah Pemakanan Berasaskan Tumbuhan Membantu Alam Semula Jadi?</h2>
+
+    <p>
+        Pilihan makanan harian kita boleh mempengaruhi alam sekitar.
+        Penghasilan makanan memerlukan tanah, air, tenaga dan sumber
+        lain. Makanan yang berbeza juga menghasilkan jumlah pelepasan
+        gas rumah hijau yang berbeza sepanjang rantaian bekalannya.
+    </p>
+
+    <p>
+        Penyelidikan saintifik secara umum menunjukkan bahawa makanan
+        berasaskan tumbuhan seperti sayur-sayuran, kekacang, kacang pis
+        dan tauhu mempunyai kesan alam sekitar yang lebih rendah
+        berbanding banyak produk daging, khususnya daging lembu dan kambing.
+    </p>
+
+    <p>
+        Memilih lebih banyak hidangan berasaskan tumbuhan dan mengurangkan
+        pengambilan daging yang mempunyai kesan alam sekitar tinggi
+        merupakan salah satu cara praktikal untuk menjaga alam semula jadi.
+        Kita tidak perlu menjadikan setiap hidangan sempurna.
+        Perubahan kecil yang dilakukan secara konsisten boleh menyumbang
+        kepada sistem makanan yang lebih lestari.
+    </p>
+</section>
+
+<section>
+    <h2>1. Bagaimanakah Pemakanan Berasaskan Tumbuhan Membantu Alam Sekitar?</h2>
+
+    <h3>🌍 Mengurangkan Pelepasan Gas Rumah Hijau</h3>
+
+    <p>
+        Pengeluaran ternakan boleh menghasilkan gas rumah hijau seperti
+        metana dan nitrus oksida. Lembu dan biri-biri khususnya
+        dikaitkan dengan pelepasan yang lebih tinggi kerana proses
+        pencernaan, pengeluaran makanan ternakan dan keperluan tanah.
+    </p>
+
+    <p>
+        Menggantikan sebahagian hidangan daging dengan kacang,
+        kacang pis, lentil atau tauhu boleh mengurangkan pelepasan
+        gas rumah hijau yang berkaitan dengan diet kita.
+        Jumlah pengurangan bergantung pada makanan yang digantikan
+        dan cara makanan tersebut dihasilkan.
+    </p>
+
+    <h3>🌳 Mengurangkan Tekanan terhadap Tanah dan Hutan</h3>
+
+    <p>
+        Pengeluaran daging memerlukan tanah untuk meragut ternakan
+        dan menanam makanan ternakan. Di sesetengah kawasan,
+        pengembangan pertanian menyumbang kepada penebangan hutan
+        dan kehilangan habitat.
+    </p>
+
+    <p>
+        Pengambilan lebih banyak makanan berasaskan tumbuhan boleh
+        mengurangkan permintaan terhadap tanah yang berkaitan dengan
+        pengeluaran ternakan. Melindungi habitat semula jadi membantu
+        menyokong hidupan liar, biodiversiti dan ekosistem yang sihat.
+    </p>
+
+    <h3>💧 Menggunakan Sumber dengan Lebih Cekap</h3>
+
+    <p>
+        Pengeluaran makanan memerlukan air, tenaga dan input pertanian.
+        Jejak alam sekitar berbeza dengan ketara antara tanaman
+        dan sistem pertanian.
+    </p>
+
+    <p>
+        Banyak makanan protein berasaskan tumbuhan secara umum
+        memerlukan sumber yang lebih sedikit berbanding daging
+        yang mempunyai kesan alam sekitar tinggi.
+        Walau bagaimanapun, penggunaan air juga bergantung pada
+        jenis tanaman, iklim dan sama ada kawasan tersebut
+        mengalami kekurangan air.
+    </p>
+
+    <h3>🐝 Menyokong Biodiversiti</h3>
+
+    <p>
+        Mengurangkan tekanan untuk memperluas kawasan pertanian
+        boleh membantu memelihara hutan, padang rumput dan habitat
+        semula jadi yang lain.
+        Habitat ini menyediakan makanan dan tempat perlindungan
+        kepada burung, serangga, mamalia dan pelbagai organisma lain.
+    </p>
+
+    <p>
+        Amalan pertanian lestari, pengurangan penggunaan racun perosak
+        dan perlindungan ekosistem semula jadi juga penting.
+        Pemakanan berasaskan tumbuhan merupakan salah satu bahagian
+        daripada usaha yang lebih luas untuk melindungi biodiversiti.
+    </p>
+</section>
+
+<section>
+    <h2>2. Perbandingan Saintifik bagi Makanan Terpilih</h2>
+
+    <p>
+        Nilai anggaran berikut berdasarkan purata global pelepasan
+        gas rumah hijau bagi setiap 100 gram protein daripada
+        dataset kesan alam sekitar makanan yang dikaitkan dengan
+        Poore dan Nemecek (2018), seperti yang dipaparkan oleh
+        Our World in Data.
+    </p>
+
+    <p>
+        Angka ini membandingkan makanan berdasarkan kandungan protein,
+        bukannya berat makanan yang sama. Ini menjadikan perbandingan
+        lebih bermakna apabila mempertimbangkan makanan kaya protein
+        sebagai alternatif.
+    </p>
+
+    <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse:collapse; background:#fff;">
+        <thead>
+            <tr style="background:#e7efdf;">
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Makanan
+                </th>
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Anggaran kg CO₂-setara bagi setiap 100 g protein
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Daging lembu (beef herd)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Daging kambing dan biri-biri</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Daging babi</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Daging ayam</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Tauhu</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Kekacang lain (kacang, lentil)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Kacang pis</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <p class="note">
+        Penting: Angka ini ialah purata global, bukan jejak karbon
+        tepat bagi setiap ladang atau hidangan. Kesan sebenar boleh
+        berbeza mengikut amalan pertanian, perubahan penggunaan tanah,
+        pemprosesan, pengangkutan dan faktor lain. CO₂-setara
+        merangkumi kesan pemanasan daripada pelbagai gas rumah hijau.
+    </p>
+</section>
+
+<section>
+    <h2>3. Kalkulator Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi</h2>
+
+    <p>
+        Anggarkan potensi pengurangan pelepasan gas rumah hijau
+        apabila anda menggantikan beberapa hidangan berasaskan daging
+        dengan makanan protein berasaskan tumbuhan.
+    </p>
+
+    <div class="calculator">
+
+        <label for="meatFood">
+            Apakah jenis daging yang ingin anda gantikan?
+        </label>
+
+        <select id="meatFood">
+            <option value="49.89">Daging lembu</option>
+            <option value="19.85">Daging kambing atau biri-biri</option>
+            <option value="7.61">Daging babi</option>
+            <option value="5.70">Daging ayam</option>
+        </select>
+
+        <label for="plantFood">
+            Apakah protein berasaskan tumbuhan yang akan anda pilih?
+        </label>
+
+        <select id="plantFood">
+            <option value="0.84">Kacang atau lentil</option>
+            <option value="0.44">Kacang pis</option>
+            <option value="1.98">Tauhu</option>
+        </select>
+
+        <label for="proteinAmount">
+            Jumlah protein bagi setiap hidangan yang dibandingkan (gram)
+        </label>
+
+        <input type="number"
+               id="proteinAmount"
+               min="1"
+               max="300"
+               value="20">
+
+        <label for="mealsPerWeek">
+            Berapa banyak hidangan seminggu yang akan anda gantikan?
+        </label>
+
+        <input type="number"
+               id="mealsPerWeek"
+               min="1"
+               max="21"
+               value="3">
+
+        <button type="button" onclick="calculateImpact()">
+            Kira Potensi Kesan Saya
+        </button>
+
+        <div id="result" class="result" aria-live="polite">
+            <h3>Anggaran Keputusan Anda</h3>
+
+            <p>
+                Anggaran pelepasan daripada pilihan daging:
+            </p>
+
+            <div id="meatResult"></div>
+
+            <p>
+                Anggaran pelepasan daripada pilihan berasaskan tumbuhan:
+            </p>
+
+            <div id="plantResult"></div>
+
+            <p>
+                Potensi pelepasan yang dielakkan setiap minggu:
+            </p>
+
+            <div id="weeklyResult" class="result-number"></div>
+
+            <p>
+                Potensi pelepasan yang dielakkan setiap tahun:
+            </p>
+
+            <div id="annualResult" class="result-number"></div>
+
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Kaedah kalkulator: nilai yang dipilih mewakili kg CO₂-setara
+        bagi setiap 100 g protein. Pengiraan mengandaikan jumlah
+        protein yang sama diperoleh daripada pilihan daging dan
+        pilihan protein tumbuhan. Hasil ini ialah anggaran ringkas,
+        bukan penilaian kitar hayat penuh bagi hidangan sebenar.
+    </p>
+</section>
+
+<section>
+    <h2>4. Cara Mudah untuk Makan dengan Lebih Lestari</h2>
+
+    <ul>
+        <li>Cuba satu atau lebih hidangan tanpa daging setiap minggu.</li>
+        <li>Masukkan kacang, lentil, kacang pis atau tauhu sebagai sumber protein.</li>
+        <li>Tambahkan pelbagai jenis sayur-sayuran dalam hidangan.</li>
+        <li>Pilih hasil pertanian bermusim apabila sesuai.</li>
+        <li>Kurangkan pembaziran makanan dengan merancang hidangan dan menggunakan lebihan makanan.</li>
+        <li>Simpan makanan dengan betul supaya kekal segar lebih lama.</li>
+        <li>Sokong petani yang mengamalkan kaedah pertanian bertanggungjawab dan lestari.</li>
+        <li>Nikmati pemakanan seimbang yang memenuhi keperluan nutrisi anda.</li>
+    </ul>
+
+    <p>
+        Hidangan berasaskan tumbuhan tidak semestinya rumit.
+        Nasi bersama sayur-sayuran dan lentil, tauhu bersama
+        sayur berdaun, atau sup berasaskan kacang boleh menjadi
+        pilihan yang mudah dan berkhasiat.
+    </p>
+</section>
+
+<section>
+    <h2>5. Pilihan Berkesedaran untuk Planet Kita</h2>
+
+    <p>
+        Pemakanan berkesedaran mengajak kita memberi perhatian
+        bukan sahaja kepada makanan di atas pinggan, tetapi juga
+        kepada sumber dan sistem kehidupan yang berkaitan dengan makanan.
+    </p>
+
+    <p>
+        Memilih lebih banyak hidangan berasaskan tumbuhan boleh
+        menjadi langkah bermakna untuk mengurangkan jejak alam sekitar.
+        Ia juga menggalakkan penghargaan terhadap tanah, air,
+        tumbuhan, petani dan ekosistem yang membolehkan makanan
+        kita dihasilkan.
+    </p>
+
+    <p>
+        Kita tidak perlu menghakimi diri sendiri atau orang lain
+        berdasarkan pilihan makanan. Sebaliknya, kita boleh belajar,
+        membuat keputusan yang berinformasi dan secara beransur-ansur
+        membina tabiat yang menyokong kesejahteraan diri serta
+        alam semula jadi.
+    </p>
+
+    <p>
+        <strong>
+            Setiap hidangan yang dipilih dengan penuh kesedaran
+            ialah peluang untuk menjaga diri dan Bumi.
+        </strong>
+    </p>
+</section>
+
+<section>
+    <h2>Rujukan Saintifik dan Bacaan Lanjut</h2>
+
+    <ul>
+        <li>
+            Poore, J. &amp; Nemecek, T. (2018).
+            Reducing food’s environmental impacts through producers
+            and consumers. <em>Science</em>, 360(6392), 987–992.
+            <a href="https://doi.org/10.1126/science.aaq0216"
+               target="_blank" rel="noopener noreferrer">
+               Baca penyelidikan
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Environmental Impacts of Food Production.
+            <a href="https://ourworldindata.org/environmental-impacts-of-food"
+               target="_blank" rel="noopener noreferrer">
+               Terokai data dan penerangan
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Land Use and Diets.
+            <a href="https://ourworldindata.org/land-use-diets"
+               target="_blank" rel="noopener noreferrer">
+               Ketahui tentang makanan dan penggunaan tanah pertanian
+            </a>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Yangocean – Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian
+    </p>
+
+    <p>
+        <a href="/ms/index.html">Laman Utama</a> |
+        <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a> |
+        <a href="/ms/eco.html">Kesedaran Alam Sekitar</a> |
+        <a href="/ms/contact.html">Hubungi Kami</a>
+    </p>
+
+    <p>
+        Maklumat untuk tujuan pendidikan sahaja. Anggaran alam sekitar
+        adalah tidak tepat sepenuhnya dan tidak mewakili kesan sebenar
+        sesuatu hidangan secara individu.
+    </p>
+</footer>
+
+<script>
+function calculateImpact() {
+    const meatFactor = parseFloat(
+        document.getElementById("meatFood").value
+    );
+
+    const plantFactor = parseFloat(
+        document.getElementById("plantFood").value
+    );
+
+    const proteinGrams = parseFloat(
+        document.getElementById("proteinAmount").value
+    );
+
+    const mealsPerWeek = parseFloat(
+        document.getElementById("mealsPerWeek").value
+    );
+
+    if (
+        !Number.isFinite(proteinGrams) ||
+        !Number.isFinite(mealsPerWeek) ||
+        proteinGrams <= 0 ||
+        proteinGrams > 300 ||
+        mealsPerWeek <= 0 ||
+        mealsPerWeek > 21
+    ) {
+        alert("Sila masukkan jumlah protein dan hidangan setiap minggu yang sah.");
+        return;
+    }
+
+    const meatEmissionsPerMeal =
+        (meatFactor * proteinGrams) / 100;
+
+    const plantEmissionsPerMeal =
+        (plantFactor * proteinGrams) / 100;
+
+    const reductionPerMeal =
+        meatEmissionsPerMeal - plantEmissionsPerMeal;
+
+    const weeklyReduction =
+        reductionPerMeal * mealsPerWeek;
+
+    const annualReduction =
+        weeklyReduction * 52;
+
+    document.getElementById("meatResult").textContent =
+        meatEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-setara bagi setiap hidangan";
+
+    document.getElementById("plantResult").textContent =
+        plantEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-setara bagi setiap hidangan";
+
+    document.getElementById("weeklyResult").textContent =
+        Math.max(0, weeklyReduction).toFixed(3) +
+        " kg CO₂-setara";
+
+    document.getElementById("annualResult").textContent =
+        Math.max(0, annualReduction).toFixed(2) +
+        " kg CO₂-setara";
+
+    document.getElementById("message").textContent =
+        "Dengan melakukan penggantian ini secara konsisten, " +
+        "anda berpotensi mengurangkan pelepasan gas rumah hijau " +
+        "yang berkaitan dengan hidangan tersebut. Ini ialah " +
+        "anggaran berdasarkan data purata pengeluaran makanan.";
+
+    document.getElementById("result").style.display = "block";
+}
+
+function readArticle() {
+    if (!("speechSynthesis" in window)) {
+        alert("Fungsi bacaan kuat tidak disokong oleh pelayar ini.");
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const article = document.querySelector("main").cloneNode(true);
+
+    article.querySelectorAll(".read-aloud").forEach(function(element) {
+        element.remove();
+    });
+
+    article.querySelectorAll("button").forEach(function(element) {
+        element.remove();
+    });
+
+    const text = article.innerText;
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "ms-MY";
+    speech.rate = 0.95;
+
+    window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 </script>
 
