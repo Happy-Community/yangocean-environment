@@ -2,60 +2,760 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Calculadora de Plástico y CO₂</title>
+
+<title>Alimentación vegetal y naturaleza | Yangocean</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
-     crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/styles.css">
+
+<meta name="description"
+content="Descubre cómo elegir más verduras, legumbres, guisantes y otros alimentos vegetales en lugar de carne puede ayudar a reducir las emisiones de gases de efecto invernadero, el uso de la tierra y el impacto ambiental. Prueba la calculadora de alimentación vegetal y naturaleza.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
+
+<link rel="alternate" hreflang="en" href="https://www.yangocean.com/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/tools/carbon-calculator.html">
+
+<meta property="og:title" content="Alimentación vegetal y naturaleza | Yangocean">
+<meta property="og:description" content="Descubre los beneficios ambientales de una alimentación más vegetal y estima la posible reducción de emisiones de gases de efecto invernadero.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.yangocean.com/es/tools/carbon-calculator.html">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.75;
+    color: #35433a;
+    background: #f7f8f1;
+}
+
+header {
+    background: #e7efdf;
+    padding: 28px 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #315b38;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    color: #536b54;
+    margin-top: 10px;
+}
+
+nav {
+    background: #ffffff;
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dce5d6;
+}
+
+nav a {
+    color: #3c6842;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.language-switch {
+    text-align: center;
+    padding: 14px 10px;
+    background: #f0f4e9;
+}
+
+.language-switch a {
+    display: inline-block;
+    margin: 4px;
+    padding: 5px 10px;
+    border: 1px solid #c9d8c1;
+    border-radius: 6px;
+    color: #315b38;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.language-switch a[aria-current="page"] {
+    background: #416b45;
+    color: #ffffff;
+    border-color: #416b45;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 18px 45px;
+}
+
+section {
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #386641;
+    margin-top: 0;
+}
+
+h3 {
+    color: #4d714f;
+}
+
+.intro {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #e1e8dc;
+}
+
+.calculator {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid #d9e5d3;
+    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
+}
+
+.calculator label {
+    display: block;
+    margin: 16px 0 6px;
+    font-weight: bold;
+}
+
+.calculator select,
+.calculator input {
+    width: 100%;
+    padding: 11px;
+    font-size: 1rem;
+    border: 1px solid #cbd7c5;
+    border-radius: 7px;
+    background: #fbfcf8;
+}
+
+.calculator button {
+    margin-top: 22px;
+    padding: 12px 20px;
+    background: #47764b;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.calculator button:hover {
+    background: #345d38;
+}
+
+.result {
+    display: none;
+    margin-top: 22px;
+    padding: 20px;
+    background: #edf5e8;
+    border-left: 5px solid #5b8754;
+    border-radius: 8px;
+}
+
+.result h3 {
+    margin-top: 0;
+}
+
+.result-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #315b38;
+}
+
+.note {
+    background: #f1f3e9;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 0.94rem;
+}
+
+ul {
+    padding-left: 24px;
+}
+
+footer {
+    background: #e7efdf;
+    text-align: center;
+    padding: 25px 15px;
+    color: #4b644d;
+}
+
+footer a {
+    color: #386641;
+    text-decoration: none;
+}
+
+.read-aloud {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.read-aloud button {
+    background: #557c55;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    main {
+        padding: 18px 14px;
+    }
+
+    .calculator {
+        padding: 18px;
+    }
+}
+</style>
 </head>
 
-<body class="theme-plastic">
+<body>
 
-<div class="container">
-<div class="card">
+<header>
+    <h1>Alimentación vegetal y naturaleza</h1>
+    <p>Vida consciente • Conexión con la naturaleza • Sostenibilidad</p>
+</header>
 
-<h1>🧴 Calculadora de Plástico y CO₂</h1>
+<nav aria-label="Navegación principal">
+    <a href="/es/index.html">Inicio</a>
+    <a href="/es/mindfulness.html">Atención plena</a>
+    <a href="/es/mindful-ethical-living.html">Vida consciente y ética</a>
+    <a href="/es/mindful-eating.html">Alimentación consciente</a>
+    <a href="/es/eco.html">Conciencia ambiental</a>
+    <a href="/es/blog.html">Blog</a>
+</nav>
 
-<p>Botellas de plástico utilizadas por semana:</p>
-<input type="number" id="bottles">
-
-<p>Bolsas de plástico utilizadas por semana:</p>
-<input type="number" id="bags">
-
-<button onclick="calcPlastic()">Calcular</button>
-
-<div id="result" class="result" style="display:none;"></div>
-
-<a class="back" href="/es/">← Volver al inicio</a>
-
+<div class="language-switch" aria-label="Selección de idioma">
+    <a href="/tools/carbon-calculator.html" lang="en">EN</a>
+    <a href="/ms/tools/carbon-calculator.html" lang="ms">BM</a>
+    <a href="/zh/tools/carbon-calculator.html" lang="zh-CN">中文</a>
+    <a href="/fr/tools/carbon-calculator.html" lang="fr">FR</a>
+    <a href="/es/tools/carbon-calculator.html" lang="es" aria-current="page">ES</a>
+    <a href="/my/tools/carbon-calculator.html" lang="my">မြန်မာ</a>
 </div>
+
+<main>
+
+<div class="read-aloud">
+    <button type="button" onclick="readArticle()">🔊 Leer en voz alta</button>
+    <button type="button" onclick="stopReading()">⏹ Detener</button>
 </div>
+
+<section class="intro">
+    <h2>¿Puede una alimentación más vegetal ayudar a la naturaleza?</h2>
+
+    <p>
+        Las decisiones alimentarias que tomamos cada día pueden influir
+        en el medio ambiente. La producción de alimentos necesita tierra,
+        agua, energía y otros recursos. Los diferentes alimentos también
+        generan distintas cantidades de gases de efecto invernadero
+        a lo largo de sus cadenas de suministro.
+    </p>
+
+    <p>
+        Las investigaciones científicas generalmente muestran que los
+        alimentos vegetales, como las verduras, las legumbres, los guisantes
+        y el tofu, suelen tener un impacto ambiental menor que muchos
+        productos cárnicos, especialmente la carne de vacuno y de cordero.
+    </p>
+
+    <p>
+        Elegir más comidas vegetales y reducir el consumo de carnes
+        con un alto impacto ambiental es una forma práctica de cuidar
+        la naturaleza. No es necesario que cada comida sea perfecta.
+        Los pequeños cambios constantes también pueden contribuir
+        a un sistema alimentario más sostenible.
+    </p>
+</section>
+
+<section>
+    <h2>1. ¿Cómo puede ayudar una alimentación vegetal al medio ambiente?</h2>
+
+    <h3>🌍 Reducir las emisiones de gases de efecto invernadero</h3>
+
+    <p>
+        La ganadería puede producir gases de efecto invernadero,
+        como el metano y el óxido nitroso.
+        El ganado vacuno y ovino está especialmente relacionado
+        con emisiones más elevadas debido a la digestión de los animales,
+        la producción de piensos y las necesidades de tierra.
+    </p>
+
+    <p>
+        Sustituir algunas comidas con carne por frijoles, guisantes,
+        lentejas o tofu puede reducir las emisiones de gases de efecto
+        invernadero relacionadas con nuestra alimentación.
+        La cantidad de reducción depende de los alimentos sustituidos
+        y de cómo se producen.
+    </p>
+
+    <h3>🌳 Reducir la presión sobre la tierra y los bosques</h3>
+
+    <p>
+        La producción de carne necesita tierras para el pastoreo
+        de animales y para cultivar su alimentación.
+        En algunas regiones, la expansión agrícola contribuye
+        a la deforestación y a la pérdida de hábitats naturales.
+    </p>
+
+    <p>
+        Consumir más alimentos vegetales puede reducir la demanda
+        de tierras asociada a la ganadería.
+        La protección de los hábitats naturales ayuda a conservar
+        la fauna, la biodiversidad y los ecosistemas saludables.
+    </p>
+
+    <h3>💧 Utilizar los recursos de manera más eficiente</h3>
+
+    <p>
+        La producción de alimentos requiere agua, energía
+        e insumos agrícolas.
+        La huella ambiental varía considerablemente según
+        los cultivos y los sistemas agrícolas.
+    </p>
+
+    <p>
+        Muchas fuentes de proteínas vegetales suelen necesitar
+        menos recursos que las carnes de alto impacto ambiental.
+        Sin embargo, el uso de agua también depende del cultivo,
+        del clima y de la disponibilidad local de agua.
+    </p>
+
+    <h3>🐝 Apoyar la biodiversidad</h3>
+
+    <p>
+        Reducir la presión de la expansión de las tierras agrícolas
+        puede ayudar a conservar bosques, praderas y otros hábitats
+        naturales. Estos hábitats proporcionan alimento y refugio
+        a aves, insectos, mamíferos y muchos otros organismos vivos.
+    </p>
+
+    <p>
+        Las prácticas agrícolas sostenibles, la reducción del uso
+        de pesticidas y la protección de los ecosistemas naturales
+        también son importantes.
+        La alimentación vegetal forma parte de un esfuerzo más amplio
+        para proteger la biodiversidad.
+    </p>
+</section>
+
+<section>
+    <h2>2. Comparación científica de algunos alimentos</h2>
+
+    <p>
+        Los siguientes valores estimados se basan en los promedios
+        globales de emisiones de gases de efecto invernadero por cada
+        100 gramos de proteína, derivados del conjunto de datos sobre
+        impactos ambientales de los alimentos asociado con Poore
+        y Nemecek (2018), presentado por Our World in Data.
+    </p>
+
+    <p>
+        Los alimentos se comparan según su contenido de proteínas,
+        en lugar de su peso total. Esto permite una comparación
+        más significativa al considerar alimentos ricos en proteínas
+        como alternativas.
+    </p>
+
+    <div style="overflow-x:auto;">
+    <table style="width:100%; border-collapse:collapse; background:#fff;">
+        <thead>
+            <tr style="background:#e7efdf;">
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    Alimento
+                </th>
+                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
+                    kg CO₂-eq. estimados por 100 g de proteína
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Carne de vacuno</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Carne de cordero</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Carne de cerdo</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Carne de ave (pollo)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Tofu</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Otras legumbres (frijoles, lentejas)</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
+            </tr>
+            <tr>
+                <td style="padding:10px; border:1px solid #d5dfcf;">Guisantes</td>
+                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <p class="note">
+        Importante: Estos valores son promedios globales y no representan
+        la huella ambiental exacta de cada granja o comida.
+        El impacto real puede variar según las prácticas agrícolas,
+        los cambios en el uso de la tierra, el procesamiento,
+        el transporte y otros factores.
+        El equivalente de CO₂ incluye los efectos de calentamiento
+        de diferentes gases de efecto invernadero.
+    </p>
+</section>
+
+<section>
+    <h2>3. Calculadora de alimentación vegetal y naturaleza</h2>
+
+    <p>
+        Estima la posible reducción de emisiones de gases de efecto
+        invernadero cuando sustituyes algunas comidas con carne
+        por alimentos vegetales ricos en proteínas.
+    </p>
+
+    <div class="calculator">
+
+        <label for="meatFood">
+            ¿Qué tipo de carne deseas sustituir?
+        </label>
+
+        <select id="meatFood">
+            <option value="49.89">Carne de vacuno</option>
+            <option value="19.85">Carne de cordero</option>
+            <option value="7.61">Carne de cerdo</option>
+            <option value="5.70">Carne de ave (pollo)</option>
+        </select>
+
+        <label for="plantFood">
+            ¿Qué proteína vegetal elegirás?
+        </label>
+
+        <select id="plantFood">
+            <option value="0.84">Frijoles o lentejas</option>
+            <option value="0.44">Guisantes</option>
+            <option value="1.98">Tofu</option>
+        </select>
+
+        <label for="proteinAmount">
+            Cantidad de proteínas por comida comparada (gramos)
+        </label>
+
+        <input type="number"
+               id="proteinAmount"
+               min="1"
+               max="300"
+               value="20">
+
+        <label for="mealsPerWeek">
+            ¿Cuántas comidas sustituirás cada semana?
+        </label>
+
+        <input type="number"
+               id="mealsPerWeek"
+               min="1"
+               max="21"
+               value="3">
+
+        <button type="button" onclick="calculateImpact()">
+            Calcular mi impacto potencial
+        </button>
+
+        <div id="result" class="result" aria-live="polite">
+            <h3>Tu resultado estimado</h3>
+
+            <p>
+                Emisiones estimadas de la opción de carne:
+            </p>
+
+            <div id="meatResult"></div>
+
+            <p>
+                Emisiones estimadas de la opción vegetal:
+            </p>
+
+            <div id="plantResult"></div>
+
+            <p>
+                Reducción potencial de emisiones por semana:
+            </p>
+
+            <div id="weeklyResult" class="result-number"></div>
+
+            <p>
+                Reducción potencial de emisiones por año:
+            </p>
+
+            <div id="annualResult" class="result-number"></div>
+
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <p class="note">
+        Método de cálculo: los valores seleccionados representan
+        kg CO₂-eq. por cada 100 g de proteína.
+        El cálculo supone que la carne y el alimento vegetal
+        proporcionan la misma cantidad de proteínas.
+        Los resultados son estimaciones simplificadas y no constituyen
+        un análisis completo del ciclo de vida de una comida real.
+    </p>
+</section>
+
+<section>
+    <h2>4. Formas sencillas de comer de manera más sostenible</h2>
+
+    <ul>
+        <li>Prueba una o varias comidas sin carne cada semana.</li>
+        <li>Incluye frijoles, lentejas, guisantes o tofu como fuentes de proteínas.</li>
+        <li>Añade una variedad de verduras a tus comidas.</li>
+        <li>Elige productos de temporada cuando sea posible.</li>
+        <li>Reduce el desperdicio de alimentos planificando las comidas y aprovechando las sobras.</li>
+        <li>Almacena correctamente los alimentos para que se mantengan frescos durante más tiempo.</li>
+        <li>Apoya a agricultores que utilizan prácticas responsables y sostenibles.</li>
+        <li>Disfruta de una alimentación equilibrada que satisfaga tus necesidades nutricionales.</li>
+    </ul>
+
+    <p>
+        Una comida vegetal no tiene por qué ser complicada.
+        El arroz acompañado de verduras y lentejas,
+        el tofu con verduras de hoja verde o una sopa de legumbres
+        pueden ser opciones sencillas y nutritivas.
+    </p>
+</section>
+
+<section>
+    <h2>5. Una elección consciente para el planeta</h2>
+
+    <p>
+        La alimentación consciente nos invita a prestar atención
+        no solo a los alimentos que tenemos en el plato,
+        sino también a los recursos y sistemas vivos relacionados
+        con ellos.
+    </p>
+
+    <p>
+        Elegir más comidas vegetales puede ser un paso significativo
+        para reducir nuestra huella ambiental.
+        También puede ayudarnos a apreciar más el suelo, el agua,
+        las plantas, los agricultores y los ecosistemas
+        que hacen posible nuestra alimentación.
+    </p>
+
+    <p>
+        No necesitamos juzgarnos ni juzgar a otras personas
+        por sus elecciones alimentarias.
+        En cambio, podemos aprender, tomar decisiones informadas
+        y desarrollar gradualmente hábitos que apoyen nuestro bienestar
+        y el mundo natural.
+    </p>
+
+    <p>
+        <strong>
+            Cada comida consciente es una oportunidad para cuidar
+            de nosotros mismos y de la Tierra.
+        </strong>
+    </p>
+</section>
+
+<section>
+    <h2>Referencias científicas y lecturas adicionales</h2>
+
+    <ul>
+        <li>
+            Poore, J. &amp; Nemecek, T. (2018).
+            Reducing food’s environmental impacts through producers
+            and consumers. <em>Science</em>, 360(6392), 987–992.
+            <a href="https://doi.org/10.1126/science.aaq0216"
+               target="_blank" rel="noopener noreferrer">
+               Leer la investigación
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Environmental Impacts of Food Production.
+            <a href="https://ourworldindata.org/environmental-impacts-of-food"
+               target="_blank" rel="noopener noreferrer">
+               Explorar los datos y las explicaciones
+            </a>
+        </li>
+
+        <li>
+            Our World in Data:
+            Land Use and Diets.
+            <a href="https://ourworldindata.org/land-use-diets"
+               target="_blank" rel="noopener noreferrer">
+               Más información sobre alimentación y uso de tierras agrícolas
+            </a>
+        </li>
+    </ul>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        Yangocean – Vida consciente • Conexión con la naturaleza • Sostenibilidad
+    </p>
+
+    <p>
+        <a href="/es/index.html">Inicio</a> |
+        <a href="/es/mindful-eating.html">Alimentación consciente</a> |
+        <a href="/es/eco.html">Conciencia ambiental</a> |
+        <a href="/es/contact.html">Contacto</a>
+    </p>
+
+    <p>
+        Información únicamente con fines educativos.
+        Las estimaciones ambientales son aproximadas y no representan
+        el impacto exacto de una comida individual.
+    </p>
+</footer>
 
 <script>
-function calcPlastic() {
-  let bottles = document.getElementById("bottles").value || 0;
-  let bags = document.getElementById("bags").value || 0;
+function calculateImpact() {
+    const meatFactor = parseFloat(
+        document.getElementById("meatFood").value
+    );
 
-  let yearlyBottles = bottles * 52;
-  let yearlyBags = bags * 52;
+    const plantFactor = parseFloat(
+        document.getElementById("plantFood").value
+    );
 
-  let totalItems = yearlyBottles + yearlyBags;
+    const proteinGrams = parseFloat(
+        document.getElementById("proteinAmount").value
+    );
 
-  let bottleCO2 = yearlyBottles * 0.025;
-  let bagCO2 = yearlyBags * 0.005;
+    const mealsPerWeek = parseFloat(
+        document.getElementById("mealsPerWeek").value
+    );
 
-  let totalCO2 = bottleCO2 + bagCO2;
+    if (
+        !Number.isFinite(proteinGrams) ||
+        !Number.isFinite(mealsPerWeek) ||
+        proteinGrams <= 0 ||
+        proteinGrams > 300 ||
+        mealsPerWeek <= 0 ||
+        mealsPerWeek > 21
+    ) {
+        alert("Introduce cantidades válidas de proteínas y comidas por semana.");
+        return;
+    }
 
-  let rating = totalCO2 < 10 ? "Bajo 🌱"
-             : totalCO2 < 50 ? "Medio ⚠️"
-             : "Alto 🔴";
+    const meatEmissionsPerMeal =
+        (meatFactor * proteinGrams) / 100;
 
-  document.getElementById("result").style.display = "block";
-  document.getElementById("result").innerHTML =
-    "🧴 Uso anual de plástico: <b>" + totalItems + " artículos</b><br>" +
-    "🌍 Emisiones estimadas de CO₂: <b>" + totalCO2.toFixed(2) + " kg/año</b><br>" +
-    "📊 Nivel de impacto ambiental: <b>" + rating + "</b>";
+    const plantEmissionsPerMeal =
+        (plantFactor * proteinGrams) / 100;
+
+    const reductionPerMeal =
+        meatEmissionsPerMeal - plantEmissionsPerMeal;
+
+    const weeklyReduction =
+        reductionPerMeal * mealsPerWeek;
+
+    const annualReduction =
+        weeklyReduction * 52;
+
+    document.getElementById("meatResult").textContent =
+        meatEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-eq. por comida";
+
+    document.getElementById("plantResult").textContent =
+        plantEmissionsPerMeal.toFixed(3) +
+        " kg CO₂-eq. por comida";
+
+    document.getElementById("weeklyResult").textContent =
+        Math.max(0, weeklyReduction).toFixed(3) +
+        " kg CO₂-eq.";
+
+    document.getElementById("annualResult").textContent =
+        Math.max(0, annualReduction).toFixed(2) +
+        " kg CO₂-eq.";
+
+    document.getElementById("message").textContent =
+        "Si realizas este cambio de forma constante, " +
+        "podrías reducir potencialmente las emisiones de gases " +
+        "de efecto invernadero asociadas a estas comidas. " +
+        "Se trata de una estimación basada en datos promedio " +
+        "de producción alimentaria.";
+
+    document.getElementById("result").style.display = "block";
+}
+
+function readArticle() {
+    if (!("speechSynthesis" in window)) {
+        alert("La lectura en voz alta no está disponible en este navegador.");
+        return;
+    }
+
+    window.speechSynthesis.cancel();
+
+    const article = document.querySelector("main").cloneNode(true);
+
+    article.querySelectorAll(".read-aloud").forEach(function(element) {
+        element.remove();
+    });
+
+    article.querySelectorAll("button").forEach(function(element) {
+        element.remove();
+    });
+
+    const text = article.innerText;
+
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "es-ES";
+    speech.rate = 0.95;
+
+    window.speechSynthesis.speak(speech);
+}
+
+function stopReading() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
 }
 </script>
 
