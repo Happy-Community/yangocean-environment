@@ -1,242 +1,166 @@
-```html
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="my">
+
 <head>
 <meta charset="UTF-8">
 
-<title>Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi | Yangocean</title>
+<title>အပင်အခြေခံ အစားအစာနှင့် သဘာဝပတ်ဝန်းကျင် | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Ketahui bagaimana memilih lebih banyak sayur-sayuran, kekacang, kacang pis dan makanan berasaskan tumbuhan berbanding daging dapat membantu mengurangkan pelepasan gas rumah hijau, penggunaan tanah dan kesan terhadap alam sekitar. Cuba Kalkulator Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi.">
+content="အပင်အခြေခံ အစားအစာများကို ပိုမိုစားသုံးခြင်းက ရာသီဥတုပြောင်းလဲမှု၊ မြေယာအသုံးပြုမှုနှင့် သဘာဝပတ်ဝန်းကျင်အပေါ် မည်သို့အကျိုးပြုနိုင်သည်ကို လေ့လာပြီး ကာဗွန်ထုတ်လွှတ်မှု ခန့်မှန်းတွက်ချက်စက်ကို အသုံးပြုပါ။">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
+<link rel="canonical" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
 
 <link rel="alternate" hreflang="en" href="https://www.yangocean.com/tools/carbon-calculator.html">
 <link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<link rel="alternate" hreflang="zh" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
 <link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
 <link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
 <link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
 <link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/tools/carbon-calculator.html">
 
-<meta property="og:title" content="Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi | Yangocean">
-<meta property="og:description" content="Terokai manfaat alam sekitar daripada pemakanan berasaskan tumbuhan dan anggarkan potensi pengurangan pelepasan gas rumah hijau.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://www.yangocean.com/ms/tools/carbon-calculator.html">
+<link rel="stylesheet" href="/assets/css/style.css">
 
 <style>
-* {
-    box-sizing: border-box;
-}
-
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.75;
-    color: #35433a;
-    background: #f7f8f1;
-}
-
-header {
-    background: #e7efdf;
-    padding: 28px 20px;
-    text-align: center;
-}
-
-header h1 {
-    color: #315b38;
-    margin: 0;
-    font-size: 2rem;
-}
-
-header p {
-    color: #536b54;
-    margin-top: 10px;
-}
-
-nav {
-    background: #ffffff;
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #dce5d6;
-}
-
-nav a {
-    color: #3c6842;
-    text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.95rem;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-.language-switch {
-    text-align: center;
-    padding: 14px 10px;
-    background: #f0f4e9;
-}
-
-.language-switch a {
-    display: inline-block;
-    margin: 4px;
-    padding: 5px 10px;
-    border: 1px solid #c9d8c1;
-    border-radius: 6px;
-    color: #315b38;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.language-switch a[aria-current="page"] {
-    background: #416b45;
-    color: #ffffff;
-    border-color: #416b45;
+    font-family: Arial, "Myanmar Text", sans-serif;
+    line-height: 1.8;
+    background-color: #f8f7f0;
+    color: #333;
 }
 
 main {
     max-width: 900px;
     margin: auto;
-    padding: 25px 18px 45px;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2f684b;
 }
 
 section {
-    margin-bottom: 35px;
-}
-
-h2 {
-    color: #386641;
-    margin-top: 0;
-}
-
-h3 {
-    color: #4d714f;
-}
-
-.intro {
-    background: #ffffff;
-    padding: 22px;
-    border-radius: 12px;
-    border: 1px solid #e1e8dc;
+    margin-bottom: 30px;
 }
 
 .calculator {
-    background: #ffffff;
-    padding: 24px;
+    background: #eef5ec;
+    border: 1px solid #c8ddc5;
     border-radius: 12px;
-    border: 1px solid #d9e5d3;
-    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
+    padding: 20px;
+    margin: 25px 0;
 }
 
 .calculator label {
     display: block;
-    margin: 16px 0 6px;
+    margin-top: 15px;
     font-weight: bold;
 }
 
 .calculator select,
 .calculator input {
     width: 100%;
-    padding: 11px;
-    font-size: 1rem;
-    border: 1px solid #cbd7c5;
-    border-radius: 7px;
-    background: #fbfcf8;
+    max-width: 450px;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #b8cbb5;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
-.calculator button {
-    margin-top: 22px;
-    padding: 12px 20px;
-    background: #47764b;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.calculator button:hover {
-    background: #345d38;
-}
-
-.result {
-    display: none;
-    margin-top: 22px;
-    padding: 20px;
-    background: #edf5e8;
-    border-left: 5px solid #5b8754;
-    border-radius: 8px;
-}
-
-.result h3 {
-    margin-top: 0;
-}
-
-.result-number {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #315b38;
-}
-
-.note {
-    background: #f1f3e9;
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 0.94rem;
-}
-
-ul {
-    padding-left: 24px;
-}
-
-footer {
-    background: #e7efdf;
-    text-align: center;
-    padding: 25px 15px;
-    color: #4b644d;
-}
-
-footer a {
-    color: #386641;
-    text-decoration: none;
-}
-
-.read-aloud {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.read-aloud button {
-    background: #557c55;
+.calculator button,
+.read-button {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #39734f;
     color: white;
     border: none;
     border-radius: 6px;
-    padding: 10px 15px;
-    margin: 5px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+.calculator button:hover,
+.read-button:hover {
+    background: #28583b;
+}
+
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #ffffff;
+    border-left: 5px solid #39734f;
+    border-radius: 6px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: white;
+}
+
+th, td {
+    border: 1px solid #d5ddd1;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background: #e6efe3;
+    color: #2f684b;
+}
+
+.note {
+    background: #fff8e8;
+    border-left: 4px solid #d6a84f;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+.language-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.language-links a {
+    padding: 5px 10px;
+    border: 1px solid #cbd8c7;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #2f684b;
+}
+
+.language-links a[aria-current="page"] {
+    background: #39734f;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #e9eee4;
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 1.6rem;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
-    }
-
     main {
-        padding: 18px 14px;
+        padding: 15px;
     }
 
-    .calculator {
-        padding: 18px;
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 7px;
     }
 }
 </style>
@@ -245,507 +169,406 @@ footer a {
 <body>
 
 <header>
-    <h1>Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi</h1>
-    <p>Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian</p>
+    <nav aria-label="ပင်မလမ်းညွှန်">
+        <a href="/my/index.html">ပင်မစာမျက်နှာ</a> |
+        <a href="/my/mindfulness.html">သတိပဋ္ဌာန်</a> |
+        <a href="/my/mindful-ethical-living.html">သတိရှိပြီး ကျင့်ဝတ်နှင့်ညီသော နေထိုင်မှု</a> |
+        <a href="/my/mindful-eating.html">သတိရှိစွာ စားသောက်ခြင်း</a> |
+        <a href="/my/eco.html">သဘာဝပတ်ဝန်းကျင်</a> |
+        <a href="/my/blog.html">ဘလော့ဂ်</a>
+    </nav>
 </header>
-
-<nav aria-label="Navigasi utama">
-    <a href="/ms/index.html">Laman Utama</a>
-    <a href="/ms/mindfulness.html">Kesedaran Minda</a>
-    <a href="/ms/mindful-ethical-living.html">Kehidupan Beretika</a>
-    <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
-    <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
-    <a href="/ms/blog.html">Jurnal</a>
-</nav>
-
-<div class="language-switch" aria-label="Pemilihan bahasa">
-    <a href="/tools/carbon-calculator.html" lang="en">EN</a>
-    <a href="/ms/tools/carbon-calculator.html" lang="ms" aria-current="page">BM</a>
-    <a href="/zh/tools/carbon-calculator.html" lang="zh-CN">中文</a>
-    <a href="/fr/tools/carbon-calculator.html" lang="fr">FR</a>
-    <a href="/es/tools/carbon-calculator.html" lang="es">ES</a>
-    <a href="/my/tools/carbon-calculator.html" lang="my">မြန်မာ</a>
-</div>
 
 <main>
 
-<div class="read-aloud">
-    <button type="button" onclick="readArticle()">🔊 Baca Kuat</button>
-    <button type="button" onclick="stopReading()">⏹ Berhenti</button>
+<h1>အပင်အခြေခံ အစားအစာများနှင့် သဘာဝပတ်ဝန်းကျင်</h1>
+
+<p>
+ကျွန်ုပ်တို့ နေ့စဉ်စားသုံးသော အစားအစာများသည် ကျွန်ုပ်တို့၏ ကျန်းမာရေးသာမက
+ကမ္ဘာမြေ၏ သဘာဝပတ်ဝန်းကျင်အပေါ်လည်း သက်ရောက်မှုရှိပါသည်။
+အပင်အခြေခံ အစားအစာများကို ပိုမိုရွေးချယ်စားသုံးခြင်းသည်
+ဖန်လုံအိမ်ဓာတ်ငွေ့ ထုတ်လွှတ်မှုကို လျှော့ချရန်၊ မြေယာအသုံးပြုမှုကို
+လျှော့ချရန်နှင့် သဘာဝအရင်းအမြစ်များကို ထိန်းသိမ်းရန်
+အထောက်အကူပြုနိုင်ပါသည်။
+</p>
+
+<p>
+ဤစာမျက်နှာတွင် အပင်အခြေခံ ပရိုတင်းနှင့် အသားအခြေခံ ပရိုတင်းတို့၏
+ပတ်ဝန်းကျင်ဆိုင်ရာ သက်ရောက်မှုများကို လေ့လာနိုင်ပြီး
+ရိုးရှင်းသော ကာဗွန်ထုတ်လွှတ်မှု ခန့်မှန်းတွက်ချက်စက်ကိုလည်း
+အသုံးပြုနိုင်ပါသည်။
+</p>
+
+<div class="language-links" aria-label="ဘာသာစကားရွေးချယ်ရန်">
+    <a href="/tools/carbon-calculator.html" hreflang="en">English</a>
+    <a href="/ms/tools/carbon-calculator.html" hreflang="ms">Bahasa Melayu</a>
+    <a href="/zh/tools/carbon-calculator.html" hreflang="zh">中文</a>
+    <a href="/fr/tools/carbon-calculator.html" hreflang="fr">Français</a>
+    <a href="/es/tools/carbon-calculator.html" hreflang="es">Español</a>
+    <a href="/my/tools/carbon-calculator.html" hreflang="my" aria-current="page">မြန်မာ</a>
 </div>
 
-<section class="intro">
-    <h2>Adakah Pemakanan Berasaskan Tumbuhan Membantu Alam Semula Jadi?</h2>
+<button class="read-button" onclick="readArticle()">စာမျက်နှာကို အသံဖြင့် နားထောင်ရန်</button>
+<button class="read-button" onclick="stopReading()">အသံရပ်ရန်</button>
 
-    <p>
-        Pilihan makanan harian kita boleh mempengaruhi alam sekitar.
-        Penghasilan makanan memerlukan tanah, air, tenaga dan sumber
-        lain. Makanan yang berbeza juga menghasilkan jumlah pelepasan
-        gas rumah hijau yang berbeza sepanjang rantaian bekalannya.
-    </p>
+<section>
+<h2>အပင်အခြေခံ အစားအစာများကို ပိုမိုစားသုံးခြင်းက သဘာဝကို အကျိုးပြုနိုင်ပါသလား။</h2>
 
-    <p>
-        Penyelidikan saintifik secara umum menunjukkan bahawa makanan
-        berasaskan tumbuhan seperti sayur-sayuran, kekacang, kacang pis
-        dan tauhu mempunyai kesan alam sekitar yang lebih rendah
-        berbanding banyak produk daging, khususnya daging lembu dan kambing.
-    </p>
+<p>
+အကျိုးပြုနိုင်ပါသည်။ သုတေသနများအရ အစားအစာအမျိုးအစားများ၏
+ပတ်ဝန်းကျင်ဆိုင်ရာ သက်ရောက်မှုသည် မတူညီကြပါ။
+အထူးသဖြင့် အမဲသားနှင့် သိုးသားကဲ့သို့သော အသားအချို့သည်
+ပဲမျိုးစုံ၊ ပဲပိစပ်နှင့် တို့ဖူးကဲ့သို့သော အပင်အခြေခံ ပရိုတင်းများထက်
+ပျမ်းမျှအားဖြင့် ဖန်လုံအိမ်ဓာတ်ငွေ့ ထုတ်လွှတ်မှု ပိုမိုများပြားနိုင်ပါသည်။
+</p>
 
-    <p>
-        Memilih lebih banyak hidangan berasaskan tumbuhan dan mengurangkan
-        pengambilan daging yang mempunyai kesan alam sekitar tinggi
-        merupakan salah satu cara praktikal untuk menjaga alam semula jadi.
-        Kita tidak perlu menjadikan setiap hidangan sempurna.
-        Perubahan kecil yang dilakukan secara konsisten boleh menyumbang
-        kepada sistem makanan yang lebih lestari.
-    </p>
+<p>
+အစားအစာရွေးချယ်မှုကို တဖြည်းဖြည်း ပြောင်းလဲခြင်းသည်
+သဘာဝပတ်ဝန်းကျင်အပေါ် ကျွန်ုပ်တို့၏ သက်ရောက်မှုကို
+လျှော့ချရန် အထောက်အကူဖြစ်နိုင်ပါသည်။
+အသားကို လုံးဝမစားတော့ရန် မလိုအပ်ဘဲ
+အပင်အခြေခံ အစားအစာများကို ပိုမိုထည့်သွင်းစားသုံးခြင်းဖြင့်
+စတင်နိုင်ပါသည်။
+</p>
 </section>
 
 <section>
-    <h2>1. Bagaimanakah Pemakanan Berasaskan Tumbuhan Membantu Alam Sekitar?</h2>
+<h2>အပင်အခြေခံ အစားအစာများက သဘာဝကို မည်သို့အကျိုးပြုနိုင်သနည်း။</h2>
 
-    <h3>🌍 Mengurangkan Pelepasan Gas Rumah Hijau</h3>
+<h3>၁။ ဖန်လုံအိမ်ဓာတ်ငွေ့ ထုတ်လွှတ်မှု လျှော့ချခြင်း</h3>
 
-    <p>
-        Pengeluaran ternakan boleh menghasilkan gas rumah hijau seperti
-        metana dan nitrus oksida. Lembu dan biri-biri khususnya
-        dikaitkan dengan pelepasan yang lebih tinggi kerana proses
-        pencernaan, pengeluaran makanan ternakan dan keperluan tanah.
-    </p>
+<p>
+အစားအစာ ထုတ်လုပ်မှုတွင် ကာဗွန်ဒိုင်အောက်ဆိုက် (CO₂)၊
+မီသိန်း (CH₄) နှင့် နိုက်ထရပ်အောက်ဆိုက် (N₂O) ကဲ့သို့သော
+ဖန်လုံအိမ်ဓာတ်ငွေ့များ ထွက်ပေါ်နိုင်ပါသည်။
+အထူးသဖြင့် မွေးမြူရေးတိရစ္ဆာန်များမှ ထွက်ပေါ်သော မီသိန်းနှင့်
+တိရစ္ဆာန်အစာ ထုတ်လုပ်မှုတို့သည် သက်ရောက်မှုရှိနိုင်ပါသည်။
+</p>
 
-    <p>
-        Menggantikan sebahagian hidangan daging dengan kacang,
-        kacang pis, lentil atau tauhu boleh mengurangkan pelepasan
-        gas rumah hijau yang berkaitan dengan diet kita.
-        Jumlah pengurangan bergantung pada makanan yang digantikan
-        dan cara makanan tersebut dihasilkan.
-    </p>
+<p>
+ပဲမျိုးစုံနှင့် အခြားအပင်အခြေခံ ပရိုတင်းများကို ပိုမိုရွေးချယ်ခြင်းသည်
+အစားအစာနှင့် ဆက်စပ်သော ဖန်လုံအိမ်ဓာတ်ငွေ့ ထုတ်လွှတ်မှုကို
+လျှော့ချနိုင်သည့် နည်းလမ်းတစ်ခုဖြစ်နိုင်ပါသည်။
+</p>
 
-    <h3>🌳 Mengurangkan Tekanan terhadap Tanah dan Hutan</h3>
+<h3>၂။ မြေယာအသုံးပြုမှုနှင့် သစ်တောများအပေါ် ဖိအား လျှော့ချခြင်း</h3>
 
-    <p>
-        Pengeluaran daging memerlukan tanah untuk meragut ternakan
-        dan menanam makanan ternakan. Di sesetengah kawasan,
-        pengembangan pertanian menyumbang kepada penebangan hutan
-        dan kehilangan habitat.
-    </p>
+<p>
+မွေးမြူရေးတိရစ္ဆာန်များအတွက် မြက်စားကျက်နှင့် အစာစိုက်ပျိုးမြေများ
+လိုအပ်ပါသည်။ အပင်အခြေခံ အစားအစာများကို ပိုမိုစားသုံးခြင်းသည်
+အချို့သော အစားအစာစနစ်များတွင် မြေယာလိုအပ်ချက်ကို
+လျှော့ချနိုင်ပါသည်။
+</p>
 
-    <p>
-        Pengambilan lebih banyak makanan berasaskan tumbuhan boleh
-        mengurangkan permintaan terhadap tanah yang berkaitan dengan
-        pengeluaran ternakan. Melindungi habitat semula jadi membantu
-        menyokong hidupan liar, biodiversiti dan ekosistem yang sihat.
-    </p>
+<p>
+မြေယာအသုံးပြုမှုအပေါ် ဖိအား လျှော့ချနိုင်ပါက
+သစ်တောများနှင့် သဘာဝနေထိုင်ရာဒေသများကို
+ထိန်းသိမ်းရန် အခွင့်အလမ်း ပိုမိုရရှိနိုင်ပါသည်။
+</p>
 
-    <h3>💧 Menggunakan Sumber dengan Lebih Cekap</h3>
+<h3>၃။ ရေနှင့် အခြားသဘာဝအရင်းအမြစ်များကို ထိန်းသိမ်းခြင်း</h3>
 
-    <p>
-        Pengeluaran makanan memerlukan air, tenaga dan input pertanian.
-        Jejak alam sekitar berbeza dengan ketara antara tanaman
-        dan sistem pertanian.
-    </p>
+<p>
+အစားအစာထုတ်လုပ်မှုတွင် ရေ၊ စွမ်းအင်နှင့် မြေယာတို့ကို
+အသုံးပြုရပါသည်။ အစားအစာအမျိုးအစားအလိုက်
+ဤအရင်းအမြစ်များ အသုံးပြုမှုမှာ ကွာခြားနိုင်ပါသည်။
+အပင်အခြေခံ အစားအစာအချို့သည် တိရစ္ဆာန်အခြေခံ အစားအစာများထက်
+သဘာဝအရင်းအမြစ်များကို ပိုမိုထိရောက်စွာ အသုံးပြုနိုင်ပါသည်။
+</p>
 
-    <p>
-        Banyak makanan protein berasaskan tumbuhan secara umum
-        memerlukan sumber yang lebih sedikit berbanding daging
-        yang mempunyai kesan alam sekitar tinggi.
-        Walau bagaimanapun, penggunaan air juga bergantung pada
-        jenis tanaman, iklim dan sama ada kawasan tersebut
-        mengalami kekurangan air.
-    </p>
+<h3>၄။ ဇီဝမျိုးစုံမျိုးကွဲများကို ကာကွယ်ရန် အထောက်အကူပြုခြင်း</h3>
 
-    <h3>🐝 Menyokong Biodiversiti</h3>
-
-    <p>
-        Mengurangkan tekanan untuk memperluas kawasan pertanian
-        boleh membantu memelihara hutan, padang rumput dan habitat
-        semula jadi yang lain.
-        Habitat ini menyediakan makanan dan tempat perlindungan
-        kepada burung, serangga, mamalia dan pelbagai organisma lain.
-    </p>
-
-    <p>
-        Amalan pertanian lestari, pengurangan penggunaan racun perosak
-        dan perlindungan ekosistem semula jadi juga penting.
-        Pemakanan berasaskan tumbuhan merupakan salah satu bahagian
-        daripada usaha yang lebih luas untuk melindungi biodiversiti.
-    </p>
+<p>
+သစ်တောများ၊ မြက်ခင်းပြင်များနှင့် သဘာဝနေထိုင်ရာဒေသများ
+ပြောင်းလဲသွားခြင်းသည် တိရစ္ဆာန်များနှင့် အပင်များ၏
+နေထိုင်ရာနေရာများကို ထိခိုက်စေနိုင်ပါသည်။
+မြေယာအသုံးပြုမှုအပေါ် ဖိအားကို လျှော့ချခြင်းသည်
+ဇီဝမျိုးစုံမျိုးကွဲများကို ထိန်းသိမ်းရန် အထောက်အကူဖြစ်နိုင်ပါသည်။
+</p>
 </section>
 
 <section>
-    <h2>2. Perbandingan Saintifik bagi Makanan Terpilih</h2>
+<h2>ပရိုတင်း ၁၀၀ ဂရမ်အလိုက် အစားအစာများ၏ ခန့်မှန်း ကာဗွန်ထုတ်လွှတ်မှု</h2>
 
-    <p>
-        Nilai anggaran berikut berdasarkan purata global pelepasan
-        gas rumah hijau bagi setiap 100 gram protein daripada
-        dataset kesan alam sekitar makanan yang dikaitkan dengan
-        Poore dan Nemecek (2018), seperti yang dipaparkan oleh
-        Our World in Data.
-    </p>
+<p>
+အောက်ပါဇယားတွင် အစားအစာအမျိုးမျိုးမှ ပရိုတင်း ၁၀၀ ဂရမ် ရရှိရန်
+ဆက်စပ်သော ဖန်လုံအိမ်ဓာတ်ငွေ့ ထုတ်လွှတ်မှု ခန့်မှန်းချက်များကို
+ဖော်ပြထားပါသည်။
+</p>
 
-    <p>
-        Angka ini membandingkan makanan berdasarkan kandungan protein,
-        bukannya berat makanan yang sama. Ini menjadikan perbandingan
-        lebih bermakna apabila mempertimbangkan makanan kaya protein
-        sebagai alternatif.
-    </p>
+<table>
+<thead>
+<tr>
+<th>အစားအစာအမျိုးအစား</th>
+<th>ခန့်မှန်းထုတ်လွှတ်မှု (kg CO₂-eq / ပရိုတင်း ၁၀၀ ဂရမ်)</th>
+</tr>
+</thead>
 
-    <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; background:#fff;">
-        <thead>
-            <tr style="background:#e7efdf;">
-                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
-                    Makanan
-                </th>
-                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
-                    Anggaran kg CO₂-setara bagi setiap 100 g protein
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Daging lembu (beef herd)</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Daging kambing dan biri-biri</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Daging babi</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Daging ayam</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Tauhu</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Kekacang lain (kacang, lentil)</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">Kacang pis</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+<tbody>
+<tr>
+<td>အမဲသား</td>
+<td>49.89</td>
+</tr>
+<tr>
+<td>သိုးသား</td>
+<td>19.85</td>
+</tr>
+<tr>
+<td>ဝက်သား</td>
+<td>7.61</td>
+</tr>
+<tr>
+<td>ကြက်သား</td>
+<td>5.70</td>
+</tr>
+<tr>
+<td>တို့ဖူး</td>
+<td>1.98</td>
+</tr>
+<tr>
+<td>အခြားပဲမျိုးစုံ</td>
+<td>0.84</td>
+</tr>
+<tr>
+<td>ပဲစိမ်း (Peas)</td>
+<td>0.44</td>
+</tr>
+</tbody>
+</table>
 
-    <p class="note">
-        Penting: Angka ini ialah purata global, bukan jejak karbon
-        tepat bagi setiap ladang atau hidangan. Kesan sebenar boleh
-        berbeza mengikut amalan pertanian, perubahan penggunaan tanah,
-        pemprosesan, pengangkutan dan faktor lain. CO₂-setara
-        merangkumi kesan pemanasan daripada pelbagai gas rumah hijau.
-    </p>
+<div class="note">
+<strong>သတိပြုရန်:</strong>
+ဤတန်ဖိုးများသည် ပျမ်းမျှ ခန့်မှန်းချက်များသာ ဖြစ်ပါသည်။
+ထုတ်လုပ်သည့်နေရာ၊ စိုက်ပျိုးနည်း၊ မွေးမြူရေးနည်း၊
+သယ်ယူပို့ဆောင်ရေးနှင့် ထုတ်လုပ်မှုစနစ်တို့အပေါ် မူတည်၍
+အမှန်တကယ် ထုတ်လွှတ်မှု ကွာခြားနိုင်ပါသည်။
+ဤကိန်းဂဏန်းများသည် အစားအစာ၏ စုစုပေါင်းအလေးချိန် ၁၀၀ ဂရမ်မဟုတ်ဘဲ
+ပရိုတင်း ၁၀၀ ဂရမ်အလိုက် နှိုင်းယှဉ်ထားခြင်း ဖြစ်ပါသည်။
+</div>
 </section>
 
 <section>
-    <h2>3. Kalkulator Pemakanan Berasaskan Tumbuhan dan Alam Semula Jadi</h2>
+<h2>အစားအစာရွေးချယ်မှု ကာဗွန်ထုတ်လွှတ်မှု ခန့်မှန်းတွက်ချက်စက်</h2>
 
-    <p>
-        Anggarkan potensi pengurangan pelepasan gas rumah hijau
-        apabila anda menggantikan beberapa hidangan berasaskan daging
-        dengan makanan protein berasaskan tumbuhan.
-    </p>
+<p>
+အောက်ပါရိုးရှင်းသော တွက်ချက်စက်ကို အသုံးပြု၍
+အသားအခြေခံ ပရိုတင်းတစ်မျိုးကို အပင်အခြေခံ ပရိုတင်းတစ်မျိုးဖြင့်
+အစားထိုးစားသုံးပါက ကာဗွန်ထုတ်လွှတ်မှု မည်မျှ
+လျှော့ချနိုင်မည်ကို ခန့်မှန်းကြည့်နိုင်ပါသည်။
+</p>
 
-    <div class="calculator">
+<div class="calculator">
 
-        <label for="meatFood">
-            Apakah jenis daging yang ingin anda gantikan?
-        </label>
+<label for="meatType">လက်ရှိစားသုံးသော အသားအမျိုးအစား</label>
+<select id="meatType">
+    <option value="49.89">အမဲသား</option>
+    <option value="19.85">သိုးသား</option>
+    <option value="7.61">ဝက်သား</option>
+    <option value="5.70">ကြက်သား</option>
+</select>
 
-        <select id="meatFood">
-            <option value="49.89">Daging lembu</option>
-            <option value="19.85">Daging kambing atau biri-biri</option>
-            <option value="7.61">Daging babi</option>
-            <option value="5.70">Daging ayam</option>
-        </select>
+<label for="plantType">အစားထိုးမည့် အပင်အခြေခံ ပရိုတင်း</label>
+<select id="plantType">
+    <option value="1.98">တို့ဖူး</option>
+    <option value="0.84">အခြားပဲမျိုးစုံ</option>
+    <option value="0.44">ပဲစိမ်း (Peas)</option>
+</select>
 
-        <label for="plantFood">
-            Apakah protein berasaskan tumbuhan yang akan anda pilih?
-        </label>
+<label for="proteinAmount">တစ်နပ်စာတွင် ပရိုတင်းပမာဏ (ဂရမ်)</label>
+<input type="number" id="proteinAmount" value="20" min="1" max="200">
 
-        <select id="plantFood">
-            <option value="0.84">Kacang atau lentil</option>
-            <option value="0.44">Kacang pis</option>
-            <option value="1.98">Tauhu</option>
-        </select>
+<label for="mealsPerWeek">တစ်ပတ်လျှင် အစားထိုးစားသုံးမည့် အကြိမ်ရေ</label>
+<input type="number" id="mealsPerWeek" value="3" min="1" max="21">
 
-        <label for="proteinAmount">
-            Jumlah protein bagi setiap hidangan yang dibandingkan (gram)
-        </label>
+<button type="button" onclick="calculateImpact()">တွက်ချက်ရန်</button>
 
-        <input type="number"
-               id="proteinAmount"
-               min="1"
-               max="300"
-               value="20">
+<div class="result" id="result" aria-live="polite">
+    ရလဒ်ကို ကြည့်ရှုရန် အချက်အလက်များ ထည့်သွင်းပြီး
+    “တွက်ချက်ရန်” ကို နှိပ်ပါ။
+</div>
 
-        <label for="mealsPerWeek">
-            Berapa banyak hidangan seminggu yang akan anda gantikan?
-        </label>
+</div>
 
-        <input type="number"
-               id="mealsPerWeek"
-               min="1"
-               max="21"
-               value="3">
+<h3>တွက်ချက်ပုံ</h3>
 
-        <button type="button" onclick="calculateImpact()">
-            Kira Potensi Kesan Saya
-        </button>
+<p>
+တစ်နပ်စာအတွက် ခန့်မှန်းထုတ်လွှတ်မှု =
+အစားအစာ၏ ထုတ်လွှတ်မှုအချက်ကိန်း × ပရိုတင်းပမာဏ ÷ ၁၀၀
+</p>
 
-        <div id="result" class="result" aria-live="polite">
-            <h3>Anggaran Keputusan Anda</h3>
+<p>
+တစ်ပတ်စာ ခန့်မှန်းလျှော့ချမှု =
+(အသားအခြေခံ ထုတ်လွှတ်မှု − အပင်အခြေခံ ထုတ်လွှတ်မှု)
+× တစ်ပတ်လျှင် အစားထိုးစားသုံးသည့် အကြိမ်ရေ
+</p>
 
-            <p>
-                Anggaran pelepasan daripada pilihan daging:
-            </p>
+<p>
+တစ်နှစ်စာ ခန့်မှန်းလျှော့ချမှု =
+တစ်ပတ်စာ ခန့်မှန်းလျှော့ချမှု × ၅၂
+</p>
 
-            <div id="meatResult"></div>
-
-            <p>
-                Anggaran pelepasan daripada pilihan berasaskan tumbuhan:
-            </p>
-
-            <div id="plantResult"></div>
-
-            <p>
-                Potensi pelepasan yang dielakkan setiap minggu:
-            </p>
-
-            <div id="weeklyResult" class="result-number"></div>
-
-            <p>
-                Potensi pelepasan yang dielakkan setiap tahun:
-            </p>
-
-            <div id="annualResult" class="result-number"></div>
-
-            <p id="message"></p>
-        </div>
-
-    </div>
-
-    <p class="note">
-        Kaedah kalkulator: nilai yang dipilih mewakili kg CO₂-setara
-        bagi setiap 100 g protein. Pengiraan mengandaikan jumlah
-        protein yang sama diperoleh daripada pilihan daging dan
-        pilihan protein tumbuhan. Hasil ini ialah anggaran ringkas,
-        bukan penilaian kitar hayat penuh bagi hidangan sebenar.
-    </p>
+<div class="note">
+ဤတွက်ချက်စက်သည် ပရိုတင်းပမာဏ တူညီသည်ဟု ယူဆထားသော
+ရိုးရှင်းသည့် ခန့်မှန်းချက်ဖြစ်ပါသည်။
+အစားအစာတစ်နပ်၏ အမှန်တကယ် ပတ်ဝန်းကျင်ဆိုင်ရာ သက်ရောက်မှုကို
+အပြည့်အဝ တွက်ချက်ပေးခြင်း မဟုတ်ပါ။
+</div>
 </section>
 
 <section>
-    <h2>4. Cara Mudah untuk Makan dengan Lebih Lestari</h2>
+<h2>နေ့စဉ်ဘဝတွင် လက်တွေ့လုပ်ဆောင်နိုင်သော အဆင့်များ</h2>
 
-    <ul>
-        <li>Cuba satu atau lebih hidangan tanpa daging setiap minggu.</li>
-        <li>Masukkan kacang, lentil, kacang pis atau tauhu sebagai sumber protein.</li>
-        <li>Tambahkan pelbagai jenis sayur-sayuran dalam hidangan.</li>
-        <li>Pilih hasil pertanian bermusim apabila sesuai.</li>
-        <li>Kurangkan pembaziran makanan dengan merancang hidangan dan menggunakan lebihan makanan.</li>
-        <li>Simpan makanan dengan betul supaya kekal segar lebih lama.</li>
-        <li>Sokong petani yang mengamalkan kaedah pertanian bertanggungjawab dan lestari.</li>
-        <li>Nikmati pemakanan seimbang yang memenuhi keperluan nutrisi anda.</li>
-    </ul>
+<ul>
+<li>တစ်ပတ်လျှင် အနည်းဆုံး တစ်နပ်ကို ပဲမျိုးစုံ သို့မဟုတ် တို့ဖူးဖြင့် အစားထိုးကြည့်ပါ။</li>
+<li>ဟင်းသီးဟင်းရွက်၊ သစ်သီးနှင့် ပဲမျိုးစုံကို ပိုမိုစားသုံးပါ။</li>
+<li>ဒေသတွင်း ရာသီပေါ် အစားအစာများကို ရွေးချယ်ပါ။</li>
+<li>စားသုံးနိုင်သည့် အစားအစာများကို မဖြုန်းတီးပါနှင့်။</li>
+<li>အစားအစာကို စိတ်ရှည်စွာ၊ သတိရှိရှိ စားသုံးပါ။</li>
+<li>သင့်ကျန်းမာရေးနှင့် အာဟာရလိုအပ်ချက်များကိုလည်း ထည့်သွင်းစဉ်းစားပါ။</li>
+</ul>
 
-    <p>
-        Hidangan berasaskan tumbuhan tidak semestinya rumit.
-        Nasi bersama sayur-sayuran dan lentil, tauhu bersama
-        sayur berdaun, atau sup berasaskan kacang boleh menjadi
-        pilihan yang mudah dan berkhasiat.
-    </p>
+<p>
+အပြောင်းအလဲကြီးများကို တစ်ခါတည်း လုပ်ဆောင်ရန် မလိုအပ်ပါ။
+သေးငယ်သော အလေ့အကျင့်များကို တဖြည်းဖြည်း ပြောင်းလဲခြင်းသည်
+ရေရှည်တည်တံ့သော နေထိုင်မှုအတွက် အထောက်အကူဖြစ်နိုင်ပါသည်။
+</p>
 </section>
 
 <section>
-    <h2>5. Pilihan Berkesedaran untuk Planet Kita</h2>
+<h2>သတိရှိစွာ စားသုံးခြင်းနှင့် ကမ္ဘာမြေအပေါ် ကြင်နာမှု</h2>
 
-    <p>
-        Pemakanan berkesedaran mengajak kita memberi perhatian
-        bukan sahaja kepada makanan di atas pinggan, tetapi juga
-        kepada sumber dan sistem kehidupan yang berkaitan dengan makanan.
-    </p>
+<p>
+သတိရှိစွာ စားသုံးခြင်းဆိုသည်မှာ ကျွန်ုပ်တို့စားသုံးသော အစားအစာများ၏
+အရသာ၊ အာဟာရနှင့် မူလရင်းမြစ်ကို သတိပြုခြင်းသာမက
+ထိုအစားအစာများကြောင့် သဘာဝပတ်ဝန်းကျင်နှင့်
+အခြားသက်ရှိများအပေါ် ဖြစ်ပေါ်နိုင်သော သက်ရောက်မှုများကိုလည်း
+စဉ်းစားခြင်း ဖြစ်ပါသည်။
+</p>
 
-    <p>
-        Memilih lebih banyak hidangan berasaskan tumbuhan boleh
-        menjadi langkah bermakna untuk mengurangkan jejak alam sekitar.
-        Ia juga menggalakkan penghargaan terhadap tanah, air,
-        tumbuhan, petani dan ekosistem yang membolehkan makanan
-        kita dihasilkan.
-    </p>
+<p>
+အစားအစာရွေးချယ်မှုတွင် သတိ၊ ကြင်နာမှုနှင့် တာဝန်ယူမှုကို
+ထည့်သွင်းနိုင်ပါက ကျွန်ုပ်တို့၏ နေ့စဉ်ဘဝသည်
+သဘာဝပတ်ဝန်းကျင်ကို ပိုမိုထိန်းသိမ်းသော
+နေထိုင်မှုပုံစံတစ်ခု ဖြစ်လာနိုင်ပါသည်။
+</p>
 
-    <p>
-        Kita tidak perlu menghakimi diri sendiri atau orang lain
-        berdasarkan pilihan makanan. Sebaliknya, kita boleh belajar,
-        membuat keputusan yang berinformasi dan secara beransur-ansur
-        membina tabiat yang menyokong kesejahteraan diri serta
-        alam semula jadi.
-    </p>
-
-    <p>
-        <strong>
-            Setiap hidangan yang dipilih dengan penuh kesedaran
-            ialah peluang untuk menjaga diri dan Bumi.
-        </strong>
-    </p>
+<p>
+ကမ္ဘာမြေကို ဂရုစိုက်ခြင်းသည် နေ့စဉ် အစားအစာရွေးချယ်မှုကဲ့သို့သော
+သေးငယ်သည့် လုပ်ဆောင်ချက်များမှ စတင်နိုင်ပါသည်။
+</p>
 </section>
 
 <section>
-    <h2>Rujukan Saintifik dan Bacaan Lanjut</h2>
+<h2>ကိုးကားရင်းမြစ်များ</h2>
 
-    <ul>
-        <li>
-            Poore, J. &amp; Nemecek, T. (2018).
-            Reducing food’s environmental impacts through producers
-            and consumers. <em>Science</em>, 360(6392), 987–992.
-            <a href="https://doi.org/10.1126/science.aaq0216"
-               target="_blank" rel="noopener noreferrer">
-               Baca penyelidikan
-            </a>
-        </li>
+<ul>
+<li>
+Poore, J. & Nemecek, T. (2018).
+Reducing food's environmental impacts through producers and consumers.
+Science.
+<a href="https://doi.org/10.1126/science.aaq0216" target="_blank" rel="noopener noreferrer">
+သုတေသနစာတမ်းကို ဖတ်ရှုရန်
+</a>
+</li>
 
-        <li>
-            Our World in Data:
-            Environmental Impacts of Food Production.
-            <a href="https://ourworldindata.org/environmental-impacts-of-food"
-               target="_blank" rel="noopener noreferrer">
-               Terokai data dan penerangan
-            </a>
-        </li>
+<li>
+Our World in Data – Environmental Impacts of Food.
+<a href="https://ourworldindata.org/environmental-impacts-of-food" target="_blank" rel="noopener noreferrer">
+အစားအစာများ၏ ပတ်ဝန်းကျင်ဆိုင်ရာ သက်ရောက်မှုများ
+</a>
+</li>
 
-        <li>
-            Our World in Data:
-            Land Use and Diets.
-            <a href="https://ourworldindata.org/land-use-diets"
-               target="_blank" rel="noopener noreferrer">
-               Ketahui tentang makanan dan penggunaan tanah pertanian
-            </a>
-        </li>
-    </ul>
+<li>
+Our World in Data – Land Use.
+<a href="https://ourworldindata.org/land-use" target="_blank" rel="noopener noreferrer">
+မြေယာအသုံးပြုမှုနှင့် သဘာဝပတ်ဝန်းကျင်
+</a>
+</li>
+</ul>
+
+<p>
+ဤစာမျက်နှာသည် ပညာပေးရည်ရွယ်ချက်အတွက်သာ ဖြစ်ပါသည်။
+ကာဗွန်ထုတ်လွှတ်မှု ခန့်မှန်းချက်များသည် အစားအစာထုတ်လုပ်မှုစနစ်များ၏
+ပျမ်းမျှတန်ဖိုးများကို အခြေခံထားပါသည်။
+</p>
 </section>
 
 </main>
 
 <footer>
-    <p>
-        Yangocean – Kehidupan Berkesedaran • Hubungan dengan Alam • Kelestarian
-    </p>
+<p>Yangocean — သတိရှိသော နေထိုင်မှု • သဘာဝနှင့် ဆက်သွယ်မှု • ရေရှည်တည်တံ့မှု</p>
 
-    <p>
-        <a href="/ms/index.html">Laman Utama</a> |
-        <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a> |
-        <a href="/ms/eco.html">Kesedaran Alam Sekitar</a> |
-        <a href="/ms/contact.html">Hubungi Kami</a>
-    </p>
-
-    <p>
-        Maklumat untuk tujuan pendidikan sahaja. Anggaran alam sekitar
-        adalah tidak tepat sepenuhnya dan tidak mewakili kesan sebenar
-        sesuatu hidangan secara individu.
-    </p>
+<p>
+<a href="/my/index.html">ပင်မစာမျက်နှာ</a> |
+<a href="/my/mindful-eating.html">သတိရှိစွာ စားသုံးခြင်း</a> |
+<a href="/my/eco.html">သဘာဝပတ်ဝန်းကျင်</a> |
+<a href="/my/contact.html">ဆက်သွယ်ရန်</a>
+</p>
 </footer>
 
 <script>
 function calculateImpact() {
-    const meatFactor = parseFloat(
-        document.getElementById("meatFood").value
-    );
+    const meatFactor = parseFloat(document.getElementById("meatType").value);
+    const plantFactor = parseFloat(document.getElementById("plantType").value);
+    const proteinAmount = parseFloat(document.getElementById("proteinAmount").value);
+    const mealsPerWeek = parseFloat(document.getElementById("mealsPerWeek").value);
 
-    const plantFactor = parseFloat(
-        document.getElementById("plantFood").value
-    );
-
-    const proteinGrams = parseFloat(
-        document.getElementById("proteinAmount").value
-    );
-
-    const mealsPerWeek = parseFloat(
-        document.getElementById("mealsPerWeek").value
-    );
+    const result = document.getElementById("result");
 
     if (
-        !Number.isFinite(proteinGrams) ||
-        !Number.isFinite(mealsPerWeek) ||
-        proteinGrams <= 0 ||
-        proteinGrams > 300 ||
+        isNaN(proteinAmount) ||
+        isNaN(mealsPerWeek) ||
+        proteinAmount <= 0 ||
         mealsPerWeek <= 0 ||
+        proteinAmount > 200 ||
         mealsPerWeek > 21
     ) {
-        alert("Sila masukkan jumlah protein dan hidangan setiap minggu yang sah.");
+        result.innerHTML = "ကျေးဇူးပြု၍ မှန်ကန်သော ပရိုတင်းပမာဏနှင့် အကြိမ်ရေကို ထည့်သွင်းပါ။";
         return;
     }
 
-    const meatEmissionsPerMeal =
-        (meatFactor * proteinGrams) / 100;
+    const meatEmissions = meatFactor * proteinAmount / 100;
+    const plantEmissions = plantFactor * proteinAmount / 100;
 
-    const plantEmissionsPerMeal =
-        (plantFactor * proteinGrams) / 100;
+    const weeklySavings = (meatEmissions - plantEmissions) * mealsPerWeek;
+    const annualSavings = weeklySavings * 52;
 
-    const reductionPerMeal =
-        meatEmissionsPerMeal - plantEmissionsPerMeal;
+    const meatName = document.getElementById("meatType").selectedOptions[0].text;
+    const plantName = document.getElementById("plantType").selectedOptions[0].text;
 
-    const weeklyReduction =
-        reductionPerMeal * mealsPerWeek;
-
-    const annualReduction =
-        weeklyReduction * 52;
-
-    document.getElementById("meatResult").textContent =
-        meatEmissionsPerMeal.toFixed(3) +
-        " kg CO₂-setara bagi setiap hidangan";
-
-    document.getElementById("plantResult").textContent =
-        plantEmissionsPerMeal.toFixed(3) +
-        " kg CO₂-setara bagi setiap hidangan";
-
-    document.getElementById("weeklyResult").textContent =
-        Math.max(0, weeklyReduction).toFixed(3) +
-        " kg CO₂-setara";
-
-    document.getElementById("annualResult").textContent =
-        Math.max(0, annualReduction).toFixed(2) +
-        " kg CO₂-setara";
-
-    document.getElementById("message").textContent =
-        "Dengan melakukan penggantian ini secara konsisten, " +
-        "anda berpotensi mengurangkan pelepasan gas rumah hijau " +
-        "yang berkaitan dengan hidangan tersebut. Ini ialah " +
-        "anggaran berdasarkan data purata pengeluaran makanan.";
-
-    document.getElementById("result").style.display = "block";
+    result.innerHTML =
+        "<h3>ခန့်မှန်းရလဒ်</h3>" +
+        "<p>အစားထိုးမည့် အစားအစာ: " + meatName + " → " + plantName + "</p>" +
+        "<p>တစ်နပ်စာ ပရိုတင်းပမာဏ: " + proteinAmount + " ဂရမ်</p>" +
+        "<p>တစ်ပတ်လျှင် အစားထိုးစားသုံးမှု: " + mealsPerWeek + " ကြိမ်</p>" +
+        "<p>တစ်ပတ်စာ ခန့်မှန်း ကာဗွန်ထုတ်လွှတ်မှု လျှော့ချနိုင်မှု: " +
+        Math.max(0, weeklySavings).toFixed(2) + " kg CO₂-eq</p>" +
+        "<p>တစ်နှစ်စာ ခန့်မှန်း ကာဗွန်ထုတ်လွှတ်မှု လျှော့ချနိုင်မှု: " +
+        Math.max(0, annualSavings).toFixed(2) + " kg CO₂-eq</p>" +
+        "<p>ဤရလဒ်သည် ခန့်မှန်းချက်သာ ဖြစ်ပါသည်။</p>";
 }
 
 function readArticle() {
     if (!("speechSynthesis" in window)) {
-        alert("Fungsi bacaan kuat tidak disokong oleh pelayar ini.");
+        alert("သင့်ဘရောက်ဆာတွင် အသံဖတ်ရှုမှုကို မထောက်ပံ့ပါ။");
         return;
     }
 
-    window.speechSynthesis.cancel();
+    stopReading();
 
     const article = document.querySelector("main").cloneNode(true);
 
-    article.querySelectorAll(".read-aloud").forEach(function(element) {
-        element.remove();
-    });
-
-    article.querySelectorAll("button").forEach(function(element) {
+    article.querySelectorAll("button, input, select, .calculator").forEach(function(element) {
         element.remove();
     });
 
     const text = article.innerText;
 
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "ms-MY";
-    speech.rate = 0.95;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "my-MM";
+    utterance.rate = 0.9;
 
-    window.speechSynthesis.speak(speech);
+    window.speechSynthesis.speak(utterance);
 }
 
 function stopReading() {
@@ -757,4 +580,3 @@ function stopReading() {
 
 </body>
 </html>
-```
