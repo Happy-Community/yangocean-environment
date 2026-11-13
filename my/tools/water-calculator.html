@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+
+<meta charset="UTF-8">
+
+<title>ရေသုံးစွဲမှု တွက်ချက်စက် | Yangocean</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="နေ့စဉ် ရေချိုးချိန်နှင့် အိမ်ထောင်စုဝင် အရေအတွက်ကို ထည့်သွင်းပြီး တစ်လစာ ခန့်မှန်းရေသုံးစွဲမှုကို တွက်ချက်ပါ။">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://www.yangocean.com/my/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="en"
+href="https://www.yangocean.com/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://www.yangocean.com/ms/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://www.yangocean.com/zh/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://www.yangocean.com/fr/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://www.yangocean.com/es/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://www.yangocean.com/my/tools/water-calculator.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://www.yangocean.com/tools/water-calculator.html">
+
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
+
+<!-- GLOBAL STYLES ONLY -->
+<link rel="stylesheet" href="/styles.css">
+
+</head>
+
+<body class="theme-water">
+
+<div class="container">
+
+<div class="card">
+
+<h1>💧 ရေသုံးစွဲမှု တွက်ချက်စက်</h1>
+
+<p>
+တစ်နေ့လျှင် ရေချိုးချိန် (မိနစ်):
+</p>
+
+<input
+type="number"
+id="shower"
+min="0"
+step="1"
+placeholder="ဥပမာ - ၁၀">
+
+<p>
+အိမ်ထောင်စုဝင် အရေအတွက်:
+</p>
+
+<input
+type="number"
+id="people"
+min="0"
+step="1"
+placeholder="ဥပမာ - ၄">
+
+<button onclick="calcWater()">
+တွက်ချက်ရန်
+</button>
+
+<div id="result" class="result" style="display:none;" aria-live="polite"></div>
+
+<a class="back" href="/my/index.html">
+← ပင်မစာမျက်နှာသို့ ပြန်သွားရန်
+</a>
+
+</div>
+
+</div>
+
+<script>
+function calcWater() {
+
+  let showerInput = document.getElementById("shower").value;
+  let peopleInput = document.getElementById("people").value;
+
+  let shower = showerInput === "" ? 0 : Number(showerInput);
+  let people = peopleInput === "" ? 0 : Number(peopleInput);
+
+  if (
+    !Number.isFinite(shower) ||
+    !Number.isFinite(people) ||
+    shower < 0 ||
+    people < 0
+  ) {
+
+    document.getElementById("result").style.display = "block";
+
+    document.getElementById("result").innerHTML =
+      "ကျေးဇူးပြု၍ မှန်ကန်သော အချက်အလက်များကို ထည့်သွင်းပါ။";
+
+    return;
+
+  }
+
+  // ခန့်မှန်းချက်: လူတစ်ဦးလျှင် တစ်မိနစ် ၉ လီတာ
+  // တစ်လကို ရက် ၃၀ ဟု ယူဆထားသည်
+
+  let water = shower * people * 9 * 30;
+
+  document.getElementById("result").style.display = "block";
+
+  document.getElementById("result").innerHTML =
+    "💧 တစ်လစာ ခန့်မှန်းရေသုံးစွဲမှု: <b>" +
+    water.toLocaleString() +
+    " လီတာ</b>";
+
+}
+</script>
+
+</body>
+</html>
