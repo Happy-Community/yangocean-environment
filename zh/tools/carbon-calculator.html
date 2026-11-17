@@ -2,30 +2,52 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>植物性饮食与自然环境 | Yangocean</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <meta name="description"
-content="了解选择更多蔬菜、豆类、豌豆和其他植物性食物来替代肉类，如何帮助减少温室气体排放、土地使用及环境影响。使用植物性饮食与自然环境计算器，估算潜在的碳排放减量。">
+content="了解植物性饮食如何影响自然环境。通过互动计算器，比较不同蛋白质来源的估计温室气体排放量，探索更环保的饮食选择。">
 
 <meta name="robots" content="index, follow">
 
-<link rel="canonical" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<link rel="canonical"
+href="https://yangocean.com/zh/tools/plant-based-eating-and-nature.html">
 
-<link rel="alternate" hreflang="en" href="https://www.yangocean.com/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="ms" href="https://www.yangocean.com/ms/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="zh-CN" href="https://www.yangocean.com/zh/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="fr" href="https://www.yangocean.com/fr/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="es" href="https://www.yangocean.com/es/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/tools/carbon-calculator.html">
-<link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/tools/carbon-calculator.html">
+<link rel="alternate"
+hreflang="zh-CN"
+href="https://yangocean.com/zh/tools/plant-based-eating-and-nature.html">
 
-<meta property="og:title" content="植物性饮食与自然环境 | Yangocean">
-<meta property="og:description" content="探索植物性饮食的环境益处，并估算潜在的温室气体减排量。">
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/tools/plant-based-eating-and-nature.html">
+
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.yangocean.com/zh/tools/carbon-calculator.html">
+<meta property="og:title"
+content="植物性饮食与自然环境 | Yangocean">
+<meta property="og:description"
+content="了解饮食选择对环境的影响，并通过互动计算器比较不同蛋白质来源的估计排放量。">
+<meta property="og:url"
+content="https://yangocean.com/zh/tools/plant-based-eating-and-nature.html">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title"
+content="植物性饮食与自然环境 | Yangocean">
+<meta name="twitter:description"
+content="通过互动蛋白质比较计算器，了解饮食选择与自然环境之间的关系。">
+
+<!-- Google AdSense -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
 
 <style>
 * {
@@ -35,207 +57,339 @@ content="了解选择更多蔬菜、豆类、豌豆和其他植物性食物来�
 body {
     margin: 0;
     font-family: Arial, "Microsoft YaHei", "Noto Sans SC", sans-serif;
-    line-height: 1.75;
-    color: #35433a;
-    background: #f7f8f1;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.85;
 }
 
 header {
-    background: #e7efdf;
-    padding: 28px 20px;
-    text-align: center;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
 }
 
-header h1 {
-    color: #315b38;
-    margin: 0;
-    font-size: 2rem;
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
 }
 
-header p {
-    color: #536b54;
-    margin-top: 10px;
+.brand {
+    min-width: 180px;
+}
+
+.logo {
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
 }
 
 nav {
-    background: #ffffff;
-    padding: 12px;
-    text-align: center;
-    border-bottom: 1px solid #dce5d6;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    color: #3c6842;
+    color: #334238;
     text-decoration: none;
-    margin: 0 10px;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
 }
 
 nav a:hover {
+    color: #2f6b3f;
     text-decoration: underline;
 }
 
-.language-switch {
-    text-align: center;
-    padding: 14px 10px;
-    background: #f0f4e9;
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
 }
 
-.language-switch a {
-    display: inline-block;
-    margin: 4px;
-    padding: 5px 10px;
-    border: 1px solid #c9d8c1;
-    border-radius: 6px;
-    color: #315b38;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.language-switch a[aria-current="page"] {
-    background: #416b45;
-    color: #ffffff;
-    border-color: #416b45;
+.languages a {
+    font-size: 0.78rem;
 }
 
 main {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
-    padding: 25px 18px 45px;
+    padding: 30px 20px 60px;
 }
 
-section {
-    margin-bottom: 35px;
+.hero {
+    text-align: center;
+    padding: 35px 15px 25px;
 }
 
-h2 {
-    color: #386641;
-    margin-top: 0;
+.hero h1 {
+    color: #2f6b3f;
+    font-size: 2rem;
+    line-height: 1.4;
 }
 
-h3 {
-    color: #4d714f;
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #5f6d63;
 }
 
-.intro {
-    background: #ffffff;
-    padding: 22px;
-    border-radius: 12px;
-    border: 1px solid #e1e8dc;
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px auto 30px;
 }
 
-.calculator {
-    background: #ffffff;
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid #d9e5d3;
-    box-shadow: 0 3px 12px rgba(40, 70, 40, 0.05);
-}
-
-.calculator label {
-    display: block;
-    margin: 16px 0 6px;
-    font-weight: bold;
-}
-
-.calculator select,
-.calculator input {
-    width: 100%;
-    padding: 11px;
-    font-size: 1rem;
-    border: 1px solid #cbd7c5;
+.read-aloud button {
+    padding: 9px 15px;
+    border: 1px solid #cbd6cc;
     border-radius: 7px;
-    background: #fbfcf8;
-}
-
-.calculator button {
-    margin-top: 22px;
-    padding: 12px 20px;
-    background: #47764b;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    font-size: 1rem;
+    background: #ffffff;
+    color: #334238;
     cursor: pointer;
 }
 
-.calculator button:hover {
-    background: #345d38;
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+section h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+section h3 {
+    color: #385c40;
+}
+
+.tool {
+    max-width: 800px;
+    margin: 25px auto 35px;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #2f6b3f;
+}
+
+.tool-intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field select,
+.field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #68756c;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
 }
 
 .result {
     display: none;
-    margin-top: 22px;
-    padding: 20px;
-    background: #edf5e8;
-    border-left: 5px solid #5b8754;
-    border-radius: 8px;
+    margin-top: 25px;
+    padding: 22px;
+    border: 1px solid #d6e4d3;
+    border-radius: 10px;
+    background: #eef5ec;
 }
 
 .result h3 {
     margin-top: 0;
+    color: #2f6b3f;
 }
 
 .result-number {
+    margin: 12px 0;
+    color: #2f6b3f;
     font-size: 1.8rem;
     font-weight: bold;
-    color: #315b38;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.result-item {
+    padding: 15px;
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    color: #2f6b3f;
+    font-size: 1.25rem;
+}
+
+.result-message {
+    margin-top: 18px;
+}
+
+.disclaimer {
+    color: #59675d;
+    font-size: 0.9rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dce5dc;
+    text-align: left;
+}
+
+th {
+    background: #eef5ec;
+    color: #2f6b3f;
 }
 
 .note {
-    background: #f1f3e9;
-    padding: 16px;
-    border-radius: 8px;
-    font-size: 0.94rem;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: #eef2ed;
+    border-radius: 10px;
 }
 
-ul {
-    padding-left: 24px;
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.reference-list li {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #356b43;
 }
 
 footer {
-    background: #e7efdf;
+    background: #eef2ed;
+    padding: 25px 20px;
+    color: #637066;
     text-align: center;
-    padding: 25px 15px;
-    color: #4b644d;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #386641;
+    margin: 0 6px;
+    color: #4c6653;
     text-decoration: none;
 }
 
-.read-aloud {
-    text-align: center;
-    margin: 20px 0;
-}
+@media (max-width: 800px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.read-aloud button {
-    background: #557c55;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 15px;
-    margin: 5px;
-    cursor: pointer;
+    nav {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 1.6rem;
+    .hero h1 {
+        font-size: 1.65rem;
     }
 
-    nav a {
-        display: inline-block;
-        margin: 5px;
+    .form-grid,
+    .result-grid {
+        grid-template-columns: 1fr;
     }
 
-    main {
-        padding: 18px 14px;
+    .tool,
+    section {
+        padding: 20px;
     }
 
-    .calculator {
-        padding: 18px;
+    table {
+        font-size: 0.88rem;
+    }
+
+    th, td {
+        padding: 8px;
     }
 }
 </style>
@@ -244,479 +398,585 @@ footer a {
 <body>
 
 <header>
-    <h1>植物性饮食与自然环境</h1>
-    <p>正念生活 • 亲近自然 • 可持续发展</p>
+<div class="header-inner">
+
+    <div class="brand">
+        <a href="/zh/" class="logo">Yangocean</a>
+        <div class="tagline">
+            正念生活 • 自然 • 可持续发展
+        </div>
+    </div>
+
+    <nav aria-label="主导航">
+        <a href="/zh/">首页</a>
+        <a href="/zh/mindful-eating.html">正念饮食</a>
+        <a href="/zh/mindful-ethical-living.html">可持续生活</a>
+        <a href="/zh/nature-connection.html">亲近自然</a>
+        <a href="/zh/eco.html">环境意识</a>
+        <a href="/zh/blog.html">生活札记</a>
+
+        <div class="languages" aria-label="语言选择">
+            <a href="/tools/plant-based-eating-and-nature.html">EN</a>
+            <a href="/ms/tools/plant-based-eating-and-nature.html">BM</a>
+            <a href="/zh/tools/plant-based-eating-and-nature.html">中文</a>
+            <a href="/fr/">FR</a>
+            <a href="/es/">ES</a>
+            <a href="/my/">မြန်မာ</a>
+        </div>
+    </nav>
+
+</div>
 </header>
 
-<nav aria-label="主导航">
-    <a href="/zh/index.html">首页</a>
-    <a href="/zh/mindfulness.html">正念与佛法</a>
-    <a href="/zh/mindful-ethical-living.html">正念与伦理生活</a>
-    <a href="/zh/mindful-eating.html">正念饮食</a>
-    <a href="/zh/eco.html">环境意识</a>
-    <a href="/zh/blog.html">日志</a>
-</nav>
+<main id="content-to-read">
 
-<div class="language-switch" aria-label="语言选择">
-    <a href="/tools/carbon-calculator.html" lang="en">EN</a>
-    <a href="/ms/tools/carbon-calculator.html" lang="ms">BM</a>
-    <a href="/zh/tools/carbon-calculator.html" lang="zh-CN" aria-current="page">中文</a>
-    <a href="/fr/tools/carbon-calculator.html" lang="fr">FR</a>
-    <a href="/es/tools/carbon-calculator.html" lang="es">ES</a>
-    <a href="/my/tools/carbon-calculator.html" lang="my">မြန်မာ</a>
+<div class="hero">
+    <h1>🌱 植物性饮食与自然环境</h1>
+
+    <p>
+        我们的饮食选择不仅影响健康，也会影响自然环境。
+        食物生产与土地、水资源、生物多样性以及温室气体排放
+        都有密切关系。了解这些联系，可以帮助我们为自己
+        和自然环境作出更有意识的选择。
+    </p>
 </div>
-
-<main>
 
 <div class="read-aloud">
-    <button type="button" onclick="readArticle()">🔊 朗读</button>
-    <button type="button" onclick="stopReading()">⏹ 停止</button>
+    <button type="button" id="readButton">🔊 朗读</button>
+    <button type="button" id="pauseButton">⏸ 暂停</button>
+    <button type="button" id="stopButton">⏹ 停止</button>
 </div>
 
-<section class="intro">
-    <h2>多吃植物性食物能帮助保护自然环境吗？</h2>
+<section>
+    <h2>🌍 1. 饮食选择如何影响自然环境</h2>
 
     <p>
-        我们每天选择的食物可能影响环境。
-        食物生产需要土地、水、能源及其他资源。
-        不同食物在整个供应链中产生的温室气体排放量也有所不同。
+        食物生产需要使用土地、水和能源等自然资源。
+        不同食物对环境的影响各不相同，这取决于它们的
+        种植、养殖、加工、运输和消费方式。
     </p>
 
     <p>
-        科学研究普遍发现，蔬菜、豆类、豌豆和豆腐等植物性食物，
-        与许多肉类产品相比，通常具有较低的环境影响，
-        尤其是与牛肉和羊肉相比。
+        畜牧业可能通过动物消化过程、粪便管理、动物饲料生产
+        以及土地用途改变等途径，产生温室气体排放。
+        与许多动物性蛋白质相比，一些植物性食物通常需要
+        较少土地，并且每单位蛋白质所产生的排放量较低。
     </p>
 
     <p>
-        选择更多植物性餐食，并减少高环境影响肉类的摄取，
-        是保护自然环境的一种实际方式。
-        我们不必要求每一餐都做到完美。
-        持续进行小小的改变，也可以为更可持续的食物系统作出贡献。
+        不过，不同农业系统、地区和生产方式的环境影响
+        可能存在很大差异。因此，我们应该从整个食品生产过程
+        来理解其影响，而不是认为所有食品都具有相同的环境负担。
     </p>
 </section>
 
 <section>
-    <h2>1. 植物性饮食如何帮助环境？</h2>
-
-    <h3>🌍 减少温室气体排放</h3>
+    <h2>🌿 2. 不同蛋白质来源的环境影响比较</h2>
 
     <p>
-        畜牧业生产可能产生甲烷和氧化亚氮等温室气体。
-        牛和羊尤其与较高的排放有关，
-        原因包括消化过程、饲料生产及土地需求。
+        蛋白质是均衡饮食的重要组成部分。我们可以从牛肉、
+        羊肉、猪肉和禽肉等动物性食品中获取蛋白质，
+        也可以从豆类、扁豆、豌豆和豆腐等植物性食品中获取。
     </p>
 
     <p>
-        将部分肉类餐食替换为豆类、豌豆、扁豆或豆腐，
-        可能减少饮食相关的温室气体排放。
-        实际减排量取决于被替换的食物以及食物的生产方式。
+        以下数据为每100克蛋白质所对应的温室气体排放估算值，
+        参考 Poore 和 Nemecek 于2018年发表的研究，
+        并由 Our World in Data 展示。
     </p>
 
-    <h3>🌳 减少土地和森林的压力</h3>
-
-    <p>
-        肉类生产需要土地用于放牧动物和种植动物饲料。
-        在某些地区，农业扩张会导致森林砍伐和栖息地丧失。
-    </p>
-
-    <p>
-        增加植物性食物的摄取，可以减少与畜牧业相关的土地需求。
-        保护自然栖息地有助于支持野生动物、生物多样性
-        以及健康的生态系统。
-    </p>
-
-    <h3>💧 更有效地利用资源</h3>
-
-    <p>
-        食物生产需要水、能源和农业投入。
-        不同作物及农业系统的环境足迹存在显著差异。
-    </p>
-
-    <p>
-        许多植物性蛋白质食物通常比高环境影响肉类需要更少的资源。
-        不过，水资源使用量也取决于作物种类、气候
-        以及当地是否面临水资源短缺。
-    </p>
-
-    <h3>🐝 支持生物多样性</h3>
-
-    <p>
-        减少农业用地扩张的压力，有助于保护森林、草地
-        和其他自然栖息地。
-        这些栖息地为鸟类、昆虫、哺乳动物及其他生物
-        提供食物和庇护所。
-    </p>
-
-    <p>
-        可持续农业实践、减少农药使用以及保护自然生态系统也十分重要。
-        植物性饮食是保护生物多样性整体努力的一部分。
-    </p>
-</section>
-
-<section>
-    <h2>2. 部分食物的科学比较</h2>
-
-    <p>
-        以下估算数据基于 Poore 和 Nemecek（2018）相关食物环境影响数据集，
-        并参考 Our World in Data 所呈现的全球平均温室气体排放量。
-        数据单位为每 100 克蛋白质的排放量。
-    </p>
-
-    <p>
-        这里根据蛋白质含量进行比较，而不是比较相同重量的食物。
-        这样在考虑以其他食物替代蛋白质来源时，
-        可以进行更有意义的比较。
-    </p>
-
-    <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; background:#fff;">
+    <table>
         <thead>
-            <tr style="background:#e7efdf;">
-                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
-                    食物
-                </th>
-                <th style="padding:10px; border:1px solid #d5dfcf; text-align:left;">
-                    每 100 克蛋白质的估算 kg CO₂ 当量
-                </th>
+            <tr>
+                <th>蛋白质来源</th>
+                <th>估计排放量<br>（每100克蛋白质，kg CO₂e）</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">牛肉（肉牛）</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">49.89</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">羊肉</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">19.85</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">猪肉</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">7.61</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">禽肉（鸡肉）</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">5.70</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">豆腐</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">1.98</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">其他豆类（豆子、扁豆）</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">0.84</td>
-            </tr>
-            <tr>
-                <td style="padding:10px; border:1px solid #d5dfcf;">豌豆</td>
-                <td style="padding:10px; border:1px solid #d5dfcf;">0.44</td>
-            </tr>
+            <tr><td>牛肉（肉牛养殖）</td><td>49.89</td></tr>
+            <tr><td>羊肉</td><td>19.85</td></tr>
+            <tr><td>猪肉</td><td>7.61</td></tr>
+            <tr><td>禽肉</td><td>5.70</td></tr>
+            <tr><td>豆腐</td><td>1.98</td></tr>
+            <tr><td>其他豆类</td><td>0.84</td></tr>
+            <tr><td>豌豆</td><td>0.44</td></tr>
         </tbody>
     </table>
-    </div>
 
-    <p class="note">
-        重要提示：这些数值是全球平均值，并非每个农场或每一餐的精确环境足迹。
-        实际影响可能因农业实践、土地利用变化、加工、运输及其他因素而异。
-        CO₂ 当量包括不同温室气体所产生的全球变暖影响。
+    <p class="disclaimer">
+        这些数字是全球平均估算值，并不代表所有国家和地区
+        的每一种产品。实际排放量会因农业方式、加工、运输
+        及其他因素而有所不同。若用于正式研究或政策决策，
+        应进一步核对原始数据集及其计算方法。
     </p>
 </section>
 
-<section>
-    <h2>3. 植物性饮食与自然环境计算器</h2>
+<div class="tool">
+    <h2>🥗 蛋白质来源温室气体排放比较计算器</h2>
 
-    <p>
-        当您将部分肉类餐食替换为植物性蛋白质食物时，
-        可以使用此计算器估算潜在的温室气体减排量。
+    <p class="tool-intro">
+        使用相同的蛋白质量，比较不同蛋白质来源的估计温室气体排放量。
     </p>
 
-    <div class="calculator">
+    <form id="comparisonForm">
 
-        <label for="meatFood">
-            您想替换哪一种肉类？
-        </label>
+        <div class="form-grid">
 
-        <select id="meatFood">
-            <option value="49.89">牛肉</option>
-            <option value="19.85">羊肉</option>
-            <option value="7.61">猪肉</option>
-            <option value="5.70">禽肉（鸡肉）</option>
-        </select>
+            <div class="field">
+                <label for="animalProtein">动物性蛋白质来源</label>
+                <select id="animalProtein" required>
+                    <option value="49.89">牛肉</option>
+                    <option value="19.85">羊肉</option>
+                    <option value="7.61">猪肉</option>
+                    <option value="5.70">禽肉</option>
+                </select>
+                <small>
+                    选择要比较的动物性蛋白质来源。
+                </small>
+            </div>
 
-        <label for="plantFood">
-            您将选择哪一种植物性蛋白质？
-        </label>
+            <div class="field">
+                <label for="plantProtein">植物性蛋白质来源</label>
+                <select id="plantProtein" required>
+                    <option value="0.84">豆类和扁豆</option>
+                    <option value="0.44">豌豆</option>
+                    <option value="1.98">豆腐</option>
+                </select>
+                <small>
+                    选择一种植物性蛋白质作为替代选项。
+                </small>
+            </div>
 
-        <select id="plantFood">
-            <option value="0.84">豆类或扁豆</option>
-            <option value="0.44">豌豆</option>
-            <option value="1.98">豆腐</option>
-        </select>
+            <div class="field">
+                <label for="proteinAmount">每餐蛋白质含量（克）</label>
+                <input
+                    type="number"
+                    id="proteinAmount"
+                    min="1"
+                    max="300"
+                    step="1"
+                    value="20"
+                    required>
+                <small>
+                    输入蛋白质的重量，而不是整个食物的重量。
+                </small>
+            </div>
 
-        <label for="proteinAmount">
-            每餐比较的蛋白质含量（克）
-        </label>
+            <div class="field">
+                <label for="mealsPerWeek">每周食用次数</label>
+                <input
+                    type="number"
+                    id="mealsPerWeek"
+                    min="1"
+                    max="21"
+                    step="1"
+                    value="3"
+                    required>
+                <small>
+                    估算每周食用这种蛋白质的餐数。
+                </small>
+            </div>
 
-        <input type="number"
-               id="proteinAmount"
-               min="1"
-               max="300"
-               value="20">
-
-        <label for="mealsPerWeek">
-            每周您计划替换多少餐？
-        </label>
-
-        <input type="number"
-               id="mealsPerWeek"
-               min="1"
-               max="21"
-               value="3">
-
-        <button type="button" onclick="calculateImpact()">
-            计算我的潜在环境影响
-        </button>
-
-        <div id="result" class="result" aria-live="polite">
-            <h3>您的估算结果</h3>
-
-            <p>
-                肉类选择的估算排放量：
-            </p>
-
-            <div id="meatResult"></div>
-
-            <p>
-                植物性食物选择的估算排放量：
-            </p>
-
-            <div id="plantResult"></div>
-
-            <p>
-                每周潜在减少的排放量：
-            </p>
-
-            <div id="weeklyResult" class="result-number"></div>
-
-            <p>
-                每年潜在减少的排放量：
-            </p>
-
-            <div id="annualResult" class="result-number"></div>
-
-            <p id="message"></p>
         </div>
 
+        <button type="submit" class="calculate-btn">
+            比较估计排放量
+        </button>
+
+    </form>
+
+    <div class="result" id="result" aria-live="polite">
+
+        <h3>🌱 您的估计比较结果</h3>
+
+        <div class="result-number" id="weeklySaving">
+            0 kg CO₂e
+        </div>
+
+        <p>
+            如果以所选择的植物性蛋白质替代动物性蛋白质，
+            并保持蛋白质摄入量相同，每周估计可产生的排放差异。
+        </p>
+
+        <div class="result-grid">
+
+            <div class="result-item">
+                <strong id="animalResult">0</strong>
+                <span>动物性蛋白质<br>每周 kg CO₂e</span>
+            </div>
+
+            <div class="result-item">
+                <strong id="plantResult">0</strong>
+                <span>植物性蛋白质<br>每周 kg CO₂e</span>
+            </div>
+
+            <div class="result-item">
+                <strong id="annualResult">0</strong>
+                <span>估计年度排放差异<br>kg CO₂e</span>
+            </div>
+
+        </div>
+
+        <p class="result-message" id="resultMessage"></p>
+
     </div>
 
-    <p class="note">
-        计算方法：所选数值代表每 100 克蛋白质的 kg CO₂ 当量。
-        计算假设肉类和植物性蛋白质食物提供相同数量的蛋白质。
-        结果是简化估算，并非对实际餐食进行完整的生命周期评估。
+    <p class="disclaimer">
+        本计算器使用平均排放系数进行简化比较，并假设两种选择
+        提供相同数量的蛋白质。它不代表一个人完整的饮食碳足迹，
+        也没有考虑个人的营养需求。
+    </p>
+</div>
+
+<section>
+    <h2>🌳 3. 食品生产、土地与生物多样性</h2>
+
+    <p>
+        农业需要土地来种植农作物、饲养牲畜以及生产动物饲料。
+        土地用途的改变可能影响森林、草原、湿地以及野生动物的栖息地。
+    </p>
+
+    <p>
+        减少土地使用压力有助于保护自然栖息地。
+        豆类、扁豆和豌豆等植物性食物可以提供蛋白质，
+        而且与许多动物性蛋白质来源相比，通常需要较少的土地。
+    </p>
+
+    <p>
+        可持续食品生产还包括保护土壤、维护生态系统健康、
+        负责任地使用水资源以及减少食物浪费。
     </p>
 </section>
 
 <section>
-    <h2>4. 更可持续饮食的简单方法</h2>
+    <h2>💧 4. 水资源与食品生产</h2>
+
+    <p>
+        食品生产的不同阶段都需要水。农作物需要水才能生长，
+        动物需要饮水，而食品加工过程同样会消耗水资源。
+    </p>
+
+    <p>
+        食物的水足迹取决于它的生产地点和生产方式。
+        降雨量、灌溉方法、气候以及农业实践都会产生影响。
+        因此，我们不能假设所有植物性食品在任何情况下
+        都一定具有较低的水足迹。
+    </p>
+
+    <p>
+        在条件允许时选择当季食材、避免不必要的食物浪费，
+        并支持负责任的农业生产方式，都有助于更合理地利用资源。
+    </p>
+</section>
+
+<section>
+    <h2>🥬 5. 将植物性食物融入日常饮食</h2>
+
+    <p>
+        我们可以从许多常见食物中获取植物性蛋白质，例如：
+    </p>
 
     <ul>
-        <li>每周尝试一餐或多餐不含肉类的食物。</li>
-        <li>将豆类、扁豆、豌豆或豆腐作为蛋白质来源。</li>
-        <li>在餐食中加入多种蔬菜。</li>
-        <li>在实际可行时选择当季农产品。</li>
-        <li>通过规划餐食和利用剩余食物来减少食物浪费。</li>
-        <li>正确储存食物，让食物保持新鲜更长时间。</li>
-        <li>支持采用负责任及可持续农业实践的农民。</li>
-        <li>享用符合自身营养需求的均衡饮食。</li>
+        <li>各种豆类、鹰嘴豆和扁豆</li>
+        <li>青豆和其他豆科植物</li>
+        <li>豆腐和天贝（发酵大豆食品）</li>
+        <li>大豆及其他大豆制品</li>
+        <li>坚果和种子</li>
+        <li>全谷物，它们也能提供部分蛋白质</li>
     </ul>
 
     <p>
-        植物性餐食不必复杂。
-        米饭搭配蔬菜和扁豆、豆腐配绿叶蔬菜，
-        或豆类汤品，都可以是简单又有营养的选择。
+        在马来西亚，扁豆咖喱、豆腐、天贝、鹰嘴豆以及各种豆类，
+        都可以融入日常饮食。蔬菜、水果和全谷物也能提供膳食纤维
+        及多种营养素。
+    </p>
+
+    <p>
+        均衡饮食应提供足够的能量、蛋白质、维生素和矿物质。
+        如果有特殊营养需求，在大幅改变饮食之前，
+        建议咨询合格的医疗专业人员或注册营养师。
     </p>
 </section>
 
 <section>
-    <h2>5. 为地球作出正念选择</h2>
+    <h2>🌏 6. 从日常饮食选择开始支持环境保护</h2>
 
     <p>
-        正念饮食邀请我们关注的不仅是盘中的食物，
-        也包括与这些食物相关的资源和生命系统。
+        保护自然环境不一定需要巨大的改变。
+        我们可以从关注每天吃什么、购买多少食物，
+        以及浪费了多少食物开始。
     </p>
-
-    <p>
-        选择更多植物性餐食，可以成为减少环境足迹的重要一步。
-        这也能帮助我们更加感恩土壤、水、植物、农民
-        以及让食物得以生产的生态系统。
-    </p>
-
-    <p>
-        我们不需要根据饮食选择来评判自己或他人。
-        相反，我们可以持续学习、作出有依据的决定，
-        并逐渐建立有益于自身健康和自然环境的习惯。
-    </p>
-
-    <p>
-        <strong>
-            每一顿正念饮食，都是关爱自己和地球的机会。
-        </strong>
-    </p>
-</section>
-
-<section>
-    <h2>科学参考资料与延伸阅读</h2>
 
     <ul>
+        <li>在日常餐食中加入多种蔬菜、水果和豆类。</li>
+        <li>尝试符合自身需求的植物性蛋白质选择。</li>
+        <li>规划餐食，减少不必要的食物浪费。</li>
+        <li>妥善储存食物，让食物保持新鲜更长时间。</li>
+        <li>在条件允许时支持负责任的食品生产者。</li>
+        <li>珍惜食物、土壤、水资源与自然环境之间的联系。</li>
+    </ul>
+
+    <p>
+        每个家庭的生活条件和需求都不相同。
+        目标并不是追求完美，而是逐渐提高意识，
+        并长期坚持更有责任感的生活选择。
+    </p>
+</section>
+
+<section>
+    <h2>❓ 常见问题</h2>
+
+    <h3>植物性食品是否一定对环境更有利？</h3>
+    <p>
+        并非在所有情况下都如此。环境影响取决于食物种类、
+        种植或生产方式、加工、运输及其他因素。
+        许多常见植物性蛋白质来源的平均温室气体排放量，
+        通常低于许多动物性蛋白质来源。
+    </p>
+
+    <h3>豆类和扁豆是良好的蛋白质来源吗？</h3>
+    <p>
+        是的。豆类、扁豆、鹰嘴豆和其他豆科植物都能提供
+        植物性蛋白质和膳食纤维，可以纳入多样化及均衡的饮食中。
+    </p>
+
+    <h3>豆腐是否环保？</h3>
+    <p>
+        与许多动物性蛋白质来源相比，豆腐通常具有较低的
+        平均温室气体排放量。不过，其整体环境影响仍取决于
+        大豆生产、加工、能源使用及其他因素。
+    </p>
+
+    <h3>这个计算器能测量我的完整碳足迹吗？</h3>
+    <p>
+        不能。这个计算器只比较所选蛋白质量所对应的估计排放量。
+        它不包括完整饮食、家庭能源使用、交通或其他生活活动。
+    </p>
+
+    <h3>我是否必须完全停止食用所有动物性食品？</h3>
+    <p>
+        本文旨在提供环境方面的资讯，而不是为所有人规定
+        一种饮食方式。每个人都可以了解不同的饮食选择，
+        再根据自己的健康、生活条件和个人价值观作出决定。
+    </p>
+</section>
+
+<section>
+    <h2>📚 参考资料与延伸阅读</h2>
+
+    <p>
+        以下科学研究和教育资源提供了有关食品生产
+        及其环境影响的更多资讯。
+    </p>
+
+    <ol class="reference-list">
         <li>
-            Poore, J. &amp; Nemecek, T. (2018).
-            Reducing food’s environmental impacts through producers
-            and consumers. <em>Science</em>, 360(6392), 987–992.
+            Poore, J. 和 Nemecek, T.（2018）。
+            通过生产者和消费者减少食品对环境的影响。
+            <em>Science</em>。
             <a href="https://doi.org/10.1126/science.aaq0216"
                target="_blank" rel="noopener noreferrer">
-               阅读研究论文
-            </a>
+                阅读研究论文
+            </a>。
         </li>
 
         <li>
-            Our World in Data：
-            Environmental Impacts of Food Production.
+            Our World in Data。
+            食品对环境的影响。
             <a href="https://ourworldindata.org/environmental-impacts-of-food"
                target="_blank" rel="noopener noreferrer">
-               探索数据与说明
-            </a>
+                查看数据与说明
+            </a>。
         </li>
 
         <li>
-            Our World in Data：
-            Land Use and Diets.
+            Our World in Data。
+            土地使用与饮食。
             <a href="https://ourworldindata.org/land-use-diets"
                target="_blank" rel="noopener noreferrer">
-               了解食物与农业土地利用
-            </a>
+                了解食品与土地使用的关系
+            </a>。
         </li>
-    </ul>
+    </ol>
 </section>
+
+<div class="note">
+    <h2>🌱 一点生活感悟</h2>
+
+    <p>
+        食物将我们与土地、水、植物、动物以及支持我们生活的人们
+        紧密联系在一起。了解饮食选择对环境的影响，
+        能帮助我们以更清醒的态度作出决定，并更加珍惜大自然。
+    </p>
+
+    <p>
+        日常生活中每一个小小而有意识的行动，
+        都可以成为建立更可持续自然关系的一部分。
+    </p>
+</div>
 
 </main>
 
 <footer>
-    <p>
-        Yangocean – 正念生活 • 亲近自然 • 可持续发展
-    </p>
-
-    <p>
-        <a href="/zh/index.html">首页</a> |
-        <a href="/zh/mindful-eating.html">正念饮食</a> |
-        <a href="/zh/eco.html">环境意识</a> |
+    <div>
+        <a href="/zh/">首页</a>
+        <a href="/zh/mindful-eating.html">正念饮食</a>
+        <a href="/zh/mindful-ethical-living.html">可持续生活</a>
+        <a href="/zh/nature-connection.html">亲近自然</a>
+        <a href="/zh/eco.html">环境意识</a>
         <a href="/zh/contact.html">联系我们</a>
-    </p>
+    </div>
 
     <p>
-        本页面信息仅供教育用途。环境估算数据为近似值，
-        并不代表某一具体餐食的精确环境影响。
+        &copy; 2026 Yangocean • 正念生活 • 自然 • 可持续发展
     </p>
 </footer>
 
 <script>
-function calculateImpact() {
-    const meatFactor = parseFloat(
-        document.getElementById("meatFood").value
+const comparisonForm = document.getElementById("comparisonForm");
+const result = document.getElementById("result");
+
+comparisonForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const animalFactor = Number(
+        document.getElementById("animalProtein").value
     );
 
-    const plantFactor = parseFloat(
-        document.getElementById("plantFood").value
+    const plantFactor = Number(
+        document.getElementById("plantProtein").value
     );
 
-    const proteinGrams = parseFloat(
+    const proteinAmount = Number(
         document.getElementById("proteinAmount").value
     );
 
-    const mealsPerWeek = parseFloat(
+    const mealsPerWeek = Number(
         document.getElementById("mealsPerWeek").value
     );
 
-    if (
-        !Number.isFinite(proteinGrams) ||
-        !Number.isFinite(mealsPerWeek) ||
-        proteinGrams <= 0 ||
-        proteinGrams > 300 ||
-        mealsPerWeek <= 0 ||
-        mealsPerWeek > 21
-    ) {
-        alert("请输入有效的蛋白质含量和每周餐数。");
+    const valid =
+        Number.isFinite(animalFactor) &&
+        Number.isFinite(plantFactor) &&
+        Number.isFinite(proteinAmount) &&
+        Number.isFinite(mealsPerWeek) &&
+        proteinAmount >= 1 &&
+        proteinAmount <= 300 &&
+        mealsPerWeek >= 1 &&
+        mealsPerWeek <= 21 &&
+        Number.isInteger(mealsPerWeek);
+
+    if (!valid) {
+        result.style.display = "block";
+        document.getElementById("weeklySaving").textContent =
+            "请输入有效数值。";
+        document.getElementById("resultMessage").textContent =
+            "蛋白质含量必须介于1至300克之间。每周餐数必须介于1至21餐之间。";
         return;
     }
 
-    const meatEmissionsPerMeal =
-        (meatFactor * proteinGrams) / 100;
+    // 排放系数以每100克蛋白质为单位。
+    const animalPerMeal =
+        (animalFactor * proteinAmount) / 100;
 
-    const plantEmissionsPerMeal =
-        (plantFactor * proteinGrams) / 100;
+    const plantPerMeal =
+        (plantFactor * proteinAmount) / 100;
 
-    const reductionPerMeal =
-        meatEmissionsPerMeal - plantEmissionsPerMeal;
+    const animalWeekly =
+        animalPerMeal * mealsPerWeek;
 
-    const weeklyReduction =
-        reductionPerMeal * mealsPerWeek;
+    const plantWeekly =
+        plantPerMeal * mealsPerWeek;
 
-    const annualReduction =
-        weeklyReduction * 52;
+    const weeklyDifference =
+        animalWeekly - plantWeekly;
 
-    document.getElementById("meatResult").textContent =
-        meatEmissionsPerMeal.toFixed(3) +
-        " kg CO₂ 当量 / 每餐";
+    const annualDifference =
+        weeklyDifference * 52;
+
+    document.getElementById("animalResult").textContent =
+        animalWeekly.toFixed(2);
 
     document.getElementById("plantResult").textContent =
-        plantEmissionsPerMeal.toFixed(3) +
-        " kg CO₂ 当量 / 每餐";
-
-    document.getElementById("weeklyResult").textContent =
-        Math.max(0, weeklyReduction).toFixed(3) +
-        " kg CO₂ 当量";
+        plantWeekly.toFixed(2);
 
     document.getElementById("annualResult").textContent =
-        Math.max(0, annualReduction).toFixed(2) +
-        " kg CO₂ 当量";
+        annualDifference.toFixed(2);
 
-    document.getElementById("message").textContent =
-        "如果您持续进行这样的食物替换，可能减少与这些餐食相关的温室气体排放。" +
-        "这是根据平均食物生产数据得出的估算结果。";
+    document.getElementById("weeklySaving").textContent =
+        Math.abs(weeklyDifference).toFixed(2) + " kg CO₂e";
 
-    document.getElementById("result").style.display = "block";
+    let message;
+
+    if (weeklyDifference > 0) {
+        message =
+            "在这个简化比较中，所选的植物性蛋白质具有较低的估计排放量。这只是估算结果，并不保证每种产品或每个地区都能达到相同的减排效果。";
+    } else if (weeklyDifference < 0) {
+        message =
+            "根据所选排放系数，植物性选择在这次比较中的估计排放量较高。实际环境影响会因产品和生产方式而异。";
+    } else {
+        message =
+            "根据所使用的排放系数，两种选择的估计排放量相同。";
+    }
+
+    document.getElementById("resultMessage").textContent = message;
+
+    result.style.display = "block";
+});
+
+
+/* 语音朗读 */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+function getReadingText() {
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join("。");
 }
 
-function readArticle() {
+readButton.addEventListener("click", function() {
     if (!("speechSynthesis" in window)) {
-        alert("此浏览器不支持朗读功能。");
+        alert("您的浏览器不支持语音朗读功能。");
         return;
     }
 
-    window.speechSynthesis.cancel();
+    speechSynthesis.cancel();
 
-    const article = document.querySelector("main").cloneNode(true);
+    const utterance = new SpeechSynthesisUtterance(
+        getReadingText()
+    );
 
-    article.querySelectorAll(".read-aloud").forEach(function(element) {
-        element.remove();
-    });
+    utterance.lang = "zh-CN";
+    utterance.rate = 0.95;
 
-    article.querySelectorAll("button").forEach(function(element) {
-        element.remove();
-    });
+    speechSynthesis.speak(utterance);
+});
 
-    const text = article.innerText;
-
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "zh-CN";
-    speech.rate = 0.95;
-
-    window.speechSynthesis.speak(speech);
-}
-
-function stopReading() {
+pauseButton.addEventListener("click", function() {
     if ("speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
+        speechSynthesis.pause();
     }
-}
+});
+
+stopButton.addEventListener("click", function() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+    }
+});
+
+window.addEventListener("beforeunload", function() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+    }
+});
 </script>
 
 </body>
