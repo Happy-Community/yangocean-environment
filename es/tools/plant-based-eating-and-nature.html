@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Alimentación vegetal y naturaleza | Yangocean</title>
+
+<meta name="description"
+content="Descubre cómo la alimentación vegetal influye en el medio ambiente. Compara las emisiones estimadas de distintas fuentes de proteínas con nuestra calculadora interactiva.">
+
+<meta name="robots" content="index, follow">
+
+<link rel="canonical"
+href="https://yangocean.com/es/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="es"
+href="https://yangocean.com/es/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="en"
+href="https://yangocean.com/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="ms"
+href="https://yangocean.com/ms/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="zh-CN"
+href="https://yangocean.com/zh/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="fr"
+href="https://yangocean.com/fr/tools/plant-based-eating-and-nature.html">
+
+<link rel="alternate" hreflang="x-default"
+href="https://yangocean.com/tools/plant-based-eating-and-nature.html">
+
+<meta property="og:type" content="article">
+<meta property="og:title"
+content="Alimentación vegetal y naturaleza | Yangocean">
+<meta property="og:description"
+content="Explora la relación entre nuestras decisiones alimentarias y el medio ambiente con una calculadora interactiva.">
+<meta property="og:url"
+content="https://yangocean.com/es/tools/plant-based-eating-and-nature.html">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title"
+content="Alimentación vegetal y naturaleza | Yangocean">
+<meta name="twitter:description"
+content="Descubre cómo nuestras decisiones alimentarias pueden influir en el medio ambiente.">
+
+<!-- Google AdSense -->
+<script async
+src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
+crossorigin="anonymous"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f9f6;
+    color: #26332a;
+    line-height: 1.85;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8e1;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.brand {
+    min-width: 180px;
+}
+
+.logo {
+    color: #2f6b3f;
+    font-size: 1.45rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    color: #68756c;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #334238;
+    text-decoration: none;
+    font-size: 0.92rem;
+}
+
+nav a:hover {
+    color: #2f6b3f;
+    text-decoration: underline;
+}
+
+.languages {
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.languages a {
+    font-size: 0.78rem;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+.hero {
+    text-align: center;
+    padding: 35px 15px 25px;
+}
+
+.hero h1 {
+    color: #2f6b3f;
+    font-size: 2rem;
+    line-height: 1.4;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #5f6d63;
+}
+
+.read-aloud {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 15px auto 30px;
+}
+
+.read-aloud button {
+    padding: 9px 15px;
+    border: 1px solid #cbd6cc;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #334238;
+    cursor: pointer;
+}
+
+.read-aloud button:hover {
+    background: #eef5ec;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+section h2 {
+    color: #2f6b3f;
+    margin-top: 0;
+}
+
+section h3 {
+    color: #385c40;
+}
+
+.tool {
+    max-width: 800px;
+    margin: 25px auto 35px;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+}
+
+.tool h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #2f6b3f;
+}
+
+.tool-intro {
+    text-align: center;
+    color: #68756c;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.field select,
+.field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd6cc;
+    border-radius: 8px;
+    background: #ffffff;
+    font-size: 1rem;
+}
+
+.field small {
+    margin-top: 5px;
+    color: #68756c;
+    font-size: 0.82rem;
+}
+
+.calculate-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #2f6b3f;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculate-btn:hover {
+    background: #255732;
+}
+
+.result {
+    display: none;
+    margin-top: 25px;
+    padding: 22px;
+    border: 1px solid #d6e4d3;
+    border-radius: 10px;
+    background: #eef5ec;
+}
+
+.result h3 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.result-number {
+    margin: 12px 0;
+    color: #2f6b3f;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.result-item {
+    padding: 15px;
+    border-radius: 8px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.result-item strong {
+    display: block;
+    color: #2f6b3f;
+    font-size: 1.25rem;
+}
+
+.result-message {
+    margin-top: 18px;
+}
+
+.disclaimer {
+    color: #59675d;
+    font-size: 0.9rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #ffffff;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #dce5dc;
+    text-align: left;
+}
+
+th {
+    background: #eef5ec;
+    color: #2f6b3f;
+}
+
+.note {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: #eef2ed;
+    border-radius: 10px;
+}
+
+.note h2 {
+    margin-top: 0;
+    color: #2f6b3f;
+}
+
+.reference-list li {
+    margin-bottom: 12px;
+    overflow-wrap: anywhere;
+}
+
+a {
+    color: #356b43;
+}
+
+footer {
+    background: #eef2ed;
+    padding: 25px 20px;
+    color: #637066;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer a {
+    margin: 0 6px;
+    color: #4c6653;
+    text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.65rem;
+    }
+
+    .form-grid,
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool,
+    section {
+        padding: 20px;
+    }
+
+    table {
+        font-size: 0.88rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+    <div class="brand">
+        <a href="/es/" class="logo">Yangocean</a>
+        <div class="tagline">
+            Vida consciente • Naturaleza • Sostenibilidad
+        </div>
+    </div>
+
+    <nav aria-label="Navegación principal">
+        <a href="/es/">Inicio</a>
+        <a href="/es/mindful-eating.html">Alimentación consciente</a>
+        <a href="/es/mindful-ethical-living.html">Vida sostenible</a>
+        <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
+        <a href="/es/eco.html">Educación ambiental</a>
+        <a href="/es/blog.html">Diario</a>
+
+        <div class="languages" aria-label="Seleccionar idioma">
+            <a href="/tools/plant-based-eating-and-nature.html">EN</a>
+            <a href="/ms/tools/plant-based-eating-and-nature.html">BM</a>
+            <a href="/zh/tools/plant-based-eating-and-nature.html">中文</a>
+            <a href="/fr/tools/plant-based-eating-and-nature.html">FR</a>
+            <a href="/es/tools/plant-based-eating-and-nature.html">ES</a>
+            <a href="/my/">မြန်မာ</a>
+        </div>
+    </nav>
+
+</div>
+</header>
+
+<main id="content-to-read">
+
+<div class="hero">
+    <h1>🌱 Alimentación vegetal y naturaleza</h1>
+
+    <p>
+        Nuestras decisiones alimentarias influyen no solo en nuestra salud,
+        sino también en el medio ambiente. La producción de alimentos
+        está relacionada con el uso de la tierra, el agua y los recursos
+        naturales, la biodiversidad y las emisiones de gases de efecto
+        invernadero. Comprender estas conexiones puede ayudarnos
+        a tomar decisiones más conscientes para nosotros y para la naturaleza.
+    </p>
+</div>
+
+<div class="read-aloud">
+    <button type="button" id="readButton">🔊 Leer en voz alta</button>
+    <button type="button" id="pauseButton">⏸ Pausar</button>
+    <button type="button" id="stopButton">⏹ Detener</button>
+</div>
+
+<section>
+    <h2>🌍 1. ¿Cómo influyen nuestras decisiones alimentarias en el medio ambiente?</h2>
+
+    <p>
+        La producción de alimentos requiere recursos naturales como
+        la tierra, el agua y la energía. Sus efectos sobre el medio ambiente
+        varían según el tipo de alimento y dependen de cómo se cultiva
+        o cría, cómo se procesa, cómo se transporta y cómo se consume.
+    </p>
+
+    <p>
+        La ganadería puede generar gases de efecto invernadero
+        mediante la digestión de los animales, la gestión del estiércol,
+        la producción de piensos y los cambios en el uso del suelo.
+        Muchos alimentos de origen vegetal suelen tener emisiones
+        más bajas por unidad de proteína que diversas fuentes
+        de proteínas animales.
+    </p>
+
+    <p>
+        Sin embargo, los impactos ambientales pueden variar
+        considerablemente según la región y los métodos de producción.
+        Por eso es importante considerar todo el ciclo de vida
+        de los alimentos, en lugar de suponer que todos los productos
+        tienen el mismo impacto.
+    </p>
+</section>
+
+<section>
+    <h2>🌿 2. Comparación de distintas fuentes de proteínas</h2>
+
+    <p>
+        Las proteínas son una parte importante de una alimentación
+        equilibrada. Pueden proceder de alimentos de origen animal,
+        como la carne de vacuno, el cordero, el cerdo y las aves,
+        así como de alimentos vegetales, como las legumbres,
+        los guisantes, las lentejas y el tofu.
+    </p>
+
+    <p>
+        La siguiente tabla presenta estimaciones de las emisiones
+        de gases de efecto invernadero por cada 100 gramos de proteína.
+        Las cifras proceden del estudio de Poore y Nemecek (2018),
+        presentado por Our World in Data.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fuente de proteínas</th>
+                <th>Emisiones estimadas<br>(kg CO₂e por 100 g de proteína)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Carne de vacuno</td><td>49,89</td></tr>
+            <tr><td>Cordero y oveja</td><td>19,85</td></tr>
+            <tr><td>Carne de cerdo</td><td>7,61</td></tr>
+            <tr><td>Carne de aves</td><td>5,70</td></tr>
+            <tr><td>Tofu</td><td>1,98</td></tr>
+            <tr><td>Otras legumbres</td><td>0,84</td></tr>
+            <tr><td>Guisantes</td><td>0,44</td></tr>
+        </tbody>
+    </table>
+
+    <p class="disclaimer">
+        Estas cifras son estimaciones de promedios mundiales.
+        No representan necesariamente todos los productos o regiones.
+        Las emisiones reales varían según las prácticas agrícolas,
+        el procesamiento, el transporte y otros factores.
+        Para usos científicos o decisiones de política pública,
+        deben consultarse los datos originales y su metodología.
+    </p>
+</section>
+
+<div class="tool">
+    <h2>🥗 Calculadora comparativa de emisiones de proteínas</h2>
+
+    <p class="tool-intro">
+        Compara las emisiones estimadas de diferentes fuentes
+        de proteínas utilizando la misma cantidad de proteína.
+    </p>
+
+    <form id="comparisonForm">
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="animalProtein">Fuente de proteína animal</label>
+                <select id="animalProtein" required>
+                    <option value="49.89">Carne de vacuno</option>
+                    <option value="19.85">Cordero</option>
+                    <option value="7.61">Carne de cerdo</option>
+                    <option value="5.70">Carne de aves</option>
+                </select>
+                <small>
+                    Selecciona la fuente de proteína animal que deseas comparar.
+                </small>
+            </div>
+
+            <div class="field">
+                <label for="plantProtein">Fuente de proteína vegetal</label>
+                <select id="plantProtein" required>
+                    <option value="0.84">Frijoles y lentejas</option>
+                    <option value="0.44">Guisantes</option>
+                    <option value="1.98">Tofu</option>
+                </select>
+                <small>
+                    Selecciona una fuente vegetal como alternativa.
+                </small>
+            </div>
+
+            <div class="field">
+                <label for="proteinAmount">Proteína por comida (gramos)</label>
+                <input
+                    type="number"
+                    id="proteinAmount"
+                    min="1"
+                    max="300"
+                    step="1"
+                    value="20"
+                    required>
+                <small>
+                    Introduce el peso de la proteína, no el peso total del alimento.
+                </small>
+            </div>
+
+            <div class="field">
+                <label for="mealsPerWeek">Número de comidas por semana</label>
+                <input
+                    type="number"
+                    id="mealsPerWeek"
+                    min="1"
+                    max="21"
+                    step="1"
+                    value="3"
+                    required>
+                <small>
+                    Estima cuántas comidas por semana contienen esta fuente de proteína.
+                </small>
+            </div>
+
+        </div>
+
+        <button type="submit" class="calculate-btn">
+            Comparar las emisiones estimadas
+        </button>
+
+    </form>
+
+    <div class="result" id="result" aria-live="polite">
+
+        <h3>🌱 Resultados estimados de la comparación</h3>
+
+        <div class="result-number" id="weeklySaving">
+            0 kg CO₂e
+        </div>
+
+        <p>
+            Diferencia estimada de emisiones semanales si sustituyes
+            la fuente de proteína animal seleccionada por la fuente
+            vegetal, manteniendo la misma cantidad de proteína.
+        </p>
+
+        <div class="result-grid">
+
+            <div class="result-item">
+                <strong id="animalResult">0</strong>
+                <span>Proteína animal<br>kg CO₂e por semana</span>
+            </div>
+
+            <div class="result-item">
+                <strong id="plantResult">0</strong>
+                <span>Proteína vegetal<br>kg CO₂e por semana</span>
+            </div>
+
+            <div class="result-item">
+                <strong id="annualResult">0</strong>
+                <span>Diferencia anual estimada<br>kg CO₂e</span>
+            </div>
+
+        </div>
+
+        <p class="result-message" id="resultMessage"></p>
+
+    </div>
+
+    <p class="disclaimer">
+        Esta calculadora utiliza factores de emisión promedio para
+        una comparación simplificada. Supone que ambas opciones
+        proporcionan la misma cantidad de proteína.
+        No representa la huella de carbono completa de una persona
+        ni sus necesidades nutricionales individuales.
+    </p>
+</div>
+
+<section>
+    <h2>🌳 3. Producción de alimentos, tierra y biodiversidad</h2>
+
+    <p>
+        La agricultura utiliza terrenos para cultivar plantas,
+        criar animales y producir alimentos para el ganado.
+        Los cambios en el uso del suelo pueden afectar a los bosques,
+        las praderas, los humedales y los hábitats de la fauna silvestre.
+    </p>
+
+    <p>
+        Reducir la presión sobre la tierra puede contribuir
+        a proteger los hábitats naturales. Los frijoles,
+        las lentejas y los guisantes proporcionan proteínas vegetales
+        y, por lo general, requieren menos tierra que diversas
+        fuentes de proteínas animales.
+    </p>
+
+    <p>
+        La producción sostenible de alimentos también incluye
+        la protección del suelo, la conservación de los ecosistemas,
+        el uso responsable del agua y la reducción del desperdicio
+        de alimentos.
+    </p>
+</section>
+
+<section>
+    <h2>💧 4. Recursos hídricos y producción de alimentos</h2>
+
+    <p>
+        El agua es necesaria en diferentes etapas de la producción
+        de alimentos. Los cultivos necesitan agua para crecer,
+        los animales necesitan agua potable y el procesamiento
+        de los alimentos también consume agua.
+    </p>
+
+    <p>
+        La huella hídrica de un alimento depende del lugar
+        y de la forma en que se produce. Las precipitaciones,
+        los métodos de riego, el clima y las prácticas agrícolas
+        influyen en el resultado. Por tanto, no debe suponerse
+        que todos los alimentos vegetales tienen siempre una huella
+        hídrica menor en cualquier circunstancia.
+    </p>
+
+    <p>
+        Elegir alimentos de temporada cuando sea posible,
+        evitar el desperdicio y apoyar prácticas agrícolas
+        responsables son formas de utilizar los recursos
+        de manera más consciente.
+    </p>
+</section>
+
+<section>
+    <h2>🥬 5. Incorporar alimentos vegetales a nuestra alimentación diaria</h2>
+
+    <p>
+        Muchos alimentos habituales pueden aportar proteínas vegetales,
+        entre ellos:
+    </p>
+
+    <ul>
+        <li>Diferentes tipos de frijoles, garbanzos y lentejas.</li>
+        <li>Guisantes y otras legumbres.</li>
+        <li>Tofu y tempeh (soja fermentada).</li>
+        <li>Soja y otros productos derivados de la soja.</li>
+        <li>Frutos secos y semillas.</li>
+        <li>Cereales integrales, que también aportan proteínas.</li>
+    </ul>
+
+    <p>
+        En Malasia, los curris de lentejas, el tofu, el tempeh,
+        los garbanzos y diferentes tipos de frijoles pueden incorporarse
+        fácilmente a las comidas cotidianas. Las verduras, las frutas
+        y los cereales integrales también aportan fibra y diversos nutrientes.
+    </p>
+
+    <p>
+        Una alimentación equilibrada debe proporcionar suficiente energía,
+        proteínas, vitaminas y minerales. Si tienes necesidades
+        nutricionales especiales, consulta con un profesional sanitario
+        cualificado o un dietista acreditado antes de realizar cambios
+        importantes en tu alimentación.
+    </p>
+</section>
+
+<section>
+    <h2>🌏 6. Proteger el medio ambiente mediante nuestras decisiones alimentarias</h2>
+
+    <p>
+        Proteger la naturaleza no siempre requiere grandes cambios.
+        Podemos empezar reflexionando sobre lo que comemos cada día,
+        la cantidad de alimentos que compramos y lo que desperdiciamos.
+    </p>
+
+    <ul>
+        <li>Añadir una variedad de verduras, frutas y legumbres a las comidas.</li>
+        <li>Probar fuentes de proteínas vegetales adecuadas a nuestras necesidades.</li>
+        <li>Planificar las comidas para reducir el desperdicio alimentario.</li>
+        <li>Conservar correctamente los alimentos para mantener su frescura.</li>
+        <li>Apoyar, cuando sea posible, a productores responsables.</li>
+        <li>Respetar la conexión entre los alimentos, el suelo, el agua y la naturaleza.</li>
+    </ul>
+
+    <p>
+        Las condiciones de vida y las necesidades de cada hogar son diferentes.
+        El objetivo no es alcanzar la perfección, sino desarrollar
+        una mayor comprensión y adoptar hábitos más responsables
+        de forma gradual y sostenible.
+    </p>
+</section>
+
+<section>
+    <h2>❓ Preguntas frecuentes</h2>
+
+    <h3>¿Los alimentos vegetales son siempre mejores para el medio ambiente?</h3>
+    <p>
+        No necesariamente en todas las situaciones. Los efectos
+        ambientales dependen del tipo de alimento, su producción,
+        procesamiento, transporte y otros factores.
+        Muchas fuentes habituales de proteínas vegetales suelen
+        tener emisiones promedio de gases de efecto invernadero
+        más bajas que varias fuentes de proteínas animales.
+    </p>
+
+    <h3>¿Son los frijoles y las lentejas buenas fuentes de proteínas?</h3>
+    <p>
+        Sí. Los frijoles, las lentejas, los garbanzos y otras legumbres
+        proporcionan proteínas vegetales y fibra. Pueden formar parte
+        de una alimentación variada y equilibrada.
+    </p>
+
+    <h3>¿Es el tofu una opción respetuosa con el medio ambiente?</h3>
+    <p>
+        El tofu suele tener emisiones promedio de gases de efecto
+        invernadero más bajas que varias fuentes de proteínas animales.
+        Sin embargo, su impacto ambiental también depende
+        de la producción de soja, el procesamiento, la energía utilizada
+        y otros factores.
+    </p>
+
+    <h3>¿Esta calculadora mide toda mi huella de carbono?</h3>
+    <p>
+        No. Solo compara las emisiones estimadas asociadas
+        a la cantidad de proteína seleccionada. No incluye
+        toda la alimentación, el consumo de energía del hogar,
+        el transporte ni otras actividades cotidianas.
+    </p>
+
+    <h3>¿Tengo que dejar de consumir completamente alimentos de origen animal?</h3>
+    <p>
+        Este artículo ofrece información sobre los efectos
+        ambientales de las decisiones alimentarias; no recomienda
+        una única dieta para todo el mundo. Cada persona puede
+        explorar distintas opciones y tomar decisiones teniendo
+        en cuenta su salud, sus circunstancias y sus valores personales.
+    </p>
+</section>
+
+<section>
+    <h2>📚 Referencias y lecturas adicionales</h2>
+
+    <p>
+        Las siguientes investigaciones científicas y fuentes educativas
+        permiten conocer mejor la producción de alimentos
+        y sus efectos sobre el medio ambiente.
+    </p>
+
+    <ol class="reference-list">
+        <li>
+            Poore, J. y Nemecek, T. (2018).
+            Reducir los impactos ambientales de los alimentos
+            mediante productores y consumidores.
+            <em>Science</em>.
+            <a href="https://doi.org/10.1126/science.aaq0216"
+               target="_blank" rel="noopener noreferrer">
+                Leer el estudio científico
+            </a>.
+        </li>
+
+        <li>
+            Our World in Data.
+            Impactos ambientales de los alimentos.
+            <a href="https://ourworldindata.org/environmental-impacts-of-food"
+               target="_blank" rel="noopener noreferrer">
+                Consultar datos y explicaciones
+            </a>.
+        </li>
+
+        <li>
+            Our World in Data.
+            Uso de la tierra y dietas.
+            <a href="https://ourworldindata.org/land-use-diets"
+               target="_blank" rel="noopener noreferrer">
+                Comprender la relación entre alimentación y uso del suelo
+            </a>.
+        </li>
+    </ol>
+</section>
+
+<div class="note">
+    <h2>🌱 Una reflexión sencilla para la vida cotidiana</h2>
+
+    <p>
+        Los alimentos nos conectan con la tierra, el agua,
+        las plantas, los animales y las personas que contribuyen
+        a nuestra alimentación. Comprender cómo nuestras decisiones
+        alimentarias influyen en el medio ambiente puede ayudarnos
+        a tomar decisiones más conscientes y a apreciar más la naturaleza.
+    </p>
+
+    <p>
+        Cada pequeño gesto reflexivo en nuestra vida diaria
+        puede contribuir a construir una relación más sostenible
+        con el mundo natural.
+    </p>
+</div>
+
+</main>
+
+<footer>
+    <div>
+        <a href="/es/">Inicio</a>
+        <a href="/es/mindful-eating.html">Alimentación consciente</a>
+        <a href="/es/mindful-ethical-living.html">Vida sostenible</a>
+        <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
+        <a href="/es/eco.html">Medio ambiente</a>
+        <a href="/es/contact.html">Contacto</a>
+    </div>
+
+    <p>
+        &copy; 2026 Yangocean • Vida consciente • Naturaleza • Sostenibilidad
+    </p>
+</footer>
+
+<script>
+const comparisonForm = document.getElementById("comparisonForm");
+const result = document.getElementById("result");
+
+comparisonForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const animalFactor = Number(
+        document.getElementById("animalProtein").value
+    );
+
+    const plantFactor = Number(
+        document.getElementById("plantProtein").value
+    );
+
+    const proteinAmount = Number(
+        document.getElementById("proteinAmount").value
+    );
+
+    const mealsPerWeek = Number(
+        document.getElementById("mealsPerWeek").value
+    );
+
+    const valid =
+        Number.isFinite(animalFactor) &&
+        Number.isFinite(plantFactor) &&
+        Number.isFinite(proteinAmount) &&
+        Number.isFinite(mealsPerWeek) &&
+        proteinAmount >= 1 &&
+        proteinAmount <= 300 &&
+        mealsPerWeek >= 1 &&
+        mealsPerWeek <= 21 &&
+        Number.isInteger(mealsPerWeek);
+
+    if (!valid) {
+        result.style.display = "block";
+
+        document.getElementById("weeklySaving").textContent =
+            "Introduce valores válidos.";
+
+        document.getElementById("resultMessage").textContent =
+            "La cantidad de proteína debe estar entre 1 y 300 gramos. El número de comidas debe estar entre 1 y 21 por semana.";
+
+        return;
+    }
+
+    // Factores de emisión por cada 100 g de proteína.
+    const animalPerMeal =
+        (animalFactor * proteinAmount) / 100;
+
+    const plantPerMeal =
+        (plantFactor * proteinAmount) / 100;
+
+    const animalWeekly =
+        animalPerMeal * mealsPerWeek;
+
+    const plantWeekly =
+        plantPerMeal * mealsPerWeek;
+
+    const weeklyDifference =
+        animalWeekly - plantWeekly;
+
+    const annualDifference =
+        weeklyDifference * 52;
+
+    document.getElementById("animalResult").textContent =
+        animalWeekly.toFixed(2);
+
+    document.getElementById("plantResult").textContent =
+        plantWeekly.toFixed(2);
+
+    document.getElementById("annualResult").textContent =
+        annualDifference.toFixed(2);
+
+    document.getElementById("weeklySaving").textContent =
+        Math.abs(weeklyDifference).toFixed(2) + " kg CO₂e";
+
+    let message;
+
+    if (weeklyDifference > 0) {
+        message =
+            "En esta comparación simplificada, la fuente de proteína vegetal seleccionada tiene emisiones estimadas más bajas. Se trata de una estimación; los resultados pueden variar según los productos y las regiones.";
+    } else if (weeklyDifference < 0) {
+        message =
+            "Según los factores de emisión seleccionados, la opción vegetal presenta emisiones estimadas más altas en esta comparación. Los impactos reales varían según los productos y los métodos de producción.";
+    } else {
+        message =
+            "Según los factores de emisión utilizados, ambas opciones tienen las mismas emisiones estimadas.";
+    }
+
+    document.getElementById("resultMessage").textContent = message;
+
+    result.style.display = "block";
+});
+
+
+/* LECTURA EN VOZ ALTA */
+
+const readButton = document.getElementById("readButton");
+const pauseButton = document.getElementById("pauseButton");
+const stopButton = document.getElementById("stopButton");
+
+function getReadingText() {
+    const elements = document.querySelectorAll(
+        "#content-to-read h1, #content-to-read h2, #content-to-read h3, #content-to-read p, #content-to-read li"
+    );
+
+    return Array.from(elements)
+        .map(element => element.innerText.trim())
+        .filter(text => text.length > 0)
+        .join(". ");
+}
+
+readButton.addEventListener("click", function() {
+    if (!("speechSynthesis" in window)) {
+        alert("La lectura en voz alta no es compatible con este navegador.");
+        return;
+    }
+
+    speechSynthesis.cancel();
+
+    const utterance = new SpeechSynthesisUtterance(
+        getReadingText()
+    );
+
+    utterance.lang = "es-ES";
+    utterance.rate = 0.95;
+
+    speechSynthesis.speak(utterance);
+});
+
+pauseButton.addEventListener("click", function() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.pause();
+    }
+});
+
+stopButton.addEventListener("click", function() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+    }
+});
+
+window.addEventListener("beforeunload", function() {
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
+    }
+});
+</script>
+
+</body>
+</html>
