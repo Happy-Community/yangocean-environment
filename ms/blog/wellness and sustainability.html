@@ -1,232 +1,792 @@
 <!DOCTYPE html>
 <html lang="ms">
+
 <head>
 <meta charset="UTF-8">
 
-<title>Kesejahteraan & Kelestarian | Tabiat Mudah untuk Kehidupan Lebih Baik | Yangocean</title>
+<title>Kesejahteraan dan Kelestarian | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="Pelajari bagaimana kesejahteraan dan kelestarian alam berkait melalui tabiat harian yang mudah untuk kehidupan lebih sihat dan kesedaran alam sekitar.">
+<meta name="description"
+content="Terokai hubungan antara kesejahteraan dan kelestarian melalui pilihan harian yang penuh kesedaran demi kehidupan yang lebih sihat dan bumi yang lebih baik.">
 
-<link rel="stylesheet" href="/styles.css">
+<meta name="robots" content="index, follow">
 
-<!-- CANONICAL (ONLY THIS PAGE) -->
-<link rel="canonical" href="https://yangocean.com/ms/wellness-and-sustainability.html">
+<link rel="canonical"
+href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
 
-<!-- HREFLANG (ALL LANGUAGE VERSIONS OF SAME ARTICLE) -->
-<link rel="alternate" hreflang="en" href="https://yangocean.com/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/wellness-and-sustainability.html">
+<!-- HREFLANG -->
 
-<!-- OPEN GRAPH (MALAY ONLY) -->
-<meta property="og:title" content="Kesejahteraan & Kelestarian | Yangocean">
-<meta property="og:description" content="Tabiat mudah untuk kehidupan sihat dan kesedaran alam sekitar.">
-<meta property="og:url" content="https://yangocean.com/ms/wellness-and-sustainability.html">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
 
-<!-- TWITTER (MALAY ONLY) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kesejahteraan & Kelestarian | Yangocean">
-<meta name="twitter:description" content="Tabiat mudah untuk kehidupan sihat dan lestari.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:title"
+content="Kesejahteraan dan Kelestarian | Yangocean">
+
+<meta property="og:description"
+content="Terokai cara menjaga kesejahteraan diri juga dapat membantu memelihara bumi yang lebih sihat.">
+
+<meta property="og:type"
+content="article">
+
+<meta property="og:url"
+content="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<!-- TWITTER -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Kesejahteraan dan Kelestarian | Yangocean">
+
+<meta name="twitter:description"
+content="Terokai cara menjaga kesejahteraan diri juga dapat membantu memelihara bumi yang lebih sihat.">
+
+<meta name="twitter:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f9f6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* =========================
+   ARTICLE CARD
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    color: #2f5d3a;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+}
+
+.reflection p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #405944;
+}
+
+.reflection-question {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* =========================
+   READ ALOUD
+========================= */
+
+#readAloudButton {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#readAloudButton:hover {
+    background: #f1f6f1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+
+}
+
+</style>
 
 </head>
+
 <body>
 
-<div class="container">
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- NAV -->
+<header>
 
-    <nav aria-label="Navigasi utama">
-      <a href="/ms/">Laman Utama</a>
-      <a href="/ms/mindfulness.html">Ketenangan Minda</a>
-      <a href="/ms/mindful-ethical-living.html">Kehidupan Berkesedaran</a>
-      <a href="/ms/mindful-eating.html">Pemakanan Berkesedaran</a>
-      <a href="/ms/mindful-food.html">🍲 Makanan Berkesedaran & Video Makanan</a>
-      <a href="/ms/nature-connection.html">Hubungan dengan Alam</a>
-      <a href="/ms/eco.html">Kesedaran Alam Sekitar</a>
-      <a href="/ms/blog.html">Jurnal</a>
-      <a href="/ms/apps.html">Aplikasi Mobil</a>
-    </nav>
+<div class="header-inner">
+
+<div>
+
+<a href="/ms/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian
+</div>
+
+</div>
+
+<nav>
+
+<a href="/ms/">Laman Utama</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🧘 Kehidupan Berkesedaran ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/mindfulness.html">
+🧘 Kesedaran Minda &amp; Dhamma
+</a>
+
+<a href="/ms/mindful-eating.html">
+🥗 Pemakanan Berkesedaran
+</a>
+
+<a href="/ms/mindful-ethical-living.html">
+💚 Kehidupan Berkesedaran &amp; Beretika
+</a>
+
+<a href="/ms/mindful-food.html">
+🍲 Makanan Berkesedaran &amp; Video Makanan
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Hubungan dengan Alam ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/nature-connection.html">
+🌳 Hubungan dengan Alam Semula Jadi
+</a>
+
+<a href="/ms/eco.html">
+🌍 Kesedaran Alam Sekitar
+</a>
+
+<a href="/ms/blog.html">
+📝 Jurnal
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Aplikasi Berkaitan ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/ms/apps.html">
+📱 Semua Aplikasi Berkaitan
+</a>
+
+<a href="/ms/apps.html#eft">
+🌿 Aplikasi Yangocean
+</a>
+
+<a href="/ms/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/ms/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main id="content-to-read">
 
 <!-- HERO -->
-<section class="card">
 
-<h1>🌿 Kesejahteraan dan Kelestarian</h1>
+<section class="hero">
+
+<h1>🌿 Kesejahteraan &amp; Kelestarian</h1>
 
 <p>
-Tabiat harian yang mudah boleh meningkatkan kesejahteraan diri dan kesihatan alam sekitar.
+Menjaga kesejahteraan diri dan menjaga alam semula jadi
+mempunyai hubungan yang rapat.
 </p>
 
 </section>
 
-<!-- ETHICAL REFLECTION -->
+<!-- INTRODUCTION + IMAGE -->
+
 <section class="card">
 
-<h2>🌱 Menjaga Alam dan Generasi Masa Depan</h2>
-
 <p>
-Alam menyediakan udara bersih, makanan, air dan keseimbangan iklim untuk semua kehidupan di bumi.
-Oleh itu, ramai berpendapat bahawa menjaga ekosistem semula jadi adalah keutamaan jangka panjang selain pembangunan ekonomi.
+Melindungi alam sekitar bukan sekadar menjaga bumi kita.
+Udara bersih, air bersih, makanan yang sihat, kawasan hijau
+dan masa yang diluangkan di alam semula jadi juga dapat
+menyokong kesihatan dan kesejahteraan kita.
 </p>
 
-<p>
-Walaupun sektor seperti pertanian dan penternakan penting untuk keperluan manusia, adalah penting juga untuk meneroka pendekatan lebih lestari yang mengurangkan kesan terhadap alam sekitar serta memelihara hutan dan biodiversiti.
-</p>
-
-<p>
-Menanam pokok, memulihkan kawasan hijau dan membuat pilihan penggunaan yang bijak dapat membantu mewujudkan keseimbangan yang lebih sihat antara manusia dan alam semula jadi.
-</p>
+<img
+src="/images/protecting-environment.jpeg"
+alt="Melindungi alam sekitar menyokong bumi yang sihat, kehidupan yang sihat dan generasi akan datang."
+class="article-image"
+loading="lazy"
+>
 
 </section>
 
-<!-- INTRO -->
+<!-- ARTICLE -->
+
 <section class="card">
 
-<h2>🌎 Hubungan Antara Kesihatan dan Alam</h2>
+<h2>🌎 Kesejahteraan dan Kelestarian</h2>
+
+<div id="readAloudText">
 
 <p>
-Kesejahteraan dan kelestarian sangat berkait rapat.
-Gaya hidup sihat biasanya menghasilkan kurang pembaziran dan pencemaran.
+Kesihatan kita dan kesihatan alam sekitar mempunyai hubungan
+yang rapat. Udara yang kita hirup, air yang kita minum,
+makanan yang kita makan dan tempat kita tinggal semuanya
+bergantung pada alam semula jadi.
 </p>
 
 <p>
-Pilihan mudah seperti berjalan kaki, makan secara seimbang, mengurangkan penggunaan berlebihan dan meluangkan masa di alam semula jadi memberi manfaat kepada manusia dan alam.
+Menjaga alam semula jadi tidak semestinya memerlukan tindakan
+yang besar. Kita boleh bermula dengan pilihan mudah dalam
+kehidupan seharian — mengurangkan sisa yang tidak diperlukan,
+menggunakan sumber dengan penuh kesedaran, memilih makanan
+dengan bijak, berjalan kaki apabila boleh, meluangkan masa
+di luar dan menjaga pokok serta kawasan hijau.
 </p>
+
+<p>
+Apabila kita melindungi alam sekitar, kita turut membantu
+mewujudkan persekitaran yang lebih sihat untuk diri kita
+dan generasi akan datang.
+</p>
+
+<p>
+Kelestarian bukan bermaksud kita perlu menjadi sempurna.
+Ia bermaksud kita semakin sedar tentang bagaimana pilihan
+harian kita memberi kesan kepada diri sendiri, orang lain
+dan alam semula jadi.
+</p>
+
+<p>
+Satu tindakan kecil mungkin kelihatan tidak penting, tetapi
+apabila banyak tindakan kecil dilakukan secara konsisten,
+ia boleh membawa perubahan yang bermakna dari masa ke masa.
+</p>
+
+</div>
 
 </section>
 
-<!-- DAILY HABITS -->
-<section class="card">
+<!-- REFLECTION -->
 
-<h2>🌱 Tabiat Harian Yang Mudah</h2>
+<section class="reflection">
 
-<ul>
-  <li>Gunakan botol dan bekas guna semula</li>
-  <li>Berjalan kaki atau berbasikal jika boleh</li>
-  <li>Habis makanan dan kurangkan pembaziran</li>
-  <li>Luangkan masa di luar rumah</li>
-  <li>Tutup elektrik yang tidak digunakan</li>
-  <li>Amalkan penggunaan secara berhemah</li>
-  <li>Tanam dan jaga pokok jika boleh</li>
-</ul>
+<div id="reflectionText">
+
+<h2>🌱 Renungan Ringkas</h2>
 
 <p>
-Tabiat kecil ini nampak mudah, tetapi memberi kesan besar dalam jangka panjang.
+<strong>Minggu ini, cuba perhatikan persekitaran anda.</strong>
 </p>
+
+<p>
+Perhatikan satu pokok, tumbuhan, burung, kawasan rumput
+atau sesuatu yang lain dalam alam semula jadi yang biasanya
+anda lalui tanpa memberikan perhatian.
+</p>
+
+<p>
+Luangkan beberapa saat dalam suasana tenang untuk memerhatikannya.
+</p>
+
+<p class="reflection-question">
+Tanya diri anda:
+<br>
+<em>
+Apakah yang diberikan oleh bahagian kecil alam semula jadi
+ini kepada dunia di sekeliling kita?
+</em>
+</p>
+
+<p>
+Kadangkala, menjaga alam sekitar bermula dengan memberikan perhatian.
+</p>
+
+<p>
+<em>
+Kesedaran kecil boleh membawa kepada tindakan kecil,
+dan tindakan kecil boleh menjadi tabiat yang bermakna.
+</em>
+</p>
+
+</div>
+
+<button
+type="button"
+id="readAloudButton"
+aria-label="Bacakan artikel dan renungan">
+
+🔊 Bacakan
+
+</button>
 
 </section>
 
-<!-- FOOD WASTE -->
-<section class="card">
+</main>
 
-<h2>🍽️ Habis Makanan Yang Diambil</h2>
+<!-- =========================
+     FOOTER
+========================= -->
 
-<p>
-Makanan memerlukan tanah, air, tenaga, pengangkutan dan usaha manusia untuk dihasilkan.
-Apabila makanan dibazirkan, semua sumber ini turut terbuang.
-</p>
+<footer>
 
-<p>
-Satu tabiat lestari ialah mengambil makanan secukupnya dan menghabiskannya.
-Perancangan makanan yang baik, penyimpanan yang betul dan mengurangkan pembaziran membantu memelihara sumber alam.
-</p>
+<div>
 
-<p>
-Menghargai makanan juga menggalakkan penggunaan yang lebih berhemah.
-Setiap hidangan melibatkan usaha petani, alam dan ramai pihak.
-</p>
+<a href="/ms/">Laman Utama</a>
 
-<p>
-Dengan mengurangkan pembaziran makanan, kita menyokong masa depan yang lebih lestari.
-</p>
+<a href="/ms/mindfulness.html">
+Kehidupan Berkesedaran
+</a>
 
-</section>
+<a href="/ms/nature-connection.html">
+Hubungan dengan Alam
+</a>
 
-<!-- MINDFULNESS -->
-<section class="card">
+<a href="/ms/blog.html">
+Jurnal
+</a>
 
-<h2>🧘 Kesedaran dan Kehidupan Lestari</h2>
+<a href="/ms/apps.html">
+Aplikasi Berkaitan
+</a>
 
-<p>
-Kesedaran membantu kita memahami cara penggunaan sumber dan kesan terhadap alam sekitar.
-</p>
+<a href="/ms/contact.html">
+Hubungi Kami
+</a>
 
-<p>
-Hidup dengan lebih sedar dapat mengurangkan penggunaan berlebihan dan membantu keseimbangan emosi.
-</p>
-
-</section>
-
-<!-- NATURE -->
-<section class="card">
-
-<h2>🌳 Mengapa Alam Penting</h2>
+</div>
 
 <p>
-Alam membantu kesihatan mental dan emosi.
-Kawasan hijau, udara segar dan cahaya matahari memberi kesan positif kepada kesejahteraan.
-</p>
-
-<p>
-Melindungi alam bermakna kita turut melindungi masa depan generasi akan datang.
-</p>
-
-</section>
-
-<!-- SIMPLE START -->
-<section class="card">
-
-<h2>💚 Mulakan Dengan Perubahan Kecil</h2>
-
-<p>
-Kelestarian tidak memerlukan kesempurnaan.
-Perubahan kecil yang konsisten lebih realistik dan berkesan.
-</p>
-
-<p>
-Setiap tindakan positif — walaupun kecil — memberi kesan jangka panjang.
-</p>
-
-<p>
-Untuk memahami lebih lanjut, baca artikel:
-<a href="/ms/blog/why-trees-matter.html">🌳 Mengapa Pokok Penting</a>.
-</p>
-
-</section>
-
-<!-- RELATED -->
-<section class="card">
-
-<h2>🔗 Terokai Lagi</h2>
-
-<p>
-<a href="/ms/eco-living.html">Panduan Gaya Hidup Hijau</a><br>
-<a href="/ms/daily-eco-tips.html">Tip Harian</a><br>
-<a href="/ms/reduce-carbon-footprint.html">Jejak Karbon</a>
-</p>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-<p>© 2026 Yangocean</p>
-
-<p>
-<a href="/ms/about.html">Tentang</a> |
-<a href="/ms/contact.html">Hubungi</a> |
-<a href="/ms/privacy.html">Privasi</a>
+&copy; 2026 • Kehidupan Berkesedaran • Alam Semula Jadi • Kelestarian Harian
 </p>
 
 </footer>
 
-</div>
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
+
+<script>
+
+const readAloudButton =
+document.getElementById("readAloudButton");
+
+const readAloudText =
+document.getElementById("readAloudText");
+
+const reflectionText =
+document.getElementById("reflectionText");
+
+readAloudButton.addEventListener("click", function () {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Maaf, pelayar anda tidak menyokong fungsi Bacakan."
+        );
+
+        return;
+    }
+
+    if (speechSynthesis.speaking) {
+
+        speechSynthesis.cancel();
+
+        readAloudButton.textContent =
+            "🔊 Bacakan";
+
+        return;
+    }
+
+    const article =
+        readAloudText.innerText;
+
+    const reflection =
+        reflectionText.innerText;
+
+    const text =
+        article + ". " + reflection;
+
+    const speech =
+        new SpeechSynthesisUtterance(text);
+
+    speech.lang = "ms-MY";
+
+    speech.rate = 0.95;
+
+    speech.pitch = 1;
+
+    speech.onstart = function () {
+
+        readAloudButton.textContent =
+            "⏹ Berhenti";
+
+    };
+
+    speech.onend = function () {
+
+        readAloudButton.textContent =
+            "🔊 Bacakan";
+
+    };
+
+    speech.onerror = function () {
+
+        readAloudButton.textContent =
+            "🔊 Bacakan";
+
+    };
+
+    speechSynthesis.cancel();
+
+    speechSynthesis.speak(speech);
+
+});
+
+</script>
 
 </body>
+
 </html>
