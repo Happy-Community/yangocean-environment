@@ -1,245 +1,787 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 
-<title>Bienestar y Sostenibilidad | Hábitos simples para una vida mejor | Yangocean</title>
+<title>Bienestar y sostenibilidad | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO META -->
-<meta name="description" content="Aprende cómo el bienestar y la sostenibilidad se conectan mediante hábitos diarios simples que apoyan una vida más saludable y un mayor cuidado del medio ambiente.">
+<meta name="description"
+content="Explora la conexión entre el bienestar y la sostenibilidad a través de elecciones cotidianas conscientes que favorecen una vida más saludable y un planeta más sano.">
 
-<meta name="keywords" content="bienestar, sostenibilidad, vida ecológica, salud, medio ambiente, huella de carbono, hábitos sostenibles">
+<meta name="robots" content="index, follow">
 
-<link rel="stylesheet" href="/styles.css">
+<link rel="canonical"
+href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
 
-<link rel="canonical" href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="en" href="https://yangocean.com/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog/wellness-and-sustainability.html">
+<!-- HREFLANG -->
+
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
 
 <!-- OPEN GRAPH -->
-<meta property="og:title" content="Bienestar y Sostenibilidad | Yangocean">
-<meta property="og:description" content="Hábitos simples para una vida más saludable y consciente del medio ambiente.">
-<meta property="og:url" content="https://yangocean.com/es/blog/wellness-and-sustainability.html">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+
+<meta property="og:title"
+content="Bienestar y sostenibilidad | Yangocean">
+
+<meta property="og:description"
+content="Descubre cómo cuidar nuestro bienestar también puede contribuir a crear un planeta más saludable.">
+
+<meta property="og:type"
+content="article">
+
+<meta property="og:url"
+content="https://yangocean.com/es/blog/wellness-and-sustainability.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
 
 <!-- TWITTER -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Bienestar y Sostenibilidad | Yangocean">
-<meta name="twitter:description" content="Hábitos simples para una vida saludable y sostenible.">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
 
-  
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="Bienestar y sostenibilidad | Yangocean">
+
+<meta name="twitter:description"
+content="Descubre cómo cuidar nuestro bienestar también puede contribuir a crear un planeta más saludable.">
+
+<meta name="twitter:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f9f6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* =========================
+   ARTICLE CARD
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    color: #2f5d3a;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+}
+
+.reflection p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #405944;
+}
+
+.reflection-question {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* =========================
+   READ ALOUD
+========================= */
+
+#readAloudButton {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#readAloudButton:hover {
+    background: #f1f6f1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="container">
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- NAV -->
+<header>
+
+<div class="header-inner">
+
+<div>
+
+<a href="/es/" class="logo">Yangocean</a>
+
+<div class="tagline">
+Vida consciente • Naturaleza • Sostenibilidad
+</div>
+
+</div>
+
 <nav>
 
-    <a href="/">Inicio</a>
-    <a href="/es/mindfulness.html">Atención plena</a>
-    <a href="/es/mindful-ethical-living.html">Vida consciente</a>
-    <a href="/es/mindful-eating.html">Alimentación consciente</a>
-    <a href="/es/mindful-food.html">🍲 Alimentación Consciente y Vídeos de Comida</a>
-    <a href="/es/nature-connection.html">Conexión con la naturaleza</a>
-    <a href="/es/eco.html">Conciencia Ambiental</a>
-    <a href="/es/blog.html">Diario</a>
-    <a href="/es/apps.html">Aplicaciones</a>
+<a href="/es/">Inicio</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🧘 Vida consciente ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/mindfulness.html">
+🧘 Atención plena y Dhamma
+</a>
+
+<a href="/es/mindful-eating.html">
+🥗 Alimentación consciente
+</a>
+
+<a href="/es/mindful-ethical-living.html">
+💚 Vida consciente y ética
+</a>
+
+<a href="/es/mindful-food.html">
+🍲 Alimentación consciente y vídeos de comida
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 Conexión con la naturaleza ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/nature-connection.html">
+🌳 Conexión con la naturaleza
+</a>
+
+<a href="/es/eco.html">
+🌍 Conciencia ambiental
+</a>
+
+<a href="/es/blog.html">
+📝 Diario
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 Aplicaciones relacionadas ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/es/apps.html">
+📱 Todas las aplicaciones relacionadas
+</a>
+
+<a href="/es/apps.html#eft">
+🌿 Aplicación Yangocean
+</a>
+
+<a href="/es/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/es/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+
+</div>
 
 </nav>
 
+</div>
+
+</header>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main id="content-to-read">
+
 <!-- HERO -->
-<section class="card">
 
-<h1>🌿 Bienestar y Sostenibilidad</h1>
+<section class="hero">
+
+<h1>🌿 Bienestar y sostenibilidad</h1>
 
 <p>
-Los hábitos diarios simples pueden mejorar tanto el bienestar personal como la salud del planeta.
+Cuidar nuestro bienestar y cuidar la naturaleza
+están estrechamente relacionados.
 </p>
 
 </section>
 
-<!-- ETHICAL REFLECTION -->
+<!-- INTRODUCTION + IMAGE -->
+
 <section class="card">
 
-<h2>🌱 Cuidar la naturaleza y las futuras generaciones</h2>
-
 <p>
-La naturaleza proporciona apoyo esencial para toda la vida en la Tierra — incluyendo aire limpio, alimentos, agua y equilibrio climático.
-Por ello, muchas personas consideran que proteger los ecosistemas naturales debe ser una prioridad a largo plazo junto con el desarrollo económico.
+Proteger el medio ambiente no consiste únicamente en cuidar nuestro planeta.
+El aire limpio, el agua limpia, los alimentos saludables, los espacios verdes
+y el tiempo que pasamos en la naturaleza también pueden contribuir
+a nuestra salud y bienestar.
 </p>
 
-<p>
-Aunque sectores como la agricultura y la ganadería son importantes para las necesidades humanas, también es esencial explorar enfoques más sostenibles que reduzcan el impacto ambiental y preserven los bosques y la biodiversidad.
-</p>
-
-<p>
-Plantar árboles, restaurar espacios verdes y tomar decisiones de consumo conscientes puede ayudar a crear un equilibrio más saludable entre la actividad humana y la naturaleza.
-</p>
+<img
+src="/images/protecting-environment.jpeg"
+alt="Proteger el medio ambiente favorece un planeta saludable, una vida sana y las generaciones futuras."
+class="article-image"
+loading="lazy"
+>
 
 </section>
 
-<!-- INTRO -->
+<!-- ARTICLE -->
+
 <section class="card">
 
-<h2>🌎 La conexión entre salud y naturaleza</h2>
+<h2>🌎 Bienestar y sostenibilidad</h2>
+
+<div id="readAloudText">
 
 <p>
-El bienestar y la sostenibilidad están estrechamente conectados.
-Un estilo de vida más saludable suele generar menos residuos, menos contaminación
-y hábitos más conscientes.
+Nuestra salud y la salud del medio ambiente están estrechamente relacionadas.
+El aire que respiramos, el agua que bebemos, los alimentos que comemos
+y los lugares donde vivimos dependen del mundo natural.
 </p>
 
 <p>
-Opciones simples como caminar más, comer de forma equilibrada,
-reducir el consumo innecesario y pasar tiempo en la naturaleza
-pueden beneficiar tanto a las personas como al medio ambiente.
+Cuidar la naturaleza no siempre requiere grandes acciones.
+Podemos empezar con decisiones sencillas en nuestra vida cotidiana:
+reducir los residuos innecesarios, utilizar los recursos de manera consciente,
+elegir nuestros alimentos con cuidado, caminar cuando sea posible,
+pasar tiempo al aire libre y cuidar los árboles y los espacios verdes.
 </p>
+
+<p>
+Cuando protegemos el medio ambiente, también contribuimos a crear
+un entorno más saludable para nosotros y para las generaciones futuras.
+</p>
+
+<p>
+La sostenibilidad no consiste en ser perfectos.
+Se trata de ser cada vez más conscientes de cómo nuestras decisiones
+cotidianas afectan a nosotros mismos, a otras personas y al mundo natural.
+</p>
+
+<p>
+Una pequeña acción puede parecer insignificante, pero muchas pequeñas
+acciones realizadas de manera constante pueden generar cambios
+significativos con el paso del tiempo.
+</p>
+
+</div>
 
 </section>
 
-<!-- DAILY HABITS -->
-<section class="card">
+<!-- REFLECTION -->
 
-<h2>🌱 Pequeños hábitos diarios importan</h2>
+<section class="reflection">
 
-<ul>
-  <li>Usar botellas y recipientes reutilizables</li>
-  <li>Caminar o usar bicicleta cuando sea posible</li>
-  <li>Terminar la comida y reducir el desperdicio</li>
-  <li>Pasar tiempo al aire libre</li>
-  <li>Apagar la electricidad innecesaria</li>
-  <li>Practicar el consumo consciente</li>
-  <li>Plantar y cuidar árboles cuando sea posible</li>
-</ul>
+<div id="reflectionText">
+
+<h2>🌱 Una pequeña reflexión</h2>
 
 <p>
-Estos hábitos pueden parecer simples,
-pero con el tiempo generan un impacto significativo.
+<strong>Esta semana, observa lo que te rodea.</strong>
 </p>
+
+<p>
+Fíjate en un árbol, una planta, un pájaro, un pequeño espacio de césped
+u otro elemento de la naturaleza que normalmente pasas por alto.
+</p>
+
+<p>
+Dedica unos momentos de tranquilidad a observarlo.
+</p>
+
+<p class="reflection-question">
+Pregúntate:
+<br>
+<em>
+¿Qué aporta esta pequeña parte de la naturaleza al mundo que nos rodea?
+</em>
+</p>
+
+<p>
+A veces, cuidar el medio ambiente comienza simplemente
+prestando atención.
+</p>
+
+<p>
+<em>
+Una pequeña toma de conciencia puede conducir a pequeñas acciones,
+y esas pequeñas acciones pueden convertirse en hábitos significativos.
+</em>
+</p>
+
+</div>
+
+<button
+type="button"
+id="readAloudButton"
+aria-label="Leer el artículo y la reflexión en voz alta">
+
+🔊 Escuchar
+
+</button>
 
 </section>
 
-<!-- FOOD WASTE -->
-<section class="card">
+</main>
 
-<h2>🍽️ Terminar lo que tomamos</h2>
+<!-- =========================
+     FOOTER
+========================= -->
 
-<p>
-Los alimentos requieren tierra, agua, energía, transporte y esfuerzo humano para ser producidos.
-Cuando se desperdicia comida, también se desperdician estos recursos valiosos.
-</p>
+<footer>
 
-<p>
-Un hábito sostenible simple es tomar solo lo necesario y terminar lo que consumimos.
-Planificar las comidas, almacenar los alimentos correctamente y reducir el desperdicio ayuda a conservar recursos.
-</p>
+<div>
 
-<p>
-Practicar gratitud por los alimentos también fomenta un consumo más consciente.
-Cada comida representa el trabajo de agricultores, la naturaleza y muchas personas.
-</p>
+<a href="/es/">Inicio</a>
 
-<p>
-Reducir el desperdicio de alimentos contribuye a un futuro más sostenible.
-</p>
+<a href="/es/mindfulness.html">
+Vida consciente
+</a>
 
-</section>
+<a href="/es/nature-connection.html">
+Conexión con la naturaleza
+</a>
 
-<!-- MINDFULNESS -->
-<section class="card">
+<a href="/es/blog.html">
+Diario
+</a>
 
-<h2>🧘 Atención plena y vida sostenible</h2>
+<a href="/es/apps.html">
+Aplicaciones relacionadas
+</a>
 
-<p>
-La atención plena nos ayuda a ser conscientes de cómo usamos los recursos,
-consumimos productos e interactuamos con el medio ambiente.
-</p>
+<a href="/es/contact.html">
+Contacto
+</a>
+
+</div>
 
 <p>
-Vivir de forma más consciente puede reducir el consumo innecesario
-y favorecer una vida más equilibrada y tranquila.
-</p>
-
-</section>
-
-<!-- NATURE -->
-<section class="card">
-
-<h2>🌳 Por qué la naturaleza es importante</h2>
-
-<p>
-La naturaleza apoya el bienestar mental de muchas maneras.
-Los espacios verdes, el aire fresco, la luz solar y las actividades al aire libre
-ayudan a reducir el estrés y mejorar la salud emocional.
-</p>
-
-<p>
-Proteger el medio ambiente también ayuda a preservar espacios saludables
-para las futuras generaciones.
-</p>
-
-</section>
-
-<!-- SIMPLE START -->
-<section class="card">
-
-<h2>💚 Empieza con cambios simples</h2>
-
-<p>
-La sostenibilidad no requiere perfección.
-Los pequeños cambios constantes son más realistas y efectivos a largo plazo.
-</p>
-
-<p>
-Cada acción positiva —por pequeña que sea—
-contribuye a una vida más saludable y a un planeta más sano.
-</p>
-
-<p>
-Pequeñas acciones pueden tener un gran impacto con el tiempo.
-Para otro ejemplo, lee:
-<a href="/es/blog/why-trees-matter.html">🌳 Por qué los árboles son importantes</a>.
-</p>
-
-</section>
-
-<!-- RELATED -->
-<section class="card">
-
-<h2>🔗 Explorar más</h2>
-
-<p>
-<a href="/es/eco-living.html">Guía de vida ecológica</a><br>
-<a href="/es/daily-eco-tips.html">Consejos diarios ecológicos</a><br>
-<a href="/es/reduce-carbon-footprint.html">Huella de carbono</a>
-</p>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-<p>© 2026 Yangocean</p>
-
-<p>
-<a href="/es/about.html">Acerca de</a> |
-<a href="/es/contact.html">Contacto</a> |
-<a href="/es/privacy.html">Privacidad</a>
+&copy; 2026 • Vida consciente • Naturaleza • Sostenibilidad cotidiana
 </p>
 
 </footer>
 
-</div>
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
+
+<script>
+
+const readAloudButton =
+document.getElementById("readAloudButton");
+
+const readAloudText =
+document.getElementById("readAloudText");
+
+const reflectionText =
+document.getElementById("reflectionText");
+
+readAloudButton.addEventListener("click", function () {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "Lo sentimos, tu navegador no admite la función de lectura en voz alta."
+        );
+
+        return;
+    }
+
+    if (speechSynthesis.speaking) {
+
+        speechSynthesis.cancel();
+
+        readAloudButton.textContent =
+            "🔊 Escuchar";
+
+        return;
+    }
+
+    const article =
+        readAloudText.innerText;
+
+    const reflection =
+        reflectionText.innerText;
+
+    const text =
+        article + ". " + reflection;
+
+    const speech =
+        new SpeechSynthesisUtterance(text);
+
+    speech.lang = "es-ES";
+
+    speech.rate = 0.95;
+
+    speech.pitch = 1;
+
+    speech.onstart = function () {
+
+        readAloudButton.textContent =
+            "⏹ Detener";
+
+    };
+
+    speech.onend = function () {
+
+        readAloudButton.textContent =
+            "🔊 Escuchar";
+
+    };
+
+    speech.onerror = function () {
+
+        readAloudButton.textContent =
+            "🔊 Escuchar";
+
+    };
+
+    speechSynthesis.cancel();
+
+    speechSynthesis.speak(speech);
+
+});
+
+</script>
 
 </body>
+
 </html>
