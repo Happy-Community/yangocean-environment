@@ -1,235 +1,782 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
 <meta charset="UTF-8">
 
-<title>身心健康与可持续发展 | 简单生活习惯提升生活质量 | Yangocean</title>
+<title>身心健康与可持续发展 | Yangocean</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="了解身心健康与可持续发展之间的关系，通过简单日常习惯提升健康生活与环境意识。">
+<meta name="description"
+content="探索身心健康与可持续发展之间的联系，通过日常有意识的选择，促进更健康的生活和更健康的地球。">
 
-<link rel="stylesheet" href="/styles.css">
+<meta name="robots" content="index, follow">
 
-<!-- CANONICAL (SELF ONLY) -->
-<link rel="canonical" href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+<link rel="canonical"
+href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
 
-<!-- HREFLANG (ALL LANGUAGES) -->
-<link rel="alternate" hreflang="en" href="https://yangocean.com/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="ms" href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="zh" href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="fr" href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="es" href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
-<link rel="alternate" hreflang="x-default" href="https://yangocean.com/blog/wellness-and-sustainability.html">
+<!-- HREFLANG -->
 
-<!-- OPEN GRAPH (ZH ONLY) -->
-<meta property="og:title" content="身心健康与可持续发展 | Yangocean">
-<meta property="og:description" content="简单生活习惯提升健康与环境意识。">
-<meta property="og:url" content="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://yangocean.com/images/og-image.jpg">
+<link rel="alternate"
+hreflang="en"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
 
-<!-- TWITTER (ZH ONLY) -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="身心健康与可持续发展 | Yangocean">
-<meta name="twitter:description" content="简单生活习惯提升健康与环境意识。">
-<meta name="twitter:image" content="https://yangocean.com/images/og-image.jpg">
+<link rel="alternate"
+hreflang="ms"
+href="https://yangocean.com/ms/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="zh"
+href="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="fr"
+href="https://yangocean.com/fr/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="es"
+href="https://yangocean.com/es/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="my"
+href="https://yangocean.com/my/blog/wellness-and-sustainability.html">
+
+<link rel="alternate"
+hreflang="x-default"
+href="https://yangocean.com/blog/wellness-and-sustainability.html">
+
+<!-- OPEN GRAPH -->
+
+<meta property="og:title"
+content="身心健康与可持续发展 | Yangocean">
+
+<meta property="og:description"
+content="探索关爱自身健康如何同时帮助我们创造一个更健康的地球。">
+
+<meta property="og:type"
+content="article">
+
+<meta property="og:url"
+content="https://yangocean.com/zh/blog/wellness-and-sustainability.html">
+
+<meta property="og:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<!-- TWITTER -->
+
+<meta name="twitter:card"
+content="summary_large_image">
+
+<meta name="twitter:title"
+content="身心健康与可持续发展 | Yangocean">
+
+<meta name="twitter:description"
+content="探索关爱自身健康如何同时帮助我们创造一个更健康的地球。">
+
+<meta name="twitter:image"
+content="https://yangocean.com/images/protecting-environment.jpeg">
+
+<meta name="google-adsense-account"
+content="ca-pub-6929570744326515">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: #333;
+    background: #f7f9f6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #2f5d3a;
+    font-size: 1.45rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: #2f6b3f;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    color: #444;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: #f1f6f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* =========================
+   LANGUAGE
+========================= */
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+.language a:hover {
+    color: #2f6b3f;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 60px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 14px;
+    color: #2f5d3a;
+    font-size: 2.4rem;
+}
+
+.hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #555;
+    font-size: 1.05rem;
+}
+
+/* =========================
+   ARTICLE CARD
+========================= */
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.card h2 {
+    color: #2f5d3a;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.card p {
+    color: #555;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    margin-top: 25px;
+}
+
+/* =========================
+   REFLECTION
+========================= */
+
+.reflection {
+    background: #edf4ec;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.reflection h2 {
+    color: #2f5d3a;
+    margin-top: 0;
+}
+
+.reflection p {
+    max-width: 760px;
+    margin: 12px auto;
+    color: #405944;
+}
+
+.reflection-question {
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* =========================
+   READ ALOUD
+========================= */
+
+#readAloudButton {
+    display: block;
+    margin: 25px auto 0;
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #444;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+#readAloudButton:hover {
+    background: #f1f6f1;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid #dfe5df;
+    padding: 25px 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+        margin-top: 8px;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<!-- =========================
+     HEADER
+========================= -->
 
-<!-- NAV -->
+<header>
+
+<div class="header-inner">
+
+<div>
+
+<a href="/zh/" class="logo">Yangocean</a>
+
+<div class="tagline">
+正念生活 • 自然 • 可持续发展
+</div>
+
+</div>
+
 <nav>
-        
-            <a href="/zh/">首页</a>
-            <a href="/zh/mindfulness.html">正念与佛法</a>
-            <a href="/zh/mindful-ethical-living.html">正念与道德生活</a>
-            <a href="/zh/mindful-eating.html">正念饮食</a>
-            <a href="/zh/mindful-food.html">🍲 正念饮食与美食视频</a>
-            <a href="/zh/nature-connection.html">亲近自然</a>
-            <a href="/zh/eco.html">环境阅读</a>
-            <a href="/zh/blog.html">日志</a>
-            <a href="/zh/apps.html">应用程序</a>
-     
+
+<a href="/zh/">首页</a>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🧘 正念生活 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/mindfulness.html">
+🧘 正念与佛法
+</a>
+
+<a href="/zh/mindful-eating.html">
+🥗 正念饮食
+</a>
+
+<a href="/zh/mindful-ethical-living.html">
+💚 正念与道德生活
+</a>
+
+<a href="/zh/mindful-food.html">
+🍲 正念食物与美食视频
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+🌳 亲近自然 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/nature-connection.html">
+🌳 亲近自然
+</a>
+
+<a href="/zh/eco.html">
+🌍 环境意识
+</a>
+
+<a href="/zh/blog.html">
+📝 日记
+</a>
+
+</div>
+
+</div>
+
+<div class="dropdown">
+
+<button class="dropbtn">
+📱 相关应用 ▾
+</button>
+
+<div class="dropdown-content">
+
+<a href="/zh/apps.html">
+📱 所有相关应用
+</a>
+
+<a href="/zh/apps.html#eft">
+🌿 Yangocean 应用
+</a>
+
+<a href="/zh/apps.html#healthy-body">
+❤️ QuQu Healthy Body
+</a>
+
+<a href="/zh/apps.html#duidui-fit">
+🏃 DuoFit
+</a>
+
+</div>
+
+</div>
+
+<div class="language">
+
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+
+</div>
+
 </nav>
 
+</div>
+
+</header>
+
+<!-- =========================
+     MAIN CONTENT
+========================= -->
+
+<main id="content-to-read">
+
 <!-- HERO -->
-<section class="card">
+
+<section class="hero">
 
 <h1>🌿 身心健康与可持续发展</h1>
 
 <p>
-简单的日常习惯可以同时提升个人身心健康与环境质量。
+关爱自身健康与关爱自然环境息息相关。
 </p>
 
 </section>
 
-<!-- ETHICAL REFLECTION -->
+<!-- INTRODUCTION + IMAGE -->
+
 <section class="card">
 
-<h2>🌱 关爱自然与未来世代</h2>
-
 <p>
-自然为地球上的所有生命提供了清洁空气、食物、水源以及气候平衡等重要支持。
-因此，许多人认为保护自然生态系统应与经济发展同样重要。
+保护环境不仅仅是保护我们的地球。
+清新的空气、洁净的水、健康的食物、绿色空间，
+以及亲近自然的时光，也有助于促进我们的健康与身心 bienestar。
 </p>
 
-<p>
-虽然农业与畜牧业对人类生活非常重要，但我们也需要探索更可持续的方法，以减少对环境的影响并保护森林与生物多样性。
-</p>
-
-<p>
-通过植树、恢复绿地以及做出更有意识的消费选择，可以在人类活动与自然之间建立更健康的平衡。
-</p>
+<img
+src="/images/protecting-environment.jpeg"
+alt="保护环境有助于健康的地球、健康的生活以及未来世代。"
+class="article-image"
+loading="lazy"
+>
 
 </section>
 
-<!-- INTRO -->
+<!-- ARTICLE -->
+
 <section class="card">
 
-<h2>🌎 健康与自然的关系</h2>
+<h2>🌎 身心健康与可持续发展</h2>
+
+<div id="readAloudText">
 
 <p>
-身心健康与可持续发展密切相关。
-健康的生活方式通常意味着更少的浪费与污染。
+我们的健康与环境的健康息息相关。
+我们呼吸的空气、饮用的水、吃的食物，以及居住的地方，
+都依赖自然环境。
 </p>
 
 <p>
-如多步行、均衡饮食、减少不必要消费以及亲近自然等简单选择，
-都能同时改善个人健康与环境。
+保护自然并不一定需要采取重大行动。
+我们可以从日常生活中的简单选择开始——减少不必要的浪费、
+有意识地使用资源、用心选择食物、尽可能步行、
+多花时间在户外，以及爱护树木和绿地。
 </p>
+
+<p>
+当我们保护环境时，也是在帮助自己和未来世代
+创造更健康的生活环境。
+</p>
+
+<p>
+可持续发展并不意味着我们必须做到完美。
+它意味着我们逐渐意识到，日常选择如何影响自己、
+他人以及自然世界。
+</p>
+
+<p>
+一个小小的行动看似微不足道，但许多小行动
+若能持续进行，随着时间的累积，也能带来有意义的改变。
+</p>
+
+</div>
 
 </section>
 
-<!-- DAILY HABITS -->
-<section class="card">
+<!-- REFLECTION -->
 
-<h2>🌱 简单日常习惯</h2>
+<section class="reflection">
 
-<ul>
-  <li>使用可重复使用的水瓶与容器</li>
-  <li>尽量步行或骑行</li>
-  <li>吃完食物，减少浪费</li>
-  <li>多接触户外自然环境</li>
-  <li>关闭未使用的电器</li>
-  <li>养成有意识消费习惯</li>
-  <li>种植并保护树木</li>
-</ul>
+<div id="reflectionText">
+
+<h2>🌱 一份小小的反思</h2>
 
 <p>
-这些看似简单的习惯，长期坚持将产生深远影响。
+<strong>这个星期，请留意一下周围的环境。</strong>
 </p>
+
+<p>
+观察一棵树、一株植物、一只鸟、一片草地，
+或其他你平时经过却很少留意的自然事物。
+</p>
+
+<p>
+静静地花几分钟观察它。
+</p>
+
+<p class="reflection-question">
+问问自己：
+<br>
+<em>
+这小小的一部分自然环境，为周围的世界带来了什么？
+</em>
+</p>
+
+<p>
+有时候，保护环境只是从留心观察开始。
+</p>
+
+<p>
+<em>
+一点点觉察可以带来一点点行动，
+而一点点行动可以逐渐成为有意义的习惯。
+</em>
+</p>
+
+</div>
+
+<button
+type="button"
+id="readAloudButton"
+aria-label="朗读文章与反思">
+
+🔊 朗读
+
+</button>
 
 </section>
 
-<!-- FOOD WASTE -->
-<section class="card">
+</main>
 
-<h2>🍽️ 吃完所取的食物</h2>
+<!-- =========================
+     FOOTER
+========================= -->
 
-<p>
-食物的生产需要土地、水资源、能源、运输及人力。
-浪费食物意味着浪费所有这些宝贵资源。
-</p>
+<footer>
 
-<p>
-一个重要的可持续习惯是只取所需并尽量吃完食物。
-合理规划饮食、妥善保存食物可以减少资源浪费。
-</p>
+<div>
 
-<p>
-对食物保持感恩之心也能促进更理性的消费行为。
-每一餐都包含农民、自然与许多人的努力。
-</p>
+<a href="/zh/">首页</a>
 
-<p>
-减少食物浪费有助于建设更可持续的未来。
-</p>
+<a href="/zh/mindfulness.html">
+正念生活
+</a>
 
-</section>
+<a href="/zh/nature-connection.html">
+亲近自然
+</a>
 
-<!-- MINDFULNESS -->
-<section class="card">
+<a href="/zh/blog.html">
+日记
+</a>
 
-<h2>🧘 正念与可持续生活</h2>
+<a href="/zh/apps.html">
+相关应用
+</a>
 
-<p>
-正念帮助我们更清楚地认识资源使用方式与环境影响。
-</p>
+<a href="/zh/contact.html">
+联系我们
+</a>
 
-<p>
-更有意识的生活方式可以减少不必要消费，同时提升内心平衡。
-</p>
-
-</section>
-
-<!-- NATURE -->
-<section class="card">
-
-<h2>🌳 为什么自然很重要</h2>
+</div>
 
 <p>
-自然环境有助于心理健康与情绪稳定。
-绿地、清新空气与阳光都能减轻压力。
-</p>
-
-<p>
-保护自然也意味着为未来世代保留更健康的生活空间。
-</p>
-
-</section>
-
-<!-- SIMPLE START -->
-<section class="card">
-
-<h2>💚 从小改变开始</h2>
-
-<p>
-可持续发展不需要完美。
-持续的小改变往往更现实也更有效。
-</p>
-
-<p>
-每一个积极行动——无论大小——都能带来长期影响。
-</p>
-
-<p>
-了解更多可阅读：
-<a href="/zh/blog/why-trees-matter.html">🌳 为什么树木如此重要</a>
-</p>
-
-</section>
-
-<!-- RELATED -->
-<section class="card">
-
-<h2>🔗 探索更多</h2>
-
-<p>
-<a href="/zh/eco-living.html">环保生活指南</a><br>
-<a href="/zh/daily-eco-tips.html">每日环保贴士</a><br>
-<a href="/zh/reduce-carbon-footprint.html">碳足迹指南</a>
-</p>
-
-</section>
-
-<!-- FOOTER -->
-<footer class="footer">
-
-<p>© 2026 Yangocean</p>
-
-<p>
-<a href="/zh/about.html">关于我们</a> |
-<a href="/zh/contact.html">联系我们</a> |
-<a href="/zh/privacy.html">隐私政策</a>
+&copy; 2026 • 正念生活 • 自然 • 日常可持续发展
 </p>
 
 </footer>
 
-</div>
+<!-- =========================
+     READ ALOUD SCRIPT
+========================= -->
+
+<script>
+
+const readAloudButton =
+document.getElementById("readAloudButton");
+
+const readAloudText =
+document.getElementById("readAloudText");
+
+const reflectionText =
+document.getElementById("reflectionText");
+
+readAloudButton.addEventListener("click", function () {
+
+    if (!("speechSynthesis" in window)) {
+
+        alert(
+            "抱歉，您的浏览器不支持朗读功能。"
+        );
+
+        return;
+    }
+
+    if (speechSynthesis.speaking) {
+
+        speechSynthesis.cancel();
+
+        readAloudButton.textContent =
+            "🔊 朗读";
+
+        return;
+    }
+
+    const article =
+        readAloudText.innerText;
+
+    const reflection =
+        reflectionText.innerText;
+
+    const text =
+        article + ". " + reflection;
+
+    const speech =
+        new SpeechSynthesisUtterance(text);
+
+    speech.lang = "zh-CN";
+
+    speech.rate = 0.95;
+
+    speech.pitch = 1;
+
+    speech.onstart = function () {
+
+        readAloudButton.textContent =
+            "⏹ 停止";
+
+    };
+
+    speech.onend = function () {
+
+        readAloudButton.textContent =
+            "🔊 朗读";
+
+    };
+
+    speech.onerror = function () {
+
+        readAloudButton.textContent =
+            "🔊 朗读";
+
+    };
+
+    speechSynthesis.cancel();
+
+    speechSynthesis.speak(speech);
+
+});
+
+</script>
 
 </body>
+
 </html>
