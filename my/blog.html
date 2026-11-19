@@ -4,9 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Yangocean Journal | သတိရှိသော နေထိုင်မှု၊ သဘာဝနှင့် နေ့စဉ်ဘဝ အတွေးအမြင်များ</title>
+<title>Yangocean ဆောင်းပါးများ | သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝနှင့် နေ့စဉ်ဘဝအတွေးအမြင်များ</title>
 
-<meta name="description" content="Yangocean Journal တွင် သတိရှိသော နေထိုင်မှု၊ သဘာဝနှင့် ဆက်သွယ်မှု၊ တိရစ္ဆာန်များကို ကြင်နာစွာ စောင့်ရှောက်မှု၊ ကျန်းမာရေးနှင့် ရေရှည်တည်တံ့သော နေထိုင်မှုပုံစံများအကြောင်း ဖတ်ရှုလေ့လာနိုင်ပါသည်။">
+<meta name="description"
+content="Yangocean ဆောင်းပါးများတွင် သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝ၊ ရေရှည်တည်တံ့မှု၊ တောရိုင်းတိရစ္ဆာန်များနှင့် နေ့စဉ်ဘဝအတွေ့အကြုံများအကြောင်း အတွေးအမြင်များနှင့် အပင်စိုက်ပျိုးနည်း လမ်းညွှန်များကို ဖတ်ရှုလေ့လာနိုင်ပါသည်။">
 
 <meta name="robots" content="index, follow">
 
@@ -20,17 +21,517 @@
 <link rel="alternate" hreflang="my" href="https://www.yangocean.com/my/blog.html">
 <link rel="alternate" hreflang="x-default" href="https://www.yangocean.com/blog.html">
 
-<meta name="google-adsense-account" content="ca-pub-6929570744326515">
-
-<meta property="og:title" content="Yangocean Journal | သတိရှိသော နေထိုင်မှု၊ သဘာဝနှင့် နေ့စဉ်ဘဝ အတွေးအမြင်များ">
-<meta property="og:description" content="သတိရှိသော နေထိုင်မှု၊ သဘာဝ၊ ကြင်နာမှု၊ ကျန်းမာရေးနှင့် ရေရှည်တည်တံ့သော နေထိုင်မှုပုံစံများအကြောင်း လေ့လာဖတ်ရှုပါ။">
+<meta property="og:title"
+content="Yangocean ဆောင်းပါးများ | သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝနှင့် နေ့စဉ်ဘဝအတွေးအမြင်များ">
+<meta property="og:description"
+content="သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝ၊ ရေရှည်တည်တံ့မှု၊ တောရိုင်းတိရစ္ဆာန်များနှင့် နေ့စဉ်ဘဝအတွေ့အကြုံများအကြောင်း အတွေးအမြင်များ။">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.yangocean.com/my/blog.html">
 <meta property="og:image" content="https://www.yangocean.com/images/yangocean-og.jpg">
 
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title"
+content="Yangocean ဆောင်းပါးများ | သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝနှင့် နေ့စဉ်ဘဝအတွေးအမြင်များ">
+<meta name="twitter:description"
+content="သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝ၊ ရေရှည်တည်တံ့မှုနှင့် နေ့စဉ်ဘဝအတွေ့အကြုံများအကြောင်း အတွေးအမြင်များ။">
+<meta name="twitter:image" content="https://www.yangocean.com/images/yangocean-og.jpg">
+
+<meta name="google-adsense-account" content="ca-pub-6929570744326515">
+
 <style>
-/* Please retain the complete CSS from the English source here. */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #315d3b;
+    --green-dark: #24472d;
+    --green-light: #eaf2e8;
+    --cream: #faf9f3;
+    --text: #354039;
+    --muted: #68736a;
+    --white: #ffffff;
+    --border: #e2e9df;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--cream);
+}
+
+/* HEADER */
+
+header {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--green);
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.tagline {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+nav a,
+.dropbtn {
+    color: #444;
+    text-decoration: none;
+    font-size: 0.92rem;
+    cursor: pointer;
+}
+
+nav a:hover,
+.dropbtn:hover {
+    color: var(--green);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 28px;
+    min-width: 220px;
+    background: var(--white);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 9px 16px;
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background: var(--green-light);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: block;
+}
+
+.language {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+.language a {
+    text-decoration: none;
+    color: #666;
+}
+
+/* MAIN */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 22px 70px;
+}
+
+.hero {
+    text-align: center;
+    padding: 55px 20px 45px;
+}
+
+.hero h1 {
+    margin: 0 0 15px;
+    color: var(--green);
+    font-size: 2.7rem;
+}
+
+.hero p {
+    max-width: 780px;
+    margin: 12px auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+/* SECTIONS */
+
+.section {
+    margin-top: 45px;
+}
+
+.section h2 {
+    text-align: center;
+    color: var(--green);
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.section-intro {
+    max-width: 780px;
+    margin: 0 auto 28px;
+    text-align: center;
+    color: var(--muted);
+}
+
+/* ABOUT JOURNAL */
+
+.about-journal {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.035);
+}
+
+.about-journal h2 {
+    text-align: center;
+    color: var(--green);
+    margin-top: 0;
+}
+
+/* FEATURED ARTICLE */
+
+.featured-article {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    margin-bottom: 32px;
+}
+
+.featured-image {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.featured-content {
+    padding: 30px 35px 30px 5px;
+}
+
+.featured-label {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    padding: 6px 13px;
+    border-radius: 30px;
+    margin-bottom: 14px;
+}
+
+.featured-content h3 {
+    color: var(--green);
+    font-size: 1.65rem;
+    line-height: 1.35;
+    margin: 0 0 15px;
+}
+
+.featured-content p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.read-link {
+    display: inline-block;
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 18px;
+    background: var(--green-light);
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.read-link:hover {
+    background: #dce9d8;
+}
+
+/* JOURNAL GRID */
+
+.journal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.journal-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.08);
+}
+
+.journal-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.journal-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.journal-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.journal-card a:hover {
+    text-decoration: underline;
+}
+
+/* GROWING GUIDES */
+
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.guide-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-card h3 {
+    color: var(--green);
+    margin: 0 0 12px;
+}
+
+.guide-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.guide-card a {
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.guide-card a:hover {
+    text-decoration: underline;
+}
+
+/* SIMPLE THOUGHT */
+
+.simple-thought {
+    background: var(--green-light);
+    border-radius: 18px;
+    padding: 35px 25px;
+    text-align: center;
+    margin-top: 55px;
+}
+
+.simple-thought h2 {
+    margin-top: 0;
+    color: var(--green);
+}
+
+.simple-thought p {
+    max-width: 760px;
+    margin: auto;
+    color: #405944;
+    font-style: italic;
+}
+
+/* FOOTER */
+
+footer {
+    background: #eef2ed;
+    border-top: 1px solid var(--border);
+    padding: 28px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #49664e;
+    text-decoration: none;
+    margin: 0 9px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 15px;
+}
+
+/* READ ALOUD BUTTON */
+
+.read-aloud-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    padding: 11px 16px;
+    border: 1px solid #d5dfd3;
+    border-radius: 10px;
+    background: var(--white);
+    color: var(--green);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .featured-article {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .featured-image {
+        height: 320px;
+        min-height: 0;
+    }
+
+    .featured-content {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 20px 15px 55px;
+    }
+
+    .hero {
+        padding: 35px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .journal-grid,
+    .guides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border: 1px solid var(--border);
+        margin-top: 8px;
+    }
+
+    .featured-image {
+        height: 240px;
+    }
+
+    .featured-content {
+        padding: 22px;
+    }
+
+    .featured-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .about-journal {
+        padding: 22px;
+    }
+}
 </style>
+
 <!-- Google AdSense -->
 <script async
 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6929570744326515"
@@ -40,209 +541,435 @@ crossorigin="anonymous"></script>
 
 <body>
 
-<!--
-Please retain the original page's complete HTML structure and content,
-using the Myanmar translations below for the visible text.
--->
+<!-- HEADER -->
 
 <header>
-    <a href="/my/index.html">Yangocean</a>
+<div class="header-inner">
 
-    <nav>
-        <a href="/my/index.html">ပင်မစာမျက်နှာ</a>
-        <a href="/my/mindfulness.html">သတိရှိမှုနှင့် ဓမ္မ</a>
-        <a href="/my/mindful-ethical-living.html">သတိရှိပြီး ကျင့်ဝတ်နှင့်ညီသော နေထိုင်မှု</a>
-        <a href="/my/mindful-eating.html">သတိရှိစွာ စားသောက်ခြင်း</a>
-        <a href="/my/nature.html">သဘာဝနှင့် ဆက်သွယ်မှု</a>
-        <a href="/my/eco.html">ပတ်ဝန်းကျင်ဆိုင်ရာ အသိပညာ</a>
-        <a href="/my/blog.html">ဂျာနယ်</a>
-        <a href="/my/apps.html">အက်ပ်များ</a>
-    </nav>
+<div>
+<a href="/my/" class="logo">Yangocean</a>
+<div class="tagline">
+သတိတရားဖြင့် နေထိုင်ခြင်း • သဘာဝနှင့် ဆက်သွယ်ခြင်း • ရေရှည်တည်တံ့မှု
+</div>
+</div>
+
+<nav>
+<a href="/my/">ပင်မစာမျက်နှာ</a>
+
+<div class="dropdown">
+<button class="dropbtn">🌿 သတိတရားဖြင့် နေထိုင်ခြင်း ▾</button>
+<div class="dropdown-content">
+<a href="/my/mindfulness.html">🧘 သတိတရားနှင့် ဓမ္မ</a>
+<a href="/my/mindful-ethical-living.html">🌱 သတိတရားနှင့် ကျင့်ဝတ်ညီသော နေထိုင်မှု</a>
+<a href="/my/mindful-eating.html">🥗 သတိတရားဖြင့် စားသောက်ခြင်း</a>
+<a href="/my/mindful-food.html">🍎 သတိတရားဖြင့် အစားအသောက်နှင့် ချက်ပြုတ်ဗီဒီယိုများ</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">🌳 သဘာဝနှင့် ဆက်သွယ်ခြင်း ▾</button>
+<div class="dropdown-content">
+<a href="/my/nature-connection.html">🌳 သဘာဝနှင့် ဆက်သွယ်ခြင်း</a>
+<a href="/my/eco.html">🌍 ပတ်ဝန်းကျင်ထိန်းသိမ်းရေး အသိပညာ</a>
+<a href="/my/blog.html">📝 ဆောင်းပါးများ</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">📱 ဆက်စပ်အက်ပ်များ ▾</button>
+<div class="dropdown-content">
+<a href="/my/apps.html">📱 ဆက်စပ်အက်ပ်များအားလုံး</a>
+<a href="/my/apps.html#eft">🌿 Yangocean အက်ပ်</a>
+<a href="/my/apps.html#healthy-body">❤️ QuQu Healthy Body</a>
+<a href="/my/apps.html#duidui-fit">🏃 DuoFit</a>
+</div>
+</div>
+
+<div class="language">
+<a href="/">EN</a>
+<a href="/ms/">BM</a>
+<a href="/zh/">中文</a>
+<a href="/fr/">FR</a>
+<a href="/es/">ES</a>
+<a href="/my/">မြန်မာ</a>
+</div>
+</nav>
+
+</div>
 </header>
 
-<main>
+<!-- MAIN CONTENT -->
 
-<section>
-    <h1>Yangocean Journal</h1>
+<main id="content-to-read">
 
-    <p>
-        သတိရှိသော နေထိုင်မှု၊ သဘာဝနှင့် ဆက်သွယ်မှု၊ ကြင်နာမှုနှင့်
-        နေ့စဉ်ဘဝ၏ အဓိပ္ပာယ်ရှိသော အတွေ့အကြုံများကို မျှဝေထားသော
-        Yangocean Journal မှ ကြိုဆိုပါသည်။
-    </p>
+<!-- HERO -->
 
-    <p>
-        ရိုးရှင်းသော နေ့စဉ်လုပ်ဆောင်မှုများမှတစ်ဆင့် မိမိကိုယ်ကို၊
-        အခြားသူများနှင့် ကျွန်ုပ်တို့နေထိုင်ရာ ကမ္ဘာမြေကို
-        ပိုမိုဂရုစိုက်တတ်လာစေရန် ရည်ရွယ်ပါသည်။
-    </p>
+<section class="hero">
+<h1>📝 Yangocean ဆောင်းပါးများ</h1>
+
+<p>
+သတိတရားဖြင့် နေထိုင်ခြင်း၊ သဘာဝ၊ ရေရှည်တည်တံ့မှု၊
+တောရိုင်းတိရစ္ဆာန်များနှင့် နေ့စဉ်ဘဝအတွေ့အကြုံများအကြောင်း
+အတွေးအမြင်များ၊ လေ့လာတွေ့ရှိချက်များနှင့် ရိုးရှင်းသော
+အဖြစ်အပျက်လေးများ။
+</p>
+
+<p>
+တစ်ခါတစ်ရံ ငှက်တစ်ကောင်၊ သစ်ပင်တစ်ပင်၊ အစားအစာတစ်နပ်၊
+အပင်တစ်ပင် ကြီးထွားလာမှု သို့မဟုတ် တိတ်ဆိတ်အေးချမ်းသော
+အခိုက်အတန့်လေးတစ်ခုကို သတိပြုမိခြင်းက
+ကျွန်ုပ်တို့၏ နေထိုင်မှုပုံစံနှင့် ပတ်ဝန်းကျင်လောကအပေါ်
+ဆက်သွယ်မှုကို ပိုမိုနက်ရှိုင်းစွာ ပြန်လည်ဆင်ခြင်စေနိုင်ပါသည်။
+</p>
 </section>
 
-<section>
-    <h2>အထူးဖော်ပြထားသော ဆောင်းပါး</h2>
+<!-- ABOUT THE JOURNAL -->
 
-    <h3>လမ်းဘေးခွေးနှင့် ကြောင်များကို ကြင်နာစွာ အစာကျွေးခြင်း</h3>
+<section class="section about-journal">
 
-    <p>
-        လမ်းဘေးတွင် နေထိုင်ကြသော ခွေးနှင့် ကြောင်များသည်
-        မကြာခဏ အစာနှင့် ရေ ရရှိရန် အခက်အခဲများကို ရင်ဆိုင်ကြရသည်။
-        ၎င်းတို့ကို အစာကျွေးခြင်းသည် ရိုးရှင်းသော ကြင်နာမှုတစ်ခုဖြစ်သော်လည်း
-        တာဝန်ယူမှုရှိပြီး သန့်ရှင်းလုံခြုံသော နည်းလမ်းဖြင့်
-        လုပ်ဆောင်ရန်လည်း အရေးကြီးပါသည်။
-    </p>
+<h2>🌿 Yangocean ဆောင်းပါးများဆိုသည်မှာ အဘယ်နည်း။</h2>
 
-    <p>
-        အစာနှင့် ရေကို သင့်လျော်သောနေရာတွင် ထားပေးခြင်း၊
-        ပတ်ဝန်းကျင်ကို သန့်ရှင်းစွာ ထိန်းသိမ်းခြင်းနှင့်
-        တိရစ္ဆာန်များ၏ လိုအပ်ချက်များကို လေးစားခြင်းတို့သည်
-        ကြင်နာမှုကို လက်တွေ့ဖော်ပြသော နည်းလမ်းများဖြစ်သည်။
-    </p>
+<p>
+Yangocean ဆောင်းပါးများသည် သတိပြုလေ့လာခြင်းမှ
+စတင်ဖြစ်ပေါ်လာသော အတွေးအမြင်များကို မျှဝေသည့်နေရာတစ်ခုဖြစ်ပါသည်။
+အပြင်သို့ လမ်းလျှောက်ထွက်ခြင်း၊ သစ်ပင်တစ်ပင်၏ ပြောင်းလဲမှု၊
+ဖြည်းဖြည်းချင်း အာရုံစိုက်စားသောက်ခြင်း၊
+အပင်အသစ်တစ်ပင် ကြီးထွားလာခြင်း သို့မဟုတ်
+နေ့စဉ်ဘဝ၏ ရွေးချယ်မှုအသေးစားတစ်ခုသည်ပင်
+လေ့လာဆင်ခြင်ရန် အခွင့်အရေးတစ်ခု ဖြစ်လာနိုင်ပါသည်။
+</p>
 
-    <a href="/my/blog/feeding-stray-dogs-and-cats.html">
-        ဆောင်းပါးအပြည့်အစုံ ဖတ်ရှုရန်
-    </a>
-</section>
+<p>
+အချို့သော ဆောင်းပါးများသည် ကိုယ်တွေ့အတွေးအမြင်များ ဖြစ်ပါသည်။
+အခြားဆောင်းပါးများတွင် လေ့လာတွေ့ရှိချက်များ၊
+လက်တွေ့အသုံးဝင်သော အကြံပြုချက်များ၊ ဓာတ်ပုံများ၊
+ပန်းချီပုံများ သို့မဟုတ် နေ့စဉ်ဘဝအတွေ့အကြုံများမှ
+သင်ယူရရှိခဲ့သည့် အကြောင်းအရာများကို မျှဝေထားပါသည်။
+</p>
 
-<section>
-    <h2>အခြားဖတ်ရှုရန် ဆောင်းပါးများ</h2>
-
-    <h3>ငှက်များကို ဂရုတစိုက် အစာကျွေးခြင်း</h3>
-
-    <p>
-        ငှက်များကို အစာကျွေးခြင်းသည် သဘာဝနှင့် ပိုမိုနီးကပ်စွာ
-        ဆက်သွယ်နိုင်သော နည်းလမ်းတစ်ခုဖြစ်သည်။
-        သို့သော် သင့်လျော်သော အစာကို ရွေးချယ်ခြင်း၊
-        သန့်ရှင်းမှုကို ထိန်းသိမ်းခြင်းနှင့် ငှက်များ၏
-        သဘာဝအပြုအမူများကို မနှောင့်ယှက်ခြင်းတို့ကို
-        သတိပြုသင့်ပါသည်။
-    </p>
-
-    <a href="/my/blog/feeding-birds-with-care.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>ကျန်းမာရေးနှင့် ရေရှည်တည်တံ့သော နေထိုင်မှု</h3>
-
-    <p>
-        ကျန်းမာသော နေထိုင်မှုပုံစံနှင့် သဘာဝပတ်ဝန်းကျင်ကို
-        ဂရုစိုက်ခြင်းတို့သည် တစ်ခုနှင့်တစ်ခု ဆက်စပ်နေပါသည်။
-        နေ့စဉ်ဘဝတွင် ရွေးချယ်မှုအသေးစားများကို
-        ပိုမိုသတိရှိစွာ ပြုလုပ်ခြင်းဖြင့် မိမိ၏ ကျန်းမာရေးနှင့်
-        ကမ္ဘာမြေ၏ အနာဂတ်ကို အထောက်အကူပြုနိုင်ပါသည်။
-    </p>
-
-    <a href="/my/blog/wellness-and-sustainability.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>သစ်ပင်များသည် အဘယ်ကြောင့် အရေးကြီးသနည်း</h3>
-
-    <p>
-        သစ်ပင်များသည် လေထုကို သန့်ရှင်းစေခြင်း၊
-        အရိပ်ပေးခြင်း၊ သက်ရှိများအတွက် နေထိုင်ရာ ပတ်ဝန်းကျင်
-        ဖန်တီးပေးခြင်းနှင့် ရာသီဥတုကို ထိန်းညှိရာတွင်
-        အရေးပါသော အခန်းကဏ္ဍမှ ပါဝင်ကြသည်။
-    </p>
-
-    <a href="/my/blog/why-trees-matter.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>ဘုန်းတော်ကြီးကျောင်းတစ်ခုတွင် သတိရှိမှုနှင့် ကျေးဇူးတင်စိတ်ကို ခံစားခဲ့ရသော အခိုက်အတန့်</h3>
-
-    <p>
-        တစ်ခါတစ်ရံ သဘာဝတရားနှင့် အနီးကပ်ရှိနေခြင်းသည်
-        မိမိ၏ စိတ်ကို ငြိမ်းချမ်းစေပြီး လက်ရှိအခိုက်အတန့်ကို
-        သတိပြုမိစေရန် ကူညီပေးနိုင်ပါသည်။
-        အိမ်မြှောင်တစ်ကောင်ကို တွေ့မြင်ခဲ့ရသော ရိုးရှင်းသည့်
-        အခိုက်အတန့်တစ်ခုမှလည်း သတိရှိမှုနှင့်
-        ကျေးဇူးတင်စိတ်ကို သင်ယူနိုင်ပါသည်။
-    </p>
-
-    <a href="/my/blog/a-moment-of-mindfulness-and-appreciation.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>တောမီးလောင်ကျွမ်းမှုကို မည်သို့ကာကွယ်နိုင်သနည်း</h3>
-
-    <p>
-        တောမီးများသည် သစ်တောများ၊ တောရိုင်းတိရစ္ဆာန်များ၊
-        လူနေအိမ်များနှင့် လေထုအရည်အသွေးကို
-        ပြင်းထန်စွာ ထိခိုက်စေနိုင်ပါသည်။
-        မီးကို သတိထားအသုံးပြုခြင်းနှင့် သဘာဝပတ်ဝန်းကျင်ကို
-        တာဝန်ယူစွာ ထိန်းသိမ်းခြင်းတို့သည်
-        တောမီးအန္တရာယ်ကို လျှော့ချရာတွင် အရေးကြီးပါသည်။
-    </p>
-
-    <a href="/my/blog/how-to-prevent-forest-fires.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>အပင်များကို မည်သို့စိုက်ပျိုးမည်နည်း</h3>
-
-    <p>
-        အပင်စိုက်ပျိုးခြင်းသည် သဘာဝနှင့် ဆက်သွယ်နိုင်သော
-        ရိုးရှင်းပြီး အကျိုးရှိသည့် လုပ်ဆောင်မှုတစ်ခုဖြစ်သည်။
-        အပင်အမျိုးအစားနှင့် ကိုက်ညီသော မြေ၊ ရေ၊ နေရောင်ခြည်
-        နှင့် ပြုစုစောင့်ရှောက်မှုတို့ကို ပေးရန် လိုအပ်ပါသည်။
-    </p>
-
-    <a href="/my/blog/how-to-plant.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>သစ်ပင်တစ်ပင်ကို မည်သို့စိုက်ပျိုးမည်နည်း</h3>
-
-    <p>
-        သစ်ပင်တစ်ပင် စိုက်ပျိုးခြင်းသည် အနာဂတ်မျိုးဆက်များအတွက်
-        ပိုမိုစိမ်းလန်းသော ပတ်ဝန်းကျင်တစ်ခု ဖန်တီးပေးနိုင်သော
-        အဓိပ္ပာယ်ရှိသည့် လုပ်ဆောင်မှုတစ်ခုဖြစ်သည်။
-        သင့်လျော်သော သစ်ပင်အမျိုးအစားကို ရွေးချယ်ပြီး
-        စိုက်ပျိုးပြီးနောက် ဆက်လက်ပြုစုစောင့်ရှောက်ရန်
-        အရေးကြီးပါသည်။
-    </p>
-
-    <a href="/my/blog/how-to-plant-a-tree.html">ဆက်လက်ဖတ်ရှုရန်</a>
-
-    <h3>Aloe Vera ရှားစောင်းလက်ပတ်ကို မည်သို့စိုက်ပျိုးမည်နည်း</h3>
-
-    <p>
-        ရှားစောင်းလက်ပတ်သည် ပြုစုရလွယ်ကူသော အပင်တစ်မျိုးဖြစ်သည်။
-        နေရောင်ခြည် လုံလောက်စွာရရှိသော နေရာနှင့်
-        ရေစီးဆင်းမှုကောင်းသော မြေကို ရွေးချယ်ပေးခြင်းဖြင့်
-        ကျန်းမာစွာ ကြီးထွားနိုင်ပါသည်။
-    </p>
-
-    <a href="/my/blog/how-to-grow-aloe-vera.html">ဆက်လက်ဖတ်ရှုရန်</a>
+<p>
+အရာအားလုံးအတွက် အဖြေရှိနေရန် ရည်ရွယ်ခြင်းမဟုတ်ပါ။
+စူးစမ်းလိုစိတ်၊ သတိရှိမှုနှင့် သာမန်ဘဝအကြောင်းအရာများကို
+ပိုမိုနက်ရှိုင်းစွာ လေ့လာကြည့်လိုသော စိတ်ထားတို့ကို
+အားပေးရန် ရည်ရွယ်ပါသည်။
+</p>
 
 </section>
 
-<section>
-    <h2>နောက်ဆုံးအတွေး</h2>
+<!-- LATEST JOURNAL ENTRIES -->
 
-    <p>
-        သတိရှိမှု၊ ကြင်နာမှုနှင့် သဘာဝကို ဂရုစိုက်မှုတို့သည်
-        နေ့စဉ်ဘဝတွင် လက်တွေ့ကျင့်သုံးနိုင်သော တန်ဖိုးများဖြစ်သည်။
-        သေးငယ်သော လုပ်ဆောင်မှုတစ်ခုစီသည်
-        မိမိနှင့် အခြားသူများအတွက်သာမက
-        ကျွန်ုပ်တို့ မျှဝေနေထိုင်ရာ ကမ္ဘာမြေအတွက်ပါ
-        ကောင်းကျိုးများ ဖြစ်ပေါ်စေနိုင်ပါသည်။
-    </p>
+<section class="section">
+
+<h2>📖 နောက်ဆုံးထုတ်ဝေထားသော ဆောင်းပါးများ</h2>
+
+<p class="section-intro">
+အသစ်ဆုံး အတွေးအမြင်ဆောင်းပါးမှစတင်၍ ယခင်ထုတ်ဝေထားသော
+ဆောင်းပါးများကိုလည်း ဖတ်ရှုလေ့လာနိုင်ပါသည်။
+</p>
+
+<!--
+FEATURED ARTICLE:
+ဆောင်းပါးအသစ်တစ်ပုဒ် ထုတ်ဝေသည့်အခါ ၎င်း၏ featured card ကို ဤနေရာတွင် ထည့်ပါ။
+ယခင် featured article ကို အောက်ပါ journal-grid အတွင်းသို့ ရွှေ့ပါ။
+-->
+
+<div class="featured-article">
+
+<img
+class="featured-image"
+src="/images/Kind Woman Feeding Stray Animals.png"
+alt="လေလွင့်ခွေးနှင့် ကြောင်များကို ကြင်နာစွာ စောင့်ရှောက်ခြင်း">
+
+<div class="featured-content">
+
+<span class="featured-label">🌟 အထူးဖော်ပြထားသော ဆောင်းပါး</span>
+
+<h3>🐕🐈 လေလွင့်ခွေးနှင့် ကြောင်များကို ကြင်နာမှုနှင့် တာဝန်ယူမှုဖြင့် အစာကျွေးခြင်း</h3>
+
+<p>
+လေလွင့်ခွေးနှင့် ကြောင်များကို အစာကျွေးခြင်းသည်
+ကရုဏာတရားကို ဖော်ပြသော လုပ်ရပ်တစ်ခုဖြစ်သော်လည်း
+တာဝန်ယူမှုရှိသော ကြင်နာမှုဆိုသည်မှာ အစာကျွေးရုံမျှသာ
+မဟုတ်ပါ။ သင့်လျော်သော အစားအစာ၊ သန့်ရှင်းသော
+အစာကျွေးရာနေရာ၊ တစ်ကိုယ်ရေသန့်ရှင်းမှုနှင့်
+လူသားဆန်သော တိရစ္ဆာန်စောင့်ရှောက်ရေး နည်းလမ်းများသည်
+တိရစ္ဆာန်များနှင့် လူမှုအသိုင်းအဝိုင်းနှစ်ဖက်စလုံးကို
+ကာကွယ်ရာတွင် မည်သို့အထောက်အကူပြုနိုင်သည်ကို
+လေ့လာကြည့်ပါ။ ဖြစ်နိုင်သော ကျန်းမာရေးအန္တရာယ်များနှင့်
+ကာကွယ်ဆေးထိုးခြင်း၊ မျိုးပွားမှုထိန်းချုပ်ခြင်း၊
+တိရစ္ဆာန်ဆရာဝန်၏ စောင့်ရှောက်မှုတို့သည်
+တာဝန်ယူမှုရှိသော တိရစ္ဆာန်စောင့်ရှောက်ရေးတွင်
+အဘယ်ကြောင့် အရေးကြီးသည်ကိုလည်း ဖတ်ရှုနိုင်ပါသည်။
+</p>
+
+<a class="read-link" href="/my/blog/feeding-stray-dogs-and-cats.html">
+ဆောင်းပါးဖတ်ရန် →
+</a>
+
+</div>
+</div>
+
+<!-- OLDER JOURNAL ENTRIES -->
+
+<div class="journal-grid">
+
+<div class="journal-card">
+
+<h3>🐦 ငှက်များနှင့် ခိုများကို ကြင်နာစွာ ဂရုစိုက်ပြီး အစာကျွေးခြင်း</h3>
+
+<p>
+ငှက်များကို အစာကျွေးခြင်းသည် ရိုးရှင်းသော
+ကြင်နာမှုလုပ်ရပ်တစ်ခုဟု ထင်ရသော်လည်း
+တာဝန်ယူမှုရှိသော စောင့်ရှောက်မှုအတွက်
+၎င်းတို့၏ သဘာဝလိုအပ်ချက်များနှင့် အပြုအမူများကို
+နားလည်ရန် လိုအပ်ပါသည်။
+ပေါင်မုန့်သည် ခိုများအတွက် အဓိကအစားအစာအဖြစ်
+အဘယ်ကြောင့် မသင့်လျော်သည်၊ မည်သည့်အစားအစာများက
+ပိုမိုသင့်လျော်နိုင်သည်၊ သန့်ရှင်းသောရေ၊
+သင့်လျော်သော အစာကျွေးနည်းများနှင့် ငှက်များအတွက်
+သင့်တော်သော ပတ်ဝန်းကျင်တို့က တောရိုင်းတိရစ္ဆာန်များကို
+တာဝန်ယူမှုရှိစွာ ကူညီထောက်ပံ့နိုင်ပုံတို့ကို
+လေ့လာကြည့်ပါ။
+</p>
+
+<a href="/my/blog/feeding-birds-with-care.html">
+ဆောင်းပါးဖတ်ရန် →
+</a>
+
+</div>
+
+<div class="journal-card">
+<h3>🌿 ကျန်းမာပျော်ရွှင်မှုနှင့် ရေရှည်တည်တံ့မှု</h3>
+
+<p>
+မိမိ၏ ကျန်းမာပျော်ရွှင်မှု၊ နေ့စဉ်ဘဝရွေးချယ်မှုများနှင့်
+မိမိပတ်ဝန်းကျင်တို့အကြား ဆက်နွယ်မှုကို
+ပြန်လည်ဆင်ခြင်ထားသော အတွေးအမြင်တစ်ခု။
+</p>
+
+<a href="/my/blog/wellness-and-sustainability.html">
+အတွေးအမြင်ဖတ်ရန် →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🌳 သစ်ပင်များသည် အဘယ်ကြောင့် အရေးကြီးသနည်း။</h3>
+
+<p>
+သစ်ပင်များ၊ ၎င်းတို့၏ သက်ရှိပတ်ဝန်းကျင်နှင့်
+အသေးစိတ်အချက်အလက်လေးများကို သတိပြုမိခြင်းက
+ကျွန်ုပ်တို့၏ မြင်တွေ့ပုံကို မည်သို့ပြောင်းလဲစေနိုင်သည်ကို
+ပိုမိုနီးကပ်စွာ လေ့လာကြည့်ပါ။
+</p>
+
+<a href="/my/blog/why-trees-matter.html">
+ဆောင်းပါးဖတ်ရန် →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🙏🌿 သတိတရားနှင့် ကျေးဇူးတင်တန်ဖိုးထားမှု အခိုက်အတန့်</h3>
+
+<p>
+ဘုန်းကြီးကျောင်းတစ်ကျောင်းအနီး ပုတ်သင်ကြီးတစ်ကောင်နှင့်
+အေးချမ်းစွာ တွေ့ဆုံခဲ့ရသည့် အတွေ့အကြုံလေးမှတစ်ဆင့်
+သတိတရား၊ ကျေးဇူးတင်တန်ဖိုးထားမှုနှင့်
+သက်ရှိအားလုံးအပေါ် မေတ္တာထားခြင်းတို့ကို
+ပြန်လည်ဆင်ခြင်ထားပါသည်။
+</p>
+
+<a href="/my/blog/a-moment-of-mindfulness-and-appreciation.html">
+အတွေးအမြင်ဖတ်ရန် →
+</a>
+</div>
+
+<div class="journal-card">
+<h3>🔥 တောမီးလောင်ကျွမ်းမှုများကို မည်သို့ကာကွယ်နိုင်မည်နည်း။</h3>
+
+<p>
+တောမီးလောင်ကျွမ်းမှု အန္တရာယ်ကို လျှော့ချရန်၊
+သစ်တောများနှင့် တောရိုင်းတိရစ္ဆာန်များကို ကာကွယ်ရန်
+လက်တွေ့အသုံးဝင်သော နည်းလမ်းများကို လေ့လာပါ။
+ထို့အပြင် ယုံကြည်စိတ်ချရသော မီးဘေးသတင်းအချက်အလက်များနှင့်
+သမိုင်းမှတ်တမ်းအချက်အလက်များကိုလည်း
+ရှာဖွေလေ့လာနိုင်ပါသည်။
+</p>
+
+<a href="/my/blog/how-to-prevent-forest-fires.html">
+ဆောင်းပါးဖတ်ရန် →
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- GROWING GUIDES -->
+
+<section class="section">
+
+<h2>🌱 အပင်စိုက်ပျိုးရေး လမ်းညွှန်များ</h2>
+
+<p class="section-intro">
+အပင်များကို စိုက်ပျိုးခြင်းနှင့် တိုက်ရိုက်လေ့လာကြည့်ရှုခြင်း၊
+နေ့စဉ်အတွေ့အကြုံများမှတစ်ဆင့် သင်ယူခြင်းတို့အတွက်
+ရိုးရှင်းသော လမ်းညွှန်များ။
+</p>
+
+<div class="guides-grid">
+
+<div class="guide-card">
+<h3>🌱 အပင်စိုက်ပျိုးနည်း</h3>
+
+<p>
+အိမ်တွင်ဖြစ်စေ၊ နေရာကျဉ်းကျဉ်းလေးတွင်ဖြစ်စေ
+အပင်များကို စိုက်ပျိုးပြီး ပြုစုစောင့်ရှောက်ရန်
+အခြေခံမိတ်ဆက်လမ်းညွှန်။
+</p>
+
+<a href="/my/blog/how-to-plant.html">
+လမ်းညွှန်ဖတ်ရန် →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌳 သစ်ပင်စိုက်ပျိုးနည်း</h3>
+
+<p>
+သစ်ပင်တစ်ပင်ကို စိုက်ပျိုးပြီး
+ပတ်ဝန်းကျင်အသစ်တွင် ကောင်းမွန်စွာ အမြစ်တွယ်ကြီးထွားနိုင်ရန်
+ကူညီပေးမည့် ရိုးရှင်းသော အဆင့်များ။
+</p>
+
+<a href="/my/blog/how-to-plant-a-tree.html">
+လမ်းညွှန်ဖတ်ရန် →
+</a>
+</div>
+
+<div class="guide-card">
+<h3>🌿 ရှားစောင်းလက်ပတ် စိုက်ပျိုးနည်း</h3>
+
+<p>
+နေ့စဉ်အပင်ပြုစုစောင့်ရှောက်မှုနှင့်
+သတိပြုလေ့လာခြင်းတို့ကို အခြေခံထားသော
+လက်တွေ့အသုံးဝင်သည့် စိုက်ပျိုးရေးလမ်းညွှန်။
+</p>
+
+<a href="/my/blog/how-to-grow-aloe-vera.html">
+လမ်းညွှန်ဖတ်ရန် →
+</a>
+</div>
+
+</div>
+
+<p class="section-intro" style="margin-top:25px;">
+အတွေ့အကြုံအသစ်များနှင့် လက်တွေ့လေ့လာတွေ့ရှိချက်များကို
+မျှဝေလာသည်နှင့်အမျှ အပင်စိုက်ပျိုးရေး လမ်းညွှန်အသစ်များကိုလည်း
+အချိန်နှင့်အမျှ ထပ်မံထည့်သွင်းသွားနိုင်ပါသည်။
+</p>
+
+</section>
+
+<!-- CLOSING THOUGHT -->
+
+<section class="simple-thought">
+
+<h2>🌱 ရိုးရှင်းသော အတွေးအမြင်လေးတစ်ခု</h2>
+
+<p>
+အရာအားလုံးကို အလျင်စလို လုပ်ဆောင်ရန် မလိုအပ်ပါ။
+တစ်ခါတစ်ရံ သာမန်အရာလေးတစ်ခုကို ပိုမိုနီးကပ်စွာ
+သတိပြုကြည့်ရှုခြင်းကပင် အသစ်အဆန်းတစ်ခုကို
+သတိထားမိစေရန် လုံလောက်ပါသည်။
+</p>
+
 </section>
 
 </main>
 
-<footer>
-    <p>Yangocean — သတိရှိသော နေထိုင်မှု၊ သဘာဝနှင့် ဆက်သွယ်မှု၊ ရေရှည်တည်တံ့မှု</p>
+<!-- FOOTER -->
 
-    <nav>
-        <a href="/my/index.html">ပင်မစာမျက်နှာ</a>
-        <a href="/my/mindfulness.html">သတိရှိမှု</a>
-        <a href="/my/mindful-ethical-living.html">ကျင့်ဝတ်နှင့်ညီသော နေထိုင်မှု</a>
-        <a href="/my/mindful-eating.html">သတိရှိစွာ စားသောက်ခြင်း</a>
-        <a href="/my/nature.html">သဘာဝနှင့် ဆက်သွယ်မှု</a>
-        <a href="/my/eco.html">ပတ်ဝန်းကျင်ဆိုင်ရာ အသိပညာ</a>
-        <a href="/my/apps.html">အက်ပ်များ</a>
-    </nav>
+<footer>
+
+<div>
+<a href="/my/">ပင်မစာမျက်နှာ</a>
+<a href="/my/mindfulness.html">သတိတရားနှင့် ဓမ္မ</a>
+<a href="/my/nature-connection.html">သဘာဝနှင့် ဆက်သွယ်ခြင်း</a>
+<a href="/my/blog.html">ဆောင်းပါးများ</a>
+<a href="/my/apps.html">ဆက်စပ်အက်ပ်များ</a>
+<a href="/my/contact.html">ဆက်သွယ်ရန်</a>
+</div>
+
+<p>
+&copy; 2026 • သတိတရားဖြင့် နေထိုင်ခြင်း • သဘာဝ • နေ့စဉ်ဘဝ ရေရှည်တည်တံ့မှု
+</p>
+
 </footer>
 
+<!-- READ ALOUD -->
+
 <script>
-function readAloud() {
-    const text = document.querySelector("main").innerText;
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "my-MM";
-    speech.rate = 0.9;
-    window.speechSynthesis.cancel();
-    window.speechSynthesis.speak(speech);
-}
+(function () {
+    if (!("speechSynthesis" in window)) {
+        return;
+    }
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "read-aloud-btn";
+    button.textContent = "🔊 အသံထွက်ဖတ်ရန်";
+    button.setAttribute("aria-label", "ဆောင်းပါးများကို အသံထွက်ဖတ်ရန်");
+
+    document.body.appendChild(button);
+
+    let speaking = false;
+
+    button.addEventListener("click", function () {
+        if (speaking) {
+            speechSynthesis.cancel();
+            speaking = false;
+            button.textContent = "🔊 အသံထွက်ဖတ်ရန်";
+            return;
+        }
+
+        const elements = document.querySelectorAll(
+            "#content-to-read h1, " +
+            "#content-to-read h2, " +
+            "#content-to-read h3, " +
+            "#content-to-read p"
+        );
+
+        const text = Array.from(elements)
+            .map(el => el.innerText.trim())
+            .filter(Boolean)
+            .join(". ");
+
+        if (!text) {
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = "my-MM";
+        utterance.rate = 0.95;
+
+        utterance.onstart = function () {
+            speaking = true;
+            button.textContent = "⏹ ဖတ်ရှုမှုရပ်ရန်";
+        };
+
+        utterance.onend = function () {
+            speaking = false;
+            button.textContent = "🔊 အသံထွက်ဖတ်ရန်";
+        };
+
+        utterance.onerror = function () {
+            speaking = false;
+            button.textContent = "🔊 အသံထွက်ဖတ်ရန်";
+        };
+
+        speechSynthesis.cancel();
+        speechSynthesis.speak(utterance);
+    });
+})();
 </script>
 
 </body>
