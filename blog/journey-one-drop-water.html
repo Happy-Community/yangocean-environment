@@ -147,6 +147,148 @@ href="/styles.css">
     margin: 25px 0;
 }
 
+
+/* Water journey article layout */
+#content-to-read {
+    width: min(100% - 32px, 920px);
+    margin: 32px auto;
+    color: #34463e;
+    line-height: 1.85;
+}
+
+#content-to-read > section.card {
+    background: #fff;
+    border: 1px solid #e1ebe5;
+    border-radius: 18px;
+    padding: clamp(20px, 4vw, 36px);
+    margin: 22px 0;
+    box-shadow: 0 5px 20px rgba(35,75,55,.06);
+}
+
+#content-to-read > section.card:first-child {
+    background: linear-gradient(145deg,#eef8f3,#f5f9fc);
+    text-align: center;
+    padding-top: 42px;
+    padding-bottom: 42px;
+}
+
+#content-to-read h1 {
+    color: #28634f;
+    font-size: clamp(1.8rem,5vw,2.6rem);
+    line-height: 1.25;
+}
+
+#content-to-read h2 {
+    color: #34765e;
+    font-size: clamp(1.3rem,3.5vw,1.75rem);
+    line-height: 1.35;
+}
+
+#content-to-read .article-video {
+    width: 100%;
+    max-width: 760px;
+    display: block;
+    margin: 24px auto;
+    border-radius: 14px;
+}
+
+#content-to-read .water-cycle {
+    background: #f1f8f5;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+#content-to-read .water-cycle p {
+    color: #34765e;
+    font-weight: 600;
+}
+
+#content-to-read .water-formula {
+    background: #f1f8f5;
+    border-left: 4px solid #75aa91;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+#content-to-read .highlight {
+    color: #28634f;
+}
+
+.read-aloud-panel {
+    max-width: 920px;
+    margin: 26px auto;
+    padding: 20px;
+    border: 1px solid #dce9e1;
+    border-radius: 16px;
+    background: #f3f8f5;
+    text-align: center;
+}
+
+.read-aloud-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.read-aloud-actions button {
+    min-width: 145px;
+    min-height: 46px;
+    border: 0;
+    border-radius: 25px;
+    padding: 11px 22px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#readPauseButton {
+    color: white;
+    background: #34765e;
+}
+
+#stopReadingButton {
+    color: #365747;
+    background: #e0ebe4;
+}
+
+.read-aloud-actions button:disabled {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
+#readAloudStatus {
+    display: block;
+    min-height: 24px;
+    margin-top: 12px;
+    color: #526c5e;
+    font-size: .9rem;
+}
+
+@media (max-width: 600px) {
+    #content-to-read {
+        width: calc(100% - 24px);
+        margin: 18px auto;
+    }
+
+    #content-to-read > section.card {
+        padding: 20px 17px;
+        margin: 16px 0;
+    }
+
+    .read-aloud-panel {
+        margin: 20px 12px;
+    }
+
+    .read-aloud-actions {
+        flex-direction: column;
+    }
+
+    .read-aloud-actions button {
+        width: 100%;
+    }
+}
+
 </style>
 
 <!-- Google AdSense -->
@@ -273,30 +415,22 @@ and the water resources on which life depends.
      READ ALOUD
 ========================================================= -->
 
-<div class="tts-controls">
 
-<button
-type="button"
-class="tts-btn play"
-onclick="togglePlay()"
-aria-label="Play or resume reading">
-🔊 </button>
-
-<button
-type="button"
-class="tts-btn pause"
-onclick="pauseReading()"
-aria-label="Pause reading">
-⏸ </button>
-
-<button
-type="button"
-class="tts-btn stop"
-onclick="stopReading()"
-aria-label="Stop reading">
-⏹ </button>
-
+<div class="read-aloud-panel">
+    <p>Listen to the journey of one drop of water.</p>
+    <div class="read-aloud-actions">
+        <button type="button" id="readPauseButton">
+            ▶ Read Aloud
+        </button>
+        <button type="button" id="stopReadingButton" disabled>
+            ⏹ Stop
+        </button>
+    </div>
+    <span id="readAloudStatus" role="status" aria-live="polite">
+        Ready to read.
+    </span>
 </div>
+
 
 <!-- =========================================================
      THE WATER CYCLE
@@ -640,120 +774,164 @@ animals can continue to depend on it tomorrow.
 ========================================================= -->
 
 <script>
+(function () {
+    const readButton = document.getElementById("readPauseButton");
+    const stopButton = document.getElementById("stopReadingButton");
+    const status = document.getElementById("readAloudStatus");
+    const speech = window.speechSynthesis;
 
-/* Android-friendly sentence-by-sentence Read Aloud */
+    let chunks = [];
+    let currentChunk = 0;
+    let isReading = false;
+    let isPaused = false;
+    let runId = 0;
 
-const speech = window.speechSynthesis;
+    function updateStatus(message) {
+        status.textContent = message;
+    }
 
-let speechChunks = [];
-let currentChunk = 0;
-let isReading = false;
-let isPaused = false;
+    function updateButtons() {
+        readButton.textContent = isPaused
+            ? "▶ Resume"
+            : isReading
+                ? "⏸ Pause"
+                : "▶ Read Aloud";
 
-function getReadableText() {
-    const content = document.getElementById("content-to-read");
-    if (!content) return "";
+        stopButton.disabled = !isReading;
+    }
 
-    const elements = content.querySelectorAll("h1, h2, h3, p");
+    function prepareText() {
+        const article = document.getElementById("content-to-read");
+        if (!article) return false;
 
-    return Array.from(elements)
-        .map(function(element) {
-            return (element.innerText || element.textContent || "").trim();
-        })
-        .filter(function(text) {
-            return text.length > 0;
-        })
-        .join(" ")
-        .replace(/\s+/g, " ")
-        .trim();
-}
+        const copy = article.cloneNode(true);
+        copy.querySelectorAll(
+            ".read-aloud-panel, .tts-controls, script, style"
+        ).forEach(function (element) {
+            element.remove();
+        });
 
-function speakNextChunk() {
-    if (!isReading || isPaused) return;
+        const text = (copy.innerText || copy.textContent || "")
+            .replace(/\s+/g, " ")
+            .trim();
 
-    if (currentChunk >= speechChunks.length) {
+        const sentences = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
+        chunks = [];
+
+        sentences.forEach(function (sentence) {
+            sentence = sentence.trim();
+
+            while (sentence.length > 200) {
+                let splitAt = sentence.lastIndexOf(" ", 200);
+                if (splitAt < 80) splitAt = 200;
+
+                chunks.push(sentence.slice(0, splitAt).trim());
+                sentence = sentence.slice(splitAt).trim();
+            }
+
+            if (sentence) chunks.push(sentence);
+        });
+
+        currentChunk = 0;
+        return chunks.length > 0;
+    }
+
+    function speakNext(id) {
+        if (id !== runId || !isReading || isPaused) return;
+
+        if (currentChunk >= chunks.length) {
+            isReading = false;
+            isPaused = false;
+            updateButtons();
+            updateStatus("Finished reading. Thank you for listening.");
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(chunks[currentChunk]);
+        utterance.lang = "en-US";
+        utterance.rate = 0.9;
+        utterance.pitch = 1;
+
+        utterance.onend = function () {
+            if (id !== runId || !isReading || isPaused) return;
+            currentChunk++;
+            speakNext(id);
+        };
+
+        utterance.onerror = function (event) {
+            if (id !== runId || isPaused ||
+                event.error === "canceled" ||
+                event.error === "interrupted") return;
+
+            isReading = false;
+            updateButtons();
+            updateStatus("Reading was interrupted. Please try again.");
+        };
+
+        speech.speak(utterance);
+    }
+
+    readButton.addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+            updateStatus("Read Aloud is not supported by this browser.");
+            return;
+        }
+
+        if (isReading && !isPaused) {
+            isPaused = true;
+            runId++;
+            speech.cancel();
+            updateButtons();
+            updateStatus("Paused. Press Resume to continue.");
+            return;
+        }
+
+        if (isPaused) {
+            isPaused = false;
+            updateButtons();
+            updateStatus("Resuming from the interrupted sentence.");
+            const id = runId;
+            speech.cancel();
+            window.setTimeout(function () {
+                speakNext(id);
+            }, 150);
+            return;
+        }
+
+        if (!prepareText()) {
+            updateStatus("No article text is available.");
+            return;
+        }
+
+        runId++;
+        const id = runId;
+        speech.cancel();
+        isReading = true;
+        isPaused = false;
+        updateButtons();
+        updateStatus("Reading the article aloud.");
+
+        speakNext(id);
+    });
+
+    stopButton.addEventListener("click", function () {
+        runId++;
+        speech.cancel();
         isReading = false;
         isPaused = false;
-        return;
-    }
+        currentChunk = 0;
+        chunks = [];
+        updateButtons();
+        updateStatus("Reading stopped.");
+    });
 
-    const utterance = new SpeechSynthesisUtterance(
-        speechChunks[currentChunk].trim()
-    );
-
-    utterance.lang = document.documentElement.lang || "en";
-    utterance.rate = 0.95;
-    utterance.pitch = 1;
-    utterance.volume = 1;
-
-    utterance.onend = function() {
-        if (!isReading || isPaused) return;
-        currentChunk++;
-        speakNextChunk();
-    };
-
-    utterance.onerror = function(event) {
-        if (!isReading || isPaused ||
-            event.error === "canceled" ||
-            event.error === "interrupted") return;
-
-        isReading = false;
-    };
-
-    speech.speak(utterance);
-}
-
-function togglePlay() {
-    if (!("speechSynthesis" in window)) {
-        alert("Sorry, your browser does not support Read Aloud.");
-        return;
-    }
-
-    if (isReading && !isPaused) return;
-
-    if (isPaused) {
-        isPaused = false;
-        speakNextChunk();
-        return;
-    }
-
-    const text = getReadableText();
-    if (!text) return;
-
-    speech.cancel();
-
-    speechChunks = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
-    currentChunk = 0;
-    isReading = true;
-    isPaused = false;
-
-    speakNextChunk();
-}
-
-function pauseReading() {
-    if (!isReading || isPaused) return;
-
-    isPaused = true;
-    speech.cancel();
-}
-
-function stopReading() {
-    isReading = false;
-    isPaused = false;
-    currentChunk = 0;
-    speechChunks = [];
-
-    if ("speechSynthesis" in window) {
+    window.addEventListener("pagehide", function () {
+        runId++;
         speech.cancel();
-    }
-}
+    });
 
-window.addEventListener("pagehide", function() {
-    if ("speechSynthesis" in window) {
-        speech.cancel();
-    }
-});
-
+    updateButtons();
+})();
 </script>
 
 </body>
