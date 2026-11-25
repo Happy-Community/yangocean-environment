@@ -237,10 +237,10 @@ crossorigin="anonymous"></script>
     </p>
 
     <div class="read-aloud-controls" aria-label="Read aloud controls">
-        <button type="button" onclick="startReading()">🔊 Read Aloud</button>
-        <button type="button" onclick="pauseReading()">⏸ Pause / Resume</button>
-        <button type="button" onclick="stopReading()">⏹ Stop</button>
-    </div>
+    <button type="button" id="readButton">▶ Read Aloud</button>
+    <button type="button" id="pauseResumeButton" disabled>⏸ Pause</button>
+    <button type="button" id="stopButton" disabled>⏹ Stop</button>
+</div>
 
     <p id="readingStatus" class="reading-status" aria-live="polite">
         Select Read Aloud to listen to the article.
@@ -585,95 +585,160 @@ crossorigin="anonymous"></script>
 </footer>
 
 <script>
-document.getElementById("currentYear").textContent =
-    new Date().getFullYear();
 
-let currentUtterance = null;
+/* Android-friendly sentence-by-sentence Read Aloud */
+(function () {
+    const readButton = document.getElementById("readButton");
+    const pauseButton = document.getElementById("pauseResumeButton");
+    const stopButton = document.getElementById("stopButton");
 
-function getArticleText() {
-    const article = document.querySelector(".article-container");
-    const copy = article.cloneNode(true);
+    const yearElement =
+        document.getElementById("current-year") ||
+        document.getElementById("currentYear") ||
+        document.getElementById("year");
 
-    copy.querySelectorAll(
-        ".read-aloud-controls, #readingStatus, .article-breadcrumb"
-    ).forEach(function (element) {
-        element.remove();
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    if (!readButton || !pauseButton || !stopButton) return;
+
+    let chunks = [];
+    let currentChunk = 0;
+    let isReading = false;
+    let isPaused = false;
+
+    const status =
+        document.getElementById("readAloudStatus") ||
+        document.getElementById("readingStatus");
+
+    function updateStatus(message) {
+        if (status) status.textContent = message;
+    }
+
+    function updateButtons() {
+        readButton.disabled = isReading;
+        pauseButton.disabled = !isReading;
+        stopButton.disabled = !isReading;
+
+        pauseButton.textContent =
+            isPaused ? "▶ Resume" : "⏸ Pause";
+    }
+
+    function prepareSpeech() {
+        const article = document.querySelector(".article-container");
+        if (!article) return false;
+
+        const copy = article.cloneNode(true);
+
+        copy.querySelectorAll(
+            ".read-aloud, .read-aloud-controls, .tts-controls, " +
+            "#readAloudStatus, #readingStatus, .article-breadcrumb, " +
+            "script, style"
+        ).forEach(function (element) {
+            element.remove();
+        });
+
+        const text = (copy.innerText || copy.textContent || "")
+            .replace(/\s+/g, " ")
+            .trim();
+
+        chunks = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
+        currentChunk = 0;
+
+        return chunks.length > 0;
+    }
+
+    function speakNextChunk() {
+        if (!isReading || isPaused) return;
+
+        if (currentChunk >= chunks.length) {
+            isReading = false;
+            isPaused = false;
+            updateButtons();
+            updateStatus("Finished reading the article.");
+            return;
+        }
+
+        const utterance = new SpeechSynthesisUtterance(
+            chunks[currentChunk].trim()
+        );
+
+        utterance.lang = document.documentElement.lang || "en";
+        utterance.rate = 0.95;
+
+        utterance.onend = function () {
+            if (!isReading || isPaused) return;
+            currentChunk++;
+            speakNextChunk();
+        };
+
+        utterance.onerror = function (event) {
+            if (!isReading || isPaused ||
+                event.error === "canceled" ||
+                event.error === "interrupted") return;
+
+            isReading = false;
+            updateButtons();
+            updateStatus("Unable to continue reading. Please try again.");
+        };
+
+        window.speechSynthesis.speak(utterance);
+    }
+
+    readButton.addEventListener("click", function () {
+        if (!("speechSynthesis" in window)) {
+            updateStatus("Read Aloud is not supported by this browser.");
+            return;
+        }
+
+        if (isReading) return;
+
+        if (!prepareSpeech()) {
+            updateStatus("No article text is available to read.");
+            return;
+        }
+
+        window.speechSynthesis.cancel();
+
+        isReading = true;
+        isPaused = false;
+        updateButtons();
+        updateStatus("Reading the article aloud.");
+        speakNextChunk();
     });
 
-    return copy.innerText;
-}
+    pauseButton.addEventListener("click", function () {
+        if (!isReading) return;
 
-function startReading() {
-    if (!("speechSynthesis" in window)) {
-        document.getElementById("readingStatus").textContent =
-            "Read Aloud is not supported by this browser.";
-        return;
-    }
-
-    if (speechSynthesis.paused) {
-        speechSynthesis.resume();
-        document.getElementById("readingStatus").textContent =
-            "Reading resumed.";
-        return;
-    }
-
-    speechSynthesis.cancel();
-
-    currentUtterance = new SpeechSynthesisUtterance(getArticleText());
-    currentUtterance.lang = "en-US";
-    currentUtterance.rate = 0.95;
-
-    currentUtterance.onstart = function () {
-        document.getElementById("readingStatus").textContent =
-            "Reading the article aloud.";
-    };
-
-    currentUtterance.onend = function () {
-        document.getElementById("readingStatus").textContent =
-            "Reading finished.";
-        currentUtterance = null;
-    };
-
-    currentUtterance.onerror = function (event) {
-        if (event.error !== "canceled" && event.error !== "interrupted") {
-            document.getElementById("readingStatus").textContent =
-                "Unable to read aloud. Please try again.";
+        if (!isPaused) {
+            isPaused = true;
+            window.speechSynthesis.cancel();
+            updateButtons();
+            updateStatus("Reading paused.");
+        } else {
+            isPaused = false;
+            updateButtons();
+            updateStatus("Reading resumed.");
+            speakNextChunk();
         }
-        currentUtterance = null;
-    };
+    });
 
-    speechSynthesis.speak(currentUtterance);
-}
+    stopButton.addEventListener("click", function () {
+        isReading = false;
+        isPaused = false;
+        window.speechSynthesis.cancel();
+        updateButtons();
+        updateStatus("Reading stopped.");
+    });
 
-function pauseReading() {
-    if (!("speechSynthesis" in window)) return;
+    window.addEventListener("pagehide", function () {
+        window.speechSynthesis.cancel();
+    });
 
-    if (speechSynthesis.speaking && !speechSynthesis.paused) {
-        speechSynthesis.pause();
-        document.getElementById("readingStatus").textContent =
-            "Reading paused.";
-    } else if (speechSynthesis.paused) {
-        speechSynthesis.resume();
-        document.getElementById("readingStatus").textContent =
-            "Reading resumed.";
-    }
-}
+    updateButtons();
+})();
 
-function stopReading() {
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
-    }
-
-    currentUtterance = null;
-    document.getElementById("readingStatus").textContent =
-        "Reading stopped.";
-}
-
-window.addEventListener("beforeunload", function () {
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
-    }
-});
 </script>
 
 </body>
