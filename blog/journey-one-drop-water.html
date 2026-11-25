@@ -641,139 +641,116 @@ animals can continue to depend on it tomorrow.
 
 <script>
 
-let speech = window.speechSynthesis;
-let utterance = null;
+/* Android-friendly sentence-by-sentence Read Aloud */
 
-
-/*
----------------------------------------------------------
-Collect the complete article.
-
-The script reads all H1, H2, H3 and P elements
-inside #content-to-read.
-
-Navigation, buttons and footer are not included.
----------------------------------------------------------
-*/
+let speechChunks = [];
+let currentChunk = 0;
+let isReading = false;
+let isPaused = false;
 
 function getReadableText() {
+    const content = document.getElementById("content-to-read");
+    if (!content) return "";
 
-    const content =
-        document.getElementById("content-to-read");
-
-    if (!content) {
-        return "";
-    }
-
-    const elements =
-        content.querySelectorAll("h1, h2, h3, p");
+    const elements = content.querySelectorAll("h1, h2, h3, p");
 
     return Array.from(elements)
-
         .map(function(element) {
-
-            return element.innerText.trim();
-
+            return (element.innerText || element.textContent || "").trim();
         })
-
         .filter(function(text) {
-
             return text.length > 0;
-
         })
-
-        .join(". ");
-
+        .join(" ")
+        .replace(/\s+/g, " ")
+        .trim();
 }
 
+function speakNextChunk() {
+    if (!isReading || isPaused) return;
 
-/*
----------------------------------------------------------
-PLAY / RESUME
----------------------------------------------------------
-*/
+    if (currentChunk >= speechChunks.length) {
+        isReading = false;
+        isPaused = false;
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(
+        speechChunks[currentChunk].trim()
+    );
+
+    utterance.lang = document.documentElement.lang || "en";
+    utterance.rate = 0.95;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    utterance.onend = function() {
+        if (!isReading || isPaused) return;
+        currentChunk++;
+        speakNextChunk();
+    };
+
+    utterance.onerror = function(event) {
+        if (!isReading || isPaused ||
+            event.error === "canceled" ||
+            event.error === "interrupted") return;
+
+        isReading = false;
+    };
+
+    speech.speak(utterance);
+}
 
 function togglePlay() {
-
     if (!("speechSynthesis" in window)) {
-
-        alert(
-            "Sorry, your browser does not support Read Aloud."
-        );
-
+        alert("Sorry, your browser does not support Read Aloud.");
         return;
     }
 
-    if (speech.paused) {
+    if (isReading && !isPaused) return;
 
-        speech.resume();
-
-        return;
-    }
-
-    if (speech.speaking) {
-
+    if (isPaused) {
+        isPaused = false;
+        speakNextChunk();
         return;
     }
 
     const text = getReadableText();
+    if (!text) return;
 
-    if (!text) {
+    speech.cancel();
 
-        return;
-    }
+    speechChunks = text.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
+    currentChunk = 0;
+    isReading = true;
+    isPaused = false;
 
-    utterance =
-        new SpeechSynthesisUtterance(text);
-
-    utterance.lang = "en-US";
-
-    utterance.rate = 0.95;
-
-    utterance.pitch = 1;
-
-    utterance.volume = 1;
-
-    speech.speak(utterance);
-
+    speakNextChunk();
 }
-
-
-/*
----------------------------------------------------------
-PAUSE
----------------------------------------------------------
-*/
 
 function pauseReading() {
+    if (!isReading || isPaused) return;
 
-    if (
-        "speechSynthesis" in window &&
-        speech.speaking
-    ) {
-
-        speech.pause();
-
-    }
-
+    isPaused = true;
+    speech.cancel();
 }
-
-
-/*
----------------------------------------------------------
-STOP
----------------------------------------------------------
-*/
 
 function stopReading() {
+    isReading = false;
+    isPaused = false;
+    currentChunk = 0;
+    speechChunks = [];
 
     if ("speechSynthesis" in window) {
-
         speech.cancel();
-
     }
-
 }
+
+window.addEventListener("pagehide", function() {
+    if ("speechSynthesis" in window) {
+        speech.cancel();
+    }
+});
 
 </script>
 
