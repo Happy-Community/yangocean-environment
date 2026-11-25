@@ -350,15 +350,17 @@ voice quality depend on your browser and device.
 </p>
 
 <div class="tts-controls">
-    <button type="button" onclick="startReading()">
-        ▶ Read
+    <button id="readButton" type="button" onclick="readArticle()">
+        ▶ Read Aloud
     </button>
 
-    <button type="button" onclick="pauseReading()">
+    <button id="pauseResumeButton" type="button"
+            onclick="togglePauseResume()" disabled>
         ⏸ Pause
     </button>
 
-    <button type="button" onclick="stopReading()">
+    <button id="stopButton" type="button"
+            onclick="stopReading()" disabled>
         ⏹ Stop
     </button>
 </div>
@@ -905,57 +907,118 @@ choices relate to our wider lives.
 <!-- READ ALOUD SCRIPT -->
 
 <script>
-let speechUtterance = null;
+let speechChunks = [];
+let currentChunk = 0;
+let isReading = false;
+let isPaused = false;
 
-function startReading() {
-    if (!("speechSynthesis" in window)) {
-        alert("Read Aloud is not supported by this browser.");
+function prepareSpeech() {
+    const content = document.getElementById("content-to-read");
+
+    if (!content) return;
+
+    const clone = content.cloneNode(true);
+    clone.querySelectorAll(".tts-controls").forEach(control => control.remove());
+
+    const speechText = clone.innerText
+        .replace(/\s+/g, " ")
+        .trim();
+
+    speechChunks = speechText.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
+    currentChunk = 0;
+}
+
+function updateButtons() {
+    document.getElementById("readButton").disabled = isReading;
+
+    const pauseButton = document.getElementById("pauseResumeButton");
+    pauseButton.disabled = !isReading;
+    pauseButton.textContent = isPaused ? "▶ Resume" : "⏸ Pause";
+
+    document.getElementById("stopButton").disabled = !isReading;
+}
+
+function speakNextChunk() {
+    if (!isReading || isPaused) return;
+
+    if (currentChunk >= speechChunks.length) {
+        isReading = false;
+        isPaused = false;
+        updateButtons();
         return;
     }
 
-    if (window.speechSynthesis.paused) {
-        window.speechSynthesis.resume();
+    const utterance = new SpeechSynthesisUtterance(
+        speechChunks[currentChunk].trim()
+    );
+
+    utterance.lang = document.documentElement.lang || "en";
+    utterance.rate = 0.95;
+
+    utterance.onend = function() {
+        if (isReading && !isPaused) {
+            currentChunk++;
+            speakNextChunk();
+        }
+    };
+
+    utterance.onerror = function(event) {
+        if (event.error === "canceled" || event.error === "interrupted") {
+            return;
+        }
+
+        if (isReading && !isPaused) {
+            isReading = false;
+            isPaused = false;
+            updateButtons();
+            console.error("Read Aloud encountered an error:", event.error);
+        }
+    };
+
+    window.speechSynthesis.speak(utterance);
+}
+
+function readArticle() {
+    if (!("speechSynthesis" in window)) {
+        alert("Sorry, your browser does not support Read Aloud.");
         return;
     }
 
     window.speechSynthesis.cancel();
+    prepareSpeech();
 
-    const content = document.getElementById("content-to-read");
+    if (speechChunks.length === 0) return;
 
-    if (!content) {
-        return;
-    }
+    currentChunk = 0;
+    isReading = true;
+    isPaused = false;
 
-    const readableElements = content.querySelectorAll(
-        "h1, h2, h3, p, li"
-    );
-
-    const text = Array.from(readableElements)
-        .map(function(element) {
-            return element.innerText.trim();
-        })
-        .filter(function(value) {
-            return value.length > 0;
-        })
-        .join(". ");
-
-    speechUtterance = new SpeechSynthesisUtterance(text);
-    speechUtterance.lang = document.documentElement.lang || "en";
-
-    window.speechSynthesis.speak(speechUtterance);
+    updateButtons();
+    speakNextChunk();
 }
 
-function pauseReading() {
-    if ("speechSynthesis" in window) {
-        window.speechSynthesis.pause();
+function togglePauseResume() {
+    if (!isReading) return;
+
+    if (isPaused) {
+        isPaused = false;
+        updateButtons();
+        speakNextChunk();
+    } else {
+        isPaused = true;
+        window.speechSynthesis.cancel();
+        updateButtons();
     }
 }
 
 function stopReading() {
-    if ("speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
-        speechUtterance = null;
-    }
+    isReading = false;
+    isPaused = false;
+
+    window.speechSynthesis.cancel();
+
+    currentChunk = 0;
+    updateButtons();
 }
 
 window.addEventListener("pagehide", function() {
