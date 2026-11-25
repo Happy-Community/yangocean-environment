@@ -643,6 +643,8 @@ animals can continue to depend on it tomorrow.
 
 /* Android-friendly sentence-by-sentence Read Aloud */
 
+const speech = window.speechSynthesis;
+
 let speechChunks = [];
 let currentChunk = 0;
 let isReading = false;
