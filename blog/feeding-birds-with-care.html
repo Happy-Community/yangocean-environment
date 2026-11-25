@@ -305,8 +305,21 @@ crossorigin="anonymous"></script>
 Feeding birds may seem like a small act of kindness. Watching pigeons gather for food or seeing little birds visit a garden can bring us joy and a sense of connection with nature. However, genuine care for wildlife involves more than simply offering food. It means understanding their needs, protecting their health and respecting the environment we share.
 </p>
 
-<button class="read-button" onclick="readArticle()">🔊 Read Aloud</button>
-<button class="read-button" onclick="stopReading()">⏹ Stop</button>
+<div class="read-controls">
+    <button id="readButton" class="read-button" onclick="readArticle()">
+        ▶ Read Aloud
+    </button>
+
+    <button id="pauseResumeButton" class="read-button"
+            onclick="togglePauseResume()" disabled>
+        ⏸ Pause
+    </button>
+
+    <button id="stopButton" class="read-button"
+            onclick="stopReading()" disabled>
+        ⏹ Stop
+    </button>
+</div>
 
 <img
     src="/images/pigeon-being-fed.jpg"
@@ -523,31 +536,121 @@ Let us care for them with knowledge, moderation and respect. Sometimes, the most
 </footer>
 
 <script>
+let speechChunks = [];
+let currentChunk = 0;
+let isReading = false;
+let isPaused = false;
+
+function prepareSpeech() {
+    const article = document.querySelector(".article");
+    const clone = article.cloneNode(true);
+
+    clone.querySelectorAll(".read-controls").forEach(control => control.remove());
+
+    const speechText = clone.innerText
+        .replace(/\s+/g, " ")
+        .trim();
+
+    speechChunks = speechText.match(/[^.!?]+[.!?]+|[^.!?]+$/g) || [];
+    currentChunk = 0;
+}
+
+function updateButtons() {
+    document.getElementById("readButton").disabled = isReading;
+    document.getElementById("pauseResumeButton").disabled = !isReading;
+    document.getElementById("stopButton").disabled = !isReading;
+
+    document.getElementById("pauseResumeButton").textContent =
+        isPaused ? "▶ Resume" : "⏸ Pause";
+}
+
+function speakNextChunk() {
+    if (!isReading || isPaused) return;
+
+    if (currentChunk >= speechChunks.length) {
+        isReading = false;
+        isPaused = false;
+        updateButtons();
+        return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(
+        speechChunks[currentChunk].trim()
+    );
+
+    utterance.lang = "en-US";
+    utterance.rate = 0.95;
+
+    utterance.onend = function() {
+        if (isReading && !isPaused) {
+            currentChunk++;
+            speakNextChunk();
+        }
+    };
+
+    utterance.onerror = function() {
+        if (isReading) {
+            isReading = false;
+            isPaused = false;
+            updateButtons();
+            console.error("Read Aloud encountered an error.");
+        }
+    };
+
+    window.speechSynthesis.speak(utterance);
+}
+
 function readArticle() {
-    if (!('speechSynthesis' in window)) {
-        alert('Sorry, your browser does not support Read Aloud.');
+    if (!("speechSynthesis" in window)) {
+        alert("Sorry, your browser does not support Read Aloud.");
         return;
     }
 
     window.speechSynthesis.cancel();
 
-    const article = document.querySelector('.article');
-    const text = article.innerText
-        .replace('🔊 Read Aloud', '')
-        .replace('⏹ Stop', '');
+    prepareSpeech();
 
-    const speech = new SpeechSynthesisUtterance(text);
-    speech.lang = 'en-US';
-    speech.rate = 0.95;
+    if (speechChunks.length === 0) return;
 
-    window.speechSynthesis.speak(speech);
+    currentChunk = 0;
+    isReading = true;
+    isPaused = false;
+
+    updateButtons();
+    speakNextChunk();
+}
+
+function togglePauseResume() {
+    if (!isReading || !("speechSynthesis" in window)) return;
+
+    if (isPaused) {
+        isPaused = false;
+        window.speechSynthesis.resume();
+    } else {
+        isPaused = true;
+        window.speechSynthesis.pause();
+    }
+
+    updateButtons();
 }
 
 function stopReading() {
-    if ('speechSynthesis' in window) {
+    isReading = false;
+    isPaused = false;
+
+    if ("speechSynthesis" in window) {
         window.speechSynthesis.cancel();
     }
+
+    currentChunk = 0;
+    updateButtons();
 }
+
+window.addEventListener("beforeunload", function() {
+    if ("speechSynthesis" in window) {
+        window.speechSynthesis.cancel();
+    }
+});
 
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
